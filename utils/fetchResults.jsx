@@ -1,16 +1,18 @@
 export const fetchResults = async (text) => {
   try {
-    const response = await fetch('/api/getResults', {
+    const response = await fetch('http://localhost:5000/GPT', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ text }),
+      body: JSON.stringify({ input: text }),
     });
 
     if (response.ok) {
       const responseResult = await response.json();
-      return responseResult;
+      console.log('this is response:' + responseResult.response);
+
+      return responseResult.response;
     } else {
       console.error('Request failed:', response.status, response.statusText);
       return 'request failed';

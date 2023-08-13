@@ -6,8 +6,8 @@ import { fetchResults } from '@/utils/fetchResults';
 
 function Curation() {
   const router = useRouter();
-  const prompt = 'Example GPT prompt :';
-  const text = prompt + router.query.text;
+  // const prompt = 'Example GPT prompt :';
+  const text = router.query.text;
   const [result, setResult] = useState('');
 
   useEffect(() => {
