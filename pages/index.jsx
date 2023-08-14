@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 function Home() {
   const [text, setText] = useState('');
