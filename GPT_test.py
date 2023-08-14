@@ -15,10 +15,10 @@ def get_input():
     data = request.get_json()
     input = data.get('input')
     # results = all_process(input)
-    response = getResponse(input)
+    response = generate_response(input)
     return {"response": response}
 
-def getResponse(prompt):
+def generate_response(prompt):
   response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
@@ -26,7 +26,7 @@ def getResponse(prompt):
       ],
     temperature=0.7
   )
-  return(response['choices'][0]['message']['content'])
+  return (response['choices'][0]['message']['content'])
 
 # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_format_inputs_to_ChatGPT_models.ipynb I'm just going to leave this here for now
 # but it is a good thing for the BA's to look at when they begin testing the GPT's functionality - the prompt can be more of a conversation
