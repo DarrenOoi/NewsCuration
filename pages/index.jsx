@@ -2,31 +2,26 @@ import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import { fetchResults } from '@/utils/fetchResults';
 
 function Home() {
   const [text, setText] = useState('');
-  const router = useRouter();
+  const [result, setResult] = useState('Waiting for input...');
 
   const handleSubmit = () => {
-    router.push(`/curation?text=${encodeURIComponent(text)}`);
+    // fetchResults(text).then((result) => setResult(result));
+    setResult(text);
   };
+
   return (
-    <div className='bg-gray-100 flex flex-col items-center'>
+    <div>
       <Head>
-        <title>News Curation</title>
+        <title>Just The Facts</title>
       </Head>
-      <h1>News Curation</h1>
-      <br></br>
-      <input
-        type='text'
-        onChange={(event) => setText(event.target.value)}
-        name='input'
-      ></input>
-      <br></br>
-      <button type='submit' onClick={handleSubmit} name='submitButton'>
-        Submit
-      </button>
-      <br></br>
+      <Navbar />
+      <Hero handleSubmit={handleSubmit} setText={setText} content={result} />
     </div>
   );
 }
