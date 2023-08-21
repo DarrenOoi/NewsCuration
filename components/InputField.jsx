@@ -11,7 +11,7 @@ const InputField = ({ handleSubmit, setText }) => {
         />
 
         <button
-          className='btn btn-active btn-neutral'
+          className='btn btn-active btn-neutral font-bold'
           type='submit'
           onClick={handleSubmit}
         >
