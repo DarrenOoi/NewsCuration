@@ -1,6 +1,6 @@
 const InputField = ({ handleSubmit, setText }) => {
   return (
-    <div className='form-control mr-10'>
+    <div className='form-control mr-10 '>
       <div className='input-group'>
         <input
           type='text'
