@@ -1,8 +1,11 @@
 import { BsImage } from 'react-icons/bs';
 import InputField from './InputField';
 import Card from './Card';
+import BiasScore from './BiasScore'
+import React, { useState } from 'react';
 
-const Hero = ({ handleSubmit, setText, content }) => {
+const Hero = ({ handleSubmit, setText, content, score}) => {
+
   return (
     <div className='hero min-h-screen bg-gray-400 mt-2'>
       <div className='hero-content'>
@@ -13,7 +16,12 @@ const Hero = ({ handleSubmit, setText, content }) => {
               <BsImage />
             </button>
           </div>
-          <Card content={content} />
+          <div>
+            <Card content={content} />
+          </div>
+          <div>
+            <BiasScore score="60%" />
+          </div>
         </div>
       </div>
     </div>
