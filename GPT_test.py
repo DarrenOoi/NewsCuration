@@ -14,7 +14,6 @@ CORS(app)  # This allows all origins; you can configure it for your specific nee
 def get_input():
     data = request.get_json()
     input = data.get('input')
-    # results = all_process(input)
     response = generate_response(input)
     return {"response": response}
 
