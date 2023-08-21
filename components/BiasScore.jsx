@@ -6,10 +6,12 @@ const BiasScore = ({ score }) => {
     <div>
       <div className='stats shadow rounded-t-none ml-4'>
         <div className='stat bg-gray-800'>
-          <div className='stat-title text-center font-medium text-orange-500'>
+          <div className='stat-title text-center font-medium text-white'>
             Original Article Bias Score
           </div>
-          <div className='stat-value text-white ml-17 text-center'>{score}</div>
+          <div className='stat-value text-orange-500 ml-17 text-center'>
+            {score}
+          </div>
         </div>
       </div>
 
@@ -18,7 +20,7 @@ const BiasScore = ({ score }) => {
           className='btn btn-lg btn-active btn-neutral rounded-full font-bold'
           type='submit'
         >
-          CLICK FOR THE{' '}
+          CLICK FOR THE
           <span className='text-orange-500 font-extrabold'>WHY</span>
         </button>
       </div>
