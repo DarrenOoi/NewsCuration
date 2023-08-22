@@ -24,7 +24,7 @@ function Home() {
         <title>Just The Facts</title>
       </Head>
       <Navbar />
-      <div className='min-h-screen bg-gray-400 mt-2'>
+      <div className='min-h-screen bg-[#78909c] mt-2'>
         <div className='hero'>
           <div className='hero-content'>
             <div>

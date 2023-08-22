@@ -36,9 +36,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className='navbar-center'>
-        <a className='btn btn-warning normal-case text-xl text-white'>
-          JUST THE FACTS
-        </a>
+        <span className='text-orange-500 font-extrabold'>JUST THE FACTS</span>
       </div>
       <div className='navbar-end' />
     </div>
