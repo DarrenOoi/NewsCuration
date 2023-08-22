@@ -18,6 +18,13 @@ class PageValidator:
         if match and match.group(1).lower() == "false":
             return False
         return True
+    
+    # Cant read without subscription
+        # paywall detected: New York Times, Wall Street Journal, Financial Times, Atlantic
+        # paywall not detected, partially read: Nikkei (isAccessible not present, 200 sttus code), Caixin (isAccessible not present, 200 sttus code)
+    # Can read without subscription
+        # paywall detected: Washington Post (isAccessible:false present)
+        # fully read: ABC, CNN, Guardian, Economist, Game Informer
 
     def isArticleAccessible(self):
         if self.isStatusSuccessful() and self.isAccessibleForFree():
