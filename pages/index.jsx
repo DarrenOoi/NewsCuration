@@ -12,10 +12,18 @@ import { BsImage } from 'react-icons/bs';
 function Home() {
   const [text, setText] = useState('');
   const [result, setResult] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = () => {
-    // fetchResults(text).then((result) => setResult(result));
-    setResult(text);
+    if (text.trim() != '') {
+      setSubmitted(true);
+      setResult(null);
+
+      fetchResults(text).then((result) => {
+        setResult(result);
+        setSubmitted(false);
+      });
+    } else setResult(null);
   };
 
   return (
@@ -35,7 +43,17 @@ function Home() {
                 </button>
               </div>
 
-              <Card content={result ? result : 'Waiting for input...'} />
+              <Card
+                content={
+                  result ? (
+                    result
+                  ) : submitted ? (
+                    <span className='loading loading-spinner text-warning'></span>
+                  ) : (
+                    'Waiting for input...'
+                  )
+                }
+              />
               {result && <BiasScore score='60%' />}
             </div>
           </div>
