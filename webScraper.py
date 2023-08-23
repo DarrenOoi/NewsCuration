@@ -31,23 +31,52 @@ class PageValidator:
             return True
         return False
 
-def articleScraper(url):
-    pageToScrape = requests.get(url)
+class NewsScraper:
 
-    validator = PageValidator(pageToScrape)
-    if not validator.isArticleAccessible():
-        print('Paywall detected, if paywall does not exist please use other method of input')
-        return None
+    def __init__(self, url):
+        self.soup = None
+        self.url = url
 
-    soup = BeautifulSoup(pageToScrape.content, "html.parser")
+        pageToScrape = requests.get(url)
+        validator = PageValidator(pageToScrape)
+        if validator.isArticleAccessible():
+            self.soup = BeautifulSoup(pageToScrape.content, "html.parser")
 
-    paragraphsSoup = soup.findAll("p")
-    paragraphs = [i.text for i in paragraphsSoup]
+    def headerScrape(self):
+        if self.soup is None:
+            return None
+        
+        paragraphsSoup = self.soup.findAll("h1")
+        paragraphs = [i.text for i in paragraphsSoup]
+        
+        dirtyArticle = "\n".join(paragraphs)
+        whiteSpaceFilledArticle = re.sub("[\n\t]", " ", dirtyArticle)
+        cleanArticle = re.sub(" +", " ", whiteSpaceFilledArticle)
+        return cleanArticle
+
+    def articleScrape(self):
+        if self.soup is None:
+            return None
+        
+        paragraphsSoup = self.soup.findAll("p")
+        paragraphs = [i.text for i in paragraphsSoup]
+        
+        dirtyArticle = "\n".join(paragraphs)
+        whiteSpaceFilledArticle = re.sub("[\n\t]", " ", dirtyArticle)
+        cleanArticle = re.sub(" +", " ", whiteSpaceFilledArticle)
+        return cleanArticle
+
+
+def pipeScrapedArticleToGPT(url):
+    scraper = NewsScraper(url)
+    if scraper.soup is None:
+        return "Paywall Encountered, please seek another method"
     
-    dirtyArticle = "\n".join(paragraphs)
-    whiteSpaceFilledArticle = re.sub("[\n\t]", " ", dirtyArticle)
-    cleanArticle = re.sub(" +", " ", whiteSpaceFilledArticle)
-    return cleanArticle
+    # create wrapper scraper.headerScrape() : escraper.articleScrap()
+    
+    # Pipe into chatGPT get output
+    return scraper.headerScrape() +"\n"+ scraper.articleScrape()
     
 if __name__ == '__main__':
-    print(articleScraper(input("Enter URL: \n")))
+    output = pipeScrapedArticleToGPT(input("Enter URL: \n"))
+    print(output)
