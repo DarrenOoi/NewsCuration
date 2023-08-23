@@ -3,7 +3,7 @@ from flask import Flask, request
 from flask_cors import CORS
 import requests
 
-openai.api_key = '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'
+openai.api_key = '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'
 openai.Model.list()
 
 app = Flask(__name__)
