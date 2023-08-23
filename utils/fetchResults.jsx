@@ -22,6 +22,6 @@ export const fetchResults = async (text) => {
     }
   } catch (error) {
     console.error('Error:', error);
-    return 'error';
+    return 'Something went wrong...';
   }
 };
