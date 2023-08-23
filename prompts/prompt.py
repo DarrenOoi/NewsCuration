@@ -49,9 +49,9 @@ def generate_response(prompt):
   )
   return (response['choices'][0]['message']['content'])
 
-newsText = ''
-with open('../testing/test1.txt', 'r', encoding='utf-8') as f:
-    newsText = f.readlines()
-# print(newsText)
-prompt = generate_summary_prompt(newsText[0])
-print(generate_response(prompt))
+# newsText = ''
+# with open('../testing/test1.txt', 'r', encoding='utf-8') as f:
+#     newsText = f.readlines()
+# # print(newsText)
+# prompt = generate_summary_prompt(newsText[0])
+# print(generate_response(prompt))
