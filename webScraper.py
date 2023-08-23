@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+import prompts.prompt as prompt
 
 class PageValidator:
     def __init__(self, pageToScrape) -> None:
@@ -72,11 +73,11 @@ def pipeScrapedArticleToGPT(url):
     if scraper.soup is None:
         return "Paywall Encountered, please seek another method"
     
-    # create wrapper scraper.headerScrape() : escraper.articleScrap()
-    
-    # Pipe into chatGPT get output
-    return scraper.headerScrape() +"\n"+ scraper.articleScrape()
-    
-if __name__ == '__main__':
-    output = pipeScrapedArticleToGPT(input("Enter URL: \n"))
-    print(output)
+    structuredPrompt = prompt.generate_summary_prompt(
+        "HEADING: " + scraper.headerScrape() +"\n"+ "TEXT: " + scraper.articleScrape()
+        )
+    return "GPT RESPONSE - " + prompt.generate_response(structuredPrompt)
+
+# if __name__ == '__main__':
+#     output = pipeScrapedArticleToGPT(input("Enter URL: \n"))
+#     print(output)
