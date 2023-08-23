@@ -3,6 +3,8 @@ from flask import Flask, request
 from flask_cors import CORS
 import requests
 
+import webScraper as wS
+
 openai.api_key = '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'
 openai.Model.list()
 
@@ -14,7 +16,7 @@ CORS(app)  # This allows all origins; you can configure it for your specific nee
 def get_input():
     data = request.get_json()
     input = data.get('input')
-    response = generate_response(input)
+    response = wS.pipeScrapedArticleToGPT(input)
     return {"response": response}
 
 def generate_response(prompt):
