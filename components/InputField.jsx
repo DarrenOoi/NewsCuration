@@ -6,7 +6,7 @@ const InputField = ({ handleSubmit, setText }) => {
           type='text'
           placeholder='Enter article URL'
           onChange={(event) => setText(event.target.value)}
-          className='input input-bordered'
+          className='input input-bordered bg-white'
           style={{ width: '800px' }} // Adjust the width as needed
         />
 
@@ -15,7 +15,7 @@ const InputField = ({ handleSubmit, setText }) => {
           type='submit'
           onClick={handleSubmit}
         >
-          CLICK FOR THE FACTS
+          CLICK FOR THE <text className="text-orange-500 font-extrabold">FACTS</text>
         </button>
       </div>
     </div>

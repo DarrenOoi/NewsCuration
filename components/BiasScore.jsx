@@ -6,8 +6,8 @@ const BiasScore = ({ score }) => {
     <div>
       <div className='stats shadow rounded-t-none ml-4'>
         <div className='stat bg-gray-800'>
-          <div className='stat-title text-center font-medium text-white'>
-            Original Article Bias Score
+          <div className='stat-title text-center font-bold text-gray-400'>
+            ORIGINAL ARTICLE BIAS SCORE
           </div>
           <div className='stat-value text-orange-500 ml-17 text-center'>
             {score}
