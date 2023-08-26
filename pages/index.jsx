@@ -48,7 +48,7 @@ function Home() {
                   result ? (
                     result
                   ) : submitted ? (
-                    <span className='loading loading-spinner text-warning'></span>
+                    <span className='mt-2 loading loading-spinner text-warning'></span>
                   ) : (
                     'Waiting for input...'
                   )
