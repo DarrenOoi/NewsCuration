@@ -43,6 +43,15 @@ class NewsScraper:
         if validator.isArticleAccessible():
             self.soup = BeautifulSoup(pageToScrape.content, "html.parser")
 
+        self.header = self.headerScrape()
+        self.article = self.articleScrape()
+
+    def getHeader(self):
+        return self.header
+    
+    def getArticle(self):
+        return self.article
+
     def headerScrape(self):
         if self.soup is None:
             return None
@@ -74,7 +83,7 @@ def pipeScrapedArticleToGPT(url):
         return "Paywall Encountered, please seek another method"
     
     structuredPrompt = prompt.generate_summary_prompt(
-        "HEADING: " + scraper.headerScrape() +"\n"+ "TEXT: " + scraper.articleScrape()
+        "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
         )
     return "GPT RESPONSE - " + prompt.generate_response(structuredPrompt)
 
