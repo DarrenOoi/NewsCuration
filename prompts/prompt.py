@@ -7,8 +7,6 @@ import json
 author: DanielCiccC
 """
 openai.api_key = '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'
-openai.Model.list()
-
 
 BIAS_PROMPT =[
           {"role": "system", "content": "You are a methodical assistant."}, # You follow a consistent process, noting in great depth using simple terms, and you give examples to help people learn."},
@@ -25,9 +23,12 @@ BIAS_PROMPT =[
 
 SUMMARY_PROMPT = [
           {"role": "system", "content": "You are a methodical assistant."},
-          {"role": "system", "content": "You will be provided with a web-scraped media article that is believed to have bias and emotionally charged content." + 
-           "Read through the text carefully, and identify the emotionally charged and bias content. Please provide a detailed and comprehensive rewrite of the bias news article, covering all major points while maintaining a neutral tone."},
-          {"role": "assistant", "content": "House burned down in Victoria following forest fires in neighbouring suburb"},
+          {"role": "system", "content": "You will be provided with a web-scraped media article" + 
+           "Read through the text carefully and in its entirety, and identify all emotionally charged words and bias content." +
+           "List in bullet point form all major points of the article, while maintaining a neutral tone." +
+           "Note: sometimes, the footer is accidentally included in the web scraped article. When reading the article in its entirety," +
+           " note the last few sentences and see if they are related to the above article. If it is not related to the article, do not summarise it."},
+          # {"role": "assistant", "content": "House burned down in Victoria following forest fires in neighbouring suburb"},
           {"role": "user", "content": ''},
       ]
 
@@ -45,13 +46,6 @@ def generate_response(prompt):
   response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=prompt,
-    temperature=0.7
+    temperature=0.9
   )
   return (response['choices'][0]['message']['content'])
-
-# newsText = ''
-# with open('../testing/test1.txt', 'r', encoding='utf-8') as f:
-#     newsText = f.readlines()
-# # print(newsText)
-# prompt = generate_summary_prompt(newsText[0])
-# print(generate_response(prompt))
