@@ -44,6 +44,14 @@ function Home() {
               </div>
 
               <Card
+                title={
+                  result
+                    ? result.substring(
+                        result.indexOf(':') + 1,
+                        result.indexOf('TEXT')
+                      )
+                    : ''
+                }
                 content={
                   result ? (
                     result
@@ -54,6 +62,7 @@ function Home() {
                   )
                 }
               />
+
               {result && <BiasScore score='60%' />}
             </div>
           </div>
