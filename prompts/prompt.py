@@ -26,8 +26,9 @@ BIAS_PROMPT =[
 SUMMARY_PROMPT = [
           {"role": "system", "content": "You are a methodical assistant."},
           {"role": "system", "content": "You will be provided with a web-scraped media article that is believed to have bias and emotionally charged content." + 
-           "Read through the text carefully, and identify the emotionally charged and bias content. Please provide a detailed and comprehensive rewrite of the bias news article, covering all major points while maintaining a neutral tone."},
-          {"role": "assistant", "content": "House burned down in Victoria following forest fires in neighbouring suburb"},
+           "Read through the text carefully, and identify all emotionally charged words and bias content." +
+           "List in bullet point form all major points of the article, while maintaining a neutral tone."},
+          # {"role": "assistant", "content": "House burned down in Victoria following forest fires in neighbouring suburb"},
           {"role": "user", "content": ''},
       ]
 
@@ -45,7 +46,7 @@ def generate_response(prompt):
   response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=prompt,
-    temperature=0.7
+    temperature=0.9
   )
   return (response['choices'][0]['message']['content'])
 
