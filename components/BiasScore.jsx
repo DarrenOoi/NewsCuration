@@ -1,7 +1,7 @@
 {
   /* score will be passed into this component, assuming its gonna get calculated somewhere else*/
 }
-const BiasScore = ({ score }) => {
+const BiasScore = ({ handleClick, score}) => {
   return (
     <div>
       <div className='stats shadow rounded-t-none ml-4'>
@@ -19,6 +19,7 @@ const BiasScore = ({ score }) => {
         <button
           className='btn btn-lg btn-active btn-neutral rounded-full font-bold'
           type='submit'
+          onClick={handleClick}
         >
           CLICK FOR THE
           <span className='text-orange-500 font-extrabold'>WHY</span>
