@@ -43,6 +43,15 @@ class NewsScraper:
         if validator.isArticleAccessible():
             self.soup = BeautifulSoup(pageToScrape.content, "html.parser")
 
+        self.header = self.headerScrape()
+        self.article = self.articleScrape()
+
+    def getHeader(self):
+        return self.header
+    
+    def getArticle(self):
+        return self.article
+
     def headerScrape(self):
         if self.soup is None:
             return None
@@ -72,12 +81,14 @@ def pipeScrapedArticleToGPT(url):
     scraper = NewsScraper(url)
     if scraper.soup is None:
         return "Paywall Encountered, please seek another method"
+    print(scraper.articleScrape())
     
     structuredPrompt = prompt.generate_summary_prompt(
-        "HEADING: " + scraper.headerScrape() +"\n"+ "TEXT: " + scraper.articleScrape()
+        "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
         )
     return "GPT RESPONSE - " + prompt.generate_response(structuredPrompt)
 
-# if __name__ == '__main__':
-#     output = pipeScrapedArticleToGPT(input("Enter URL: \n"))
-#     print(output)
+if __name__ == '__main__':
+    URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
+    output = pipeScrapedArticleToGPT(URL)
+    print(output)

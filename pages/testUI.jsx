@@ -45,7 +45,7 @@ function Test() {
             <TextField.Slot>
               <button
                 data-accent-color='gray'
-                class='rt-reset-button rt-reset-a rt-BaseButton rt-Button rt-r-size-2 rt-variant-solid rt-high-contrast'
+                className='rt-reset-button rt-reset-a rt-BaseButton rt-Button rt-r-size-2 rt-variant-solid rt-high-contrast'
                 type='submit'
                 onClick={handleSubmit}
               >
