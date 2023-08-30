@@ -1,13 +1,14 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import { fetchResults } from '@/utils/fetchResults';
 import BiasScore from '@/components/BiasScore';
 import InputField from '@/components/InputField';
 import Card from '@/components/Card';
 import { BsImage } from 'react-icons/bs';
+import AnalysisPage from './analysisPage';
+import { useRouter } from 'next/router';
 
 function Home() {
   const [text, setText] = useState('');
@@ -16,18 +17,22 @@ function Home() {
 
   const handleSubmit = () => {
     if (text.trim() != '') {
-      setSubmitted(true);
-      setResult(null);
-
-      fetchResults(text).then((result) => {
-        setResult(result);
-        setSubmitted(false);
-      });
+         setSubmitted(true);
+         setResult(null);
+         fetchResults(text).then((result) => {
+         setResult(result);
+         setSubmitted(false);
+       });
     } else setResult(null);
   };
 
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("http://localhost:3000/analysisPage");
+  }
+
   return (
-    <div>
+    <div >
       <Head>
         <title>Just The Facts</title>
       </Head>
@@ -43,7 +48,8 @@ function Home() {
                 </button>
               </div>
 
-              <Card
+              <Card header="THE FACTS"
+
                 title={
                   result
                     ? result.substring(
@@ -52,6 +58,7 @@ function Home() {
                       )
                     : ''
                 }
+
                 content={
                   result ? (
                     result
@@ -62,8 +69,7 @@ function Home() {
                   )
                 }
               />
-
-              {result && <BiasScore score='60%' />}
+              {result && <BiasScore score='60%' handleClick={handleClick}/>}
             </div>
           </div>
         </div>

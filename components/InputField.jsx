@@ -6,7 +6,7 @@ const InputField = ({ handleSubmit, setText }) => {
           type='text'
           placeholder='Enter article URL'
           onChange={(event) => setText(event.target.value)}
-          className='input input-bordered bg-white'
+          className='input input-bordered bg-white text-black'
           style={{ width: '800px' }} // Adjust the width as needed
         />
 
