@@ -8,6 +8,7 @@ import InputField from '@/components/InputField';
 import Card from '@/components/Card';
 import Input from '@/components/Input'
 import Button from '@/components/Button'
+import Slider from '@/components/Slider'
 import { BsImage } from 'react-icons/bs';
 import AnalysisPage from './analysisPage';
 import { useRouter } from 'next/router';
@@ -19,22 +20,22 @@ function Home() {
 
   const handleSubmit = () => {
     if (text.trim() != '') {
-         setSubmitted(true);
-         setResult(null);
-         fetchResults(text).then((result) => {
-         setResult(result);
-         setSubmitted(false);
-       });
+      setSubmitted(true);
+      setResult(null);
+      fetchResults(text).then((result) => {
+        setResult(result);
+        setSubmitted(false);
+      });
     } else setResult(null);
   };
 
   const router = useRouter();
   const handleClick = () => {
-    router.push("http://localhost:3000/analysisPage");
-  }
+    router.push('http://localhost:3000/analysisPage');
+  };
 
   return (
-    <div >
+    <div>
       <Head>
         <title>Just The Facts</title>
       </Head>
