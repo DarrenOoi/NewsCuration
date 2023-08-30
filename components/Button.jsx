@@ -1,4 +1,4 @@
-const BackButton = ({handleClick}) => {
+const BackButton = ({handleClick, text}) => {
     return (
         <div className=''>
             <button
@@ -6,7 +6,7 @@ const BackButton = ({handleClick}) => {
             type='submit'
             onClick={handleClick}
             >
-            BACK TO THE <text className="text-orange-500 font-extrabold">FACTS</text>
+                {text}
             </button>
         </div>
     );

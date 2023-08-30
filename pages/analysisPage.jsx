@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation';
 import { fetchResults } from '@/utils/fetchResults';
 import { BsImage } from 'react-icons/bs';
 import Navbar from '@/components/Navbar';
-import BackButton from '@/components/BackButton';
-import AnalysisCard from '@/components/AnalysisCard';
+import Button from '@/components/Button';
+import Card from '@/components/Card';
 
 function AnalysisPage() {
 
@@ -23,10 +23,10 @@ function AnalysisPage() {
       <Navbar />
       <div>
         <div className='flex justify-between mt-10 ml-20'>
-          <BackButton handleClick={handleClick}/>
+          <Button handleClick={handleClick} text=" BACK TO THE FACTS"/>
         </div>
         <div>
-          <AnalysisCard/>
+          <Card/>
         </div>
       </div>
     </div>

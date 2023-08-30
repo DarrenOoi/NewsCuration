@@ -48,7 +48,17 @@ function Home() {
                 </button>
               </div>
 
-              <Card
+              <Card header="THE FACTS"
+
+                title={
+                  result
+                    ? result.substring(
+                        result.indexOf(':') + 1,
+                        result.indexOf('TEXT')
+                      )
+                    : ''
+                }
+
                 content={
                   result ? (
                     result
