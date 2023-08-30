@@ -1,8 +1,8 @@
-const BackButton = ({handleClick, text}) => {
+const Button = ({handleClick, text}) => {
     return (
         <div className=''>
             <button
-            className='btn btn-active btn-neutral font-bold'
+            className='btn btn-active btn-neutral text-white font-bold rounded-full'
             type='submit'
             onClick={handleClick}
             >
@@ -12,4 +12,4 @@ const BackButton = ({handleClick, text}) => {
     );
 }
 
-export default BackButton;
+export default Button;

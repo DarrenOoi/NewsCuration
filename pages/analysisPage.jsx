@@ -17,16 +17,19 @@ function AnalysisPage() {
   const highlight = true;
 
   return (
-    <div className='min-h-screen bg-[#78909c] '>
+    <div>
       <Head>
         <title>Just The Facts</title>
       </Head>
       <Navbar />
-      <div>
-        <div className='flex justify-between mt-10 ml-20'>
-          <Button handleClick={handleClick} text=' BACK TO THE FACTS' />
+        <div className='min-h-screen bg-[#5F7A95]'>
+          <div className='hero'>
+            <div className='hero-content p'>
+            <div>
+            <div className='flex justify-start'>
+          <Button handleClick={handleClick} text='BACK TO THE FACTS' />
         </div>
-        <div>
+        <div className='mt-10'>
           <Card
             title='Lorem Ipsum'
             highlight={highlight}
@@ -42,6 +45,9 @@ Morbi eget diam et metus consectetur facilisis eget id sem. Praesent id ipsum ni
         <BiasScore score='60%' />
       </div>
     </div>
+    </div>
+    </div>
+    </div>  
   );
 }
 
