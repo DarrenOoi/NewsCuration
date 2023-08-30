@@ -1,3 +1,5 @@
+{/* not need */}
+
 const InputField = ({ handleSubmit, setText }) => {
   return (
     <div className='form-control mr-10 '>

@@ -14,17 +14,6 @@ const BiasScore = ({ handleClick, score}) => {
           </div>
         </div>
       </div>
-
-      <div className='flex items-center justify-center'>
-        <button
-          className='btn btn-lg btn-active btn-neutral rounded-full font-bold'
-          type='submit'
-          onClick={handleClick}
-        >
-          CLICK FOR THE
-          <span className='text-orange-500 font-extrabold'>WHY</span>
-        </button>
-      </div>
     </div>
   );
 };
