@@ -81,14 +81,27 @@ def pipeScrapedArticleToGPT(url):
     scraper = NewsScraper(url)
     if scraper.soup is None:
         return "Paywall Encountered, please seek another method"
-    print(scraper.articleScrape())
+    # print(scraper.articleScrape())
     
     structuredPrompt = prompt.generate_summary_prompt(
         "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
         )
-    return "GPT RESPONSE - " + prompt.generate_response(structuredPrompt)
+    return prompt.generate_response(structuredPrompt)
 
-if __name__ == '__main__':
-    URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
-    output = pipeScrapedArticleToGPT(URL)
-    print(output)
+def verifyIndex(url, range):
+    scraper = NewsScraper(url)
+    article = "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
+    print(article)
+    return article[range : range + 40]
+
+# if __name__ == '__main__':
+    # URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
+    # out = ''
+    # for i in range(1):
+    #     out += pipeScrapedArticleToGPT(URL) + '\n\n\n'
+    #     # print(output)
+    # with open('testing/out.txt', 'w') as out_file:
+    #     out_file.write(out)
+    # print(out)
+    # print(verifyIndex(URL, 167))
+   
