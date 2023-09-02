@@ -94,7 +94,7 @@ def verifyIndex(url, range):
     print(article)
     return article[range : range + 40]
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
     # out = ''
     # for i in range(1):
