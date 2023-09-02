@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className='navbar bg-white p-3'>
+    <div className='navbar bg-[#5F7A95] p-5'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label tabIndex={0} className='btn btn-ghost btn-circle'>
@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className='navbar-center'>
-        <span className='text-orange-500 font-extrabold text-xl'>JUST THE FACTS</span>
+        <span className='text-[#7895B1] font-bold text-7xl'>JUST THE FACTS</span>
       </div>
       <div className='navbar-end' />
     </div>
