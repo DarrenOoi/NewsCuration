@@ -61,18 +61,34 @@ def biasRange(p, n, b, percentage):
 app = Flask(__name__)
 CORS(app)  # This allows all origins; you can configure it for your specific needs
 
-@app.route('/Bias', methods=['POST'])
-def Bias():
+@app.route('/BiasFromText', methods=['POST'])
+def BiasFromText():
     data = request.get_json()
     input = data.get('articleText')
     b, n, p = biasScoreGeneratorFromText(input)
     return {"response": b/n}
 
-@app.route('/BiasRange', methods=['POST'])
-def BiasRange():
+@app.route('/BiasRangeFromText', methods=['POST'])
+def BiasRangeFromText():
     data = request.get_json()
     input = data.get('articleText')
     b, n, p = biasScoreGeneratorFromText(input)
+    percentage = 0.9
+    b, b_dash = biasRange(p, n, b, percentage):
+    return {"b": b/n, "b'": b_dash/n}
+
+@app.route('/BiasFromUrl', methods=['POST'])
+def BiasFromUrl():
+    data = request.get_json()
+    input = data.get('input')
+    b, n, p = biasScoreGeneratorFromScraper(NewsScraper(input))
+    return {"response": b/n}
+
+@app.route('/BiasRangeFromUrl', methods=['POST'])
+def BiasRangeFromUrl():
+    data = request.get_json()
+    input = data.get('input')
+    b, n, p = biasScoreGeneratorFromScraper(NewsScraper(input))
     percentage = 0.9
     b, b_dash = biasRange(p, n, b, percentage):
     return {"b": b/n, "b'": b_dash/n}
