@@ -8,6 +8,10 @@ author: DanielCiccC
 """
 openai.api_key = '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'
 
+# https://github.com/openai/openai-cookbook/blob/main/examples/How_to_format_inputs_to_ChatGPT_models.ipynb I'm just going to leave this here for now
+# but it is a good thing for the BA's to look at when they begin testing the GPT's functionality - the prompt can be more of a conversation
+# to potentially prompt it to say the right thing
+
 BIAS_PROMPT =[
           {"role": "system", "content": "You are an AI language model. Your task is to generate a JSON-formatted output. Please follow the JSON structure guidelines:"},
           {"role": "system", "content": "1. Begin the output with a '{' (left curly brace) and end it with a '}' (right curly brace)." 

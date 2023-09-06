@@ -87,18 +87,15 @@ class NewsScraper:
         if self.soup is None:
             return None
         
-        return "HEADING: " + self.getHeader() +"\n"+ "TEXT: " + self.getArticle() 
+        return self.getHeader(), self.getArticle() 
 
 """
 Pipe the web-scraped article as input into chatGPT
 """
 def pipeScrapedArticleToGPT(url): 
-    article = NewsScraper(url).generateStructuredPrompt()
-    if article is None:
-        return "An error searching for the URL has occured"
-    SummaryPrompt = prompt.generate_summary_prompt(article)
-    # biasPrompt = prompt.generate_bias_prompt(article)
-    return prompt.generate_response(SummaryPrompt)
+    header, article = NewsScraper(url).generateStructuredPrompt() 
+    p = prompt.generate_summary_prompt("HEADING: " + header + "\n" + "TEXT: " + article)
+    return prompt.generate_response(p), header, article
 
 '''
 generate a JSON output of all the biased subtext in the media article.
@@ -106,13 +103,14 @@ Since the chatGPT output doesn't give a perfect account of the locations (indexe
 we will have to do that and validate it ourselves.
 '''
 def biasSubtext(url):
-    article = NewsScraper.generateStructuredPrompt(url)
+    article = NewsScraper(url).generateStructuredPrompt()
     if article is None:
         return "An error searching for the URL has occured"
-    SummaryPrompt = prompt.generate_bias_prompt(article)
-    response = prompt.generate_response(SummaryPrompt)
+    biasPrompt = prompt.generate_bias_prompt(article)
+    response = prompt.generate_response(biasPrompt)
     try:
-        pass
+        responseJSON = json.dumps(response)
+        return responseJSON
     except json.decoder.JSONDecodeError:
         return 'An error occurred'
 
@@ -146,27 +144,15 @@ def generateBiasJson(AIIn=json, article=str):
         idx = article.index(k)
         idx_dict[idx] = {str(k): v}
     return json.dumps(idx_dict)
-    
-    structuredPrompt = prompt.generate_summary_prompt(
-        "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
-        )
-    return prompt.generate_response(structuredPrompt)
-
-def verifyIndex(url, range):
-    scraper = NewsScraper(url)
-    article = "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
-    print(article)
-    return article[range : range + 40]
 
 # if __name__ == '__main__':
 #     URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
 #     out = ''
 #     for i in range(1):
-#         out += pipeScrapedArticleToGPT(URL) + '\n\n\n'
-#         print(out)
-#     with open('testing/out.txt', 'w') as out_file:
-#         # out_file.write(out)
-#         out_file.write(generateBiasJson(out, NewsScraper(URL).generateStructuredPrompt()))
-#     # print(out)
+#         print(pipeScrapedArticleToGPT(URL))
+    # with open('testing/out.txt', 'w') as out_file:
+    #     # out_file.write(out)
+    #     out_file.write(generateBiasJson(out, NewsScraper(URL).generateStructuredPrompt()))
+    # print(out)
 
    
