@@ -43,7 +43,7 @@ def BiasRangeFromText():
 def BiasFromUrl():
     data = request.get_json()
     input = data.get('input')
-    b, n, p = biasScoreGeneratorFromScraper(NewsScraper(input))
+    b, n, p = biasScoreGeneratorFromScraper(input)
     return {"response": b/n}
 
 
@@ -51,7 +51,7 @@ def BiasFromUrl():
 def BiasRangeFromUrl():
     data = request.get_json()
     input = data.get('input')
-    b, n, p = biasScoreGeneratorFromScraper(NewsScraper(input))
+    b, n, p = biasScoreGeneratorFromScraper(input)
     percentage = 0.9
     b, b_dash = biasRange(p, n, b, percentage)
     return {"b": b/n, "b'": b_dash/n}
@@ -66,11 +66,6 @@ def generate_response(prompt):
         temperature=0.7
     )
     return (response['choices'][0]['message']['content'])
-
-# https://github.com/openai/openai-cookbook/blob/main/examples/How_to_format_inputs_to_ChatGPT_models.ipynb I'm just going to leave this here for now
-# but it is a good thing for the BA's to look at when they begin testing the GPT's functionality - the prompt can be more of a conversation
-# to potentially prompt it to say the right thing
-
 
 if __name__ == '__main__':
     app.run()
