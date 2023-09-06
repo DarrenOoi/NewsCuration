@@ -6,9 +6,9 @@ import { fetchResults } from '@/utils/fetchResults';
 import BiasScore from '@/components/BiasScore';
 import InputField from '@/components/InputField';
 import Card from '@/components/Card';
-import Input from '@/components/Input'
-import Button from '@/components/Button'
-import Slider from '@/components/Slider'
+import Input from '@/components/Input';
+import Button from '@/components/Button';
+import Slider from '@/components/Slider';
 import { BsImage } from 'react-icons/bs';
 import AnalysisPage from './analysisPage';
 import { useRouter } from 'next/router';
@@ -35,11 +35,11 @@ function Index() {
                 <div className='hero'>
                     <div className='hero-content p'>
                         <div>
-                            <div><text className="text-white font-bold text-xl"><text className="text-[#FFB039]">JUST THE FACTS</text> lets you discover unbiased
+                            <div className="mt"style={{ width: '900px'}}><text className="text-white font-bold text-xl"><text className="text-[#FFB039]">JUST THE FACTS</text> lets you discover unbiased
                             political insights. <text className="text-[#FFB039]">START</text> by either filtering through a
                             <text className="font-extrabold">political profiles</text> containing a collection of articles.</text></div>
                             
-                            <div className="flex justify-center space-x-20 mt-10">
+                            <div className="flex justify-center space-x-20 mt-20">
                                 <div className='card bg-[#7895B1] rounded-xl'
                                     style={{ width: '300px', height: "200px"}}>
                                         <button className="btn btn-xs btn-neutral rounded-full mt-40 ml-12"
