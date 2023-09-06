@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import prompts.prompt as prompt
+import json
 
 class PageValidator:
     def __init__(self, pageToScrape) -> None:
@@ -75,33 +76,87 @@ class NewsScraper:
         whiteSpaceFilledArticle = re.sub("[\n\t]", " ", dirtyArticle)
         cleanArticle = re.sub(" +", " ", whiteSpaceFilledArticle)
         return cleanArticle
-
-
-def pipeScrapedArticleToGPT(url):
-    scraper = NewsScraper(url)
-    if scraper.soup is None:
-        return "Paywall Encountered, please seek another method"
-    # print(scraper.articleScrape())
     
-    structuredPrompt = prompt.generate_summary_prompt(
-        "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
-        )
-    return prompt.generate_response(structuredPrompt)
+    """
+    This method generates a structured prompt with a header and main body of text,
+    utilising NewsScraper methods defined in this class.
+    
+    Returns None if issues are encountered with the prompt, else the complete prompt is returned.
+    """
+    def generateStructuredPrompt(self):
+        if self.soup is None:
+            return None
+        
+        return "HEADING: " + self.getHeader() +"\n"+ "TEXT: " + self.getArticle() 
 
-def verifyIndex(url, range):
-    scraper = NewsScraper(url)
-    article = "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
-    print(article)
-    return article[range : range + 40]
+"""
+Pipe the web-scraped article as input into chatGPT
+"""
+def pipeScrapedArticleToGPT(url): 
+    article = NewsScraper(url).generateStructuredPrompt()
+    if article is None:
+        return "An error searching for the URL has occured"
+    SummaryPrompt = prompt.generate_summary_prompt(article)
+    # biasPrompt = prompt.generate_bias_prompt(article)
+    return prompt.generate_response(SummaryPrompt)
 
+'''
+generate a JSON output of all the biased subtext in the media article.
+Since the chatGPT output doesn't give a perfect account of the locations (indexes) of the biased text, 
+we will have to do that and validate it ourselves.
+'''
+def biasSubtext(url):
+    article = NewsScraper.generateStructuredPrompt(url)
+    if article is None:
+        return "An error searching for the URL has occured"
+    SummaryPrompt = prompt.generate_bias_prompt(article)
+    response = prompt.generate_response(SummaryPrompt)
+    try:
+        pass
+    except json.decoder.JSONDecodeError:
+        return 'An error occurred'
+
+
+'''
+Due to persistent issues with openai reponses finding the biased phrase index
+
+Parameters
+----------
+    AIIn: json 
+        The json file should maintain the following structure
+        {
+            'lorem ipsum':'dolor sit amet',
+            'something':'else'
+        }
+    article: str
+        the original and full article as input to chatGPT
+        
+    Returns
+    -------
+        json -> with the following file structure
+        {16: {'lorem ipsum': "dolor sit amet."},
+         44: {'lorem ipsum': "dolor sit amet."},
+         }
+DEEPRECATED: no longer used but kept for reference
+'''
+def generateBiasJson(AIIn=json, article=str):
+    in_dict = dict(json.loads(AIIn))
+    idx_dict = {}
+    for k,v in in_dict.items():
+        idx = article.index(k)
+        idx_dict[idx] = {str(k): v}
+    return json.dumps(idx_dict)
+    
+    
 # if __name__ == '__main__':
-    # URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
-    # out = ''
-    # for i in range(1):
-    #     out += pipeScrapedArticleToGPT(URL) + '\n\n\n'
-    #     # print(output)
-    # with open('testing/out.txt', 'w') as out_file:
-    #     out_file.write(out)
-    # print(out)
-    # print(verifyIndex(URL, 167))
+#     URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
+#     out = ''
+#     for i in range(1):
+#         out += pipeScrapedArticleToGPT(URL) + '\n\n\n'
+#         print(out)
+#     with open('testing/out.txt', 'w') as out_file:
+#         # out_file.write(out)
+#         out_file.write(generateBiasJson(out, NewsScraper(URL).generateStructuredPrompt()))
+#     # print(out)
+
    

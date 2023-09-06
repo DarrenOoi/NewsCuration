@@ -34,6 +34,36 @@ BIAS_PROMPT =[
           {"role": "user", "content": ''},
       ]
 
+#DECREPED
+BIAS_PROMPT_2 =[
+          {"role": "system", "content": "You are an AI language model. Your task is to generate a JSON-formatted output. Please follow the JSON structure guidelines:"},
+          {"role": "system", "content": "1. Begin the output with a '{' (left curly brace) and end it with a '}' (right curly brace)." 
+            + "2. Use double quotation marks for keys and string values within the JSON."
+            + "3. Separate key-value pairs with a colon ':' and separate key-value pairs or elements within arrays with a comma ','." 
+            + "4. Ensure that all keys and string values are properly enclosed in double quotation marks." 
+            + "5. Use the valid JSON data types, such as integers, strings and arrays" 
+            + "6. Avoid any extraneous text or characters outside the JSON structure." 
+            + "Now, proceed to generate a JSON output similar to the following:"},
+          {"role": "system", "content": "You will be provided with a web-scraped media article." +
+           "Read through the text carefully and in its entirety, and identify all emotionally charged words and bias content." +
+           " Create a key-value pair as specified in the JSON format. \n" + 
+           " I will require three main pieces of information for each biased keyword or phrase." + 
+           " The first is an (integer) index of the biased keyword/phrase, which will be calculated by counting the number of words from the word 'BEGIN' in the web-scraped article, up to the first character of the biased phrase" +
+           " This will serve as our key. The second piece of information is the biased keyword, related to the index which we calculated earlier. Use this as a key for an inner dictionary in the key value pair. Lastly, " +
+           " give an explanation why the given phrase is believed to be emotionally charged or biased." +
+           " The following example gives an example web-scraped sentence, and one correct JSON-formatted response.\n " +
+           "You must return the JSON response only. Find as many biased examples as you can." 
+           },
+          {"role": "assistant", "content": 
+"""
+HEADING: The devastating and tragic house fire kills family dog.
+{
+  7 : {"devastating and tragic" : "The phrase 'devastating and tragic' suggests a highly intense and terrifying event, potentially biasing the reader's perception of the incident."}
+}
+"""},
+          {"role": "user", "content": ''},
+      ]
+
 
 SUMMARY_PROMPT = [
           {"role": "system", "content": "You are a methodical assistant."},
@@ -43,7 +73,6 @@ SUMMARY_PROMPT = [
            "Make sure the bullet points are maintaining an unbaised, neutral tone. \n" + 
            "Sometimes, the footer is accidentally included in the web scraped article. When reading the article in its entirety," +
            " note the last few sentences and see if they are related to the above article. If it is not related to the article, do not include it in the summary."},
-          # {"role": "assistant", "content": "House burned down in Victoria following forest fires in neighbouring suburb"},
           {"role": "user", "content": ''},
       ]
 
