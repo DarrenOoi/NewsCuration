@@ -85,7 +85,7 @@ def pipeScrapedArticleToGPT(url):
     structuredPrompt = prompt.generate_summary_prompt(
         "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
         )
-    return "GPT RESPONSE - " + prompt.generate_response(structuredPrompt)
+    return prompt.generate_response(structuredPrompt), scraper.getHeader(), scraper.getArticle()
 
 # if __name__ == '__main__':
 #     output = pipeScrapedArticleToGPT(input("Enter URL: \n"))
