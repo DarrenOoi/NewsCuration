@@ -86,7 +86,7 @@ def pipeScrapedArticleToGPT(url):
     structuredPrompt = prompt.generate_summary_prompt(
         "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
         )
-    return prompt.generate_response(structuredPrompt)
+    return prompt.generate_response(structuredPrompt), scraper.getHeader(), scraper.getArticle()
 
 def verifyIndex(url, range):
     scraper = NewsScraper(url)
