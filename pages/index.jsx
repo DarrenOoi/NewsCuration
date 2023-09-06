@@ -23,7 +23,9 @@ function Home() {
       setSubmitted(true);
       setResult(null);
       fetchResults(text).then((result) => {
-        setResult(result);
+        setResult(result.response);
+        console.log(result.header);
+        console.log(result.article);
         setSubmitted(false);
       });
     } else setResult(null);
@@ -31,7 +33,7 @@ function Home() {
 
   const router = useRouter();
   const handleClick = () => {
-    router.push('http://localhost:3000/analysisPage');
+    router.push(`/analysisPage`);
   };
 
   return (

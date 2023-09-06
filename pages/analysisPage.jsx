@@ -1,9 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { fetchResults } from '@/utils/fetchResults';
-import { BsImage } from 'react-icons/bs';
 import Navbar from '@/components/Navbar';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
@@ -12,7 +9,7 @@ import BiasScore from '@/components/BiasScore';
 function AnalysisPage() {
   const router = useRouter();
   const handleClick = () => {
-    router.push('http://localhost:3000');
+    router.push('/');
   };
   const highlight = true;
 

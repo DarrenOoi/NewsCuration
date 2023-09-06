@@ -18,7 +18,7 @@ export const fetchResults = async (text) => {
       return responseResult.response;
     } else {
       console.error('Request failed:', response.status, response.statusText);
-      return 'request failed';
+      return 'Please input a valid URL';
     }
   } catch (error) {
     console.error('Error:', error);
