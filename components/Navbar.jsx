@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className='navbar-center'>
-        <span className='text-[#7895B1] font-bold text-7xl'>JUST THE FACTS</span>
+        <span className='text-[#7895B1] font-bold text-8xl'>JUST THE FACTS</span>
       </div>
       <div className='navbar-end' />
     </div>

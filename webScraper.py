@@ -147,7 +147,17 @@ def generateBiasJson(AIIn=json, article=str):
         idx_dict[idx] = {str(k): v}
     return json.dumps(idx_dict)
     
-    
+    structuredPrompt = prompt.generate_summary_prompt(
+        "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
+        )
+    return prompt.generate_response(structuredPrompt)
+
+def verifyIndex(url, range):
+    scraper = NewsScraper(url)
+    article = "HEADING: " + scraper.getHeader() +"\n"+ "TEXT: " + scraper.getArticle()
+    print(article)
+    return article[range : range + 40]
+
 # if __name__ == '__main__':
 #     URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
 #     out = ''
