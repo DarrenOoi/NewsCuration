@@ -12,7 +12,7 @@ import BiasScore from '@/components/BiasScore';
 function AnalysisPage() {
   const router = useRouter();
   const handleClick = () => {
-    router.push('http://localhost:3000');
+    router.push('/articleSearch');
   };
   const highlight = true;
 
@@ -26,10 +26,14 @@ function AnalysisPage() {
           <div className='hero'>
             <div className='hero-content p'>
             <div>
-            <div className='flex justify-start'>
-          <Button handleClick={handleClick} text='BACK TO THE FACTS' />
-        </div>
-        <div className='mt-10'>
+            <div className="p mt-5 ml-4 font-bold text-4xl text-[#7895B1]">BIAS ARTICLE BREAKDOWN</div>
+            <div className='bg-[#7895B1] rounded-xl'
+              style={{ width: '1200px'}}>
+              {/**<Button handleClick={handleClick} text='BACK TO THE FACTS' />*/}
+              <button onClick={handleClick} className="font-semibold mt-4 ml-4 btn btn-sm rounded-full btn-neutral text-white">
+                <text>BACK TO <text className="text-[#FFB039] font-bold">ARTICLE SEARCH</text></text>
+              </button>
+        <div className='mt-4'>
           <Card
             title='Lorem Ipsum'
             highlight={highlight}
@@ -41,6 +45,7 @@ Fusce quis molestie est. In commodo quam et dictum faucibus. Mauris pretium lacu
 
 Morbi eget diam et metus consectetur facilisis eget id sem. Praesent id ipsum nisi. Maecenas volutpat, massa ut eleifend pharetra, urna leo eleifend nibh, ac tempor nunc mauris at eros. Nam venenatis faucibus nunc quis tempus. Nulla facilisi. Aenean commodo aliquet tortor eu convallis. Donec ac eros non tortor hendrerit mollis sed maximus quam. Aenean efficitur massa non risus fermentum ornare. Suspendisse potenti. Proin id libero arcu. Vestibulum faucibus sed metus eu finibus. Integer nunc nunc, elementum a consectetur sodales, fringilla at turpis. Nam scelerisque in augue at varius. Sed vestibulum massa in tempor volutpat. Quisque blandit lacus vel massa elementum, nec scelerisque leo feugiat. Etiam cursus semper dui eget sollicitudin.'
           />
+        </div>
         </div>
         <BiasScore score='60%' />
       </div>
