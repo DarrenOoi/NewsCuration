@@ -74,7 +74,7 @@ def BiasRangeFromText():
     input = data.get('articleText')
     b, n, p = biasScoreGeneratorFromText(input)
     percentage = 0.9
-    b, b_dash = biasRange(p, n, b, percentage):
+    b, b_dash = biasRange(p, n, b, percentage)
     return {"b": b/n, "b'": b_dash/n}
 
 @app.route('/BiasFromUrl', methods=['POST'])
@@ -90,7 +90,7 @@ def BiasRangeFromUrl():
     input = data.get('input')
     b, n, p = biasScoreGeneratorFromScraper(NewsScraper(input))
     percentage = 0.9
-    b, b_dash = biasRange(p, n, b, percentage):
+    b, b_dash = biasRange(p, n, b, percentage)
     return {"b": b/n, "b'": b_dash/n}
 
 if __name__ == '__main__':
