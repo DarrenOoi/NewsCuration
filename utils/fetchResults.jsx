@@ -13,15 +13,14 @@ export const fetchResults = async (text) => {
 
     if (response.ok) {
       const responseResult = await response.json();
-      console.log('this is response:' + responseResult.response);
 
-      return responseResult.response;
+      return responseResult;
     } else {
       console.error('Request failed:', response.status, response.statusText);
-      return 'Please input a valid URL';
+      return { response: 'Please input a valid URL' };
     }
   } catch (error) {
     console.error('Error:', error);
-    return 'Something went wrong...';
+    return { response: 'Something went wrong...' };
   }
 };

@@ -8,17 +8,19 @@ const Card = ({ title, content, highlight = false }) => {
       'Mauris pretium lacus sapien': 'Describes a certain state or condition',
       'vehicula eget enim vel': 'Related to vehicles and their properties',
       'Nam scelerisque': 'Refers to a specific concept or idea',
+      'My Profile': 'sacdvbtrnyukiu',
     };
     keys = Object.keys(biasWords);
     phrases = content.split(new RegExp(`(${keys.join('|')})`, 'gi'));
   }
   return (
     <div className='card lg:card-side bg-white shadow-xl'>
-      <div className='card-body'>
-        {/* <div className='card-title flex justify-center font-bold text-4xl text-gray-600'>
-          {title}
-        </div> */}
-        <p className='text-black'>
+      <div className='card-body text-black'>
+        <div className='p'>
+          <div className='card-title flex justify-center font-bold text-4xl text-gray-600 mb-5'>
+            {title}
+          </div>
+          {/* <p className='text-black'> */}
           {highlight ? (
             phrases.map((phrase, index) => {
               const matches = keys.find(
@@ -43,7 +45,8 @@ const Card = ({ title, content, highlight = false }) => {
           ) : (
             <>{content}</>
           )}
-        </p>
+        </div>
+        {/* </p> */}
       </div>
     </div>
   );

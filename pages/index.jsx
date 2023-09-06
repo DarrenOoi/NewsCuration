@@ -16,6 +16,9 @@ import { useRouter } from 'next/router';
 function Home() {
   const [text, setText] = useState('');
   const [result, setResult] = useState(null);
+  const [header, setHeader] = useState(null);
+  const [article, setArticle] = useState(null);
+
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = () => {
@@ -24,16 +27,20 @@ function Home() {
       setResult(null);
       fetchResults(text).then((result) => {
         setResult(result.response);
-        console.log(result.header);
-        console.log(result.article);
+        setHeader(result.header);
+        setArticle(result.article);
         setSubmitted(false);
       });
     } else setResult(null);
   };
 
   const router = useRouter();
+
   const handleClick = () => {
-    router.push(`/analysisPage`);
+    router.push({
+      pathname: '/analysisPage',
+      query: { header: header, text: article },
+    });
   };
 
   return (
