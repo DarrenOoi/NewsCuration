@@ -1,0 +1,11 @@
+{
+  "killed" : "The word 'killed' indicates a tragic loss of life, evoking strong emotions.",
+  "horror crash" : "The phrase 'horror crash' suggests a highly intense and terrifying event, potentially biasing the reader's perception of the incident.",
+  "may not be aware they're dead" : "The phrase 'may not be aware they're dead' implies a sense of disbelief or denial, potentially invoking empathy towards the driver.",
+  "dangerous driving causing death" : "The phrase 'dangerous driving causing death' indicates a severe offense, potentially framing the driver as the responsible party.",
+  "injured in the crash" : "The phrase 'injured in the crash' highlights the physical harm suffered by the driver, potentially eliciting sympathy.",
+  "distraught and distressed" : "The words 'distraught and distressed' describe the emotional state of the boys' mother, evoking empathy and potential bias towards her perspective.",
+  "speed was a factor" : "The phrase 'speed was a factor' suggests negligence on the part of the driver, potentially framing the incident as a result of reckless behavior."
+}
+
+
