@@ -43,27 +43,25 @@ function AnalysisPage() {
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-            <div className="p mt-5 ml-4 font-bold text-4xl text-[#7895B1]">BIAS ARTICLE BREAKDOWN</div>
-            <div className='bg-[#7895B1] rounded-xl'
-              style={{ width: '1200px'}}>
-              {/**<Button handleClick={handleClick} text='BACK TO THE FACTS' />*/}
-              <button onClick={handleClick} className="font-semibold mt-4 ml-4 btn btn-sm rounded-full btn-neutral text-white">
-                <text>BACK TO <text className="text-[#FFB039] font-bold">ARTICLE SEARCH</text></text>
-              </button>
-        <div className='mt-4'>
-        <Card
-                  title={header}
-                  highlight={highlight}
-                  content={text}
-          />
+              <div className="p mt-5 ml-4 font-bold text-4xl text-[#7895B1]">BIAS ARTICLE BREAKDOWN</div>
+              <div className='bg-[#7895B1] rounded-xl' style={{ width: '1200px'}}>
+                <button onClick={handleClick} className="font-semibold mt-4 ml-4 btn btn-sm rounded-full btn-neutral text-white">
+                  <text>BACK TO <text className="text-[#FFB039] font-bold">ARTICLE SEARCH</text></text>
+                </button>
+                <div className='mt-4'>
+                  <Card
+                    title={header}
+                    highlight={highlight}
+                    content={text}
+                  />
+                </div>
+              </div>
+            <BiasScore score={score} />
         </div>
-        </div>
-        <BiasScore score={score} />
-
       </div>
     </div>
     </div>
-    </div></div>
+  </div>
   );
 }
 

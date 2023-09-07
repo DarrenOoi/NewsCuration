@@ -57,12 +57,6 @@ function Home() {
                 <div className = "flex justify-start space-x-4">
                   <Input setText={setText} /> <Button className='mr-5' handleClick={handleSubmit} text='Click for the facts'/>
                 </div>
-        
-                {/*
-                <button className='btn btn-active btn-circle btn-neutral ml-20'>
-                  <BsImage />
-                </button>
-                */}
 
               <div className='mt-10'>
                 <Card
