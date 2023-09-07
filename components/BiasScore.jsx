@@ -1,7 +1,7 @@
 {
   /* score will be passed into this component, assuming its gonna get calculated somewhere else*/
 }
-const BiasScore = ({ handleClick, score }) => {
+const BiasScore = ({ score }) => {
   return (
     <div>
       <div className='stats shadow rounded-t-none ml-4'>
@@ -10,7 +10,11 @@ const BiasScore = ({ handleClick, score }) => {
             ORIGINAL ARTICLE BIAS SCORE
           </div>
           <div className='stat-value text-[#FFB039] ml-17 text-center'>
-            {score}
+            {score ? (
+              score
+            ) : (
+              <span className='mt-2 loading loading-spinner text-warning'></span>
+            )}
           </div>
         </div>
       </div>

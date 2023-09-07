@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Navbar = () => {
   return (
     <div className='navbar bg-[#5F7A95] p-5'>
@@ -24,10 +26,7 @@ const Navbar = () => {
             className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-40'
           >
             <li>
-              <a>Homepage</a>
-            </li>
-            <li>
-              <a>Portfolio</a>
+              <Link href='/'>Home</Link>
             </li>
             <li>
               <a>About</a>
@@ -36,7 +35,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className='navbar-center'>
-        <span className='text-[#7895B1] font-bold text-8xl'>JUST THE FACTS</span>
+        <span className='text-[#7895B1] font-bold text-8xl'>
+          JUST THE FACTS
+        </span>
       </div>
       <div className='navbar-end' />
     </div>

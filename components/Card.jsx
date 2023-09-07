@@ -2,7 +2,7 @@ const Card = ({ title, content, highlight = false }) => {
   let phrases = [];
   let biasWords = {};
   let keys = [];
-  if (highlight) {
+  if (highlight && content) {
     biasWords = {
       'Nulla sed': 'A phrase with no specific meaning',
       'Mauris pretium lacus sapien': 'Describes a certain state or condition',
@@ -17,10 +17,9 @@ const Card = ({ title, content, highlight = false }) => {
     <div className='card lg:card-side bg-white shadow-xl'>
       <div className='card-body text-black'>
         <div className='p'>
-          <div className='card-title flex justify-center font-bold text-4xl text-gray-600 mb-5'>
+          <div className='card-title flex justify-center font-bold text-4xl text-gray-600'>
             {title}
           </div>
-          {/* <p className='text-black'> */}
           {highlight ? (
             phrases.map((phrase, index) => {
               const matches = keys.find(
@@ -46,7 +45,6 @@ const Card = ({ title, content, highlight = false }) => {
             <>{content}</>
           )}
         </div>
-        {/* </p> */}
       </div>
     </div>
   );
