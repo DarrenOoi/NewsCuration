@@ -38,7 +38,7 @@ BIAS_PROMPT =[
           {"role": "user", "content": ''},
       ]
 
-#DECREPED
+#DEPRECATED
 BIAS_PROMPT_2 =[
           {"role": "system", "content": "You are an AI language model. Your task is to generate a JSON-formatted output. Please follow the JSON structure guidelines:"},
           {"role": "system", "content": "1. Begin the output with a '{' (left curly brace) and end it with a '}' (right curly brace)." 

@@ -42,5 +42,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 pip install pymysql
 
 pip install mysql-connector-python
-
-pip install boto3

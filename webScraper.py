@@ -135,7 +135,7 @@ Parameters
         {16: {'lorem ipsum': "dolor sit amet."},
          44: {'lorem ipsum': "dolor sit amet."},
          }
-DEEPRECATED: no longer used but kept for reference
+DEPRECATED: no longer used but kept for reference
 '''
 def generateBiasJson(AIIn=json, article=str):
     in_dict = dict(json.loads(AIIn))
