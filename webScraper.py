@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import re
-import prompts.prompt as prompt
+import sys
+from utils.prompts import prompt
 import json
 
 class PageValidator:
