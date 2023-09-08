@@ -103,15 +103,14 @@ generate a JSON output of all the biased subtext in the media article.
 Since the chatGPT output doesn't give a perfect account of the locations (indexes) of the biased text, 
 we will have to do that and validate it ourselves.
 '''
-def biasSubtext(url):
-    article = NewsScraper(url).generateStructuredPrompt()
-    if article is None:
-        return "An error searching for the URL has occured"
+def biasSubtext(article=str):
+    if not isinstance(article, str):
+        raise TypeError
     biasPrompt = prompt.generate_bias_prompt(article)
     response = prompt.generate_response(biasPrompt)
     try:
-        responseJSON = json.dumps(response)
-        return responseJSON
+        responseJSON = json.dumps(response) ## just to test in JSON file format
+        return response
     except json.decoder.JSONDecodeError:
         return 'An error occurred'
 
@@ -149,11 +148,7 @@ def generateBiasJson(AIIn=json, article=str):
 # if __name__ == '__main__':
 #     URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
 #     out = ''
-#     for i in range(1):
-#         print(pipeScrapedArticleToGPT(URL))
-    # with open('testing/out.txt', 'w') as out_file:
-    #     # out_file.write(out)
-    #     out_file.write(generateBiasJson(out, NewsScraper(URL).generateStructuredPrompt()))
-    # print(out)
+#     article = NewsScraper(URL).generateStructuredPrompt()
+#     print(biasSubtext(article[0]))
 
    
