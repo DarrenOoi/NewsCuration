@@ -10,7 +10,9 @@ function Index() {
     router.push('/articleSearch');
   };
 
-  const ProfileSearch = () => {};
+  const ProfileSearch = () => {
+    router.push('/profileSearch')
+  };
 
   return (
     <div>
@@ -22,16 +24,12 @@ function Index() {
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className='mt' style={{ width: '900px' }}>
-                <text className='text-white font-bold text-xl'>
-                  <text className='text-[#FFB039]'>JUST THE FACTS</text> lets
-                  you discover unbiased political insights.{' '}
-                  <text className='text-[#FFB039]'>START</text> by either
-                  filtering through a
-                  <text className='font-extrabold'>political profiles</text>{' '}
-                  containing a collection of articles.
-                </text>
-              </div>
+            <div className="mt"style={{ width: '900px'}}><text className="text-white font-bold text-xl">
+                                <text className="text-[#FFB039] font-extrabold">JUST THE FACTS</text> lets you discover unbiased
+                            political insights. <text className="text-[#FFB039] font-extrabold">START</text> by either filtering through a 
+                            <text className="font-extrabold"> single article</text> or by exploring impartial
+                            <text className="font-extrabold"> political profiles</text> containing a collection of articles.</text>
+                </div>
 
               <div className='flex justify-center space-x-20 mt-20'>
                 <div
