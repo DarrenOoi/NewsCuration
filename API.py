@@ -5,6 +5,7 @@ import requests
 
 import webScraper as wS
 from biasCalculator import *
+from similarArticleRetrieval import *
 
 openai.api_key = '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'
 openai.Model.list()
@@ -72,6 +73,16 @@ def generate_response(prompt):
         temperature=0.7
     )
     return (response['choices'][0]['message']['content'])
+
+
+@app.route('/SimilarArticlesRetrieval', methods=['POST'])
+def SimilarArticlesRetrieval():
+    data = request.get_json()
+    # either a sentence summary of article  from GPT or article header 
+    input = data.get('input')
+    sortedSimilarArticles = similarArticles(input)
+
+    return [{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles]
 
 if __name__ == '__main__':
     app.run()

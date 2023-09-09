@@ -50,7 +50,6 @@ def biasRange(p, n, b, percentage):
     if w < n:
         w += 1 #extra -1 removed
     
-    print(w)
     y = n - w
     y_dash = math.ceil(y*(b/n))
     b_dash = b -2*y_dash + y
