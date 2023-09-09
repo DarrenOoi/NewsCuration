@@ -76,12 +76,12 @@ function Home() {
                   />
                 </div>
               </div>
+              </div>
               <div className='flex justify-center mt-10'>
                 {result && header && article && (
                   <Button text='CLICK FOR THE WHY' handleClick={handleClick} />
                 )}
               </div>
-            </div>
           </div>
         </div>
       </div>

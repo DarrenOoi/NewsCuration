@@ -10,7 +10,9 @@ function Index() {
     router.push('/articleSearch');
   };
 
-  const ProfileSearch = () => {};
+  const ProfileSearch = () => {
+    router.push('/profileSearch')
+  };
 
   return (
     <div>
