@@ -7,11 +7,13 @@ import Card from '@/components/Card';
 import BiasScore from '@/components/BiasScore';
 import { useEffect, useState } from 'react';
 import { fetchScore } from '@/utils/fetchScore';
+import { fetchBiasWords } from '@/utils/fetchBiasWords';
 
 function AnalysisPage() {
   const router = useRouter();
   const { header, text } = router.query;
   const [score, setScore] = useState(null);
+  const [biasWords, setBiasWords] = useState(null);
 
   const handleClick = () => {
     router.push('/articleSearch');
@@ -24,6 +26,9 @@ function AnalysisPage() {
         try {
           const res = await fetchScore(text);
           setScore(res * 100.0 + '%');
+
+          const words = await fetchBiasWords(text);
+          setBiasWords(words);
         } catch (error) {
           console.log('error');
         }
@@ -62,7 +67,12 @@ function AnalysisPage() {
                   </text>
                 </button>
                 <div className='mt-4'>
-                  <Card title={header} highlight={highlight} content={text} />
+                  <Card
+                    title={header}
+                    highlight={highlight}
+                    content={text}
+                    biasWords={biasWords}
+                  />
                 </div>
               </div>
               <BiasScore score={score} />

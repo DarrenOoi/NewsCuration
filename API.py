@@ -59,7 +59,7 @@ def BiasRangeFromUrl():
 @app.route('/BiasKeywords', methods=['POST'])
 def biasKeyWordsFromText():
     data = request.get_json()
-    input = data.get('input')
+    input = data.get('articleText')
     response = biasSubtext(input)
     return response
 

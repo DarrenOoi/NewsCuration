@@ -1,15 +1,7 @@
-const Card = ({ title, content, highlight = false }) => {
+const Card = ({ title, content, highlight = false, biasWords }) => {
   let phrases = [];
-  let biasWords = {};
   let keys = [];
-  if (highlight && content) {
-    biasWords = {
-      'Nulla sed': 'A phrase with no specific meaning',
-      'Mauris pretium lacus sapien': 'Describes a certain state or condition',
-      'vehicula eget enim vel': 'Related to vehicles and their properties',
-      'Nam scelerisque': 'Refers to a specific concept or idea',
-      'My Profile': 'sacdvbtrnyukiu',
-    };
+  if (highlight && content && biasWords) {
     keys = Object.keys(biasWords);
     phrases = content.split(new RegExp(`(${keys.join('|')})`, 'gi'));
   }
