@@ -38,8 +38,8 @@ def convertGoogleNewsUrlToAccessible(url):
     return actual_url
 
 
-sortedSimilarArticles = similarArticles("The dangerous precedent set by Trump’s indictment in Georgia")
-print([{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles])
+# sortedSimilarArticles = similarArticles("The dangerous precedent set by Trump’s indictment in Georgia")
+# print([{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles])
 
 # jason form
 # [{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles]
