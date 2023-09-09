@@ -76,18 +76,17 @@ function Home() {
                   />
                 </div>
               </div>
+              <div className='flex justify-center mt-10'>
+                {result && header && article && (
+                  <Button
+                    text='CLICK FOR THE'
+                    boldText='WHY'
+                    handleClick={handleClick}
+                  />
+                )}
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className='flex justify-center mt-3 '>
-          {result && header && article && (
-            <Button
-              text='CLICK FOR THE'
-              handleClick={handleClick}
-              boldText='WHY'
-            />
-          )}
         </div>
       </div>
     </div>
