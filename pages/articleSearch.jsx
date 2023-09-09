@@ -80,7 +80,7 @@ function Home() {
           </div>
         </div>
 
-        <div className='flex justify-center mt-5 mb-10'>
+        <div className='flex justify-center mt-3 '>
           {result && header && article && (
             <Button
               text='CLICK FOR THE'

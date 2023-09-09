@@ -10,7 +10,6 @@ export const fetchBiasWords = async (text) => {
 
     if (response.ok) {
       const responseResult = await response.json();
-
       return responseResult;
     } else {
       console.error('Request failed:', response.status, response.statusText);

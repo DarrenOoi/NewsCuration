@@ -74,7 +74,7 @@ function AnalysisPage() {
                       biasWords ? (
                         text
                       ) : (
-                        <span className='mt-2 loading loading-spinner loading-lg text-info'></span>
+                        <span className='mt-2 loading loading-spinner loading-lg text-warning'></span>
                       )
                     }
                     biasWords={biasWords}
@@ -89,5 +89,40 @@ function AnalysisPage() {
     </div>
   );
 }
+
+// export async function getServerSideProps({ query }) {
+//   const { header, text } = query;
+
+//   if (!text) {
+//     return {
+//       notFound: true,
+//     };
+//   }
+
+//   try {
+//     const score = await fetchScore(text);
+//     const biasWords = await fetchBiasWords(text);
+
+//     return {
+//       props: {
+//         header,
+//         text,
+//         score: score * 100 + '%',
+//         biasWords,
+//       },
+//       console,
+//     };
+//   } catch (error) {
+//     console.error(error);
+//     return {
+//       props: {
+//         header,
+//         text,
+//         score: null,
+//         biasWords: null,
+//       },
+//     };
+//   }
+// }
 
 export default AnalysisPage;
