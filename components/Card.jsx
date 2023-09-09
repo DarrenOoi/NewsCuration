@@ -12,7 +12,7 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
           <div className='card-title flex justify-center font-bold text-4xl text-gray-600'>
             {title}
           </div>
-          {highlight ? (
+          {highlight && biasWords ? (
             phrases.map((phrase, index) => {
               const matches = keys.find(
                 (key) => phrase.toLowerCase() === key.toLowerCase()
@@ -23,7 +23,7 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
               return isHighlighted ? (
                 <div
                   className='tooltip tooltip-bottom'
-                  data-tip={'Bias : ' + biasWords[phrase]}
+                  data-tip={biasWords[phrase]}
                 >
                   <span key={phraseKey} className='bg-red-300'>
                     {phrase}{' '}

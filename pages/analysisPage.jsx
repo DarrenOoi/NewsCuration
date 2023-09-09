@@ -70,7 +70,13 @@ function AnalysisPage() {
                   <Card
                     title={header}
                     highlight={highlight}
-                    content={text}
+                    content={
+                      biasWords ? (
+                        text
+                      ) : (
+                        <span className='mt-2 loading loading-spinner loading-lg text-info'></span>
+                      )
+                    }
                     biasWords={biasWords}
                   />
                 </div>
