@@ -1,15 +1,7 @@
-const Card = ({ title, content, highlight = false }) => {
+const Card = ({ title, content, highlight = false, biasWords }) => {
   let phrases = [];
-  let biasWords = {};
   let keys = [];
-  if (highlight && content) {
-    biasWords = {
-      'Nulla sed': 'A phrase with no specific meaning',
-      'Mauris pretium lacus sapien': 'Describes a certain state or condition',
-      'vehicula eget enim vel': 'Related to vehicles and their properties',
-      'Nam scelerisque': 'Refers to a specific concept or idea',
-      'My Profile': 'sacdvbtrnyukiu',
-    };
+  if (highlight && content && biasWords) {
     keys = Object.keys(biasWords);
     phrases = content.split(new RegExp(`(${keys.join('|')})`, 'gi'));
   }
@@ -20,7 +12,7 @@ const Card = ({ title, content, highlight = false }) => {
           <div className='card-title flex justify-center font-bold text-4xl text-gray-600'>
             {title}
           </div>
-          {highlight ? (
+          {highlight && biasWords ? (
             phrases.map((phrase, index) => {
               const matches = keys.find(
                 (key) => phrase.toLowerCase() === key.toLowerCase()
@@ -31,7 +23,7 @@ const Card = ({ title, content, highlight = false }) => {
               return isHighlighted ? (
                 <div
                   className='tooltip tooltip-bottom'
-                  data-tip={'Bias : ' + biasWords[phrase]}
+                  data-tip={biasWords[phrase]}
                 >
                   <span key={phraseKey} className='bg-red-300'>
                     {phrase}{' '}
