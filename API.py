@@ -56,6 +56,12 @@ def BiasRangeFromUrl():
     b, b_dash = biasRange(p, n, b, percentage)
     return {"b": b/n, "b'": b_dash/n}
 
+@app.route('/BiasKeywords', methods=['POST'])
+def biasKeyWordsFromText():
+    data = request.get_json()
+    input = data.get('input')
+    response = biasSubtext(input)
+    return response
 
 def generate_response(prompt):
     response = openai.ChatCompletion.create(
