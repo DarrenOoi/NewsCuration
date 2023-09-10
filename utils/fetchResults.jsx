@@ -17,10 +17,10 @@ export const fetchResults = async (text) => {
       return responseResult;
     } else {
       console.error('Request failed:', response.status, response.statusText);
-      return { response: 'Please input a valid URL' };
+      return { response: 'Possibly invalid URL: ' + ' ' + response.statusText };
     }
   } catch (error) {
     console.error('Error:', error);
-    return { response: 'Something went wrong...' };
+    return { response: 'Something went wrong... :' + error };
   }
 };

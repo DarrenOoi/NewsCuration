@@ -62,12 +62,6 @@ function Home() {
                   />
                 </div>
 
-                {/*
-                <button className='btn btn-active btn-circle btn-neutral ml-20'>
-                  <BsImage />
-                </button>
-                */}
-
                 <div className='mt-10'>
                   <Card
                     content={
@@ -84,7 +78,11 @@ function Home() {
               </div>
               <div className='flex justify-center mt-10'>
                 {result && header && article && (
-                  <Button text='CLICK FOR THE WHY' handleClick={handleClick} />
+                  <Button
+                    text='CLICK FOR THE'
+                    boldText='WHY'
+                    handleClick={handleClick}
+                  />
                 )}
               </div>
             </div>
