@@ -82,6 +82,23 @@ function AnalysisPage() {
                 </div>
               </div>
               <BiasScore score={score} />
+              
+              <div>
+               <div className='stats shadow rounded-b-none ml-4 mt-10'>
+                <div className='stat bg-gray-800'>
+                  <div className='stat-title text-center font-bold text-white'>
+                    SUMMARY OF ARTICLE BIAS
+                  </div>
+                </div>
+               </div>
+              </div>
+
+              <div
+                  className='card bg-white rounded-xl p-7'
+                  style={{ width: '1200px'}}
+                >
+                <text className="text-black"> IDK IF WE STILL DOING THIS </text>
+            </div>
             </div>
           </div>
         </div>
