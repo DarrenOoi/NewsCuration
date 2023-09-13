@@ -2,11 +2,33 @@ import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import Button from '@/components/Button';
+import Table from '@/components/Table';
 
 function ProfileSearch() {
   const handleBrowse = () => {};
 
   const handleSearch = () => {};
+
+  const array = [
+    {
+      title: 'Sample Article 1',
+      date: '2023-09-13',
+      source: 'Sample Source 1',
+      score: 8.5,
+    },
+    {
+      title: 'Sample Article 2',
+      date: '2023-09-14',
+      source: 'Sample Source 2',
+      score: 7.2,
+    },
+    {
+      title: 'Sample Article 3',
+      date: '2023-09-15',
+      source: 'Sample Source 3',
+      score: 9.0,
+    },
+  ];
 
   return (
     <div>
@@ -78,86 +100,8 @@ function ProfileSearch() {
                       <p className='text-l font-bold py-4'>
                         RECENT ARTICLES COLLECTION
                       </p>
-                      <div className='overflow-x-auto rounded-lg'>
-                        <table className='table'>
-                          {/* head */}
-                          <thead>
-                            <tr className='bg-gray-200'>
-                              <th>
-                                <text className='text-black font-bold'>
-                                  TITLE
-                                </text>
-                              </th>
-                              <th>
-                                <text className='text-black font-bold'>
-                                  DATE
-                                </text>
-                              </th>
-                              <th>
-                                <text className='text-black font-bold'>
-                                  SOURCE
-                                </text>
-                              </th>
-                              <th>
-                                <text className='text-black font-bold'>
-                                  BIAS SCORE
-                                </text>
-                              </th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {/* row 1 */}
-                            <tr className='bg-gray-200'>
-                              <th>THE GUY WENT TO DO THIS</th>
-                              <td>11/09/23</td>
-                              <td>Example</td>
-                              <td>
-                                <text className='text-orange-400 font-extrabold'>
-                                  23%
-                                </text>
-                              </td>
-                              <td>
-                                <button className='btn btn-neutral rounded-full btn-xs'>
-                                  VISIT ARTICLE
-                                </button>
-                              </td>
-                            </tr>
-                            {/* row 2 */}
-                            <tr className='bg-gray-200'>
-                              <th>THE GUY WENT TO DO THIS</th>
-                              <td>11/09/23</td>
-                              <td>Example</td>
-                              <td>
-                                <text className='text-orange-400 font-extrabold'>
-                                  23%
-                                </text>
-                              </td>
-                              <td>
-                                <button className='btn btn-neutral rounded-full btn-xs'>
-                                  VISIT ARTICLE
-                                </button>
-                              </td>
-                            </tr>
-                            {/* row 3 */}
-                            <tr className='bg-gray-200'>
-                              <th>THE GUY WENT TO DO THIS</th>
-                              <td>11/09/23</td>
-                              <td>Example</td>
-                              <td>
-                                <text className='text-orange-400 font-extrabold'>
-                                  23%
-                                </text>
-                              </td>
-                              <td>
-                                <button className='btn btn-neutral rounded-full btn-xs'>
-                                  VISIT ARTICLE
-                                </button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+
+                      <Table articles={array} />
                     </div>
                   </div>
                 </div>
