@@ -3,6 +3,7 @@ import requests
 import re
 import sys
 from utils.prompts import prompt
+import argparse
 import json
 
 class PageValidator:
@@ -145,10 +146,22 @@ def generateBiasJson(AIIn=json, article=str):
         idx_dict[idx] = {str(k): v}
     return json.dumps(idx_dict)
 
-# if __name__ == '__main__':
-#     URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
-#     out = ''
-#     article = NewsScraper(URL).generateStructuredPrompt()
-#     print(biasSubtext(article[0]))
+if __name__ == '__main__':
+    
+    # include an optional debug mode
+    parser = argparse.ArgumentParser(
+        description="webscraper functions"
+    )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="put this script into debug mode, to test some of the functions manually"
+    )
+    args = parser.parse_args()
+    if args.debug:
+        URL = 'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440'
+        out = ''
+        article = NewsScraper(URL).generateStructuredPrompt()
+        print(biasSubtext(article[0]))
 
    

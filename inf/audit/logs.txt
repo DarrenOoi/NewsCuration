@@ -1,0 +1,360 @@
+test[2023-09-09 14:00:42.019480] [SUCCESS] [Established connection <pymysql.cursors.DictCursor object at 0x000001D6FBE01130>] 
+[2023-09-09 14:02:02.325292] [SUCCESS] [Established connection <pymysql.cursors.DictCursor object at 0x0000024E2D3C20A0>] 
+[2023-09-09 14:02:12.573786] [SUCCESS] [Established connection <pymysql.cursors.DictCursor object at 0x00000261E7EF3040>] 
+[2023-09-09 14:05:03.995468] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000019E0E7118E0>] 
+[2023-09-09 14:05:03.997104] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000019E0E711310>] 
+[2023-09-09 14:07:23.895673] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000119DED613A0>]
+[2023-09-09 14:07:23.899282] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000119DED61400>]
+[2023-09-09 14:07:24.731139] [SUCCESS] [Established connection to database <pymysql.cursors.DictCursor object at 0x00000119DED61400>]
+[2023-09-09 14:07:25.222195] [FAIL] [Unable to execute sql 
+ 0]
+[2023-09-09 14:07:46.139329] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021E462B13A0>]
+[2023-09-09 14:07:46.141338] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021E462B1400>]
+[2023-09-09 14:07:46.974304] [SUCCESS] [Established connection to database <pymysql.cursors.DictCursor object at 0x0000021E462B1400>]
+[2023-09-09 14:10:26.277532] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002D4674413A0>]
+[2023-09-09 14:10:26.278523] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002D467441400>]
+[2023-09-09 14:10:27.121948] [SUCCESS] [Established connection to database <pymysql.cursors.DictCursor object at 0x000002D467441400>]
+[2023-09-09 14:13:20.864869] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C11E30D280>]
+[2023-09-09 14:13:20.866912] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C11E30DB80>]
+[2023-09-09 14:13:21.728004] [SUCCESS] [Established connection to database <pymysql.cursors.DictCursor object at 0x000001C11E30DB80>]
+[2023-09-09 14:13:22.162009] [FAIL] [an exception occured in the execution statement: 
+ (1050, "Table 'article' already exists")]
+[2023-09-09 14:13:22.164008] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C11E30D280>]
+[2023-09-09 14:13:22.164008] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C11E30DB80>]
+[2023-09-09 15:03:37.445591] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000207C031B460>]
+[2023-09-09 15:03:37.447595] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000207C031BD60>]
+[2023-09-09 15:03:38.271544] [SUCCESS] [Established connection to database <pymysql.cursors.DictCursor object at 0x00000207C031BD60>]
+[2023-09-09 15:03:38.681445] [FAIL] [an exception occured in the execution statement: 
+ (1050, "Table 'article' already exists")]
+[2023-09-09 15:03:38.682547] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000207C031B460>]
+[2023-09-09 15:03:38.683525] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000207C031BD60>]
+[2023-09-09 15:12:51.659856] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000019A9C67B460>]
+[2023-09-09 15:12:51.660851] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000019A9C67BD60>]
+[2023-09-09 15:12:52.486824] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 15:12:52.905248] [FAIL] [an exception occured in the execution statement: 
+ (1054, "Unknown column 'InsertedDateTime' in 'field list'")]
+[2023-09-09 15:12:52.907239] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000019A9C67B460>]
+[2023-09-09 15:12:52.908239] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000019A9C67BD60>]
+[2023-09-09 15:13:20.923287] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000264AA0BB460>]
+[2023-09-09 15:13:20.924947] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000264AA0BBD60>]
+[2023-09-09 15:13:21.776644] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 15:13:22.203942] [FAIL] [Unable to execute sql 
+ 1 with error object of type 'int' has no len()]
+[2023-09-09 15:13:22.630630] [SUCCESS] [<_io.TextIOWrapper name='sql/article.sql' mode='r' encoding='cp1252'>]
+[2023-09-09 15:14:09.590348] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001132A079640>]
+[2023-09-09 15:14:09.591349] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001132A079F40>]
+[2023-09-09 15:14:10.395313] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 15:14:10.798085] [FAIL] [Unable to execute sql 
+ 1 with error object of type 'int' has no len()]
+[2023-09-09 15:14:11.205995] [SUCCESS] [<_io.TextIOWrapper name='sql/article.sql' mode='r' encoding='cp1252'>]
+[2023-09-09 15:15:12.582102] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001EFB8C69610>]
+[2023-09-09 15:15:12.583102] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001EFB8C69F10>]
+[2023-09-09 15:15:13.386695] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 15:15:13.788320] [FAIL] [Unable to execute sql 
+ 1 with error object of type 'int' has no len()]
+[2023-09-09 15:15:14.196388] [SUCCESS] [<_io.TextIOWrapper name='sql/article.sql' mode='r' encoding='cp1252'>]
+[2023-09-09 15:18:13.849817] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000029F566656A0>]
+[2023-09-09 15:18:13.851822] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000029F56665FA0>]
+[2023-09-09 15:18:14.683149] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 15:18:15.941919] [SUCCESS] [<_io.TextIOWrapper name='sql/article.sql' mode='r' encoding='cp1252'>]
+[2023-09-09 15:20:17.108184] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000191DFCA5700>]
+[2023-09-09 15:20:17.111267] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000191DFCA5B50>]
+[2023-09-09 15:20:17.944519] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 15:20:19.202057] [SUCCESS] [<_io.TextIOWrapper name='sql/article.sql' mode='r' encoding='cp1252'>]
+[2023-09-09 15:20:34.183851] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002D9343A5730>]
+[2023-09-09 15:20:34.185856] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002D9343A5B80>]
+[2023-09-09 15:20:35.006446] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 15:20:36.251327] [SUCCESS] [<_io.TextIOWrapper name='sql/article.sql' mode='r' encoding='cp1252'>]
+[2023-09-09 15:22:24.431921] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002C6E88AFF70>]
+[2023-09-09 15:22:24.433609] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002C6E8855640>]
+[2023-09-09 15:22:25.274099] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 15:22:26.117498] [SUCCESS] [-- CREATE TABLE article (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     URL VARCHAR(255), -- Adjust the length as needed for your URLs
+--     Score DECIMAL(5,2), -- 5 total digits with 2 decimal places
+--     Summary TEXT, -- TEXT type allows up to 65,535 characters
+--     InProduction BOOLEAN,
+--     InsertedAT DATETIME
+-- );
+
+-- INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+-- VALUES (
+--     'https://www.example.com/sample-article',
+--     87.75,
+--     'This is a sample article summary. It contains some dummy text to demonstrate inserting data into the database.',
+--     1, -- Assuming 1 means true for 'InProduction'
+--     NOW() -- Inserts the current date and time
+-- );
+
+SELECT * FROM article]
+[2023-09-09 15:22:26.122964] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002C6E88AFF70>]
+[2023-09-09 15:22:26.122964] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002C6E8855640>]
+[2023-09-09 17:35:43.975056] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020FF49E7730>]
+[2023-09-09 17:35:43.976049] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020FF49E71F0>]
+[2023-09-09 17:35:44.818963] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 17:36:23.330246] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002D06B0C8670>]
+[2023-09-09 17:36:23.331332] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002D06B0C8130>]
+[2023-09-09 17:36:24.156693] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 17:37:59.131293] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000017459B58610>]
+[2023-09-09 17:37:59.132294] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000017459B580D0>]
+[2023-09-09 17:37:59.970305] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 17:38:00.816137] [SUCCESS] [committed query: 
+    SELECT * 
+    FROM article
+    WHERE 1=1
+    ]
+[2023-09-09 17:38:00.817137] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000017459B58610>]
+[2023-09-09 17:38:00.818137] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000017459B580D0>]
+[2023-09-09 17:39:15.790432] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B142FA8670>]
+[2023-09-09 17:39:15.791445] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B142FA8130>]
+[2023-09-09 17:39:16.607884] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 17:39:17.426164] [SUCCESS] [Sucessfully transacted query: 
+    SELECT * 
+    FROM article
+    WHERE 1=1
+    ]
+[2023-09-09 17:39:17.430157] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001B142FA8670>]
+[2023-09-09 17:39:17.431157] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001B142FA8130>]
+[2023-09-09 18:07:42.297221] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C0D7939640>]
+[2023-09-09 18:07:42.299223] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C0D7939100>]
+[2023-09-09 18:07:43.134648] [SUCCESS] [Established connection to database newscuration]
+[2023-09-09 18:07:43.973461] [SUCCESS] [Sucessfully transacted query: 
+    SELECT * 
+    FROM article
+    WHERE 1=1
+    ]
+[2023-09-09 18:07:43.977460] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C0D7939640>]
+[2023-09-09 18:07:43.978470] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C0D7939100>]
+[2023-09-10 09:42:29.123022] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001932735FD90>]
+[2023-09-10 09:42:29.125049] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001932735FEE0>]
+[2023-09-10 09:42:29.965796] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 09:42:30.822840] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW()
+    );
+    ]
+[2023-09-10 09:44:09.306946] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001EC42B4FDC0>]
+[2023-09-10 09:44:09.308026] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001EC42B4FF10>]
+[2023-09-10 09:44:10.139562] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 09:44:10.977865] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW()
+    );
+    ]
+[2023-09-10 09:44:11.813907] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) FROM article;
+    ]
+[2023-09-10 09:44:31.258546] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000028B83EFEDF0>]
+[2023-09-10 09:44:31.260542] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000028B83EFEF40>]
+[2023-09-10 09:44:32.119453] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 09:44:32.981186] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW()
+    );
+    ]
+[2023-09-10 09:44:33.839353] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) FROM article;
+    ]
+[2023-09-10 09:45:01.596072] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020F12FCEDF0>]
+[2023-09-10 09:45:01.597081] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020F12FCEF40>]
+[2023-09-10 09:45:02.440596] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 09:45:03.287840] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW()
+    );
+    ]
+[2023-09-10 09:45:04.133379] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM article;
+    ]
+[2023-09-10 09:45:04.136689] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020F12FCEDF0>]
+[2023-09-10 09:45:04.137689] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020F12FCEF40>]
+[2023-09-10 09:54:41.158857] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E0CA44EDF0>]
+[2023-09-10 09:54:41.160859] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E0CA44EF40>]
+[2023-09-10 09:54:42.001308] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 09:54:42.837717] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW()
+    );
+    ]
+[2023-09-10 09:54:43.671924] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM article;
+    ]
+[2023-09-10 09:54:43.673923] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E0CA44EDF0>]
+[2023-09-10 09:54:43.674923] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E0CA44EF40>]
+[2023-09-10 10:09:46.113015] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002367F35EB20>]
+[2023-09-10 10:09:46.114016] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002367F35EAC0>]
+[2023-09-10 10:09:46.946120] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 10:09:47.781343] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW()
+    );
+    ]
+[2023-09-10 10:09:48.617361] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM article;
+    ]
+[2023-09-10 10:09:48.619356] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002367F35EB20>]
+[2023-09-10 10:09:48.620355] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002367F35EAC0>]
+[2023-09-10 10:17:43.535160] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002371780EB20>]
+[2023-09-10 10:17:43.536082] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002371780EAC0>]
+[2023-09-10 10:17:44.354584] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 10:17:45.224531] [Daniel Ciccotosto-Camp] [SUCCESS] [-- CREATE TABLE article (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     URL VARCHAR(255), -- Adjust the length as needed for your URLs
+--     Score DECIMAL(5,2), -- 5 total digits with 2 decimal places
+--     Summary TEXT, -- TEXT type allows up to 65,535 characters
+--     InProduction BOOLEAN,
+--     InsertedAT DATETIME
+-- );
+
+DROP TABLE article]
+[2023-09-10 10:17:45.227526] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002371780EB20>]
+[2023-09-10 10:17:45.228525] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002371780EAC0>]
+[2023-09-10 10:18:01.871990] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D39617EB20>]
+[2023-09-10 10:18:01.873982] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D39617EAC0>]
+[2023-09-10 10:18:02.727242] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 10:18:03.157726] [Daniel Ciccotosto-Camp] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.article' doesn't exist")]
+[2023-09-10 10:18:03.585536] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT * 
+    FROM article
+    WHERE 1=1
+    ]
+[2023-09-10 10:18:03.587528] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001D39617EB20>]
+[2023-09-10 10:18:03.588528] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001D39617EAC0>]
+[2023-09-10 10:19:21.241060] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001BA0017EB20>]
+[2023-09-10 10:19:21.243055] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001BA0017EAC0>]
+[2023-09-10 10:19:22.057651] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 10:19:22.468691] [Daniel Ciccotosto-Camp] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.article' doesn't exist")]
+[2023-09-10 10:19:22.876433] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT * 
+    FROM article
+    WHERE 1=1
+    ]
+[2023-09-10 10:19:22.879428] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001BA0017EB20>]
+[2023-09-10 10:19:22.879428] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001BA0017EAC0>]
+[2023-09-10 10:19:34.221263] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002032B97EB20>]
+[2023-09-10 10:19:34.223353] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002032B97EAC0>]
+[2023-09-10 10:19:35.056612] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 10:19:35.937846] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE article (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(255), -- Adjust the length as needed for your URLs
+    Score DECIMAL(5,2), -- 5 total digits with 2 decimal places
+    Summary TEXT, -- TEXT type allows up to 65,535 characters
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- DROP TABLE article]
+[2023-09-10 10:19:35.940928] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002032B97EB20>]
+[2023-09-10 10:19:35.942932] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002032B97EAC0>]
+[2023-09-10 10:22:20.789429] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001559BA8EC10>]
+[2023-09-10 10:22:20.791422] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001559BA8EBB0>]
+[2023-09-10 10:22:21.629239] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 10:22:22.047985] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    Daniel Ciccotosto-Camp
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ciccotosto-Camp\n    )' at line 8")]
+[2023-09-10 10:22:22.468003] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    Daniel Ciccotosto-Camp
+    );
+    ]
+[2023-09-10 10:22:23.305786] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM article;
+    ]
+[2023-09-10 10:22:23.309342] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001559BA8EC10>]
+[2023-09-10 10:22:23.310384] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001559BA8EBB0>]
+[2023-09-10 10:22:50.990091] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C1A4D4EC10>]
+[2023-09-10 10:22:50.993119] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C1A4D4EBB0>]
+[2023-09-10 10:22:51.805664] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 10:22:52.212541] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1136, "Column count doesn't match value count at row 1")]
+[2023-09-10 10:22:52.622119] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAT)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-10 10:22:53.439733] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM article;
+    ]
+[2023-09-10 10:22:53.442642] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C1A4D4EC10>]
+[2023-09-10 10:22:53.443642] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C1A4D4EBB0>]
+[2023-09-10 10:23:12.919545] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002858CAFEC10>]
+[2023-09-10 10:23:12.920539] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002858CAFEBB0>]
+[2023-09-10 10:23:13.765726] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-10 10:23:14.616887] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-10 10:23:15.462276] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM article;
+    ]
+[2023-09-10 10:23:15.464297] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002858CAFEC10>]
+[2023-09-10 10:23:15.464297] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002858CAFEBB0>]
