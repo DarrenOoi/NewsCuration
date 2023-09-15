@@ -25,7 +25,8 @@ function AnalysisPage() {
       if (text) {
         try {
           const res = await fetchScore(text);
-          setScore(res * 100.0 + '%');
+          console.log(res);
+          setScore(Math.round(res * 100) + '%');
 
           const words = await fetchBiasWords(text);
           setBiasWords(words);
