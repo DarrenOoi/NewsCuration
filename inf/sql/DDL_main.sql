@@ -37,9 +37,13 @@ CREATE TABLE Politician (
     InsertedBy VARCHAR(50)
 );
 
+/* A unique store of the politician's positions,
+such as 'Prime Minister of Australia' or 'Member of Parliament; Senate'
+etc.
+*/
 CREATE TABLE Politician_Position (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    PositionNameCode VARCHAR(255),
+    PositionNameCode VARCHAR(255), --e.g. 'Prime minister of Australia' etc,
     InProduction BOOLEAN,
     InsertedAt DATETIME,
     InsertedBy VARCHAR(50),
