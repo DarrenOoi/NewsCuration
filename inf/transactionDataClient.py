@@ -28,6 +28,7 @@ class table():
   def __init__(self):
     self.isInserted = False
     self.id = None
+    self.name = None
     
   def insertSQL(self, insertedBy):
     pass
@@ -40,34 +41,52 @@ class table():
     
   def setId(self, id):
     self.id = id 
+    
+  def getName(self):
+    return self.name
   
 '''
 Each of the following tables are used as a framework to initalise a new record in the database.
 all the data must be parsed on initialisation. All objects (subclasses of table) are used as a parameter
 for inserting in the transactionDataClient.
+
+FIELDS:
+ID INT AUTO_INCREMENT PRIMARY KEY,
+URL VARCHAR(255), -- Adjust the length as needed for your URLs
+UpperBias DECIMAL(5, 2), -- 5 total digits with 2 decimal places
+LowerBias DECIMAL(5, 2), -- lower bias score
+Summary TEXT, -- TEXT type allows up to 65,535 characters
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50)
 '''
-class article(table):
+class Article(table):
   
-  def __init__(self, url=str, score=float, summary=str, inProduction=bool):
+  def __init__(self, url=str, upperBias=float, lowerBias=float, summary=str, inProduction=bool):
     super().__init__()
     self.url = url
-    self.score = score
+    self.upperBias = upperBias
+    self.lowerBias = lowerBias
     self.summary = summary
     self.inProd = inProduction
-    article.tableName = article.__name__
+    Article.tableName = Article.__name__
   
   def __str__(self):
-    return f'[{self.id}, {self.url}, {self.score}, {self.summary}, {self.inProd}]'
+    if self.id is None:
+      return 'Record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{Article.tableName}[{self.id}, {self.url}, {self.upperBias}, {self.lowerBias}, {self.summary}, {self.inProd}]'
   
   '''
   This insert statement only takes one parameter; the name of the user inserting the record.
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO article (URL, Score, Summary, InProduction, InsertedAt, InsertedBy)
+    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy)
     VALUES (
     '{self.url}',
-    {self.score},
+    {self.upperBias},
+    {self.lowerBias},
     '{self.summary}.',
     {1 if self.inProd else 0}, 
     NOW(),
@@ -77,9 +96,170 @@ class article(table):
     return query
   
   def getName(self):
-    return article.tableName
+    return Article.tableName
     
+'''
+ID 
+NameCode VARCHAR(255) NOT NULL UNIQUE,
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50)
+'''
+class Politician_PositionNameCodes(table):
+  
+  def __init__(self, nameCode=str, inProduction=bool):
+    super().__init__()
+    self.nameCode = nameCode
+    self.inProd = inProduction
+    self.name = Politician_PositionNameCodes.__name__
     
+
+  def __str__(self):
+    if self.id is None:
+      return 'Record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.nameCode}, {self.inProd}]'
+  
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name} (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.nameCode}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+  
+  def getName(self):
+    return 
+
+'''
+ID
+Fname VARCHAR(255),
+Lname VARCHAR(255),
+About VARCHAR(1500),
+Age INT,
+Gender VARCHAR(255),
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50)
+'''
+class Politician(table):
+  def __init__(self, fName=str, lName=str, about=str, age=int, gender=str, inProduction=bool):
+    super().__init__()
+    self.fName = fName
+    self.lName = lName
+    self.about = about
+    self.age = age
+    self.gender = gender
+    self.inProd = inProduction
+    self.name = Politician.__name__
+  
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name} (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.fName}',
+    '{self.lName}',
+    '{self.about}',
+    '{self.age}',
+    '{self.gender}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+  
+  def __str__(self):
+    if self.id is None:
+      return 'Record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.fName}, {self.lName}, {self.about}, {self.age}, {self.gender}, {self.inProd}]'
+
+'''
+ID 
+PositionNameCode VARCHAR(255),
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50),
+'''
+class Politician_Position(table):
+  
+  def __init__(self, positionNameCode=str, inProduction=bool):
+    super().__init__()
+    self.posNameCode = positionNameCode
+    self.inProd = inProduction
+    self.name = Politician_Position.__name__
+    
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name}(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.posNameCode}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+    
+  def __str__(self):
+    if self.id is None:
+      return 'Record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.posNameCode}, {self.inProd}]'
+    
+'''
+ID 
+ID_Politician INT,
+ID_Article INT,
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50),
+'''
+class Politician_KeyTable(table):
+
+  def __init__(self, politicianID=str, articleID=str, inProduction=bool):
+    super().__init__()
+    self.politicianID = politicianID
+    self.articleID = articleID
+    self.inProd = inProduction
+    self.name = Politician_KeyTable.__name__
+    
+  def __str__(self):
+    if self.id is None:
+      return f'{self.name} record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.politicianID}, {self.articleID}, {self.inProd}]'
+    
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name}(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    {self.politicianID},
+    {self.articleID},
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+
 '''
 The transactionDataClient. Communicates with the AWS RDS.
 
@@ -99,11 +279,19 @@ class transactionDataClient():
   """Builds a log message in the audit file, for safekeeping
   """
   def logMessage(self, status=messageStatus, message=str):
+    red_text = "\033[91m"
+    yellow_text = "\033[93m"
+    default_colour = "\033[0m"
   
     with open('audit/logs.txt', 'a') as auditLog:
       message = f'[{datetime.now()}] [{self.user}] [{status.name}] [{message}]'
       auditLog.write(message + '\n')
-      print(message)
+      if status == messageStatus.FAIL:
+        print(f'{red_text}{message}{default_colour}')
+      elif status == messageStatus.WARN:
+        print(f'{yellow_text}{message}{default_colour}')
+      else:
+        print(message)
   
   """Establishes connections with the AWS RDS server. 
   
@@ -188,7 +376,7 @@ class transactionDataClient():
       self.cnx.commit()
     except Exception as e:
       self.logMessage(messageStatus.FAIL, f'failed to commit query \n {sql} \n reason: {e}')
-    self.logMessage(messageStatus.SUCCESS, f"Sucessfully transacted query: {query}")
+    self.logMessage(messageStatus.SUCCESS, f"Successfully attempted query: {query}")
     
     return self.retrieveCursorOutput()
   
@@ -207,7 +395,7 @@ class transactionDataClient():
       self.cnx.commit()
     except Exception as e:
       self.logMessage(messageStatus.FAIL, f'failed to commit query \n {DDLMethod} \n reason: {e}')
-    self.logMessage(messageStatus.SUCCESS, f"Sucessfully transacted query: {DDLMethod}")
+    self.logMessage(messageStatus.SUCCESS, f"Successfully attempted query: {DDLMethod}")
     
     #next, find the id of the newly inserted tuple and update the object
     id = self.get_id(table)
@@ -227,8 +415,12 @@ class transactionDataClient():
       self.logMessage(messageStatus.FAIL, f'failed to commit query \n {query} \n reason: {e}')
     self.logMessage(messageStatus.SUCCESS, f"Sucessfully transacted query: {query}")
     
-    out = self.retrieveCursorOutput()
-    return out[0]['ID']
+    try:
+      out = self.retrieveCursorOutput()
+      return out[0]['ID']
+    except IndexError as e:
+      self.logMessage(messageStatus.FAIL, f'failed to properly insert record. Check table name exists and/or is correct.')
+      return None
   
   
 if __name__ == '__main__':
@@ -239,6 +431,7 @@ if __name__ == '__main__':
   parser.add_argument(
           "--query",
           type=str,
+          nargs='+',
           help="query a table, with no applied filters"
       )
   
@@ -266,13 +459,26 @@ if __name__ == '__main__':
   if args.debugDDL:
     print(f'performing DDL for article table, DEBUGGING {args.debugDDL}')
     tdc = transactionDataClient()
-    newArticle = article('examplewebsite.com', 10.23, 'a summary of some text', 0)
+    newArticle = Article('examplewebsite.com', 10.23, 22.40, 'a summary of some text', 0)
     tdc.insert(newArticle)
+    newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
+    tdc.insert(newPoliticianName)
+    newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0)
+    tdc.insert(newPolitician)
+    newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
+    tdc.insert(newPoliticianPosition)
+    newPoliticianKeyTable = Politician_KeyTable(newPolitician.getId(), newArticle.getId())
+    tdc.insert(newPoliticianKeyTable)
+    print(newPoliticianName)
+    print(newPolitician)
+    print(newPoliticianPosition)
+    print(newPoliticianKeyTable)
     print(newArticle)
     tdc.closeConnection()
     
   if args.query is not None:
-    print(f'performing sql query on table {args.query}')
+    print(f'performing sql query on table/s {args.query}')
     tdc = transactionDataClient()
-    print(tdc.query(args.query))
+    for i in args.query:
+      print(tdc.query(i))
     tdc.closeConnection()
