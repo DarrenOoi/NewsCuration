@@ -71,14 +71,14 @@ function Index() {
                     </div>
                     <div
                       className='card bg-[#7895B1] rounded-lg '
-                      style={{ width: '350px', height: '250px' }}
+                      style={{ width: '370px', height: '250px' }}
                     >
                       <button
-                        className='btn btn-sm btn-neutral rounded-xl mt-48 ml-9'
-                        style={{ width: '275px', height: '20px' }}
+                        className='btn btn-sm btn-neutral rounded-xl mt-48 ml-10'
+                        style={{ width: '285px', height: '35px' }}
                         onClick={ArticleSearch}
                       >
-                        <text className='text-white text-xs'>CLICK HERE FOR ARTICLE SEARCH</text>
+                        <text className='text-white text-sm'>CLICK HERE FOR ARTICLE SEARCH</text>
                       </button>
                     </div>
                   </div>
@@ -88,14 +88,14 @@ function Index() {
                   <div className='flex'>
                     <div
                       className='card bg-[#7895B1] rounded-lg'
-                      style={{ width: '350px', height: '250px' }}
+                      style={{ width: '370px', height: '250px' }}
                     >
                       <button
-                        className='btn btn-sm btn-neutral rounded-xl mt-48 ml-9'
-                        style={{ width: '275px', height: '20px' }}
+                        className='btn btn-sm btn-neutral rounded-xl mt-48 ml-10'
+                        style={{ width: '285px', height: '35px' }}
                         onClick={ProfileSearch}
                       >
-                        <text className='text-white text-xs'>CLICK HERE FOR PROFILE SEARCH</text>
+                        <text className='text-white text-sm'>CLICK HERE FOR PROFILE SEARCH</text>
                       </button>
                     </div>
                     <div className='flex items-center justify-center '>
