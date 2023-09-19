@@ -85,12 +85,11 @@ function Home() {
                 <span className=' mt-5 ml-10 font-bold text-5xl text-[#7895B1] h-11'>
                   ARTICLE SEARCH
                 </span>
-
                 <div className="flex flex-col mr-10">
                     <div className='flex items-center justify-center '>
                       <ProfileLine/>
                     </div>
-                  <button className='btn btn-sm btn-neutral rounded-lg rounded-b-none' style={{ width: '285px', height: "35px"}}>
+                  <button className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-lg rounded-b-none' style={{ width: '285px', height: "35px"}}>
                     <text className='text-white text-sm' onClick={politcalProfile}>CLICK HERE FOR PROFILE SEARCH</text>
                   </button>
                 </div>
@@ -99,7 +98,7 @@ function Home() {
               <div className="flex">
 
                 <div className='flex items-center justify-center'>
-                  <ArticleLine text={"ARTICLE"}/>
+                  <ArticleLine/>
                 </div>
 
                 <div
@@ -108,18 +107,18 @@ function Home() {
                 >
                   <div className='flex justify-start space-x-4 mt-5'>
                     <Input setText={setText} />{' '}
-                    <button className='btn btn-sm btn-neutral rounded-full mr-5' style={{ width: '225px', height: "45px"}}>
+                    <button className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5' style={{ width: '225px', height: "45px"}}>
                       <text className='text-white text-sm' onClick={handleSubmit}>CLICK FOR THE FACTS</text>
                     </button>
                   </div>
 
                   <div className="flex flex-row mt-5">
-                    <div className="card bg-black rounded-full p-0" style={{ width: '375px', height: "33px"}}>
+                    <div className="card bg-[#2E2E2E] rounded-full p-0" style={{ width: '375px', height: "33px"}}>
                       <span>slider goes here</span>
                     </div>
-                    <div className="card bg-black rounded-full p-0 ml-5" style={{ width: '45px', height: "33px"}}>
+                    <button className="btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-5" style={{ width: '45px', height: "33px"}}>
                       <span>tts</span>
-                    </div>
+                    </button>
                   </div>
 
                   <div className='mt-5'>
@@ -141,7 +140,7 @@ function Home() {
               <div className='flex justify-center mt-10'>
                 {result && header && article && (
                   <div>
-                  <button className='btn btn-sm btn-neutral rounded-full' style={{ width: '225px', height: "45px"}}>
+                  <button className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full' style={{ width: '225px', height: "45px"}}>
                       <text className='text-white text-base' onClick={handleClick}>CLICK FOR THE  
                       <span className='text-[#FFB039] font-extrabold'> WHY</span></text>
                     </button>

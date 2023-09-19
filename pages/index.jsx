@@ -74,7 +74,7 @@ function Index() {
                       style={{ width: '370px', height: '250px' }}
                     >
                       <button
-                        className='btn btn-sm btn-neutral rounded-xl mt-48 ml-10'
+                        className='btn btn-sm btn-neutral bg-[#2E2E2E] rounded-xl mt-48 ml-10'
                         style={{ width: '285px', height: '35px' }}
                         onClick={ArticleSearch}
                       >
@@ -91,7 +91,7 @@ function Index() {
                       style={{ width: '370px', height: '250px' }}
                     >
                       <button
-                        className='btn btn-sm btn-neutral rounded-xl mt-48 ml-10'
+                        className='btn btn-sm btn-neutral bg-[#2E2E2E] rounded-xl mt-48 ml-10'
                         style={{ width: '285px', height: '35px' }}
                         onClick={ProfileSearch}
                       >
