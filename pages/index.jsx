@@ -59,7 +59,7 @@ function Index() {
           <div className='hero-content p'>
             <div>
               <div className="mt"style={{ width: '1000px'}}><text className="text-white font-semibold text-2xl">
-                                <text className="text-[#FFB039] font-extrabold">JUST THE FACTS</text> lets you discover unbiased
+                                <text className="text-[#FFB039] font-bold">JUST THE FACTS</text> lets you discover unbiased
                             political insights. <text className="text-[#FFB039] font-bold">START</text> by either filtering through a 
                             <text className="font-bold"> single article</text> or by exploring impartial
                             <text className="font-bold"> political profiles</text> containing a collection of articles.</text>
