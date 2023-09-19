@@ -9,6 +9,9 @@ import { useEffect, useState } from 'react';
 import { fetchScore } from '@/utils/fetchScore';
 import { fetchBiasWords } from '@/utils/fetchBiasWords';
 import Image from 'next/image';
+import tts from "@/components/tts.png"
+import textSize from "@/components/textSize.png"
+import profilePicSmall from '@/components/profilePicSmall.png'
 
 
 function AnalysisPage() {
@@ -94,6 +97,11 @@ function AnalysisPage() {
                       <ProfileLine/>
                     </div>
                   <button className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-lg rounded-b-none' style={{ width: '285px', height: "35px"}}>
+                    <Image
+                      src={profilePicSmall}
+                      width={18}
+                      height={18}
+                    />
                     <text className='text-white text-sm' onClick={politcalProfile}>CLICK HERE FOR PROFILE SEARCH</text>
                   </button>
                 </div>
@@ -117,11 +125,22 @@ function AnalysisPage() {
                     </button>
 
                   <div className="flex flex-row mt-4">
-                      <div className="card bg-[#2E2E2E] rounded-full p-0" style={{ width: '375px', height: "33px"}}>
-                        <span>slider goes here</span>
+                      <div className="card bg-[#2E2E2E] rounded-full p-0 flex justify-center" style={{ width: '415px', height: "33px"}}>
+                        <Image
+                          className="ml-3"
+                          src={textSize}
+                          width={20}
+                          height={5}
+                          alt="Text To Speech"
+                        />
                       </div>
-                      <button className="btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-5" style={{ width: '45px', height: "33px"}}>
-                        <span>tts</span>
+                      <button className="btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4" style={{ width: '50px', height: "33px"}}>
+                        <Image
+                          src={tts}
+                          width={20}
+                          height={5}
+                          alt="Text To Speech"
+                        />
                       </button>
                     </div>
                   </div>

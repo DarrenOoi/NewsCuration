@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import articlePic from '@/components/articlePic.png'
 import profilePic from '@/components/profilePic.png'
+import articlePicSmall from '@/components/articlePicSmall.png'
+import profilePicSmall from '@/components/profilePicSmall.png'
 
 function Index() {
   const router = useRouter();
@@ -87,7 +89,12 @@ function Index() {
                         style={{ width: '285px', height: '35px' }}
                         onClick={ArticleSearch}
                       >
-                        <text className='text-white text-sm'>CLICK HERE FOR ARTICLE SEARCH</text>
+                        <Image
+                          src={articlePicSmall}
+                          width={18}
+                          height={18}
+                        />
+                          <text className='text-white text-sm'>CLICK HERE FOR ARTICLE SEARCH</text>
                       </button>
                     </div>
                   </div>
@@ -110,6 +117,11 @@ function Index() {
                         style={{ width: '285px', height: '35px' }}
                         onClick={ProfileSearch}
                       >
+                        <Image
+                          src={profilePicSmall}
+                          width={18}
+                          height={18}
+                        />
                         <text className='text-white text-sm'>CLICK HERE FOR PROFILE SEARCH</text>
                       </button>
                     </div>
