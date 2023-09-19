@@ -2,6 +2,9 @@ import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+import articlePic from '@/components/articlePic.png'
+import profilePic from '@/components/profilePic.png'
 
 function Index() {
   const router = useRouter();
@@ -55,11 +58,11 @@ function Index() {
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className="mt"style={{ width: '1000px'}}><text className="text-white font-bold text-xl">
+              <div className="mt"style={{ width: '1000px'}}><text className="text-white font-semibold text-2xl">
                                 <text className="text-[#FFB039] font-extrabold">JUST THE FACTS</text> lets you discover unbiased
-                            political insights. <text className="text-[#FFB039] font-extrabold">START</text> by either filtering through a 
-                            <text className="font-extrabold"> single article</text> or by exploring impartial
-                            <text className="font-extrabold"> political profiles</text> containing a collection of articles.</text>
+                            political insights. <text className="text-[#FFB039] font-bold">START</text> by either filtering through a 
+                            <text className="font-bold"> single article</text> or by exploring impartial
+                            <text className="font-bold"> political profiles</text> containing a collection of articles.</text>
                 </div>
 
               <div className='flex justify-center space-x-20 mt-14'>
@@ -70,11 +73,17 @@ function Index() {
                       <ArticleLine text={"ARTICLE"}/>
                     </div>
                     <div
-                      className='card bg-[#7895B1] rounded-lg '
+                      className='card bg-[#7895B1] rounded-lg flex justify-center items-center'
                       style={{ width: '370px', height: '250px' }}
                     >
+                      <Image 
+                        src={articlePic}
+                        width={110}
+                        height={100}
+                        alt="Article Search"
+                      />
                       <button
-                        className='btn btn-sm btn-neutral bg-[#2E2E2E] rounded-xl mt-48 ml-10'
+                        className='btn btn-sm btn-neutral bg-[#2E2E2E] rounded-xl mt-7'
                         style={{ width: '285px', height: '35px' }}
                         onClick={ArticleSearch}
                       >
@@ -87,11 +96,17 @@ function Index() {
                 <div>
                   <div className='flex'>
                     <div
-                      className='card bg-[#7895B1] rounded-lg'
+                      className='card bg-[#7895B1] rounded-lg flex justify-center items-center'
                       style={{ width: '370px', height: '250px' }}
                     >
+                      <Image 
+                        src={profilePic}
+                        width={110}
+                        height={100}
+                        alt="Profile Search"
+                      />
                       <button
-                        className='btn btn-sm btn-neutral bg-[#2E2E2E] rounded-xl mt-48 ml-10'
+                        className='btn btn-sm btn-neutral bg-[#2E2E2E] rounded-xl mt-10'
                         style={{ width: '285px', height: '35px' }}
                         onClick={ProfileSearch}
                       >

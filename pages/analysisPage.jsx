@@ -8,6 +8,8 @@ import BiasScore from '@/components/BiasScore';
 import { useEffect, useState } from 'react';
 import { fetchScore } from '@/utils/fetchScore';
 import { fetchBiasWords } from '@/utils/fetchBiasWords';
+import Image from 'next/image';
+
 
 function AnalysisPage() {
   const router = useRouter();
