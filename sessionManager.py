@@ -208,6 +208,7 @@ class ArticleManager():
 		self.threads.append(thread)
 		thread.start()
 		self.threadsLock.release()
+		return True
 
 	def getArticle(self, url):
 		if self.isArticleInCache(url) or self.isArticleInDB(url):
@@ -216,12 +217,16 @@ class ArticleManager():
 		if self.isArticleBeingProcessed(url):
 			return self.jobs[url]
 		
-		self.jobMonitor(url)
-		return self.jobs[url]
+		tmp = self.jobMonitor(url)
+		if tmp != None:
+			return self.jobs[url]
+		return tmp
 	
 	def getItem(self, url, itemName):
 		article = self.getArticle(url)
-		return article.get(itemName)
+		if article != None:
+			return article.get(itemName)
+		return None
 	
 	def clean(self):
 		self.threadsLock.acquire()
@@ -238,9 +243,9 @@ class ArticleManager():
 
 
 # header, text, summary, biasRange, biasWords, politicalFigures
-# am = ArticleManager(3)
-# am.getItem("https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922", "summary")
+am = ArticleManager(3)
+print(am.getItem("https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-cina-213922", "summary"))
 # am.getItem("https://edition.cnn.com/2023/08/25/opinions/trump-georgia-surrender-fani-willis-orentlicher-hanan/index.html", "biasRange")
 # am.getItem("https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954", "politicalFigures")
-# am.clean()
+am.clean()
 # print(am)
