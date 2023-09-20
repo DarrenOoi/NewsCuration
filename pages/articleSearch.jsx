@@ -59,15 +59,15 @@ function Home() {
     )
   }
 
-  const ArticleLine = ({text}) => {
+  const ArticleLine = ({height}) => {
 
     return (
-      <div className='flex flex-col items-center justify-center w-6'>
+      <div className='flex overflow-hidden flex-col items-center justify-center w-6'>
         <div style={{ display: "flex", alignItems: "center", width: "2px"}}>
           <div style={{ flex: 1, backgroundColor: "#FFB039", height: "90px" }} />
         </div>
         <span className='-rotate-90 text-[#FFB039] text-xs font-bold w-20 mt-1'>ARTICLE</span>
-        <div className="mt-9" style={{ display: "flex", alignItems: "center", width: "2px"}}>
+        <div className="mt-9 overflow-hidden" style={{ display: "flex", alignItems: "center", width: "2px"}}>
           <div style={{ flex: 1, backgroundColor: "#FFB039", height: "90px" }} />
         </div>
       </div>
@@ -104,10 +104,10 @@ function Home() {
                 </div>
               </div>
 
-              <div className="flex">
+              <div className="flex" id="main">
 
-                <div className='flex items-center justify-center'>
-                  <ArticleLine/>
+                <div className='flex items-center justify-center' id="textbox">
+                  <ArticleLine height={'120'}/>
                 </div>
 
                 <div
