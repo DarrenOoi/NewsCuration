@@ -4,12 +4,12 @@
 const BiasScore = ({ score }) => {
   return (
     <div>
-      <div className='stats shadow rounded-t-none ml-4'>
-        <div className='stat bg-gray-800'>
-          <div className='stat-title text-center font-bold text-white'>
-            ORIGINAL ARTICLE BIAS SCORE
+      <div className='stats shadow rounded-t-none ml-9'>
+        <div className='stat bg-[#2E2E2E]'>
+          <div className='stat-title text-center text-xl text-white'>
+            BIAS SCORE
           </div>
-          <div className='stat-value text-[#FFB039] ml-17 text-center'>
+          <div className='text-3xl font-extrabold text-[#FFB039] ml-17 text-center'>
             {score ? (
               score
             ) : (
