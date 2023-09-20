@@ -68,7 +68,7 @@ class RequestRate():
 		return str(self.rate) + " " + self.lastRequestTime.strftime("%H:%M:%S")
 
 # Parent of ArticleJob, has basic functionality to return abstract (object) values requesed by User
-class Article():
+class ArticleElement():
 	def __init__(self, url: str, header: str, text: str, summary: str, biasRange: str, biasWords: str, politicalFigures: str) -> None:
 		self.url = url
 		self.header = header
@@ -91,7 +91,7 @@ class Article():
 
 # Child of Article, used to process the required functionalities to
 # retrieve/create the data each article contains in a thread-safe manner
-class ArticleJob(Article):
+class ArticleElementJob(ArticleElement):
 	def __init__(self, url: str, webScraper: NewsScraper) -> None:
 		super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None)
 		self.summaryLock = Condition()
@@ -211,7 +211,7 @@ class ArticleManager():
 		self.cacheLock.acquire()
 		tmp = self.jobs[url]
 		self.preventCacheOverflow()
-		self.cache[url] = Article(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"))
+		self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"))
 		tmp.cleanJob()
 		del self.jobs[url]
 		self.cacheLock.release()
@@ -225,7 +225,7 @@ class ArticleManager():
 			return None
 		
 		self.jobsLock.acquire()
-		self.jobs[url] = ArticleJob(url, newsScraper)
+		self.jobs[url] = ArticleElementJob(url, newsScraper)
 		self.jobsLock.release()
 		
 		thread = Thread(target=self.moveJobToCache, args=(url,))
@@ -301,3 +301,11 @@ POLITICAL_fIGURES = "politicalFigures"
 # print(am.getItem(url2, BIAS_WORDS))
 # print(am.getItem(url3, SUMMARY))
 # am.clean()
+
+
+class SessionManager():
+	def __init__(self, limit: int) -> None:
+		self.am = ArticleManager(limit)
+
+	def getArticleItem(self, url: str, itemName: str):
+		return self.am.getItem(url, itemName)
