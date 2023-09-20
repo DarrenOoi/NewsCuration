@@ -6,16 +6,10 @@ from datetime import datetime
 
 import time
 
-HEADER = 0
-TEXT = 1
-SUMMARY = 2
-BIAS_RANGE = 3
-BIAS_WORDS = 4
-POLITICAL_FIGURES = 5
-
 # def wait(t):
 # 	time.sleep(t)
 # 	return t
+
 
 class RequestRate():
 	def __init__(self):
@@ -70,6 +64,7 @@ class RequestRate():
 	def __repr__(self):
 		return str(self.rate) + " " + self.lastRequestTime.strftime("%H:%M:%S")
 
+
 class Article():
 	def __init__(self, url, header, text, summary, biasRange, biasWords, politicalFigures):
 		self.url = url
@@ -84,6 +79,10 @@ class Article():
 
 	def get(self, string):
 		return getattr(self, string)
+	
+	def __repr__(self):
+		return f"{self.url[0:15]}... : ['{self.header[0:15]}...', '{self.text[0:15]}...', '{self.summary[0:15]}...', {self.biasRange[0]}, {self.requestRate.__repr__()}]"
+
 
 class ArticleJob(Article):
 	def __init__(self, url, webScraper, summary, biasRange, biasWords, politicalFigures):
@@ -137,7 +136,6 @@ class ArticleJob(Article):
 			job.join()
 
 
-
 class ArticleManager():
 	def __init__(self, limit):
 		self.cacheLimit = limit
@@ -161,6 +159,7 @@ class ArticleManager():
 		# if len(tmp) == 0:
 		# 	return False
 		# # add article to cache
+		# # update DB to see if new political figures are mentioned
 		# return True
 		return False
 		
@@ -180,7 +179,6 @@ class ArticleManager():
 		for value in tmp_list[0:upper+1]:
 			del self.cache[value.get("url")]
 
-	
 	def moveJobToCache(self, url):
 		tmp = False
 		while tmp == False:
@@ -226,12 +224,23 @@ class ArticleManager():
 		return article.get(itemName)
 	
 	def clean(self):
+		self.threadsLock.acquire()
 		for job in self.threads:
 			job.join()
+		self.threadsLock.release()
 
-# am = ArticleManager(2)
-# print(am.getItem("https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922", "biasRange"))
-# print(am.getItem("https://edition.cnn.com/2023/08/25/opinions/trump-georgia-surrender-fani-willis-orentlicher-hanan/index.html", "biasRange"))
-# print(am.getItem("https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954", "biasRange"))
-# print("end")
+	def __repr__(self):
+		text = "{\n"
+		for (k, v) in self.cache.items():
+			text += f"\t{v.__repr__()}, \n"
+		text += '}'
+		return text
+
+
+# header, text, summary, biasRange, biasWords, politicalFigures
+# am = ArticleManager(3)
+# am.getItem("https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922", "summary")
+# am.getItem("https://edition.cnn.com/2023/08/25/opinions/trump-georgia-surrender-fani-willis-orentlicher-hanan/index.html", "biasRange")
+# am.getItem("https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954", "politicalFigures")
 # am.clean()
+# print(am)
