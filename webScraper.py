@@ -99,6 +99,11 @@ def pipeScrapedArticleToGPT(url):
     p = prompt.generate_summary_prompt("HEADING: " + header + "\n" + "TEXT: " + article)
     return prompt.generate_response(p), header, article
 
+def pipeScrapedArticleToGPTFromScraper(newsScraper): 
+    header, article = newsScraper.generateStructuredPrompt() 
+    p = prompt.generate_summary_prompt("HEADING: " + header + "\n" + "TEXT: " + article)
+    return prompt.generate_response(p)
+
 '''
 generate a JSON output of all the biased subtext in the media article.
 Since the chatGPT output doesn't give a perfect account of the locations (indexes) of the biased text, 
