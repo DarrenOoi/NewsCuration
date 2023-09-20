@@ -20,3 +20,13 @@ def nameExtractor(text):
     # remove aliases (e.g. John Smith, Mr Smith)
     # additional testing required
     return nameAndAliases
+
+def nameExtractorFromDB(text):
+    text = text.lower()
+    # retrieve names of polititians from DB
+    names = ['donald trump'] # to test name extractor
+    tmp = []
+    for name in names:
+        if name in text:
+            tmp.append(name)
+    return tmp
