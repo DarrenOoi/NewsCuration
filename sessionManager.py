@@ -3,8 +3,15 @@ from webScraper import *
 from biasCalculator import *
 from nameExtractor import *
 from datetime import datetime
+# import inf.transactionDataClient as transactionDataClient
 
 import time
+HEADER = "header"
+TEXT = "text"
+SUMMARY = "summary"
+BIAS_RANGE = "biasRange"
+BIAS_WORDS = "biasWords"
+POLITICAL_fIGURES = "politicalFigures"
 
 # def wait(t):
 # 	time.sleep(t)
@@ -140,7 +147,7 @@ class ArticleElementJob(ArticleElement):
 	# testing whether the article processes are done
 	def isDone(self) -> bool:
 		self.jobsDoneLock.acquire()
-		tmp = (self.jobsDone == 4)
+		tmp = (self.jobsDone >= len(self.threads))
 		self.jobsDoneLock.release()
 		return tmp
 	
@@ -271,13 +278,6 @@ class ArticleManager():
 		text += '}'
 		return text
 
-HEADER = "header"
-TEXT = "text"
-SUMMARY = "summary"
-BIAS_RANGE = "biasRange"
-BIAS_WORDS = "biasWords"
-POLITICAL_fIGURES = "politicalFigures"
-
 # # COMMON FUNCTIONALITY:
 #
 # # initialise article manager
@@ -307,5 +307,19 @@ class SessionManager():
 	def __init__(self, limit: int) -> None:
 		self.am = ArticleManager(limit)
 
+		self.tdcLock = Lock()
+		# self.tdc = transactionDataClient.transactionDataClient()
+
 	def getArticleItem(self, url: str, itemName: str):
 		return self.am.getItem(url, itemName)
+	
+
+# sm = SessionManager(2)
+# url1 = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+# url2 = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+# url3 = "https://www.9news.com.au/national/victoria-news-officers-injured-in-police-chase-armed-man-on-the-run-in-katandra-west-in-northern-victoria/6ee1eb85-b5a6-45ef-a991-a3292490ba98"
+# print(sm.getArticleItem(url1, SUMMARY))
+# print(sm.getArticleItem(url1, BIAS_RANGE))
+# print(sm.getArticleItem(url2, BIAS_WORDS))
+# print(sm.getArticleItem(url3, SUMMARY))
+# sm.am.clean()

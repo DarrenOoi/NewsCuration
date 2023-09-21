@@ -6,6 +6,7 @@ import requests
 import webScraper as wS
 from biasCalculator import *
 from similarArticleRetrieval import *
+import sessionManager as SM
 
 openai.api_key = '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'
 openai.Model.list()
@@ -84,5 +85,50 @@ def SimilarArticlesRetrieval():
 
     return [{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles]
 
+################################################
+# NEW ROUTE FUNCTION To USE SESSION MANAGER
+################################################
+
+@app.route('/ArticleHeader', methods=['POST'])
+def get_input():
+    data = request.get_json()
+    url = data.get('url')
+    response = sm.getArticleItem(url, SM.HEADER)
+    return {"response": response}
+
+
+@app.route('/ArticleText', methods=['POST'])
+def get_input():
+    data = request.get_json()
+    url = data.get('url')
+    response = sm.getArticleItem(url, SM.TEXT)
+    return {"response": response}
+
+
+@app.route('/ArticleUnbiasedSummary', methods=['POST'])
+def get_input():
+    data = request.get_json()
+    url = data.get('url')
+    response = sm.getArticleItem(url, SM.SUMMARY)
+    return {"response": response}
+
+
+
+@app.route('/ArticleBiasedScore', methods=['POST'])
+def get_input():
+    data = request.get_json()
+    url = data.get('url')
+    b, b_dash = sm.getArticleItem(url, SM.BIAS_RANGE)
+    return {"response": round(b, 2)}
+
+
+@app.route('/ArticleBiasedKeyWords', methods=['POST'])
+def biasKeyWordsFromText():
+    data = request.get_json()
+    url = data.get('url')
+    return sm.getArticleItem(url, SM.BIAS_WORDS)
+
+
 if __name__ == '__main__':
+    sm = SM.SessionManager(2)
     app.run()
