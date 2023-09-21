@@ -1,14 +1,14 @@
 from flask import Flask, request
 from flask_cors import CORS
-from webScraper import *
+from utils.prompts import webScraper 
 import pickle
 import math
 import os
 
 def biasScoreGeneratorFromScraper(scraper):
 
-    loaded_vectorizer = pickle.load(open(os.getcwd() + '\\biasCalculator\\vectorizer.sav', 'rb'))
-    loaded_svcBias = pickle.load(open(os.getcwd() + '\\biasCalculator\\svcBias.sav', 'rb'))
+    loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
+    loaded_svcBias = pickle.load(open(os.getcwd() + '\\exploration\\svcBias.sav', 'rb'))
 
     sentences = scraper.getArticle().split('.')
     X_BOW = loaded_vectorizer.transform(sentences)
@@ -25,8 +25,8 @@ def biasScoreGeneratorFromScraper(scraper):
 
 def biasScoreGeneratorFromText(text):
 
-    loaded_vectorizer = pickle.load(open(os.getcwd() + '\\biasCalculator\\vectorizer.sav', 'rb'))
-    loaded_svcBias = pickle.load(open(os.getcwd() + '\\biasCalculator\\svcBias.sav', 'rb'))
+    # loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
+    # loaded_svcBias = pickle.load(open(os.getcwd() + '\\exploration\\svcBias.sav', 'rb'))
 
     sentences = text.split('.')
     X_BOW = loaded_vectorizer.transform(sentences)
@@ -56,9 +56,13 @@ def biasRange(p, n, b, percentage):
 
     return b, b_dash
 
+def getBiasRangeFromText(text):
+    b, n, p = biasScoreGeneratorFromText(text)
+    b, b_dash = biasRange(p, n, b, 0.9)
+    return  b/n, b_dash/n
 
-app = Flask(__name__)
-CORS(app)  # This allows all origins; you can configure it for your specific needs
+# app = Flask(__name__)
+# CORS(app)  # This allows all origins; you can configure it for your specific needs
 
 # @app.route('/BiasFromText', methods=['POST'])
 # def BiasFromText():
@@ -92,5 +96,9 @@ CORS(app)  # This allows all origins; you can configure it for your specific nee
 #     b, b_dash = biasRange(p, n, b, percentage)
 #     return {"b": b/n, "b'": b_dash/n}
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
+
+# have to be global otherwise wait until all other threads run
+loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
+loaded_svcBias = pickle.load(open(os.getcwd() + '\\exploration\\svcBias.sav', 'rb'))

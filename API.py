@@ -3,9 +3,10 @@ from flask import Flask, request
 from flask_cors import CORS
 import requests
 
-import webScraper as wS
-from biasCalculator import *
-from similarArticleRetrieval import *
+from utils.prompts import webScraper as wS
+from utils.biasCalculator import *
+from utils.similarArticleRetrieval import *
+import utils.sessionManager as SM
 
 openai.api_key = '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'
 openai.Model.list()
@@ -84,5 +85,36 @@ def SimilarArticlesRetrieval():
 
     return [{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles]
 
+################################################
+# NEW ROUTE FUNCTION To USE SESSION MANAGER
+################################################
+
+@app.route('/ArticleInfo', methods=['POST'])
+def summary():
+    data = request.get_json()
+    url = data.get('url')
+    header = sm.getArticleItem(url, SM.HEADER)
+    article = sm.getArticleItem(url, SM.TEXT)
+    response = sm.getArticleItem(url, SM.SUMMARY)
+    return {"response": response, "header": header, "article": article}
+
+
+
+@app.route('/ArticleBiasedScore', methods=['POST'])
+def score():
+    data = request.get_json()
+    url = data.get('url')
+    b, b_dash = sm.getArticleItem(url, SM.BIAS_RANGE)
+    return {"response": round(b, 2)}
+
+
+@app.route('/ArticleBiasedKeyWords', methods=['POST'])
+def keywords():
+    data = request.get_json()
+    url = data.get('url')
+    return sm.getArticleItem(url, SM.BIAS_WORDS)
+
+
 if __name__ == '__main__':
+    sm = SM.SessionManager(2)
     app.run()
