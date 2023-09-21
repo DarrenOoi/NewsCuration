@@ -90,7 +90,7 @@ def SimilarArticlesRetrieval():
 ################################################
 
 @app.route('/ArticleHeader', methods=['POST'])
-def get_input():
+def ArticleHeader():
     data = request.get_json()
     url = data.get('url')
     response = sm.getArticleItem(url, SM.HEADER)
@@ -98,7 +98,7 @@ def get_input():
 
 
 @app.route('/ArticleText', methods=['POST'])
-def get_input():
+def ArticleText():
     data = request.get_json()
     url = data.get('url')
     response = sm.getArticleItem(url, SM.TEXT)
@@ -106,7 +106,7 @@ def get_input():
 
 
 @app.route('/ArticleUnbiasedSummary', methods=['POST'])
-def get_input():
+def ArticleUnbiasedSummary():
     data = request.get_json()
     url = data.get('url')
     response = sm.getArticleItem(url, SM.SUMMARY)
@@ -115,7 +115,7 @@ def get_input():
 
 
 @app.route('/ArticleBiasedScore', methods=['POST'])
-def get_input():
+def ArticleBiasedScore():
     data = request.get_json()
     url = data.get('url')
     b, b_dash = sm.getArticleItem(url, SM.BIAS_RANGE)
@@ -123,7 +123,7 @@ def get_input():
 
 
 @app.route('/ArticleBiasedKeyWords', methods=['POST'])
-def biasKeyWordsFromText():
+def ArticleBiasedKeyWords():
     data = request.get_json()
     url = data.get('url')
     return sm.getArticleItem(url, SM.BIAS_WORDS)
