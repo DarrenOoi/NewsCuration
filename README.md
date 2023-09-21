@@ -46,3 +46,6 @@ pip install pymysql
 pip install mysql-connector-python
 
 pip install GoogleNews
+
+pip install spacey
+python -m spacy download en_core_web_sm
