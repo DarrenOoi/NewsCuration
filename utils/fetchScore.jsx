@@ -1,11 +1,11 @@
-export const fetchScore = async (text) => {
+export const fetchScore = async (url) => {
   try {
-    const response = await fetch('http://localhost:5000/BiasFromText', {
+    const response = await fetch('http://localhost:5000/ArticleBiasedScore', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ articleText: text }),
+      body: JSON.stringify({ url: url }),
     });
 
     if (response.ok) {

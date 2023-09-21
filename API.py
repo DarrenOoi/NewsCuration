@@ -89,33 +89,19 @@ def SimilarArticlesRetrieval():
 # NEW ROUTE FUNCTION To USE SESSION MANAGER
 ################################################
 
-@app.route('/ArticleHeader', methods=['POST'])
-def get_input():
+@app.route('/ArticleInfo', methods=['POST'])
+def summary():
     data = request.get_json()
     url = data.get('url')
-    response = sm.getArticleItem(url, SM.HEADER)
-    return {"response": response}
-
-
-@app.route('/ArticleText', methods=['POST'])
-def get_input():
-    data = request.get_json()
-    url = data.get('url')
-    response = sm.getArticleItem(url, SM.TEXT)
-    return {"response": response}
-
-
-@app.route('/ArticleUnbiasedSummary', methods=['POST'])
-def get_input():
-    data = request.get_json()
-    url = data.get('url')
+    header = sm.getArticleItem(url, SM.HEADER)
+    article = sm.getArticleItem(url, SM.TEXT)
     response = sm.getArticleItem(url, SM.SUMMARY)
-    return {"response": response}
+    return {"response": response, "header": header, "article": article}
 
 
 
 @app.route('/ArticleBiasedScore', methods=['POST'])
-def get_input():
+def score():
     data = request.get_json()
     url = data.get('url')
     b, b_dash = sm.getArticleItem(url, SM.BIAS_RANGE)
@@ -123,7 +109,7 @@ def get_input():
 
 
 @app.route('/ArticleBiasedKeyWords', methods=['POST'])
-def biasKeyWordsFromText():
+def keywords():
     data = request.get_json()
     url = data.get('url')
     return sm.getArticleItem(url, SM.BIAS_WORDS)
