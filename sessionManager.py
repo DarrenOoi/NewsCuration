@@ -3,7 +3,7 @@ from webScraper import *
 from biasCalculator import *
 from nameExtractor import *
 from datetime import datetime
-# import inf.transactionDataClient as transactionDataClient
+from inf.transactionDataClient import *
 
 import time
 HEADER = "header"
@@ -12,6 +12,7 @@ SUMMARY = "summary"
 BIAS_RANGE = "biasRange"
 BIAS_WORDS = "biasWords"
 POLITICAL_fIGURES = "politicalFigures"
+POLITICIAN = "Politician"
 
 # def wait(t):
 # 	time.sleep(t)
@@ -302,16 +303,51 @@ class ArticleManager():
 # print(am.getItem(url3, SUMMARY))
 # am.clean()
 
+class PoliticianManager():
+    
+    '''
+    Queries the database to retrieve politicians by name 
+    Parameters:
+	-----------
+		tdc : transactionDataClient
+		nameList : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
+    '''
+    def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
+        if len(name) == 0:
+            return []
+        nameSplit = name.split(' ')
+        
+        return tdc.query(POLITICIAN, f"(Fname LIKE '%{nameSplit[0]}%' AND Lname LIKE '%{nameSplit[1]}%')")
+    
+    '''
+    Queries the database to retrieve politicians by ID 
+    Parameters:
+	-----------
+		tdc : transactionDataClient
+		ID: the ID of the politician
+    '''
+    def getPoliticianByID(self, tdc=transactionDataClient, ID=int) -> list(dict()):
+	    return tdc.query(POLITICIAN, f'ID = {ID}')
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
-		self.am = ArticleManager(limit)
+		self.articleManager = ArticleManager(limit)
+		self.politicianManager = PoliticianManager()
 
-		self.tdcLock = Lock()
-		# self.tdc = transactionDataClient.transactionDataClient()
+		# self.tdcLock = Lock()
+		self.tdc = transactionDataClient()
 
 	def getArticleItem(self, url: str, itemName: str):
-		return self.am.getItem(url, itemName)
+		return self.articleManager.getItem(url, itemName)
+
+	# Call this method, either by the ID, or by a list of names. Prefernce is by name
+	# Although ID is recommended
+	def getPoliticianItem(self, ID=str, nameList=str):
+		if ID == '' or ID is None:
+			return self.politicianManager.getPoliticianByName(self.tdc, nameList)
+		else:
+			return self.politicianManager.getPoliticianByID(self.tdc, ID)
+
 	
 
 # sm = SessionManager(2)

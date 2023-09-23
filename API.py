@@ -114,6 +114,33 @@ def keywords():
     url = data.get('url')
     return sm.getArticleItem(url, SM.BIAS_WORDS)
 
+@app.route('/GetPolitician', methods=['POST'])
+def politicianRequestByName():
+    data = request.get_json()
+    name = data.get('name')
+    return sm.getPoliticianItem(None, name)[0]
+
+'''
+Returns:
+    ID int,
+    Fname : str 
+    Lname : str 
+    About : str 
+    Age : int
+    Gender : str 
+    CountryCode : str
+    InProduction : Boolean
+    InsertedAt : DATETIME
+    InsertedBy : str
+    ImageLink : str
+    Summary : str
+'''
+@app.route('/GetPoliticianByID', methods=['POST'])
+def politicianRequestByID():
+    data = request.get_json()
+    id = data.get('id')
+    return sm.getPoliticianItem(id, None)[0]
+
 
 if __name__ == '__main__':
     sm = SM.SessionManager(2)
