@@ -1,7 +1,7 @@
 from threading import *
-from webScraper import *
-from biasCalculator import *
-from nameExtractor import *
+from utils.prompts.webScraper import *
+from utils.biasCalculator import *
+from utils.nameExtractor import *
 from datetime import datetime
 # import inf.transactionDataClient as transactionDataClient
 

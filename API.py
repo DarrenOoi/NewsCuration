@@ -3,10 +3,10 @@ from flask import Flask, request
 from flask_cors import CORS
 import requests
 
-import webScraper as wS
-from biasCalculator import *
-from similarArticleRetrieval import *
-import sessionManager as SM
+from utils.prompts import webScraper as wS
+from utils.biasCalculator import *
+from utils.similarArticleRetrieval import *
+import utils.sessionManager as SM
 
 openai.api_key = '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'
 openai.Model.list()
