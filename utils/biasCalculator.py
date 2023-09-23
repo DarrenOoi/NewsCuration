@@ -1,14 +1,14 @@
 from flask import Flask, request
 from flask_cors import CORS
-from webScraper import *
+from utils.prompts import webScraper 
 import pickle
 import math
 import os
 
 def biasScoreGeneratorFromScraper(scraper):
 
-    loaded_vectorizer = pickle.load(open(os.getcwd() + '\\biasCalculator\\vectorizer.sav', 'rb'))
-    loaded_svcBias = pickle.load(open(os.getcwd() + '\\biasCalculator\\svcBias.sav', 'rb'))
+    loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
+    loaded_svcBias = pickle.load(open(os.getcwd() + '\\exploration\\svcBias.sav', 'rb'))
 
     sentences = scraper.getArticle().split('.')
     X_BOW = loaded_vectorizer.transform(sentences)
@@ -25,8 +25,8 @@ def biasScoreGeneratorFromScraper(scraper):
 
 def biasScoreGeneratorFromText(text):
 
-    # loaded_vectorizer = pickle.load(open(os.getcwd() + '\\biasCalculator\\vectorizer.sav', 'rb'))
-    # loaded_svcBias = pickle.load(open(os.getcwd() + '\\biasCalculator\\svcBias.sav', 'rb'))
+    # loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
+    # loaded_svcBias = pickle.load(open(os.getcwd() + '\\exploration\\svcBias.sav', 'rb'))
 
     sentences = text.split('.')
     X_BOW = loaded_vectorizer.transform(sentences)
@@ -100,5 +100,5 @@ def getBiasRangeFromText(text):
 #     app.run()
 
 # have to be global otherwise wait until all other threads run
-loaded_vectorizer = pickle.load(open(os.getcwd() + '\\biasCalculator\\vectorizer.sav', 'rb'))
-loaded_svcBias = pickle.load(open(os.getcwd() + '\\biasCalculator\\svcBias.sav', 'rb'))
+loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
+loaded_svcBias = pickle.load(open(os.getcwd() + '\\exploration\\svcBias.sav', 'rb'))
