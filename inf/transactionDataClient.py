@@ -156,7 +156,7 @@ InsertedAt DATETIME,
 InsertedBy VARCHAR(50)
 '''
 class Politician(table):
-  def __init__(self, fName=str, lName=str, about=str, age=int, gender=str, inProduction=bool):
+  def __init__(self, fName=str, lName=str, about=str, age=int, gender=str, inProduction=bool, imageLink=str, summary=str):
     super().__init__()
     self.fName = fName
     self.lName = lName
@@ -164,6 +164,8 @@ class Politician(table):
     self.age = age
     self.gender = gender
     self.inProd = inProduction
+    self.summary = summary
+    self.imageLink = imageLink
     self.name = Politician.__name__
   
   '''
@@ -180,7 +182,9 @@ class Politician(table):
     '{self.gender}',
     {1 if self.inProd else 0}, 
     NOW(),
-    '{insertedBy}'
+    '{insertedBy}',
+    '{self.imageLink}',
+    '{self.summary}'
     );
     """
     return query
@@ -189,7 +193,7 @@ class Politician(table):
     if self.id is None:
       return 'Record has not been inserted into DB - ID is NONE'
     else:
-      return f'{self.name}[{self.id}, {self.fName}, {self.lName}, {self.about}, {self.age}, {self.gender}, {self.inProd}]'
+      return f'{self.name}[{self.id}, {self.fName}, {self.lName}, {self.about}, {self.age}, {self.gender}, {self.inProd}, {self.imageLink}, {self.summary}]'
 
 '''
 ID 
@@ -289,7 +293,7 @@ class transactionDataClient():
     yellow_text = "\033[93m"
     default_colour = "\033[0m"
   
-    with open('audit/logs.txt', 'a') as auditLog:
+    with open('inf/audit/logs.txt', 'a') as auditLog:
       message = f'[{datetime.now()}] [{self.user}] [{status.name}] [{message}]'
       auditLog.write(message + '\n')
       if status == messageStatus.FAIL:
@@ -345,7 +349,7 @@ class transactionDataClient():
   """    
   def generateFromSqlFile(self, sqlFileName=str):
     try:
-      with open(f'sql/{sqlFileName}', 'r') as sql:
+      with open(f'inf/sql/{sqlFileName}', 'r') as sql:
         sqlIn = sql.read()
     except FileNotFoundError:
       self.logMessage(messageStatus.FAIL, f'Unable to find file path: {sqlFileName}')
@@ -469,7 +473,7 @@ if __name__ == '__main__':
     tdc.insert(newArticle)
     newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianName)
-    newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0)
+    newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0, '\img\imghere', 'another more general summary here')
     tdc.insert(newPolitician)
     newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianPosition)
