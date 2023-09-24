@@ -289,7 +289,7 @@ class transactionDataClient():
     yellow_text = "\033[93m"
     default_colour = "\033[0m"
   
-    with open('audit/logs.txt', 'a') as auditLog:
+    with open(os.getcwd() + '//inf//audit/logs.txt', 'a') as auditLog:
       message = f'[{datetime.now()}] [{self.user}] [{status.name}] [{message}]'
       auditLog.write(message + '\n')
       if status == messageStatus.FAIL:

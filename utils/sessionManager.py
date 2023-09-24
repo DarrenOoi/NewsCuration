@@ -1,9 +1,10 @@
 from threading import *
+from datetime import datetime
+
 from utils.prompts.webScraper import *
 from utils.biasCalculator import *
 from utils.nameExtractor import *
-from datetime import datetime
-# import inf.transactionDataClient as transactionDataClient
+from inf import transactionDataClient
 
 import time
 HEADER = "header"
@@ -159,7 +160,7 @@ class ArticleElementJob(ArticleElement):
 # Class used by Session Manager to manage articles searched by User;
 # generate and store article information, etc. 
 class ArticleManager():
-	def __init__(self, limit) -> None:
+	def __init__(self, limit, transactionClient, transactionClientLock) -> None:
 		self.cacheLimit = limit
 		self.cacheLock = Lock()
 		self.cache = {} # {url: Article()}
@@ -169,6 +170,9 @@ class ArticleManager():
 		
 		self.threadsLock = Lock()
 		self.threads = []
+
+		self.transactionClientLock = transactionClientLock
+		self.transactionClient = transactionClient
 	
 	# checks if article already exists in cache
 	def isArticleInCache(self, url: str) -> bool:
@@ -178,14 +182,22 @@ class ArticleManager():
 
 	# checks if article already exists in database
 	def isArticleInDB(self, url: str) -> bool:
-		# # tmp = # search DB for article data
-		# tmp = 0
-		# if len(tmp) == 0:
-		# 	return False
-		# # add article to cache
-		# # update DB to see if new political figures are mentioned
-		# return True
-		return False
+		self.transactionClientLock.acquire()
+		result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
+		self.transactionClientLock.release()
+		print(f"DEBUG: {result}")
+		if len(result) == 0:
+			return False
+		if len(result) != 1:
+			return None
+		
+		articleDict = result[0]
+		self.cacheLock.acquire()
+		self.preventCacheOverflow()
+		# self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['Text'], articleDict['Summary'], (articleDict['LowerBias'], articleDict['upperBias']), articleDict['BiasedWords'], articleDict['PoliticalFigures'])
+		print(self)
+		self.cacheLock.release()
+		return True
 		
 	# checks if a job for the requested article is already processing
 	def isArticleBeingProcessed(self, url: str) -> bool:
@@ -215,13 +227,18 @@ class ArticleManager():
 			tmp = self.jobs[url].isDone()
 		print("job done")
 		self.jobsLock.acquire()
+		self.transactionClientLock.acquire()	
 		self.cacheLock.acquire()
 		tmp = self.jobs[url]
 		self.preventCacheOverflow()
 		self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"))
 		tmp.cleanJob()
+		print(self)
 		del self.jobs[url]
 		self.cacheLock.release()
+		# article = transactionDataClient.Article(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"))
+		# self.transactionClient.insert(article)	
+		self.transactionClientLock.release()
 		self.jobsLock.release()
 
 	# Adds a job to the job dictionary (threadsafe) so only one job per url is ever created
@@ -305,10 +322,12 @@ class ArticleManager():
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
-		self.am = ArticleManager(limit)
 
 		self.tdcLock = Lock()
-		# self.tdc = transactionDataClient.transactionDataClient()
+		self.tdc = transactionDataClient.transactionDataClient()
+		# self.tdc.closeConnection()
+
+		self.am = ArticleManager(limit, self.tdc, self.tdcLock)
 
 	def getArticleItem(self, url: str, itemName: str):
 		return self.am.getItem(url, itemName)
@@ -319,7 +338,8 @@ class SessionManager():
 # url2 = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
 # url3 = "https://www.9news.com.au/national/victoria-news-officers-injured-in-police-chase-armed-man-on-the-run-in-katandra-west-in-northern-victoria/6ee1eb85-b5a6-45ef-a991-a3292490ba98"
 # print(sm.getArticleItem(url1, SUMMARY))
-# print(sm.getArticleItem(url1, BIAS_RANGE))
-# print(sm.getArticleItem(url2, BIAS_WORDS))
-# print(sm.getArticleItem(url3, SUMMARY))
+# # print(sm.getArticleItem(url1, BIAS_RANGE))
+# # print(sm.getArticleItem(url2, BIAS_WORDS))
+# # print(sm.getArticleItem(url3, SUMMARY))
 # sm.am.clean()
+# sm.tdc.closeConnection()
