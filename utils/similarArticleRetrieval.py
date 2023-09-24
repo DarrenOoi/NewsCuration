@@ -1,6 +1,6 @@
 from GoogleNews import GoogleNews
-from webScraper import *
-from biasCalculator import *
+from utils.prompts.webScraper import *
+from utils.biasCalculator import *
 
 import base64
 

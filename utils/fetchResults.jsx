@@ -2,12 +2,12 @@ export const fetchResults = async (text) => {
   try {
     //test api endpoint
     // const response = await fetch('/api/getResults', {
-    const response = await fetch('http://localhost:5000/GPT', {
+    const response = await fetch('http://localhost:5000/ArticleInfo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ input: text }),
+      body: JSON.stringify({ url: text }),
       // body: JSON.stringify({ text }),
     });
 

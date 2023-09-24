@@ -3,10 +3,10 @@ from flask import Flask, request
 from flask_cors import CORS
 import requests
 
-import webScraper as wS
-from biasCalculator import *
-from similarArticleRetrieval import *
-import sessionManager as SM
+from utils.prompts import webScraper as wS
+from utils.biasCalculator import *
+from utils.similarArticleRetrieval import *
+import utils.sessionManager as SM
 
 openai.api_key = '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'
 openai.Model.list()
@@ -89,33 +89,19 @@ def SimilarArticlesRetrieval():
 # NEW ROUTE FUNCTION To USE SESSION MANAGER
 ################################################
 
-@app.route('/ArticleHeader', methods=['POST'])
-def ArticleHeader():
+@app.route('/ArticleInfo', methods=['POST'])
+def summary():
     data = request.get_json()
     url = data.get('url')
-    response = sm.getArticleItem(url, SM.HEADER)
-    return {"response": response}
-
-
-@app.route('/ArticleText', methods=['POST'])
-def ArticleText():
-    data = request.get_json()
-    url = data.get('url')
-    response = sm.getArticleItem(url, SM.TEXT)
-    return {"response": response}
-
-
-@app.route('/ArticleUnbiasedSummary', methods=['POST'])
-def ArticleUnbiasedSummary():
-    data = request.get_json()
-    url = data.get('url')
+    header = sm.getArticleItem(url, SM.HEADER)
+    article = sm.getArticleItem(url, SM.TEXT)
     response = sm.getArticleItem(url, SM.SUMMARY)
-    return {"response": response}
+    return {"response": response, "header": header, "article": article}
 
 
 
 @app.route('/ArticleBiasedScore', methods=['POST'])
-def ArticleBiasedScore():
+def score():
     data = request.get_json()
     url = data.get('url')
     b, b_dash = sm.getArticleItem(url, SM.BIAS_RANGE)
@@ -123,7 +109,7 @@ def ArticleBiasedScore():
 
 
 @app.route('/ArticleBiasedKeyWords', methods=['POST'])
-def ArticleBiasedKeyWords():
+def keywords():
     data = request.get_json()
     url = data.get('url')
     return sm.getArticleItem(url, SM.BIAS_WORDS)

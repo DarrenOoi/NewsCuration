@@ -8,9 +8,9 @@ import Input from '@/components/Input';
 import Button from '@/components/Button';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import tts from "@/components/tts.png"
-import textSize from "@/components/textSize.png"
-import profilePicSmall from '@/components/profilePicSmall.png'
+import tts from '@/components/tts.png';
+import textSize from '@/components/textSize.png';
+import profilePicSmall from '@/components/profilePicSmall.png';
 
 function Home() {
   const [text, setText] = useState('');
@@ -36,7 +36,7 @@ function Home() {
   const handleClick = () => {
     router.push({
       pathname: '/analysisPage',
-      query: { header: header, text: article },
+      query: { header: header, text: article, url: text },
     });
   };
 
@@ -44,35 +44,50 @@ function Home() {
     router.push('/profileSearch');
   };
 
-  const ProfileLine = ({text}) => {
-
+  const ProfileLine = ({ text }) => {
     return (
       <div className='flex flex-row items-center justify-center h-6'>
-        <div className="mr-1" style={{ display: "flex", alignItems: "center", width: "70px"}}>
-          <div style={{ flex: 1, backgroundColor: "#7895B1", height: "2px" }} />
+        <div
+          className='mr-1'
+          style={{ display: 'flex', alignItems: 'center', width: '70px' }}
+        >
+          <div style={{ flex: 1, backgroundColor: '#7895B1', height: '2px' }} />
         </div>
-        <span className=' text-[#7895B1] text-xs font-bold'>POLITCAL PROFILES</span>
-        <div className="ml-1" style={{ display: "flex", alignItems: "center", width: "70px"}}>
-          <div style={{ flex: 1, backgroundColor: "#7895B1", height: "2px" }} />
+        <span className=' text-[#7895B1] text-xs font-bold'>
+          POLITCAL PROFILES
+        </span>
+        <div
+          className='ml-1'
+          style={{ display: 'flex', alignItems: 'center', width: '70px' }}
+        >
+          <div style={{ flex: 1, backgroundColor: '#7895B1', height: '2px' }} />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
-  const ArticleLine = ({text}) => {
-
+  const ArticleLine = ({ text }) => {
     return (
       <div className='flex flex-col items-center justify-center w-6'>
-        <div style={{ display: "flex", alignItems: "center", width: "2px"}}>
-          <div style={{ flex: 1, backgroundColor: "#FFB039", height: "90px" }} />
+        <div style={{ display: 'flex', alignItems: 'center', width: '2px' }}>
+          <div
+            style={{ flex: 1, backgroundColor: '#FFB039', height: '90px' }}
+          />
         </div>
-        <span className='-rotate-90 text-[#FFB039] text-xs font-bold w-20 mt-1'>ARTICLE</span>
-        <div className="mt-9" style={{ display: "flex", alignItems: "center", width: "2px"}}>
-          <div style={{ flex: 1, backgroundColor: "#FFB039", height: "90px" }} />
+        <span className='-rotate-90 text-[#FFB039] text-xs font-bold w-20 mt-1'>
+          ARTICLE
+        </span>
+        <div
+          className='mt-9'
+          style={{ display: 'flex', alignItems: 'center', width: '2px' }}
+        >
+          <div
+            style={{ flex: 1, backgroundColor: '#FFB039', height: '90px' }}
+          />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <div>
@@ -84,30 +99,32 @@ function Home() {
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-
-              <div className="flex items-end justify-between">
+              <div className='flex items-end justify-between'>
                 <span className=' mt-5 ml-10 font-bold text-5xl text-[#7895B1] h-11'>
                   ARTICLE SEARCH
                 </span>
-                <div className="flex flex-col mr-10">
-                    <div className='flex items-center justify-center '>
-                      <ProfileLine/>
-                    </div>
-                  <button className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-lg rounded-b-none' style={{ width: '285px', height: "35px"}}>
-                      <Image
-                        src={profilePicSmall}
-                        width={18}
-                        height={18}
-                      />
-                    <text className='text-white text-sm' onClick={politcalProfile}>CLICK HERE FOR PROFILE SEARCH</text>
+                <div className='flex flex-col mr-10'>
+                  <div className='flex items-center justify-center '>
+                    <ProfileLine />
+                  </div>
+                  <button
+                    className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-lg rounded-b-none'
+                    style={{ width: '285px', height: '35px' }}
+                  >
+                    <Image src={profilePicSmall} width={18} height={18} />
+                    <text
+                      className='text-white text-sm'
+                      onClick={politcalProfile}
+                    >
+                      CLICK HERE FOR PROFILE SEARCH
+                    </text>
                   </button>
                 </div>
               </div>
 
-              <div className="flex">
-
+              <div className='flex'>
                 <div className='flex items-center justify-center'>
-                  <ArticleLine/>
+                  <ArticleLine />
                 </div>
 
                 <div
@@ -116,27 +133,41 @@ function Home() {
                 >
                   <div className='flex justify-start space-x-4 mt-5'>
                     <Input setText={setText} />{' '}
-                    <button className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5' style={{ width: '225px', height: "45px"}}>
-                      <text className='text-white text-sm' onClick={handleSubmit}>CLICK FOR THE FACTS</text>
+                    <button
+                      className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'
+                      style={{ width: '225px', height: '45px' }}
+                    >
+                      <text
+                        className='text-white text-sm'
+                        onClick={handleSubmit}
+                      >
+                        CLICK FOR THE FACTS
+                      </text>
                     </button>
                   </div>
 
-                  <div className="flex flex-row mt-5">
-                    <div className="card bg-[#2E2E2E] rounded-full p-0 flex justify-center" style={{ width: '415px', height: "33px"}}>
+                  <div className='flex flex-row mt-5'>
+                    <div
+                      className='card bg-[#2E2E2E] rounded-full p-0 flex justify-center'
+                      style={{ width: '415px', height: '33px' }}
+                    >
                       <Image
-                        className="ml-3"
+                        className='ml-3'
                         src={textSize}
                         width={20}
                         height={5}
-                        alt="Text To Speech"
+                        alt='Text To Speech'
                       />
                     </div>
-                    <button className="btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4" style={{ width: '50px', height: "33px"}}>
+                    <button
+                      className='btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4'
+                      style={{ width: '50px', height: '33px' }}
+                    >
                       <Image
                         src={tts}
                         width={20}
                         height={5}
-                        alt="Text To Speech"
+                        alt='Text To Speech'
                       />
                     </button>
                   </div>
@@ -160,14 +191,24 @@ function Home() {
               <div className='flex justify-center mt-10'>
                 {result && header && article && (
                   <div>
-                  <button className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full' style={{ width: '225px', height: "45px"}}>
-                      <text className='text-white text-base' onClick={handleClick}>CLICK FOR THE  
-                      <span className='text-[#FFB039] font-extrabold'> WHY</span></text>
+                    <button
+                      className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full'
+                      style={{ width: '225px', height: '45px' }}
+                    >
+                      <text
+                        className='text-white text-base'
+                        onClick={handleClick}
+                      >
+                        CLICK FOR THE
+                        <span className='text-[#FFB039] font-extrabold'>
+                          {' '}
+                          WHY
+                        </span>
+                      </text>
                     </button>
                   </div>
                 )}
               </div>
-              
             </div>
           </div>
         </div>

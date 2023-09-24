@@ -1,12 +1,15 @@
-export const fetchBiasWords = async (text) => {
+export const fetchBiasWords = async (url) => {
   try {
-    const response = await fetch('http://localhost:5000/BiasKeywords', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ articleText: text }),
-    });
+    const response = await fetch(
+      'http://localhost:5000/ArticleBiasedKeyWords',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url: url }),
+      }
+    );
 
     if (response.ok) {
       const responseResult = await response.json();
