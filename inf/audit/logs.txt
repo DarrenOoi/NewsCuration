@@ -2358,6 +2358,170 @@ CREATE TABLE Politician_KeyTable (
     ]
 [2023-09-15 10:20:53.342618] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020CE1F1F850>]
 [2023-09-15 10:20:53.343629] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020CE1F1F610>]
+[2023-09-23 10:46:15.964869] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002394BB72850>]
+[2023-09-23 10:46:15.967871] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002394BB727C0>]
+[2023-09-23 10:46:16.815365] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-23 10:46:16.817365] [Daniel Ciccotosto-Camp] [FAIL] [Unable to find file path: PRO_89article_updates.sql]
+[2023-09-23 10:46:16.817365] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002394BB72850>]
+[2023-09-23 10:46:16.819365] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002394BB727C0>]
+[2023-09-23 10:46:43.153537] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E103781850>]
+[2023-09-23 10:46:43.156561] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E1037817C0>]
+[2023-09-23 10:46:44.021718] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-23 10:46:44.450204] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Article
+ADD Header VARCHAR(1024),
+OriginalText TEXT
+SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89 with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OriginalText TEXT\nSummaryParagraph TEXT;\n\n-- this has been inserted as part of P' at line 3")]
+[2023-09-23 10:46:44.877654] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+ADD Header VARCHAR(1024),
+OriginalText TEXT
+SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89]
+[2023-09-23 10:46:44.880917] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E103781850>]
+[2023-09-23 10:46:44.880917] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E1037817C0>]
+[2023-09-23 10:47:07.405119] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000250D5B61850>]
+[2023-09-23 10:47:07.406119] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000250D5B617C0>]
+[2023-09-23 10:47:08.246367] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-23 10:47:08.668117] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Article
+ADD Header VARCHAR(1024),
+OriginalText TEXT,
+SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89 with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OriginalText TEXT,\nSummaryParagraph TEXT;\n\n-- this has been inserted as part of ' at line 3")]
+[2023-09-23 10:47:09.093959] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+ADD Header VARCHAR(1024),
+OriginalText TEXT,
+SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89]
+[2023-09-23 10:47:09.096003] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000250D5B61850>]
+[2023-09-23 10:47:09.096003] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000250D5B617C0>]
+[2023-09-23 10:49:21.282522] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000216D76F2850>]
+[2023-09-23 10:49:21.283518] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000216D76F27C0>]
+[2023-09-23 10:49:22.146101] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-23 10:49:23.091503] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+ADD Header VARCHAR(1024),
+ADD OriginalText TEXT,
+ADD SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89]
+[2023-09-23 10:49:23.093513] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000216D76F2850>]
+[2023-09-23 10:49:23.094513] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000216D76F27C0>]
+[2023-09-23 10:55:24.978415] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E8A97827C0>]
+[2023-09-23 10:55:24.979407] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E8A9782400>]
+[2023-09-23 10:55:25.800771] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-23 10:55:26.215569] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, header, originalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPOT response in paragraph form',
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 13")]
+[2023-09-23 10:55:26.632379] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, header, originalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPOT response in paragraph form',
+    );
+    ]
+[2023-09-23 10:55:27.457548] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-09-23 10:55:27.459542] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E8A97827C0>]
+[2023-09-23 10:55:27.459542] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E8A9782400>]
+[2023-09-23 10:56:09.077941] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000013D853027C0>]
+[2023-09-23 10:56:09.078942] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000013D85302400>]
+[2023-09-23 10:56:09.928097] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-23 10:56:10.352487] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPOT response in paragraph form',
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 13")]
+[2023-09-23 10:56:10.786640] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form',
+    );
+    ]
+[2023-09-23 10:56:11.653396] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-09-23 10:56:11.656395] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000013D853027C0>]
+[2023-09-23 10:56:11.657398] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000013D85302400>]
+[2023-09-23 10:57:20.616873] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000015464A617C0>]
+[2023-09-23 10:57:20.617874] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000015464A61400>]
+[2023-09-23 10:57:21.453094] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-23 10:57:22.287468] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-09-23 10:57:22.295033] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000015464A617C0>]
+[2023-09-23 10:57:22.295535] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000015464A61400>]
+[2023-09-23 17:01:28.837736] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C9D0D327C0>]
+[2023-09-23 17:01:28.948752] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C9D0D32400>]
+[2023-09-23 17:01:29.777563] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-23 17:01:30.629603] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPOT response in paragraph form'
+    );
+    ]
+[2023-09-23 17:01:31.469009] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-09-23 17:01:31.471010] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C9D0D327C0>]
+[2023-09-23 17:01:31.473010] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C9D0D32400>]
 [2023-09-23 18:21:09.221620] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000270B5FE2850>]
 [2023-09-23 18:21:09.223541] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000270B5FE27C0>]
 [2023-09-23 18:21:10.086636] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]

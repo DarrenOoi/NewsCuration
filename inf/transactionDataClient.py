@@ -62,27 +62,30 @@ InsertedBy VARCHAR(50)
 '''
 class Article(table):
   
-  def __init__(self, url=str, upperBias=float, lowerBias=float, summary=str, inProduction=bool):
+  def __init__(self, url:str, header:str, originalText:str, summaryParagraph:str, upperBias:float, lowerBias:float, summary:str, inProduction:bool):
     super().__init__()
     self.url = url
     self.upperBias = upperBias
     self.lowerBias = lowerBias
     self.summary = summary
     self.inProd = inProduction
+    self.header = header
+    self.originalText = originalText
+    self.summaryParagraph = summaryParagraph
     Article.tableName = Article.__name__
   
   def __str__(self):
     if self.id is None:
       return 'Record has not been inserted into DB - ID is NONE'
     else:
-      return f'{Article.tableName}[{self.id}, {self.url}, {self.upperBias}, {self.lowerBias}, {self.summary}, {self.inProd}]'
+      return f'{Article.tableName}[{self.id}, {self.url}, {self.upperBias}, {self.lowerBias}, {self.summary}, {self.inProd}, {self.header}, {self.originalText}, {self.summaryParagraph}]'
   
   '''
   This insert statement only takes one parameter; the name of the user inserting the record.
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy)
+    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
     VALUES (
     '{self.url}',
     {self.upperBias},
@@ -90,7 +93,10 @@ class Article(table):
     '{self.summary}.',
     {1 if self.inProd else 0}, 
     NOW(),
-    '{insertedBy}'
+    '{insertedBy}',
+    '{self.header}',
+    '{self.originalText}',
+    '{self.summaryParagraph}'
     );
     """
     return query
@@ -463,7 +469,7 @@ if __name__ == '__main__':
   if args.debugDDL:
     print(f'performing DDL for article table, DEBUGGING {args.debugDDL}')
     tdc = transactionDataClient()
-    newArticle = Article('examplewebsite.com', 10.23, 22.40, 'a summary of some text', 0)
+    newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 'a summary of some text', 0,)
     tdc.insert(newArticle)
     newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianName)
