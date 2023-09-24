@@ -8,9 +8,9 @@ import Input from '@/components/Input';
 import Button from '@/components/Button';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import tts from '@/components/tts.png';
-import textSize from '@/components/textSize.png';
-import profilePicSmall from '@/components/profilePicSmall.png';
+import tts from '@/components/pictures/tts.png';
+import textSize from '@/components/pictures/textSize.png';
+import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 
 function Home() {
   const [text, setText] = useState('');
@@ -132,7 +132,7 @@ function Home() {
                   style={{ width: '1200px' }}
                 >
                   <div className='flex justify-start space-x-4 mt-5'>
-                    <Input setText={setText} />{' '}
+                    <Input setText={setText} placeholder='Enter article URL' />{' '}
                     <button
                       className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'
                       style={{ width: '225px', height: '45px' }}

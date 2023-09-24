@@ -4,8 +4,30 @@ import Navbar from '@/components/Navbar';
 import Button from '@/components/Button';
 import Table from '@/components/Table';
 import { findFlagUrlByCountryName } from 'country-flags-svg';
+import { useRouter } from 'next/router';
+import { fetchPolitician } from '@/utils/fetchPolitician';
+import { useEffect, useState } from 'react';
 
-function ProfileSearch() {
+function ProfilePage() {
+  const router = useRouter();
+  const { name } = router.query;
+  const [politician, setPolitician] = useState(null);
+
+  useEffect(() => {
+    async function fetchPoliticianData() {
+      if (name) {
+        try {
+          const res = await fetchPolitician(name);
+          setPolitician(res);
+          console.log(res);
+        } catch (error) {
+          console.log('error');
+        }
+      }
+    }
+    fetchPoliticianData();
+  }, [name]);
+
   const handleBrowse = () => {};
 
   const handleSearch = () => {};
@@ -68,24 +90,23 @@ function ProfileSearch() {
                 <div className='flex justify-center space-x-20 my-7'>
                   <div className='rounded-lg bg-white m-5'>
                     <div className='hero-content lg:flex-row mx-5 my-3'>
-                      <img
-                        src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
-                        className='max-w-sm rounded-lg mr-5'
-                        style={{ width: '400px', height: '250px' }}
-                      />
                       <div>
-                        <p className='text-2xl font-bold mb-2'>Johnathan Doe</p>
+                        <img
+                          src={politician.ImageLink}
+                          //   src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
+                          className='max-w-sm rounded-lg mr-5'
+                          style={{ width: '200px', height: '250px' }}
+                        />
+                      </div>
+                      <div style={{ width: '700px', height: '250px' }}>
+                        <p className='text-2xl font-bold mb-2'>
+                          {politician.Fname} {politician.Lname}
+                        </p>
                         <p className='text-xs text-gray-400	'>
                           Ut enim ad minim veniam
                         </p>
                         <p className='text-l font-bold my-4'>About</p>
-                        <p className='mr-10'>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat.
-                        </p>
+                        <p className='mr-10'>{politician.About}</p>
                       </div>
                       <div>
                         <img
@@ -104,17 +125,7 @@ function ProfileSearch() {
                     <div className='mx-10 mb-10'>
                       <p className='text-l font-bold my-4'>FILTERED SUMMARY</p>
 
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat.
-                      </p>
+                      <p>{politician.Summary}</p>
                     </div>
                     {/* Recent Article Collection Row */}
                     <div className='mx-10 mb-10'>
@@ -139,4 +150,4 @@ function ProfileSearch() {
   );
 }
 
-export default ProfileSearch;
+export default ProfilePage;

@@ -2758,3 +2758,240 @@ ADD Summary TEXT;
     ]
 [2023-09-23 20:09:47.205807] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000248B0BDEBE0>]
 [2023-09-23 20:09:47.206810] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000248B0BDE730>]
+[2023-09-24 16:59:25.724193] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025E390381D0>]
+[2023-09-24 16:59:25.725187] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000025E3903EA10>]
+[2023-09-24 16:59:26.626403] [] [SUCCESS] [Established connection to database newscuration]
+[2023-09-24 16:59:35.432947] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 17:11:08.438750] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002E679869850>]
+[2023-09-24 17:11:08.438750] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002E6792B84D0>]
+[2023-09-24 17:11:09.343009] [] [SUCCESS] [Established connection to database newscuration]
+[2023-09-24 19:43:33.141293] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027E6AD31710>]
+[2023-09-24 19:43:33.141293] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027E69FFEED0>]
+[2023-09-24 19:43:34.467918] [] [SUCCESS] [Established connection to database newscuration]
+[2023-09-24 19:43:48.424517] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:23:33.584568] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000150016C8390>]
+[2023-09-24 20:23:33.584933] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000150008E9F10>]
+[2023-09-24 20:23:35.013578] [] [SUCCESS] [Established connection to database newscuration]
+[2023-09-24 20:25:10.779431] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:26:42.759038] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:26:58.060436] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:27:46.059577] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:27:54.183415] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:28:15.588603] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:28:26.245246] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:28:42.161897] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:28:50.653841] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:29:22.908888] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:29:39.256169] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:29:49.589308] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:30:13.215549] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:30:23.291171] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:30:49.453527] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:31:36.295182] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:31:44.387775] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:31:54.757020] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:32:33.562835] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:32:45.859300] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:33:06.303474] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:33:35.497204] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:33:57.237095] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:34:01.497916] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:34:39.381921] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:35:16.716125] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:35:29.142323] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:44:21.056362] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:44:31.046380] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:44:51.755818] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:45:05.023610] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:45:15.440290] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:45:25.294478] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:45:50.207544] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:45:56.045198] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:46:07.409505] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:46:51.954571] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:46:59.115399] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:47:17.650285] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:47:29.835729] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:48:07.629087] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:48:26.390541] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-24 20:49:14.708316] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]

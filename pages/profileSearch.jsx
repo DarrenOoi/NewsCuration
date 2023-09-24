@@ -3,11 +3,28 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Button from '@/components/Button';
+import Input from '@/components/Input';
+import { useRouter } from 'next/router';
 
 function ProfileSearch() {
-  const handleBrowse = () => {};
+  const [search, setSearch] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [result, setResult] = useState('');
 
-  const handleSearch = () => {};
+  const router = useRouter();
+  const handleBrowse = () => {
+    router.push({
+      pathname: '/profilePage',
+      query: { name: 'John Doe' },
+    });
+  };
+
+  const handleSearch = () => {
+    if (search.trim() != '') {
+      setSubmitted(true);
+      setResult(null);
+    } else setResult(null);
+  };
 
   return (
     <div>
@@ -28,14 +45,10 @@ function ProfileSearch() {
               >
                 <div className='flex justify-start justify-center space-x-4 mt-2'>
                   <Button text='BROWSE' handleClick={handleBrowse} />
-
-                  <input
-                    type='text'
-                    placeholder='Enter political profile name'
-                    className='input input-bordered bg-white text-black rounded-full'
-                    style={{ width: '450px' }}
-                  />
-
+                  <Input
+                    setText={setSearch}
+                    placeholder='Enter Politician Name'
+                  />{' '}
                   <Button
                     text='CLICK FOR THE FACTS'
                     handleClick={handleSearch}
@@ -43,10 +56,17 @@ function ProfileSearch() {
                 </div>
 
                 <div className='flex justify-center space-x-20 mt-12 mb-10'>
-                  <div
-                    className='card bg-white rounded-3xl'
-                    style={{ width: '350px', height: '230px' }}
-                  ></div>
+                  {submitted ? (
+                    <div
+                      className='card bg-red rounded-3xl'
+                      style={{ width: '350px', height: '230px' }}
+                    ></div>
+                  ) : (
+                    <div
+                      className='card bg-white rounded-3xl'
+                      style={{ width: '350px', height: '230px' }}
+                    ></div>
+                  )}
                 </div>
               </div>
             </div>
