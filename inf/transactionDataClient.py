@@ -271,6 +271,49 @@ class Politician_KeyTable(table):
     return query
 
 '''
+ID INT 
+KeyPhrase VARCHAR(1000),
+BiasReason TEXT,
+ID_Article INT,
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50),
+'''
+class Article_ArticleBias(table):
+  
+  def __init__(self, ID_Article=int, keyPhrase=str, biasReason=bool, inProduction=bool):
+    super().__init__()
+    self.ID_Article = ID_Article
+    self.keyPhrase = keyPhrase
+    self.biasReason = biasReason
+    self.inProd = inProduction
+    self.name = Article_ArticleBias.__name__
+    
+  def __str__(self):
+    if self.id is None:
+      return f'{self.name} record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.ID_Article}, {self.keyPhrase}, {self.inProd}]'
+    
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name}(KeyPhrase, BiasReaon, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.keyPhrase}',
+    '{self.biasReason}',
+    '{self.ID_Article}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+
+
+'''
 The transactionDataClient. Communicates with the AWS RDS.
 
 On initialisation, the TDC establishes connections with the database. The TDC
