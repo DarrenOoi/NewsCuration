@@ -2,6 +2,7 @@ import pymysql
 import time
 from datetime import datetime
 from enum import Enum
+import transactionHelper as transactionHelper
 import argparse
 import os
 import subprocess
@@ -293,14 +294,14 @@ class Article_ArticleBias(table):
     if self.id is None:
       return f'{self.name} record has not been inserted into DB - ID is NONE'
     else:
-      return f'{self.name}[{self.id}, {self.ID_Article}, {self.keyPhrase}, {self.inProd}]'
+      return f'{self.name}[{self.id}, {self.ID_Article}, {self.keyPhrase}, {self.biasReason}, {self.inProd}]'
     
   '''
   This insert statement only takes one parameter; the name of the user inserting the record.
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {self.name}(KeyPhrase, BiasReaon, ID_Article, InProduction, InsertedAt, InsertedBy)
+    INSERT INTO {self.name}(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
     '{self.keyPhrase}',
     '{self.biasReason}',
@@ -342,7 +343,7 @@ class transactionDataClient():
       if status == messageStatus.FAIL:
         print(f'{red_text}{message}{default_colour}')
       elif status == messageStatus.WARN:
-        print(f'{yellow_text}{message}{default_colour}')
+        print(f'{red_text}{message}{default_colour}')
       else:
         print(message)
   
@@ -512,7 +513,7 @@ if __name__ == '__main__':
   if args.debugDDL:
     print(f'performing DDL for article table, DEBUGGING {args.debugDDL}')
     tdc = transactionDataClient()
-    newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 'a summary of some text', 0,)
+    newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 'a summary of some text', 0)
     tdc.insert(newArticle)
     newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianName)
@@ -521,12 +522,26 @@ if __name__ == '__main__':
     newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianPosition)
     newPoliticianKeyTable = Politician_KeyTable(newPolitician.getId(), newArticle.getId())
-    tdc.insert(newPoliticianKeyTable)
+    tdc.insert(newPoliticianKeyTable)  
+     
+    # Article_ArticleBias Table
+    newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
+    tdc.insert(newArticle_ArticleBias)   
+    biasSubtext = {
+        'Devastating blaze': 'the term "devastating" indicates a tragice loss of life',
+        'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
+    }
+    transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
+    print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
+    print(transactionHelper.retrieve_bias_keywords_by_url(tdc, newArticle.url))
+    
     print(newPoliticianName)
     print(newPolitician)
     print(newPoliticianPosition)
     print(newPoliticianKeyTable)
     print(newArticle)
+    print(newArticle_ArticleBias)
+    
     tdc.closeConnection()
     
   if args.query is not None:
