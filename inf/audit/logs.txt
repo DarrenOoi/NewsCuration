@@ -2758,3 +2758,21 @@ ADD Summary TEXT;
     ]
 [2023-09-23 20:09:47.205807] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000248B0BDEBE0>]
 [2023-09-23 20:09:47.206810] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000248B0BDE730>]
+[2023-09-25 19:33:00.100746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025E5604CFD0>]
+[2023-09-25 19:33:00.101739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000025E5604C790>]
+[2023-09-25 19:33:00.954997] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 19:33:01.912558] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Article_ArticleBias (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    KeyPhrase VARCHAR(1000),
+    BiasReason TEXT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+
+-- this has been inserted as part of PRO-93]
+[2023-09-25 19:33:01.914559] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000025E5604CFD0>]
+[2023-09-25 19:33:01.914559] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000025E5604C790>]
