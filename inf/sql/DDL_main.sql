@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS Politician_Position
 DROP TABLE IF EXISTS Politician_PositionNameCodes
 DROP TABLE IF EXISTS Politician_NameCodes
 DROP TABLE IF EXISTS Politician_KeyTable
+DROP TABLE IF EXISTS Polling
 
 CREATE TABLE Politician_PositionNameCodes (
     ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -58,5 +59,23 @@ CREATE TABLE Politician_KeyTable (
     InsertedAt DATETIME,
     InsertedBy VARCHAR(50),
     FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question TEXT,
+    OptionFirst TEXT,
+    OptionSecond TEXT,
+    OptionThird TEXT,
+    OptionFourth TEXT,
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
     FOREIGN KEY (ID_Article) REFERENCES Article(ID)
 );

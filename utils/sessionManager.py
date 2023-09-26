@@ -1,10 +1,18 @@
 from threading import *
-from webScraper import *
-from biasCalculator import *
-from nameExtractor import *
+from utils.prompts.webScraper import *
+from utils.biasCalculator import *
+from utils.nameExtractor import *
 from datetime import datetime
+from inf.transactionDataClient import *
 
 import time
+HEADER = "header"
+TEXT = "text"
+SUMMARY = "summary"
+BIAS_RANGE = "biasRange"
+BIAS_WORDS = "biasWords"
+POLITICAL_fIGURES = "politicalFigures"
+POLITICIAN = "Politician"
 
 # def wait(t):
 # 	time.sleep(t)
@@ -140,7 +148,7 @@ class ArticleElementJob(ArticleElement):
 	# testing whether the article processes are done
 	def isDone(self) -> bool:
 		self.jobsDoneLock.acquire()
-		tmp = (self.jobsDone == 4)
+		tmp = (self.jobsDone >= len(self.threads))
 		self.jobsDoneLock.release()
 		return tmp
 	
@@ -271,13 +279,6 @@ class ArticleManager():
 		text += '}'
 		return text
 
-HEADER = "header"
-TEXT = "text"
-SUMMARY = "summary"
-BIAS_RANGE = "biasRange"
-BIAS_WORDS = "biasWords"
-POLITICAL_fIGURES = "politicalFigures"
-
 # # COMMON FUNCTIONALITY:
 #
 # # initialise article manager
@@ -302,10 +303,59 @@ POLITICAL_fIGURES = "politicalFigures"
 # print(am.getItem(url3, SUMMARY))
 # am.clean()
 
+class PoliticianManager():
+    
+    '''
+    Queries the database to retrieve politicians by name 
+    Parameters:
+	-----------
+		tdc : transactionDataClient
+		nameList : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
+    '''
+    def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
+        if len(name) == 0:
+            return []
+        nameSplit = name.split(' ')
+        
+        return tdc.query(POLITICIAN, f"(Fname LIKE '%{nameSplit[0]}%' AND Lname LIKE '%{nameSplit[1]}%')")
+    
+    '''
+    Queries the database to retrieve politicians by ID 
+    Parameters:
+	-----------
+		tdc : transactionDataClient
+		ID: the ID of the politician
+    '''
+    def getPoliticianByID(self, tdc=transactionDataClient, ID=int) -> list(dict()):
+	    return tdc.query(POLITICIAN, f'ID = {ID}')
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
-		self.am = ArticleManager(limit)
+		self.articleManager = ArticleManager(limit)
+		self.politicianManager = PoliticianManager()
+
+		# self.tdcLock = Lock()
+		self.tdc = transactionDataClient()
 
 	def getArticleItem(self, url: str, itemName: str):
-		return self.am.getItem(url, itemName)
+		return self.articleManager.getItem(url, itemName)
+
+	# Call this method, either by the ID, or by a list of names. Prefernce is by name
+	# Although ID is recommended
+	def getPoliticianItem(self, ID=str, nameList=str):
+		if ID == '' or ID is None:
+			return self.politicianManager.getPoliticianByName(self.tdc, nameList)
+		else:
+			return self.politicianManager.getPoliticianByID(self.tdc, ID)
+
+	
+
+# sm = SessionManager(2)
+# url1 = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+# url2 = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+# url3 = "https://www.9news.com.au/national/victoria-news-officers-injured-in-police-chase-armed-man-on-the-run-in-katandra-west-in-northern-victoria/6ee1eb85-b5a6-45ef-a991-a3292490ba98"
+# print(sm.getArticleItem(url1, SUMMARY))
+# print(sm.getArticleItem(url1, BIAS_RANGE))
+# print(sm.getArticleItem(url2, BIAS_WORDS))
+# print(sm.getArticleItem(url3, SUMMARY))
+# sm.am.clean()

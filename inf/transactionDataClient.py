@@ -2,6 +2,7 @@ import pymysql
 import time
 from datetime import datetime
 from enum import Enum
+import transactionHelper as transactionHelper
 import argparse
 import os
 import subprocess
@@ -62,27 +63,30 @@ InsertedBy VARCHAR(50)
 '''
 class Article(table):
   
-  def __init__(self, url=str, upperBias=float, lowerBias=float, summary=str, inProduction=bool):
+  def __init__(self, url:str, header:str, originalText:str, summaryParagraph:str, upperBias:float, lowerBias:float, summary:str, inProduction:bool):
     super().__init__()
     self.url = url
     self.upperBias = upperBias
     self.lowerBias = lowerBias
     self.summary = summary
     self.inProd = inProduction
+    self.header = header
+    self.originalText = originalText
+    self.summaryParagraph = summaryParagraph
     Article.tableName = Article.__name__
   
   def __str__(self):
     if self.id is None:
       return 'Record has not been inserted into DB - ID is NONE'
     else:
-      return f'{Article.tableName}[{self.id}, {self.url}, {self.upperBias}, {self.lowerBias}, {self.summary}, {self.inProd}]'
+      return f'{Article.tableName}[{self.id}, {self.url}, {self.upperBias}, {self.lowerBias}, {self.summary}, {self.inProd}, {self.header}, {self.originalText}, {self.summaryParagraph}]'
   
   '''
   This insert statement only takes one parameter; the name of the user inserting the record.
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy)
+    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
     VALUES (
     '{self.url}',
     {self.upperBias},
@@ -90,7 +94,10 @@ class Article(table):
     '{self.summary}.',
     {1 if self.inProd else 0}, 
     NOW(),
-    '{insertedBy}'
+    '{insertedBy}',
+    '{self.header}',
+    '{self.originalText}',
+    '{self.summaryParagraph}'
     );
     """
     return query
@@ -150,7 +157,7 @@ InsertedAt DATETIME,
 InsertedBy VARCHAR(50)
 '''
 class Politician(table):
-  def __init__(self, fName=str, lName=str, about=str, age=int, gender=str, inProduction=bool):
+  def __init__(self, fName=str, lName=str, about=str, age=int, gender=str, inProduction=bool, imageLink=str, summary=str):
     super().__init__()
     self.fName = fName
     self.lName = lName
@@ -158,6 +165,8 @@ class Politician(table):
     self.age = age
     self.gender = gender
     self.inProd = inProduction
+    self.summary = summary
+    self.imageLink = imageLink
     self.name = Politician.__name__
   
   '''
@@ -174,7 +183,9 @@ class Politician(table):
     '{self.gender}',
     {1 if self.inProd else 0}, 
     NOW(),
-    '{insertedBy}'
+    '{insertedBy}',
+    '{self.imageLink}',
+    '{self.summary}'
     );
     """
     return query
@@ -183,7 +194,7 @@ class Politician(table):
     if self.id is None:
       return 'Record has not been inserted into DB - ID is NONE'
     else:
-      return f'{self.name}[{self.id}, {self.fName}, {self.lName}, {self.about}, {self.age}, {self.gender}, {self.inProd}]'
+      return f'{self.name}[{self.id}, {self.fName}, {self.lName}, {self.about}, {self.age}, {self.gender}, {self.inProd}, {self.imageLink}, {self.summary}]'
 
 '''
 ID 
@@ -261,6 +272,108 @@ class Politician_KeyTable(table):
     return query
 
 '''
+  ID,
+  ID_Article INT,
+  Question TEXT,
+  OptionFirst TEXT,
+  OptionSecond TEXT,
+  OptionThird TEXT,
+  OptionFourth TEXT,
+  VotesFirst INT,
+  VotesSecond INT,
+  VotesThird INT,
+  VotesFourth INT,
+  InProduction BOOLEAN,
+  InsertedAt DATETIME,
+  InsertedBy VARCHAR(50),
+'''
+class Polling(table):
+  def __init__(self, articleID=str, question=str, optionFirst=str, optionSecond=str, optionThird=str, optionFourth=str, inProduction=bool):
+    super().__init__()
+    self.articleID = articleID
+    self.question = question
+    self.optionFirst = optionFirst
+    self.optionSecond = optionSecond
+    self.optionThird = optionThird
+    self.optionFourth = optionFourth
+    self.votesFirst = 0
+    self.votesSecond = 0
+    self.votesThird = 0
+    self.votesFourth = 0
+    self.inProd = inProduction
+    self.name = Polling.__name__
+
+  def __str__(self) -> str:
+    if self.id is None:
+      return f'Record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.articleID} {self.question}, {self.optionFirst}, {self.optionSecond}, {self.optionThird}, {self.optionFourth}, {self.votesFirst}, {self.votesSecond}, {self.votesThird}, {self.votesFourth}, {self.inProd}]'
+  
+  def insertSQL(self, insertedBy):
+    query = f"""
+  INSERT INTO {self.name}(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.articleID}',
+    '{self.question}',
+    '{self.optionFirst}',
+    '{self.optionSecond}',
+    '{self.optionThird}',
+    '{self.optionFourth}',
+    '{self.votesFirst}',
+    '{self.votesSecond}',
+    '{self.votesThird}',
+    '{self.votesFourth}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+  
+'''
+ID INT 
+KeyPhrase VARCHAR(1000),
+BiasReason TEXT,
+ID_Article INT,
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50),
+'''
+class Article_ArticleBias(table):
+  
+  def __init__(self, ID_Article=int, keyPhrase=str, biasReason=bool, inProduction=bool):
+    super().__init__()
+    self.ID_Article = ID_Article
+    self.keyPhrase = keyPhrase
+    self.biasReason = biasReason
+    self.inProd = inProduction
+    self.name = Article_ArticleBias.__name__
+    
+  def __str__(self):
+    if self.id is None:
+      return f'{self.name} record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.ID_Article}, {self.keyPhrase}, {self.biasReason}, {self.inProd}]'
+    
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name}(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.keyPhrase}',
+    '{self.biasReason}',
+    '{self.ID_Article}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+
+
+'''
 The transactionDataClient. Communicates with the AWS RDS.
 
 On initialisation, the TDC establishes connections with the database. The TDC
@@ -283,13 +396,13 @@ class transactionDataClient():
     yellow_text = "\033[93m"
     default_colour = "\033[0m"
   
-    with open('audit/logs.txt', 'a') as auditLog:
+    with open('inf/audit/logs.txt', 'a') as auditLog:
       message = f'[{datetime.now()}] [{self.user}] [{status.name}] [{message}]'
       auditLog.write(message + '\n')
       if status == messageStatus.FAIL:
         print(f'{red_text}{message}{default_colour}')
       elif status == messageStatus.WARN:
-        print(f'{yellow_text}{message}{default_colour}')
+        print(f'{red_text}{message}{default_colour}')
       else:
         print(message)
   
@@ -339,7 +452,7 @@ class transactionDataClient():
   """    
   def generateFromSqlFile(self, sqlFileName=str):
     try:
-      with open(f'sql/{sqlFileName}', 'r') as sql:
+      with open(f'inf/sql/{sqlFileName}', 'r') as sql:
         sqlIn = sql.read()
     except FileNotFoundError:
       self.logMessage(messageStatus.FAIL, f'Unable to find file path: {sqlFileName}')
@@ -459,21 +572,35 @@ if __name__ == '__main__':
   if args.debugDDL:
     print(f'performing DDL for article table, DEBUGGING {args.debugDDL}')
     tdc = transactionDataClient()
-    newArticle = Article('examplewebsite.com', 10.23, 22.40, 'a summary of some text', 0)
+    newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 'a summary of some text', 0)
     tdc.insert(newArticle)
     newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianName)
-    newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0)
+    newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0, '\img\imghere', 'another more general summary here')
     tdc.insert(newPolitician)
     newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianPosition)
     newPoliticianKeyTable = Politician_KeyTable(newPolitician.getId(), newArticle.getId())
-    tdc.insert(newPoliticianKeyTable)
+    tdc.insert(newPoliticianKeyTable)  
+     
+    # Article_ArticleBias Table
+    newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
+    tdc.insert(newArticle_ArticleBias)   
+    biasSubtext = {
+        'Devastating blaze': 'the term "devastating" indicates a tragice loss of life',
+        'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
+    }
+    transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
+    print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
+    print(transactionHelper.retrieve_bias_keywords_by_url(tdc, newArticle.url))
+    
     print(newPoliticianName)
     print(newPolitician)
     print(newPoliticianPosition)
     print(newPoliticianKeyTable)
     print(newArticle)
+    print(newArticle_ArticleBias)
+    
     tdc.closeConnection()
     
   if args.query is not None:
