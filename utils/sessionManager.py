@@ -305,6 +305,9 @@ class ArticleManager():
 
 class PoliticianManager():
     
+    def __init__(self):
+        self.cache = []
+        
     '''
     Queries the database to retrieve politicians by name 
     Parameters:
@@ -313,6 +316,7 @@ class PoliticianManager():
 		nameList : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
     '''
     def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
+        # Add function here to assist finding all related articles
         if len(name) == 0:
             return []
         nameSplit = name.split(' ')
@@ -327,7 +331,8 @@ class PoliticianManager():
 		ID: the ID of the politician
     '''
     def getPoliticianByID(self, tdc=transactionDataClient, ID=int) -> list(dict()):
-	    return tdc.query(POLITICIAN, f'ID = {ID}')
+	    #function here to assist finding all related articles
+     	return tdc.query(POLITICIAN, f'ID = {ID}')
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
@@ -341,7 +346,7 @@ class SessionManager():
 		return self.articleManager.getItem(url, itemName)
 
 	# Call this method, either by the ID, or by a list of names. Prefernce is by name
-	# Although ID is recommended
+	# Although ID is recommended. Returns a dictionary of the record, 
 	def getPoliticianItem(self, ID=str, nameList=str):
 		if ID == '' or ID is None:
 			return self.politicianManager.getPoliticianByName(self.tdc, nameList)
