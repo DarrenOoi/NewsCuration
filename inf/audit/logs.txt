@@ -3921,3 +3921,45 @@ ADD Summary TEXT;
 [2023-09-27 20:08:11.498694] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000026C967D1890>]
 [2023-09-27 20:08:11.499679] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000026C96B11150>]
 [2023-09-27 20:08:12.377976] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-27 20:56:50.617481] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001184D8A1ED0>]
+[2023-09-27 20:56:50.618421] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001184DE32510>]
+[2023-09-27 20:56:51.578337] [] [SUCCESS] [Established connection to database newscuration]
+[2023-09-27 21:00:28.365835] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-09-27 21:00:28.846062] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-27 21:01:12.453300] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-09-27 21:01:12.887768] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-27 21:02:18.849051] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002AA93A54A90>]
+[2023-09-27 21:02:18.850011] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002AA93A5EA10>]
+[2023-09-27 21:02:19.805077] [] [SUCCESS] [Established connection to database newscuration]
+[2023-09-27 21:02:25.727414] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-09-27 21:02:26.205002] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-27 21:03:18.365552] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-09-27 21:03:19.525625] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-27 21:03:36.133340] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-09-27 21:03:36.567587] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]
+[2023-09-27 21:06:13.566213] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-09-27 21:06:14.050914] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+    ]

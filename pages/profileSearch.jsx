@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Button from '@/components/Button';
 import Input from '@/components/Input';
 import { useRouter } from 'next/router';
+import JustTheFactsLine from '@/components/JustTheFactsLine';
 
 function ProfileSearch() {
   const [search, setSearch] = useState('');
@@ -12,12 +13,12 @@ function ProfileSearch() {
   const [result, setResult] = useState('');
 
   const router = useRouter();
-  const handleBrowse = () => {
-    router.push({
-      pathname: '/profilePage',
-      query: { name: 'John Doe' },
-    });
-  };
+  // const handleBrowse = () => {
+  //   router.push({
+  //     pathname: '/profilePage',
+  //     query: { name: 'John Doe' },
+  //   });
+  // };
 
   const handleSearch = () => {
     if (search.trim() != '') {
@@ -36,37 +37,47 @@ function ProfileSearch() {
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className='p mt-5 ml-4 font-bold text-4xl text-[#7895B1]'>
+              <div className='flex justify-end p mt-5 mr-10 font-bold text-2xl text-[#7895B1]'>
                 PROFILE SEARCH
               </div>
-              <div
-                className='bg-[#7895B1] p-4 rounded-xl'
-                style={{ width: '1200px' }}
-              >
-                <div className='flex justify-start justify-center space-x-4 mt-2'>
-                  <Button text='BROWSE' handleClick={handleBrowse} />
-                  <Input
-                    setText={setSearch}
-                    placeholder='Enter Politician Name'
-                  />{' '}
-                  <Button
-                    text='CLICK FOR THE FACTS'
-                    handleClick={handleSearch}
-                  />
+              <div className='flex'>
+                <div className='flex items-center justify-center mr-1'>
+                  <JustTheFactsLine />
                 </div>
 
-                <div className='flex justify-center space-x-20 mt-12 mb-10'>
-                  {submitted ? (
-                    <div
-                      className='card bg-red rounded-3xl'
-                      style={{ width: '350px', height: '230px' }}
-                    ></div>
-                  ) : (
-                    <div
-                      className='card bg-white rounded-3xl'
-                      style={{ width: '350px', height: '230px' }}
-                    ></div>
-                  )}
+                <div
+                  className='bg-[#7895B1] p-4 rounded-xl'
+                  style={{ width: '1200px' }}
+                >
+                  <div className='flex justify-start justify-center space-x-4 mt-2'>
+                    <Input
+                      setText={handleSearch}
+                      placeholder='Enter political profile name'
+                    />
+                    <Button
+                      text='CLICK FOR THE'
+                      boldText='FACTS'
+                      handleClick={handleSearch}
+                    />
+                  </div>
+
+                  <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 my-8'>
+                    <div className=''></div>
+                    {submitted ? (
+                      //show cards based on result
+                      <div>
+                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
+                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
+                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
+                      </div>
+                    ) : (
+                      <div>
+                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
+                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
+                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
