@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS Article
-DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
 DROP TABLE IF EXISTS Politician_Position
 DROP TABLE IF EXISTS Politician_PositionNameCodes
 DROP TABLE IF EXISTS Politician_NameCodes
@@ -22,7 +22,7 @@ CREATE TABLE Article (
     InProduction BOOLEAN,
     InsertedAt DATETIME,
     InsertedBy VARCHAR(50)
-);
+)
 
 CREATE TABLE Politician (
     ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -35,20 +35,21 @@ CREATE TABLE Politician (
     InProduction BOOLEAN,
     InsertedAt DATETIME,
     InsertedBy VARCHAR(50)
-);
+)
 
-/* A unique store of the politician's positions,
+/* A unique store of the politician's positions, --e.g. 'Prime minister of Australia' etc,
 such as 'Prime Minister of Australia' or 'Member of Parliament; Senate'
 etc.
 */
+
 CREATE TABLE Politician_Position (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    PositionNameCode VARCHAR(255), --e.g. 'Prime minister of Australia' etc,
+    PositionNameCode VARCHAR(255), 
     InProduction BOOLEAN,
     InsertedAt DATETIME,
     InsertedBy VARCHAR(50),
     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
-);
+)
 
 CREATE TABLE Politician_KeyTable (
     ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -59,4 +60,4 @@ CREATE TABLE Politician_KeyTable (
     InsertedBy VARCHAR(50),
     FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
     FOREIGN KEY (ID_Article) REFERENCES Article(ID)
-);
+)
