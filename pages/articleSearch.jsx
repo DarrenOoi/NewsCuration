@@ -11,6 +11,8 @@ import Image from 'next/image';
 import tts from '@/components/pictures/tts.png';
 import textSize from '@/components/pictures/textSize.png';
 import profilePicSmall from '@/components/pictures/profilePicSmall.png';
+import VerticleLine from '@/components/JustTheFactsLine';
+import JustTheFactsLine from '@/components/JustTheFactsLine';
 
 function Home() {
   const [text, setText] = useState('');
@@ -66,29 +68,6 @@ function Home() {
     );
   };
 
-  const ArticleLine = ({ text }) => {
-    return (
-      <div className='flex flex-col items-center justify-center w-6'>
-        <div style={{ display: 'flex', alignItems: 'center', width: '2px' }}>
-          <div
-            style={{ flex: 1, backgroundColor: '#FFB039', height: '90px' }}
-          />
-        </div>
-        <span className='-rotate-90 text-[#FFB039] text-xs font-bold w-20 mt-1'>
-          ARTICLE
-        </span>
-        <div
-          className='mt-9'
-          style={{ display: 'flex', alignItems: 'center', width: '2px' }}
-        >
-          <div
-            style={{ flex: 1, backgroundColor: '#FFB039', height: '90px' }}
-          />
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div>
       <Head>
@@ -123,8 +102,8 @@ function Home() {
               </div>
 
               <div className='flex'>
-                <div className='flex items-center justify-center'>
-                  <ArticleLine />
+                <div className='flex items-center justify-center mr-1'>
+                  <JustTheFactsLine />
                 </div>
 
                 <div
