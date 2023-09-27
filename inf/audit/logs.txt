@@ -3918,3 +3918,6 @@ ADD Summary TEXT;
     ]
 [2023-09-25 20:46:55.064663] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000025FA24E7D30>]
 [2023-09-25 20:46:55.064663] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000025FA24E7DC0>]
+[2023-09-27 20:08:11.498694] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000026C967D1890>]
+[2023-09-27 20:08:11.499679] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000026C96B11150>]
+[2023-09-27 20:08:12.377976] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
