@@ -1,4 +1,4 @@
-from transactionDataClient import *
+from .transactionDataClient import transactionDataClient
 
 
 '''
@@ -12,7 +12,7 @@ Returns:
     Returns None if the URL cannot be found, or there are no records relating to the URL.
 
 '''
-def retrieve_bias_keywords_by_url(tdc=transactionDataClient, url=str):
+def retrieve_bias_keywords_by_url(tdc:transactionDataClient, url=str):
     related_article = tdc.query('Article', f"URL = '{url}' ORDER BY ID DESC")
     
     if len(related_article) == 0 or related_article is None:
@@ -52,6 +52,9 @@ Inserts all the bias subtext into the related Article_ArticleBias
 def insert_bias_keywords(tdc=transactionDataClient, ID=int, keywords=dict()) -> None:
     pass
 
+'''
+Find all articles related to a Politician. Requires the ID of the Politician.
+'''
 def find_related_articles(tdc=transactionDataClient, ID_politician=int):
     query = f"""
     SELECT A.*
@@ -59,7 +62,7 @@ def find_related_articles(tdc=transactionDataClient, ID_politician=int):
     INNER JOIN Politician_Keytable PK ON PK.ID_Article = A.ID
     WHERE ID_Politcian = {ID_politician} 
     """
-    tdc.query_special(query)
+    return tdc.query_special(query)
     
 '''
 Inserts all the bias subtext into the related Article_ArticleBias.

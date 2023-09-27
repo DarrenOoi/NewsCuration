@@ -317,22 +317,28 @@ class PoliticianManager():
     '''
     def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
         # Add function here to assist finding all related articles
+        filter = ""
         if len(name) == 0:
             return []
         nameSplit = name.split(' ')
-        
-        return tdc.query(POLITICIAN, f"(Fname LIKE '%{nameSplit[0]}%' AND Lname LIKE '%{nameSplit[1]}%')")
+        for name in nameSplit:
+            filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
+        filter += '0=1'
+        politicianInfo = tdc.query(POLITICIAN, filter)
+		# do I need something here?
+        return politicianInfo
     
     '''
     Queries the database to retrieve politicians by ID 
     Parameters:
-	-----------
+		-----------
 		tdc : transactionDataClient
 		ID: the ID of the politician
     '''
-    def getPoliticianByID(self, tdc=transactionDataClient, ID=int) -> list(dict()):
-	    #function here to assist finding all related articles
-     	return tdc.query(POLITICIAN, f'ID = {ID}')
+		# def getPoliticianByID(self, tdc=transactionDataClient, ID=int):
+		# 	politicianInfo = tdc.query(POLITICIAN, f'ID = {ID}')
+		# 	politicianInfo['articles'] = transactionHelper.find_related_articles(tdc, ID)
+		# 	return politicianInfo
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
