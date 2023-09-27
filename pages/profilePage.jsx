@@ -130,7 +130,7 @@ function ProfilePage() {
                       </div>
                       {/* orange line */}
                       <div
-                        className='ml-10 '
+                        className='ml-auto mr-12'
                         style={{
                           backgroundColor: '#FFB039',
                           height: '3px',
@@ -147,7 +147,7 @@ function ProfilePage() {
 
                       {/* orange line */}
                       <div
-                        className='ml-10 '
+                        className='ml-auto mr-12'
                         style={{
                           backgroundColor: '#FFB039',
                           height: '2px',

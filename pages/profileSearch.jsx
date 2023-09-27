@@ -51,7 +51,7 @@ function ProfileSearch() {
                 >
                   <div className='flex justify-start justify-center space-x-4 mt-2'>
                     <Input
-                      setText={handleSearch}
+                      setText={setSearch}
                       placeholder='Enter political profile name'
                     />
                     <Button
@@ -61,23 +61,52 @@ function ProfileSearch() {
                     />
                   </div>
 
-                  <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 my-8'>
-                    <div className=''></div>
-                    {submitted ? (
-                      //show cards based on result
+                  {/* recents and most popular only shows when no search is submitted  */}
+                  {/* make a component for this  */}
+                  {submitted ? (
+                    <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-8 justify-start'>
                       <div>
-                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
-                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
-                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
+                        <p className='text-amber-400 font-bold mb-2'>
+                          Search Results
+                        </p>
+                        <div className='flex'>
+                          <p> flag </p>
+                          <p className='mb-2'>John Mayer</p>
+                        </div>
+                        <p className='mb-2'>Yash Man Yea Dude</p>
+                        <p className='mb-2'>Minav Tribedi</p>
                       </div>
-                    ) : (
-                      <div>
-                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
-                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
-                        <p className='text-2xl font-bold mb-2'>RECENTS</p>
+                    </div>
+                  ) : (
+                    <div>
+                      <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-8 justify-start'>
+                        <div>
+                          <p className='text-amber-400 font-bold mb-2'>
+                            RECENTS
+                          </p>
+                          <div className='flex'>
+                            <p> flag </p>
+                            <p className='mb-2'>John Mayer</p>
+                          </div>
+                          <p className='mb-2'>Yash Man Yea Dude</p>
+                          <p className='mb-2'>Minav Tribedi</p>
+                        </div>
                       </div>
-                    )}
-                  </div>
+                      <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-2 justify-start'>
+                        <div>
+                          <p className='text-amber-400 font-bold mb-2'>
+                            MOST POPULAR
+                          </p>
+                          <div className='flex'>
+                            <p> flag </p>
+                            <p className='mb-2'>John Mayer</p>
+                          </div>
+                          <p className='mb-2'>Yash Man Yea Dude</p>
+                          <p className='mb-2'>Minav Tribedi</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
