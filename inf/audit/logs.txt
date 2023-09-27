@@ -2758,240 +2758,1163 @@ ADD Summary TEXT;
     ]
 [2023-09-23 20:09:47.205807] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000248B0BDEBE0>]
 [2023-09-23 20:09:47.206810] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000248B0BDE730>]
-[2023-09-24 16:59:25.724193] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025E390381D0>]
-[2023-09-24 16:59:25.725187] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000025E3903EA10>]
-[2023-09-24 16:59:26.626403] [] [SUCCESS] [Established connection to database newscuration]
-[2023-09-24 16:59:35.432947] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 19:33:00.100746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025E5604CFD0>]
+[2023-09-25 19:33:00.101739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000025E5604C790>]
+[2023-09-25 19:33:00.954997] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 19:33:01.912558] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Article_ArticleBias (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    KeyPhrase VARCHAR(1000),
+    BiasReason TEXT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+
+-- this has been inserted as part of PRO-93]
+[2023-09-25 19:33:01.914559] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000025E5604CFD0>]
+[2023-09-25 19:33:01.914559] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000025E5604C790>]
+[2023-09-25 20:31:38.531334] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022779BD8D60>]
+[2023-09-25 20:31:38.532274] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022779BD8A30>]
+[2023-09-25 20:31:39.375942] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 20:31:40.225637] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
     ]
-[2023-09-24 17:11:08.438750] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002E679869850>]
-[2023-09-24 17:11:08.438750] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002E6792B84D0>]
-[2023-09-24 17:11:09.343009] [] [SUCCESS] [Established connection to database newscuration]
-[2023-09-24 19:43:33.141293] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027E6AD31710>]
-[2023-09-24 19:43:33.141293] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027E69FFEED0>]
-[2023-09-24 19:43:34.467918] [] [SUCCESS] [Established connection to database newscuration]
-[2023-09-24 19:43:48.424517] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:41.070105] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
     ]
-[2023-09-24 20:23:33.584568] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000150016C8390>]
-[2023-09-24 20:23:33.584933] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000150008E9F10>]
-[2023-09-24 20:23:35.013578] [] [SUCCESS] [Established connection to database newscuration]
-[2023-09-24 20:25:10.779431] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:41.490321] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-09-25 20:31:41.913765] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:26:42.759038] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:42.347549] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM None;
+    : 
+ error (1146, "Table 'newscuration.None' doesn't exist")]
+[2023-09-25 20:31:42.772088] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM None;
     ]
-[2023-09-24 20:26:58.060436] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:42.774085] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-09-25 20:31:43.197560] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    : 
+ error (1136, "Column count doesn't match value count at row 1")]
+[2023-09-25 20:31:43.618355] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
     ]
-[2023-09-24 20:27:46.059577] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:44.471219] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
     ]
-[2023-09-24 20:27:54.183415] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:45.326617] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:28:15.588603] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:46.181758] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
     ]
-[2023-09-24 20:28:26.245246] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:47.019889] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    6,
+    10,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:28:42.161897] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:47.868945] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
     ]
-[2023-09-24 20:28:50.653841] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:48.289314] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReaon, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1054, "Unknown column 'BiasReaon' in 'field list'")]
+[2023-09-25 20:31:48.711440] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReaon, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:29:22.908888] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:49.565111] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-09-24 20:29:39.256169] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:49.986479] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReaon, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1054, "Unknown column 'BiasReaon' in 'field list'")]
+[2023-09-25 20:31:50.422390] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReaon, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:29:49.589308] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:51.256227] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-09-24 20:30:13.215549] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:51.676880] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReaon, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Terror Attack',
+    'The term "terror" is frightening and is used to emote panic',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1054, "Unknown column 'BiasReaon' in 'field list'")]
+[2023-09-25 20:31:52.096190] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReaon, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Terror Attack',
+    'The term "terror" is frightening and is used to emote panic',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:30:23.291171] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:52.937381] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-09-24 20:30:49.453527] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:31:52.942633] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000022779BD8D60>]
+[2023-09-25 20:31:52.942633] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000022779BD8A30>]
+[2023-09-25 20:33:01.042133] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027995227B80>]
+[2023-09-25 20:33:01.043135] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027995227A30>]
+[2023-09-25 20:33:01.895705] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 20:33:02.733248] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
     ]
-[2023-09-24 20:31:36.295182] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:03.578189] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
     ]
-[2023-09-24 20:31:44.387775] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:03.997828] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-09-25 20:33:04.422710] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:31:54.757020] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:04.842357] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM None;
+    : 
+ error (1146, "Table 'newscuration.None' doesn't exist")]
+[2023-09-25 20:33:05.260279] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM None;
     ]
-[2023-09-24 20:32:33.562835] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:05.261708] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-09-25 20:33:05.689330] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    : 
+ error (1136, "Column count doesn't match value count at row 1")]
+[2023-09-25 20:33:06.130317] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
     ]
-[2023-09-24 20:32:45.859300] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:06.984820] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
     ]
-[2023-09-24 20:33:06.303474] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:07.839696] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:33:35.497204] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:08.689310] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
     ]
-[2023-09-24 20:33:57.237095] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:09.530818] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    6,
+    11,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:34:01.497916] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:10.381672] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
     ]
-[2023-09-24 20:34:39.381921] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:11.228383] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '11',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:35:16.716125] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:12.092136] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-09-24 20:35:29.142323] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:12.944661] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '11',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:44:21.056362] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:13.784927] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-09-24 20:44:31.046380] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:14.627067] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Terror Attack',
+    'The term "terror" is frightening and is used to emote panic',
+    '11',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:44:51.755818] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:15.465612] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-09-24 20:45:05.023610] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:33:15.468797] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000027995227B80>]
+[2023-09-25 20:33:15.469798] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000027995227A30>]
+[2023-09-25 20:34:20.554158] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002BDBBBD8BB0>]
+[2023-09-25 20:34:20.556148] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002BDBBBD8A60>]
+[2023-09-25 20:34:21.412650] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 20:34:22.272533] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
     ]
-[2023-09-24 20:45:15.440290] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:23.135048] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
     ]
-[2023-09-24 20:45:25.294478] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:23.566228] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-09-25 20:34:24.482390] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:45:50.207544] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:24.916468] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM None;
+    : 
+ error (1146, "Table 'newscuration.None' doesn't exist")]
+[2023-09-25 20:34:25.344790] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM None;
     ]
-[2023-09-24 20:45:56.045198] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:25.346787] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-09-25 20:34:25.778480] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    : 
+ error (1136, "Column count doesn't match value count at row 1")]
+[2023-09-25 20:34:26.217151] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
     ]
-[2023-09-24 20:46:07.409505] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:27.084934] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
     ]
-[2023-09-24 20:46:51.954571] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:27.950981] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:46:59.115399] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:28.813909] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
     ]
-[2023-09-24 20:47:17.650285] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:29.679581] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    6,
+    12,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:47:29.835729] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:30.535373] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
     ]
-[2023-09-24 20:48:07.629087] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:31.396617] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '12',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
-[2023-09-24 20:48:26.390541] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:32.265647] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-09-24 20:49:14.708316] [] [SUCCESS] [Successfully attempted query: 
-    SELECT * 
-    FROM Politician
-    WHERE (Fname LIKE '%John%' AND Lname LIKE '%Doe%')
+[2023-09-25 20:34:33.144403] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '12',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
     ]
+[2023-09-25 20:34:34.004533] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:34:34.874750] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Terror Attack',
+    'The term "terror" is frightening and is used to emote panic',
+    '12',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:34:35.739579] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:34:35.742571] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002BDBBBD8BB0>]
+[2023-09-25 20:34:35.743572] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002BDBBBD8A60>]
+[2023-09-25 20:38:45.684780] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000015614D97CD0>]
+[2023-09-25 20:38:45.685778] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000015614D97B80>]
+[2023-09-25 20:38:46.541203] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 20:38:47.383402] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-09-25 20:38:48.232847] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-09-25 20:38:48.665329] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-09-25 20:38:49.084918] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:38:49.509636] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM None;
+    : 
+ error (1146, "Table 'newscuration.None' doesn't exist")]
+[2023-09-25 20:38:49.943514] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM None;
+    ]
+[2023-09-25 20:38:49.944583] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-09-25 20:38:50.364508] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    : 
+ error (1136, "Column count doesn't match value count at row 1")]
+[2023-09-25 20:38:50.785656] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-09-25 20:38:51.622082] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-09-25 20:38:52.474399] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:38:53.316150] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-09-25 20:38:54.180377] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    6,
+    13,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:38:55.022627] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-09-25 20:38:55.867533] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '13',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:38:56.703683] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:38:57.553670] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '13',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:38:58.387595] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:38:59.247208] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Terror Attack',
+    'The term "terror" is frightening and is used to emote panic',
+    '13',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:39:00.087322] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:39:01.361791] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = 13
+    ]
+[2023-09-25 20:39:01.365788] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000015614D97CD0>]
+[2023-09-25 20:39:01.365788] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000015614D97B80>]
+[2023-09-25 20:41:02.938397] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000029749B37D30>]
+[2023-09-25 20:41:02.940408] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000029749B37DC0>]
+[2023-09-25 20:41:03.763266] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 20:41:04.592462] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-09-25 20:41:05.415278] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-09-25 20:41:05.824067] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-09-25 20:41:06.234522] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:41:06.652354] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM None;
+    : 
+ error (1146, "Table 'newscuration.None' doesn't exist")]
+[2023-09-25 20:41:07.067050] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM None;
+    ]
+[2023-09-25 20:41:07.068071] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-09-25 20:41:07.476682] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    : 
+ error (1136, "Column count doesn't match value count at row 1")]
+[2023-09-25 20:41:07.886830] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-09-25 20:41:08.697602] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-09-25 20:41:09.525882] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:41:10.351323] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-09-25 20:41:11.172238] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    6,
+    14,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:41:11.998400] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-09-25 20:41:12.817321] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '14',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:41:13.631925] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:41:14.445579] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '14',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:41:15.260918] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:41:16.084910] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Terror Attack',
+    'The term "terror" is frightening and is used to emote panic',
+    '14',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:41:16.901531] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:41:17.718688] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = 14
+    ]
+[2023-09-25 20:41:18.127686] [Daniel Ciccotosto-Camp] [FAIL] [error building sql statement with error (1054, "Unknown column 'examplewebsite.com' in 'where clause'")]
+[2023-09-25 20:41:18.532835] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = examplewebsite.com
+    ]
+[2023-09-25 20:41:18.538006] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000029749B37D30>]
+[2023-09-25 20:41:18.538913] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000029749B37DC0>]
+[2023-09-25 20:42:08.400443] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000028210A46D30>]
+[2023-09-25 20:42:08.402431] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000028210A46EE0>]
+[2023-09-25 20:42:09.246509] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 20:42:10.080553] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-09-25 20:42:10.908378] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-09-25 20:42:11.323443] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-09-25 20:42:11.739464] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:42:12.155158] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM None;
+    : 
+ error (1146, "Table 'newscuration.None' doesn't exist")]
+[2023-09-25 20:42:12.570259] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM None;
+    ]
+[2023-09-25 20:42:12.572106] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-09-25 20:42:12.985417] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    : 
+ error (1136, "Column count doesn't match value count at row 1")]
+[2023-09-25 20:42:13.403457] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-09-25 20:42:14.234997] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-09-25 20:42:15.067488] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:42:15.925495] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-09-25 20:42:16.757951] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    6,
+    15,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:42:17.592667] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-09-25 20:42:18.428111] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '15',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:42:19.258524] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:42:20.101304] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '15',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:42:20.944224] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:42:21.782046] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Terror Attack',
+    'The term "terror" is frightening and is used to emote panic',
+    '15',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:42:22.623102] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:42:23.471795] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = 15
+    ]
+[2023-09-25 20:42:24.320058] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = 'examplewebsite.com'
+    ]
+[2023-09-25 20:42:24.322059] [Daniel Ciccotosto-Camp] [WARN] [There is more than one Article URL in the database. The first tuple in query is selected.]
+[2023-09-25 20:42:25.171031] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = 1
+    ]
+[2023-09-25 20:42:25.173033] [Daniel Ciccotosto-Camp] [WARN] [There are not Bias subtext records for the related ArticleID (1)]
+[2023-09-25 20:42:25.177035] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000028210A46D30>]
+[2023-09-25 20:42:25.177035] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000028210A46EE0>]
+[2023-09-25 20:46:36.015991] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025FA24E7D30>]
+[2023-09-25 20:46:36.016991] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000025FA24E7DC0>]
+[2023-09-25 20:46:36.928849] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-09-25 20:46:37.843271] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    'a summary of some text.',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-09-25 20:46:38.759243] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-09-25 20:46:39.216004] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-09-25 20:46:39.677344] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:46:40.139278] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM None;
+    : 
+ error (1146, "Table 'newscuration.None' doesn't exist")]
+[2023-09-25 20:46:40.595953] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM None;
+    ]
+[2023-09-25 20:46:40.597966] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-09-25 20:46:41.758795] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    : 
+ error (1136, "Column count doesn't match value count at row 1")]
+[2023-09-25 20:46:42.219333] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-09-25 20:46:43.134882] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-09-25 20:46:44.051580] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:46:44.964871] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-09-25 20:46:45.880977] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    6,
+    16,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:46:46.793622] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-09-25 20:46:47.715118] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '16',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:46:48.632738] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:46:49.554043] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '16',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:46:50.473927] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:46:51.394710] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Terror Attack',
+    'The term "terror" is frightening and is used to emote panic',
+    '16',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-09-25 20:46:52.311121] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-09-25 20:46:53.228333] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = 16
+    ]
+[2023-09-25 20:46:54.145610] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = 'examplewebsite.com' ORDER BY ID DESC
+    ]
+[2023-09-25 20:46:54.147614] [Daniel Ciccotosto-Camp] [WARN] [There is more than one Article URL in the database. The first tuple in query is selected.]
+[2023-09-25 20:46:55.060145] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = 16
+    ]
+[2023-09-25 20:46:55.064663] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000025FA24E7D30>]
+[2023-09-25 20:46:55.064663] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000025FA24E7DC0>]

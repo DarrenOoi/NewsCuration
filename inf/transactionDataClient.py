@@ -2,6 +2,7 @@ import pymysql
 import time
 from datetime import datetime
 from enum import Enum
+import transactionHelper as transactionHelper
 import argparse
 import os
 import subprocess
@@ -271,6 +272,49 @@ class Politician_KeyTable(table):
     return query
 
 '''
+ID INT 
+KeyPhrase VARCHAR(1000),
+BiasReason TEXT,
+ID_Article INT,
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50),
+'''
+class Article_ArticleBias(table):
+  
+  def __init__(self, ID_Article=int, keyPhrase=str, biasReason=bool, inProduction=bool):
+    super().__init__()
+    self.ID_Article = ID_Article
+    self.keyPhrase = keyPhrase
+    self.biasReason = biasReason
+    self.inProd = inProduction
+    self.name = Article_ArticleBias.__name__
+    
+  def __str__(self):
+    if self.id is None:
+      return f'{self.name} record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.ID_Article}, {self.keyPhrase}, {self.biasReason}, {self.inProd}]'
+    
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name}(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.keyPhrase}',
+    '{self.biasReason}',
+    '{self.ID_Article}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+
+
+'''
 The transactionDataClient. Communicates with the AWS RDS.
 
 On initialisation, the TDC establishes connections with the database. The TDC
@@ -299,7 +343,7 @@ class transactionDataClient():
       if status == messageStatus.FAIL:
         print(f'{red_text}{message}{default_colour}')
       elif status == messageStatus.WARN:
-        print(f'{yellow_text}{message}{default_colour}')
+        print(f'{red_text}{message}{default_colour}')
       else:
         print(message)
   
@@ -469,7 +513,7 @@ if __name__ == '__main__':
   if args.debugDDL:
     print(f'performing DDL for article table, DEBUGGING {args.debugDDL}')
     tdc = transactionDataClient()
-    newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 'a summary of some text', 0,)
+    newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 'a summary of some text', 0)
     tdc.insert(newArticle)
     newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianName)
@@ -478,12 +522,26 @@ if __name__ == '__main__':
     newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianPosition)
     newPoliticianKeyTable = Politician_KeyTable(newPolitician.getId(), newArticle.getId())
-    tdc.insert(newPoliticianKeyTable)
+    tdc.insert(newPoliticianKeyTable)  
+     
+    # Article_ArticleBias Table
+    newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
+    tdc.insert(newArticle_ArticleBias)   
+    biasSubtext = {
+        'Devastating blaze': 'the term "devastating" indicates a tragice loss of life',
+        'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
+    }
+    transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
+    print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
+    print(transactionHelper.retrieve_bias_keywords_by_url(tdc, newArticle.url))
+    
     print(newPoliticianName)
     print(newPolitician)
     print(newPoliticianPosition)
     print(newPoliticianKeyTable)
     print(newArticle)
+    print(newArticle_ArticleBias)
+    
     tdc.closeConnection()
     
   if args.query is not None:
