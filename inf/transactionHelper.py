@@ -59,8 +59,8 @@ def find_related_articles(tdc=transactionDataClient, ID_politician=int):
     query = f"""
     SELECT A.*
     FROM Article A
-    INNER JOIN Politician_Keytable PK ON PK.ID_Article = A.ID
-    WHERE ID_Politcian = {ID_politician} 
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = {ID_politician} 
     """
     return tdc.query_special(query)
     

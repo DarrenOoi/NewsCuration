@@ -114,11 +114,39 @@ def keywords():
     url = data.get('url')
     return sm.getArticleItem(url, SM.BIAS_WORDS)
 
+'''
+Returns:
+    ID int,
+    Fname : str 
+    Lname : str 
+    About : str 
+    Age : int
+    Gender : str 
+    CountryCode : str
+    InProduction : bool
+    InsertedAt : DATETIME
+    InsertedBy : str
+    ImageLink : str
+    Summary : str
+    Articles : [
+        {ID : int
+        URL : str,
+        UpperBias : float,
+        LowerBias : float,
+        Summary TEXT,
+        InProduction : bool,
+        InsertedAt : DATETIME,
+        InsertedBy : str
+        Header : str,
+        OriginalText : str,
+        SummaryParagraph : str},
+    ]
+'''
 @app.route('/GetPolitician', methods=['POST'])
 def politicianRequestByName():
     data = request.get_json()
     name = data.get('name')
-    return sm.getPoliticianItem(None, name)[0]
+    return sm.getPoliticianItem(None, name)
 
 '''
 Returns:
@@ -134,12 +162,25 @@ Returns:
     InsertedBy : str
     ImageLink : str
     Summary : str
+    Articles : [
+        {ID : int
+        URL : str,
+        UpperBias : float,
+        LowerBias : float,
+        Summary TEXT,
+        InProduction : bool,
+        InsertedAt : DATETIME,
+        InsertedBy : str
+        Header : str,
+        OriginalText : str,
+        SummaryParagraph : str},
+    ]
 '''
 @app.route('/GetPoliticianByID', methods=['POST'])
 def politicianRequestByID():
     data = request.get_json()
     id = data.get('id')
-    return sm.getPoliticianItem(id, None)[0]
+    return sm.getPoliticianItem(id, None)
 
 
 if __name__ == '__main__':

@@ -4,6 +4,7 @@ from utils.biasCalculator import *
 from utils.nameExtractor import *
 from datetime import datetime
 from inf.transactionDataClient import *
+from inf.transactionHelper import *
 
 import time
 HEADER = "header"
@@ -305,40 +306,42 @@ class ArticleManager():
 
 class PoliticianManager():
     
-    def __init__(self):
-        self.cache = []
-        
-    '''
-    Queries the database to retrieve politicians by name 
-    Parameters:
+	def __init__(self):
+			self.cache = []
+			
+	'''
+	Queries the database to retrieve politicians by name 
+	Parameters:
+-----------
+	tdc : transactionDataClient
+	nameList : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
+	'''
+	def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
+		# Add function here to assist finding all related articles
+		filter = ""
+		if len(name) == 0:
+				return []
+		nameSplit = name.split(' ')
+		for name in nameSplit:
+				filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
+		filter += '0=1'
+		politiciansInfo = tdc.query(POLITICIAN, filter) #This would return a list of dicts
+		info = politiciansInfo[0] #we're going to return the first name from the list
+		related_articles = find_related_articles(tdc, info['ID'])
+		info['Articles'] = related_articles if related_articles is not None else []
+		return info
+	
+	'''
+	Queries the database to retrieve politicians by ID 
+	Parameters:
 	-----------
-		tdc : transactionDataClient
-		nameList : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
-    '''
-    def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
-        # Add function here to assist finding all related articles
-        filter = ""
-        if len(name) == 0:
-            return []
-        nameSplit = name.split(' ')
-        for name in nameSplit:
-            filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
-        filter += '0=1'
-        politicianInfo = tdc.query(POLITICIAN, filter)
-		# do I need something here?
-        return politicianInfo
-    
-    '''
-    Queries the database to retrieve politicians by ID 
-    Parameters:
-		-----------
-		tdc : transactionDataClient
-		ID: the ID of the politician
-    '''
-		# def getPoliticianByID(self, tdc=transactionDataClient, ID=int):
-		# 	politicianInfo = tdc.query(POLITICIAN, f'ID = {ID}')
-		# 	politicianInfo['articles'] = transactionHelper.find_related_articles(tdc, ID)
-		# 	return politicianInfo
+	tdc : transactionDataClient
+	ID: the ID of the politician
+	'''
+	def getPoliticianByID(self, tdc:transactionDataClient, ID:int) -> list(dict):
+		politicianInfo = tdc.query(POLITICIAN, f'ID = {ID}')
+		politicianInfo['articles'] = find_related_articles(tdc, ID)
+		return politicianInfo
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
