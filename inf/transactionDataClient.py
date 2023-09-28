@@ -2,7 +2,6 @@ import pymysql
 import time
 from datetime import datetime
 from enum import Enum
-import transactionHelper as transactionHelper
 import argparse
 import os
 import subprocess
@@ -77,7 +76,7 @@ class Article(table):
   
   def __str__(self):
     if self.id is None:
-      return 'Record has not been inserted into DB - ID is NONE'
+      return f'{Article.tableName} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{Article.tableName}[{self.id}, {self.url}, {self.upperBias}, {self.lowerBias}, {self.summary}, {self.inProd}, {self.header}, {self.originalText}, {self.summaryParagraph}]'
   
@@ -123,7 +122,7 @@ class Politician_PositionNameCodes(table):
 
   def __str__(self):
     if self.id is None:
-      return 'Record has not been inserted into DB - ID is NONE'
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{self.name}[{self.id}, {self.nameCode}, {self.inProd}]'
   
@@ -143,7 +142,7 @@ class Politician_PositionNameCodes(table):
     return query
   
   def getName(self):
-    return 
+    return self.name
 
 '''
 ID
@@ -174,7 +173,7 @@ class Politician(table):
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {self.name} (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    INSERT INTO {self.name} (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
     VALUES (
     '{self.fName}',
     '{self.lName}',
@@ -192,7 +191,7 @@ class Politician(table):
   
   def __str__(self):
     if self.id is None:
-      return 'Record has not been inserted into DB - ID is NONE'
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{self.name}[{self.id}, {self.fName}, {self.lName}, {self.about}, {self.age}, {self.gender}, {self.inProd}, {self.imageLink}, {self.summary}]'
 
@@ -228,7 +227,7 @@ class Politician_Position(table):
     
   def __str__(self):
     if self.id is None:
-      return 'Record has not been inserted into DB - ID is NONE'
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{self.name}[{self.id}, {self.posNameCode}, {self.inProd}]'
     
@@ -590,9 +589,10 @@ if __name__ == '__main__':
         'Devastating blaze': 'the term "devastating" indicates a tragice loss of life',
         'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
     }
-    transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
-    print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
-    print(transactionHelper.retrieve_bias_keywords_by_url(tdc, newArticle.url))
+    #we can't debug because of stricter import rules (but we know it works)
+    # transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
+    # print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
+    # print(transactionHelper.retrieve_bias_keywords_by_url(tdc, newArticle.url))
     
     print(newPoliticianName)
     print(newPolitician)
