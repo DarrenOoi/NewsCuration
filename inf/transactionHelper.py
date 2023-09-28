@@ -65,17 +65,16 @@ def insert_bias_keywords(tdc=transactionDataClient, ID=int, biasSubtext=dict, in
 
 '''
 '''
-
 def increment_vote(tdc=transactionDataClient, ID=int, option=int):
     poll = tdc.query('Polling', f'ID_Article = {ID}')
 
     if (option == 1):
         poll.votesFirst += 1
     elif (option == 2):
-        poll.votesFirst += 2
+        poll.votesFirst += 1
     elif (option == 3):
-        poll.votesFirst += 3
+        poll.votesFirst += 1
     elif (option == 4):
-        poll.votesFirst += 4
+        poll.votesFirst += 1
     else:            
         tdc.logMessage(messageStatus.WARN, f'This is not a valid vote option for related ArticleID ({ID})')
