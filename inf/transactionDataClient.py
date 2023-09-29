@@ -304,7 +304,7 @@ class Polling(table):
 
   def __str__(self) -> str:
     if self.id is None:
-      return f'Record has not been inserted into DB - ID is NONE'
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{self.name}[{self.id}, {self.articleID} {self.question}, {self.optionFirst}, {self.optionSecond}, {self.optionThird}, {self.optionFourth}, {self.votesFirst}, {self.votesSecond}, {self.votesThird}, {self.votesFourth}, {self.inProd}]'
   
@@ -328,6 +328,10 @@ class Polling(table):
     );
     """
     return query
+  
+  def getName(self):
+        return self.name
+
   
 '''
 ID INT 
