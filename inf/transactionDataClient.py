@@ -433,6 +433,26 @@ class transactionDataClient():
     
     return self.retrieveCursorOutput()
   
+  '''
+  Queries a given table, and applies a filter if given
+  '''
+  def query_special(self, query=str):
+    if self.cursor is None:
+      self.logMessage(messageStatus.WARN, 'Connection is closed. Query failed')
+
+    try: 
+      self.cursor.execute(query)    
+    except Exception as e:
+      self.logMessage(messageStatus.FAIL, f'error building sql statement with error {e}')
+    
+    try: 
+      self.cnx.commit()
+    except Exception as e:
+      self.logMessage(messageStatus.FAIL, f'failed to commit query \n {sql} \n reason: {e}')
+    self.logMessage(messageStatus.SUCCESS, f"Successfully attempted query: {query}")
+    
+    return self.retrieveCursorOutput()
+  
   def insert(self, table=type(table)):
     if self.cursor is None:
       self.logMessage(messageStatus.WARN, 'Connection is closed. Query failed')
