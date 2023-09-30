@@ -8819,3 +8819,822 @@ WHERE ID_Politician = 1]
     FROM Article_ArticleBias
     WHERE ID_Article = "4"
     ]
+[2023-10-01 09:12:02.332671] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000136029B6AD0>]
+[2023-10-01 09:12:02.338670] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000136029B5F60>]
+[2023-10-01 09:12:02.979540] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 09:12:14.478739] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 09:12:15.126741] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 09:12:15.771544] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 09:12:16.410669] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 09:12:35.724235] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-10-01 09:12:36.371354] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-01 09:12:37.004578] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-01 09:13:30.073519] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.aljazeera.com/news/2023/9/30/man-killed-one-hospitalised-after-whale-flips-boat-off-australia"
+    ]
+[2023-10-01 09:13:30.986173] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:13:31.803506] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:13:32.656374] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.aljazeera.com/news/2023/9/30/man-killed-one-hospitalised-after-whale-flips-boat-off-australia"
+    ]
+[2023-10-01 09:13:33.510794] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.aljazeera.com/news/2023/9/30/man-killed-one-hospitalised-after-whale-flips-boat-off-australia"
+    ]
+[2023-10-01 09:13:35.151512] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.aljazeera.com/news/2023/9/30/man-killed-one-hospitalised-after-whale-flips-boat-off-australia"
+    ]
+[2023-10-01 09:13:35.813406] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.aljazeera.com/news/2023/9/30/man-killed-one-hospitalised-after-whale-flips-boat-off-australia',
+    0.4,
+    0.3,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'Man killed, one hospitalised after whale hits boat off Australia',
+    'Police say whale breaching may have caused boat to flip and throw two occupants into the water off Sydney. One man died and another was hospitalised in Australia after a whale hit and flipped their small boat during a fishing trip, authorities said. The two men were thrown from the boat when it was hit at about 6am local time on Saturday (20:00 GMT on Friday) in the waters off La Perouse, about 14km (nine miles) southeast of Sydney. People on a second boat raised the alarm after spotting a 4.8-metre vessel unoccupied in the water, police said. The 53-year-old skipper was pulled from the water nearby, treated by paramedics and taken to hospital, where he was in a stable condition, according to authorities. A second man, aged 61, was unconscious and died at the scene. The boat “was likely to have struck or been impacted by a whale breaching, causing the boat to tilt, ejecting both men”, police said in a statement. Water Police Acting Superintendent Siobhan Munro described the collision as a “tragic accident” and told how the skipper of the boat had tried to hold his companion “as close as he could” in an effort to save him. According to Australia’s ABC national broadcaster, Munro said the men could have been in the water for 45 minutes before they were rescued. A man has died and another has been taken to hospital after an early morning fatal collision with a whale at Sydneys Botany Bay. https://t.co/4G7ybNq7fd — ABC News (@abcnews) September 29, 2023 Though Australia has an extensive coastline and its waters host 10 large and 20 smaller species of whales, human deaths caused by whales are rare. Humpback and southern right whales travel north to warmer breeding grounds during Australia’s winter months, returning southwards between September and November. “Right now there are lots of whales out there and there are lots of examples of whales breaching next to boats,” Munro said. New South Wales Maritime executive director Mark Hutchings said that people on the water needed to stay 100 metres away from an adult whale, and 300 metres if the whale is accompanying a calf. “Whales aren’t there to harm anyone, but those interactions can happen,” Hutchings told the ABC. The accident comes less than two weeks after a four-metre humpback whale was struck in the head by a boat propeller off the coast of Western Australia. In June, eight Danish people were rescued when their sailboat capsized in the Pacific Ocean after a collision with one or two whales. Follow Al Jazeera English:',
+    '- One man died and another was hospitalized in Australia after a whale hit and flipped their small boat during a fishing trip.
+- The incident occurred off the coast of La Perouse, about 14km southeast of Sydney.
+- The 53-year-old skipper was pulled from the water and is in stable condition in the hospital.
+- A second man, aged 61, was unconscious and died at the scene.
+- Police believe the boat was struck or impacted by a whale breaching, causing it to tilt and eject the occupants.
+- The collision is being described as a tragic accident.
+- There are currently many whales in the waters off Australia and examples of whales breaching next to boats.
+- It is rare for human deaths to be caused by whales in Australia.
+- People on the water are advised to stay at least 100 meters away from an adult whale and 300 meters if a calf is present.
+- This incident follows a recent incident where a humpback whale was struck by a boat propeller in Western Australia.
+- In June, a sailboat capsized in the Pacific Ocean after a collision with one or two whales, but all occupants were rescued.'
+    );
+    ]
+[2023-10-01 09:13:36.448087] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 09:13:37.099803] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.aljazeera.com/news/2023/9/30/man-killed-one-hospitalised-after-whale-flips-boat-off-australia"
+    ]
+[2023-10-01 09:13:37.738510] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'died',
+    'The word died indicates a tragic loss of life, evoking strong emotions.',
+    '6',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:13:38.377061] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:13:39.085973] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'tragic accident',
+    'The phrase tragic accident portrays the event as a devastating and unfortunate incident, highlighting its emotional impact.',
+    '6',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:13:39.728568] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:13:40.370334] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'collided',
+    'The word collided implies a sudden and forceful impact, suggesting a potentially traumatic event.',
+    '6',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:13:41.003037] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:13:41.639973] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'unconscious',
+    'The word unconscious suggests a severe and distressing state of being, indicating a critical condition of the individual.',
+    '6',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:13:42.271175] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:13:42.909347] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'rescued',
+    'The word rescued conveys a sense of relief and compassion, highlighting the positive outcome in a perilous situation.',
+    '6',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:13:43.542441] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:13:44.179188] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'fatal collision',
+    'The phrase fatal collision emphasizes the severity of the incident, implying a deadly outcome and evoking strong emotions.',
+    '6',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:13:44.819044] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:13:45.460561] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'struck',
+    'The word struck implies a forceful impact, suggesting a sudden and traumatic event.',
+    '6',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:13:46.089996] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:13:46.767411] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'capsized',
+    'The word capsized indicates a dangerous and potentially life-threatening situation, arousing feelings of fear and distress.',
+    '6',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:13:47.404683] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:14:19.920744] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C0038FA200>]
+[2023-10-01 09:14:19.923747] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C0038FBE50>]
+[2023-10-01 09:14:20.543363] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 09:14:23.216956] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.aljazeera.com/news/2023/9/30/man-killed-one-hospitalised-after-whale-flips-boat-off-australia"
+    ]
+[2023-10-01 09:14:23.838171] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "6"
+    ]
+[2023-10-01 09:14:24.453640] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "6"
+    ]
+[2023-10-01 09:24:15.169467] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001816728F5B0>]
+[2023-10-01 09:24:15.172467] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001816728DA50>]
+[2023-10-01 09:24:15.805795] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 09:24:49.154355] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/us-government-avoids-shutdown/102921594"
+    ]
+[2023-10-01 09:24:50.152583] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:24:51.005718] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:24:51.922135] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/us-government-avoids-shutdown/102921594"
+    ]
+[2023-10-01 09:24:52.834671] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/us-government-avoids-shutdown/102921594"
+    ]
+[2023-10-01 09:24:55.573851] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/us-government-avoids-shutdown/102921594"
+    ]
+[2023-10-01 09:24:56.270662] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/us-government-avoids-shutdown/102921594"
+    ]
+[2023-10-01 09:24:56.990272] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-10-01/us-government-avoids-shutdown/102921594',
+    0.47619047619047616,
+    0.42857142857142855,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'US government likely to avoid shutdown with 45-day stopgap bill hours before funding expires',
+    ' US government likely to avoid shutdown with 45-day stopgap bill hours before funding expires The US House of Representatives has passed a stopgap funding bill with overwhelming Democratic support hours before a government shutdown was set to take effect.  The federal governments fourth partial shutdown in a decade, set to begin at 12.01am on Sunday, will now be averted providing the Democratic-majority Senate passes the bill and President Joe Biden signs it into law. The bill passed the Republican-led House of Representatives after Speaker Kevin McCarthy defied an earlier demand by party hardliners for a partisan approach. The new approach would leave behind aid to Ukraine — a White House priority opposed by a growing number of GOP lawmakers — but increase federal disaster assistance by $US16 billion ($25 billion), meeting President Biden’s full request.  Mr McCarthy abandoned party hardliners earlier insistence that any bill pass the chamber with only Republican votes, a change that could cause some colleagues to seek to oust him. The House voted 335-91 to fund the government for another 45 days, with more Democrats than Republicans supporting it. The move marked a profound shift from earlier in the week, when a shutdown looked all but inevitable. Some 209 Democrats in the House supported the bill, far more than the 126 Republicans who did so, and Democrats described the result as a win. "Extreme MAGA Republicans have lost, the American people have won," top House Democrat Hakeem Jeffries told Reuters.  "I am relieved that Speaker McCarthy folded and finally allowed a bipartisan vote at the eleventh hour on legislation to stop Republicans rush to a disastrous shutdown," Democratic Representative Don Beyer said.  Mr McCarthys shift won the support of top Senate Republican Mitch McConnell, who previously had backed a similar measure that was moving through the Senate with broad bipartisan support, even though the House version dropped aid for Ukraine. "Under these circumstances, Im recommending a no vote, even though I very much want to avoid a government shutdown," Senator McConnell said. The two bills are very similar, with the House version providing another 45 days of funding for the federal government — enough to last through mid-November — but not providing additional funds to help Ukraine fight off a Russian invasion. Mr McCarthy dismissed concerns that hardline Republicans could try to oust him as leader. "I want to be the adult in the room: go ahead and try," McCarthy told reporters. "And you know what? If I have to risk my job for standing up for the American public, I will do that." The bill is now headed to the Senate as the midnight local midnight local deadline approaches.  Reuters We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- The US House of Representatives has passed a stopgap funding bill to avoid a government shutdown.
+- The bill needs to be passed by the Democratic-majority Senate and signed by President Joe Biden.
+- Speaker Kevin McCarthy defied party hardliners by passing the bill with overwhelming Democratic support.
+- The new approach includes increased federal disaster assistance but leaves behind aid to Ukraine, which was a White House priority opposed by some GOP lawmakers.
+- The bill passed the House with more Democrat votes than Republican votes.
+- The shift in approach by McCarthy won the support of top Senate Republican Mitch McConnell.
+- Concerns about hardline Republicans trying to oust McCarthy as leader were dismissed by McCarthy.
+- The bill is now headed to the Senate for further consideration.
+
+(Note: The last few sentences of the article are not related to the above information and should not be included in the summary.)'
+    );
+    ]
+[2023-10-01 09:24:57.659225] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 09:24:58.329433] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/us-government-avoids-shutdown/102921594"
+    ]
+[2023-10-01 09:24:59.023371] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'shutdown',
+    'The word shutdown carries a negative connotation and implies disruption, instability, and potential harm to the functioning of the government, which can evoke strong emotions.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:24:59.717580] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:00.384060] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'partisan approach',
+    'The phrase partisan approach suggests a biased or divisive method of decision-making, indicating a potential lack of cooperation and compromise.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:25:01.110059] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:01.866908] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'party hardliners',
+    'The term party hardliners implies a group of individuals within the party who hold extreme or uncompromising views, which can contribute to bias or polarization.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:25:02.536567] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:03.188339] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'White House priority',
+    'The phrase White House priority indicates a subjective preference given to a particular issue or agenda by the current administration, potentially suggesting bias.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:25:03.858157] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:04.518805] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'GOP lawmakers',
+    'The abbreviation GOP refers to the Grand Old Party, which is associated with the Republican Party. Referring to GOP lawmakers highlights a specific political affiliation, which can introduce bias or partisan implications.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:25:05.219392] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:05.898628] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'disastrous shutdown',
+    'The phrase disastrous shutdown expresses a strong negative judgment about the potential consequences of a shutdown, contributing to an emotionally charged language.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:25:06.619365] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:07.295475] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'relieved',
+    'The word relieved signifies an emotional response, indicating a sense of tension or concern that has been alleviated or resolved.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:25:07.932345] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:08.600467] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'bipartisan vote',
+    'The term bipartisan vote suggests cooperation and collaboration between members of different political parties, highlighting a positive notion and potentially indicating a balanced decision-making process.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:25:09.295414] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:09.934057] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Russian invasion',
+    'The phrase Russian invasion implies an aggressive act by Russia in terms of military intervention or territorial aggression, which can trigger emotional responses and potentially bias the perspective on the issue.',
+    '7',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:25:10.615156] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:25:11.755633] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:25:12.608224] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:25:18.205081] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/us-government-avoids-shutdown/102921594"
+    ]
+[2023-10-01 09:27:07.339054] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E055F05000>]
+[2023-10-01 09:27:07.343059] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E055F04280>]
+[2023-10-01 09:27:07.977834] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 09:27:19.163246] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:27:20.012182] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:27:20.799216] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:27:28.013739] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:27:28.882381] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:27:29.696881] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:27:45.949063] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002CD33D5EC50>]
+[2023-10-01 09:27:45.953064] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002CD33D5FEB0>]
+[2023-10-01 09:27:46.660259] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 09:27:58.224962] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:27:59.257425] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:28:00.107828] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/the-disability-commission-was-split-on-special-schools-those-with-lived-experience-want-them-closed-20230929-p5e8np.html"
+    ]
+[2023-10-01 09:28:40.576399] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 09:28:41.213203] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "4"
+    ]
+[2023-10-01 09:28:41.847333] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "4"
+    ]
+[2023-10-01 09:29:12.429851] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2"
+    ]
+[2023-10-01 09:29:13.612647] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:29:14.479126] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:29:15.277124] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2"
+    ]
+[2023-10-01 09:29:15.908777] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2"
+    ]
+[2023-10-01 09:29:16.229352] [Ron-Ash] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2',
+    1.0,
+    1.0,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'Victim named after fatal whale boat flip in Sydney's Botany Bay',
+    'Auto news: Fasted car in Australia spotted in Officeworks car park before launch. © 2023 Nine Entertainment Co.',
+    '- A fatal incident occurred in Sydneys Botany Bay involving a whale boat flip.
+- The victim of the incident has been identified, although their name has not been disclosed in the article.
+- The incident resulted in a fatality.
+- The location of the incident was Botany Bay in Sydney.
+- The incident involved a whale boat flip.
+- The victims name has been released.
+- The incident occurred in Sydneys Botany Bay.
+- The incident resulted in a fatality.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Botany Bay',\n    'Auto news: Fasted car in Australia spotted in Officeworks ca' at line 10")]
+[2023-10-01 09:29:16.547075] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2',
+    1.0,
+    1.0,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'Victim named after fatal whale boat flip in Sydney's Botany Bay',
+    'Auto news: Fasted car in Australia spotted in Officeworks car park before launch. © 2023 Nine Entertainment Co.',
+    '- A fatal incident occurred in Sydneys Botany Bay involving a whale boat flip.
+- The victim of the incident has been identified, although their name has not been disclosed in the article.
+- The incident resulted in a fatality.
+- The location of the incident was Botany Bay in Sydney.
+- The incident involved a whale boat flip.
+- The victims name has been released.
+- The incident occurred in Sydneys Botany Bay.
+- The incident resulted in a fatality.'
+    );
+    ]
+[2023-10-01 09:29:17.178447] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 09:29:17.816024] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2"
+    ]
+[2023-10-01 09:29:18.818103] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:29:19.618506] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:29:21.099383] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2"
+    ]
+[2023-10-01 09:29:21.439729] [Ron-Ash] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2',
+    1.0,
+    1.0,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'Victim named after fatal whale boat flip in Sydney's Botany Bay',
+    'Auto news: Fasted car in Australia spotted in Officeworks car park before launch. © 2023 Nine Entertainment Co.',
+    '- A fatal incident occurred in Sydneys Botany Bay involving a whale boat flip.
+- The victim of the incident has been identified.
+- The incident has caused concern and attention in the area.
+- The circumstances surrounding the whale boat flip are under investigation.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Botany Bay',\n    'Auto news: Fasted car in Australia spotted in Officeworks ca' at line 10")]
+[2023-10-01 09:29:21.761982] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2',
+    1.0,
+    1.0,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'Victim named after fatal whale boat flip in Sydney's Botany Bay',
+    'Auto news: Fasted car in Australia spotted in Officeworks car park before launch. © 2023 Nine Entertainment Co.',
+    '- A fatal incident occurred in Sydneys Botany Bay involving a whale boat flip.
+- The victim of the incident has been identified.
+- The incident has caused concern and attention in the area.
+- The circumstances surrounding the whale boat flip are under investigation.'
+    );
+    ]
+[2023-10-01 09:29:22.394350] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 09:29:23.025623] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/national/sydney-news-botany-bay-boat-incident-man-in-critical-condition/f67ad151-afc9-442d-a3cd-13c23abbdcf2"
+    ]
+[2023-10-01 09:30:16.701559] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000148CC43DC30>]
+[2023-10-01 09:30:16.704569] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000148CC1F02B0>]
+[2023-10-01 09:30:17.350527] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 09:30:26.156200] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/scam-buster-justin-williams-port-fairy-back-closures-old-victims/102765350"
+    ]
+[2023-10-01 09:30:27.179442] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:30:28.003134] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 09:30:28.808721] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/scam-buster-justin-williams-port-fairy-back-closures-old-victims/102765350"
+    ]
+[2023-10-01 09:30:29.595347] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/scam-buster-justin-williams-port-fairy-back-closures-old-victims/102765350"
+    ]
+[2023-10-01 09:30:33.570540] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/scam-buster-justin-williams-port-fairy-back-closures-old-victims/102765350"
+    ]
+[2023-10-01 09:30:34.248100] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-10-01/scam-buster-justin-williams-port-fairy-back-closures-old-victims/102765350',
+    0.5151515151515151,
+    0.5151515151515151,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'Victorian scam buster Justin Williams says regional bank closures linked to increase in victims',
+    ' Victorian scam buster Justin Williams says regional bank closures linked to increase in victims Justin Williams isnt a cop, and he certainly doesnt work for Interpol, but in Port Fairy, Victoria, hes become the local scam buster.    Through his IT business, Mr Williams has helped about 60 local scam victims over the past few years, saving people thousands of dollars. "In the last three years, all of a sudden Im getting all these calls [with people saying], I think Ive been scammed, my computers got a virus," Mr Williams said. "Weve been going out and sorting them out, but its gradually getting more and more." Most of the calls come from his clients, who hes been wording up about cyber security over the years.  "I always talk about the scams when Im with them," he said. "I might be setting up a computer and Ill say, What do you do if the phone rings?, and [if its a suspect call] Ill make them say, Dont trust the person!," he said. His clients now call Mr Williams if they fear their computer may have been infiltrated by malware, or when someone calls claiming to be an official and asking for account passwords. After years of coaching by Mr Williams, Keith and Barb Millard now call him whenever they spot something alarming.   "I click on the address and if it comes up with gobbledygook … I forward it to Justin and say, Is this dodgy?," Mrs Millard said.  "And he gets straight back to me [and says], Yes, its dodgy. Dont open it, just delete. "Hes opened our eyes. We question everything now, even bank emails or Telstra, we check everything before we open it." Often, Mr Williams catches the scammers in the act, but sometimes hes too late. "Most of the time we get them before they lose anything financially, but sometimes people have lost money," he said. Recently, he received a call from an elderly woman whose life savings had been stolen via a fake malware cyber scam. By the time Mr Williams arrived, the criminals had siphoned $30,000 from her accounts. "She was left with $80 in her account and her family are lending her some money — its so sad," he said. The ABC has reached out to several of Mr Williams clients, but they declined interviews, saying they felt embarrassed.  Mr Williams said the pain caused by scams went beyond the financial. "[One of my clients] is in her 80s — she was a really happy-go-lucky and a lovely, lovely person, and she was rung up by a scammer," he said. "The guy was completely abusing her, he got another person to come on the phone, telling her she was stupid and hed ruin her life and so on, and she had a heart attack while she was on the phone. "Her husband called the ambulance — she was in hospital for a week. "Ive been to see her three times since and shes definitely deteriorated.  "She hasnt been the same ever since." Mr Williams started running "how to" classes when the first iPhone was announced and he realised personal technology was transforming so quickly that most people couldnt keep up with it. Most of his clients are elderly and come from a generation who are often naturally trusting of authority and kind to strangers, even to people who call them out of the blue.  "Theyd say, I was talking to a nice man from the NBN, hes going to give me a discount," Mr Williams said. "He needed to go into my bank account to put the money into my account, hes going to call back." In such a case, Mr Williams would rush out to the clients home to prevent the inevitable theft, sometimes talking to the scammer himself on speaker to prove to his client the "nice man" was a fraud. He said he stepped into the role of "scam buster" as no-one else was doing it, and he now employs another IT expert, Florian Lindemann, to cope with the growing demand.   "Its a hard one because the crimes are so big and [for] the local police, its not in their scope," Mr Williams said.  "The police can say, OK, we can go through Scamwatch and report a scam, but really, they cant do much." Mr Williams said branch closures in regional towns were contributing to the growing number of scam victims. Over the past four years in Port Fairy, residents have gone from having four banks to just one.  In 2019, the National Australia Bank closed its Port Fairy branch, and in 2021 the ANZ and Commonwealth Bank followed suit. Now, theres just the Community Bank Port Fairy and District, part of Bendigo Bank, left.  "Bank branches were the first point of contact for people who had been scammed — youd always go to the bank first to see a real person," he said.  "Older people are being forced online when they dont want to, as so many bank branches close." Mr Williams said banks could be doing more to protect their most vulnerable customers. "I wish the banks would hold the money for five days if it was over a certain amount and going overseas, or completely-out-of-the-ordinary transactions," he said. In 2022, Australians lost $3.1 billion via scams — an 80 per cent increase on 2021. Source: ACCC Scamwatch  Even though cyber scammers are committing a federal crime, often stealing huge amounts of money, scam victims rarely go to the police. Australian Bureau of Statistics data showed that in 2021, only 57 per cent of people who experienced a scam reported it to an authority, and of them, most people contacted their bank rather than the police, who were only notified in 13.9 per cent of cases. Whether there is a link between rising scams and regional branch closures is difficult to ascertain. The topic of cyber security was absent from Treasurys 2021 Regional Banking Taskforce Issues Paper, which was commissioned to identify and assess the impact of bank branch closures in the regions. But last week, the big four banks were grilled by senators in Canberra as part of a parliamentary inquiry into regional bank closures. All four banks cited an overwhelming shift of customer preference for online banking, with most banks reporting more than 90 per cent of customers were now digital.  Senator Linda White pointed out that digital fraud was on the rise and asked Commonwealth Bank chief executive Matt Comyn whether banks were making people "more susceptible to fraud, particularly the elderly and others less au fait with scams" by pushing customers online. Mr Comyn said customers were choosing digital banking, rather than being forced into it by regional branch closures.  More than 1,200 bank branches have closed in Australia over the past six years. Mr Williams said a lot of his clients had developed a distrust for humanity. "Every time the phone rings, theyll get scared, terrified of a scam," he said. When Victor Shaw discovered that scammers had stolen his dads life savings, he held out little hope of a positive outcome. But then a letter arrived from ANZ that left him stunned. "Its like a post-traumatic stress thing, it really affects them long-term." Mr Williams said once a person fell for a scam the first time, it eroded their confidence and made them more vulnerable to future attacks.  "Most people get scammed once and then they learn from it, but sometimes youll get a second scam — theyll think its the bank ringing to fix up the scam," he said. "Definitely, people who have been scammed, their names will be out there, and the organised crime rings will say, Ok, this is a target thats been vulnerable before and well get more from them." "Its really sad." Browse for your location and find more local ABC News and information We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    'Major points of the article:
+
+- Justin Williams, an IT professional in Port Fairy, Victoria, has helped around 60 local scam victims over the past few years.
+- Williams has been educating his clients about cyber security and how to recognize scams.
+- Many of Williams clients now call him when they suspect they have been scammed or receive suspicious calls.
+- Williams has caught scammers in the act before, but sometimes he is too late and people have lost money.
+- Williams started running "how to" classes to help people keep up with rapidly evolving personal technology.
+- Most of Williams clients are elderly and trusting, making them more vulnerable to scams.
+- Williams believes that regional bank closures have contributed to the increase in scam victims, as people are forced to handle their finances online.
+- Williams suggests that banks should take measures like holding large transactions for a few days to protect vulnerable customers.
+- Australians lost $3.1 billion to scams in 2022, an 80% increase from the previous year.
+- Scam victims rarely report the crimes to the police, often contacting their bank instead.
+- The link between rising scams and regional bank closures is uncertain, as the topic was absent from a recent Treasury report on the impact of bank closures.
+- During a parliamentary inquiry, bank executives pointed out that customer preference for online banking has driven the shift away from bank branches.
+- Many of Williams clients have developed a fear of scams and are constantly on guard.
+- Falling for a scam erodes a persons confidence and makes them more vulnerable to future attacks.
+- Scammers target people who have been scammed before, knowing they may be more susceptible.
+- The emotional impact of scams can have lasting effects on victims.
+
+Note: The footer text is not related to the above article.'
+    );
+    ]
+[2023-10-01 09:30:34.895560] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 09:30:35.564051] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/scam-buster-justin-williams-port-fairy-back-closures-old-victims/102765350"
+    ]
+[2023-10-01 09:30:36.212451] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'scam buster',
+    'The phrase scam buster is emotionally charged as it portrays Justin Williams as a heroic figure who fights against scams, creating a sense of admiration and empowerment.',
+    '8',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:30:36.854489] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:30:37.516925] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'embarrassed',
+    'The word embarrassed indicates a negative emotion and suggests that scam victims feel ashamed or humiliated about being scammed, which can lead to reluctance in sharing their experiences.',
+    '8',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:30:38.164262] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:30:38.895054] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'fraud',
+    'The word fraud is emotionally charged as it implies intentional deception and criminal activity, evoking feelings of anger, betrayal, and victimization.',
+    '8',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:30:39.547154] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:30:40.197742] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terrified',
+    'The word terrified indicates a strong emotional response of extreme fear and anxiety, highlighting the devastating impact of scams on individuals mental well-being.',
+    '8',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:30:40.847330] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:30:41.505406] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'post-traumatic stress',
+    'The phrase post-traumatic stress is emotionally charged as it refers to a psychological condition associated with traumatic events, suggesting that being scammed can lead to long-term mental and emotional consequences.',
+    '8',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:30:42.152488] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:30:42.813323] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'sad',
+    'The word sad is emotionally charged, conveying a feeling of sorrow or unhappiness, emphasizing the emotional toll that scams take on individuals and their families.',
+    '8',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:30:43.477383] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:30:44.125987] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'vulnerable',
+    'The word vulnerable is emotionally charged as it implies a state of weakness or susceptibility, emphasizing the helplessness of scam victims and their increased risk of being targeted again.',
+    '8',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 09:30:44.775898] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]

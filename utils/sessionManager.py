@@ -332,7 +332,10 @@ class ArticleManager():
 	# checks where the article requested is stored in and if required, 
 	# starts the process of generating the data
 	def getArticle(self, url: str) -> dict: # Or None if invalid url
-		if self.isArticleInCache(url) or self.isArticleInDB(url):
+		if self.isArticleInCache(url):
+			self.cache[url].requestRate.updateRate()
+			return self.cache[url]
+		if self.isArticleInDB(url):
 			self.cache[url].requestRate.updateRate()
 			return self.cache[url]
 		if self.isArticleBeingProcessed(url):
