@@ -2358,168 +2358,127 @@ CREATE TABLE Politician_KeyTable (
     ]
 [2023-09-15 10:20:53.342618] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020CE1F1F850>]
 [2023-09-15 10:20:53.343629] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020CE1F1F610>]
-[2023-09-23 10:46:15.964869] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002394BB72850>]
-[2023-09-23 10:46:15.967871] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002394BB727C0>]
-[2023-09-23 10:46:16.815365] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
-[2023-09-23 10:46:16.817365] [Daniel Ciccotosto-Camp] [FAIL] [Unable to find file path: PRO_89article_updates.sql]
-[2023-09-23 10:46:16.817365] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002394BB72850>]
-[2023-09-23 10:46:16.819365] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002394BB727C0>]
-[2023-09-23 10:46:43.153537] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E103781850>]
-[2023-09-23 10:46:43.156561] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E1037817C0>]
-[2023-09-23 10:46:44.021718] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
-[2023-09-23 10:46:44.450204] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
- ALTER TABLE Article
-ADD Header VARCHAR(1024),
-OriginalText TEXT
-SummaryParagraph TEXT;
-
--- this has been inserted as part of PRO-89 with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OriginalText TEXT\nSummaryParagraph TEXT;\n\n-- this has been inserted as part of P' at line 3")]
-[2023-09-23 10:46:44.877654] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
-ADD Header VARCHAR(1024),
-OriginalText TEXT
-SummaryParagraph TEXT;
-
--- this has been inserted as part of PRO-89]
-[2023-09-23 10:46:44.880917] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E103781850>]
-[2023-09-23 10:46:44.880917] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E1037817C0>]
-[2023-09-23 10:47:07.405119] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000250D5B61850>]
-[2023-09-23 10:47:07.406119] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000250D5B617C0>]
-[2023-09-23 10:47:08.246367] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
-[2023-09-23 10:47:08.668117] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
- ALTER TABLE Article
-ADD Header VARCHAR(1024),
-OriginalText TEXT,
-SummaryParagraph TEXT;
-
--- this has been inserted as part of PRO-89 with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OriginalText TEXT,\nSummaryParagraph TEXT;\n\n-- this has been inserted as part of ' at line 3")]
-[2023-09-23 10:47:09.093959] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
-ADD Header VARCHAR(1024),
-OriginalText TEXT,
-SummaryParagraph TEXT;
-
--- this has been inserted as part of PRO-89]
-[2023-09-23 10:47:09.096003] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000250D5B61850>]
-[2023-09-23 10:47:09.096003] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000250D5B617C0>]
-[2023-09-23 10:49:21.282522] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000216D76F2850>]
-[2023-09-23 10:49:21.283518] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000216D76F27C0>]
-[2023-09-23 10:49:22.146101] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
-[2023-09-23 10:49:23.091503] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
-ADD Header VARCHAR(1024),
-ADD OriginalText TEXT,
-ADD SummaryParagraph TEXT;
-
--- this has been inserted as part of PRO-89]
-[2023-09-23 10:49:23.093513] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000216D76F2850>]
-[2023-09-23 10:49:23.094513] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000216D76F27C0>]
-[2023-09-23 10:55:24.978415] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E8A97827C0>]
-[2023-09-23 10:55:24.979407] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E8A9782400>]
-[2023-09-23 10:55:25.800771] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
-[2023-09-23 10:55:26.215569] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
-    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, header, originalText, SummaryParagraph)
-    VALUES (
-    'examplewebsite.com',
-    10.23,
-    22.4,
-    'a summary of some text.',
-    0, 
-    NOW(),
-    'Daniel Ciccotosto-Camp',
-    'This is the header',
-    'This is the originalText',
-    'this would be the chatGPOT response in paragraph form',
-    );
-    : 
- error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 13")]
-[2023-09-23 10:55:26.632379] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, header, originalText, SummaryParagraph)
-    VALUES (
-    'examplewebsite.com',
-    10.23,
-    22.4,
-    'a summary of some text.',
-    0, 
-    NOW(),
-    'Daniel Ciccotosto-Camp',
-    'This is the header',
-    'This is the originalText',
-    'this would be the chatGPOT response in paragraph form',
-    );
-    ]
-[2023-09-23 10:55:27.457548] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article;
-    ]
-[2023-09-23 10:55:27.459542] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E8A97827C0>]
-[2023-09-23 10:55:27.459542] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E8A9782400>]
-[2023-09-23 10:56:09.077941] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000013D853027C0>]
-[2023-09-23 10:56:09.078942] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000013D85302400>]
-[2023-09-23 10:56:09.928097] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
-[2023-09-23 10:56:10.352487] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
-    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
-    VALUES (
-    'examplewebsite.com',
-    10.23,
-    22.4,
-    'a summary of some text.',
-    0, 
-    NOW(),
-    'Daniel Ciccotosto-Camp',
-    'This is the header',
-    'This is the originalText',
-    'this would be the chatGPOT response in paragraph form',
-    );
-    : 
- error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 13")]
-[2023-09-23 10:56:10.786640] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
-    VALUES (
-    'examplewebsite.com',
-    10.23,
-    22.4,
-    'a summary of some text.',
-    0, 
-    NOW(),
-    'Daniel Ciccotosto-Camp',
-    'This is the header',
-    'This is the originalText',
-    'this would be the chatGPT response in paragraph form',
-    );
-    ]
-[2023-09-23 10:56:11.653396] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article;
-    ]
-[2023-09-23 10:56:11.656395] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000013D853027C0>]
-[2023-09-23 10:56:11.657398] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000013D85302400>]
-[2023-09-23 10:57:20.616873] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000015464A617C0>]
-[2023-09-23 10:57:20.617874] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000015464A61400>]
-[2023-09-23 10:57:21.453094] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
-[2023-09-23 10:57:22.287468] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+[2023-09-22 14:56:14.678403] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002407B33FD00>]
+[2023-09-22 14:56:14.683423] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002407B33FC40>]
+[2023-09-22 14:56:15.289555] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-22 14:58:58.410961] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CB3B36E4A0>]
+[2023-09-22 14:58:58.413992] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CB3B36E560>]
+[2023-09-22 14:58:59.042283] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-22 14:59:08.317686] [Ron-Ash] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001CB3B36E4A0>]
+[2023-09-22 14:59:08.320686] [Ron-Ash] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001CB3B36E560>]
+[2023-09-22 15:08:19.522569] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001AC9742A6E0>]
+[2023-09-22 15:08:19.527566] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001AC9742BB20>]
+[2023-09-22 15:08:20.139350] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-22 15:08:20.149340] [Ron-Ash] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001AC9742A6E0>]
+[2023-09-22 15:08:20.160352] [Ron-Ash] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001AC9742BB20>]
+[2023-09-22 15:32:10.056504] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000029C0219FD60>]
+[2023-09-22 15:32:10.060519] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000029C0219D240>]
+[2023-09-22 15:32:10.670211] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-22 15:32:10.982893] [Ron-Ash] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://theconversation.com/justin-trudeaus-india-accusation-complicates-western-effo' at line 3")]
+[2023-09-22 15:32:11.299306] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Article
-    WHERE 1=1
+    WHERE URL = https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922
     ]
-[2023-09-23 10:57:22.295033] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000015464A617C0>]
-[2023-09-23 10:57:22.295535] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000015464A61400>]
-[2023-09-23 17:01:28.837736] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C9D0D327C0>]
-[2023-09-23 17:01:28.948752] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C9D0D32400>]
-[2023-09-23 17:01:29.777563] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
-[2023-09-23 17:01:30.629603] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
-    VALUES (
-    'examplewebsite.com',
-    10.23,
-    22.4,
-    'a summary of some text.',
-    0, 
-    NOW(),
-    'Daniel Ciccotosto-Camp',
-    'This is the header',
-    'This is the originalText',
-    'this would be the chatGPOT response in paragraph form'
-    );
+[2023-09-22 15:32:17.829130] [Ron-Ash] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://theconversation.com/justin-trudeaus-india-accusation-complicates-western-effo' at line 3")]
+[2023-09-22 15:32:18.239322] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922
     ]
-[2023-09-23 17:01:31.469009] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article;
+[2023-09-22 15:32:18.740995] [Ron-Ash] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954' at line 3")]
+[2023-09-22 15:32:19.180233] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954
     ]
+[2023-09-22 15:32:29.446955] [Ron-Ash] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://www.9news.com.au/national/victoria-news-officers-injured-in-police-chase-arme' at line 3")]
+[2023-09-22 15:32:29.871068] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = https://www.9news.com.au/national/victoria-news-officers-injured-in-police-chase-armed-man-on-the-run-in-katandra-west-in-northern-victoria/6ee1eb85-b5a6-45ef-a991-a3292490ba98
+    ]
+[2023-09-22 15:32:34.762730] [Ron-Ash] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000029C0219FD60>]
+[2023-09-22 15:32:34.765735] [Ron-Ash] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000029C0219D240>]
+[2023-09-22 15:34:40.836412] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000263CE39FC70>]
+[2023-09-22 15:34:40.839413] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000263CE39F430>]
+[2023-09-22 15:34:41.482863] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-22 15:35:10.847319] [Ron-Ash] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://theconversation.com/justin-trudeaus-india-accusation-complicates-western-effo' at line 3")]
+[2023-09-22 15:35:11.206669] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922
+    ]
+[2023-09-22 15:35:31.483105] [Ron-Ash] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000263CE39FC70>]
+[2023-09-22 15:35:31.488115] [Ron-Ash] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000263CE39F430>]
+[2023-09-22 15:35:46.230669] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CD55A6A740>]
+[2023-09-22 15:35:46.233669] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CD55A6BB80>]
+[2023-09-22 15:35:46.849083] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-22 15:35:47.467312] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-22 15:36:06.662607] [Ron-Ash] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001CD55A6A740>]
+[2023-09-22 15:36:06.666606] [Ron-Ash] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001CD55A6BB80>]
+[2023-09-22 15:36:41.891078] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000231B11FA9B0>]
+[2023-09-22 15:36:41.895087] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000231B11FBDF0>]
+[2023-09-22 15:36:42.583258] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-22 15:36:43.211083] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-22 15:37:10.349782] [Ron-Ash] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000231B11FA9B0>]
+[2023-09-22 15:37:10.355781] [Ron-Ash] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000231B11FBDF0>]
+[2023-09-24 13:20:13.199254] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000018575063D90>]
+[2023-09-24 13:20:13.204254] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000018575063A60>]
+[2023-09-24 13:20:13.849218] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-24 13:20:14.511438] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-24 13:20:23.973059] [Ron-Ash] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000018575063D90>]
+[2023-09-24 13:20:23.977522] [Ron-Ash] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000018575063A60>]
+[2023-09-24 13:20:26.216354] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001857513EF20>]
+[2023-09-24 13:20:26.221355] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000018575178130>]
+[2023-09-24 13:20:26.847300] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-24 13:20:53.069863] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-24 13:20:54.081697] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-24 13:20:55.018256] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-24 13:22:15.129145] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-09-24 13:22:16.479732] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-09-24 13:22:17.311699] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+
+[2023-09-24 14:34:27.481172] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002472914A950>]
+[2023-09-24 14:34:27.484007] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000024729149180>]
+[2023-09-24 14:34:28.140833] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+
 [2023-09-23 17:01:31.471010] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C9D0D327C0>]
 [2023-09-23 17:01:31.473010] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C9D0D32400>]
 [2023-09-23 18:21:09.221620] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000270B5FE2850>]

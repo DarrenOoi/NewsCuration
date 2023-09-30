@@ -99,7 +99,6 @@ def summary():
     return {"response": response, "header": header, "article": article}
 
 
-
 @app.route('/ArticleBiasedScore', methods=['POST'])
 def score():
     data = request.get_json()
@@ -113,6 +112,14 @@ def keywords():
     data = request.get_json()
     url = data.get('url')
     return sm.getArticleItem(url, SM.BIAS_WORDS)
+
+  
+@app.route('/getPoliticalFigureNames', methods=['POST'])
+def politicalFigureNames():
+    data = request.get_json()
+    url = data.get('url')
+    result = sm.getArticleItem(url, SM.POLITICAL_FIGURES)
+    return {'poi': result}
 
 '''
 Returns:
@@ -182,7 +189,7 @@ def politicianRequestByID():
     id = data.get('id')
     return sm.getPoliticianItem(id, None)
 
-
+  
 if __name__ == '__main__':
     sm = SM.SessionManager(2)
     app.run()
