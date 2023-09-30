@@ -114,6 +114,12 @@ def keywords():
     url = data.get('url')
     return sm.getArticleItem(url, SM.BIAS_WORDS)
 
+@app.route('/getPoliticalFigureNames', methods=['POST'])
+def politicalFigureNames():
+    data = request.get_json()
+    url = data.get('url')
+    result = sm.getArticleItem(url, SM.POLITICAL_FIGURES)
+    return {'poi': result}
 
 if __name__ == '__main__':
     sm = SM.SessionManager(2)

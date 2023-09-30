@@ -12,7 +12,7 @@ TEXT = "text"
 SUMMARY = "summary"
 BIAS_RANGE = "biasRange"
 BIAS_WORDS = "biasWords"
-POLITICAL_fIGURES = "politicalFigures"
+POLITICAL_FIGURES = "politicalFigures"
 
 # def wait(t):
 # 	time.sleep(t)
@@ -100,7 +100,7 @@ class ArticleElement():
 # Child of Article, used to process the required functionalities to
 # retrieve/create the data each article contains in a thread-safe manner
 class ArticleElementJob(ArticleElement):
-	def __init__(self, url: str, webScraper: NewsScraper) -> None:
+	def __init__(self, url: str, webScraper: NewsScraper, tdcLock: Lock, tdc: transactionDataClient) -> None:
 		super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None)
 		self.summaryLock = Condition()
 		self.biasRangeLock = Condition()
@@ -117,7 +117,7 @@ class ArticleElementJob(ArticleElement):
 		biasRT.start()
 		biasWT = Thread(target=self.threadableJob, args=(biasSubtext, webScraper.getArticle(), "biasWords", "biasWordsLock"))
 		biasWT.start()
-		politicalFT = Thread(target=self.threadableJob, args=(nameExtractorFromDB, webScraper.getArticle(), "politicalFigures", "politicalFiguresLock"))
+		politicalFT = Thread(target=self.threadableJob, args=(politicianNameExtractorFromDB, [webScraper.getArticle(), tdcLock, tdc], "politicalFigures", "politicalFiguresLock"))
 		politicalFT.start()
 
 		self.threads = [summaryT, biasRT, biasWT, politicalFT]
@@ -185,17 +185,18 @@ class ArticleManager():
 		self.transactionClientLock.acquire()
 		result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
 		self.transactionClientLock.release()
-		print(f"DEBUG: {result}")
+		print(f"DEBUG: isArticleInDB - {result}")
 		if len(result) == 0:
 			return False
 		if len(result) != 1:
 			return None
 		
+		# process required jobs to suplement data recieved
 		articleDict = result[0]
 		self.cacheLock.acquire()
 		self.preventCacheOverflow()
 		# self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['Text'], articleDict['Summary'], (articleDict['LowerBias'], articleDict['upperBias']), articleDict['BiasedWords'], articleDict['PoliticalFigures'])
-		print(self)
+		# print(self)
 		self.cacheLock.release()
 		return True
 		
@@ -249,7 +250,7 @@ class ArticleManager():
 			return None
 		
 		self.jobsLock.acquire()
-		self.jobs[url] = ArticleElementJob(url, newsScraper)
+		self.jobs[url] = ArticleElementJob(url, newsScraper, self.transactionClientLock, self.transactionClient)
 		self.jobsLock.release()
 		
 		thread = Thread(target=self.moveJobToCache, args=(url,))
@@ -325,12 +326,14 @@ class SessionManager():
 
 		self.tdcLock = Lock()
 		self.tdc = transactionDataClient.transactionDataClient()
-		# self.tdc.closeConnection()
 
 		self.am = ArticleManager(limit, self.tdc, self.tdcLock)
 
 	def getArticleItem(self, url: str, itemName: str):
 		return self.am.getItem(url, itemName)
+	
+	def close(self):
+		self.tdc.closeConnection()
 	
 
 # sm = SessionManager(2)
