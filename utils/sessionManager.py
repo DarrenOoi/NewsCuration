@@ -370,7 +370,7 @@ class SessionManager():
 
 		self.tdcLock = Lock()
 		self.tdc = transactionDataClient()
-    self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
+    		self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
 
 	def getArticleItem(self, url: str, itemName: str):
 		return self.articleManager.getItem(url, itemName)
