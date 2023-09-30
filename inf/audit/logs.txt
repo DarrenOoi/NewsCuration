@@ -7520,3 +7520,28 @@ WHERE ID_Politician = 1]
     INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
     WHERE ID_Politician = 1 
     ]
+[2023-09-30 17:22:02.349998] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000177B6A44690>]
+[2023-09-30 17:22:02.365501] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000177B65E6810>]
+[2023-09-30 17:22:02.858147] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:22:03.714594] [Manav Trivedi] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-09-30 17:22:03.722561] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000177B6A44690>]
+[2023-09-30 17:22:03.726556] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000177B65E6810>]
+[2023-09-30 17:24:05.678815] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F21ABD4B10>]
+[2023-09-30 17:24:05.694335] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F21AAD6350>]
+[2023-09-30 17:24:06.187945] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]

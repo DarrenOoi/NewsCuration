@@ -338,7 +338,7 @@ class PoliticianManager():
 	tdc : transactionDataClient
 	ID: the ID of the politician
 	'''
-	def getPoliticianByID(self, tdc:transactionDataClient, ID:int) -> list(dict):
+	def getPoliticianByID(self, tdc:transactionDataClient, ID:int):
 		politicianInfo = tdc.query(POLITICIAN, f'ID = {ID}')
 		politicianInfo['articles'] = find_related_articles(tdc, ID)
 		return politicianInfo
