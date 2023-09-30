@@ -26,16 +26,17 @@ from inf import transactionDataClient
 def politicianIdExtractorFromDB(argv):
     text, tdcLock, tdc = argv
     text = text.lower().split()
-    names, ids = politicianExtractorFromDB(text, tdc, tdcLock)
-    unique_ids = [id[0] for  id in ids]
+    nameIds = politicianExtractorFromDB(text, tdc, tdcLock)
+    unique_ids = [id[0] for  id in nameIds.values()]
+    print(f"DEBUG: politicianIdExtractorFromDB - {unique_ids}")
     return unique_ids
 
 def politicianNameExtractorFromDB(argv):
     text, tdcLock, tdc = argv
     text = text.lower().split()
-    names, ids = politicianExtractorFromDB(text, tdc, tdcLock)
-    print(f"DEBUG: politicianNameExtractorFromDB - {names}")
-    return names
+    nameIds = politicianExtractorFromDB(text, tdc, tdcLock)
+    print(f"DEBUG: politicianNameExtractorFromDB - {list(nameIds.keys())}")
+    return list(nameIds.keys())
 
 def politicianExtractorFromDB(text, tdc, tdcLock):
     tdcLock.acquire()
@@ -57,13 +58,10 @@ def politicianExtractorFromDB(text, tdc, tdcLock):
             politicianNames[fName] = {lName:[id]}
 
     # name extraction from text
-    names = []
-    ids = []
+    nameIds = dict()
     for index in range(len(text) - 1):
         if politicianNames.get(text[index]):
             if politicianNames[text[index]].get(text[index + 1]):
-                names.append(text[index] + ' ' + text[index + 1])
-                ids.append(politicianNames[text[index]][text[index + 1]])
-    
-    names = list(set(names))
-    return names, ids
+                nameIds[text[index] + ' ' + text[index + 1]] = politicianNames[text[index]][text[index + 1]]
+
+    return nameIds

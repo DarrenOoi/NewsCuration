@@ -7479,3 +7479,1343 @@ WHERE ID_Politician = 1]
     INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
     WHERE ID_Politician = 1 
     ]
+[2023-09-30 13:27:49.537161] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E7D090C6D0>]
+[2023-09-30 13:27:49.540159] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E7D090D2D0>]
+[2023-09-30 13:27:50.183774] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 13:28:34.181749] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-09-30 13:28:35.561996] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-09-30 13:28:36.349694] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-09-30 13:28:37.292440] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-09-30 13:32:11.304165] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:12.572226] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:13.615111] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:22.379220] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:23.454595] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:24.497203] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:27.738090] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:28.760521] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:29.781912] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:40.400028] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:41.435943] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:32:42.449188] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:33:07.777792] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:33:08.805178] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:33:09.830741] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:33:42.295670] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021D6D85E170>]
+[2023-09-30 13:33:42.298656] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021D6D85DBA0>]
+[2023-09-30 13:33:42.927669] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 13:33:55.541078] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:33:56.745821] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:33:57.747093] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-09-30 13:34:25.738056] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-09-30 13:34:26.975584] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-09-30 13:34:27.903600] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-09-30 13:34:28.765795] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-09-30 13:35:11.361841] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-09-30 13:35:13.343131] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-09-30 13:35:14.304992] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-09-30 13:35:15.104150] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:25:06.172873] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F58496CDF0>]
+[2023-10-01 07:25:06.177874] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F58496C1F0>]
+[2023-10-01 07:25:06.812321] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 07:25:28.784472] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:25:30.347562] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:25:31.439127] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:25:32.356392] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:26:27.599693] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002DF0A40EF80>]
+[2023-10-01 07:26:27.602720] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002DF0A40DF30>]
+[2023-10-01 07:26:28.239186] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 07:26:37.824976] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:26:39.469196] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:26:40.275317] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:26:41.205366] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:33:57.295385] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000240BA60AB60>]
+[2023-10-01 07:33:57.298385] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000240BA6097B0>]
+[2023-10-01 07:33:57.933331] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 07:34:09.467522] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:34:57.644479] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000016D368A37F0>]
+[2023-10-01 07:34:57.647466] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000016D368A1810>]
+[2023-10-01 07:34:58.286358] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 07:35:05.045276] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:35:06.442341] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:35:07.309437] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:35:08.158927] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:35:09.090982] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 07:36:09.816665] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:36:10.844839] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:36:11.636938] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:36:12.487938] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:36:13.312603] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:48:30.879594] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001DC3740CE50>]
+[2023-10-01 07:48:30.882595] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001DC3740D750>]
+[2023-10-01 07:48:31.524776] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 07:48:38.960356] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:48:40.289696] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:48:41.192464] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:48:42.061249] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:48:42.883648] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:51:00.073988] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000187E4E5A050>]
+[2023-10-01 07:51:00.076988] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000187E4E59450>]
+[2023-10-01 07:51:00.714214] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 07:51:03.557983] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:51:04.543924] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:51:05.441553] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:51:06.266857] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:51:08.319565] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:51:09.236386] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:52:22.576087] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001FF47A0C2E0>]
+[2023-10-01 07:52:22.579089] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001FF47A0D300>]
+[2023-10-01 07:52:23.209997] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 07:52:40.588437] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:52:41.939973] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:52:42.836099] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 07:52:43.705770] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 07:52:44.548844] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 08:09:19.183033] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CD39019990>]
+[2023-10-01 08:09:19.186034] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CD3901B010>]
+[2023-10-01 08:09:19.817197] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:09:30.126207] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:09:31.599662] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:09:32.551068] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:09:33.369330] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:09:34.233566] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:11:22.429581] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000024E8A02F0D0>]
+[2023-10-01 08:11:22.432593] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000024E8A02DA80>]
+[2023-10-01 08:11:23.074518] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:11:27.435894] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:11:28.825295] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:11:29.615634] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:11:30.419264] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:11:31.241530] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:11:34.364207] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:11:34.709585] [Ron-Ash] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://en.wikipedia.org/wiki/John_Doe',
+    0.6153846153846154,
+    0.8846153846153846,
+    '.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'John Doe',
+    ' John Doe (masculine) and Jane Doe (feminine) are multiple-use placeholder names that are used in the United States and the United Kingdom when the true name of a person is unknown or is being intentionally concealed.[1][2][3] In the context of law enforcement in the United States, such names are often used to refer to a corpse whose identity is unknown or cannot be confirmed. These names are also often used to refer to a hypothetical "everyman" in other contexts, in a manner similar to John Q. Public or "Joe Public". There are many variants to the above names, including John (or Richard)/Jane Roe, John/Jane Smith, John/Jane Bloggs, and Johnie/Janie Doe or just Baby Doe for children. In other English-speaking countries, unique placeholder names, numbers or codenames have become more often used in the context of police investigations. This has included the United Kingdom, where usage of "John Doe" originated during the Middle Ages. However, the legal term John Doe injunction or John Doe order[4] has survived in English law and other legal systems influenced by it. Other names, such as "Joe Bloggs" or "John Smith", have sometimes been informally used as placeholders for an everyman in the UK, Australia, and New Zealand; however such names are seldom used in legal or police circles in the same sense as John Doe. Well-known legal cases named after placeholders include: Use of "John Doe" in the sense of an everyman, includes: Use of "John Doe" in the sense of an unidentified man (anonymous), includes: Use of "Jane Doe" in the sense of an unidentified corpse, includes: Use of "John Doe" in the sense of a placeholder, includes: Use of "Jane Doe" in the Hail The Sun album "Wake", includes: Use of "Jane Doe" in the musical theater performance "Ride The Cyclone", includes: Under the legal terminology of Ancient Rome, the names "Numerius Negidius" and "Aulus Agerius" were used in relation to hypothetical defendants and plaintiffs.[8] The names "John Doe" (or "John Do") and "Richard Roe" (along with "John Roe") were regularly invoked in English legal instruments to satisfy technical requirements governing standing and jurisdiction, beginning perhaps as early as the reign of England's King Edward III (1327–1377).[9] Though the rationale behind the choices of Doe and Roe is unknown, there are many suggested folk etymologies.[10] Other fictitious names for a person involved in litigation in medieval English law were "John Noakes" (or "Nokes") and "John-a-Stiles" (or "John Stiles").[11] The Oxford English Dictionary states that John Doe is "the name given to the fictitious lessee of the plaintiff, in the (now obsolete in the UK) mixed action of ejectment, the fictitious defendant being called Richard Roe".[10] This usage is mocked in the 1834 English song "John Doe and Richard Roe": Two giants live in Britain's land, John Doe and Richard Roe, Who always travel hand in hand, John Doe and Richard Roe. Their fee-faw-fum's an ancient plan To smell the purse of an Englishman, And, 'ecod, they'll suck it all they can, John Doe and Richard Roe ...[12] This particular use became obsolete in the UK in 1852: As is well known, the device of involving real people as notional lessees and ejectors was used to enable freeholders to sue the real ejectors. These were then replaced by the fictional characters John Doe and Richard Roe. Eventually the medieval remedies were (mostly) abolished by the Real Property Limitation Act of 1833; the fictional characters of John Doe and Richard Roe by the Common Law Procedure Act 1852; and the forms of action themselves by the Judicature Acts 1873–75." Secretary of State for Environment, Food, and Rural Affairs v Meier and others (2009).[13] In the UK, usage of "John Doe" survives mainly in the form of John Doe injunction or John Doe order (see above). 8.02 If an unknown person has possession of the confidential personal information and is threatening to disclose it, a 'John Doe' injunction may be sought against that person. The first time this form of injunction was used since 1852 in the United Kingdom was in 2005 when lawyers acting for JK Rowling and her publishers obtained an interim order against an unidentified person who had offered to sell chapters of a stolen copy of an unpublished Harry Potter novel to the media.[14] Unlike the United States, the name "John Doe" does not actually appear in the formal name of the case, for example: X & Y v Persons Unknown [2007] HRLR 4.[15] Well-known cases of unidentified decedents include "Caledonia Jane Doe" (1979) and "Princess Doe" (1982), both of whom have been identified. The baby victim in a 2001 murder case in Kansas City, Missouri, was referred to as Precious Doe.[16] In 2009, the New York Times reported the difficulties and unwanted attention experienced by a man actually named John Doe, who had often been suspected of using a pseudonym. He had been questioned repeatedly by airport security staff. Another man named John Doe was often suspected of being an incognito celebrity.[17] In cases where a large number of unidentified individuals are mentioned, numbers may be appended, such as "Doe #2" or "Doe II". Operation Delego (2009), which targeted an international child sexual abuse ring, cited 21 numbered "John Does", as well as other people known by the surnames "Doe", "Roe", and "Poe". "John Stiles", "Richard Miles" have been used for the third and fourth participants in an action. "Mary Major" has been used in some federal cases in the US.[18] "James Doe" and "Judy Doe" are among other common variants. Less often, other surnames ending in -oe have been used when more than two unknown or unidentified persons are named in U.S. court proceedings, e.g., Poe v. Snyder, 834 F.Supp.2d 721 (W. D. Mich. 2011),[19] whose full style is In Massachusetts, "Mary Moe" is used to refer to pregnant women under the age of 18 petitioning the Superior Court for a judicial bypass exception to the parental consent requirement for abortion.[22] "Mary Moe" is also used to refer to such cases generally, i.e. "Mary Moe cases". Sometimes "Mary Doe" may be used for the individuals. Parallels in other countries include: In 1997, New York City police discovered a decapitated body and were not able to find the killer. The body was named Peaches (murder victim) and also Jane Doe 3. The use and selection of pseudonyms is not standardized in U.S. courts. The practice was rare prior to 1969, and is sometimes objected to on legal grounds. Currently there are no court rules about pseudonym use. The rules of civil procedure ... are silent on the matter ... Rule of Civil Procedure 10(a) reads, '... In the complaint, the title of the action shall include the names of all the parties ...' The rule contains no guidance as to what parties should do to keep their names confidential.[28] Prior to ... 1969, only one Supreme Court case, three court of appeals' decisions, and one district court decision in the previous quarter-century featured an anonymous individual as the sole or lead plaintiff. Between 1969 and 22 January 1973, the date when the Supreme Court decided Roe and Doe, there were twenty-one district court and two court of appeals decisions featuring anonymous plaintiffs.[29]',
+    '- John Doe and Jane Doe are commonly used placeholder names in the United States and the United Kingdom when the true name of a person is unknown or concealed.
+- These names are often used in law enforcement to refer to unidentified bodies or as a hypothetical "everyman."
+- Variants of these names include John/Jane Roe, John/Jane Smith, and Johnie/Janie Doe.
+- In other English-speaking countries, different placeholder names or codenames are used in police investigations.
+- The names John Doe and Richard Roe were regularly used in English legal instruments to satisfy technical requirements governing standing and jurisdiction.
+- Other fictitious names used in medieval English law were John Noakes, John-a-Stiles, and Richard Miles.
+- The usage of John Doe became obsolete in the UK in 1852.
+- In the UK, the term John Doe survives mainly in the form of John Doe injunction or John Doe order.
+- John Doe injunctions may be sought against unknown persons when confidential personal information is threatened to be disclosed.
+- Well-known cases of unidentified decedents include "Caledonia Jane Doe" and "Princess Doe."
+- In some cases, numbers may be appended to the name Doe to differentiate between multiple unidentified individuals.
+- Pseudonyms are not standardized in U.S. courts, and there are no court rules specifically addressing their use.
+- The practice of using pseudonyms was rare prior to 1969, and there are legal objections to their use.
+- There have been cases where anonymous individuals have been the sole or lead plaintiffs in court decisions.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's King Edward III (1327–1377).[9] Though the rationale behind the choices of D' at line 11")]
+[2023-10-01 08:11:35.031498] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://en.wikipedia.org/wiki/John_Doe',
+    0.6153846153846154,
+    0.8846153846153846,
+    '.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'John Doe',
+    ' John Doe (masculine) and Jane Doe (feminine) are multiple-use placeholder names that are used in the United States and the United Kingdom when the true name of a person is unknown or is being intentionally concealed.[1][2][3] In the context of law enforcement in the United States, such names are often used to refer to a corpse whose identity is unknown or cannot be confirmed. These names are also often used to refer to a hypothetical "everyman" in other contexts, in a manner similar to John Q. Public or "Joe Public". There are many variants to the above names, including John (or Richard)/Jane Roe, John/Jane Smith, John/Jane Bloggs, and Johnie/Janie Doe or just Baby Doe for children. In other English-speaking countries, unique placeholder names, numbers or codenames have become more often used in the context of police investigations. This has included the United Kingdom, where usage of "John Doe" originated during the Middle Ages. However, the legal term John Doe injunction or John Doe order[4] has survived in English law and other legal systems influenced by it. Other names, such as "Joe Bloggs" or "John Smith", have sometimes been informally used as placeholders for an everyman in the UK, Australia, and New Zealand; however such names are seldom used in legal or police circles in the same sense as John Doe. Well-known legal cases named after placeholders include: Use of "John Doe" in the sense of an everyman, includes: Use of "John Doe" in the sense of an unidentified man (anonymous), includes: Use of "Jane Doe" in the sense of an unidentified corpse, includes: Use of "John Doe" in the sense of a placeholder, includes: Use of "Jane Doe" in the Hail The Sun album "Wake", includes: Use of "Jane Doe" in the musical theater performance "Ride The Cyclone", includes: Under the legal terminology of Ancient Rome, the names "Numerius Negidius" and "Aulus Agerius" were used in relation to hypothetical defendants and plaintiffs.[8] The names "John Doe" (or "John Do") and "Richard Roe" (along with "John Roe") were regularly invoked in English legal instruments to satisfy technical requirements governing standing and jurisdiction, beginning perhaps as early as the reign of England's King Edward III (1327–1377).[9] Though the rationale behind the choices of Doe and Roe is unknown, there are many suggested folk etymologies.[10] Other fictitious names for a person involved in litigation in medieval English law were "John Noakes" (or "Nokes") and "John-a-Stiles" (or "John Stiles").[11] The Oxford English Dictionary states that John Doe is "the name given to the fictitious lessee of the plaintiff, in the (now obsolete in the UK) mixed action of ejectment, the fictitious defendant being called Richard Roe".[10] This usage is mocked in the 1834 English song "John Doe and Richard Roe": Two giants live in Britain's land, John Doe and Richard Roe, Who always travel hand in hand, John Doe and Richard Roe. Their fee-faw-fum's an ancient plan To smell the purse of an Englishman, And, 'ecod, they'll suck it all they can, John Doe and Richard Roe ...[12] This particular use became obsolete in the UK in 1852: As is well known, the device of involving real people as notional lessees and ejectors was used to enable freeholders to sue the real ejectors. These were then replaced by the fictional characters John Doe and Richard Roe. Eventually the medieval remedies were (mostly) abolished by the Real Property Limitation Act of 1833; the fictional characters of John Doe and Richard Roe by the Common Law Procedure Act 1852; and the forms of action themselves by the Judicature Acts 1873–75." Secretary of State for Environment, Food, and Rural Affairs v Meier and others (2009).[13] In the UK, usage of "John Doe" survives mainly in the form of John Doe injunction or John Doe order (see above). 8.02 If an unknown person has possession of the confidential personal information and is threatening to disclose it, a 'John Doe' injunction may be sought against that person. The first time this form of injunction was used since 1852 in the United Kingdom was in 2005 when lawyers acting for JK Rowling and her publishers obtained an interim order against an unidentified person who had offered to sell chapters of a stolen copy of an unpublished Harry Potter novel to the media.[14] Unlike the United States, the name "John Doe" does not actually appear in the formal name of the case, for example: X & Y v Persons Unknown [2007] HRLR 4.[15] Well-known cases of unidentified decedents include "Caledonia Jane Doe" (1979) and "Princess Doe" (1982), both of whom have been identified. The baby victim in a 2001 murder case in Kansas City, Missouri, was referred to as Precious Doe.[16] In 2009, the New York Times reported the difficulties and unwanted attention experienced by a man actually named John Doe, who had often been suspected of using a pseudonym. He had been questioned repeatedly by airport security staff. Another man named John Doe was often suspected of being an incognito celebrity.[17] In cases where a large number of unidentified individuals are mentioned, numbers may be appended, such as "Doe #2" or "Doe II". Operation Delego (2009), which targeted an international child sexual abuse ring, cited 21 numbered "John Does", as well as other people known by the surnames "Doe", "Roe", and "Poe". "John Stiles", "Richard Miles" have been used for the third and fourth participants in an action. "Mary Major" has been used in some federal cases in the US.[18] "James Doe" and "Judy Doe" are among other common variants. Less often, other surnames ending in -oe have been used when more than two unknown or unidentified persons are named in U.S. court proceedings, e.g., Poe v. Snyder, 834 F.Supp.2d 721 (W. D. Mich. 2011),[19] whose full style is In Massachusetts, "Mary Moe" is used to refer to pregnant women under the age of 18 petitioning the Superior Court for a judicial bypass exception to the parental consent requirement for abortion.[22] "Mary Moe" is also used to refer to such cases generally, i.e. "Mary Moe cases". Sometimes "Mary Doe" may be used for the individuals. Parallels in other countries include: In 1997, New York City police discovered a decapitated body and were not able to find the killer. The body was named Peaches (murder victim) and also Jane Doe 3. The use and selection of pseudonyms is not standardized in U.S. courts. The practice was rare prior to 1969, and is sometimes objected to on legal grounds. Currently there are no court rules about pseudonym use. The rules of civil procedure ... are silent on the matter ... Rule of Civil Procedure 10(a) reads, '... In the complaint, the title of the action shall include the names of all the parties ...' The rule contains no guidance as to what parties should do to keep their names confidential.[28] Prior to ... 1969, only one Supreme Court case, three court of appeals' decisions, and one district court decision in the previous quarter-century featured an anonymous individual as the sole or lead plaintiff. Between 1969 and 22 January 1973, the date when the Supreme Court decided Roe and Doe, there were twenty-one district court and two court of appeals decisions featuring anonymous plaintiffs.[29]',
+    '- John Doe and Jane Doe are commonly used placeholder names in the United States and the United Kingdom when the true name of a person is unknown or concealed.
+- These names are often used in law enforcement to refer to unidentified bodies or as a hypothetical "everyman."
+- Variants of these names include John/Jane Roe, John/Jane Smith, and Johnie/Janie Doe.
+- In other English-speaking countries, different placeholder names or codenames are used in police investigations.
+- The names John Doe and Richard Roe were regularly used in English legal instruments to satisfy technical requirements governing standing and jurisdiction.
+- Other fictitious names used in medieval English law were John Noakes, John-a-Stiles, and Richard Miles.
+- The usage of John Doe became obsolete in the UK in 1852.
+- In the UK, the term John Doe survives mainly in the form of John Doe injunction or John Doe order.
+- John Doe injunctions may be sought against unknown persons when confidential personal information is threatened to be disclosed.
+- Well-known cases of unidentified decedents include "Caledonia Jane Doe" and "Princess Doe."
+- In some cases, numbers may be appended to the name Doe to differentiate between multiple unidentified individuals.
+- Pseudonyms are not standardized in U.S. courts, and there are no court rules specifically addressing their use.
+- The practice of using pseudonyms was rare prior to 1969, and there are legal objections to their use.
+- There have been cases where anonymous individuals have been the sole or lead plaintiffs in court decisions.'
+    );
+    ]
+[2023-10-01 08:11:35.671603] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 08:11:36.311543] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:13:17.814280] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D9A6A89780>]
+[2023-10-01 08:13:17.820275] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D9A6A8ABC0>]
+[2023-10-01 08:13:18.455294] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:13:26.548046] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:13:27.934972] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:13:28.928585] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:13:29.748916] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:13:30.524177] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:13:36.000035] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:13:36.346518] [Ron-Ash] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://en.wikipedia.org/wiki/John_Doe',
+    0.6153846153846154,
+    0.8846153846153846,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'John Doe',
+    ' John Doe (masculine) and Jane Doe (feminine) are multiple-use placeholder names that are used in the United States and the United Kingdom when the true name of a person is unknown or is being intentionally concealed.[1][2][3] In the context of law enforcement in the United States, such names are often used to refer to a corpse whose identity is unknown or cannot be confirmed. These names are also often used to refer to a hypothetical "everyman" in other contexts, in a manner similar to John Q. Public or "Joe Public". There are many variants to the above names, including John (or Richard)/Jane Roe, John/Jane Smith, John/Jane Bloggs, and Johnie/Janie Doe or just Baby Doe for children. In other English-speaking countries, unique placeholder names, numbers or codenames have become more often used in the context of police investigations. This has included the United Kingdom, where usage of "John Doe" originated during the Middle Ages. However, the legal term John Doe injunction or John Doe order[4] has survived in English law and other legal systems influenced by it. Other names, such as "Joe Bloggs" or "John Smith", have sometimes been informally used as placeholders for an everyman in the UK, Australia, and New Zealand; however such names are seldom used in legal or police circles in the same sense as John Doe. Well-known legal cases named after placeholders include: Use of "John Doe" in the sense of an everyman, includes: Use of "John Doe" in the sense of an unidentified man (anonymous), includes: Use of "Jane Doe" in the sense of an unidentified corpse, includes: Use of "John Doe" in the sense of a placeholder, includes: Use of "Jane Doe" in the Hail The Sun album "Wake", includes: Use of "Jane Doe" in the musical theater performance "Ride The Cyclone", includes: Under the legal terminology of Ancient Rome, the names "Numerius Negidius" and "Aulus Agerius" were used in relation to hypothetical defendants and plaintiffs.[8] The names "John Doe" (or "John Do") and "Richard Roe" (along with "John Roe") were regularly invoked in English legal instruments to satisfy technical requirements governing standing and jurisdiction, beginning perhaps as early as the reign of England's King Edward III (1327–1377).[9] Though the rationale behind the choices of Doe and Roe is unknown, there are many suggested folk etymologies.[10] Other fictitious names for a person involved in litigation in medieval English law were "John Noakes" (or "Nokes") and "John-a-Stiles" (or "John Stiles").[11] The Oxford English Dictionary states that John Doe is "the name given to the fictitious lessee of the plaintiff, in the (now obsolete in the UK) mixed action of ejectment, the fictitious defendant being called Richard Roe".[10] This usage is mocked in the 1834 English song "John Doe and Richard Roe": Two giants live in Britain's land, John Doe and Richard Roe, Who always travel hand in hand, John Doe and Richard Roe. Their fee-faw-fum's an ancient plan To smell the purse of an Englishman, And, 'ecod, they'll suck it all they can, John Doe and Richard Roe ...[12] This particular use became obsolete in the UK in 1852: As is well known, the device of involving real people as notional lessees and ejectors was used to enable freeholders to sue the real ejectors. These were then replaced by the fictional characters John Doe and Richard Roe. Eventually the medieval remedies were (mostly) abolished by the Real Property Limitation Act of 1833; the fictional characters of John Doe and Richard Roe by the Common Law Procedure Act 1852; and the forms of action themselves by the Judicature Acts 1873–75." Secretary of State for Environment, Food, and Rural Affairs v Meier and others (2009).[13] In the UK, usage of "John Doe" survives mainly in the form of John Doe injunction or John Doe order (see above). 8.02 If an unknown person has possession of the confidential personal information and is threatening to disclose it, a 'John Doe' injunction may be sought against that person. The first time this form of injunction was used since 1852 in the United Kingdom was in 2005 when lawyers acting for JK Rowling and her publishers obtained an interim order against an unidentified person who had offered to sell chapters of a stolen copy of an unpublished Harry Potter novel to the media.[14] Unlike the United States, the name "John Doe" does not actually appear in the formal name of the case, for example: X & Y v Persons Unknown [2007] HRLR 4.[15] Well-known cases of unidentified decedents include "Caledonia Jane Doe" (1979) and "Princess Doe" (1982), both of whom have been identified. The baby victim in a 2001 murder case in Kansas City, Missouri, was referred to as Precious Doe.[16] In 2009, the New York Times reported the difficulties and unwanted attention experienced by a man actually named John Doe, who had often been suspected of using a pseudonym. He had been questioned repeatedly by airport security staff. Another man named John Doe was often suspected of being an incognito celebrity.[17] In cases where a large number of unidentified individuals are mentioned, numbers may be appended, such as "Doe #2" or "Doe II". Operation Delego (2009), which targeted an international child sexual abuse ring, cited 21 numbered "John Does", as well as other people known by the surnames "Doe", "Roe", and "Poe". "John Stiles", "Richard Miles" have been used for the third and fourth participants in an action. "Mary Major" has been used in some federal cases in the US.[18] "James Doe" and "Judy Doe" are among other common variants. Less often, other surnames ending in -oe have been used when more than two unknown or unidentified persons are named in U.S. court proceedings, e.g., Poe v. Snyder, 834 F.Supp.2d 721 (W. D. Mich. 2011),[19] whose full style is In Massachusetts, "Mary Moe" is used to refer to pregnant women under the age of 18 petitioning the Superior Court for a judicial bypass exception to the parental consent requirement for abortion.[22] "Mary Moe" is also used to refer to such cases generally, i.e. "Mary Moe cases". Sometimes "Mary Doe" may be used for the individuals. Parallels in other countries include: In 1997, New York City police discovered a decapitated body and were not able to find the killer. The body was named Peaches (murder victim) and also Jane Doe 3. The use and selection of pseudonyms is not standardized in U.S. courts. The practice was rare prior to 1969, and is sometimes objected to on legal grounds. Currently there are no court rules about pseudonym use. The rules of civil procedure ... are silent on the matter ... Rule of Civil Procedure 10(a) reads, '... In the complaint, the title of the action shall include the names of all the parties ...' The rule contains no guidance as to what parties should do to keep their names confidential.[28] Prior to ... 1969, only one Supreme Court case, three court of appeals' decisions, and one district court decision in the previous quarter-century featured an anonymous individual as the sole or lead plaintiff. Between 1969 and 22 January 1973, the date when the Supreme Court decided Roe and Doe, there were twenty-one district court and two court of appeals decisions featuring anonymous plaintiffs.[29]',
+    '- John Doe and Jane Doe are placeholder names used in the US and UK when the true identity of a person is unknown or intentionally concealed.
+- In law enforcement, these names are often used to refer to an unidentified corpse or a hypothetical "everyman" in other contexts.
+- There are various variants of these names, including John/Jane Roe, John/Jane Smith, and Johnie/Janie Doe.
+- In other English-speaking countries, unique placeholder names or codenames are more commonly used in police investigations.
+- The legal term "John Doe injunction" or "John Doe order" has survived in English law and other legal systems.
+- Other placeholder names, such as "Joe Bloggs" or "John Smith," have been informally used in the UK, Australia, and New Zealand but are not commonly used in legal or police circles.
+- The names "Numerius Negidius" and "Aulus Agerius" were used in Ancient Rome in relation to hypothetical defendants and plaintiffs.
+- The names "John Doe" and "Richard Roe" were regularly invoked in English legal instruments to satisfy technical requirements governing standing and jurisdiction.
+- The rationale behind the choices of Doe and Roe is unknown.
+- Other fictitious names used in medieval English law were "John Noakes" or "John-a-Stiles."
+- The usage of John Doe as a fictitious lessee and Richard Roe as a fictitious defendant became obsolete in the UK in 1852.
+- In the UK, "John Doe injunction" or "John Doe order" is still used.
+- Unidentified decedents have been referred to as "Caledonia Jane Doe" and "Princess Doe."
+- There have been cases where individuals named John Doe have faced difficulties due to suspicion of using a pseudonym.
+- In cases involving a large number of unidentified individuals, numbers may be appended to the names.
+- The use of pseudonyms is not standardized in US courts, and there are no specific rules about their use.
+- Prior to 1969, the use of anonymous individuals as plaintiffs in court cases was rare, but it became more common after the Supreme Court decision in Roe and Doe.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's King Edward III (1327–1377).[9] Though the rationale behind the choices of D' at line 11")]
+[2023-10-01 08:13:36.666718] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://en.wikipedia.org/wiki/John_Doe',
+    0.6153846153846154,
+    0.8846153846153846,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'John Doe',
+    ' John Doe (masculine) and Jane Doe (feminine) are multiple-use placeholder names that are used in the United States and the United Kingdom when the true name of a person is unknown or is being intentionally concealed.[1][2][3] In the context of law enforcement in the United States, such names are often used to refer to a corpse whose identity is unknown or cannot be confirmed. These names are also often used to refer to a hypothetical "everyman" in other contexts, in a manner similar to John Q. Public or "Joe Public". There are many variants to the above names, including John (or Richard)/Jane Roe, John/Jane Smith, John/Jane Bloggs, and Johnie/Janie Doe or just Baby Doe for children. In other English-speaking countries, unique placeholder names, numbers or codenames have become more often used in the context of police investigations. This has included the United Kingdom, where usage of "John Doe" originated during the Middle Ages. However, the legal term John Doe injunction or John Doe order[4] has survived in English law and other legal systems influenced by it. Other names, such as "Joe Bloggs" or "John Smith", have sometimes been informally used as placeholders for an everyman in the UK, Australia, and New Zealand; however such names are seldom used in legal or police circles in the same sense as John Doe. Well-known legal cases named after placeholders include: Use of "John Doe" in the sense of an everyman, includes: Use of "John Doe" in the sense of an unidentified man (anonymous), includes: Use of "Jane Doe" in the sense of an unidentified corpse, includes: Use of "John Doe" in the sense of a placeholder, includes: Use of "Jane Doe" in the Hail The Sun album "Wake", includes: Use of "Jane Doe" in the musical theater performance "Ride The Cyclone", includes: Under the legal terminology of Ancient Rome, the names "Numerius Negidius" and "Aulus Agerius" were used in relation to hypothetical defendants and plaintiffs.[8] The names "John Doe" (or "John Do") and "Richard Roe" (along with "John Roe") were regularly invoked in English legal instruments to satisfy technical requirements governing standing and jurisdiction, beginning perhaps as early as the reign of England's King Edward III (1327–1377).[9] Though the rationale behind the choices of Doe and Roe is unknown, there are many suggested folk etymologies.[10] Other fictitious names for a person involved in litigation in medieval English law were "John Noakes" (or "Nokes") and "John-a-Stiles" (or "John Stiles").[11] The Oxford English Dictionary states that John Doe is "the name given to the fictitious lessee of the plaintiff, in the (now obsolete in the UK) mixed action of ejectment, the fictitious defendant being called Richard Roe".[10] This usage is mocked in the 1834 English song "John Doe and Richard Roe": Two giants live in Britain's land, John Doe and Richard Roe, Who always travel hand in hand, John Doe and Richard Roe. Their fee-faw-fum's an ancient plan To smell the purse of an Englishman, And, 'ecod, they'll suck it all they can, John Doe and Richard Roe ...[12] This particular use became obsolete in the UK in 1852: As is well known, the device of involving real people as notional lessees and ejectors was used to enable freeholders to sue the real ejectors. These were then replaced by the fictional characters John Doe and Richard Roe. Eventually the medieval remedies were (mostly) abolished by the Real Property Limitation Act of 1833; the fictional characters of John Doe and Richard Roe by the Common Law Procedure Act 1852; and the forms of action themselves by the Judicature Acts 1873–75." Secretary of State for Environment, Food, and Rural Affairs v Meier and others (2009).[13] In the UK, usage of "John Doe" survives mainly in the form of John Doe injunction or John Doe order (see above). 8.02 If an unknown person has possession of the confidential personal information and is threatening to disclose it, a 'John Doe' injunction may be sought against that person. The first time this form of injunction was used since 1852 in the United Kingdom was in 2005 when lawyers acting for JK Rowling and her publishers obtained an interim order against an unidentified person who had offered to sell chapters of a stolen copy of an unpublished Harry Potter novel to the media.[14] Unlike the United States, the name "John Doe" does not actually appear in the formal name of the case, for example: X & Y v Persons Unknown [2007] HRLR 4.[15] Well-known cases of unidentified decedents include "Caledonia Jane Doe" (1979) and "Princess Doe" (1982), both of whom have been identified. The baby victim in a 2001 murder case in Kansas City, Missouri, was referred to as Precious Doe.[16] In 2009, the New York Times reported the difficulties and unwanted attention experienced by a man actually named John Doe, who had often been suspected of using a pseudonym. He had been questioned repeatedly by airport security staff. Another man named John Doe was often suspected of being an incognito celebrity.[17] In cases where a large number of unidentified individuals are mentioned, numbers may be appended, such as "Doe #2" or "Doe II". Operation Delego (2009), which targeted an international child sexual abuse ring, cited 21 numbered "John Does", as well as other people known by the surnames "Doe", "Roe", and "Poe". "John Stiles", "Richard Miles" have been used for the third and fourth participants in an action. "Mary Major" has been used in some federal cases in the US.[18] "James Doe" and "Judy Doe" are among other common variants. Less often, other surnames ending in -oe have been used when more than two unknown or unidentified persons are named in U.S. court proceedings, e.g., Poe v. Snyder, 834 F.Supp.2d 721 (W. D. Mich. 2011),[19] whose full style is In Massachusetts, "Mary Moe" is used to refer to pregnant women under the age of 18 petitioning the Superior Court for a judicial bypass exception to the parental consent requirement for abortion.[22] "Mary Moe" is also used to refer to such cases generally, i.e. "Mary Moe cases". Sometimes "Mary Doe" may be used for the individuals. Parallels in other countries include: In 1997, New York City police discovered a decapitated body and were not able to find the killer. The body was named Peaches (murder victim) and also Jane Doe 3. The use and selection of pseudonyms is not standardized in U.S. courts. The practice was rare prior to 1969, and is sometimes objected to on legal grounds. Currently there are no court rules about pseudonym use. The rules of civil procedure ... are silent on the matter ... Rule of Civil Procedure 10(a) reads, '... In the complaint, the title of the action shall include the names of all the parties ...' The rule contains no guidance as to what parties should do to keep their names confidential.[28] Prior to ... 1969, only one Supreme Court case, three court of appeals' decisions, and one district court decision in the previous quarter-century featured an anonymous individual as the sole or lead plaintiff. Between 1969 and 22 January 1973, the date when the Supreme Court decided Roe and Doe, there were twenty-one district court and two court of appeals decisions featuring anonymous plaintiffs.[29]',
+    '- John Doe and Jane Doe are placeholder names used in the US and UK when the true identity of a person is unknown or intentionally concealed.
+- In law enforcement, these names are often used to refer to an unidentified corpse or a hypothetical "everyman" in other contexts.
+- There are various variants of these names, including John/Jane Roe, John/Jane Smith, and Johnie/Janie Doe.
+- In other English-speaking countries, unique placeholder names or codenames are more commonly used in police investigations.
+- The legal term "John Doe injunction" or "John Doe order" has survived in English law and other legal systems.
+- Other placeholder names, such as "Joe Bloggs" or "John Smith," have been informally used in the UK, Australia, and New Zealand but are not commonly used in legal or police circles.
+- The names "Numerius Negidius" and "Aulus Agerius" were used in Ancient Rome in relation to hypothetical defendants and plaintiffs.
+- The names "John Doe" and "Richard Roe" were regularly invoked in English legal instruments to satisfy technical requirements governing standing and jurisdiction.
+- The rationale behind the choices of Doe and Roe is unknown.
+- Other fictitious names used in medieval English law were "John Noakes" or "John-a-Stiles."
+- The usage of John Doe as a fictitious lessee and Richard Roe as a fictitious defendant became obsolete in the UK in 1852.
+- In the UK, "John Doe injunction" or "John Doe order" is still used.
+- Unidentified decedents have been referred to as "Caledonia Jane Doe" and "Princess Doe."
+- There have been cases where individuals named John Doe have faced difficulties due to suspicion of using a pseudonym.
+- In cases involving a large number of unidentified individuals, numbers may be appended to the names.
+- The use of pseudonyms is not standardized in US courts, and there are no specific rules about their use.
+- Prior to 1969, the use of anonymous individuals as plaintiffs in court cases was rare, but it became more common after the Supreme Court decision in Roe and Doe.'
+    );
+    ]
+[2023-10-01 08:13:37.297950] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 08:13:37.925545] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:18:05.521397] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020628B49540>]
+[2023-10-01 08:18:05.524393] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020628B498A0>]
+[2023-10-01 08:18:06.151967] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:18:12.613962] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:18:14.006247] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:18:15.048972] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:18:16.008825] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:18:16.938977] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:18:22.909061] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:18:23.565097] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://en.wikipedia.org/wiki/John_Doe',
+    0.6153846153846154,
+    0.8846153846153846,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'John Doe',
+    ' John Doe (masculine) and Jane Doe (feminine) are multiple-use placeholder names that are used in the United States and the United Kingdom when the true name of a person is unknown or is being intentionally concealed.[1][2][3] In the context of law enforcement in the United States, such names are often used to refer to a corpse whose identity is unknown or cannot be confirmed. These names are also often used to refer to a hypothetical "everyman" in other contexts, in a manner similar to John Q. Public or "Joe Public". There are many variants to the above names, including John (or Richard)/Jane Roe, John/Jane Smith, John/Jane Bloggs, and Johnie/Janie Doe or just Baby Doe for children. In other English-speaking countries, unique placeholder names, numbers or codenames have become more often used in the context of police investigations. This has included the United Kingdom, where usage of "John Doe" originated during the Middle Ages. However, the legal term John Doe injunction or John Doe order[4] has survived in English law and other legal systems influenced by it. Other names, such as "Joe Bloggs" or "John Smith", have sometimes been informally used as placeholders for an everyman in the UK, Australia, and New Zealand; however such names are seldom used in legal or police circles in the same sense as John Doe. Well-known legal cases named after placeholders include: Use of "John Doe" in the sense of an everyman, includes: Use of "John Doe" in the sense of an unidentified man (anonymous), includes: Use of "Jane Doe" in the sense of an unidentified corpse, includes: Use of "John Doe" in the sense of a placeholder, includes: Use of "Jane Doe" in the Hail The Sun album "Wake", includes: Use of "Jane Doe" in the musical theater performance "Ride The Cyclone", includes: Under the legal terminology of Ancient Rome, the names "Numerius Negidius" and "Aulus Agerius" were used in relation to hypothetical defendants and plaintiffs.[8] The names "John Doe" (or "John Do") and "Richard Roe" (along with "John Roe") were regularly invoked in English legal instruments to satisfy technical requirements governing standing and jurisdiction, beginning perhaps as early as the reign of Englands King Edward III (1327–1377).[9] Though the rationale behind the choices of Doe and Roe is unknown, there are many suggested folk etymologies.[10] Other fictitious names for a person involved in litigation in medieval English law were "John Noakes" (or "Nokes") and "John-a-Stiles" (or "John Stiles").[11] The Oxford English Dictionary states that John Doe is "the name given to the fictitious lessee of the plaintiff, in the (now obsolete in the UK) mixed action of ejectment, the fictitious defendant being called Richard Roe".[10] This usage is mocked in the 1834 English song "John Doe and Richard Roe": Two giants live in Britains land, John Doe and Richard Roe, Who always travel hand in hand, John Doe and Richard Roe. Their fee-faw-fums an ancient plan To smell the purse of an Englishman, And, ecod, theyll suck it all they can, John Doe and Richard Roe ...[12] This particular use became obsolete in the UK in 1852: As is well known, the device of involving real people as notional lessees and ejectors was used to enable freeholders to sue the real ejectors. These were then replaced by the fictional characters John Doe and Richard Roe. Eventually the medieval remedies were (mostly) abolished by the Real Property Limitation Act of 1833; the fictional characters of John Doe and Richard Roe by the Common Law Procedure Act 1852; and the forms of action themselves by the Judicature Acts 1873–75." Secretary of State for Environment, Food, and Rural Affairs v Meier and others (2009).[13] In the UK, usage of "John Doe" survives mainly in the form of John Doe injunction or John Doe order (see above). 8.02 If an unknown person has possession of the confidential personal information and is threatening to disclose it, a John Doe injunction may be sought against that person. The first time this form of injunction was used since 1852 in the United Kingdom was in 2005 when lawyers acting for JK Rowling and her publishers obtained an interim order against an unidentified person who had offered to sell chapters of a stolen copy of an unpublished Harry Potter novel to the media.[14] Unlike the United States, the name "John Doe" does not actually appear in the formal name of the case, for example: X & Y v Persons Unknown [2007] HRLR 4.[15] Well-known cases of unidentified decedents include "Caledonia Jane Doe" (1979) and "Princess Doe" (1982), both of whom have been identified. The baby victim in a 2001 murder case in Kansas City, Missouri, was referred to as Precious Doe.[16] In 2009, the New York Times reported the difficulties and unwanted attention experienced by a man actually named John Doe, who had often been suspected of using a pseudonym. He had been questioned repeatedly by airport security staff. Another man named John Doe was often suspected of being an incognito celebrity.[17] In cases where a large number of unidentified individuals are mentioned, numbers may be appended, such as "Doe #2" or "Doe II". Operation Delego (2009), which targeted an international child sexual abuse ring, cited 21 numbered "John Does", as well as other people known by the surnames "Doe", "Roe", and "Poe". "John Stiles", "Richard Miles" have been used for the third and fourth participants in an action. "Mary Major" has been used in some federal cases in the US.[18] "James Doe" and "Judy Doe" are among other common variants. Less often, other surnames ending in -oe have been used when more than two unknown or unidentified persons are named in U.S. court proceedings, e.g., Poe v. Snyder, 834 F.Supp.2d 721 (W. D. Mich. 2011),[19] whose full style is In Massachusetts, "Mary Moe" is used to refer to pregnant women under the age of 18 petitioning the Superior Court for a judicial bypass exception to the parental consent requirement for abortion.[22] "Mary Moe" is also used to refer to such cases generally, i.e. "Mary Moe cases". Sometimes "Mary Doe" may be used for the individuals. Parallels in other countries include: In 1997, New York City police discovered a decapitated body and were not able to find the killer. The body was named Peaches (murder victim) and also Jane Doe 3. The use and selection of pseudonyms is not standardized in U.S. courts. The practice was rare prior to 1969, and is sometimes objected to on legal grounds. Currently there are no court rules about pseudonym use. The rules of civil procedure ... are silent on the matter ... Rule of Civil Procedure 10(a) reads, ... In the complaint, the title of the action shall include the names of all the parties ... The rule contains no guidance as to what parties should do to keep their names confidential.[28] Prior to ... 1969, only one Supreme Court case, three court of appeals decisions, and one district court decision in the previous quarter-century featured an anonymous individual as the sole or lead plaintiff. Between 1969 and 22 January 1973, the date when the Supreme Court decided Roe and Doe, there were twenty-one district court and two court of appeals decisions featuring anonymous plaintiffs.[29]',
+    '- John Doe and Jane Doe are placeholder names used in the US and UK when the true name of a person is unknown or being concealed.
+- In the context of law enforcement, these names are often used to refer to an unidentified or unconfirmed corpse.
+- They are also used as hypothetical "everyman" names in various contexts, similar to John Q. Public or Joe Public.
+- John Doe and Jane Doe are variants of these placeholder names, as well as other variations such as John/Jane Roe, John/Jane Smith, and Johnie/Janie Doe or Baby Doe for children.
+- Placeholder names, numbers, or codenames are more commonly used in other English-speaking countries for police investigations.
+- In the UK, the legal term "John Doe injunction" or "John Doe order" has survived, but the use of John Doe as a placeholder has become obsolete since 1852.
+- Other names like "Joe Bloggs" or "John Smith" have been informally used as placeholders in the UK, Australia, and New Zealand, but not in legal or police circles.
+- The names "Numerius Negidius" and "Aulus Agerius" were used in ancient Rome in relation to hypothetical defendants and plaintiffs.
+- The names John Doe and Richard Roe were regularly used in English legal instruments to satisfy technical requirements governing standing and jurisdiction, possibly starting in the reign of King Edward III.
+- The names John Noakes, John-a-Stiles, Nokes, and Stiles were also used as fictitious names in medieval English law.
+- John Doe was the fictitious lessee of the plaintiff and Richard Roe was the fictitious defendant in the mixed action of ejectment.
+- The usage of John Doe and Richard Roe in legal instruments became obsolete in the UK in 1852 and was replaced by the Real Property Limitation Act of 1833 and the Common Law Procedure Act of 1852.
+- The names John Doe and Richard Roe were used mockingly in an English song from 1834.
+- In the UK, John Doe survives mainly in the form of John Doe injunction or John Doe order.
+- Unidentified decedents have been referred to as Caledonia Jane Doe, Princess Doe, and Precious Doe.
+- Some individuals named John Doe have faced difficulties and unwanted attention due to sharing the same name with a placeholder.
+- In cases where a large number of unidentified individuals are involved, numbers may be appended to their names.
+- Different surnames ending in -oe have been used in U.S. court proceedings, such as Doe, Roe, Poe, Stiles, and Miles.
+- Mary Moe is used in Massachusetts to refer to pregnant women under 18 petitioning the Superior Court for a judicial bypass exception to the parental consent requirement for abortion.
+- The use of pseudonyms is not standardized in U.S. courts, and there are no court rules about pseudonym use.
+- Prior to 1969, the use of anonymous individuals as plaintiffs in court cases was rare, but it increased after the Supreme Court decided Roe and Doe in 1973.'
+    );
+    ]
+[2023-10-01 08:18:24.192370] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 08:18:24.843608] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:18:25.480053] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'placeholder names',
+    'The use of placeholder names like John Doe and Jane Doe can be considered emotionally charged, as they are often used in contexts involving unidentified or deceased individuals, which can evoke feelings of mystery, anonymity, and tragedy.',
+    '3',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:18:26.116718] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:18:26.753453] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    1,
+    3,
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:18:27.486288] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-01 08:46:28.907441] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A19605D390>]
+[2023-10-01 08:46:28.912847] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A19605C850>]
+[2023-10-01 08:46:29.551323] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:46:43.601202] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:46:44.265002] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:46:44.900642] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 08:46:45.540907] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "1"
+    ]
+[2023-10-01 08:48:32.565865] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000179EEF5D150>]
+[2023-10-01 08:48:32.569862] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000179EEF5C760>]
+[2023-10-01 08:48:33.212346] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:48:37.627975] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:48:38.271116] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:48:38.920370] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 08:48:39.570532] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "1"
+    ]
+[2023-10-01 08:49:24.745406] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002125386C130>]
+[2023-10-01 08:49:24.748412] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002125386CFD0>]
+[2023-10-01 08:49:25.389152] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:49:28.370189] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:49:29.015518] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:49:29.671453] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 08:49:30.305986] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "1"
+    ]
+[2023-10-01 08:50:23.605211] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001DE5EC203A0>]
+[2023-10-01 08:50:23.614209] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001DE5EC21150>]
+[2023-10-01 08:50:24.249982] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:50:29.290296] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:50:29.924019] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:50:30.563481] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 08:50:31.202730] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "1"
+    ]
+[2023-10-01 08:51:30.781198] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E02B038790>]
+[2023-10-01 08:51:30.784096] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E02B038B80>]
+[2023-10-01 08:51:31.409931] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:51:36.397984] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:51:37.030922] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:51:37.652974] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 08:51:38.267968] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "1"
+    ]
+[2023-10-01 08:52:45.763962] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E53BC4FBE0>]
+[2023-10-01 08:52:45.767961] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E53BC4D120>]
+[2023-10-01 08:52:46.396177] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:52:51.876358] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:52:52.513097] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:52:53.159050] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 08:52:53.798185] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "1"
+    ]
+[2023-10-01 08:54:27.150195] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000265B7A7F7F0>]
+[2023-10-01 08:54:27.154184] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000265B7A7DF00>]
+[2023-10-01 08:54:27.802000] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:54:31.038662] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:54:31.704177] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:54:32.355494] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 08:54:33.006273] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:57:49.993271] [Ron-Ash] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000016BC319ED10>]
+[2023-10-01 08:57:49.996269] [Ron-Ash] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000016BC319E6B0>]
+[2023-10-01 08:57:50.632541] [Ron-Ash] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 08:58:06.399594] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 08:58:07.406795] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:58:08.308645] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:58:09.169852] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 08:58:10.048161] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 08:58:21.252907] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 08:58:21.961461] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922',
+    0.6923076923076923,
+    0.6923076923076923,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    ' Justin Trudeau’s India accusation complicates western efforts to rein in China ',
+    ' Assistant Professor in Political Science, Thompson Rivers University Saira Bano does not work for, consult, own shares in or receive funding from any company or organisation that would benefit from this article, and has disclosed no relevant affiliations beyond their academic appointment. Thompson Rivers University provides funding as a member of The Conversation CA-FR. Thompson Rivers University provides funding as a member of The Conversation CA. View all partners Prime Minister Justin Trudeau’s allegation that the Indian government was involved in the assassination on Canadian soil of Hardeep Singh Nijjar, a Sikh independence advocate, will undoubtedly erode Canadian-Indian relations at a time when the West is trying to appeal to India. Trudeau has made international headlines with his allegation in Parliament this week that India had a hand in the murder of Nijjar, who was gunned down last June in the parking lot of a gurdwara — a Sikh place of worship — in the Vancouver suburb of Surrey. Both government and opposition parties have unanimously condemned India, saying the allegations suggest an unacceptable violation of Canadian sovereignty. Foreign Affairs Minister Mélanie Joly has announced the expulsion of Indian diplomat Pavan Kumar Rai. The federal government says Rai led the Canadian branch of the Research and Analysis Wing, India’s foreign intelligence service. Joly says she’ll raise the issue with the G7 foreign ministers in New York. India, meantime, has denied the allegation and expelled a Canadian diplomat in retaliation. Tensions between Canada and India were apparent when Trudeau recently visited New Delhi for the G20 summit. Indian Prime Minister Narendra Modi had raised concerns to Trudeau about Sikh Khalistani protests in Canada. The Sikh independence movement is considered a threat to Indian territorial sovereignty and integrity. Canada has the largest Sikh diaspora outside Punjab, and activists like Nijjar have been staging demonstrations to demand an independent Khalistan state separate from India. Trudeau defended these demonstrations as freedom of expression, assembly and peaceful protest. But Trudeau also made his allegations about India’s involvement in Nijjar’s death to U.S. President Joe Biden, British Prime Minster Rishi Sunak and French President Emmanuel Macron at the G20. This complicates efforts by Canada and its allies to improve relations with India in a strategic attempt to counter-balance what they view as an increasing threat posed by China. In response to China’s growing might, Canada unveiled its Indo-Pacific strategy in 2022 that characterized China as a “disruptive power” and underscored the Canadian commitment to strengthening ties with countries in the Indo-Pacific region. That strategy has a particular focus on India. Read more: Canadas Indo-Pacific strategy: The same old starry-eyed thinking about Asian trade Canada has also committed to improving trade relations with India by negotiating a free-trade agreement. There have been nine rounds of negotiations, but those talks stopped amid allegations about India’s role in Nijjar’s death. Canadian Trade Minister Mary Ng cancelled her planned visit to India in October. Despite the importance countering China’s influence, the Indian government’s authoritative tendencies, human rights violations and interference in Canadian internal affairs have created obstacles to Ottawa’s efforts to improve the India-Canada relationship. It’s highly improbable that Canada’s allies, including the U.S., the U.K. and France, will cut ties with India due to Trudeau’s allegations. India is simply too important for strategic and economic reasons. India holds significant importance when it comes to countering China’s geopolitical influence. Ottawa has previously indicated India was a “priority” market for Canada; in 2022, India was Canada’s 10th largest trading partner. A strategic agreement between the U.S. and India is primarily aimed at tempering China’s growing influence and has been called a partnership between “the world’s oldest democracy” and “the world’s largest democracy” to highlight shared democratic values. But the Modi government has been harshly criticized for democratic backsliding and authoritarian tendencies, including fostering Hindu extremism, violating minority and human rights and cracking down on the media, academia and civil society. Nonetheless, Biden refrained from criticizing Modi publicly when he visited the White House in June despite being pressured to raise human rights issues with the Indian leader. Seventy-five U.S. congressional representatives wrote a letter to Biden urging him to do so. Half a dozen Democrats also boycotted Modi’s speech to U.S. Congress. But the Biden administration reportedly believes expressing concerns about Modi’s autocratic policies would harm the relationship. Indeed, Canada’s allies have often turned a blind eye to Modi’s misdeeds due to strategic considerations. But it’s now time for Canada and its allies to assertively hold India accountable for its actions. The strategic partnerships formed between western nations and India were originally founded on the premise of shared democratic values. As the world’s most populous country, with the fifth largest economy and second-largest military, India is still an invaluable partner to the West. But if India is diverging from these apparent shared principles, it’s essential to maintain the integrity of these partnerships by ensuring that Indian officials remain committed to democratic ideals and human rights. Even if Canada’s allies won’t publicly back Trudeau, the federal government should stay committed to its core values by ensuring India faces consequences for its authoritarian actions. Executive Master of Public Administration — Course, Victoria Public Leadership Masterclass series — Melbourne, Victoria Professional Development and Online Webinars — remote access, New South Wales Inside the Oslo Accords part 2: after the handshake — Victoria Graduate Certificate in Clinical Informatics and Digital Health — All states for online course , Queensland Copyright © 2010–2023, The Conversation Media Group Ltd ',
+    '- Canadian Prime Minister Trudeau accused the Indian government of being involved in the assassination of Hardeep Singh Nijjar, a Sikh independence advocate on Canadian soil.
+- The allegations have led to tensions between Canada and India, with both countries expelling diplomats.
+- Canada is trying to improve relations with India as part of its efforts to counterbalance Chinas influence in the region.
+- Canada has a strategic focus on India in its Indo-Pacific strategy and is negotiating a free-trade agreement with the country.
+- Despite concerns about Indias democratic backsliding and human rights violations, Canadas allies are unlikely to cut ties with India due to its strategic and economic importance.
+- The strategic partnerships between western nations and India were founded on shared democratic values, and it is important to hold India accountable for its actions.
+- Canada should maintain its commitment to democratic ideals and human rights, even if its allies do not publicly support Trudeaus allegations.'
+    );
+    ]
+[2023-10-01 08:58:22.616733] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 08:58:23.267749] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 08:58:23.916782] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'erode',
+    'The word erode implies a negative impact on Canadian-Indian relations, suggesting a gradual deterioration or weakening of the relationship.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:24.590977] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:25.236661] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'unacceptable violation',
+    'The phrase unacceptable violation presents a subjective judgment, indicating a strong negative reaction to Indias alleged involvement in the assassination and implying a breach of Canadian sovereignty that is deemed morally wrong or reprehensible.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:25.885187] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:26.531712] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'condemned',
+    'The word condemned suggests strong disapproval or criticism towards India, indicating a bias against the accused party.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:27.220203] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:27.892620] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'denied',
+    'The term denied implies a refusal or rebuttal of the allegation, casting doubt on the validity of Canadas claim.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:28.586869] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:29.238298] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'retaliation',
+    'The word retaliation suggests a vengeful or retaliatory response from India, potentially portraying them in a negative light.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:29.882814] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:30.538275] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'threat',
+    'The word threat suggests a sense of danger or harm posed by the Sikh independence movement to Indian territorial sovereignty and integrity, potentially biasing the portrayal of the movement.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:31.184791] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:31.842335] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'defended',
+    'The word defended indicates support or justification of the Sikh demonstrations, potentially showing a bias towards the freedom of expression argument and downplaying any negative implications.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:32.486279] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:33.142230] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'complicates',
+    'The word complicates suggests that Trudeaus allegations have added complexity or difficulty to the efforts of improving relations with India, indicating a negative consequence.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:33.783585] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:34.434858] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'authoritative tendencies',
+    'The phrase authoritative tendencies implies a negative attribute of the Indian government, suggesting an inclination towards exercising power and control in an arbitrary or dictatorial manner.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:35.073552] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:35.719693] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'human rights violations',
+    'The phrase human rights violations implies wrongdoing or misconduct by the Indian government in relation to the treatment of its citizens, potentially biasing the portrayal of India as a violator of human rights.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:36.361491] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:37.001354] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'interference',
+    'The word interference suggests unwanted or unwarranted involvement by India in Canadian internal affairs, potentially portraying India in a negative light.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:37.646751] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:38.300555] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'obstacles',
+    'The word obstacles suggests challenges or hindrances to Ottawas efforts to improve the India-Canada relationship, potentially implying a negative impact on the relationship.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:38.941435] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:39.591630] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'harshly criticized',
+    'The phrase harshly criticized implies a strong and negative evaluation of the Modi governments actions, potentially indicating bias against the Indian government.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:40.228281] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:40.872382] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'violating minority and human rights',
+    'The phrase violating minority and human rights suggests a wrongdoing or violation committed by the Modi government in relation to the rights of minorities and humans, potentially showing a biased portrayal of Indias actions.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:41.513868] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:42.157538] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'cracking down',
+    'The phrase cracking down implies a severe and forceful action taken by the Modi government, potentially conveying a negative connotation.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:42.812207] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:43.458897] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'blind eye',
+    'The phrase turning a blind eye suggests a deliberate act of ignoring or overlooking Modis misdeeds, potentially implying bias or inconsistency in holding India accountable.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:44.097584] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:44.757290] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'assertively hold India accountable',
+    'The phrase assertively hold India accountable implies the importance of taking strong actions against India, potentially indicating a strong bias towards holding India responsible for its actions.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:45.411116] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:46.056552] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'authoritarian actions',
+    'The term authoritarian actions suggests a negative characterization of Indias actions, indicating a bias against the Indian government.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:46.709514] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:58:47.354335] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'consequences',
+    'The word consequences suggests the need for India to face negative outcomes or penalties for its actions, indicating a stance of judgement or punishment towards India.',
+    '4',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:58:48.008642] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:59:18.907644] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://en.wikipedia.org/wiki/John_Doe"
+    ]
+[2023-10-01 08:59:19.553166] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:59:20.195907] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "1"
+    ]
+[2023-10-01 08:59:20.834864] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "3"
+    ]
+[2023-10-01 08:59:39.539369] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-10-01 08:59:40.556194] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:59:41.407712] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 08:59:42.229350] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-10-01 08:59:43.018167] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-10-01 08:59:43.888880] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-10-01 08:59:44.534352] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954',
+    0.42857142857142855,
+    0.14285714285714285,
+    'TESTING.',
+    1, 
+    NOW(),
+    'Ron-Ash',
+    'New Zealand hit by magnitude-6 earthquake, no serious damage reported',
+    ' New Zealand hit by magnitude-6 earthquake, no serious damage reported A magnitude-6 earthquake has struck in the centre of New Zealands South Island, government seismic monitor GeoNet says, but initial reports indicate no injuries or significant damage.  The earthquake, the largest in the country this year, hit at 9:14am local time near Geraldine at a focal depth of 11 kilometres. GeoNet said more than 14,000 people reported feeling the shake, some as far north as Auckland on the North Island. Sarah Hussey, a farmer close to the epicentre, said the quake had been stronger than others she remembered. "Theres no damage here, but I thought it was thunder for a start. The house lifted up for a bit," she told TVNZs 1News. Timaru Deputy Mayor Scott Shannon told Radio NZ there had been no immediate reports of damage but checks were ongoing. GeoNet said a magnitude-3.4 shake followed at 11:42am local time, causing light shaking 45 kilometres north of Geraldine at a depth of 6 kilometres. The quake struck not far from where a 6.3 magnitude quake hit in 2011, killing 185 people and causing major damage in the South Island city of Christchurch.  Reuters We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A magnitude-6 earthquake has struck in the center of New Zealands South Island
+- The earthquake hit at 9:14 am local time near Geraldine at a focal depth of 11 kilometers
+- More than 14,000 people reported feeling the shake, some as far north as Auckland on the North Island
+- Initial reports indicate no injuries or significant damage
+- There have been no immediate reports of damage, but checks are ongoing
+- A magnitude-3.4 aftershock occurred at 11:42 am local time, causing light shaking 45 kilometers north of Geraldine
+- The earthquake struck near the area where a 6.3 magnitude quake hit in 2011, causing major damage in the city of Christchurch
+- No damage was reported near the epicenter, but some residents felt the house lift up momentarily
+- The earthquake is the largest in the country this year.'
+    );
+    ]
+[2023-10-01 08:59:45.178817] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 08:59:45.820839] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
+    ]
+[2023-10-01 08:59:46.464808] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'no serious damage reported',
+    'The phrase no serious damage reported suggests that the impact of the earthquake was not severe and may help to alleviate any concerns or fears among the public.',
+    '5',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:59:47.108236] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:59:47.752592] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'no injuries',
+    'The mention of no injuries highlights the relief that there were no physical harm or casualties resulting from the earthquake, conveying a sense of safety and well-being.',
+    '5',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:59:48.395591] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:59:49.041799] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'largest in the country this year',
+    'The use of the word largest indicates that this earthquake is significant and notable in comparison to others that have occurred in New Zealand in the current year, potentially arousing interest or attention.',
+    '5',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:59:49.688758] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:59:50.335292] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'stronger than others she remembered',
+    'The phrase indicates the personal perception of the earthquakes intensity by a witness, which can evoke emotions and convey a sense of the event being more impactful or unsettling.',
+    '5',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:59:50.976944] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 08:59:51.625793] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'killing 185 people and causing major damage',
+    'The mention of the previous 6.3 magnitude earthquake in 2011 that resulted in casualties and significant destruction serves as a reminder of the potential devastation caused by such events, which can evoke emotions and add gravity to the current situation.',
+    '5',
+    1, 
+    NOW(),
+    'Ron-Ash'
+    );
+    ]
+[2023-10-01 08:59:52.267863] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 09:00:26.597778] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
+    ]
+[2023-10-01 09:00:27.238376] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "4"
+    ]
+[2023-10-01 09:00:27.879597] [Ron-Ash] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "4"
+    ]
