@@ -365,7 +365,6 @@ class PoliticianManager():
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
-		self.articleManager = ArticleManager(limit)
 		self.politicianManager = PoliticianManager()
 
 		self.tdcLock = Lock()
