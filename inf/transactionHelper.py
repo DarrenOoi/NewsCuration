@@ -89,10 +89,10 @@ def increment_vote(tdc=transactionDataClient, ID=int, option=int):
     if (option == 1):
         poll.votesFirst += 1
     elif (option == 2):
-        poll.votesFirst += 1
+        poll.votesSecond += 1
     elif (option == 3):
-        poll.votesFirst += 1
+        poll.votesThird += 1
     elif (option == 4):
-        poll.votesFirst += 1
+        poll.votesFourth += 1
     else:            
         tdc.logMessage(messageStatus.WARN, f'This is not a valid vote option for related ArticleID ({ID})')

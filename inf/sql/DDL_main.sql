@@ -1,18 +1,9 @@
 -- DROP TABLE IF EXISTS Article
 -- DROP TABLE IF EXISTS Politician
-<<<<<<< HEAD
-DROP TABLE IF EXISTS Politician_Position
-DROP TABLE IF EXISTS Politician_PositionNameCodes
-DROP TABLE IF EXISTS Politician_NameCodes
-DROP TABLE IF EXISTS Politician_KeyTable
-DROP TABLE IF EXISTS Polling
-
-=======
 -- DROP TABLE IF EXISTS Politician_Position
 -- DROP TABLE IF EXISTS Politician_PositionNameCodes
 -- DROP TABLE IF EXISTS Politician_NameCodes
 -- DROP TABLE IF EXISTS Politician_KeyTable
->>>>>>> master
 CREATE TABLE Politician_PositionNameCodes (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     NameCode VARCHAR(255) NOT NULL UNIQUE,
