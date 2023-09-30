@@ -91,7 +91,8 @@ POLL_PROMPT = [
            " The first line should be the question, the next four should be the four options for the poll." +
            " Do not specify the headings for the question or the options, just output the lines in order."},
            {"role": "user", "content": ''}
-      ]   
+      ]  
+
 
 def generate_bias_prompt(content):
     prompt = BIAS_PROMPT
