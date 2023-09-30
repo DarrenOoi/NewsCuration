@@ -1,9 +1,13 @@
 from threading import *
+from datetime import datetime
+
 from utils.prompts.webScraper import *
 from utils.biasCalculator import *
 from utils.nameExtractor import *
+
 from datetime import datetime
 from inf.transactionDataClient import *
+from inf.transactionHelper import *
 
 import time
 HEADER = "header"
@@ -11,7 +15,7 @@ TEXT = "text"
 SUMMARY = "summary"
 BIAS_RANGE = "biasRange"
 BIAS_WORDS = "biasWords"
-POLITICAL_fIGURES = "politicalFigures"
+POLITICAL_FIGURES = "politicalFigures"
 POLITICIAN = "Politician"
 
 # def wait(t):
@@ -100,7 +104,7 @@ class ArticleElement():
 # Child of Article, used to process the required functionalities to
 # retrieve/create the data each article contains in a thread-safe manner
 class ArticleElementJob(ArticleElement):
-	def __init__(self, url: str, webScraper: NewsScraper) -> None:
+	def __init__(self, url: str, webScraper: NewsScraper, tdcLock: Lock, tdc: transactionDataClient) -> None:
 		super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None)
 		self.summaryLock = Condition()
 		self.biasRangeLock = Condition()
@@ -117,7 +121,7 @@ class ArticleElementJob(ArticleElement):
 		biasRT.start()
 		biasWT = Thread(target=self.threadableJob, args=(biasSubtext, webScraper.getArticle(), "biasWords", "biasWordsLock"))
 		biasWT.start()
-		politicalFT = Thread(target=self.threadableJob, args=(nameExtractorFromDB, webScraper.getArticle(), "politicalFigures", "politicalFiguresLock"))
+		politicalFT = Thread(target=self.threadableJob, args=(politicianNameExtractorFromDB, [webScraper.getArticle(), tdcLock, tdc], "politicalFigures", "politicalFiguresLock"))
 		politicalFT.start()
 
 		self.threads = [summaryT, biasRT, biasWT, politicalFT]
@@ -160,7 +164,7 @@ class ArticleElementJob(ArticleElement):
 # Class used by Session Manager to manage articles searched by User;
 # generate and store article information, etc. 
 class ArticleManager():
-	def __init__(self, limit) -> None:
+	def __init__(self, limit, transactionClient, transactionClientLock) -> None:
 		self.cacheLimit = limit
 		self.cacheLock = Lock()
 		self.cache = {} # {url: Article()}
@@ -170,6 +174,9 @@ class ArticleManager():
 		
 		self.threadsLock = Lock()
 		self.threads = []
+
+		self.transactionClientLock = transactionClientLock
+		self.transactionClient = transactionClient
 	
 	# checks if article already exists in cache
 	def isArticleInCache(self, url: str) -> bool:
@@ -179,14 +186,23 @@ class ArticleManager():
 
 	# checks if article already exists in database
 	def isArticleInDB(self, url: str) -> bool:
-		# # tmp = # search DB for article data
-		# tmp = 0
-		# if len(tmp) == 0:
-		# 	return False
-		# # add article to cache
-		# # update DB to see if new political figures are mentioned
-		# return True
-		return False
+		self.transactionClientLock.acquire()
+		result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
+		self.transactionClientLock.release()
+		print(f"DEBUG: isArticleInDB - {result}")
+		if len(result) == 0:
+			return False
+		if len(result) != 1:
+			return None
+		
+		# process required jobs to suplement data recieved
+		articleDict = result[0]
+		self.cacheLock.acquire()
+		self.preventCacheOverflow()
+		# self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['Text'], articleDict['Summary'], (articleDict['LowerBias'], articleDict['upperBias']), articleDict['BiasedWords'], articleDict['PoliticalFigures'])
+		# print(self)
+		self.cacheLock.release()
+		return True
 		
 	# checks if a job for the requested article is already processing
 	def isArticleBeingProcessed(self, url: str) -> bool:
@@ -216,13 +232,18 @@ class ArticleManager():
 			tmp = self.jobs[url].isDone()
 		print("job done")
 		self.jobsLock.acquire()
+		self.transactionClientLock.acquire()	
 		self.cacheLock.acquire()
 		tmp = self.jobs[url]
 		self.preventCacheOverflow()
 		self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"))
 		tmp.cleanJob()
+		print(self)
 		del self.jobs[url]
 		self.cacheLock.release()
+		# article = transactionDataClient.Article(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"))
+		# self.transactionClient.insert(article)	
+		self.transactionClientLock.release()
 		self.jobsLock.release()
 
 	# Adds a job to the job dictionary (threadsafe) so only one job per url is ever created
@@ -233,7 +254,7 @@ class ArticleManager():
 			return None
 		
 		self.jobsLock.acquire()
-		self.jobs[url] = ArticleElementJob(url, newsScraper)
+		self.jobs[url] = ArticleElementJob(url, newsScraper, self.transactionClientLock, self.transactionClient)
 		self.jobsLock.release()
 		
 		thread = Thread(target=self.moveJobToCache, args=(url,))
@@ -305,43 +326,56 @@ class ArticleManager():
 
 class PoliticianManager():
     
-    '''
-    Queries the database to retrieve politicians by name 
-    Parameters:
+	def __init__(self):
+			self.cache = []
+			
+	'''
+	Queries the database to retrieve politicians by name 
+	Parameters:
+-----------
+	tdc : transactionDataClient
+	nameList : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
+	'''
+	def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
+		# Add function here to assist finding all related articles
+		filter = ""
+		if len(name) == 0:
+				return []
+		nameSplit = name.split(' ')
+		for name in nameSplit:
+				filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
+		filter += '0=1'
+		politiciansInfo = tdc.query(POLITICIAN, filter) #This would return a list of dicts
+		info = politiciansInfo[0] #we're going to return the first name from the list
+		related_articles = find_related_articles(tdc, info['ID'])
+		info['Articles'] = related_articles if related_articles is not None else []
+		return info
+	
+	'''
+	Queries the database to retrieve politicians by ID 
+	Parameters:
 	-----------
-		tdc : transactionDataClient
-		nameList : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
-    '''
-    def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
-        if len(name) == 0:
-            return []
-        nameSplit = name.split(' ')
-        
-        return tdc.query(POLITICIAN, f"(Fname LIKE '%{nameSplit[0]}%' AND Lname LIKE '%{nameSplit[1]}%')")
-    
-    '''
-    Queries the database to retrieve politicians by ID 
-    Parameters:
-	-----------
-		tdc : transactionDataClient
-		ID: the ID of the politician
-    '''
-    def getPoliticianByID(self, tdc=transactionDataClient, ID=int) -> list(dict()):
-	    return tdc.query(POLITICIAN, f'ID = {ID}')
+	tdc : transactionDataClient
+	ID: the ID of the politician
+	'''
+	def getPoliticianByID(self, tdc:transactionDataClient, ID:int) -> list(dict):
+		politicianInfo = tdc.query(POLITICIAN, f'ID = {ID}')
+		politicianInfo['articles'] = find_related_articles(tdc, ID)
+		return politicianInfo
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
-		self.articleManager = ArticleManager(limit)
 		self.politicianManager = PoliticianManager()
 
-		# self.tdcLock = Lock()
+		self.tdcLock = Lock()
 		self.tdc = transactionDataClient()
+    		self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
 
 	def getArticleItem(self, url: str, itemName: str):
 		return self.articleManager.getItem(url, itemName)
 
 	# Call this method, either by the ID, or by a list of names. Prefernce is by name
-	# Although ID is recommended
+	# Although ID is recommended. Returns a dictionary of the record, 
 	def getPoliticianItem(self, ID=str, nameList=str):
 		if ID == '' or ID is None:
 			return self.politicianManager.getPoliticianByName(self.tdc, nameList)
@@ -349,13 +383,17 @@ class SessionManager():
 			return self.politicianManager.getPoliticianByID(self.tdc, ID)
 
 	
+	def close(self):
+		self.tdc.closeConnection()
+	
 
 # sm = SessionManager(2)
 # url1 = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"
 # url2 = "https://www.abc.net.au/news/2023-09-20/new-zealand-hit-by-earthquake/102877954"
 # url3 = "https://www.9news.com.au/national/victoria-news-officers-injured-in-police-chase-armed-man-on-the-run-in-katandra-west-in-northern-victoria/6ee1eb85-b5a6-45ef-a991-a3292490ba98"
 # print(sm.getArticleItem(url1, SUMMARY))
-# print(sm.getArticleItem(url1, BIAS_RANGE))
-# print(sm.getArticleItem(url2, BIAS_WORDS))
-# print(sm.getArticleItem(url3, SUMMARY))
+# # print(sm.getArticleItem(url1, BIAS_RANGE))
+# # print(sm.getArticleItem(url2, BIAS_WORDS))
+# # print(sm.getArticleItem(url3, SUMMARY))
 # sm.am.clean()
+# sm.tdc.closeConnection()

@@ -1,4 +1,4 @@
-from .transactionHelper import *
+from .transactionDataClient import *
 
 
 '''
@@ -6,13 +6,13 @@ Retrieve all the bias subtext (the word, and its respective bias reasoning), rel
 
 Returns:
 -------
-    list(dict): list of dictionaries from the Article_ArticleBias table, filtered by the Article URL.
+    list(dict()): list of dictionaries from the Article_ArticleBias table, filtered by the Article URL.
     Each dictionary is a separate record in the database
     
     Returns None if the URL cannot be found, or there are no records relating to the URL.
 
 '''
-def retrieve_bias_keywords_by_url(tdc=transactionDataClient, url=str):
+def retrieve_bias_keywords_by_url(tdc:transactionDataClient, url=str):
     related_article = tdc.query('Article', f"URL = '{url}' ORDER BY ID DESC")
     
     if len(related_article) == 0 or related_article is None:
@@ -46,6 +46,24 @@ def retrieve_bias_keywords_by_key(tdc=transactionDataClient, ID=int):
         return None 
     return biasSubText
 
+'''
+Inserts all the bias subtext into the related Article_ArticleBias
+'''
+def insert_bias_keywords(tdc=transactionDataClient, ID=int, keywords=dict()) -> None:
+    pass
+
+'''
+Find all articles related to a Politician. Requires the ID of the Politician.
+'''
+def find_related_articles(tdc=transactionDataClient, ID_politician=int):
+    query = f"""
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = {ID_politician} 
+    """
+    return tdc.query_special(query)
+    
 '''
 Inserts all the bias subtext into the related Article_ArticleBias.
 Expects the input to be a key-value pair with the biased phrase as the key, and the reasoning of the biased phrase as

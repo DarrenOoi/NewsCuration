@@ -76,7 +76,7 @@ class Article(table):
   
   def __str__(self):
     if self.id is None:
-      return 'Record has not been inserted into DB - ID is NONE'
+      return f'{Article.tableName} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{Article.tableName}[{self.id}, {self.url}, {self.upperBias}, {self.lowerBias}, {self.summary}, {self.inProd}, {self.header}, {self.originalText}, {self.summaryParagraph}]'
   
@@ -122,7 +122,7 @@ class Politician_PositionNameCodes(table):
 
   def __str__(self):
     if self.id is None:
-      return 'Record has not been inserted into DB - ID is NONE'
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{self.name}[{self.id}, {self.nameCode}, {self.inProd}]'
   
@@ -142,7 +142,7 @@ class Politician_PositionNameCodes(table):
     return query
   
   def getName(self):
-    return 
+    return self.name
 
 '''
 ID
@@ -173,7 +173,7 @@ class Politician(table):
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {self.name} (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy)
+    INSERT INTO {self.name} (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
     VALUES (
     '{self.fName}',
     '{self.lName}',
@@ -191,7 +191,7 @@ class Politician(table):
   
   def __str__(self):
     if self.id is None:
-      return 'Record has not been inserted into DB - ID is NONE'
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{self.name}[{self.id}, {self.fName}, {self.lName}, {self.about}, {self.age}, {self.gender}, {self.inProd}, {self.imageLink}, {self.summary}]'
 
@@ -227,7 +227,7 @@ class Politician_Position(table):
     
   def __str__(self):
     if self.id is None:
-      return 'Record has not been inserted into DB - ID is NONE'
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{self.name}[{self.id}, {self.posNameCode}, {self.inProd}]'
     
@@ -336,6 +336,7 @@ class transactionDataClient():
     yellow_text = "\033[93m"
     default_colour = "\033[0m"
   
+
     with open('inf/audit/logs.txt', 'a') as auditLog:
       message = f'[{datetime.now()}] [{self.user}] [{status.name}] [{message}]'
       auditLog.write(message + '\n')
@@ -420,6 +421,26 @@ class transactionDataClient():
     FROM {table}
     WHERE {filter if filter is not None else '1=1'}
     """
+    try: 
+      self.cursor.execute(query)    
+    except Exception as e:
+      self.logMessage(messageStatus.FAIL, f'error building sql statement with error {e}')
+    
+    try: 
+      self.cnx.commit()
+    except Exception as e:
+      self.logMessage(messageStatus.FAIL, f'failed to commit query \n {sql} \n reason: {e}')
+    self.logMessage(messageStatus.SUCCESS, f"Successfully attempted query: {query}")
+    
+    return self.retrieveCursorOutput()
+  
+  '''
+  Queries a given table, and applies a filter if given
+  '''
+  def query_special(self, query=str):
+    if self.cursor is None:
+      self.logMessage(messageStatus.WARN, 'Connection is closed. Query failed')
+
     try: 
       self.cursor.execute(query)    
     except Exception as e:
