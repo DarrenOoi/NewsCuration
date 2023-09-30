@@ -1,10 +1,9 @@
-DROP TABLE IF EXISTS Article
-DROP TABLE IF EXISTS Politician
-DROP TABLE IF EXISTS Politician_Position
-DROP TABLE IF EXISTS Politician_PositionNameCodes
-DROP TABLE IF EXISTS Politician_NameCodes
-DROP TABLE IF EXISTS Politician_KeyTable
-
+-- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
 CREATE TABLE Politician_PositionNameCodes (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     NameCode VARCHAR(255) NOT NULL UNIQUE,
@@ -15,10 +14,10 @@ CREATE TABLE Politician_PositionNameCodes (
 
 CREATE TABLE Article (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    URL VARCHAR(255), -- Adjust the length as needed for your URLs
-    UpperBias DECIMAL(5, 2), -- 5 total digits with 2 decimal places
-    LowerBias DECIMAL(5, 2), -- lower bias score
-    Summary TEXT, -- TEXT type allows up to 65,535 characters
+    URL VARCHAR(255),
+    UpperBias DECIMAL(5, 2),
+    LowerBias DECIMAL(5, 2),
+    Summary TEXT,
     InProduction BOOLEAN,
     InsertedAt DATETIME,
     InsertedBy VARCHAR(50)
@@ -37,13 +36,9 @@ CREATE TABLE Politician (
     InsertedBy VARCHAR(50)
 );
 
-/* A unique store of the politician's positions,
-such as 'Prime Minister of Australia' or 'Member of Parliament; Senate'
-etc.
-*/
 CREATE TABLE Politician_Position (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    PositionNameCode VARCHAR(255), --e.g. 'Prime minister of Australia' etc,
+    PositionNameCode VARCHAR(255), 
     InProduction BOOLEAN,
     InsertedAt DATETIME,
     InsertedBy VARCHAR(50),

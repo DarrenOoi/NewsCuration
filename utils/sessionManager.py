@@ -4,7 +4,10 @@ from datetime import datetime
 from utils.prompts.webScraper import *
 from utils.biasCalculator import *
 from utils.nameExtractor import *
-from inf import transactionDataClient
+
+from datetime import datetime
+from inf.transactionDataClient import *
+from inf.transactionHelper import *
 
 import time
 HEADER = "header"
@@ -13,6 +16,7 @@ SUMMARY = "summary"
 BIAS_RANGE = "biasRange"
 BIAS_WORDS = "biasWords"
 POLITICAL_FIGURES = "politicalFigures"
+POLITICIAN = "Politician"
 
 # def wait(t):
 # 	time.sleep(t)
@@ -320,17 +324,65 @@ class ArticleManager():
 # print(am.getItem(url3, SUMMARY))
 # am.clean()
 
+class PoliticianManager():
+    
+	def __init__(self):
+			self.cache = []
+			
+	'''
+	Queries the database to retrieve politicians by name 
+	Parameters:
+-----------
+	tdc : transactionDataClient
+	nameList : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
+	'''
+	def getPoliticianByName(self, tdc=transactionDataClient, name=str) -> list(dict()):
+		# Add function here to assist finding all related articles
+		filter = ""
+		if len(name) == 0:
+				return []
+		nameSplit = name.split(' ')
+		for name in nameSplit:
+				filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
+		filter += '0=1'
+		politiciansInfo = tdc.query(POLITICIAN, filter) #This would return a list of dicts
+		info = politiciansInfo[0] #we're going to return the first name from the list
+		related_articles = find_related_articles(tdc, info['ID'])
+		info['Articles'] = related_articles if related_articles is not None else []
+		return info
+	
+	'''
+	Queries the database to retrieve politicians by ID 
+	Parameters:
+	-----------
+	tdc : transactionDataClient
+	ID: the ID of the politician
+	'''
+	def getPoliticianByID(self, tdc:transactionDataClient, ID:int) -> list(dict):
+		politicianInfo = tdc.query(POLITICIAN, f'ID = {ID}')
+		politicianInfo['articles'] = find_related_articles(tdc, ID)
+		return politicianInfo
 
 class SessionManager():
 	def __init__(self, limit: int) -> None:
+		self.articleManager = ArticleManager(limit)
+		self.politicianManager = PoliticianManager()
 
 		self.tdcLock = Lock()
-		self.tdc = transactionDataClient.transactionDataClient()
-
-		self.am = ArticleManager(limit, self.tdc, self.tdcLock)
+		self.tdc = transactionDataClient()
+    self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
 
 	def getArticleItem(self, url: str, itemName: str):
-		return self.am.getItem(url, itemName)
+		return self.articleManager.getItem(url, itemName)
+
+	# Call this method, either by the ID, or by a list of names. Prefernce is by name
+	# Although ID is recommended. Returns a dictionary of the record, 
+	def getPoliticianItem(self, ID=str, nameList=str):
+		if ID == '' or ID is None:
+			return self.politicianManager.getPoliticianByName(self.tdc, nameList)
+		else:
+			return self.politicianManager.getPoliticianByID(self.tdc, ID)
+
 	
 	def close(self):
 		self.tdc.closeConnection()
