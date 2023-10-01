@@ -40,6 +40,7 @@ function Home() {
   const array = [
     {
       name: 'Yo Minav Sleep Well Love',
+      url: 'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
     },
     {
       name: 'Yo Dude What Why How',
@@ -48,6 +49,18 @@ function Home() {
       name: 'OMG This Guy',
     },
   ];
+
+  const handleListClick = (url) => {
+    setSubmitted(true);
+    setText(url);
+    setResult(null);
+    fetchResults(url).then((result) => {
+      setResult(result.response);
+      setHeader(result.header);
+      setArticle(result.article);
+      setSubmitted(false);
+    });
+  };
 
   const handleSubmit = () => {
     if (text.trim() != '') {
@@ -184,7 +197,11 @@ function Home() {
                       />
                     ) : (
                       <div className='mt-6'>
-                        <List title={'RECENTS'} items={array} />
+                        <List
+                          title={'RECENTS'}
+                          items={array}
+                          handleClick={handleListClick}
+                        />
                         <List title={'MOST POPULAR'} items={array} />
                       </div>
                     )}
