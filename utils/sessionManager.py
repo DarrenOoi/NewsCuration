@@ -8,6 +8,7 @@ from utils.nameExtractor import *
 from datetime import datetime
 from inf.transactionDataClient import *
 from inf.transactionHelper import *
+import json
 
 import time
 HEADER = "header"
@@ -81,7 +82,7 @@ class RequestRate():
 
 # Parent of ArticleJob, has basic functionality to return abstract (object) values requesed by User
 class ArticleElement():
-	def __init__(self, url: str, header: str, text: str, summary: str, biasRange: str, biasWords: str, politicalFigures: str) -> None:
+	def __init__(self, url: str, header: str, text: str, summary: str, biasRange: tuple, biasWords: str, politicalFigures: list, politicalFigureIds: list) -> None:
 		self.url = url
 		self.header = header
 		self.text = text
@@ -89,6 +90,7 @@ class ArticleElement():
 		self.biasRange = biasRange
 		self.biasWords = biasWords
 		self.politicalFigures = politicalFigures
+		self.politicalFigureIds = politicalFigureIds
 
 		self.requestRate = RequestRate()
 
@@ -105,11 +107,12 @@ class ArticleElement():
 # retrieve/create the data each article contains in a thread-safe manner
 class ArticleElementJob(ArticleElement):
 	def __init__(self, url: str, webScraper: NewsScraper, tdcLock: Lock, tdc: transactionDataClient) -> None:
-		super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None)
+		super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None, None)
 		self.summaryLock = Condition()
 		self.biasRangeLock = Condition()
 		self.biasWordsLock = Condition()
 		self.politicalFiguresLock = Condition()
+		self.politicalFigureIdsLock = Condition()
 
 		self.jobsDoneLock = Lock()
 		self.jobsDone = 0
@@ -123,8 +126,10 @@ class ArticleElementJob(ArticleElement):
 		biasWT.start()
 		politicalFT = Thread(target=self.threadableJob, args=(politicianNameExtractorFromDB, [webScraper.getArticle(), tdcLock, tdc], "politicalFigures", "politicalFiguresLock"))
 		politicalFT.start()
+		politicalFIDT = Thread(target=self.threadableJob, args=(politicianIdExtractorFromDB, [webScraper.getArticle(), tdcLock, tdc], "politicalFigureIds", "politicalFigureIdsLock"))
+		politicalFIDT.start()
 
-		self.threads = [summaryT, biasRT, biasWT, politicalFT]
+		self.threads = [summaryT, biasRT, biasWT, politicalFT, politicalFIDT]
 
 	# function to run a given function and once finished, update article job's
 	# variable and increment number of jobs done
@@ -187,21 +192,47 @@ class ArticleManager():
 	# checks if article already exists in database
 	def isArticleInDB(self, url: str) -> bool:
 		self.transactionClientLock.acquire()
-		result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
-		self.transactionClientLock.release()
-		print(f"DEBUG: isArticleInDB - {result}")
-		if len(result) == 0:
+
+		results = self.transactionClient.query("Article", filter=f'URL = "{url}"')
+		print(f"DEBUG: isArticleInDB - {results}")
+		if len(results) == 0:
+			self.transactionClientLock.release()
 			return False
-		if len(result) != 1:
+		if len(results) != 1:
+			self.transactionClientLock.release()
 			return None
 		
 		# process required jobs to suplement data recieved
-		articleDict = result[0]
+		articleDict = results[0]
+		articleId = articleDict['ID']
+		results = self.transactionClient.query("Politician_KeyTable", filter=f'ID_Article = "{articleId}"')
+		politicianIds = [result['ID_Politician'] for result in results]
+
+		results = []
+		for id in politicianIds:
+			results += self.transactionClient.query("Politician", filter=f'ID = "{id}"')
+		politicanNames = [result['Fname'] + ' ' + result['Lname'] for result in results]
+
+		if len(politicanNames) != len(politicianIds):
+			print("Error")
+			self.transactionClientLock.release()
+			return None
+		
+		biasWords = dict()
+		results = self.transactionClient.query("Article_ArticleBias", filter=f'ID_Article = "{articleId}"')
+		for result in results:
+			biasWords[result['KeyPhrase']] = result['BiasReason']
+		biasWords = json.dumps(biasWords)
+
+		self.transactionClientLock.release()
+
 		self.cacheLock.acquire()
 		self.preventCacheOverflow()
-		# self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['Text'], articleDict['Summary'], (articleDict['LowerBias'], articleDict['upperBias']), articleDict['BiasedWords'], articleDict['PoliticalFigures'])
-		# print(self)
+		print(f"DEBUG: {articleDict.keys()}")
+		self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['OriginalText'], articleDict['SummaryParagraph'], (articleDict['LowerBias'], articleDict['UpperBias']), biasWords, politicanNames, politicianIds)
 		self.cacheLock.release()
+		print('DEBUG: DB extraction complete')
+		print(self)
 		return True
 		
 	# checks if a job for the requested article is already processing
@@ -224,6 +255,41 @@ class ArticleManager():
 		for value in tmp_list[0:upper+1]:
 			del self.cache[value.get("url")]
 
+	def insertDataFromJobToDB(self, url: str, header: str, text: str, summary: str, lowBias: float, highBias: float, biasWords: dict, politicalFigureIds: list):
+		result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
+		if len(result) != 0:
+			print("ERROR: there already exists an article")
+			return None
+		
+		# clean data
+		if lowBias > highBias:
+			tmp = highBias
+			highBias = lowBias
+			lowBias = highBias
+		text = text.replace("'", "")
+		summary = summary.replace("'", "")
+		for key, value in biasWords.items():
+			biasWords[key] = value.replace("'", "")
+
+		article = Article(url, header, text, summary, highBias, lowBias, "TESTING", True)
+		self.transactionClient.insert(article)
+
+		result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
+		if len(result) != 1:
+			print("ERROR: more than one article created")
+			return None
+
+		articleDict = result[0]
+		insert_bias_keywords(self.transactionClient, articleDict['ID'], biasWords, True)
+
+
+		for id in politicalFigureIds:
+			politicalFigureMentioned = Politician_KeyTable(id, articleDict['ID'], True)
+			self.transactionClient.insert(politicalFigureMentioned)
+		
+		print("DEBUG: insertDataFromJobToDB - inserted data into DB")
+		return True
+
 	# waits until all processes of article job are done 
 	# and then moves it to cache
 	def moveJobToCache(self, url: str) -> None:
@@ -236,13 +302,12 @@ class ArticleManager():
 		self.cacheLock.acquire()
 		tmp = self.jobs[url]
 		self.preventCacheOverflow()
-		self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"))
+		self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"), tmp.get("politicalFigureIds"))
 		tmp.cleanJob()
 		print(self)
 		del self.jobs[url]
 		self.cacheLock.release()
-		# article = transactionDataClient.Article(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"))
-		# self.transactionClient.insert(article)	
+		self.insertDataFromJobToDB(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange")[0], tmp.get("biasRange")[1], json.loads(tmp.get("biasWords")), tmp.get("politicalFigureIds"))
 		self.transactionClientLock.release()
 		self.jobsLock.release()
 
@@ -267,7 +332,10 @@ class ArticleManager():
 	# checks where the article requested is stored in and if required, 
 	# starts the process of generating the data
 	def getArticle(self, url: str) -> dict: # Or None if invalid url
-		if self.isArticleInCache(url) or self.isArticleInDB(url):
+		if self.isArticleInCache(url):
+			self.cache[url].requestRate.updateRate()
+			return self.cache[url]
+		if self.isArticleInDB(url):
 			self.cache[url].requestRate.updateRate()
 			return self.cache[url]
 		if self.isArticleBeingProcessed(url):
@@ -358,7 +426,7 @@ class PoliticianManager():
 	tdc : transactionDataClient
 	ID: the ID of the politician
 	'''
-	def getPoliticianByID(self, tdc:transactionDataClient, ID:int) -> list(dict):
+	def getPoliticianByID(self, tdc:transactionDataClient, ID:int) -> list:
 		politicianInfo = tdc.query(POLITICIAN, f'ID = {ID}')
 		politicianInfo['articles'] = find_related_articles(tdc, ID)
 		return politicianInfo
@@ -369,7 +437,8 @@ class SessionManager():
 
 		self.tdcLock = Lock()
 		self.tdc = transactionDataClient()
-    		self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
+		self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
+
 
 	def getArticleItem(self, url: str, itemName: str):
 		return self.articleManager.getItem(url, itemName)
