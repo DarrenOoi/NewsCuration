@@ -271,7 +271,7 @@ class ArticleManager():
 		for key, value in biasWords.items():
 			biasWords[key] = value.replace("'", "")
 
-		article = Article(url, header, text, summary, highBias, lowBias, "TESTING", True)
+		article = Article(url, header, text, summary, highBias, lowBias, False)
 		self.transactionClient.insert(article)
 
 		result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
@@ -280,11 +280,11 @@ class ArticleManager():
 			return None
 
 		articleDict = result[0]
-		insert_bias_keywords(self.transactionClient, articleDict['ID'], biasWords, True)
+		insert_bias_keywords(self.transactionClient, articleDict['ID'], biasWords, False)
 
 
 		for id in politicalFigureIds:
-			politicalFigureMentioned = Politician_KeyTable(id, articleDict['ID'], True)
+			politicalFigureMentioned = Politician_KeyTable(id, articleDict['ID'], False)
 			self.transactionClient.insert(politicalFigureMentioned)
 		
 		print("DEBUG: insertDataFromJobToDB - inserted data into DB")
