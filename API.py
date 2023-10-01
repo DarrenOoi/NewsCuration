@@ -196,14 +196,14 @@ def politicianRequestByID():
 ###
 # Saves an article for the user to view later. IMPORTANT. This assumes the Articlejob is finished an in Cache, i.e.
 # on the user, the article has been fully loaded. If this route is asked for an unknown article,
-# it will kickstart the prompts to populate and return FAIL in the meantime. SUCCESS if saved 
+# it will kickstart the prompts to populate and return NOT IN CACHE in the meantime. SUCCESS if saved. 
 # Input params:
 # -------------
 #   url: the url of the article
 #
 # Output params:
 #---------------
-# "Result" : <"SUCCESS" or "FAIL">
+# "Result" : <"SUCCESS", "ALREADY_SAVED" "NOT IN CACHE">
 ###
 @app.route('/SaveArticle', methods=['POST'])
 def saveArticle():
@@ -238,7 +238,7 @@ def getSavedArticle():
 # Returns:
 #---------
 # {
-#   "0" : {
+#   "Result" : [{
 #    ID int,
 #    Fname : str 
 #    Lname : str 
@@ -250,10 +250,8 @@ def getSavedArticle():
 #    InsertedAt : DATETIME
 #    InsertedBy : str
 #    ImageLink : str
-#    Summary : str } OR {}
-#   "1" : {<AS ABOVE>}  OR {}
-#   "2" : {<AS ABOVE>}  OR {}
-#   "LEN" : {<NUMBER OF FILLED POLITICIANS}
+#    Summary : str } ... <NONE, ONE OR MULTIPLE>
+#    ]
 #}
 ###
 @app.route('/GetRecentPoliticians', methods=['POST'])
@@ -265,13 +263,11 @@ def getRecentPoliticians():
 # Returns:
 #---------
 # {
-#   "0" : {
-#    url : str,
-#    Header : str } OR {}
-#   "1" : {<AS ABOVE>}  OR {}
-#   "2" : {<AS ABOVE>}  OR {}
-#   "LEN" : {<NUMBER OF FILLED POLITICIANS}
-#}
+#   "Result" : [{
+#    'url' : str,
+#    'Header' : str } ... <NONE, ONE OR MULTIPLE>
+#   ]
+# }
 ###
 @app.route('/GetRecentArticles', methods=['POST'])
 def getRecentArticles():
