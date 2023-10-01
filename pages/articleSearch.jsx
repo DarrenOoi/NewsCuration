@@ -11,8 +11,8 @@ import Image from 'next/image';
 import tts from '@/components/pictures/tts.png';
 import textSize from '@/components/pictures/textSize.png';
 import profilePicSmall from '@/components/pictures/profilePicSmall.png';
-import VerticleLine from '@/components/JustTheFactsLine';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
+import List from '@/components/List';
 
 function Home() {
   const [text, setText] = useState('');
@@ -20,6 +20,18 @@ function Home() {
   const [header, setHeader] = useState(null);
   const [article, setArticle] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+
+  const array = [
+    {
+      name: 'Yo Minav Sleep Well Love',
+    },
+    {
+      name: 'Yo Dude What Why How',
+    },
+    {
+      name: 'OMG This Guy',
+    },
+  ];
 
   const handleSubmit = () => {
     if (text.trim() != '') {
@@ -110,24 +122,18 @@ function Home() {
                   className='bg-[#7895B1] p-4 rounded-xl'
                   style={{ width: '1200px' }}
                 >
-                  <div className='flex justify-start space-x-4 mt-5'>
+                  <div className='flex justify-center space-x-4 mt-2'>
                     <Input setText={setText} placeholder='Enter article URL' />{' '}
-                    <button
-                      className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'
-                      style={{ width: '225px', height: '45px' }}
-                    >
-                      <text
-                        className='text-white text-sm'
-                        onClick={handleSubmit}
-                      >
-                        CLICK FOR THE FACTS
-                      </text>
-                    </button>
+                    <Button
+                      text='CLICK FOR THE'
+                      boldText='FACTS'
+                      handleClick={handleSubmit}
+                    />
                   </div>
 
                   <div className='flex flex-row mt-5'>
                     <div
-                      className='card bg-[#2E2E2E] rounded-full p-0 flex justify-center'
+                      className='card bg-[#2E2E2E] rounded-full p-0 flex justify-center ml-5'
                       style={{ width: '415px', height: '33px' }}
                     >
                       <Image
@@ -152,17 +158,20 @@ function Home() {
                   </div>
 
                   <div className='mt-5'>
-                    <Card
-                      content={
-                        result ? (
-                          result
-                        ) : submitted ? (
+                    {result ? (
+                      <Card content={result} />
+                    ) : submitted ? (
+                      <Card
+                        content={
                           <span className='mt-2 loading loading-spinner loading-lg text-info'></span>
-                        ) : (
-                          'Waiting for input...'
-                        )
-                      }
-                    />
+                        }
+                      />
+                    ) : (
+                      <div className='mt-6'>
+                        <List title={'RECENTS'} items={array} />
+                        <List title={'MOST POPULAR'} items={array} />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

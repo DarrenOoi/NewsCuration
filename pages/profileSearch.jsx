@@ -68,9 +68,10 @@ function ProfileSearch() {
 
                 <div
                   className='bg-[#7895B1] p-4 rounded-xl'
-                  style={{ width: '1200px' }}
+                  //check if length is suitable for search results
+                  style={{ width: '1200px', height: '600px' }}
                 >
-                  <div className='flex justify-start justify-center space-x-4 mt-2'>
+                  <div className='flex justify-center space-x-4 mt-2'>
                     <Input
                       setText={setSearch}
                       placeholder='Enter political profile name'
@@ -89,8 +90,12 @@ function ProfileSearch() {
                     </div>
                   ) : (
                     <div className='mt-6'>
-                      <List title={'RECENTS'} items={array} />
-                      <List title={'MOST POPULAR'} items={array} />
+                      <List title={'RECENTS'} items={array} politician={true} />
+                      <List
+                        title={'MOST POPULAR'}
+                        items={array}
+                        politician={true}
+                      />
                     </div>
                   )}
                 </div>

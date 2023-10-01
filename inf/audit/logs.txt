@@ -9638,3 +9638,164 @@ Note: The footer text is not related to the above article.'
 [2023-10-01 09:30:44.775898] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
+[2023-10-01 12:24:39.993178] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002CE39026810>]
+[2023-10-01 12:24:39.994874] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002CE3745EDD0>]
+[2023-10-01 12:24:41.387997] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 12:24:49.713935] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 12:24:50.810530] [] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 12:25:30.128087] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 12:25:31.364169] [] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 12:25:49.319116] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 12:25:51.539598] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 12:25:53.008580] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 12:25:54.072192] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 12:25:55.258004] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 12:25:55.826312] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
+    1.0,
+    1.0,
+    'TESTING.',
+    1, 
+    NOW(),
+    '',
+    'Donald Trump debating Meghan Markle would ‘revive her flatlining career’',
+    'Sky News host Jenna Clarke says former president Donald Trump doing a debate with Meghan Markle would “revive her flatlining career”. Read More Our Apps',
+    '- Sky News host Jenna Clarke suggests that a debate between former President Donald Trump and Meghan Markle could potentially revive her career.
+- Clarke believes that Markles career has been declining recently.
+- The debate could provide Markle with a platform to gain public attention and revive her professional life.'
+    );
+    : 
+ error (1054, "Unknown column 'Summary' in 'field list'")]
+[2023-10-01 12:25:56.386738] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
+    1.0,
+    1.0,
+    'TESTING.',
+    1, 
+    NOW(),
+    '',
+    'Donald Trump debating Meghan Markle would ‘revive her flatlining career’',
+    'Sky News host Jenna Clarke says former president Donald Trump doing a debate with Meghan Markle would “revive her flatlining career”. Read More Our Apps',
+    '- Sky News host Jenna Clarke suggests that a debate between former President Donald Trump and Meghan Markle could potentially revive her career.
+- Clarke believes that Markles career has been declining recently.
+- The debate could provide Markle with a platform to gain public attention and revive her professional life.'
+    );
+    ]
+[2023-10-01 12:25:57.678813] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 12:25:58.638971] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 12:26:01.116325] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 12:26:02.853610] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 12:26:04.534276] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 12:26:05.032417] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
+    1.0,
+    1.0,
+    'TESTING.',
+    1, 
+    NOW(),
+    '',
+    'Donald Trump debating Meghan Markle would ‘revive her flatlining career’',
+    'Sky News host Jenna Clarke says former president Donald Trump doing a debate with Meghan Markle would “revive her flatlining career”. Read More Our Apps',
+    '- Sky News host Jenna Clarke believes that a debate between former president Donald Trump and Meghan Markle could revive her career.
+- The suggestion is made that Meghan Markles career is currently not doing well.
+- Clarke implies that Trumps involvement in a debate with Markle would generate significant interest and attention.
+- The article mentions the possibility of Trump and Markle engaging in a debate.
+- There is a suggestion that this debate would benefit Markles career.
+- The article does not provide any specific details about when or where this debate might take place.'
+    );
+    : 
+ error (1054, "Unknown column 'Summary' in 'field list'")]
+[2023-10-01 12:26:05.564922] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, Summary, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
+    1.0,
+    1.0,
+    'TESTING.',
+    1, 
+    NOW(),
+    '',
+    'Donald Trump debating Meghan Markle would ‘revive her flatlining career’',
+    'Sky News host Jenna Clarke says former president Donald Trump doing a debate with Meghan Markle would “revive her flatlining career”. Read More Our Apps',
+    '- Sky News host Jenna Clarke believes that a debate between former president Donald Trump and Meghan Markle could revive her career.
+- The suggestion is made that Meghan Markles career is currently not doing well.
+- Clarke implies that Trumps involvement in a debate with Markle would generate significant interest and attention.
+- The article mentions the possibility of Trump and Markle engaging in a debate.
+- There is a suggestion that this debate would benefit Markles career.
+- The article does not provide any specific details about when or where this debate might take place.'
+    );
+    ]
+[2023-10-01 12:26:06.978541] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 12:26:08.125037] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
