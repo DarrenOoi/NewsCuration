@@ -21,7 +21,7 @@ function Home() {
   const [header, setHeader] = useState(null);
   const [article, setArticle] = useState(null);
   const [submitted, setSubmitted] = useState(false);
-  const [recents, setRecents] = useState(null);
+  const [recents, setRecents] = useState([]);
 
   useEffect(() => {
     async function fetchArticles() {
@@ -38,16 +38,16 @@ function Home() {
   }, []);
 
   const array = [
-    {
-      name: 'Yo Minav Sleep Well Love',
-      url: 'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
-    },
-    {
-      name: 'Yo Dude What Why How',
-    },
-    {
-      name: 'OMG This Guy',
-    },
+    // {
+    //   Header: 'Yo Minav Sleep Well Love',
+    //   url: 'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
+    // },
+    // {
+    //   Header: 'Yo Dude What Why How',
+    // },
+    // {
+    //   Header: 'OMG This Guy',
+    // },
   ];
 
   const handleListClick = (url) => {
@@ -199,7 +199,7 @@ function Home() {
                       <div className='mt-6'>
                         <List
                           title={'RECENTS'}
-                          items={array}
+                          items={recents}
                           handleClick={handleListClick}
                         />
                         <List title={'MOST POPULAR'} items={array} />

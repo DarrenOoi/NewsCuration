@@ -68,8 +68,7 @@ function ProfileSearch() {
 
                 <div
                   className='bg-[#7895B1] p-4 rounded-xl'
-                  //check if length is suitable for search results
-                  style={{ width: '1200px', height: '600px' }}
+                  style={{ width: '1200px' }}
                 >
                   <div className='flex justify-center space-x-4 mt-2'>
                     <Input

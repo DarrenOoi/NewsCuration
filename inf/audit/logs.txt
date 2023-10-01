@@ -10716,3 +10716,94 @@ DROP COLUMN Summary]
     FROM Article
     WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
     ]
+[2023-10-01 18:24:08.381752] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000288AE4E5DD0>]
+[2023-10-01 18:24:08.383719] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002889B89D7D0>]
+[2023-10-01 18:24:09.301456] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 18:25:10.022522] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 18:25:10.941652] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "11"
+    ]
+[2023-10-01 18:25:11.861416] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "11"
+    ]
+[2023-10-01 18:35:36.868129] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-01 18:36:31.987746] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-01 18:37:47.296078] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-01 18:38:16.820467] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://news.yahoo.com/trump-using-guns-send-campaign-180825087.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALHmtcdD31ZyVyEjwuimxZBwP8nD169JOTo0C5H-ff-Y1i_rhutyjHLnJQqEhXBkfTwjCl7xRGINlMooPkn0_PXMxgVL6IPss2Ck3bVBpcjFzlTzloK1CXGIxwaytw4-aIOamwMGmBwwsuSLwpskC5L6mleHEZH31gFrAAYThGv4"
+    ]
+[2023-10-01 18:38:21.232154] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 18:38:23.057000] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 18:38:24.296098] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://news.yahoo.com/trump-using-guns-send-campaign-180825087.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALHmtcdD31ZyVyEjwuimxZBwP8nD169JOTo0C5H-ff-Y1i_rhutyjHLnJQqEhXBkfTwjCl7xRGINlMooPkn0_PXMxgVL6IPss2Ck3bVBpcjFzlTzloK1CXGIxwaytw4-aIOamwMGmBwwsuSLwpskC5L6mleHEZH31gFrAAYThGv4"
+    ]
+[2023-10-01 18:38:25.549926] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://news.yahoo.com/trump-using-guns-send-campaign-180825087.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALHmtcdD31ZyVyEjwuimxZBwP8nD169JOTo0C5H-ff-Y1i_rhutyjHLnJQqEhXBkfTwjCl7xRGINlMooPkn0_PXMxgVL6IPss2Ck3bVBpcjFzlTzloK1CXGIxwaytw4-aIOamwMGmBwwsuSLwpskC5L6mleHEZH31gFrAAYThGv4"
+    ]
+[2023-10-01 18:38:33.601289] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://news.yahoo.com/trump-using-guns-send-campaign-180825087.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALHmtcdD31ZyVyEjwuimxZBwP8nD169JOTo0C5H-ff-Y1i_rhutyjHLnJQqEhXBkfTwjCl7xRGINlMooPkn0_PXMxgVL6IPss2Ck3bVBpcjFzlTzloK1CXGIxwaytw4-aIOamwMGmBwwsuSLwpskC5L6mleHEZH31gFrAAYThGv4"
+    ]
+[2023-10-01 18:38:35.522728] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://news.yahoo.com/trump-using-guns-send-campaign-180825087.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALHmtcdD31ZyVyEjwuimxZBwP8nD169JOTo0C5H-ff-Y1i_rhutyjHLnJQqEhXBkfTwjCl7xRGINlMooPkn0_PXMxgVL6IPss2Ck3bVBpcjFzlTzloK1CXGIxwaytw4-aIOamwMGmBwwsuSLwpskC5L6mleHEZH31gFrAAYThGv4',
+    0.5942028985507246,
+    0.5942028985507246,
+    0, 
+    NOW(),
+    '',
+    'Yahoo News Trump is using guns to send his campaign message',
+    'Ahead of a Monday campaign rally in Summerville, South Carolina, former president Donald Trump stopped to visit Palmetto State Armory, the firearm store that supplied the AR-15 style rifle a racist gunman used to fatally shoot three Black people in Florida late last month. As Philadelphia Inquirer columnist Will Bunch noted, though it was falsely reported that the former president purchased a firearm during his visit, the armory did sell the weapon to the Jacksonville shooter, whose previous hold in state custody for mental health issues should have disqualified him from being able to purchase a firearm under Floridas Baker Act. The 21-year-old white assailant carried out the fatal, racially motivated attack at a Jacksonville Dollar General store in a predominantly Black neighborhood in August after being denied entry to a nearby historically Black college. Authorities said that he had left behind evidence that he "hated Black people" and that his AR-15 style rifle had a swastika painted on it. Palmetto State Armory described the model used in the attack — the PA-15 — as "our interpretation of the legendary AR-15 rifle that you have grown to love," according to The Independent. The firearm store has also embraced fringe rhetoric, selling products embellished with imagery associated with the boogaloo movement, which grew from the slang term "boogaloo," meaning a war to topple the federal government, The Trace reported in 2021. The term, according to the Anti-Defamation League, has been used and promoted by white supremacists to allude to a future race war but those extremists largely did not join the movement. The store was criticized in 2011 "for selling a limited run of AR-15 lower receivers — the crucial part of a gun that is considered a firearm under federal law — inscribed with You Lie, the words shouted by U.S. Representative Joe Wilson of South Carolina at President Barack Obama during a 2009 congressional address," The Trace wrote, noting that the company ceased the sale of that part shortly after the shooting of then-U.S. Rep. Gabby Giffords, D-Ariz., and 18 others at a constituent meeting. During his visit Monday, Trump admired and posed for a photo with a decorated Glock on sale at Palmetto State Armory thats grip was engraved with his image, telling his entourage and others present during the trip that he wanted to buy the handgun in a now-deleted video of the encounter posted by his campaign. The video had garnered much attention as conflicting claims over whether the former president had purchased the firearm generated widespread confusion. Though his campaign spokesman Steven Cheung told CNN that he had not purchased the firearm from the company, Trump reposted a similar — if not the same — clip of him saying he wanted to buy the gun on his Truth Social account, which claimed that he had just bought the "Golden Glock," Meidas Touch reports. Georgia Rep. Marjorie Taylor Greene and her right-wing partner, Rightside Broadcasting Network producer Brian Glenn, had also appeared to confirm that Trump hard purchased the firearm during a Monday broadcast. But Glenn later refuted their confirmation later that day, saying that Trump did not buy the Glock and calling out the "fake press" asserting that he had, For the record, PRESIDENT TRUMP DID NOT BUY A FIREARM. I WAS THERE. MOVE ALONG FAKE PRESS. #Trump #SouthCarolina #BreakingNews pic.twitter.com/faEX6mtlrA — Brian Glenn (@brianglenntv) September 25, 2023 Despite the back-and-forth over whether he bought the gun, Trump would not have legally been able to make the purchase as Bunch and CNN contributor Stephen Gutowski, a firearms reporter, pointed out on X, formerly known as Twitter. Because the former president is facing two federal felony indictments, he can not acquire new guns under Title 18, U.S. Code section 922 (n), which makes it a crime for a person under indictment to receive any firearm that has been shipped in interstate or international commerce. Section 922 (d)(1) also makes it illegal for anyone to sell a firearm to a person who "is under indictment for, or has been convicted in any court of a crime punishable by imprisonment for a term exceeding one year." Though a federal judge struck down that prohibition as applied to a Texas man last year in an appealed case awaiting a ruling from a Fifth Circuit panel, there are several other rulings from after the Supreme Courts Bruen decision — which deemed discretionary gun restrictions unconstitutional but allowed for objective regulations like background checks — that uphold the restriction as constitutional. "So, as with a number of federal gun laws post-Bruen, different district judges have come down on different sides of this question. The Fifth Circuit seems likely to be the first appeals court to weigh in, but were still waiting on their decision," Gutowski tweeted. So, as with a number of federal gun laws post-Bruen, different district judges have come down on different sides of this question. The Fifth Circuit seems likely to be the first appeals court to weigh in, but were still waiting on their decision. — Stephen Gutowski (@StephenGutowski) September 25, 2023 "Facing multiple felony charges, the ex-president would not have passed a background check," Bunch wrote on X. "But [Palmetto State Armory] could sell an AR-15 to a young, mentally troubled white supremacist." It was falsely reported earlier today that Trump had purchased a Glock at the Palmetto State Armory. Facing multiple felony charges, the ex-president would not have passed a background check. But it could sell an AR-15 to a young, mentally troubled white supremacist — Will Bunch (@Will_Bunch) September 25, 2023 Have you always wanted Sunday football to feel more fun? Its Toy Story to the rescue this weekend. Caleb Williams and the Trojans werent the only ones sweating out a near-upset on a Saturday filled with dramatic finishes. While Messi remains sidelined with an undisclosed injury, a cloud of uncertainty lingers over DRV PNK Stadium and Inter Miamis loyal supporters. Alvarez won a unanimous decision to retain his titles by scores of 118-109 twice and 119-108. Yahoo Sports had it 119-108 for Alvarez. Through five weeks of the college football season, the national championship picture feels wide open. The NFL is headed across the pond. Heres what you need to know about how to watch the Jaguars vs. Falcons in London. Biden has formally sided with striking auto workers against their corporate bosses. Heres what could go wrong. In a surprise turnabout following several days when a stoppage seemed all but inevitable, Congress acted with lightning speed Saturday to avert a government shutdown. iOS 17 has new features, including FaceTime Video Messages. Heres how to record and send video messages to your loved ones when they cant pick up the phone. Heres how to watch the USC vs. Colorado game this week, plus the rest of the Week 5 college football schedule. The companys origin dates all the way back to 2017, when it was founded by former Apple employees, Bethany Bongiorno, Imran Chaudhri. In spite -- or perhaps because -- of such mysteries, Humane is now an extremely well-funded early stage startup. The $100 million B round arrived the following September, including Tiger Global Management, SoftBank Group, BOND, Forerunner Ventures and Qualcomm Ventures. Save on Patagonia, The North Face, Nike and more. The post DICK’S Sporting Goods is having a 2-day flash sale, and you can get up to 50% off appeared first on In The Know. Historically, product innovation has focused on the majority, often leaving many behind. By leveraging product equity teams’ expertise, organizations can tap into their support to help ensure that not only are historically underinvested communities included in the product development process, but also teams, organizations, and companies are held accountable for outcomes. Prosecutor describes Duane "Keffe D" Davis as the "on-ground, on-site commander" who "ordered the death" of the iconic rapper in 1996. Theres one particular luggage brand that pilots and flight attendants love — and right now, its best sellers are on sale on Amazon. With another film looking back at the so-called Bling Ring — the group of California teens who burglarized the homes of celebrities after tracking their whereabouts on social media — we look back at the who, what and where of what happened back in 2008 and 2009. I just graduated college, so you should definitely listen to me. Brands like Bobbi Brown, KOSAS and Kiehls are also majorly marked down. The COMFEE countertop dishwasher really is That Girl™. Nourish your hair, skin and lashes with this natural, vitamin-rich oil — 60% off at Amazon.',
+    '- Former President Donald Trump visited Palmetto State Armory, the firearm store that supplied the AR-15 style rifle used in a racially motivated shooting in Florida.
+- The shooter, a 21-year-old white supremacist, carried out the attack at a Dollar General store in a predominantly Black neighborhood and left behind evidence of his racist motives.
+- Palmetto State Armory sells products associated with the boogaloo movement, a fringe movement associated with white supremacists.
+- During his visit, Trump posed with a decorated Glock and expressed interest in buying it, although there are conflicting reports about whether he actually purchased the firearm.
+- Trump would not have been able to legally buy a firearm due to his federal felony indictments.
+- Different district judges have ruled differently on whether a person under indictment can receive a firearm, and the Fifth Circuit may provide a ruling on the matter.
+- The article ends abruptly with unrelated sentences and promotions for other content.'
+    );
+    ]
+[2023-10-01 18:38:37.053441] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 18:38:37.953775] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://news.yahoo.com/trump-using-guns-send-campaign-180825087.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALHmtcdD31ZyVyEjwuimxZBwP8nD169JOTo0C5H-ff-Y1i_rhutyjHLnJQqEhXBkfTwjCl7xRGINlMooPkn0_PXMxgVL6IPss2Ck3bVBpcjFzlTzloK1CXGIxwaytw4-aIOamwMGmBwwsuSLwpskC5L6mleHEZH31gFrAAYThGv4"
+    ]
