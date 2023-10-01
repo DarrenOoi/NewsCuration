@@ -559,7 +559,6 @@ class SessionManager():
     
     def close(self):
         self.tdc.closeConnection()
-    
 
 # sm = SessionManager(2)
 # url1 = "https://theconversation.com/justin-trudeaus-india-accusation-complicates-western-efforts-to-rein-in-china-213922"

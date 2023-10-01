@@ -9,9 +9,9 @@ import { useEffect, useState } from 'react';
 import { fetchScore } from '@/utils/fetchScore';
 import { fetchBiasWords } from '@/utils/fetchBiasWords';
 import Image from 'next/image';
-import tts from '@/components/tts.png';
-import textSize from '@/components/textSize.png';
-import profilePicSmall from '@/components/profilePicSmall.png';
+import tts from '@/components/pictures/tts.png';
+import textSize from '@/components/pictures/textSize.png';
+import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 
 function AnalysisPage() {
   const router = useRouter();
