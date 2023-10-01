@@ -24,6 +24,10 @@ function ProfileSearch() {
     if (search.trim() != '') {
       setSubmitted(true);
       setResult(null);
+      router.push({
+        pathname: '/profilePage',
+        query: { name: 'John Doe' },
+      });
     } else setResult(null);
   };
 

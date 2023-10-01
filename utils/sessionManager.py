@@ -358,7 +358,7 @@ class PoliticianManager():
 	tdc : transactionDataClient
 	ID: the ID of the politician
 	'''
-	def getPoliticianByID(self, tdc:transactionDataClient, ID:int) -> list(dict):
+	def getPoliticianByID(self, tdc:transactionDataClient, ID:int):
 		politicianInfo = tdc.query(POLITICIAN, f'ID = {ID}')
 		politicianInfo['articles'] = find_related_articles(tdc, ID)
 		return politicianInfo
@@ -369,7 +369,7 @@ class SessionManager():
 
 		self.tdcLock = Lock()
 		self.tdc = transactionDataClient()
-    		self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
+		self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
 
 	def getArticleItem(self, url: str, itemName: str):
 		return self.articleManager.getItem(url, itemName)

@@ -1,20 +1,28 @@
+import { useRouter } from 'next/router';
+
 const Table = ({ articles }) => {
+  const router = useRouter();
+
+  const visitSource = (url) => {
+    router.push(url);
+  };
+
   return (
     <div className='overflow-x-auto rounded-lg'>
       <table className='table'>
         <thead>
           <tr className='bg-gray-200'>
             <th>
-              <text className='text-black font-bold'>TITLE</text>
+              <p className='text-black font-bold'>TITLE</p>
             </th>
             <th>
-              <text className='text-black font-bold'>DATE</text>
+              <p className='text-black font-bold'>DATE</p>
             </th>
             <th>
-              <text className='text-black font-bold'>SOURCE</text>
+              <p className='text-black font-bold'>SOURCE</p>
             </th>
             <th>
-              <text className='text-black font-bold'>BIAS SCORE</text>
+              <p className='text-black font-bold'>BIAS SCORE</p>
             </th>
             <th></th>
           </tr>
@@ -22,16 +30,19 @@ const Table = ({ articles }) => {
         {articles.map((article, index) => (
           <tbody key={index}>
             <tr className='bg-gray-200'>
-              <th>{article.title}</th>
-              <td>{article.date}</td>
-              <td>{article.source}</td>
+              <th>{article.Header}</th>
+              <td>{article.InsertedAt}</td>
+              <td>{article.URL}</td>
               <td>
-                <text className='text-orange-400 font-extrabold'>
-                  {article.score}
-                </text>
+                <p className='text-orange-400 font-extrabold'>
+                  {article.LowerBias}
+                </p>
               </td>
               <td>
-                <button className='btn btn-neutral rounded-full btn-xs'>
+                <button
+                  className='btn btn-neutral rounded-full btn-xs'
+                  onClick={() => visitSource(article.URL)}
+                >
                   VISIT ARTICLE
                 </button>
               </td>
