@@ -6,6 +6,7 @@ import Button from '@/components/Button';
 import Input from '@/components/Input';
 import { useRouter } from 'next/router';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
+import List from '@/components/List';
 
 function ProfileSearch() {
   const [search, setSearch] = useState('');
@@ -13,12 +14,28 @@ function ProfileSearch() {
   const [result, setResult] = useState('');
 
   const router = useRouter();
-  // const handleBrowse = () => {
-  //   router.push({
-  //     pathname: '/profilePage',
-  //     query: { name: 'John Doe' },
-  //   });
-  // };
+  const array = [
+    {
+      name: 'Minav Tribedi',
+      countryCode: 'AU',
+    },
+    {
+      name: 'Yash Shwarma',
+      countryCode: 'AU',
+    },
+    {
+      name: 'Sean Mariokart',
+      countryCode: 'AU',
+    },
+    {
+      name: 'Ron Atsley',
+      countryCode: 'AU',
+    },
+    {
+      name: 'Daniel Darren',
+      countryCode: 'AU',
+    },
+  ];
 
   const handleSearch = () => {
     if (search.trim() != '') {
@@ -66,49 +83,14 @@ function ProfileSearch() {
                   </div>
 
                   {/* recents and most popular only shows when no search is submitted  */}
-                  {/* make a component for this  */}
                   {submitted ? (
                     <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-8 justify-start'>
-                      <div>
-                        <p className='text-amber-400 font-bold mb-2'>
-                          Search Results
-                        </p>
-                        <div className='flex'>
-                          <p> flag </p>
-                          <p className='mb-2'>John Mayer</p>
-                        </div>
-                        <p className='mb-2'>Yash Man Yea Dude</p>
-                        <p className='mb-2'>Minav Tribedi</p>
-                      </div>
+                      <p>submitted</p>
                     </div>
                   ) : (
-                    <div>
-                      <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-8 justify-start'>
-                        <div>
-                          <p className='text-amber-400 font-bold mb-2'>
-                            RECENTS
-                          </p>
-                          <div className='flex'>
-                            <p> flag </p>
-                            <p className='mb-2'>John Mayer</p>
-                          </div>
-                          <p className='mb-2'>Yash Man Yea Dude</p>
-                          <p className='mb-2'>Minav Tribedi</p>
-                        </div>
-                      </div>
-                      <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-2 justify-start'>
-                        <div>
-                          <p className='text-amber-400 font-bold mb-2'>
-                            MOST POPULAR
-                          </p>
-                          <div className='flex'>
-                            <p> flag </p>
-                            <p className='mb-2'>John Mayer</p>
-                          </div>
-                          <p className='mb-2'>Yash Man Yea Dude</p>
-                          <p className='mb-2'>Minav Tribedi</p>
-                        </div>
-                      </div>
+                    <div className='mt-6'>
+                      <List title={'RECENTS'} items={array} />
+                      <List title={'MOST POPULAR'} items={array} />
                     </div>
                   )}
                 </div>

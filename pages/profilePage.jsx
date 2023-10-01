@@ -7,7 +7,6 @@ import { findFlagUrlByCountryName } from 'country-flags-svg';
 import { useRouter } from 'next/router';
 import { fetchPolitician } from '@/utils/fetchPolitician';
 import { useEffect, useState } from 'react';
-import VerticleLine from '@/components/JustTheFactsLine';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import Input from '@/components/Input';
 
