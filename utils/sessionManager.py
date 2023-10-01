@@ -397,23 +397,15 @@ class ArticleManager():
         return out
 
     def getRecents(self):
-        out = {}
+        out = {"Result" : []}
         tempQueue = queue.Queue(3)
-        count = 0
         while self.recents.empty() is False:
             article = self.recents.get()
-            out[str(count)] = {
+            out["Result"].append({
                 "url" : article.url,
-                "header" : self.getItem(article.url, HEADER)
-                }  
+                "Header" : self.getItem(article.url, HEADER)
+                })  
             tempQueue.put(article)
-            count += 1
-            
-        out["LEN"] = (count)
-        if count < 3:
-            for i in range(count, 3):
-                out[str(i)] = {}
-        
         self.recents = tempQueue
         return out
 
@@ -511,19 +503,15 @@ class PoliticianManager():
         return record
     
     def getRecents(self):
-        recents = {}
+        # recents = {}
+        out = {"Result" : []}
         tempQueue = queue.Queue(3)
-        count = 0
         while self.recents.empty() is False:
-            recents[str(count)] = self.recents.get()
-            tempQueue.put(recents[str(count)])
-            count += 1
-        recents["LEN"] = (count)
-        if count < 3:
-            for i in range(count, 3):
-                recents[str(i)] = {}
+            politician = self.recents.get()
+            out["Result"].append(politician)
+            tempQueue.put(politician)
         self.recents = tempQueue
-        return recents
+        return out
 
 class SessionManager():
     def __init__(self, limit: int) -> None:
