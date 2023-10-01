@@ -1,6 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import { fetchResults } from '@/utils/fetchResults';
 import Card from '@/components/Card';
@@ -13,6 +13,7 @@ import textSize from '@/components/pictures/textSize.png';
 import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import List from '@/components/List';
+import { fetchRecentArticles } from '@/utils/fetchRecentArticles';
 
 function Home() {
   const [text, setText] = useState('');
@@ -20,6 +21,21 @@ function Home() {
   const [header, setHeader] = useState(null);
   const [article, setArticle] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [recents, setRecents] = useState(null);
+
+  useEffect(() => {
+    async function fetchArticles() {
+      try {
+        const res = await fetchRecentArticles();
+        setRecents(res);
+        console.log(res);
+      } catch (error) {
+        //add error handling when request fails
+        console.log('error');
+      }
+    }
+    fetchArticles();
+  }, []);
 
   const array = [
     {

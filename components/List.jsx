@@ -10,17 +10,20 @@ const List = ({ title, items, politician }) => {
         {items.map((item, index) => (
           <div key={index} className='flex mb-2'>
             {politician ? (
-              <BsPersonCircle className='align-bottom mr-4' size={25} />
+              <div key={index} className='flex mb-2'>
+                <BsPersonCircle className='align-bottom mr-4' size={25} />
+                <p className='mr-4'>{item.name}</p>
+                <img
+                  src={findFlagUrlByIso2Code(item.countryCode)}
+                  className='opacity-70 mt-1'
+                  style={{ width: '25px', height: '20px' }}
+                />
+              </div>
             ) : (
-              <GrArticle className='align-bottom mr-4' size={25} />
-            )}
-            <p className='mr-4'>{item.name}</p>
-            {politician && (
-              <img
-                src={findFlagUrlByIso2Code(item.countryCode)}
-                className='opacity-70 mt-1'
-                style={{ width: '25px', height: '20px' }}
-              />
+              <div key={index} className='flex mb-2'>
+                <GrArticle className='align-bottom mr-4' size={25} />
+                <p className='mr-4'>{item.header}</p>
+              </div>
             )}
           </div>
         ))}

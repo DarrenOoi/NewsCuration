@@ -10469,3 +10469,80 @@ DROP COLUMN Summary]
     WHERE ID_Politician = 1 
 >>>>>>> master
     ]
+[2023-10-01 17:36:36.998809] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000106DD753A90>]
+[2023-10-01 17:36:36.999811] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000106DDB0C690>]
+[2023-10-01 17:36:38.069645] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 17:36:57.922149] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 17:37:00.174366] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 17:37:01.463935] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 17:37:02.630731] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 17:37:03.944429] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 17:37:07.104197] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 17:37:08.046044] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
+    1.0,
+    1.0,
+    0, 
+    NOW(),
+    '',
+    'Donald Trump debating Meghan Markle would ‘revive her flatlining career’',
+    'Sky News host Jenna Clarke says former president Donald Trump doing a debate with Meghan Markle would “revive her flatlining career”. Read More Our Apps',
+    '- Sky News host Jenna Clarke suggests that a debate between Donald Trump and Meghan Markle would help revive her career.
+- The idea is that such a debate would bring attention and publicity to Meghan Markle, potentially boosting her career.
+- It is implied that Meghan Markles career has been struggling or declining (referred to as "flatlining").
+- The suggestion made by Jenna Clarke is supported by the belief that Donald Trumps involvement in the debate would draw significant attention.
+- The article does not provide any information on the context or motivation behind the potential debate.
+- Sky News host Jenna Clarke is presenting her opinion on the matter, which is that this debate would be beneficial for Meghan Markles career.
+- The article does not provide any additional information or details about the situation.
+
+(Note: The footer does not contain any relevant information and should be excluded from the summary.)'
+    );
+    ]
+[2023-10-01 17:37:09.101437] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 17:37:10.017921] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-01 17:37:10.922498] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'revive her flatlining career',
+    'The phrase revive her flatlining career is emotionally charged and biased as it suggests that Meghan Markles career is failing or stagnating, and that a debate with Donald Trump would be the solution to revive it.',
+    '11',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-01 17:37:11.854348] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
