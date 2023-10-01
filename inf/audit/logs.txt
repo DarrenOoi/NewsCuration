@@ -9638,3 +9638,692 @@ Note: The footer text is not related to the above article.'
 [2023-10-01 09:30:44.775898] [Ron-Ash] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
+[2023-10-01 10:54:59.956680] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002CA091C5C50>]
+[2023-10-01 10:54:59.958269] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002CA09206CD0>]
+[2023-10-01 10:55:00.847753] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 10:55:01.790139] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+DROP COLUMN Summary]
+[2023-10-01 10:55:01.792124] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002CA091C5C50>]
+[2023-10-01 10:55:01.792226] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002CA09206CD0>]
+[2023-10-01 10:55:26.853733] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E004584350>]
+[2023-10-01 10:55:26.854735] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E0069AD3D0>]
+[2023-10-01 10:55:27.665875] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 10:56:05.209213] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000230B22E0F90>]
+[2023-10-01 10:56:05.211224] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000230B05902D0>]
+[2023-10-01 10:56:06.084349] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 10:56:06.978244] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-01 10:56:07.839636] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 10:56:08.280000] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-01 10:56:08.722226] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 10:56:09.609952] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-01 10:56:10.448830] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-01 10:56:11.292564] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-01 10:56:12.135788] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 10:56:12.972171] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-01 10:56:13.826947] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    3,
+    9,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 10:56:14.703605] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-01 10:56:15.576699] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '9',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 10:56:16.444181] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 10:56:16.447175] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000230B22E0F90>]
+[2023-10-01 10:56:16.448174] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000230B05902D0>]
+[2023-10-01 12:56:09.305281] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000023C19B1AD10>]
+[2023-10-01 12:56:09.307282] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000023C18351410>]
+[2023-10-01 12:56:10.148146] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 12:57:27.807079] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 12:57:40.553860] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 12:57:41.559819] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 12:59:05.023623] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002289B4AAA90>]
+[2023-10-01 12:59:05.025638] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000228F9076150>]
+[2023-10-01 12:59:05.882781] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 12:59:09.372102] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 12:59:11.207244] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 12:59:12.294305] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 13:00:55.745829] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B1632DF450>]
+[2023-10-01 13:00:55.746994] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B162F9A550>]
+[2023-10-01 13:00:56.588264] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 13:01:09.967693] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 13:01:22.870254] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 13:01:23.957599] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 13:01:25.027947] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 13:01:26.125238] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 13:11:34.670346] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001987FE9CA50>]
+[2023-10-01 13:11:34.671455] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001981E529210>]
+[2023-10-01 13:11:35.522386] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 13:58:16.045319] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 13:58:16.920464] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 14:00:32.939829] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000298AEF31F10>]
+[2023-10-01 14:00:32.941841] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000298D1542690>]
+[2023-10-01 14:00:33.822703] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 14:01:31.726033] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000208603F0C50>]
+[2023-10-01 14:01:31.728364] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002085D920E50>]
+[2023-10-01 14:01:32.556169] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 14:01:37.876087] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 14:01:38.711032] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 14:02:51.729892] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000261B3961610>]
+[2023-10-01 14:02:51.731910] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000261B21C9550>]
+[2023-10-01 14:02:52.590224] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 14:03:56.872209] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 14:03:57.733505] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 15:03:49.712457] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000154A2AC2510>]
+[2023-10-01 15:03:49.714457] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000154E4331F50>]
+[2023-10-01 15:03:50.566346] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 15:04:27.350753] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:04:29.222235] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 15:04:30.245215] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 15:04:31.237484] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:04:32.229485] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:04:37.270192] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:04:37.692528] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.35294117647058826,
+    0.17647058823529413,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning is in place for Loch Sport in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A driver has been charged over a crash that killed two boys in Sydneys south
+- The drivers lawyer said the driver may not be aware that the boys are dead
+- The two boys, aged nine and ten, were in the car along with a nine-year-old girl when it crashed into a tree
+- The boys later died at Sydney Childrens Hospital
+- The driver has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct
+- The driver remains in hospital and was due to face a bedside hearing, but it was adjourned until September 7
+- The lawyer said the driver is in the early stages of recovery and under the influence of medication
+- Police believe speed was a factor in the crash and are investigating whether street racing was also involved'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 're dead, lawyer says ',\n    ' Driver charged over horror crash that killed two b' at line 9")]
+[2023-10-01 15:04:38.116207] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.35294117647058826,
+    0.17647058823529413,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning is in place for Loch Sport in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A driver has been charged over a crash that killed two boys in Sydneys south
+- The drivers lawyer said the driver may not be aware that the boys are dead
+- The two boys, aged nine and ten, were in the car along with a nine-year-old girl when it crashed into a tree
+- The boys later died at Sydney Childrens Hospital
+- The driver has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct
+- The driver remains in hospital and was due to face a bedside hearing, but it was adjourned until September 7
+- The lawyer said the driver is in the early stages of recovery and under the influence of medication
+- Police believe speed was a factor in the crash and are investigating whether street racing was also involved'
+    );
+    ]
+[2023-10-01 15:04:38.960071] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 15:04:39.795841] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:08:22.354649] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/man-found-critical-in-woodbridge-dies-in-hospital/102922374"
+    ]
+[2023-10-01 15:08:24.184994] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 15:08:25.348386] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 15:08:26.372590] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/man-found-critical-in-woodbridge-dies-in-hospital/102922374"
+    ]
+[2023-10-01 15:08:27.505118] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/man-found-critical-in-woodbridge-dies-in-hospital/102922374"
+    ]
+[2023-10-01 15:08:30.423505] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/man-found-critical-in-woodbridge-dies-in-hospital/102922374"
+    ]
+[2023-10-01 15:08:31.284011] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-10-01/man-found-critical-in-woodbridge-dies-in-hospital/102922374',
+    0.4166666666666667,
+    0.16666666666666666,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Man dies in hospital after being found in critical condition outside Woodbridge home',
+    ' Man dies in hospital after being found in critical condition outside Woodbridge home An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning is in place for Loch Sport in Victoria. Keep up to date with ABC Emergency A man found bleeding and critically injured outside a house in Perths east has died in hospital. The 23-year-old man was found outside a residence on Chatham Road in Woodbridge about 1:25am on Saturday. The man, from the nearby suburb of Midland, was rushed to hospital where he underwent emergency surgery, but died that afternoon. The road was closed for much of the day as forensic police and other officers scoured the scene for evidence. A trail of dried blood could be seen leading to one of the houses on the street. A homicide investigation was underway. Detectives want anyone with information, or CCTV or dash-cam footage of Chatham Road between 12:30am and 2am to come forward. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A man was found outside a residence on Chatham Road in Woodbridge, Perth in critical condition.
+- The 23-year-old man, from the nearby suburb of Midland, was rushed to the hospital.
+- He underwent emergency surgery but unfortunately died later in the day.
+- The road was closed for investigations as forensic police and officers gathered evidence.
+- A trail of dried blood was found leading to one of the houses on the street.
+- A homicide investigation is underway.
+- Detectives are seeking information, CCTV footage, or dash-cam footage of Chatham Road between 12:30am and 2am.'
+    );
+    ]
+[2023-10-01 15:08:32.123565] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 15:08:32.959656] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/man-found-critical-in-woodbridge-dies-in-hospital/102922374"
+    ]
+[2023-10-01 15:08:33.805573] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'died',
+    'The word died indicates a tragic loss of life, evoking strong emotions.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:34.647291] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:08:35.486185] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'critically injured',
+    'The phrase critically injured suggests a severe and life-threatening condition, creating an emotional response.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:36.325253] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:08:37.166773] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'bleeding',
+    'The word bleeding implies a severe injury and can elicit feelings of distress or concern.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:38.006922] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:08:38.853614] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'emergency surgery',
+    'The term emergency surgery implies a critical and urgent medical procedure, potentially triggering anxiety or fear.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:39.695988] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:08:40.539646] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'homicide investigation',
+    'The mention of a homicide investigation suggests a violent crime and can evoke strong emotions of shock, fear, and sadness.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:41.380458] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:08:42.228246] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'forensic police',
+    'The term forensic police indicates the involvement of law enforcement in a criminal investigation, which can create a sense of seriousness and tension.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:43.071259] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:08:43.938063] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'closed',
+    'The mention of the road being closed suggests disruption and potential danger, contributing to a sense of urgency or concern.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:44.776635] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:08:45.620161] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'evidence',
+    'The mention of scouring the scene for evidence implies a crime or incident, which can create a sense of intrigue or unease.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:46.465573] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:08:47.309833] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Aboriginal and Torres Strait Islander peoples',
+    'The acknowledgment of Aboriginal and Torres Strait Islander peoples recognizes their cultural significance and may evoke feelings of inclusivity or acknowledgement of historical injustice.',
+    '10',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-01 15:08:48.150874] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-01 15:13:14.135287] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 15:13:14.978659] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 15:26:32.982451] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000263BAA4F410>]
+[2023-10-01 15:26:32.983442] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000263BAA4ECD0>]
+[2023-10-01 15:26:33.796006] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 15:27:00.017017] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:27:01.829165] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 15:27:02.837508] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-01 15:27:03.841426] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:27:04.890945] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:27:06.353258] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:27:06.776200] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.375,
+    0.1875,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A man has been charged over a car crash that killed two boys in Sydneys south
+- The boys, aged nine and ten, were in the car along with a nine-year-old girl when it crashed into a tree
+- The boys later died at Sydney Childrens Hospital
+- The man, Jimmy Martin Brito, has been charged with dangerous driving causing death and causing bodily harm by misconduct
+- Britos lawyer, Fahim Arya, said his client may not be aware that the boys have died
+- Brito is recovering from surgery and under the influence of medication
+- Police believe speed was a factor in the crash and are investigating whether street racing was involved.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 're dead, lawyer says ',\n    ' Driver charged over horror crash that killed two b' at line 9")]
+[2023-10-01 15:27:07.181356] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.375,
+    0.1875,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A man has been charged over a car crash that killed two boys in Sydneys south
+- The boys, aged nine and ten, were in the car along with a nine-year-old girl when it crashed into a tree
+- The boys later died at Sydney Childrens Hospital
+- The man, Jimmy Martin Brito, has been charged with dangerous driving causing death and causing bodily harm by misconduct
+- Britos lawyer, Fahim Arya, said his client may not be aware that the boys have died
+- Brito is recovering from surgery and under the influence of medication
+- Police believe speed was a factor in the crash and are investigating whether street racing was involved.'
+    );
+    ]
+[2023-10-01 15:27:08.002441] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-01 15:27:08.811857] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-01 15:28:31.480515] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/man-found-critical-in-woodbridge-dies-in-hospital/102922374"
+    ]
+[2023-10-01 15:28:32.290348] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "10"
+    ]
+[2023-10-01 15:28:33.097032] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "10"
+    ]
+[2023-10-01 15:31:38.043314] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E25D2E0E10>]
+[2023-10-01 15:31:38.044323] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E25D5CF410>]
+[2023-10-01 15:31:38.911708] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 15:31:44.584933] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-01/man-found-critical-in-woodbridge-dies-in-hospital/102922374"
+    ]
+[2023-10-01 15:31:45.438792] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "10"
+    ]
+[2023-10-01 15:31:46.299389] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "10"
+    ]
+[2023-10-01 15:34:16.083380] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000015177EBDCD0>]
+[2023-10-01 15:34:16.084377] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000151761AB3D0>]
+[2023-10-01 15:34:16.913469] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 15:34:36.738326] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 15:34:37.577732] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 15:35:24.338463] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001AA3F7EBA50>]
+[2023-10-01 15:35:24.340075] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001AA60087A10>]
+[2023-10-01 15:35:25.178464] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 15:36:14.041528] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C2F1B73790>]
+[2023-10-01 15:36:14.043527] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C294254190>]
+[2023-10-01 15:36:14.875127] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 15:36:16.546823] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 15:36:17.381078] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 15:37:23.496113] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000218101536D0>]
+[2023-10-01 15:37:23.497106] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000218100D3710>]
+[2023-10-01 15:37:24.348615] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 15:37:27.523951] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 15:37:28.398958] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-01 15:37:56.958086] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001684DD34750>]
+[2023-10-01 15:37:56.959086] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001684C64F410>]
+[2023-10-01 15:37:57.814165] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-01 15:38:01.367842] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-01 15:38:02.225004] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
