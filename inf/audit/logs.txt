@@ -7545,3 +7545,178 @@ WHERE ID_Politician = 1]
 [2023-09-30 17:24:05.678815] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F21ABD4B10>]
 [2023-09-30 17:24:05.694335] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F21AAD6350>]
 [2023-09-30 17:24:06.187945] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:35:20.927559] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A4358D5290>]
+[2023-09-30 17:35:20.943207] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A4358D6B10>]
+[2023-09-30 17:35:21.431671] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:35:21.676612] [Manav Trivedi] [FAIL] [Unable to execute sql 
+ CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+); with error (1050, "Table 'Polling' already exists")]
+[2023-09-30 17:35:21.909378] [Manav Trivedi] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-09-30 17:35:21.932081] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001A4358D5290>]
+[2023-09-30 17:35:21.941996] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001A4358D6B10>]
+[2023-09-30 17:35:23.236262] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A43614FA10>]
+[2023-09-30 17:35:23.243242] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A435AD38D0>]
+[2023-09-30 17:35:23.723368] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:35:23.957670] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-09-30 17:35:24.202700] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (1, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'InsertedByUser');
+    WHERE 1=1
+    ]
+[2023-09-30 17:35:24.202700] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001A43614FA10>]
+[2023-09-30 17:35:24.213422] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001A435AD38D0>]
+[2023-09-30 17:36:09.658819] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A91F8D38D0>]
+[2023-09-30 17:36:09.668518] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A91F906B50>]
+[2023-09-30 17:36:10.140877] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:36:10.400021] [Manav Trivedi] [FAIL] [Unable to execute sql 
+ CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+); with error (1050, "Table 'Polling' already exists")]
+[2023-09-30 17:36:10.642428] [Manav Trivedi] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-09-30 17:36:10.664856] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001A91F8D38D0>]
+[2023-09-30 17:36:10.677437] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001A91F906B50>]
+[2023-09-30 17:36:11.944722] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A91F8D38D0>]
+[2023-09-30 17:36:11.944722] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A91F8ED190>]
+[2023-09-30 17:36:12.437947] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:36:12.680225] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-09-30 17:36:12.910278] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (1, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-09-30 17:36:12.925289] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001A91F8D38D0>]
+[2023-09-30 17:36:12.947200] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001A91F8ED190>]
+[2023-09-30 17:38:37.923571] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002B2DDFD5290>]
+[2023-09-30 17:38:37.931687] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002B2DDFD6B10>]
+[2023-09-30 17:38:38.424298] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:38:38.668416] [Manav Trivedi] [FAIL] [Unable to execute sql 
+ CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+); with error (1050, "Table 'Polling' already exists")]
+[2023-09-30 17:38:38.918114] [Manav Trivedi] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-09-30 17:38:38.933377] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002B2DDFD5290>]
+[2023-09-30 17:38:38.943342] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002B2DDFD6B10>]
+[2023-09-30 17:38:40.225206] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002B2DE49D190>]
+[2023-09-30 17:38:40.240960] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002B2DE84F790>]
+[2023-09-30 17:38:40.724404] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:38:40.966745] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-09-30 17:38:41.224873] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (1, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-09-30 17:38:41.230536] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002B2DE49D190>]
+[2023-09-30 17:38:41.235739] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002B2DE84F790>]
+[2023-09-30 17:39:09.587836] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E4E6426250>]
+[2023-09-30 17:39:09.593946] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E4E60B6C10>]
+[2023-09-30 17:39:10.081507] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:39:10.331178] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-09-30 17:39:10.573150] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (1, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-09-30 17:39:10.584479] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E4E6426250>]
+[2023-09-30 17:39:10.595038] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E4E60B6C10>]
+[2023-09-30 17:41:27.102004] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002117E4E6810>]
+[2023-09-30 17:41:27.117062] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002117EB4BF50>]
+[2023-09-30 17:41:27.605261] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-09-30 17:41:27.850717] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT Question FROM Polling WHERE ID = 1;\n    WHERE 1=1' at line 2")]
+[2023-09-30 17:41:28.095439] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM SELECT Question FROM Polling WHERE ID = 1;
+    WHERE 1=1
+    ]
+[2023-09-30 17:41:28.106770] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002117E4E6810>]
+[2023-09-30 17:41:28.113805] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002117EB4BF50>]
