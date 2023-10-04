@@ -273,6 +273,7 @@ class ArticleManager():
         text = text.replace("'", "")
         summary = summary.replace("'", "")
         for key, value in biasWords.items():
+            key = key.replace("'", "")
             biasWords[key] = value.replace("'", "")
 
         article = Article(url, header, text, summary, highBias, lowBias, False)
@@ -374,6 +375,10 @@ class ArticleManager():
             text += f"\t{v.__repr__()}, \n"
         text += '}'
         return text
+
+    def updateViewCount(self, url:str):
+        # UPDATE SQL entry with new counter value
+        return
     
     def setSaved(self, url:str):
         article = self.getArticle(url) 
@@ -521,6 +526,8 @@ class SessionManager():
         self.tdc = transactionDataClient()
         self.articleManager = ArticleManager(limit, self.tdc, self.tdcLock)
 
+    def updateArticleViewCount(self, url: str):
+        return self.articleManager.updateViewCount(url)
 
     def getArticleItem(self, url: str, itemName: str):
         return self.articleManager.getItem(url, itemName)

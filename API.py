@@ -100,7 +100,7 @@ def summary():
         return {"response": response, "header": header, "article": article}
     finally:
         print('need to update viewcount')
-        # sm.updateViewCount(url)
+        sm.updateArticleViewCount(url)
 
 
 @app.route('/ArticleBiasedScore', methods=['POST'])
@@ -275,5 +275,5 @@ def getRecentArticles():
 
   
 if __name__ == '__main__':
-    sm = SM.SessionManager(2)
+    sm = SM.SessionManager(25)
     app.run()
