@@ -104,6 +104,11 @@ def pipeScrapedArticleToGPTFromScraper(newsScraper):
     p = prompt.generate_summary_prompt("HEADING: " + header + "\n" + "TEXT: " + article)
     return prompt.generate_response(p)
 
+def pipeForPoll(newsScraper): 
+    header, article = newsScraper.generateStructuredPrompt() 
+    p = prompt.generate_poll_prompt("HEADING: " + header + "\n" + "TEXT: " + article)
+    return prompt.generate_response(p)
+
 '''
 generate a JSON output of all the biased subtext in the media article.
 Since the chatGPT output doesn't give a perfect account of the locations (indexes) of the biased text, 
