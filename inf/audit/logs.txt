@@ -9907,7 +9907,7 @@ DROP COLUMN Summary]
     NOW(),
     'Daniel Ciccotosto-Camp',
     'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
-    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning is in place for Loch Sport in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediatelyï¿½warning isï¿½in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning isï¿½in place for Loch Sportï¿½in Victoria.ï¿½Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.ï¿½ Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
     '- A driver has been charged over a crash that killed two boys in Sydneys south
 - The drivers lawyer said the driver may not be aware that the boys are dead
 - The two boys, aged nine and ten, were in the car along with a nine-year-old girl when it crashed into a tree
@@ -9929,7 +9929,7 @@ DROP COLUMN Summary]
     NOW(),
     'Daniel Ciccotosto-Camp',
     'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
-    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning is in place for Loch Sport in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediatelyï¿½warning isï¿½in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning isï¿½in place for Loch Sportï¿½in Victoria.ï¿½Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.ï¿½ Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
     '- A driver has been charged over a crash that killed two boys in Sydneys south
 - The drivers lawyer said the driver may not be aware that the boys are dead
 - The two boys, aged nine and ten, were in the car along with a nine-year-old girl when it crashed into a tree
@@ -9988,7 +9988,7 @@ DROP COLUMN Summary]
     NOW(),
     'Daniel Ciccotosto-Camp',
     'Man dies in hospital after being found in critical condition outside Woodbridge home',
-    ' Man dies in hospital after being found in critical condition outside Woodbridge home An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning is in place for Loch Sport in Victoria. Keep up to date with ABC Emergency A man found bleeding and critically injured outside a house in Perths east has died in hospital. The 23-year-old man was found outside a residence on Chatham Road in Woodbridge about 1:25am on Saturday. The man, from the nearby suburb of Midland, was rushed to hospital where he underwent emergency surgery, but died that afternoon. The road was closed for much of the day as forensic police and other officers scoured the scene for evidence. A trail of dried blood could be seen leading to one of the houses on the street. A homicide investigation was underway. Detectives want anyone with information, or CCTV or dash-cam footage of Chatham Road between 12:30am and 2am to come forward. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    ' Man dies in hospital after being found in critical condition outside Woodbridge home An Evacuate Immediatelyï¿½warning isï¿½in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency An Emergency Warning isï¿½in place for Loch Sportï¿½in Victoria.ï¿½Keep up to date with ABC Emergency A man found bleeding and critically injured outside a house in Perths east has died in hospital. The 23-year-old manï¿½was found outsideï¿½a residence on Chatham Road in Woodbridge about 1:25am on Saturday. The man, from the nearby suburb of Midland,ï¿½was rushed to hospital where he underwent emergency surgery, but died that afternoon. The road was closed for much of the day as forensic police and other officers scoured the scene for evidence. A trail of dried blood could be seen leading to one of the houses on the street. A homicide investigation was underway. Detectives wantï¿½anyone with information, or CCTV or dash-cam footage of Chatham Road between 12:30am and 2amï¿½to come forward. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
     '- A man was found outside a residence on Chatham Road in Woodbridge, Perth in critical condition.
 - The 23-year-old man, from the nearby suburb of Midland, was rushed to the hospital.
 - He underwent emergency surgery but unfortunately died later in the day.
@@ -10188,7 +10188,7 @@ DROP COLUMN Summary]
     NOW(),
     'Daniel Ciccotosto-Camp',
     'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
-    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediatelyï¿½warning isï¿½in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.ï¿½ Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
     '- A man has been charged over a car crash that killed two boys in Sydneys south
 - The boys, aged nine and ten, were in the car along with a nine-year-old girl when it crashed into a tree
 - The boys later died at Sydney Childrens Hospital
@@ -10209,7 +10209,7 @@ DROP COLUMN Summary]
     NOW(),
     'Daniel Ciccotosto-Camp',
     'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
-    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediately warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says An Evacuate Immediatelyï¿½warning isï¿½in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.ï¿½ Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
     '- A man has been charged over a car crash that killed two boys in Sydneys south
 - The boys, aged nine and ten, were in the car along with a nine-year-old girl when it crashed into a tree
 - The boys later died at Sydney Childrens Hospital
@@ -10430,7 +10430,7 @@ DROP COLUMN Summary]
     NOW(),
     'Daniel Ciccotosto-Camp',
     'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
-    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says A Watch and Act warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency A Watch and Act is in place for Bawley Point in NSW. Keep up to date with ABC Emergency A Watch and Act warning is in place for Merrijig, Iguana Creek, Stockdale and surrounds in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says A Watch and Act warning isï¿½in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency Aï¿½Watch and Act isï¿½in place for Bawley Point in NSW.ï¿½Keep up to date with ABC Emergency A Watch and Act warning is in place for Merrijig, Iguana Creek, Stockdale and surrounds in Victoria.ï¿½Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.ï¿½ Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
     '- Two boys were killed in a car crash in Sydneys south on Friday.
 - The driver, Jimmy Martin Brito, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct.
 - Lawyer Fahim Arya stated that Brito may not be aware that the two boys have died.
@@ -10450,7 +10450,7 @@ DROP COLUMN Summary]
     NOW(),
     'Daniel Ciccotosto-Camp',
     'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
-    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says A Watch and Act warning is in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency A Watch and Act is in place for Bawley Point in NSW. Keep up to date with ABC Emergency A Watch and Act warning is in place for Merrijig, Iguana Creek, Stockdale and surrounds in Victoria. Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says A Watch and Act warning isï¿½in place for Briagolong, Culloden, Moornapa and Cobbannah in Victoria. Keep up to date with ABC Emergency Aï¿½Watch and Act isï¿½in place for Bawley Point in NSW.ï¿½Keep up to date with ABC Emergency A Watch and Act warning is in place for Merrijig, Iguana Creek, Stockdale and surrounds in Victoria.ï¿½Keep up to date with ABC Emergency The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.ï¿½ Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
     '- Two boys were killed in a car crash in Sydneys south on Friday.
 - The driver, Jimmy Martin Brito, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct.
 - Lawyer Fahim Arya stated that Brito may not be aware that the two boys have died.
@@ -10467,3 +10467,243 @@ DROP COLUMN Summary]
     FROM Article
     WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
     ]
+[2023-10-04 14:06:00.449010] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002ACF2EFF950>]
+[2023-10-04 14:06:00.449010] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002ACF2CE58D0>]
+[2023-10-04 14:06:00.902700] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:01.143807] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:06:01.370209] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (1, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:06:01.378390] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002ACF2EFF950>]
+[2023-10-04 14:06:01.387778] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002ACF2CE58D0>]
+[2023-10-04 14:06:39.985108] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020D39231F10>]
+[2023-10-04 14:06:39.985108] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020D39231D50>]
+[2023-10-04 14:06:40.448762] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:40.458741] [Manav Trivedi] [FAIL] [Unable to find file path: PRO-82_Polling]
+[2023-10-04 14:06:40.463208] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020D39231F10>]
+[2023-10-04 14:06:40.479308] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020D39231D50>]
+[2023-10-04 14:06:54.472621] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002169EE26390>]
+[2023-10-04 14:06:54.488168] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002169E554690>]
+[2023-10-04 14:06:54.948944] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:54.950054] [Manav Trivedi] [FAIL] [Unable to find file path: PRO-82_Polling]
+[2023-10-04 14:06:54.966611] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002169EE26390>]
+[2023-10-04 14:06:54.969288] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002169E554690>]
+[2023-10-04 14:07:05.663545] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000016C08A26590>]
+[2023-10-04 14:07:05.663545] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000016C0867FA10>]
+[2023-10-04 14:07:06.135512] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:07:06.388949] [Manav Trivedi] [FAIL] [Unable to execute sql 
+ CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+); with error (1050, "Table 'Polling' already exists")]
+[2023-10-04 14:07:06.641654] [Manav Trivedi] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-10-04 14:07:06.656668] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000016C08A26590>]
+[2023-10-04 14:07:06.673864] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000016C0867FA10>]
+[2023-10-04 14:10:19.444449] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F701231D50>]
+[2023-10-04 14:10:19.460015] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F7005685D0>]
+[2023-10-04 14:10:19.905336] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:10:20.146653] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:10:20.371810] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:10:20.371810] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001F701231D50>]
+[2023-10-04 14:10:20.394240] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001F7005685D0>]
+[2023-10-04 14:12:22.612515] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022350753F50>]
+[2023-10-04 14:12:22.628314] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022350752C10>]
+[2023-10-04 14:12:23.121556] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:12:23.385340] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:12:23.618911] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:12:23.618911] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000022350753F50>]
+[2023-10-04 14:12:23.636379] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000022350752C10>]
+[2023-10-04 14:13:06.250583] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027521F31F10>]
+[2023-10-04 14:13:06.266109] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027521F31D50>]
+[2023-10-04 14:13:06.776871] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:13:07.018388] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:13:07.260816] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:13:07.276451] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000027521F31F10>]
+[2023-10-04 14:13:07.293816] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000027521F31D50>]
+[2023-10-04 14:13:37.605592] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C3DEB31D50>]
+[2023-10-04 14:13:37.605592] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C3DE2985D0>]
+[2023-10-04 14:13:38.092140] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:13:38.336763] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:13:38.577076] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:13:38.588602] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C3DEB31D50>]
+[2023-10-04 14:13:38.597804] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C3DE2985D0>]
+[2023-10-04 14:16:01.283159] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C06BA53F50>]
+[2023-10-04 14:16:01.302022] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C06BA52C10>]
+[2023-10-04 14:16:01.817243] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:16:02.067590] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:16:02.313577] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:16:02.329133] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C06BA53F50>]
+[2023-10-04 14:16:02.344185] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C06BA52C10>]
+[2023-10-04 14:44:12.453304] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000270402D5610>]
+[2023-10-04 14:44:12.468997] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027040926790>]
+[2023-10-04 14:44:12.926048] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:44:13.385885] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 14:44:13.848194] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 14:44:14.075593] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-04 14:44:14.321471] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:14.780337] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-04 14:44:15.703979] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-04 14:44:16.161304] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-04 14:44:16.627168] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:17.088069] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-04 14:44:17.546443] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    4,
+    17,
+    1, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:17.997387] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-04 14:44:18.460074] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:18.938784] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-04 14:44:19.390368] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '17',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:19.870583] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:44:19.882644] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000270402D5610>]
+[2023-10-04 14:44:19.886104] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000027040926790>]
