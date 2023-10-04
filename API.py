@@ -96,8 +96,11 @@ def summary():
     header = sm.getArticleItem(url, SM.HEADER)
     article = sm.getArticleItem(url, SM.TEXT)
     response = sm.getArticleItem(url, SM.SUMMARY)
-    return {"response": response, "header": header, "article": article}
-
+    try:
+        return {"response": response, "header": header, "article": article}
+    finally:
+        print('need to update viewcount')
+        # sm.updateViewCount(url)
 
 
 @app.route('/ArticleBiasedScore', methods=['POST'])
@@ -113,6 +116,14 @@ def keywords():
     data = request.get_json()
     url = data.get('url')
     return sm.getArticleItem(url, SM.BIAS_WORDS)
+
+  
+@app.route('/getPoliticalFigureNames', methods=['POST'])
+def politicalFigureNames():
+    data = request.get_json()
+    url = data.get('url')
+    result = sm.getArticleItem(url, SM.POLITICAL_FIGURES)
+    return {'poi': result}
 
 '''
 Returns:
@@ -182,7 +193,87 @@ def politicianRequestByID():
     id = data.get('id')
     return sm.getPoliticianItem(id, None)
 
+###
+# Saves an article for the user to view later. IMPORTANT. This assumes the Articlejob is finished an in Cache, i.e.
+# on the user, the article has been fully loaded. If this route is asked for an unknown article,
+# it will kickstart the prompts to populate and return NOT IN CACHE in the meantime. SUCCESS if saved. 
+# Input params:
+# -------------
+#   url: the url of the article
+#
+# Output params:
+#---------------
+# "Result" : <"SUCCESS", "ALREADY_SAVED" "NOT IN CACHE">
+###
+@app.route('/SaveArticle', methods=['POST'])
+def saveArticle():
+    data = request.get_json()
+    url = data.get('url')
+    isSuccessful = sm.setSavedArticles(url)
+    return {'Result' : isSuccessful}
 
+###
+# Returns the header of each saved url, along with the URL of each saved Article
+# As per specification of PRO-73
+# Returns:
+#---------
+# {
+#   "Result" : [
+#    {"url" : <url1>,
+#    "header" : <header1>)
+#    }, 
+#    {"url" : <url2>,
+#    "header" : <header2>)
+#    },
+#   ]
+# }
+###
+@app.route('/GetSavedArticles', methods=['POST'])
+def getSavedArticle():
+    return sm.getSavedArticles()
+
+###
+# Returns entire record of the most recent three politicians. If there are less
+# than three recent visited politicians, the return value is a blank dictionary
+# Returns:
+#---------
+# {
+#   "Result" : [{
+#    ID int,
+#    Fname : str 
+#    Lname : str 
+#    About : str 
+#    Age : int
+#    Gender : str 
+#    CountryCode : str
+#    InProduction : bool
+#    InsertedAt : DATETIME
+#    InsertedBy : str
+#    ImageLink : str
+#    Summary : str } ... <NONE, ONE OR MULTIPLE>
+#    ]
+#}
+###
+@app.route('/GetRecentPoliticians', methods=['POST'])
+def getRecentPoliticians():
+    return sm.getRecentPoliticians()
+
+###
+# Returns the header of each saved url, along with the URL of each saved Article
+# Returns:
+#---------
+# {
+#   "Result" : [{
+#    'url' : str,
+#    'Header' : str } ... <NONE, ONE OR MULTIPLE>
+#   ]
+# }
+###
+@app.route('/GetRecentArticles', methods=['POST'])
+def getRecentArticles():
+    return sm.getRecentArticles()
+
+  
 if __name__ == '__main__':
     sm = SM.SessionManager(2)
     app.run()

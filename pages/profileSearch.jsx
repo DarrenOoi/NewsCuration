@@ -3,11 +3,50 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Button from '@/components/Button';
+import Input from '@/components/Input';
+import { useRouter } from 'next/router';
+import JustTheFactsLine from '@/components/JustTheFactsLine';
+import List from '@/components/List';
 
 function ProfileSearch() {
-  const handleBrowse = () => {};
+  const [search, setSearch] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [result, setResult] = useState('');
 
-  const handleSearch = () => {};
+  const router = useRouter();
+  const array = [
+    {
+      name: 'Minav Tribedi',
+      countryCode: 'AU',
+    },
+    {
+      name: 'Yash Shwarma',
+      countryCode: 'AU',
+    },
+    {
+      name: 'Sean Mariokart',
+      countryCode: 'AU',
+    },
+    {
+      name: 'Ron Atsley',
+      countryCode: 'AU',
+    },
+    {
+      name: 'Daniel Darren',
+      countryCode: 'AU',
+    },
+  ];
+
+  const handleSearch = () => {
+    if (search.trim() != '') {
+      setSubmitted(true);
+      setResult(null);
+      router.push({
+        pathname: '/profilePage',
+        query: { name: 'John Doe' },
+      });
+    } else setResult(null);
+  };
 
   return (
     <div>
@@ -19,34 +58,41 @@ function ProfileSearch() {
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className='p mt-5 ml-4 font-bold text-4xl text-[#7895B1]'>
+              <div className='flex justify-end p mt-5 mr-10 font-bold text-2xl text-[#7895B1]'>
                 PROFILE SEARCH
               </div>
-              <div
-                className='bg-[#7895B1] p-4 rounded-xl'
-                style={{ width: '1200px' }}
-              >
-                <div className='flex justify-start justify-center space-x-4 mt-2'>
-                  <Button text='BROWSE' handleClick={handleBrowse} />
-
-                  <input
-                    type='text'
-                    placeholder='Enter political profile name'
-                    className='input input-bordered bg-white text-black rounded-full'
-                    style={{ width: '450px' }}
-                  />
-
-                  <Button
-                    text='CLICK FOR THE FACTS'
-                    handleClick={handleSearch}
-                  />
+              <div className='flex'>
+                <div className='flex items-center justify-center mr-1'>
+                  <JustTheFactsLine />
                 </div>
 
-                <div className='flex justify-center space-x-20 mt-12 mb-10'>
-                  <div
-                    className='card bg-white rounded-3xl'
-                    style={{ width: '350px', height: '230px' }}
-                  ></div>
+                <div
+                  className='bg-[#7895B1] p-4 rounded-xl'
+                  style={{ width: '1200px' }}
+                >
+                  <div className='flex justify-start justify-center space-x-4 mt-2'>
+                    <Input
+                      setText={setSearch}
+                      placeholder='Enter political profile name'
+                    />
+                    <Button
+                      text='CLICK FOR THE'
+                      boldText='FACTS'
+                      handleClick={handleSearch}
+                    />
+                  </div>
+
+                  {/* recents and most popular only shows when no search is submitted  */}
+                  {submitted ? (
+                    <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-8 justify-start'>
+                      <p>submitted</p>
+                    </div>
+                  ) : (
+                    <div className='mt-6'>
+                      <List title={'RECENTS'} items={array} />
+                      <List title={'MOST POPULAR'} items={array} />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

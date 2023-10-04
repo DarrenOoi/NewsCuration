@@ -8,7 +8,7 @@ const Button = ({ handleClick, text, boldText }) => {
       >
         {text}
         {boldText ? (
-          <text className='text-orange-500 font-extrabold'>{boldText}</text>
+          <text className='text-amber-400 font-extrabold'>{boldText}</text>
         ) : null}
       </button>
     </div>
