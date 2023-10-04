@@ -273,6 +273,23 @@ def getRecentPoliticians():
 def getRecentArticles():
     return sm.getRecentArticles()
 
+@app.route('/GetPoll', methods=['POST'])    
+def getPoll():
+    data = request.get_json()
+    url = data.get('url')
+    # RON WILL MAKE THE SESSION MANAGER FUNCTION
+    # pollOptions = sm.[your function here]
+    # return pollOptions
+
+@app.route('/UpdatePoll', methods=['POST'])    
+def updatePoll():
+    data = request.get_json()
+    url = data.get('url')
+    option = data.get('option')
+    # RON WILL MAKE THE SESSION MANAGER FUNCTION TO UPDATE THE POLL
+    # pollOption = sm.[your function here]
+    # return pollOption
+
   
 if __name__ == '__main__':
     sm = SM.SessionManager(2)
