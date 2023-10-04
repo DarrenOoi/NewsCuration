@@ -10467,3 +10467,243 @@ DROP COLUMN Summary]
     FROM Article
     WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
     ]
+[2023-10-04 14:06:00.449010] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002ACF2EFF950>]
+[2023-10-04 14:06:00.449010] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002ACF2CE58D0>]
+[2023-10-04 14:06:00.902700] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:01.143807] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:06:01.370209] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (1, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:06:01.378390] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002ACF2EFF950>]
+[2023-10-04 14:06:01.387778] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002ACF2CE58D0>]
+[2023-10-04 14:06:39.985108] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020D39231F10>]
+[2023-10-04 14:06:39.985108] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020D39231D50>]
+[2023-10-04 14:06:40.448762] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:40.458741] [Manav Trivedi] [FAIL] [Unable to find file path: PRO-82_Polling]
+[2023-10-04 14:06:40.463208] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020D39231F10>]
+[2023-10-04 14:06:40.479308] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020D39231D50>]
+[2023-10-04 14:06:54.472621] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002169EE26390>]
+[2023-10-04 14:06:54.488168] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002169E554690>]
+[2023-10-04 14:06:54.948944] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:54.950054] [Manav Trivedi] [FAIL] [Unable to find file path: PRO-82_Polling]
+[2023-10-04 14:06:54.966611] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002169EE26390>]
+[2023-10-04 14:06:54.969288] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002169E554690>]
+[2023-10-04 14:07:05.663545] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000016C08A26590>]
+[2023-10-04 14:07:05.663545] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000016C0867FA10>]
+[2023-10-04 14:07:06.135512] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:07:06.388949] [Manav Trivedi] [FAIL] [Unable to execute sql 
+ CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+); with error (1050, "Table 'Polling' already exists")]
+[2023-10-04 14:07:06.641654] [Manav Trivedi] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-10-04 14:07:06.656668] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000016C08A26590>]
+[2023-10-04 14:07:06.673864] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000016C0867FA10>]
+[2023-10-04 14:10:19.444449] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F701231D50>]
+[2023-10-04 14:10:19.460015] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F7005685D0>]
+[2023-10-04 14:10:19.905336] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:10:20.146653] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:10:20.371810] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:10:20.371810] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001F701231D50>]
+[2023-10-04 14:10:20.394240] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001F7005685D0>]
+[2023-10-04 14:12:22.612515] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022350753F50>]
+[2023-10-04 14:12:22.628314] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022350752C10>]
+[2023-10-04 14:12:23.121556] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:12:23.385340] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:12:23.618911] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:12:23.618911] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000022350753F50>]
+[2023-10-04 14:12:23.636379] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000022350752C10>]
+[2023-10-04 14:13:06.250583] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027521F31F10>]
+[2023-10-04 14:13:06.266109] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027521F31D50>]
+[2023-10-04 14:13:06.776871] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:13:07.018388] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:13:07.260816] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:13:07.276451] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000027521F31F10>]
+[2023-10-04 14:13:07.293816] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000027521F31D50>]
+[2023-10-04 14:13:37.605592] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C3DEB31D50>]
+[2023-10-04 14:13:37.605592] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C3DE2985D0>]
+[2023-10-04 14:13:38.092140] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:13:38.336763] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:13:38.577076] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:13:38.588602] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C3DEB31D50>]
+[2023-10-04 14:13:38.597804] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C3DE2985D0>]
+[2023-10-04 14:16:01.283159] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C06BA53F50>]
+[2023-10-04 14:16:01.302022] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C06BA52C10>]
+[2023-10-04 14:16:01.817243] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:16:02.067590] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:16:02.313577] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:16:02.329133] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C06BA53F50>]
+[2023-10-04 14:16:02.344185] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C06BA52C10>]
+[2023-10-04 14:44:12.453304] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000270402D5610>]
+[2023-10-04 14:44:12.468997] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027040926790>]
+[2023-10-04 14:44:12.926048] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:44:13.385885] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 14:44:13.848194] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 14:44:14.075593] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-04 14:44:14.321471] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:14.780337] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-04 14:44:15.703979] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-04 14:44:16.161304] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-04 14:44:16.627168] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:17.088069] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-04 14:44:17.546443] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    4,
+    17,
+    1, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:17.997387] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-04 14:44:18.460074] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:18.938784] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-04 14:44:19.390368] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '17',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:19.870583] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:44:19.882644] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000270402D5610>]
+[2023-10-04 14:44:19.886104] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000027040926790>]

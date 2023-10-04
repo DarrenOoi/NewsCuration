@@ -84,12 +84,11 @@ POLL_PROMPT = [
           {"role": "system", "content": "You are methodical assistant."},
           {"role": "system", "content": "You will be provided with a web-scraped media article." + 
            " Read through the text carefully and in its entirety." + 
-           " Develop a poll for people to answer after they read the same article which you have just read." +
-           " The poll should be an opinion poll only related to the content of the article." + 
+           " Develop a poll with four options for people to answer after they read the same article which you have just read." +
+           " The poll should be an opinion poll only related to the content of the article but should not include any first person words." + 
            " It should not be a true or false question, but instead each option must be valid given it is an opinion poll." + 
            " Provide me with an output of only five lines, do not output anything else." + 
-           " The first line should be the question, the next four should be the four options for the poll." +
-           " Do not specify the headings for the question or the options, just output the lines in order."},
+           " Give me a JSON output where the first line is the question and the next four are the options."},
            {"role": "user", "content": ''}
       ]  
 

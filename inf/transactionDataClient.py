@@ -593,7 +593,9 @@ if __name__ == '__main__':
     
   if args.debugDDL:
     print(f'performing DDL for article table, DEBUGGING {args.debugDDL}')
+    
     tdc = transactionDataClient()
+
     newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 0)
     tdc.insert(newArticle)
     newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
@@ -604,7 +606,9 @@ if __name__ == '__main__':
     tdc.insert(newPoliticianPosition)
     newPoliticianKeyTable = Politician_KeyTable(newPolitician.getId(), newArticle.getId())
     tdc.insert(newPoliticianKeyTable)  
-     
+    newPolling = Polling(1, 'Your mom?', 'opt1', 'op12', 'op3', 'op4', 0)
+    tdc.insert(newPolling)
+    
     # Article_ArticleBias Table
     newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
     tdc.insert(newArticle_ArticleBias)   
