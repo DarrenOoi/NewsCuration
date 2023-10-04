@@ -273,6 +273,51 @@ def getRecentPoliticians():
 def getRecentArticles():
     return sm.getRecentArticles()
 
+###
+# Persist a comment to the database.
+# Requires the following ---
+# "Comment" : the comment they are making
+# "Author" : the name of the person making the comment
+# ID_Article : the ID of the article the comment is being saved to.
+#
+# Returns:
+# --------
+# None 
+###
+@app.route('/SaveArticleComment', methods=['POST'])
+def setArticleComment():
+    data = request.get_json()
+    comment = data.get('Comment')
+    author = data.get('Author')
+    ID_Article = data.get('ID_Article')
+    sm.saveArticleComment(author, comment, ID_Article)
+    return {"RESULT" : "SUCCESS"}
+    
+###
+# Persist a comment to the database.
+# Requires the following ---
+#
+# ID_Article : the ID of the article the comment is being saved to.
+#
+# Returns:
+# --------
+# {
+#   "Result" : [
+#   {ID : int
+#   ID_Article : int
+#   Author : str
+#   Comment : str
+#   InProduction : bool
+#   InsertedAt : DATETIME
+#   InsertedBy : str} ]
+# }
+###
+@app.route('/getArticleComments', methods=['POST'])
+def getArticleComments():
+    data = request.get_json()
+    ID_Article = data.get('ID_Article')    
+    return sm.getArticleComments(ID_Article)   
+    
   
 if __name__ == '__main__':
     sm = SM.SessionManager(2)

@@ -545,6 +545,12 @@ class SessionManager():
     def setSavedArticles(self, url:str):
         return self.articleManager.setSaved(url)
     
+    def getArticleComments(self, ID_Article:int):
+        return {'Result' : retrieve_article_comments(self.tdc, ID_Article)}
+    
+    def saveArticleComment(self, author, message, ID_Article):
+        create_comment(self.tdc, author, message, ID_Article) 
+    
     def close(self):
         self.tdc.closeConnection()
 

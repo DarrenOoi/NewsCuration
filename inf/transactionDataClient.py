@@ -310,6 +310,39 @@ class Article_ArticleBias(table):
     """
     return query
 
+class Comments(table):
+  
+  def __init__(self, ID_Article=int, Author=str, Comment=bool, inProduction=bool):
+    super().__init__()
+    self.ID_Article = ID_Article
+    self.Author = Author
+    self.Comment = Comment
+    self.inProd = inProduction
+    self.name = Comments.__name__
+    
+  def __str__(self):
+    if self.id is None:
+      return f'{self.name} record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.ID_Article}, {self.Author}, {self.Comment}, {self.inProd}]'
+    
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name}(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.ID_Article}',
+    '{self.Author}',
+    '{self.Comment}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+  
 
 '''
 The transactionDataClient. Communicates with the AWS RDS.
@@ -540,7 +573,9 @@ if __name__ == '__main__':
     newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
     tdc.insert(newPoliticianPosition)
     newPoliticianKeyTable = Politician_KeyTable(newPolitician.getId(), newArticle.getId())
-    tdc.insert(newPoliticianKeyTable)  
+    tdc.insert(newPoliticianKeyTable) 
+    newComment = Comments(newArticle.getId(), 'Joe Mama', 'I am writing a comment on this ', 0)
+    tdc.insert(newComment) 
      
     # Article_ArticleBias Table
     newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
@@ -560,6 +595,7 @@ if __name__ == '__main__':
     print(newPoliticianKeyTable)
     print(newArticle)
     print(newArticle_ArticleBias)
+    print(newComment)
     
     tdc.closeConnection()
     

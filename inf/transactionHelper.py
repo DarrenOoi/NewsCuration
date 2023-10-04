@@ -79,3 +79,16 @@ def insert_bias_keywords(tdc=transactionDataClient, ID=int, biasSubtext=dict, in
     for phrase, reason in biasSubtext.items():
         subTextClass = Article_ArticleBias(ID, phrase, reason, inProduction)
         tdc.insert(subTextClass)
+
+'''
+retrieves all comments relating to an article ID
+'''
+def retrieve_article_comments(tdc:transactionDataClient, ID_article:int) -> list:
+    return tdc.query('Comments', f'ID_Article = {ID_article}')
+
+'''
+Persist a comment to the database.
+'''
+def create_comment(tdc:transactionDataClient, author:str, message:str, ID_Article:str):
+    comment = Comments(ID_Article, author, message, 1)
+    tdc.insert(comment)
