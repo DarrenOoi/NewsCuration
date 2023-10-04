@@ -11,6 +11,8 @@ from inf.transactionHelper import *
 import json
 import queue
 
+import random
+
 import time
 HEADER = "header"
 TEXT = "text"
@@ -83,7 +85,7 @@ class RequestRate():
 
 # Parent of ArticleJob, has basic functionality to return abstract (object) values requesed by User
 class ArticleElement():
-    def __init__(self, url: str, header: str, text: str, summary: str, biasRange: tuple, biasWords: str, politicalFigures: list, politicalFigureIds: list) -> None:
+    def __init__(self, url: str, header: str, text: str, summary: str, biasRange: tuple, biasWords: str, politicalFigures: list, politicalFigureIds: list, views: int) -> None:
         self.url = url
         self.header = header
         self.text = text
@@ -92,6 +94,7 @@ class ArticleElement():
         self.biasWords = biasWords
         self.politicalFigures = politicalFigures
         self.politicalFigureIds = politicalFigureIds
+        self.views = views
 
         self.requestRate = RequestRate()
 
@@ -108,7 +111,7 @@ class ArticleElement():
 # retrieve/create the data each article contains in a thread-safe manner
 class ArticleElementJob(ArticleElement):
     def __init__(self, url: str, webScraper: NewsScraper, tdcLock: Lock, tdc: transactionDataClient) -> None:
-        super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None, None)
+        super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None, None, 0)
         self.summaryLock = Condition()
         self.biasRangeLock = Condition()
         self.biasWordsLock = Condition()
@@ -233,7 +236,8 @@ class ArticleManager():
         self.cacheLock.acquire()
         self.preventCacheOverflow()
         print(f"DEBUG: {articleDict.keys()}")
-        self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['OriginalText'], articleDict['SummaryParagraph'], (articleDict['LowerBias'], articleDict['UpperBias']), biasWords, politicanNames, politicianIds)
+        """ self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['OriginalText'], articleDict['SummaryParagraph'], (articleDict['LowerBias'], articleDict['UpperBias']), biasWords, politicanNames, politicianIds, articleDict['Views']) """
+        self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['OriginalText'], articleDict['SummaryParagraph'], (articleDict['LowerBias'], articleDict['UpperBias']), biasWords, politicanNames, politicianIds, random.randint(1,25))
         self.cacheLock.release()
         print('DEBUG: DB extraction complete')
         print(self)
@@ -259,7 +263,7 @@ class ArticleManager():
         for value in tmp_list[0:upper+1]:
             del self.cache[value.get("url")]
 
-    def insertDataFromJobToDB(self, url: str, header: str, text: str, summary: str, lowBias: float, highBias: float, biasWords: dict, politicalFigureIds: list):
+    def insertDataFromJobToDB(self, url: str, header: str, text: str, summary: str, lowBias: float, highBias: float, biasWords: dict, politicalFigureIds: list, views: int):
         result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
         if len(result) != 0:
             print("ERROR: there already exists an article")
@@ -274,9 +278,11 @@ class ArticleManager():
         summary = summary.replace("'", "")
         for key, value in biasWords.items():
             key = key.replace("'", "")
+        for key, value in biasWords.items():
             biasWords[key] = value.replace("'", "")
 
         article = Article(url, header, text, summary, highBias, lowBias, False)
+        """ article = Article(url, header, text, summary, highBias, lowBias, views, False) """
         self.transactionClient.insert(article)
 
         result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
@@ -302,12 +308,13 @@ class ArticleManager():
         while tmp == False:
             tmp = self.jobs[url].isDone()
         print("job done")
+        views = random.randint(1,25)
         self.jobsLock.acquire()
         self.transactionClientLock.acquire()    
         self.cacheLock.acquire()
         tmp = self.jobs[url]
         self.preventCacheOverflow()
-        self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"), tmp.get("politicalFigureIds"))
+        self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"), tmp.get("politicalFigureIds"), views)
         if self.recents.full():
             self.recents.get()
         self.recents.put(self.cache[url])        
@@ -315,7 +322,7 @@ class ArticleManager():
         print(self)
         del self.jobs[url]
         self.cacheLock.release()
-        self.insertDataFromJobToDB(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange")[0], tmp.get("biasRange")[1], json.loads(tmp.get("biasWords")), tmp.get("politicalFigureIds"))
+        self.insertDataFromJobToDB(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange")[0], tmp.get("biasRange")[1], json.loads(tmp.get("biasWords")), tmp.get("politicalFigureIds"), views)
         self.transactionClientLock.release()
         self.jobsLock.release()
 
