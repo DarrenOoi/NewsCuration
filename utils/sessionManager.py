@@ -274,12 +274,18 @@ class ArticleManager():
             tmp = highBias
             highBias = lowBias
             lowBias = highBias
+
+        header = header.replace("'", "")
         text = text.replace("'", "")
         summary = summary.replace("'", "")
+        keys = []
+        values = []
+        newBiasedWords = dict()
         for key, value in biasWords.items():
-            key = key.replace("'", "")
-        for key, value in biasWords.items():
-            biasWords[key] = value.replace("'", "")
+            keys.append(key.replace("'", ""))
+            values.append(value.replace("'", ""))
+        for index in range(len(keys)):
+            newBiasedWords[key[index]] = values[index]
 
         article = Article(url, header, text, summary, highBias, lowBias, False)
         """ article = Article(url, header, text, summary, highBias, lowBias, views, False) """
@@ -291,7 +297,7 @@ class ArticleManager():
             return None
 
         articleDict = result[0]
-        insert_bias_keywords(self.transactionClient, articleDict['ID'], biasWords, False)
+        insert_bias_keywords(self.transactionClient, articleDict['ID'], newBiasedWords, False)
 
 
         for id in politicalFigureIds:

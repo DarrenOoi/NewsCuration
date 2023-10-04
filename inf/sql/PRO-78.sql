@@ -1,0 +1,2 @@
+ALTER TABLE Article
+ADD COLUMN Views INT(50)
