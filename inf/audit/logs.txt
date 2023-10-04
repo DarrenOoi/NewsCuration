@@ -10467,3 +10467,227 @@ DROP COLUMN Summary]
     FROM Article
     WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
     ]
+[2023-10-04 11:23:38.584543] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000128B3B41110>]
+[2023-10-04 11:23:38.585534] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000128B3AF2A90>]
+[2023-10-04 11:23:39.044428] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 11:23:39.974728] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-04 11:23:40.012258] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000128B3B41110>]
+[2023-10-04 11:23:40.013340] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000128B3AF2A90>]
+[2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
+[2023-10-04 11:24:14.491739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
+[2023-10-04 11:24:14.950751] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 11:24:15.442174] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_PositionNameCodes
+    WHERE 1=1
+    ]
+[2023-10-04 11:24:15.444174] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
+[2023-10-04 11:24:15.445176] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
+[2023-10-04 15:29:38.409389] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D0C7002590>]
+[2023-10-04 15:29:38.410057] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D0C70636D0>]
+[2023-10-04 15:29:38.860409] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 15:29:39.325413] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 15:29:39.782321] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 15:29:40.009989] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-04 15:29:40.243052] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:40.700404] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-04 15:29:41.158071] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'Donald',
+    'Trump',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'https://i.natgeofe.com/k/5e4ea67e-2219-4de4-9240-2992faef0cb6/trump-portrait.jpg',
+    'another more general summary here'
+    );
+    ]
+[2023-10-04 15:29:41.642657] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-04 15:29:42.100957] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:42.557861] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-04 15:29:43.014196] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    5,
+    20,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:43.468799] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-04 15:29:43.932188] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '20',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:44.387605] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 15:29:44.394609] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001D0C7002590>]
+[2023-10-04 15:29:44.395604] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001D0C70636D0>]
+[2023-10-04 16:15:13.593930] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025855F8B790>]
+[2023-10-04 16:15:13.595925] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000258786D04D0>]
+[2023-10-04 16:15:14.063806] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 16:15:19.225194] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-30/canberra-voice-no-campaigners-rally-ahead-of-election/102920672"
+    ]
+[2023-10-04 16:15:19.738491] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "12"
+    ]
+[2023-10-04 16:15:20.200485] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "12"
+    ]
+[2023-10-04 16:15:58.061993] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:15:59.821048] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 16:16:00.507628] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 16:16:01.256232] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:01.991320] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:05.613351] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:05.922404] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.3333333333333333,
+    0.2,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A driver has been charged for a crash that killed two boys in Sydneys south.
+- The boys were aged nine and ten, and a nine-year-old girl was also in the car.
+- The car crashed into a tree on The Grand Parade in Monterey.
+- The boys were taken to Sydney Childrens Hospital where they later died.
+- The girl suffered minor injuries and was taken to the same hospital.
+- The driver, Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct.
+- Britos lawyer, Fahim Arya, said that his client may not be aware that the boys have died.
+- Brito, who was also injured in the crash, remains in the hospital and his bedside hearing has been adjourned.
+- Arya stated that Brito is in the early stages of recovery and under the influence of medication.
+- Police believe speed was a factor in the crash and are investigating whether street racing was involved.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 're dead, lawyer says ',\n    ' Driver charged over horror crash that killed two b' at line 9")]
+[2023-10-04 16:16:06.188785] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.3333333333333333,
+    0.2,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.  Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A driver has been charged for a crash that killed two boys in Sydneys south.
+- The boys were aged nine and ten, and a nine-year-old girl was also in the car.
+- The car crashed into a tree on The Grand Parade in Monterey.
+- The boys were taken to Sydney Childrens Hospital where they later died.
+- The girl suffered minor injuries and was taken to the same hospital.
+- The driver, Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct.
+- Britos lawyer, Fahim Arya, said that his client may not be aware that the boys have died.
+- Brito, who was also injured in the crash, remains in the hospital and his bedside hearing has been adjourned.
+- Arya stated that Brito is in the early stages of recovery and under the influence of medication.
+- Police believe speed was a factor in the crash and are investigating whether street racing was involved.'
+    );
+    ]
+[2023-10-04 16:16:06.805420] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 16:16:07.353437] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
