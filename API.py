@@ -139,6 +139,10 @@ Returns:
     InsertedBy : str
     ImageLink : str
     Summary : str
+    Byline : str,
+    Political_Position : str, 
+    Party : str, 
+    COUNTRY : str
     Articles : [
         {ID : int
         URL : str,
@@ -250,7 +254,11 @@ def getSavedArticle():
 #    InsertedAt : DATETIME
 #    InsertedBy : str
 #    ImageLink : str
-#    Summary : str } ... <NONE, ONE OR MULTIPLE>
+#    Summary : str 
+#    Byline : str,
+#    Political_Position : str, 
+#    Party : str, 
+#    COUNTRY : str   } ... <NONE, ONE OR MULTIPLE>
 #    ]
 #}
 ###
@@ -290,6 +298,26 @@ def updatePoll():
     # pollOption = sm.[your function here]
     # return pollOption
 
+'''
+Returns the Campaign details of each politician by their name as input
+Returns
+-------
+    {
+    ID : int,
+    Fname : str,
+    Lname : str,
+    PolicyNameTitle : str,
+    PolicyInfo : str,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy : str
+    }
+'''
+@app.route('/getCampaignDetails', methods=['POST'])
+def campaignDetailsByName():
+    data = request.get_json()
+    name = data.get('name')
+    return sm.getCampaignDetails(name)
   
 if __name__ == '__main__':
     sm = SM.SessionManager(2)
