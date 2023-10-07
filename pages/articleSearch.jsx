@@ -13,6 +13,7 @@ import textSize from '@/components/pictures/textSize.png';
 import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 import VerticleLine from '@/components/JustTheFactsLine';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
+import Menu from '@/components/Menu';
 
 function Home() {
   const [text, setText] = useState('');
@@ -46,59 +47,21 @@ function Home() {
     router.push('/profileSearch');
   };
 
-  const ProfileLine = ({ text }) => {
-    return (
-      <div className='flex flex-row items-center justify-center h-6'>
-        <div
-          className='mr-1'
-          style={{ display: 'flex', alignItems: 'center', width: '70px' }}
-        >
-          <div style={{ flex: 1, backgroundColor: '#7895B1', height: '2px' }} />
-        </div>
-        <span className=' text-[#7895B1] text-xs font-bold'>
-          POLITCAL PROFILES
-        </span>
-        <div
-          className='ml-1'
-          style={{ display: 'flex', alignItems: 'center', width: '70px' }}
-        >
-          <div style={{ flex: 1, backgroundColor: '#7895B1', height: '2px' }} />
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div>
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Navbar />
+      <Menu currentPage={"article"}/>
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className='flex items-end justify-between'>
-                <span className=' mt-5 ml-10 font-bold text-5xl text-[#7895B1] h-11'>
+
+              <div className='flex flex-row-reverse mr-7'>
+                <span className='font-bold text-3xl text-[#7895B1] h-7'>
                   ARTICLE SEARCH
                 </span>
-                <div className='flex flex-col mr-10'>
-                  <div className='flex items-center justify-center '>
-                    <ProfileLine />
-                  </div>
-                  <button
-                    className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-lg rounded-b-none'
-                    style={{ width: '285px', height: '35px' }}
-                  >
-                    <Image src={profilePicSmall} width={18} height={18} />
-                    <text
-                      className='text-white text-sm'
-                      onClick={politcalProfile}
-                    >
-                      CLICK HERE FOR PROFILE SEARCH
-                    </text>
-                  </button>
-                </div>
               </div>
 
               <div className='flex'>
@@ -120,7 +83,7 @@ function Home() {
                         className='text-white text-sm'
                         onClick={handleSubmit}
                       >
-                        CLICK FOR THE FACTS
+                        CLICK FOR THE <span className='text-[#FFB039] font-extrabold'>FACTS</span>
                       </text>
                     </button>
                   </div>
