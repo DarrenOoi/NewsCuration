@@ -154,7 +154,8 @@ InsertedAt DATETIME,
 InsertedBy VARCHAR(50)
 '''
 class Politician(table):
-  def __init__(self, fName=str, lName=str, about=str, age=int, gender=str, inProduction=bool, imageLink=str, summary=str):
+  def __init__(self, fName=str, lName=str, about=str, age=int, gender=str, inProduction=bool, imageLink=str, 
+               summary=str, byline=str, politicialPosition=str, party=str, countryCode='AUS'):
     super().__init__()
     self.fName = fName
     self.lName = lName
@@ -164,6 +165,10 @@ class Politician(table):
     self.inProd = inProduction
     self.summary = summary
     self.imageLink = imageLink
+    self.byline = byline
+    self.politicalPosition = politicialPosition
+    self.party = party
+    self.countryCode = countryCode
     self.name = Politician.__name__
   
   '''
@@ -171,7 +176,7 @@ class Politician(table):
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {self.name} (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    INSERT INTO {self.name} (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
     VALUES (
     '{self.fName}',
     '{self.lName}',
@@ -182,7 +187,11 @@ class Politician(table):
     NOW(),
     '{insertedBy}',
     '{self.imageLink}',
-    '{self.summary}'
+    '{self.summary}',
+    '{self.byline}',
+    '{self.politicalPosition}',
+    '{self.party}',
+    '{self.countryCode}'
     );
     """
     return query
@@ -192,6 +201,49 @@ class Politician(table):
       return f'{self.name} Record has not been inserted into DB - ID is NONE'
     else:
       return f'{self.name}[{self.id}, {self.fName}, {self.lName}, {self.about}, {self.age}, {self.gender}, {self.inProd}, {self.imageLink}, {self.summary}]'
+
+'''
+ID 
+PositionNameCode VARCHAR(255),
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50),
+'''
+class Politician_CampaignPolicies(table):
+  
+  def __init__(self, Fname=str, Lname=str, policyTitle=str, policyInfo=str, inProd=bool):
+    super().__init__()
+    self.fname = Fname
+    self.lname = Lname
+    self.policyTitle = policyTitle
+    self.policyInfo = policyInfo
+    self.inProd = inProd
+    self.name = Politician_CampaignPolicies.__name__
+    
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name}(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.fname}',
+    '{self.lname}',
+    '{self.policyTitle}',
+    '{self.policyInfo}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+    
+  def __str__(self):
+    if self.id is None:
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.fname}, {self.lname}, {self.policyTitle}, {self.policyInfo}, {self.inProd}]'
+ 
 
 '''
 ID 
@@ -631,21 +683,13 @@ if __name__ == '__main__':
 
     newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 0)
     tdc.insert(newArticle)
-    newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
-    tdc.insert(newPoliticianName)
-    newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0, '\img\imghere', 'another more general summary here')
-    tdc.insert(newPolitician)
-    newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
-    tdc.insert(newPoliticianPosition)
-    newPoliticianKeyTable = Politician_KeyTable(newPolitician.getId(), newArticle.getId())
-    tdc.insert(newPoliticianKeyTable) 
-    newComment = Comments('examplewebsite.com', 'Joe Mama', 'I am writing a comment on this ', 0)
-    tdc.insert(newComment) 
-    tdc.insert(newPoliticianKeyTable)  
+    newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0, '\img\imghere', 'another more general summary here', 'This would be a politcian byline', 'this would be their politicial Position', 'LNP', 'AUS')
+    tdc.insert(newPolitician) #update the attributes on this, remember to update the attributes on the API also.
+    # newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
+    # tdc.insert(newPoliticianPosition)
     newPolling = Polling(1, 'Your mom?', 'opt1', 'op12', 'op3', 'op4', 0)
     tdc.insert(newPolling)
     
-
     # Article_ArticleBias Table
     newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
     tdc.insert(newArticle_ArticleBias)   
@@ -653,17 +697,20 @@ if __name__ == '__main__':
         'Devastating blaze': 'the term "devastating" indicates a tragice loss of life',
         'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
     }
+    newPoliticianCampaignPolicies = Politician_CampaignPolicies('Donald', 'Trump', 'Affordable Housing', 'I want to make housing affordable', 0) # have to edit this in
+    tdc.insert(newPoliticianCampaignPolicies)
+    newComment = Comments('examplewebsite.com', 'Donald Trump', 'this would be a comment' 0)
+    
     #we can't debug because of stricter import rules (but we know it works)
     # transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
     # print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
     # print(transactionHelper.retrieve_bias_keywords_by_url(tdc, newArticle.url))
     
-    print(newPoliticianName)
     print(newPolitician)
-    print(newPoliticianPosition)
-    print(newPoliticianKeyTable)
+    # print(newPoliticianPosition)
     print(newArticle)
     print(newArticle_ArticleBias)
+    print(newPoliticianCampaignPolicies)
     print(newComment)
     
     tdc.closeConnection()

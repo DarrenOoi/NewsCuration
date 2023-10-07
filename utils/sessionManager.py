@@ -19,6 +19,7 @@ BIAS_RANGE = "biasRange"
 BIAS_WORDS = "biasWords"
 POLITICAL_FIGURES = "politicalFigures"
 POLITICIAN = "Politician"
+POLITICIAN_CAMPAIGN = "Politician_CampaignPolicies"
 
 # def wait(t):
 #     time.sleep(t)
@@ -437,6 +438,7 @@ class PoliticianManager():
     
     def __init__(self):
         self.cache = [] #this is a list of dicts, where each dict is a record in the db.
+        self.campaignCache = [] #this is a list of dicts of the Politician_CampaignPolicies table, where each dict is a record in the db.
         self.recents = queue.Queue(3)
             
     '''
@@ -469,6 +471,23 @@ class PoliticianManager():
             self.recents.put(record)
         return record
     
+    def getPoliticianCampaignDetails(self, tdc=transactionDataClient, name=str):
+        # Add function here to assist finding all related articles
+        filter = ""
+        if len(name) == 0:
+                return []
+        nameSplit = name.split(' ')
+        record = self.checkInCampaignCache(names=nameSplit)
+        if record is None:
+            for name in nameSplit:
+                    filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
+            filter += '0=1'
+            record = tdc.query(POLITICIAN_CAMPAIGN, filter) #This would return a list of dicts
+            
+            # Add it to the cache
+            self.campaignCache += record
+        return {"Result" : record}
+    
     #Check whether a record is in the cache, by its name
     def checkInCache(self, names=None, ID=None):
         if names is not None:
@@ -481,6 +500,16 @@ class PoliticianManager():
                     if ID == record['ID']:
                         return record
         return None
+    
+    #Check whether campaign details are in the cache, by its name
+    def checkInCampaignCache(self, names=None):
+        out = []
+        if names is not None:
+            for name in names:
+                for record in self.campaignCache:
+                    if name in record['Fname'] or name in record['Lname']:
+                        out.append(record)
+        return None if len(out) == 0 else out
     
     '''
     Queries the database to retrieve politicians by ID 
@@ -544,6 +573,9 @@ class SessionManager():
     
     def setSavedArticles(self, url:str):
         return self.articleManager.setSaved(url)
+    
+    def getCampaignDetails(self, name:str):
+        return self.politicianManager.getPoliticianCampaignDetails(self.tdc, name)
     
     def getArticleComments(self, url:int):
         return {'Result' : retrieve_article_comments(self.tdc, url)}
