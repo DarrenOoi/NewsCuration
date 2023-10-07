@@ -80,6 +80,7 @@ def insert_bias_keywords(tdc=transactionDataClient, ID=int, biasSubtext=dict, in
         subTextClass = Article_ArticleBias(ID, phrase, reason, inProduction)
         tdc.insert(subTextClass)
 
+
 '''
 retrieves all comments relating to an article ID
 '''
@@ -92,3 +93,20 @@ Persist a comment to the database.
 def create_comment(tdc:transactionDataClient, author:str, message:str, url:str):
     comment = Comments(url, author, message, 1)
     tdc.insert(comment)
+'''
+Increments the vote
+'''
+def increment_vote(tdc=transactionDataClient, ID=int, option=int):
+    records = tdc.query('Polling', f'ID_Article = {ID}')
+    record = records[0]
+
+    if (option == 1):
+        record.votesFirst += 1
+    elif (option == 2):
+        record.votesSecond += 1
+    elif (option == 3):
+        record.votesThird += 1
+    elif (option == 4):
+        record.votesFourth += 1
+    else:            
+        tdc.logMessage(messageStatus.WARN, f'This is not a valid vote option for related ArticleID ({ID})')

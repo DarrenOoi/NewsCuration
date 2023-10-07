@@ -269,6 +269,69 @@ class Politician_KeyTable(table):
     return query
 
 '''
+  ID,
+  ID_Article INT,
+  Question TEXT,
+  OptionFirst TEXT,
+  OptionSecond TEXT,
+  OptionThird TEXT,
+  OptionFourth TEXT,
+  VotesFirst INT,
+  VotesSecond INT,
+  VotesThird INT,
+  VotesFourth INT,
+  InProduction BOOLEAN,
+  InsertedAt DATETIME,
+  InsertedBy VARCHAR(50),
+'''
+class Polling(table):
+  def __init__(self, articleID=str, question=str, optionFirst=str, optionSecond=str, optionThird=str, optionFourth=str, inProduction=bool):
+    super().__init__()
+    self.articleID = articleID
+    self.question = question
+    self.optionFirst = optionFirst
+    self.optionSecond = optionSecond
+    self.optionThird = optionThird
+    self.optionFourth = optionFourth
+    self.votesFirst = 0
+    self.votesSecond = 0
+    self.votesThird = 0
+    self.votesFourth = 0
+    self.inProd = inProduction
+    self.name = Polling.__name__
+
+  def __str__(self) -> str:
+    if self.id is None:
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.articleID} {self.question}, {self.optionFirst}, {self.optionSecond}, {self.optionThird}, {self.optionFourth}, {self.votesFirst}, {self.votesSecond}, {self.votesThird}, {self.votesFourth}, {self.inProd}]'
+  
+  def insertSQL(self, insertedBy):
+    query = f"""
+  INSERT INTO {self.name}(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.articleID}',
+    '{self.question}',
+    '{self.optionFirst}',
+    '{self.optionSecond}',
+    '{self.optionThird}',
+    '{self.optionFourth}',
+    '{self.votesFirst}',
+    '{self.votesSecond}',
+    '{self.votesThird}',
+    '{self.votesFourth}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+  
+  def getName(self):
+        return self.name
+
+  
+'''
 ID INT 
 KeyPhrase VARCHAR(1000),
 BiasReason TEXT,
@@ -563,7 +626,9 @@ if __name__ == '__main__':
     
   if args.debugDDL:
     print(f'performing DDL for article table, DEBUGGING {args.debugDDL}')
+    
     tdc = transactionDataClient()
+
     newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 0)
     tdc.insert(newArticle)
     newPoliticianName = Politician_PositionNameCodes('Prime Minister of Australia', 0)
@@ -576,7 +641,11 @@ if __name__ == '__main__':
     tdc.insert(newPoliticianKeyTable) 
     newComment = Comments('examplewebsite.com', 'Joe Mama', 'I am writing a comment on this ', 0)
     tdc.insert(newComment) 
-     
+    tdc.insert(newPoliticianKeyTable)  
+    newPolling = Polling(1, 'Your mom?', 'opt1', 'op12', 'op3', 'op4', 0)
+    tdc.insert(newPolling)
+    
+
     # Article_ArticleBias Table
     newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
     tdc.insert(newArticle_ArticleBias)   
