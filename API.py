@@ -285,15 +285,23 @@ def getRecentArticles():
 def getPoll():
     data = request.get_json()
     url = data.get('url')
-    # RON WILL MAKE THE SESSION MANAGER FUNCTION
-    # pollOptions = sm.[your function here]
-    # return pollOptions
+    pollStr = sm.getArticleItem(url, SM.POLL_PROMPT)
+    pollDict = json.loads(pollStr)
+    pollVals = sm.getArticleItem(url, SM.POLL_VALS)
+    results = [{"opinion": pollDict["options"][i], "votes":pollVals[i]} for i in range(len(pollVals))]
+    del pollDict["options"]
+    pollDict["results"] = results
+    prompt = json.dumps(pollDict)
+    return prompt
+
 
 @app.route('/UpdatePoll', methods=['POST'])    
 def updatePoll():
     data = request.get_json()
     url = data.get('url')
-    option = data.get('option')
+    optionIndex = data.get('optionIndex')
+    sm.updatePoll(url, optionIndex)
+    return {"response":"updated"}
     # RON WILL MAKE THE SESSION MANAGER FUNCTION TO UPDATE THE POLL
     # pollOption = sm.[your function here]
     # return pollOption

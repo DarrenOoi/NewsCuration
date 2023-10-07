@@ -108,6 +108,11 @@ def generate_poll_prompt(content):
     prompt[-1]['content'] = content
     return prompt
 
+def generate_poll_prompt_dict(content):
+    prompt = generate_poll_prompt(content)
+    string = generate_response(prompt)
+    return string
+
 def generate_response(prompt):
   response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo-16k",

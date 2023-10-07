@@ -97,3 +97,12 @@ def increment_vote(tdc=transactionDataClient, ID=int, option=int):
         record.votesFourth += 1
     else:            
         tdc.logMessage(messageStatus.WARN, f'This is not a valid vote option for related ArticleID ({ID})')
+
+
+def update_table(tdc=transactionDataClient, table="Article", set="", where=""):
+    query = f"""
+    UPDATE {table}
+    SET {set}
+    WHERE {where} 
+    """
+    return tdc.query_special(query)
