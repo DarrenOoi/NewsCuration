@@ -10807,3 +10807,321 @@ DROP COLUMN Summary]
     FROM Article
     WHERE URL = "https://news.yahoo.com/trump-using-guns-send-campaign-180825087.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALHmtcdD31ZyVyEjwuimxZBwP8nD169JOTo0C5H-ff-Y1i_rhutyjHLnJQqEhXBkfTwjCl7xRGINlMooPkn0_PXMxgVL6IPss2Ck3bVBpcjFzlTzloK1CXGIxwaytw4-aIOamwMGmBwwsuSLwpskC5L6mleHEZH31gFrAAYThGv4"
     ]
+[2023-10-04 14:14:56.329363] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000240EF0CC150>]
+[2023-10-04 14:14:56.341585] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000240EFBE11D0>]
+[2023-10-04 14:14:56.802773] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:15:36.459386] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-04 14:15:36.937312] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "11"
+    ]
+[2023-10-04 14:15:37.400952] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "11"
+    ]
+[2023-10-04 14:16:09.950692] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-03/donald-trump-new-york-court-civil-fraud-case-letitia-james/102926936"
+    ]
+[2023-10-04 14:16:11.367876] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 14:16:12.080694] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 14:16:12.800299] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-03/donald-trump-new-york-court-civil-fraud-case-letitia-james/102926936"
+    ]
+[2023-10-04 14:16:13.436761] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-03/donald-trump-new-york-court-civil-fraud-case-letitia-james/102926936"
+    ]
+[2023-10-04 14:16:22.607886] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-03/donald-trump-new-york-court-civil-fraud-case-letitia-james/102926936"
+    ]
+[2023-10-04 14:16:22.842246] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-10-03/donald-trump-new-york-court-civil-fraud-case-letitia-james/102926936',
+    0.6621621621621622,
+    0.6621621621621622,
+    0, 
+    NOW(),
+    '',
+    'Donald Trump's appeared in a New York court for his fraud trial. Here's what happened on day one',
+    ' Donald Trumps appeared in a New York court for his fraud trial. Heres what happened on day one Donald Trump is fighting a civil lawsuit that could cost the former US president control of some of his most prized properties, and his freedom to do business in New York. Hes already been found guilty of fraud. Unless he wins an appeal, he could be forced to give up properties including Trump Tower. Unlike the four criminal trials he separately faces, Mr Trump generally avoids appearing at civil hearings. His decision to show up this time shows how seriously hes taking this case. His sons are also defendants in the trial, which could have huge ramifications for the New York business empire he was famous for prior to his presidency. Last week, New York Supreme Court Judge Arthur Engoron ruled that Mr Trump committed fraud for years while building his real estate empire. He deceived banks, insurers and others by overvaluing his assets and exaggerating his net worth on paperwork to secure lower-interest loans and lower insurance premiums.  "In defendants world: rent-regulated apartments are worth the same as unregulated apartments; restricted land is worth the same as unrestricted land; restrictions can evaporate into thin air," the judge wrote. "That is a fantasy world, not the real world." Judge Engoron ordered that some of Mr Trumps business licences be rescinded, effectively stopping them from doing business in New York – a punishment legal experts, and Mr Trump himself, are calling a "corporate death penalty". Mr Trump denies wrongdoing and has pleaded not guilty. His lawyers argue assets such as his Florida resort, Mar-a-Lago, have been undervalued by the court. While the judge has already found that fraud has been committed, he still has to rule on six other claims. They include allegations of conspiracy, falsifying business records and specific insurance fraud. The non-jury trial also has to consider the question of punishment. New York Attorney-General Letitia James is seeking at least $US250 million ($392 million) in fines. She also wants a permanent ban against Mr Trump and his sons Donald Jr and Eric from running businesses in New York and a five-year commercial real estate ban against Mr Trump and the Trump Organization. "Theres so much at stake today in the civil fraud case," former federal prosecutor Neama Rahmani said. "Even though Trump cant go to jail, were talking about tens or even hundreds of millions of dollars. "And, of course, setting aside the potential judgement, Trump has already lost his business licences and cant maintain his real estate empire there in New York. "He may be forced to liquidate at a loss because the commercial real estate market is depressed right now." Mr Trump isnt expected to testify for several weeks. His trip to court today marked a remarkable departure from his past practice. He didnt go to court as either a witness or a spectator when his company was convicted of tax fraud earlier this year. Nor did he show up for a civil trial where he was found liable for sexually assaulting writer E Jean Carroll. "Theres no requirement to be present in a civil case like a criminal one," Mr Rahmani said. "But it certainly goes a long way for the judge whos deciding this case to think that Trump is taking this case seriously." Mr Trump said he was attending today because he wanted "to watch this witch-hunt myself". On his way into court, without offering proof, Mr Trump accused Ms James, a Democrat, of being corrupt. He has previously also labelled her racist. "The crime is against me," he told reporters outside the court. "And it all comes down from the DOJ [Department of Justice] that totally coordinated this in Washington because Im leading — Im the leading [presidential] candidate." He described the trial as a "scam", a "sham", and "a continuation of the single greatest witch-hunt of all time". Just a few hours after addressing the media on his way into court, Mr Trump appeared before the cameras again. He attacked the judge, a Democrat who was elected to the New York Supreme Court unopposed in 2015. "Were going to be here for months with a judge that already made up his mind," Mr Trump said. "Its ridiculous. Hes a Democrat judge, hes an operative and its ridiculous." The judge has ruled repeatedly against Mr Trump in the three years hes been presiding over Ms Jamess lawsuit. Hes forced Mr Trump to sit for a deposition, held him in contempt and fined him $US70,000. Mr Trump called for him to be disbarred. In a recent court filing, the attorney-general argued Mr Trump exaggerated his wealth by as much as $US3.6 billion. The former president claimed his three-story Trump Tower penthouse, replete with gold-plated fixtures, was nearly three times its actual size and worth $US327 million, far more than any New York City apartment ever has fetched, Ms James said. And he valued Mar-a-Lago as high as $US739 million — which the attorney-general says is more than 10 times a more reasonable estimate of its worth. "Every estimate was determined by Mr Trump," Kevin Wallace, a lawyer from the attorney-generals office, said in his opening statement. Mr Wallace played an excerpt from a deposition from Michael Cohen, who had been Mr Trumps personal lawyer and fixer but has since turned against his former boss. In the deposition, Mr Cohen said the goal when estimating the value of assets was "to attain the number that Mr Trump wanted". Mr Wallace said the alleged scheme got the company better loan rates, saving it $US100 million in interest. "They hid their weaknesses and convinced these banks to take on hundreds of millions of dollars in risk," he said. "While the defendants can exaggerate to Forbes magazine or on television, they cannot do it while conducting business in the state of New York." "There is no such thing as objective valuation," Trump lawyer Christopher Kise said in his opening statement. Any discrepancies in values dont amount to fraud, he said, and disclaimers on the financial statements made clear that these were estimates and that banks would have to perform their own analysis. Another of Mr Trumps defence lawyers, Alina Habba, described his real estate portfolio as "Mona Lisa properties" that can command top dollar. "That is not fraud. That is real estate," she said. She accused the attorney-generals office of "setting a very dangerous precedent for all business owners in the state of New York". Mr Trump left for the day claiming hed scored a victory. He pointed to comments that he viewed as Judge Engoron coming around to the defences view that most of the suits allegations were too old. The judge suggested that testimony about Mr Trumps 2011 financial statement was beyond the legal time limit. Mr Wallace, the lawyer for the attorney-generals office, promised to link it to a more recent loan agreement.  But Trump took the judges remarks as a positive development for him.  "I think that was very good," he said as he left. "The last 5 minutes was outstanding." The trial is scheduled to run until early December. Mr Trump has not indicated how much of the trial he plans to attend. More than 150 people, including Mr Cohen, could testify, though much of the trial may be a battle of experts opining on financial documents. Asked if he would return tomorrow, Mr Trump said: "We may. Id love not to, Id love to be campaigning instead of doing this." ABC/wires We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- Donald Trump appeared in a New York court for his fraud trial.
+- The civil lawsuit could result in Trump losing control of his properties and his ability to do business in New York.
+- Trump has already been found guilty of fraud and could be forced to give up properties, including Trump Tower.
+- His sons are also defendants in the trial, which has significant implications for Trumps New York business empire.
+- Last week, Judge Arthur Engoron ruled that Trump committed fraud by overvaluing his assets and exaggerating his net worth.
+- The judge ordered the rescinding of some of Trumps business licenses, effectively preventing him from doing business in New York.
+- Trump denies wrongdoing and has pleaded not guilty.
+- The trial will also consider allegations of conspiracy, falsifying business records, and insurance fraud, among others.
+- New York Attorney-General Letitia James is seeking at least $250 million in fines and a permanent ban on Trump and his sons from running businesses in New York.
+- The trial could result in Trump losing millions or even hundreds of millions of dollars.
+- Trump attended the trial, which is unusual for him, and claimed to be taking it seriously.
+- Trump accused the judge and the attorney-general of being corrupt and described the trial as a "witch-hunt" and a "sham."
+- The attorney-general argued that Trump exaggerated his wealth by billions of dollars.
+- The defense argued that any discrepancies in asset values are not fraudulent.
+- The trial is scheduled to run until early December, and Trump has not indicated how much of it he plans to attend.
+- Over 150 people, including Trumps former lawyer Michael Cohen, could testify.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's appeared in a New York court for his fraud trial. Here's what happened on day ' at line 9")]
+[2023-10-04 14:16:23.093534] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-10-03/donald-trump-new-york-court-civil-fraud-case-letitia-james/102926936',
+    0.6621621621621622,
+    0.6621621621621622,
+    0, 
+    NOW(),
+    '',
+    'Donald Trump's appeared in a New York court for his fraud trial. Here's what happened on day one',
+    ' Donald Trumps appeared in a New York court for his fraud trial. Heres what happened on day one Donald Trump is fighting a civil lawsuit that could cost the former US president control of some of his most prized properties, and his freedom to do business in New York. Hes already been found guilty of fraud. Unless he wins an appeal, he could be forced to give up properties including Trump Tower. Unlike the four criminal trials he separately faces, Mr Trump generally avoids appearing at civil hearings. His decision to show up this time shows how seriously hes taking this case. His sons are also defendants in the trial, which could have huge ramifications for the New York business empire he was famous for prior to his presidency. Last week, New York Supreme Court Judge Arthur Engoron ruled that Mr Trump committed fraud for years while building his real estate empire. He deceived banks, insurers and others by overvaluing his assets and exaggerating his net worth on paperwork to secure lower-interest loans and lower insurance premiums.  "In defendants world: rent-regulated apartments are worth the same as unregulated apartments; restricted land is worth the same as unrestricted land; restrictions can evaporate into thin air," the judge wrote. "That is a fantasy world, not the real world." Judge Engoron ordered that some of Mr Trumps business licences be rescinded, effectively stopping them from doing business in New York – a punishment legal experts, and Mr Trump himself, are calling a "corporate death penalty". Mr Trump denies wrongdoing and has pleaded not guilty. His lawyers argue assets such as his Florida resort, Mar-a-Lago, have been undervalued by the court. While the judge has already found that fraud has been committed, he still has to rule on six other claims. They include allegations of conspiracy, falsifying business records and specific insurance fraud. The non-jury trial also has to consider the question of punishment. New York Attorney-General Letitia James is seeking at least $US250 million ($392 million) in fines. She also wants a permanent ban against Mr Trump and his sons Donald Jr and Eric from running businesses in New York and a five-year commercial real estate ban against Mr Trump and the Trump Organization. "Theres so much at stake today in the civil fraud case," former federal prosecutor Neama Rahmani said. "Even though Trump cant go to jail, were talking about tens or even hundreds of millions of dollars. "And, of course, setting aside the potential judgement, Trump has already lost his business licences and cant maintain his real estate empire there in New York. "He may be forced to liquidate at a loss because the commercial real estate market is depressed right now." Mr Trump isnt expected to testify for several weeks. His trip to court today marked a remarkable departure from his past practice. He didnt go to court as either a witness or a spectator when his company was convicted of tax fraud earlier this year. Nor did he show up for a civil trial where he was found liable for sexually assaulting writer E Jean Carroll. "Theres no requirement to be present in a civil case like a criminal one," Mr Rahmani said. "But it certainly goes a long way for the judge whos deciding this case to think that Trump is taking this case seriously." Mr Trump said he was attending today because he wanted "to watch this witch-hunt myself". On his way into court, without offering proof, Mr Trump accused Ms James, a Democrat, of being corrupt. He has previously also labelled her racist. "The crime is against me," he told reporters outside the court. "And it all comes down from the DOJ [Department of Justice] that totally coordinated this in Washington because Im leading — Im the leading [presidential] candidate." He described the trial as a "scam", a "sham", and "a continuation of the single greatest witch-hunt of all time". Just a few hours after addressing the media on his way into court, Mr Trump appeared before the cameras again. He attacked the judge, a Democrat who was elected to the New York Supreme Court unopposed in 2015. "Were going to be here for months with a judge that already made up his mind," Mr Trump said. "Its ridiculous. Hes a Democrat judge, hes an operative and its ridiculous." The judge has ruled repeatedly against Mr Trump in the three years hes been presiding over Ms Jamess lawsuit. Hes forced Mr Trump to sit for a deposition, held him in contempt and fined him $US70,000. Mr Trump called for him to be disbarred. In a recent court filing, the attorney-general argued Mr Trump exaggerated his wealth by as much as $US3.6 billion. The former president claimed his three-story Trump Tower penthouse, replete with gold-plated fixtures, was nearly three times its actual size and worth $US327 million, far more than any New York City apartment ever has fetched, Ms James said. And he valued Mar-a-Lago as high as $US739 million — which the attorney-general says is more than 10 times a more reasonable estimate of its worth. "Every estimate was determined by Mr Trump," Kevin Wallace, a lawyer from the attorney-generals office, said in his opening statement. Mr Wallace played an excerpt from a deposition from Michael Cohen, who had been Mr Trumps personal lawyer and fixer but has since turned against his former boss. In the deposition, Mr Cohen said the goal when estimating the value of assets was "to attain the number that Mr Trump wanted". Mr Wallace said the alleged scheme got the company better loan rates, saving it $US100 million in interest. "They hid their weaknesses and convinced these banks to take on hundreds of millions of dollars in risk," he said. "While the defendants can exaggerate to Forbes magazine or on television, they cannot do it while conducting business in the state of New York." "There is no such thing as objective valuation," Trump lawyer Christopher Kise said in his opening statement. Any discrepancies in values dont amount to fraud, he said, and disclaimers on the financial statements made clear that these were estimates and that banks would have to perform their own analysis. Another of Mr Trumps defence lawyers, Alina Habba, described his real estate portfolio as "Mona Lisa properties" that can command top dollar. "That is not fraud. That is real estate," she said. She accused the attorney-generals office of "setting a very dangerous precedent for all business owners in the state of New York". Mr Trump left for the day claiming hed scored a victory. He pointed to comments that he viewed as Judge Engoron coming around to the defences view that most of the suits allegations were too old. The judge suggested that testimony about Mr Trumps 2011 financial statement was beyond the legal time limit. Mr Wallace, the lawyer for the attorney-generals office, promised to link it to a more recent loan agreement.  But Trump took the judges remarks as a positive development for him.  "I think that was very good," he said as he left. "The last 5 minutes was outstanding." The trial is scheduled to run until early December. Mr Trump has not indicated how much of the trial he plans to attend. More than 150 people, including Mr Cohen, could testify, though much of the trial may be a battle of experts opining on financial documents. Asked if he would return tomorrow, Mr Trump said: "We may. Id love not to, Id love to be campaigning instead of doing this." ABC/wires We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- Donald Trump appeared in a New York court for his fraud trial.
+- The civil lawsuit could result in Trump losing control of his properties and his ability to do business in New York.
+- Trump has already been found guilty of fraud and could be forced to give up properties, including Trump Tower.
+- His sons are also defendants in the trial, which has significant implications for Trumps New York business empire.
+- Last week, Judge Arthur Engoron ruled that Trump committed fraud by overvaluing his assets and exaggerating his net worth.
+- The judge ordered the rescinding of some of Trumps business licenses, effectively preventing him from doing business in New York.
+- Trump denies wrongdoing and has pleaded not guilty.
+- The trial will also consider allegations of conspiracy, falsifying business records, and insurance fraud, among others.
+- New York Attorney-General Letitia James is seeking at least $250 million in fines and a permanent ban on Trump and his sons from running businesses in New York.
+- The trial could result in Trump losing millions or even hundreds of millions of dollars.
+- Trump attended the trial, which is unusual for him, and claimed to be taking it seriously.
+- Trump accused the judge and the attorney-general of being corrupt and described the trial as a "witch-hunt" and a "sham."
+- The attorney-general argued that Trump exaggerated his wealth by billions of dollars.
+- The defense argued that any discrepancies in asset values are not fraudulent.
+- The trial is scheduled to run until early December, and Trump has not indicated how much of it he plans to attend.
+- Over 150 people, including Trumps former lawyer Michael Cohen, could testify.'
+    );
+    ]
+[2023-10-04 14:16:23.571668] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 14:16:24.033562] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-03/donald-trump-new-york-court-civil-fraud-case-letitia-james/102926936"
+    ]
+[2023-10-04 14:18:20.083905] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-04 14:18:20.551506] [] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-04 14:24:10.661001] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CA36EF2810>]
+[2023-10-04 14:24:10.663028] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CA361DBB10>]
+[2023-10-04 14:24:11.124133] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:24:25.838166] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-04 14:24:27.235926] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 14:24:27.894510] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 14:24:32.385591] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-04 14:24:32.866781] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears',
+    0.6551724137931034,
+    0.6551724137931034,
+    0, 
+    NOW(),
+    '',
+    'Donald Trump Is Worried About Having to Wear “One of Those Jumpsuits” in Prison: Report Bess Levin',
+    'To revist this article, visit My Profile, then View saved stories. To revist this article, visit My Profile, then View saved stories. By Bess Levin When Donald Trump sat down for an interview with Meet the Press that aired on Sunday, host Kristen Welker asked him, “When you go to bed at night, do you worry about going to jail?” Trump responded: “No, I don’t really. I don’t even think about it. I’m built a little differently…I don’t even think about it.” But according to a new report, the four-times indicted ex-president has very much thought about the prospect of going to prison, and in fact, has some very specific concerns about doing time.  Rolling Stone reports that over the past several months, Trump has taken to asking members of his inner circle if they think he’ll be forced to wear “one of those jumpsuits” behind bars. (Whether he is worried about having to trade his business attire and golf duds for classic prison garb in general, or if it is the idea of an orange jumpsuit in particular, which would likely clash with his complexion and give rise to untold late-night jokes, that has him uneasy, is unclear.) In addition, according to the outlet, the ex-president has wondered aloud if: - He’ll be sentenced to do time in a “club fed”-style prison, i.e., a relatively cushy place white-collar criminals have historically been sent to, or if he’ll be sent to a “bad” prison - If there is a chance he’d get lucky and only get house arrest - If the government would try to strip him of Secret Service protection - What would happen “if he were convicted and sentenced, but also reelected”? Meanwhile, as 2024 rival Will Hurd noted in August, Trump’s decision to run again is very likely based in part on the calculation that getting reelected would be his get-out-of-jail-free card. “He’s only running in order to stay out of prison,” Hurd told Bloomberg Radio. (Meanwhile, in 2022, before he’d officially announced his candidacy, a source familiar with Trump’s thinking told Rolling Stone that the ex-president had “spoken about how when you are the president of the United States, it is tough for politically motivated prosecutors to ‘get to you.’” This person added that Trump “says when [not if] he is president again, a new Republican administration will put a stop to the [Justice Department] investigation that he views as the Biden administration working to hit him with criminal charges—or even put him and his people in prison.”) Trump is currently facing a whopping 91 felony counts across four criminal cases. In June, after he was charged by the Justice Department for his handling of classified documents, Fox News legal analyst Jonathan Turley opined, “All the government has to do is stick the landing on one count, and [Trump] could have a terminal sentence. You’re talking about crimes that have a 10- or 20-year period as a maximum.”  If you would like to receive the Levin Report in your inbox daily, click here to subscribe. Donald Trump once again brags about his role in turning the clock back to 1974 This content can also be viewed on the site it originates from. Did they though? Did they really? This content can also be viewed on the site it originates from. Elsewhere! Tucker Carlson Denies Report That Ron DeSantis Got Inappropriate With His Dog, Does Not Deny Claim He Thinks DeSantis Is a “Fascist” Vanity Fair • Read More Murdoch Chronicler Michael Wolff Foresees the Fall of Fox News: “It Will Cease to Exist in Its Present Form” Vanity Fair • Read More And Just When You Thought Kevin McCarthy’s House of Horrors Couldn’t Get Scarier Vanity Fair • Read More Both politically and legally, Trump’s classified-docs defense weakens The Washington Post • Read More Senate Poised to Confirm Military Chiefs, Sidestepping Tuberville Blockade NYT • Read More Garland Rebuffs Republicans’ Efforts to Reveal Details on Hunter Biden Inquiry NYT • Read More Woman rescued from outhouse toilet after climbing in to retrieve Apple Watch, Michigan police say AP • Read More Bad Bunny Talks Sex, Social Media, and Kendall Jenner for the October Issue Welcome to Robert F. Kennedy Jr.’s Mad, Mad, Mad, Mad World The 25 Best Shows to Watch on Netflix Right Now The Strange Legacy of Royal Retirees A New JFK Assassination Revelation Could Upend the “Lone Gunman” Theory Meet Kyle Deschanel, the Pretend Playboy Who Seems to Have Fooled Half of Manhattan From the Archive: A Father’s Account of the Trial of His Daughter’s Killer We want to hear from you! Tell us about your podcast listening habits. By Kase Wickman By Bess Levin By Kenzie Bryant By Bess Levin By Bess Levin By Vanity Fair By Bess Levin More from Vanity Fair Contact © 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. Vanity Fair may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast. Ad Choices CN Entertainment',
+    '- Donald Trump has expressed concerns about going to prison and the possibility of wearing a jumpsuit.
+- He has wondered if he would be sent to a cushy prison or a "bad" prison.
+- Trump has also questioned whether he could get lucky and only receive house arrest.
+- He has raised concerns about the government stripping him of Secret Service protection.
+- Trumps decision to run for president again may be based on the belief that it would protect him from criminal charges.
+- He is currently facing 91 felony counts across four criminal cases.
+- Legal experts have noted that if Trump is convicted on even one count, he could face a lengthy prison sentence.'
+    );
+    ]
+[2023-10-04 14:24:33.342865] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 14:24:33.808025] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-04 14:24:34.273794] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'worried about going to jail',
+    'The phrase worried about going to jail suggests fear and anxiety associated with the possibility of imprisonment, indicating emotional significance.',
+    '16',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-04 14:24:34.739553] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:24:35.001058] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'forced to wear 'one of those jumpsuits'',
+    'The mention of jumpsuits in relation to prison attire implies a negative and degrading image commonly associated with incarceration, invoking emotions of discomfort or shame.',
+    '16',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'one of those jumpsuits'',\n    'The mention of jumpsuits in relation to prison at' at line 3")]
+[2023-10-04 14:24:35.234956] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'forced to wear 'one of those jumpsuits'',
+    'The mention of jumpsuits in relation to prison attire implies a negative and degrading image commonly associated with incarceration, invoking emotions of discomfort or shame.',
+    '16',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-04 14:24:35.696565] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:24:35.928769] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'club fed-style prison vs. 'bad' prison',
+    'The comparison between a club fed-style prison and a bad prison implies a biased view and judgment of different types of correctional facilities, potentially reinforcing stereotypes and preconceived notions.',
+    '16',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bad' prison',\n    'The comparison between a club fed-style prison and a bad pris' at line 3")]
+[2023-10-04 14:24:36.162988] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'club fed-style prison vs. 'bad' prison',
+    'The comparison between a club fed-style prison and a bad prison implies a biased view and judgment of different types of correctional facilities, potentially reinforcing stereotypes and preconceived notions.',
+    '16',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-04 14:24:36.624253] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:24:37.091947] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'chance of getting lucky and only getting house arrest',
+    'The phrase getting lucky and only getting house arrest suggests a biased perspective that portrays house arrest as a favorable outcome compared to imprisonment, potentially minimizing the seriousness of the charges.',
+    '16',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-04 14:24:37.560955] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:24:38.028412] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'strip him of Secret Service protection',
+    'The concern over losing Secret Service protection suggests a potential emotional impact associated with a loss of security and personal safety.',
+    '16',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-04 14:24:38.493334] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:24:38.958699] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'convicted and sentenced, but also reelected',
+    'The scenario of being convicted and sentenced while being reelected implies a conflict between legal consequences and political aspirations, indicating a potentially biased or emotionally charged perspective.',
+    '16',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-04 14:24:39.421736] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:24:46.662500] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-04 14:24:47.125656] [] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-04 21:10:13.760710] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000164D001ED90>]
+[2023-10-04 21:10:13.762858] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000164C0CC6F10>]
+[2023-10-04 21:10:15.337566] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 21:10:38.138037] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-04 21:10:39.111111] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "16"
+    ]
+[2023-10-04 21:10:40.482080] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "16"
+    ]

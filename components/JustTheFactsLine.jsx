@@ -11,7 +11,7 @@ const JustTheFactsLine = () => {
         className='mt-20'
         style={{ display: 'flex', alignItems: 'center', width: '2px' }}
       >
-        <div style={{ flex: 1, backgroundColor: '#FFB039', height: '650px' }} />
+        <div style={{ flex: 1, backgroundColor: '#FFB039', height: '350px' }} />
       </div>
     </div>
   );

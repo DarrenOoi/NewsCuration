@@ -27,7 +27,7 @@ const List = ({ title, items, politician, handleClick }) => {
                 <div className='flex mb-2'>
                   <GrArticle className='align-bottom mr-4' size={25} />
                   <p
-                    className='mr-4 cursor-pointer hover:bg-blue-100 focus:outline-none'
+                    className='mr-4 cursor-pointer hover:bg-blue-100 rounded-l focus:outline-none'
                     onClick={() => handleClick(item.url)}
                   >
                     {item.Header}

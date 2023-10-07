@@ -41,10 +41,10 @@ function ProfileSearch() {
     if (search.trim() != '') {
       setSubmitted(true);
       setResult(null);
-      router.push({
-        pathname: '/profilePage',
-        query: { name: 'John Doe' },
-      });
+      // router.push({
+      //   pathname: '/profilePage',
+      //   query: { name: 'John Doe' },
+      // });
     } else setResult(null);
   };
 
@@ -84,17 +84,15 @@ function ProfileSearch() {
 
                   {/* recents and most popular only shows when no search is submitted  */}
                   {submitted ? (
-                    <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-8 justify-start'>
-                      <p>submitted</p>
+                    // <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-8 justify-start'>
+                    //   <p>submitted</p>
+                    // </div>
+                    <div className='mt-6'>
+                      <List title={'RESULTS'} items={array} politician={true} />
                     </div>
                   ) : (
                     <div className='mt-6'>
                       <List title={'RECENTS'} items={array} politician={true} />
-                      <List
-                        title={'MOST POPULAR'}
-                        items={array}
-                        politician={true}
-                      />
                     </div>
                   )}
                 </div>
