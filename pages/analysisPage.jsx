@@ -47,28 +47,6 @@ function AnalysisPage() {
     router.push('/profileSearch');
   };
 
-  const ProfileLine = ({ text }) => {
-    return (
-      <div className='flex flex-row items-center justify-center h-6'>
-        <div
-          className='mr-1'
-          style={{ display: 'flex', alignItems: 'center', width: '70px' }}
-        >
-          <div style={{ flex: 1, backgroundColor: '#7895B1', height: '2px' }} />
-        </div>
-        <span className=' text-[#7895B1] text-xs font-bold'>
-          POLITCAL PROFILES
-        </span>
-        <div
-          className='ml-1'
-          style={{ display: 'flex', alignItems: 'center', width: '70px' }}
-        >
-          <div style={{ flex: 1, backgroundColor: '#7895B1', height: '2px' }} />
-        </div>
-      </div>
-    );
-  };
-
   const TheBiasLine = ({ text }) => {
     return (
       <div className='flex flex-col items-center justify-center w-6'>

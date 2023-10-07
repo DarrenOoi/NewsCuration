@@ -14,6 +14,7 @@ import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 import VerticleLine from '@/components/JustTheFactsLine';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import Menu from '@/components/Menu';
+import Poll from '@/components/Poll';
 
 function Home() {
   const [text, setText] = useState('');
@@ -127,6 +128,7 @@ function Home() {
                       }
                     />
                   </div>
+                  <Poll />
                 </div>
               </div>
 
