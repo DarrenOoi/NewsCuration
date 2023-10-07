@@ -13425,4 +13425,28 @@ ADD InsertedBy VARCHAR(50)
     WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
 0=1
     ]
+
+[2023-10-05 22:38:15.316437] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E93C826710>]
+[2023-10-05 22:38:15.317345] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E93C825290>]
+[2023-10-05 22:38:16.176453] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:39:12.060397] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
+[2023-10-05 22:39:52.427420] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CD498F5CD0>]
+[2023-10-05 22:39:52.428421] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CD46FD3AD0>]
+[2023-10-05 22:39:53.328003] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:39:56.154815] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
+[2023-10-04 15:12:54.143219] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000238E0DF59D0>]
+[2023-10-04 15:12:54.151271] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000238E0A15DD0>]
+[2023-10-04 15:12:54.631637] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+
 [2023-10-05 22:38:15.316437] [Daniel Cic
+
