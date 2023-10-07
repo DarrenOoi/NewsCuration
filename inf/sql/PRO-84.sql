@@ -1,12 +1,11 @@
 CREATE TABLE Comments (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Article INT,
+    URL VARCHAR(1000),
     Author VARCHAR(255),
     Comment VARCHAR(2000),
     InProduction BOOLEAN,
     InsertedAt DATETIME,
-    InsertedBy VARCHAR(50),
-FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+    InsertedBy VARCHAR(50)
 );
 
 -- inserted with the following command:

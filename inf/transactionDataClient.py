@@ -312,9 +312,9 @@ class Article_ArticleBias(table):
 
 class Comments(table):
   
-  def __init__(self, ID_Article=int, Author=str, Comment=bool, inProduction=bool):
+  def __init__(self, url=str, Author=str, Comment=bool, inProduction=bool):
     super().__init__()
-    self.ID_Article = ID_Article
+    self.url = url
     self.Author = Author
     self.Comment = Comment
     self.inProd = inProduction
@@ -324,16 +324,16 @@ class Comments(table):
     if self.id is None:
       return f'{self.name} record has not been inserted into DB - ID is NONE'
     else:
-      return f'{self.name}[{self.id}, {self.ID_Article}, {self.Author}, {self.Comment}, {self.inProd}]'
+      return f'{self.name}[{self.id}, {self.url}, {self.Author}, {self.Comment}, {self.inProd}]'
     
   '''
   This insert statement only takes one parameter; the name of the user inserting the record.
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {self.name}(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    INSERT INTO {self.name}(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    '{self.ID_Article}',
+    '{self.url}',
     '{self.Author}',
     '{self.Comment}',
     {1 if self.inProd else 0}, 
@@ -574,7 +574,7 @@ if __name__ == '__main__':
     tdc.insert(newPoliticianPosition)
     newPoliticianKeyTable = Politician_KeyTable(newPolitician.getId(), newArticle.getId())
     tdc.insert(newPoliticianKeyTable) 
-    newComment = Comments(newArticle.getId(), 'Joe Mama', 'I am writing a comment on this ', 0)
+    newComment = Comments('examplewebsite.com', 'Joe Mama', 'I am writing a comment on this ', 0)
     tdc.insert(newComment) 
      
     # Article_ArticleBias Table
