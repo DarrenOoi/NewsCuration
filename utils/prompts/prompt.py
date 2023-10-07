@@ -80,6 +80,19 @@ SUMMARY_PROMPT = [
           {"role": "user", "content": ''},
       ]
 
+POLL_PROMPT = [
+          {"role": "system", "content": "You are methodical assistant."},
+          {"role": "system", "content": "You will be provided with a web-scraped media article." + 
+           " Read through the text carefully and in its entirety." + 
+           " Develop a poll with four options for people to answer after they read the same article which you have just read." +
+           " The poll should be an opinion poll only related to the content of the article but should not include any first person words." + 
+           " It should not be a true or false question, but instead each option must be valid given it is an opinion poll." + 
+           " Provide me with an output of only five lines, do not output anything else." + 
+           " Give me a JSON output where the first line is the question and the next four are the options."},
+           {"role": "user", "content": ''}
+      ]  
+
+
 def generate_bias_prompt(content):
     prompt = BIAS_PROMPT
     prompt[-1]['content'] = content
@@ -87,6 +100,11 @@ def generate_bias_prompt(content):
 
 def generate_summary_prompt(content):
     prompt = SUMMARY_PROMPT
+    prompt[-1]['content'] = content
+    return prompt
+
+def generate_poll_prompt(content):
+    prompt = POLL_PROMPT
     prompt[-1]['content'] = content
     return prompt
 
