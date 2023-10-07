@@ -293,7 +293,8 @@ def getPoll():
     prompt = json.dumps(pollDict)
     return prompt
 
-
+# Input: url string of article, int value corresponding to 1,2,3,4 indicating which poll option was clicked
+# Output: {"response":"updated"}
 @app.route('/UpdatePoll', methods=['POST'])    
 def updatePoll():
     data = request.get_json()
@@ -301,16 +302,19 @@ def updatePoll():
     optionIndex = data.get('optionIndex')
     sm.updatePoll(url, optionIndex)
     return {"response":"updated"}
-    # RON WILL MAKE THE SESSION MANAGER FUNCTION TO UPDATE THE POLL
-    # pollOption = sm.[your function here]
-    # return pollOption
 
+
+# Input: url string
+# OUput: int number of views article recieved
 @app.route('/GetViews', methods=['POST'])    
 def getArticleViews():
     data = request.get_json()
     url = data.get('url')
     return {"response": sm.getArticleItem(url, SM.VIEWS)}
 
+# Input: int number of articles to return
+# Output: list of dictionaries in the form [{"header": "hello world", "url": "http://helloworld.com"}] 
+# in order from most viewed to least (of the top x requested)
 @app.route('/GetMostViewedArticles', methods=['POST'])    
 def getMostViewedArticles():
     data = request.get_json()
