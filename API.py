@@ -99,8 +99,7 @@ def summary():
     try:
         return {"response": response, "header": header, "article": article}
     finally:
-        print('need to update viewcount')
-        # sm.updateViewCount(url)
+        sm.updateViewCount(url)
 
 
 @app.route('/ArticleBiasedScore', methods=['POST'])
@@ -305,6 +304,18 @@ def updatePoll():
     # RON WILL MAKE THE SESSION MANAGER FUNCTION TO UPDATE THE POLL
     # pollOption = sm.[your function here]
     # return pollOption
+
+@app.route('/GetViews', methods=['POST'])    
+def getArticleViews():
+    data = request.get_json()
+    url = data.get('url')
+    return {"response": sm.getArticleItem(url, SM.VIEWS)}
+
+@app.route('/GetMostViewedArticles', methods=['POST'])    
+def getMostViewedArticles():
+    data = request.get_json()
+    number = data.get('number')
+    return {"response": sm.getMostViewedArticles(number)}
 
 '''
 Returns the Campaign details of each politician by their name as input

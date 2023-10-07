@@ -23,6 +23,7 @@ POLITICIAN = "Politician"
 POLITICIAN_CAMPAIGN = "Politician_CampaignPolicies"
 POLL_PROMPT = "poll"
 POLL_VALS = "pollVals"
+VIEWS = "views"
 
 # def wait(t):
 #     time.sleep(t)
@@ -87,7 +88,7 @@ class RequestRate():
 
 # Parent of ArticleJob, has basic functionality to return abstract (object) values requesed by User
 class ArticleElement():
-    def __init__(self, url: str, header: str, text: str, summary: str, biasRange: tuple, biasWords: str, politicalFigures: list, politicalFigureIds: list, poll: str, pollVals: list) -> None:
+    def __init__(self, url: str, header: str, text: str, summary: str, biasRange: tuple, biasWords: str, politicalFigures: list, politicalFigureIds: list, poll: str, pollVals: list, views: int) -> None:
         self.url = url
         self.header = header
         self.text = text
@@ -98,6 +99,7 @@ class ArticleElement():
         self.politicalFigureIds = politicalFigureIds
         self.poll = poll
         self.pollVals = pollVals
+        self.views = views
 
         self.requestRate = RequestRate()
 
@@ -114,7 +116,7 @@ class ArticleElement():
 # retrieve/create the data each article contains in a thread-safe manner
 class ArticleElementJob(ArticleElement):
     def __init__(self, url: str, webScraper: NewsScraper, tdcLock: Lock, tdc: transactionDataClient) -> None:
-        super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None, None, None, [0,0,0,0])
+        super().__init__(url, webScraper.getHeader(), webScraper.getArticle(), None, None, None, None, None, None, [0,0,0,0], 1)
         self.summaryLock = Condition()
         self.biasRangeLock = Condition()
         self.biasWordsLock = Condition()
@@ -214,6 +216,7 @@ class ArticleManager():
         # process required jobs to suplement data recieved
         articleDict = results[0]
         articleId = articleDict['ID']
+        print(f"{articleDict['Views']} DEBUG alert")
         results = self.transactionClient.query("Politician_KeyTable", filter=f'ID_Article = "{articleId}"')
         politicianIds = [result['ID_Politician'] for result in results]
 
@@ -243,7 +246,7 @@ class ArticleManager():
         self.cacheLock.acquire()
         self.preventCacheOverflow()
         print(f"DEBUG: {articleDict.keys()}")
-        self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['OriginalText'], articleDict['SummaryParagraph'], (articleDict['LowerBias'], articleDict['UpperBias']), biasWords, politicanNames, politicianIds, poll, pollVals)
+        self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['OriginalText'], articleDict['SummaryParagraph'], (articleDict['LowerBias'], articleDict['UpperBias']), biasWords, politicanNames, politicianIds, poll, pollVals, articleDict['Views'])
         self.cacheLock.release()
         print('DEBUG: DB extraction complete')
         print(self)
@@ -272,7 +275,7 @@ class ArticleManager():
     def insertDataFromJobToDB(self, url: str, header: str, text: str, summary: str, lowBias: float, highBias: float, biasWords: dict, politicalFigureIds: list, poll: dict):
         result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
         if len(result) != 0:
-            print("ERROR: there already exists an article")
+            print("DEBUG: there already exists an article")
             return None
         
         # clean data
@@ -325,7 +328,7 @@ class ArticleManager():
         self.cacheLock.acquire()
         tmp = self.jobs[url]
         self.preventCacheOverflow()
-        self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"), tmp.get("politicalFigureIds"), tmp.get("poll"), [0,0,0,0])
+        self.cache[url] = ArticleElement(url, tmp.get("header"), tmp.get("text"), tmp.get("summary"), tmp.get("biasRange"), tmp.get("biasWords"), tmp.get("politicalFigures"), tmp.get("politicalFigureIds"), tmp.get("poll"), [0,0,0,0], 1)
         if self.recents.full():
             self.recents.get()
         self.recents.put(self.cache[url])        
@@ -431,6 +434,26 @@ class ArticleManager():
         update_table(self.transactionClient, 'Polling', f'{option} = {value + 1}', f'ID_Article = {id}')
         self.transactionClientLock.release()
         return
+    
+    def updateViews(self, url: str) -> None:
+        self.transactionClientLock.acquire()    
+        self.cacheLock.acquire()
+        if self.isArticleInCache(url):
+            self.cache[url].views += 1
+        self.cacheLock.release()
+
+        result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
+        if len(result) != 1:
+            print("Error")
+            self.transactionClientLock.release()
+            return
+        update_table(self.transactionClient, 'Article', f'Views = {result[0]["Views"] + 1}', f'ID = {result[0]["ID"]}')
+        self.transactionClientLock.release()
+        return
+    
+    def getMostViewedArticles(self, num: int)->list:
+        results = get_most_viewed_articles(self.transactionClient, num)
+        return results
     
     def setSaved(self, url:str):
         article = self.getArticle(url)
@@ -612,6 +635,12 @@ class SessionManager():
     
     def updatePoll(self, url: str, optionIndex: int)->None:
         return self.articleManager.updatePoll(url, optionIndex)
+    
+    def updateViewCount(self, url: str)->None:
+        return self.articleManager.updateViews(url)
+    
+    def getMostViewedArticles(self, num: int)->list:
+        return self.articleManager.getMostViewedArticles(num)
 
     # Call this method, either by the ID, or by a list of names. Prefernce is by name
     # Although ID is recommended. Returns a dictionary of the record, 

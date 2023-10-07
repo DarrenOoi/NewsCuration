@@ -106,3 +106,12 @@ def update_table(tdc=transactionDataClient, table="Article", set="", where=""):
     WHERE {where} 
     """
     return tdc.query_special(query)
+
+def get_most_viewed_articles(tdc=transactionDataClient, number=1):
+    query = f"""
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT {number}
+    """
+    return tdc.query_special(query)
