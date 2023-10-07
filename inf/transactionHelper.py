@@ -82,6 +82,19 @@ def insert_bias_keywords(tdc=transactionDataClient, ID=int, biasSubtext=dict, in
 
 
 '''
+retrieves all comments relating to an article ID
+'''
+def retrieve_article_comments(tdc:transactionDataClient, url:int) -> list:
+    return tdc.query('Comments', f"URL = '{url}'")
+
+'''
+Persist a comment to the database.
+'''
+def create_comment(tdc:transactionDataClient, author:str, message:str, url:str):
+    comment = Comments(url, author, message, 1)
+    tdc.insert(comment)
+'''
+Increments the vote
 '''
 def increment_vote(tdc=transactionDataClient, ID=int, option=int):
     records = tdc.query('Polling', f'ID_Article = {ID}')

@@ -281,6 +281,53 @@ def getRecentPoliticians():
 def getRecentArticles():
     return sm.getRecentArticles()
 
+
+###
+# Persist a comment to the database.
+# Requires the following ---
+# "Comment" : the comment they are making
+# "Author" : the name of the person making the comment
+# url : the url of the article the comment is being saved to.
+#
+# Returns:
+# --------
+# None 
+###
+@app.route('/SaveArticleComment', methods=['POST'])
+def setArticleComment():
+    data = request.get_json()
+    comment = data.get('Comment')
+    author = data.get('Author')
+    url = data.get('url')
+    sm.saveArticleComment(author, comment, url)
+    return {"RESULT" : "SUCCESS"}
+    
+###
+# Persist a comment to the database.
+# Requires the following ---
+#
+# url : the url of the article the comment is being saved to.
+#
+# Returns:
+# --------
+# {
+#   "Result" : [
+#   {ID : int
+#   ID_Article : int
+#   Author : str
+#   Comment : str
+#   InProduction : bool
+#   InsertedAt : DATETIME
+#   InsertedBy : str} ]
+# }
+###
+@app.route('/getArticleComments', methods=['POST'])
+def getArticleComments():
+    data = request.get_json()
+    url = data.get('url')    
+    return sm.getArticleComments(url)   
+    
+
 @app.route('/GetPoll', methods=['POST'])    
 def getPoll():
     data = request.get_json()

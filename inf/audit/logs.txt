@@ -11037,6 +11037,7 @@ DROP COLUMN Summary]
 [2023-10-04 14:44:12.468997] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027040926790>]
 [2023-10-04 14:44:12.926048] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
 [2023-10-04 14:44:13.385885] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+
     INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
     VALUES (
     'examplewebsite.com',
@@ -11044,31 +11045,56 @@ DROP COLUMN Summary]
     22.4,
     0, 
     NOW(),
+
     'Manav Trivedi',
+
     'This is the header',
     'This is the originalText',
     'this would be the chatGPT response in paragraph form'
     );
+]
+[2023-10-04 20:02:10.191693] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
     ]
+[2023-10-04 20:02:11.465297] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+
 [2023-10-04 14:44:13.848194] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article;
     ]
 [2023-10-04 14:44:14.075593] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+
     INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
     VALUES (
     'Prime Minister of Australia',
     0, 
     NOW(),
+
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-04 20:02:11.921898] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+
     'Manav Trivedi'
     );
     : 
  error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
 [2023-10-04 14:44:14.321471] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+
     INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
     VALUES (
     'Prime Minister of Australia',
     0, 
     NOW(),
+
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:12.822721] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-04 20:02:13.728435] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+
     'Manav Trivedi'
     );
     ]
@@ -11076,6 +11102,7 @@ DROP COLUMN Summary]
     SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
     ]
 [2023-10-04 14:44:15.703979] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+
     INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
     VALUES (
     'John',
@@ -11085,20 +11112,227 @@ DROP COLUMN Summary]
     'Male',
     0, 
     NOW(),
+
+
     'Manav Trivedi',
+
     '\img\imghere',
     'another more general summary here'
     );
+]
+[2023-10-04 20:02:15.339230] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
     ]
+[2023-10-04 20:02:16.245934] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+
 [2023-10-04 14:44:16.161304] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Politician;
     ]
 [2023-10-04 14:44:16.627168] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+
     INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
     VALUES (
     'Prime Minister of Australia',
     0, 
     NOW(),
+
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:17.151267] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-04 20:02:18.740157] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    9,
+    30,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:19.663117] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-04 20:02:20.122953] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProdution, InsertedAt, InsertedBy)
+    VALUES (
+    '30',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1054, "Unknown column 'InProdution' in 'field list'")]
+[2023-10-04 20:02:20.576015] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProdution, InsertedAt, InsertedBy)
+    VALUES (
+    '30',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:21.490575] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:02:22.394649] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '30',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:23.302752] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 20:02:23.305769] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000144A60ED2D0>]
+[2023-10-04 20:02:23.305769] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000144A6870D90>]
+[2023-10-04 20:02:49.232410] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000023FDD6FF990>]
+[2023-10-04 20:02:49.233410] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000023FDFB06B90>]
+[2023-10-04 20:02:51.144928] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:02:52.018919] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 20:02:52.930716] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 20:02:53.394747] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '31',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1452, 'Cannot add or update a child row: a foreign key constraint fails (`newscuration`.`Comments`, CONSTRAINT `Comments_ibfk_1` FOREIGN KEY (`ID_Article`) REFERENCES `Politician` (`ID`))')]
+[2023-10-04 20:02:53.835681] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '31',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:54.721863] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:02:55.617363] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '31',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:56.484144] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 20:03:49.016740] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021307E19110>]
+[2023-10-04 20:03:49.018738] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021309CC6290>]
+[2023-10-04 20:03:49.902777] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:03:50.811971] [Daniel Ciccotosto-Camp] [SUCCESS] [-- CREATE TABLE Comments (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     ID_Article INT,
+--     Author VARCHAR(255),
+--     Comment VARCHAR(2000),
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+-- FOREIGN KEY (ID_Article) REFERENCES Politician(ID)
+-- );
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+DROP TABLE Comments]
+[2023-10-04 20:03:50.813978] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000021307E19110>]
+[2023-10-04 20:03:50.813978] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000021309CC6290>]
+[2023-10-04 20:04:05.832637] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001FD8ED69110>]
+[2023-10-04 20:04:05.833626] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001FD90C16290>]
+[2023-10-04 20:04:06.682698] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:04:07.561861] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments]
+[2023-10-04 20:04:07.563857] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001FD8ED69110>]
+[2023-10-04 20:04:07.564856] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001FD90C16290>]
+[2023-10-04 20:04:18.217698] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000016F4546F990>]
+[2023-10-04 20:04:18.218650] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000016F47876B90>]
+[2023-10-04 20:04:19.086404] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:04:19.944745] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 20:04:20.792609] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 20:04:21.649745] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '32',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:04:22.490575] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:04:23.338943] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+=======
     'Manav Trivedi'
     );
     ]
@@ -11144,6 +11378,69 @@ DROP COLUMN Summary]
     VALUES (
     'Devastating blaze',
     'the term "devastating" indicates a tragice loss of life',
+
+    '32',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:04:24.183708] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 20:22:51.917175] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B0439CF750>]
+[2023-10-04 20:22:51.918171] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B044FF8D90>]
+[2023-10-04 20:22:52.739881] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:24:37.077779] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'John Doe',
+    'Test Comment',
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:24:37.906788] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:25:44.973925] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D76FD318D0>]
+[2023-10-04 20:25:44.974925] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D74D6518D0>]
+[2023-10-04 20:25:45.811426] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:25:50.675284] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'John Doe',
+    'Test Comment',
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:25:51.513813] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:27:03.927891] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE ID_Article = 1
+    ]
+[2023-10-04 20:27:52.776901] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A9EE7A1F50>]
+[2023-10-04 20:27:52.779000] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A9EE56B810>]
+[2023-10-04 20:27:53.628433] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:27:58.446835] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE ID_Article = 1
+    ]
+[2023-10-04 20:29:03.724536] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE ID_Article = 1
+    ]
+
     '17',
     0, 
     NOW(),
@@ -11155,6 +11452,571 @@ DROP COLUMN Summary]
     ]
 [2023-10-04 14:44:19.882644] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000270402D5610>]
 [2023-10-04 14:44:19.886104] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000027040926790>]
+
+[2023-10-07 21:01:28.649519] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F729BBF9D0>]
+[2023-10-07 21:01:28.650328] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F72B4968D0>]
+[2023-10-07 21:01:29.473354] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:01:30.402890] [Daniel Ciccotosto-Camp] [SUCCESS] [-- CREATE TABLE Comments (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     ID_Article INT,
+--     Author VARCHAR(255),
+--     Comment VARCHAR(2000),
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+-- FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+-- );
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+DROP TABLE Comments]
+[2023-10-07 21:01:30.406911] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001F729BBF9D0>]
+[2023-10-07 21:01:30.407908] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001F72B4968D0>]
+[2023-10-07 21:02:07.289611] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002D73246F9D0>]
+[2023-10-07 21:02:07.290604] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002D733D468D0>]
+[2023-10-07 21:02:08.160596] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:02:08.609725] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments with error (1072, "Key column 'ID_Article' doesn't exist in table")]
+[2023-10-07 21:02:09.045645] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments]
+[2023-10-07 21:02:09.048381] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002D73246F9D0>]
+[2023-10-07 21:02:09.049139] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002D733D468D0>]
+[2023-10-07 21:05:49.253123] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000260D86E9090>]
+[2023-10-07 21:05:49.254170] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000260D8826190>]
+[2023-10-07 21:05:50.113756] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:05:50.980074] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-07 21:05:51.841235] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-07 21:05:52.273984] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:05:52.708293] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:05:53.129824] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:05:53.561947] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-07 21:05:53.563939] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:05:54.430860] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-07 21:05:55.298037] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-07 21:05:55.727003] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:05:56.148786] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:05:56.577301] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:05:57.017694] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-07 21:05:57.018694] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:05:57.877054] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    13,
+    46,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:05:58.756242] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-07 21:05:59.186511] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-07 21:05:59.627181] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:06:00.056465] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Comments;
+    : 
+ error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-07 21:06:00.493175] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-07 21:06:00.494172] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:06:01.390348] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '46',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:06:02.251774] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-07 21:06:02.255930] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000260D86E9090>]
+[2023-10-07 21:06:02.256930] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000260D8826190>]
+[2023-10-07 21:06:39.900572] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002113072F150>]
+[2023-10-07 21:06:39.901487] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000211329E6890>]
+[2023-10-07 21:06:40.760630] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:06:41.190818] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments with error (1072, "Key column 'ID_Article' doesn't exist in table")]
+[2023-10-07 21:06:41.604073] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments]
+[2023-10-07 21:06:41.607477] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002113072F150>]
+[2023-10-07 21:06:41.610501] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000211329E6890>]
+[2023-10-07 21:06:54.987472] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000208CD9336D0>]
+[2023-10-07 21:06:54.988488] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000208CD7B6890>]
+[2023-10-07 21:06:56.536423] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:06:57.417056] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments]
+[2023-10-07 21:06:57.418975] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000208CD9336D0>]
+[2023-10-07 21:06:57.419973] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000208CD7B6890>]
+[2023-10-07 21:07:05.738930] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000193DE420D90>]
+[2023-10-07 21:07:05.739846] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000193E02A6190>]
+[2023-10-07 21:07:06.559232] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:07:07.393236] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-07 21:07:08.221172] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-07 21:07:08.629660] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:07:09.035810] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:09.451417] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:07:09.864341] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-07 21:07:09.866338] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:07:10.721316] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-07 21:07:11.549109] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-07 21:07:11.965222] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:07:12.385810] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:12.804594] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:07:13.214040] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-07 21:07:13.216229] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:07:14.049866] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    14,
+    48,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:14.881380] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-07 21:07:15.714213] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:16.540850] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-07 21:07:17.370916] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '48',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:18.258634] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-07 21:07:18.261634] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000193DE420D90>]
+[2023-10-07 21:07:18.261634] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000193E02A6190>]
+[2023-10-07 21:15:49.584194] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F503FB0D90>]
+[2023-10-07 21:15:49.585841] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F505E36190>]
+[2023-10-07 21:15:50.447418] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:15:51.289310] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-07 21:15:52.111530] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-07 21:15:52.517835] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:15:52.925087] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:15:53.343657] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:15:53.757130] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-07 21:15:53.759430] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:15:54.656163] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-07 21:15:55.539422] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-07 21:15:55.958011] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:15:56.364732] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:15:56.780821] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:15:57.204150] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-07 21:15:57.206757] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:15:58.027135] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    15,
+    50,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:15:58.898552] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-07 21:15:59.723307] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:16:00.561536] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-07 21:16:01.398034] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '50',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:16:02.230691] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-07 21:16:02.233688] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001F503FB0D90>]
+[2023-10-07 21:16:02.234751] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001F505E36190>]
+[2023-10-07 21:16:31.440481] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001AB58C4B690>]
+[2023-10-07 21:16:31.442470] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001AB59753E90>]
+[2023-10-07 21:16:32.315306] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:40:58.446715] [Daniel Ciccotosto-Camp] [FAIL] [error building sql statement with error (1054, "Unknown column 'examplewebsite.com' in 'where clause'")]
+[2023-10-07 21:40:58.880872] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = examplewebsite.com
+    ]
+[2023-10-07 21:42:07.876675] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CDCE084ED0>]
+[2023-10-07 21:42:07.877669] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CDCDC4A710>]
+[2023-10-07 21:42:08.746823] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:42:17.975604] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'examplewebsite.com'
+    ]
+[2023-10-07 21:42:30.705143] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'John Doe',
+    'Test Comment',
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:42:31.572140] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
 [2023-10-04 20:58:23.177393] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021A81445B90>]
 [2023-10-04 20:58:23.178353] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021AFEFB6290>]
 [2023-10-04 20:58:24.064718] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
@@ -13449,4 +14311,3 @@ ADD InsertedBy VARCHAR(50)
 [2023-10-04 15:12:54.631637] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
 
 [2023-10-05 22:38:15.316437] [Daniel Cic
-

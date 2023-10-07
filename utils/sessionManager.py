@@ -577,6 +577,12 @@ class SessionManager():
     def getCampaignDetails(self, name:str):
         return self.politicianManager.getPoliticianCampaignDetails(self.tdc, name)
     
+    def getArticleComments(self, url:int):
+        return {'Result' : retrieve_article_comments(self.tdc, url)}
+    
+    def saveArticleComment(self, author, message, url):
+        create_comment(self.tdc, author, message, url) 
+    
     def close(self):
         self.tdc.closeConnection()
 
