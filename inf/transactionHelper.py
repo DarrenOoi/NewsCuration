@@ -79,3 +79,21 @@ def insert_bias_keywords(tdc=transactionDataClient, ID=int, biasSubtext=dict, in
     for phrase, reason in biasSubtext.items():
         subTextClass = Article_ArticleBias(ID, phrase, reason, inProduction)
         tdc.insert(subTextClass)
+
+
+'''
+'''
+def increment_vote(tdc=transactionDataClient, ID=int, option=int):
+    records = tdc.query('Polling', f'ID_Article = {ID}')
+    record = records[0]
+
+    if (option == 1):
+        record.votesFirst += 1
+    elif (option == 2):
+        record.votesSecond += 1
+    elif (option == 3):
+        record.votesThird += 1
+    elif (option == 4):
+        record.votesFourth += 1
+    else:            
+        tdc.logMessage(messageStatus.WARN, f'This is not a valid vote option for related ArticleID ({ID})')
