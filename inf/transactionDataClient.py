@@ -56,6 +56,7 @@ URL VARCHAR(255), -- Adjust the length as needed for your URLs
 UpperBias DECIMAL(5, 2), -- 5 total digits with 2 decimal places
 LowerBias DECIMAL(5, 2), -- lower bias score
 Summary TEXT, -- TEXT type allows up to 65,535 characters
+Views INT,
 InProduction BOOLEAN,
 InsertedAt DATETIME,
 InsertedBy VARCHAR(50)
@@ -84,7 +85,7 @@ class Article(table):
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
     VALUES (
     '{self.url}',
     {self.upperBias},
@@ -94,7 +95,8 @@ class Article(table):
     '{insertedBy}',
     '{self.header}',
     '{self.originalText}',
-    '{self.summaryParagraph}'
+    '{self.summaryParagraph}',
+    1
     );
     """
     return query

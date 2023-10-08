@@ -99,8 +99,7 @@ def summary():
     try:
         return {"response": response, "header": header, "article": article}
     finally:
-        print('need to update viewcount')
-        # sm.updateViewCount(url)
+        sm.updateViewCount(url)
 
 
 @app.route('/ArticleBiasedScore', methods=['POST'])
@@ -332,18 +331,42 @@ def getArticleComments():
 def getPoll():
     data = request.get_json()
     url = data.get('url')
-    # RON WILL MAKE THE SESSION MANAGER FUNCTION
-    # pollOptions = sm.[your function here]
-    # return pollOptions
+    pollStr = sm.getArticleItem(url, SM.POLL_PROMPT)
+    pollDict = json.loads(pollStr)
+    pollVals = sm.getArticleItem(url, SM.POLL_VALS)
+    results = [{"opinion": pollDict["options"][i], "votes":pollVals[i]} for i in range(len(pollVals))]
+    del pollDict["options"]
+    pollDict["results"] = results
+    prompt = json.dumps(pollDict)
+    return prompt
 
+# Input: url string of article, int value corresponding to 1,2,3,4 indicating which poll option was clicked
+# Output: {"response":"updated"}
 @app.route('/UpdatePoll', methods=['POST'])    
 def updatePoll():
     data = request.get_json()
     url = data.get('url')
-    option = data.get('option')
-    # RON WILL MAKE THE SESSION MANAGER FUNCTION TO UPDATE THE POLL
-    # pollOption = sm.[your function here]
-    # return pollOption
+    optionIndex = data.get('optionIndex')
+    sm.updatePoll(url, optionIndex)
+    return {"response":"updated"}
+
+
+# Input: url string
+# OUput: int number of views article recieved
+@app.route('/GetViews', methods=['POST'])    
+def getArticleViews():
+    data = request.get_json()
+    url = data.get('url')
+    return {"response": sm.getArticleItem(url, SM.VIEWS)}
+
+# Input: int number of articles to return
+# Output: list of dictionaries in the form [{"header": "hello world", "url": "http://helloworld.com"}] 
+# in order from most viewed to least (of the top x requested)
+@app.route('/GetMostViewedArticles', methods=['POST'])    
+def getMostViewedArticles():
+    data = request.get_json()
+    number = data.get('number')
+    return {"response": sm.getMostViewedArticles(number)}
 
 '''
 Returns the Campaign details of each politician by their name as input
