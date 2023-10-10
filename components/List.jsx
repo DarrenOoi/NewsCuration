@@ -9,16 +9,22 @@ const List = ({ title, items, politician, handleClick }) => {
       <div>
         <p className='text-amber-400 font-bold mb-2'>{title}</p>
         {isEmpty ? (
-          <p>No {title} articles</p>
+          <p>No {title}</p>
         ) : (
           items.map((item, index) => (
             <div key={index} className='flex mb-2'>
               {politician ? (
                 <div className='flex mb-2'>
                   <BsPersonCircle className='align-bottom mr-4' size={25} />
-                  <p className='mr-4'>{item.name}</p>
+                  <p
+                    className='mr-4 cursor-pointer hover:bg-blue-100 rounded-l focus:outline-none'
+                    onClick={() => handleClick(`${item.Fname} ${item.Lname}`)}
+                  >
+                    {item.Fname} {item.Lname}
+                  </p>
                   <img
-                    src={findFlagUrlByIso2Code(item.countryCode)}
+                    // src={findFlagUrlByIso2Code(item.countryCode)}
+                    src={findFlagUrlByIso2Code('AU')}
                     className='opacity-70 mt-1'
                     style={{ width: '25px', height: '20px' }}
                   />

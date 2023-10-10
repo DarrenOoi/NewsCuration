@@ -1,6 +1,6 @@
-export const fetchRecentArticles = async () => {
+export const fetchRecentPoliticians = async () => {
   try {
-    const response = await fetch('http://localhost:5000/GetRecentArticles', {
+    const response = await fetch('http://localhost:5000/GetRecentPoliticians', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

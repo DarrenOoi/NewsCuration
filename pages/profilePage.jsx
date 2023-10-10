@@ -21,7 +21,6 @@ function ProfilePage() {
         try {
           const res = await fetchPolitician(name);
           setPolitician(res);
-          console.log(res);
         } catch (error) {
           //add error handling when request fails
           console.log('error');

@@ -14417,3 +14417,340 @@ ADD InsertedBy VARCHAR(50)
 [2023-10-04 15:12:54.151271] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000238E0A15DD0>]
 [2023-10-04 15:12:54.631637] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
 
+[2023-10-10 16:02:23.256943] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D22843DB10>]
+[2023-10-10 16:02:23.258036] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D228EEDC10>]
+[2023-10-10 16:02:24.088740] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-10 16:02:58.139974] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    ]
+[2023-10-10 16:02:59.393311] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-10 16:03:00.289885] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-10 16:03:00.911578] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    ]
+[2023-10-10 16:03:01.537107] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    ]
+[2023-10-10 16:03:03.708689] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    ]
+[2023-10-10 16:03:13.763799] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    ]
+[2023-10-10 16:03:14.219921] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177',
+    0.9411764705882353,
+    0.6235294117647059,
+    0, 
+    NOW(),
+    '',
+    ' Former US President Donald Trump: "Atrocities In Israel Wouldnt Have Occurred If I Were President" ',
+    'Donald Trump took aim at Joe Biden in his New Hampshire speech. In a campaign speech in New Hampshire on Monday, former US President Donald Trump directed criticism towards his White House successor, Joe Biden, holding him accountable for the deadly Hamas attack on Israel that occurred over the weekend. He said that such events would not have occurred under his leadership. "With people pouring into our country and we have no idea from where they come, the same people, in many cases, the same people that just attacked Israel, you know that, right? Can you imagine what this guy (Joe Biden) has done to us-what hes done to us? That would have never happened. The attack on Israel would never, ever have happened," he said. Also Read | 1,500 Killed In War, UN Chief "Distressed" By Israels Siege Of Gaza: 10 Points "What happened yesterday was incredible," he added. "Vicious. Young children were just slaughtered... When I was your president, we had peace through strength, and now we have weakness, conflict, and chaos. The atrocities were witnessing in Israel would never have happened if I were president." According to NBC News, "Trumps comments largely mirrored what he said in a statement he issued after the attacks and during a pair of campaign events he held in Iowa on Saturday. As he did in Iowa, Trump cited a $6 billion transfer to Iran that Biden administration officials have insisted has yet to be spent." PromotedListen to the latest songs, only on JioSaavn.com "These Hamas attacks are a disgrace, and Israel has every right to defend itself with overwhelming force. Sadly, American taxpayer dollars helped fund these attacks, which many reports are saying came from the Biden Administration," former President Donald Trump said in his statement. Trump cited the tragic events as proof of the United States perceived weakness on the global stage. Track Latest News Live on NDTV.com and get news updates from India and around the world. Watch Live News: Follow Us: ................................ Advertisement ................................',
+    '- Donald Trump criticized Joe Biden in a campaign speech in New Hampshire.
+- Trump held Biden accountable for the recent deadly Hamas attack on Israel.
+- Trump stated that such events would not have occurred under his leadership.
+- He claimed that the attack on Israel would never have happened if he were president.
+- Trump cited a $6 billion transfer to Iran by the Biden administration.
+- He said that American taxpayer dollars helped fund the Hamas attacks.
+- Trump perceived these events as a sign of weakness on the global stage for the United States.',
+    1
+    );
+    ]
+[2023-10-10 16:03:14.681666] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-10 16:03:15.142196] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    ]
+[2023-10-10 16:03:15.605288] [] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '53',
+    'What is your opinion on Donald Trumps criticism of Joe Biden regarding the Hamas attack on Israel?',
+    'Donald Trumps criticism is justified and Joe Biden is responsible for the attack on Israel.',
+    'Donald Trumps criticism is not justified and Joe Biden should not be held accountable for the attack on Israel.',
+    'Donald Trumps criticism is partially justified but Joe Biden is not solely responsible for the attack on Israel.',
+    'I do not have an opinion on Donald Trumps criticism of Joe Biden regarding the Hamas attack on Israel.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:16.060975] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-10 16:03:16.517094] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'criticism',
+    'The word criticism suggests that Donald Trump is expressing disapproval or negative judgment towards Joe Bidens actions.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:16.980713] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:17.765602] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'accountable',
+    'The word accountable implies that Donald Trump holds Joe Biden responsible for the deadly Hamas attack on Israel.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:18.217492] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:18.674765] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'deadly',
+    'The word deadly conveys a strong emotional impact, emphasizing the severity and loss of life in the Hamas attack.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:19.129273] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:19.595830] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'pouring into our country',
+    'The phrase pouring into our country suggests a negative connotation, potentially invoking fear or concern about immigration.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:20.054114] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:20.512273] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Vicious',
+    'The word vicious carries a strong emotional charge, describing the attack on Israel as brutal and cruel.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:20.970258] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:21.426738] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'slaughtered',
+    'The word slaughtered evokes strong emotions, emphasizing the brutality and loss of innocent lives in the attack.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:21.895660] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:22.355703] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'weakness, conflict, and chaos',
+    'The phrase weakness, conflict, and chaos implies a negative assessment of Joe Bidens leadership, portraying it as ineffective and tumultuous.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:22.810318] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:23.265486] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'atrocities',
+    'The word atrocities conveys a strong emotional impact, highlighting the horrific nature of the events in Israel.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:23.718004] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:24.176384] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'peace through strength',
+    'The phrase peace through strength suggests that Donald Trumps leadership approach prioritized strength and deterrence to maintain peace.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:24.630572] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:25.085444] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'disgrace',
+    'The word disgrace expresses a strong negative judgment, characterizing the Hamas attacks as shameful or morally wrong.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:25.540006] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:26.470246] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'overwhelming force',
+    'The phrase overwhelming force suggests a strong military response by Israel, potentially implying a power imbalance.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:26.930279] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:27.388335] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'tragic events',
+    'The phrase tragic events emphasizes the sadness and sorrow associated with the attacks.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:27.846722] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:28.302685] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'weakness on the global stage',
+    'The phrase weakness on the global stage implies a negative perception of the United States international standing under Joe Bidens administration.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:28.758936] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:29.214550] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'fund these attacks',
+    'The phrase fund these attacks suggests that American taxpayer dollars were used to support the Hamas attacks.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:29.667567] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:30.122990] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'perceived weakness',
+    'The phrase perceived weakness indicates that Donald Trump believes the United States is viewed as weak in the international arena.',
+    '53',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:30.576096] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 16:03:31.034845] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    5,
+    53,
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-10 16:03:31.488602] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-10 16:03:31.956282] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    ]
+[2023-10-10 16:03:32.415563] [] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 53 
+    ]
+[2023-10-10 16:11:55.265474] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000208CA4DDB10>]
+[2023-10-10 16:11:55.265474] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000208C9940210>]
+[2023-10-10 16:11:55.718087] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-10 16:15:32.844525] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-10 16:15:33.310522] [] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]

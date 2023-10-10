@@ -1,17 +1,33 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Button from '@/components/Button';
 import Input from '@/components/Input';
 import { useRouter } from 'next/router';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import List from '@/components/List';
+import { fetchRecentPoliticians } from '@/utils/fetchRecentPoliticians';
 
 function ProfileSearch() {
   const [search, setSearch] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState('');
+  const [recents, setRecents] = useState('');
+
+  useEffect(() => {
+    async function fetchPoliticians() {
+      try {
+        const res = await fetchRecentPoliticians();
+        setRecents(res);
+        console.log(res);
+      } catch (error) {
+        //add error handling when request fails
+        console.log('error');
+      }
+    }
+    fetchPoliticians();
+  }, []);
 
   const router = useRouter();
   const array = [
@@ -41,11 +57,18 @@ function ProfileSearch() {
     if (search.trim() != '') {
       setSubmitted(true);
       setResult(null);
-      // router.push({
-      //   pathname: '/profilePage',
-      //   query: { name: 'John Doe' },
-      // });
+      router.push({
+        pathname: '/profilePage',
+        query: { name: 'John Doe' },
+      });
     } else setResult(null);
+  };
+
+  const handleClick = (name) => {
+    router.push({
+      pathname: '/profilePage',
+      query: { name: name },
+    });
   };
 
   return (
@@ -88,11 +111,21 @@ function ProfileSearch() {
                     //   <p>submitted</p>
                     // </div>
                     <div className='mt-6'>
-                      <List title={'RESULTS'} items={array} politician={true} />
+                      <List
+                        title={'RESULTS'}
+                        items={recents}
+                        politician={true}
+                        handleClick={handleClick}
+                      />
                     </div>
                   ) : (
                     <div className='mt-6'>
-                      <List title={'RECENTS'} items={array} politician={true} />
+                      <List
+                        title={'RECENTS'}
+                        items={recents}
+                        politician={true}
+                        handleClick={handleClick}
+                      />
                     </div>
                   )}
                 </div>
