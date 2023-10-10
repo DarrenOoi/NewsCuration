@@ -56,6 +56,7 @@ URL VARCHAR(255), -- Adjust the length as needed for your URLs
 UpperBias DECIMAL(5, 2), -- 5 total digits with 2 decimal places
 LowerBias DECIMAL(5, 2), -- lower bias score
 Summary TEXT, -- TEXT type allows up to 65,535 characters
+Views INT,
 InProduction BOOLEAN,
 InsertedAt DATETIME,
 InsertedBy VARCHAR(50)
@@ -84,7 +85,7 @@ class Article(table):
   '''
   def insertSQL(self, insertedBy) -> str:
     query = f"""
-    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    INSERT INTO {Article.tableName} (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
     VALUES (
     '{self.url}',
     {self.upperBias},
@@ -94,7 +95,8 @@ class Article(table):
     '{insertedBy}',
     '{self.header}',
     '{self.originalText}',
-    '{self.summaryParagraph}'
+    '{self.summaryParagraph}',
+    1
     );
     """
     return query
@@ -425,6 +427,39 @@ class Article_ArticleBias(table):
     """
     return query
 
+class Comments(table):
+  
+  def __init__(self, url=str, Author=str, Comment=bool, inProduction=bool):
+    super().__init__()
+    self.url = url
+    self.Author = Author
+    self.Comment = Comment
+    self.inProd = inProduction
+    self.name = Comments.__name__
+    
+  def __str__(self):
+    if self.id is None:
+      return f'{self.name} record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.url}, {self.Author}, {self.Comment}, {self.inProd}]'
+    
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name}(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.url}',
+    '{self.Author}',
+    '{self.Comment}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+  
 
 '''
 The transactionDataClient. Communicates with the AWS RDS.
@@ -656,8 +691,6 @@ if __name__ == '__main__':
     # tdc.insert(newPoliticianPosition)
     newPolling = Polling(1, 'Your mom?', 'opt1', 'op12', 'op3', 'op4', 0)
     tdc.insert(newPolling)
-    newPoliticianCampaignPolicies = Politician_CampaignPolicies('Donald', 'Trump', 'Affordable Housing', 'I want to make housing affordable', 0) # have to edit this in
-    tdc.insert(newPoliticianCampaignPolicies)
     
     # Article_ArticleBias Table
     newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
@@ -666,6 +699,10 @@ if __name__ == '__main__':
         'Devastating blaze': 'the term "devastating" indicates a tragice loss of life',
         'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
     }
+    newPoliticianCampaignPolicies = Politician_CampaignPolicies('Donald', 'Trump', 'Affordable Housing', 'I want to make housing affordable', 0) # have to edit this in
+    tdc.insert(newPoliticianCampaignPolicies)
+    newComment = Comments('examplewebsite.com', 'Donald Trump', 'this would be a comment' 0)
+    
     #we can't debug because of stricter import rules (but we know it works)
     # transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
     # print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
@@ -676,6 +713,7 @@ if __name__ == '__main__':
     print(newArticle)
     print(newArticle_ArticleBias)
     print(newPoliticianCampaignPolicies)
+    print(newComment)
     
     tdc.closeConnection()
     
