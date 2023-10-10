@@ -116,6 +116,8 @@ function Home() {
                   </div>
 
                   <div className='mt-5'>
+                    <div>
+                    </div>
                     <Card
                       content={
                         result ? (
