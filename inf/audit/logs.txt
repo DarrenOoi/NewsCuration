@@ -14575,3 +14575,13 @@ ADD InsertedBy VARCHAR(50)
     SET Views = 4
     WHERE ID = 52 
     ]
+[2023-10-10 15:02:08.911279] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 15:02:09.414864] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 5
+    WHERE ID = 52 
+    ]

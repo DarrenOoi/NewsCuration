@@ -66,7 +66,7 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
         </div>
         
         <div>
-          <button onClick={copy} className="mt-7 btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
+          <button onClick={copy} className="mt-6 btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
           <Image
               src={Clipboard}
               width={13}
