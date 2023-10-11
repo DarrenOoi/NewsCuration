@@ -14417,340 +14417,293 @@ ADD InsertedBy VARCHAR(50)
 [2023-10-04 15:12:54.151271] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000238E0A15DD0>]
 [2023-10-04 15:12:54.631637] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
 
-[2023-10-10 16:02:23.256943] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D22843DB10>]
-[2023-10-10 16:02:23.258036] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D228EEDC10>]
-[2023-10-10 16:02:24.088740] [] [SUCCESS] [Established connection to database newscuration]
-[2023-10-10 16:02:58.139974] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:06:49.040219] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B0B6FCF4D0>]
+[2023-10-10 14:06:49.049741] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B0B7B22510>]
+[2023-10-10 14:06:49.549353] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-10 14:07:05.813558] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Article
-    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
     ]
-[2023-10-10 16:02:59.393311] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:07.676442] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Politician
     WHERE 1=1
     ]
-[2023-10-10 16:03:00.289885] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:08.358810] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Politician
     WHERE 1=1
     ]
-[2023-10-10 16:03:00.911578] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:09.110692] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Article
-    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
     ]
-[2023-10-10 16:03:01.537107] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:09.844468] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Article
-    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
     ]
-[2023-10-10 16:03:03.708689] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:17.600150] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Article
-    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
     ]
-[2023-10-10 16:03:13.763799] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:19.505672] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Article
-    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
     ]
-[2023-10-10 16:03:14.219921] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:20.299390] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
     VALUES (
-    'https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177',
-    0.9411764705882353,
-    0.6235294117647059,
+    'https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become',
+    0.7906976744186046,
+    0.5968992248062015,
     0, 
     NOW(),
-    '',
-    ' Former US President Donald Trump: "Atrocities In Israel Wouldnt Have Occurred If I Were President" ',
-    'Donald Trump took aim at Joe Biden in his New Hampshire speech. In a campaign speech in New Hampshire on Monday, former US President Donald Trump directed criticism towards his White House successor, Joe Biden, holding him accountable for the deadly Hamas attack on Israel that occurred over the weekend. He said that such events would not have occurred under his leadership. "With people pouring into our country and we have no idea from where they come, the same people, in many cases, the same people that just attacked Israel, you know that, right? Can you imagine what this guy (Joe Biden) has done to us-what hes done to us? That would have never happened. The attack on Israel would never, ever have happened," he said. Also Read | 1,500 Killed In War, UN Chief "Distressed" By Israels Siege Of Gaza: 10 Points "What happened yesterday was incredible," he added. "Vicious. Young children were just slaughtered... When I was your president, we had peace through strength, and now we have weakness, conflict, and chaos. The atrocities were witnessing in Israel would never have happened if I were president." According to NBC News, "Trumps comments largely mirrored what he said in a statement he issued after the attacks and during a pair of campaign events he held in Iowa on Saturday. As he did in Iowa, Trump cited a $6 billion transfer to Iran that Biden administration officials have insisted has yet to be spent." PromotedListen to the latest songs, only on JioSaavn.com "These Hamas attacks are a disgrace, and Israel has every right to defend itself with overwhelming force. Sadly, American taxpayer dollars helped fund these attacks, which many reports are saying came from the Biden Administration," former President Donald Trump said in his statement. Trump cited the tragic events as proof of the United States perceived weakness on the global stage. Track Latest News Live on NDTV.com and get news updates from India and around the world. Watch Live News: Follow Us: ................................ Advertisement ................................',
-    '- Donald Trump criticized Joe Biden in a campaign speech in New Hampshire.
-- Trump held Biden accountable for the recent deadly Hamas attack on Israel.
-- Trump stated that such events would not have occurred under his leadership.
-- He claimed that the attack on Israel would never have happened if he were president.
-- Trump cited a $6 billion transfer to Iran by the Biden administration.
-- He said that American taxpayer dollars helped fund the Hamas attacks.
-- Trump perceived these events as a sign of weakness on the global stage for the United States.',
+    'Manav Trivedi',
+    'The greater the fear Trump feels, the more sinister his threats become',
+    'Some Republicans in Congress want Trump as speaker of the House. But why? He already directs them by remote control �DEATH!� tweeted Donald Trump about Gen Mark Milley, the former chairman of the Joint Chiefs of Staff (AKA �My Generals�). �TRAITOR!� he said about former speaker of the House Kevin McCarthy (AKA �My Kevin�). �Monster� and �Deranged Lunatic� he labeled the New York state attorney general, Letitia James, who is prosecuting the case against him for his false valuations of Trump properties. �Deranged�, �Psycho� and �Crackhead� he called special prosecutor Jack Smith, who has charged him for his role in the January 6 coup attempt and his theft of classified documents. �We�ll stand up to crazy Nancy Pelosi, who ruined San Francisco � how�s her husband doing, anybody know?� he shouted at a rally, referring to Paul Pelosi, who was nearly murdered by a hammer-wielding assassin. �Crooked Joe Biden, let�s indict the motherfucker! Let�s indict him,� Trump said to a cheering crowd. �A racist � having an affair with the head of the gang or a gang member,� he claimed about Fani Willis, the Fulton county district attorney in Georgia, prosecuting him for the fake electors scheme. �Animal� and �Degenerate Psychopath� he called Alvin Bragg, the Manhattan district attorney, who has charged him with campaign bribery. �[Senator Charles] Schumer�s girlfriend � is running this case against me,� he lied about a clerk in the New York courtroom, identifying her by name. For that transgression, Manhattan supreme court justice Arthur Engoron, who Trump previously said should be �disbarred�, issued a limited gag rule forbidding him from targeting officers of the court. Needless to say, Trump�s vilification of Bragg, Willis and James, all Black, is an extension of his lifelong campaign for white supremacy, going back to his discrimination against Black housing buyers and his full-page ads in the New York newspapers in 1989 calling for the death penalty for five Black and Hispanic youths, the �Central Park Five�, who were innocent of the charges against them. But he now has a larger agenda than a race war here and there. Trump�s torrent of attacks on judges, prosecutors and witnesses is of a piece with his larger project to delegitimize and demolish the institutions of government, including now the House of Representatives through the historic first overthrow of a sitting speaker. His goal in every arena is the same: to clear the path to one-man rule. His threats, incitements and smears are more than outbursts. They are statements of intention for his next presidency. The constitution must be suspended to overturn the results of the 2020 election: �A Massive Fraud of this type and magnitude allows for the termination of all rules, regulations, and articles, even those found in the Constitution,� he has proposed. He has announced he will prosecute and imprison his political opponents: �I will appoint a real special �prosecutor� to go after the most corrupt president in the history of the USA, Joe Biden, the entire Biden crime family, & all others involved with the destruction of our elections, borders, & country itself!� He has pledged to purge the federal civil service and replace its employees with Trump loyalists: �You�re fired, get out, you�re fired,� he said, repeating his signature phrase from his television show The Apprentice. �[You] have to do it. Deep state. Washington will be an entirely different place.� Facing 91 felony counts in four separate trials, not to mention his second defamation judgment in the E Jean Carroll adjudicated rape case and the court-ordered unraveling of the Trump Organization in New York for decades of financial fraud, Trump has not stopped committing offenses. He has been a fount of ceaseless threats to specific officers of the court that he well knows may incite violence against them, interspersed with other calls for extralegal violence, such as shooting shoplifters. �Shot!� he shouted to a cheering crowd. If people can�t be bought off, told off or pushed off, they must be offed. Jack Smith�s filings to the Washington DC court requesting a gag order are a running commentary on Trump�s continuing crime wave. �Like his previous public disinformation campaign regarding the 2020 presidential election,� Smith wrote, �the defendant�s recent extrajudicial statements are intended to undermine public confidence in an institution � the judicial system � and to undermine confidence in and intimidate individuals � the court, the jury pool, witnesses and prosecutors.� In his collection of Trump�s latest �prejudicial statements,� Smith highlighted that Gen Milley, who Trump stated �had committed treason and suggested that he should be executed�, is �a witness cited in the indictment�. Smith addressed the issue of witness intimidation and tampering directly: �Even assuming that certain witnesses are not intimidated by the defendant�s statements, other witnesses see and may be affected by what the defendant does to those who are called to testify in this case. And regardless of whether certain witnesses are intimidated by the defendant�s extrajudicial statements, the defendant should not be permitted to attack or bolster the credibility of any witness in a manner that could influence prospective jurors.� Adding new felony charges against Trump for his egregious efforts at witness tampering would slow down the case against him. But the special prosecutor retains the option of filing those charges later. Trump�s inflammatory language could yet lead to further indictments. Trump�s threats are not simply rhetorical explosions but illegal attempts to intimidate witnesses and prejudice the jury. But they are more than that too. For Trump, the further the dismantlement of the rule of law, the smoother the path to one-man rule. Attempting to intimidate officers of the court and to tamper with witnesses is more than his legal strategy; it�s central to his overarching political strategy. He has systemic purpose. He is seeking to sideline every institution of government other than a presidency he occupies in which he is not bound by constitutional confines. By eliminating checks and balances now, he�s preparing for dictatorial rule. In 2020, under his aegis, the Republican party passed no platform whatsoever. Now, his incitements are the planks of the Republican platform on which all Republicans must run. His threats are his promises of what is to come. He is moving beyond the politics of grievance to the menace of revenge. Making him their candidate, Republicans are pledged to his violence and illegality. If he can escape accountability for his crimes, the rule of law collapses and the path is cleared for him. That is his vision. The criminal is the political. Trump seized upon the chance to advance the collapse of the speakership as an opportunity to reduce another governmental body that might be a check on him. The fewer barriers to one-man rule, the easier his road back to power. The party�s impotence is his strength. Kevin McCarthy�s demise appeared to him as a fortunate opening to grind toward control. The House Republicans rehearse an endless revenge tragedy strewing bodies on the stage. They flail at the Democrats, who for the crucial motion to vacate removed themselves to the reserved seats in the colosseum to watch the Republicans devour their speaker. The Republicans blamed the Democrats for failing to save McCarthy from the Republicans. McCarthy contrived to cooperate in his own destruction upon accepting the speakership by agreeing that one member alone could file a motion to vacate. Brutus, undisguised, was already lurking. McCarthy had put a knife in his hand in the first scene. With McCarthy�s corpse still warm, the speaker pro tempore Patrick McHenry�s first act was to evict former speaker Nancy Pelosi from her hideaway office, a little piece of real estate within the Capitol. It turns out it was a last sniveling request to McHenry from McCarthy, a spasm preceding rigor mortis. When she was speaker, she accorded the favor of the office to Dennis Hastert as a former speaker for as long as he remained in the House (before his pedophilia conviction). At the moment McHenry made his graceless gesture, Pelosi was in California, having accompanied the body of her dear friend Senator Dianne Feinstein to prepare for her funeral. He struck out at Pelosi as though her eviction punished her alongside the Republican eviction of Kevin McCarthy. It was presumably an equivalent slam of the Democratic speaker for the slamming of the Republican one. But Pelosi had left the speakership in dignity, handed off her baton and stays as an eminence, while McCarthy was despised, trampled and cut to pieces by his own. She served as the speaker for four years; he completed eight months, not quite to term. The displacement of Republican hostility to Pelosi only highlights their auto-da-fe of McCarthy. He is their former lord of the flies, felled by the swarm of flies. McHenry�s first act, ingratiating himself to the recently departed, established the tone of his even briefer transitional tenure. McCarthy all along tried to play to the bullies, joined in with the bullies, was roughed up by the bullies, and, finally, rousted by the bullies; after he was bullied out, his figurehead successor messed the clean slate with a small act of bullying. The hunger games continue. Trump was silent on McCarthy�s defenestration, the gratitude McCarthy received for his self-abasement, down to the nicety of regularly giving Trump gifts of jars of pink and red Starbursts, the former president�s favorite candy. The sweetener did not sweeten things for the candy man. Trump was the not-so-hidden hand reaching from behind the curtain, waving on the assassins. Stroking Trump almost to the last with praise, as �stronger today than in 2016�, McCarthy walked to his destiny with a knife about to be planted in his back. Immediately after the vote to remove him, Matt Gaetz stated, �I would say that my conversations with the former president leave me with great confidence that I�m doing the right thing.� McCarthy�s reward for loyalty to Trump led him into the usual cul-de-sac of Republicans trying to contain Trump. Predictably, Trump demanded what McCarthy could not deliver. �UNLESS YOU GET EVERYTHING, SHUT IT DOWN!� Everyone who decides to be involved with Trump inevitably faces an unacceptable request. In McCarthy�s case, it was shutting down the government, which would be disastrous for the razor-thin Republican majority going into an election. �If somebody wants to remove [me] because I want to be the adult in the room, go ahead and try,� McCarthy challenged his enemies. He could not bring himself in the end obviously to damage his party�s power through a shutdown. So McCarthy faced a choice of self-destruction, either losing the speakership eventually or immediately. He took his chances. Trump has mused to a rapt Iowa crowd of followers about his own possible fate: �If I�m sitting down and that boat is going down and I�m on top of a battery and the water starts flooding in, I�m getting concerned, but then I look 10 yards to my left and there�s a shark over there, so I have a choice of electrocution and a shark, you know what I�m going to take? Electrocution.� McCarthy thought he could survive by accommodating Trump. Then he somehow believed he could navigate between the rock and the hard place. But he was still eaten by the sharks. He met the fate of all the other adults in the room. At once, like a jack-in-the-box, Sean Hannity, Fox News host, popped up to float the idea of Trump as speaker. Rupert Murdoch, Hannity�s erstwhile boss, has referred to Hannity as �a moron�, and, at least according to Murdoch chronicler Michael Wolff, Hannity was playing the jester, for a jab of ratings heroin. But he is a slavish Trump stalwart, following him like a daddy figure, perhaps explained by his recent anecdote: �By the way, when my father would hit me with a belt, I didn�t actually raise my voice. We used to be the land of the free, home of the brave. What happened? When did we become the land of the snowflake?� Hannity�s cri de coeur was more revelatory of the underlying psychology of authoritarianism than anything he has ever said. Trump doesn�t need the quotidian grief of being speaker when he can direct the inmates of the asylum by remote control, and, anyway, he�s busy in and out of court. But the fake speaker ploy presented itself as a terrific, if brief, opportunity for playacting and grifting, like the fake electors scheme without the real life truth and consequences. After Trump retreated from glowering at the defendant�s table in the Manhattan courtroom for several days, using the occasion to gin up a round of contributions, Letitia James pronounced, �The Donald Trump show is over.� But once that episode of the show ended, the special episode of Speaker Trump appeared on the schedule. When he was in the courtroom, he retweeted a drawing of himself seated next to Jesus, with the caption: �This is the most accurate court sketch of all time.� Then he tweeted a photo-shopped picture of himself in the speaker�s chair, wearing a red Maga cap and in his right hand lifting up the gavel. He had passed from crucifixion to resurrection in less time than Jesus. Hail, Trump! Representative Marjorie Taylor Greene tweeted ecstatically, �If Trump becomes Speaker of the House, the chamber will be like a Trump rally everyday!! It would be the House of MAGA!!!� But this Trump candidacy was a speaker-for-a-day con. Trump announced his endorsement of Representative Jim Jordan, founder of the rightwing Freedom Caucus, who had harassed two previous Republican speakers out of their chairs, run against McCarthy and, most importantly, was a co-conspirator in the January 6 coup attempt. For the speakership, Jordan faces Representative Steve Scalise, McCarthy�s majority leader, a get-along-go-along kind of guy, a wholly owned subsidiary of the oil industry, the candidate of K Street corporate lobbyists. Jordan had stonewalled a subpoena from the House January 6 committee to testify to his involvement. He had mobilized the �Stop the Steal� movement months before the election, was the key member of the House in White House meetings plotting how to stymie the certification of the electoral college count, texted White House chief of staff Mark Meadows on 5 January to put pressure on then vice-president Mike Pence to �call out all electoral votes that he believes are unconstitutional as no electoral votes at all�, and on the phone strategizing with Trump throughout the fateful day. That evening, after the devastation, he led 139 representatives to object to certification. If section 3 of the 14th amendment, enacted after the civil war, barring former Confederates who �shall have engaged in insurrection or rebellion� from holding federal office, applies to Trump, as two prominent conservative legal scholars have argued, then even more clearly and forcefully it applied to members of Congress, including Jim Jordan. After initially agreeing that Trump should be disqualified, Federalist Society co-founder Steven Calabresi, professor of law at Northwestern University, flipped, citing an article by Michael Mukasey, former attorney general under President George W Bush, that argued the provision did not cover the former president but only members of the Congress and other �officers of the United States�. However tendentious the argument, Mukasey � and Calabresi � had inadvertently made the case for disqualifying Jordan and the others who voted against certification on 6 January 2021 from serving in office at all. McCarthy�s fall has been another stepping stone for Trump�s return to power. Trump has announced he will go to the Capitol to intervene in the speaker contest and address the House Republican Conference. The last time he wanted to visit, to march with the January 6 mob, he was restrained by a secret service agent whom he allegedly grabbed by the throat. Trump would be the only member of the J6 prison choir to come to the Capitol since then. He had joined the jailed insurrectionists who had formed a singing group by overlaying his recital of the Pledge of Allegiance on their version of The Star Spangled Banner. Trump has promised �full pardons with an apology to many� of those convicted of rampaging through the Capitol�s corridors chanting, �Hang Mike Pence!� Now, Trump says he would return there as �a unifier�. But, first, he took time to trash his former chief of staff Gen John Kelly, who confirmed on 3 October to CNN that Trump had disparaged wounded, captured and tortured soldiers as �suckers� and �losers�. Kelly offered a description of Trump: �A person that has no idea what America stands for and has no idea what America is all about � A person who admires autocrats and murderous dictators. A person that has nothing but contempt for our democratic institutions, our constitution and the rule of law. There is nothing more that can be said. God help us.� After endorsing Jim Jordan, Trump wrote on Truth Social that Kelly was �by far the dumbest of my Military people � He was incapable of doing a good job, it was too much for him, and I couldn�t stand the guy, so I fired him like a �dog.�� The �wannabe dictator�, as Gen Milley calls him, is without theory or fig leaf. As the trials bear down, as Trump contemplates the shark or electrocution, he projects his The Pit and the Pendulum terror into violent threats. The greater the fear he feels, the more violent the threats. He is stalked by Thanatos. �DEATH!� Sidney Blumenthal is the author of The Permanent Campaign, published in 1980, and All the Power of the Earth: The Political Life of Abraham Lincoln, 1856-1860, the third of a projected five volumes. He is the former assistant and senior adviser to President Bill Clinton and senior adviser to Hillary Clinton',
+    '- Some Republicans want Trump as speaker of the House
+- Trump has directed insults towards various individuals, including Gen Mark Milley, Kevin McCarthy, Letitia James, and others
+- Trumps attacks on judges, prosecutors, and witnesses are part of his larger project to undermine and demolish government institutions
+- Trumps threats and incitements are more than outbursts; they are statements of intention for his next presidency
+- Trump wants to suspend the constitution to overturn the results of the 2020 election
+- Trump has announced plans to prosecute and imprison his political opponents and to purge the federal civil service
+- Trumps language and actions are attempts to intimidate witnesses and prejudice the jury, but they also serve his political strategy to consolidate power
+- McCarthys removal as Speaker of the House was seen as an opportunity for Trump to further weaken institutions and gain control
+- Trumps candidacy as speaker was a brief opportunity for playacting and grifting
+- Jim Jordan, a co-conspirator in the January 6 coup attempt, was endorsed by Trump for the speakership
+- McCarthys fall has helped Trump in his quest to return to power
+- Trump has made threats to visit the Capitol to intervene in the speaker contest and address the House Republican Conference
+- Trump has trashed his former chief of staff Gen John Kelly after he confirmed Trumps derogatory remarks about soldiers
+- Trumps violent threats appear to increase as his fear grows',
     1
     );
     ]
-[2023-10-10 16:03:14.681666] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:20.836685] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article;
     ]
-[2023-10-10 16:03:15.142196] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:21.595791] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Article
-    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
     ]
-[2023-10-10 16:03:15.605288] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:22.112973] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
   INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
     VALUES (
-    '53',
-    'What is your opinion on Donald Trumps criticism of Joe Biden regarding the Hamas attack on Israel?',
-    'Donald Trumps criticism is justified and Joe Biden is responsible for the attack on Israel.',
-    'Donald Trumps criticism is not justified and Joe Biden should not be held accountable for the attack on Israel.',
-    'Donald Trumps criticism is partially justified but Joe Biden is not solely responsible for the attack on Israel.',
-    'I do not have an opinion on Donald Trumps criticism of Joe Biden regarding the Hamas attack on Israel.',
+    '52',
+    'What is your opinion of the idea of Donald Trump becoming Speaker of the House?',
+    'I strongly support the idea of Donald Trump becoming Speaker of the House.',
+    'I somewhat support the idea of Donald Trump becoming Speaker of the House.',
+    'I somewhat oppose the idea of Donald Trump becoming Speaker of the House.',
+    'I strongly oppose the idea of Donald Trump becoming Speaker of the House.',
     '0',
     '0',
     '0',
     '0',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:16.060975] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:22.613409] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Polling;
     ]
-[2023-10-10 16:03:16.517094] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:23.115653] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'criticism',
-    'The word criticism suggests that Donald Trump is expressing disapproval or negative judgment towards Joe Bidens actions.',
-    '53',
+    'remote control',
+    'The phrase directs them by remote control implies that Trump has full control over the actions and decisions of Republicans in Congress, suggesting a biased portrayal of Trump as an authoritative figure manipulating others.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:16.980713] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:23.617664] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:17.765602] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:24.122932] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'accountable',
-    'The word accountable implies that Donald Trump holds Joe Biden responsible for the deadly Hamas attack on Israel.',
-    '53',
+    'DEATH!',
+    'The use of the word DEATH! in capital letters and with an exclamation mark indicates an emotionally charged statement, conveying Trumps strong negative sentiment towards Gen Mark Milley.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:18.217492] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:24.626462] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:18.674765] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:25.141838] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'deadly',
-    'The word deadly conveys a strong emotional impact, emphasizing the severity and loss of life in the Hamas attack.',
-    '53',
+    'TRAITOR!',
+    'The word TRAITOR! in capital letters suggests a highly charged and emotionally biased accusation made by Donald Trump against former Speaker of the House Kevin McCarthy, likely reflecting a strong negative sentiment.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:19.129273] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:25.642207] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:19.595830] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:26.143989] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'pouring into our country',
-    'The phrase pouring into our country suggests a negative connotation, potentially invoking fear or concern about immigration.',
-    '53',
+    'Monster',
+    'The word Monster is an emotionally charged term used by Trump to describe the New York state attorney general Letitia James, indicating a strong negative sentiment and potentially biased portrayal.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:20.054114] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:26.646674] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:20.512273] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:27.155853] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'Vicious',
-    'The word vicious carries a strong emotional charge, describing the attack on Israel as brutal and cruel.',
-    '53',
+    'Deranged Lunatic',
+    'The phrase Deranged Lunatic used by Trump to label the New York state attorney general Letitia James is a highly emotionally charged term, suggesting a biased and derogatory portrayal of James.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:20.970258] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:27.662483] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:21.426738] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:28.173360] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'slaughtered',
-    'The word slaughtered evokes strong emotions, emphasizing the brutality and loss of innocent lives in the attack.',
-    '53',
+    'Crooked Joe Biden',
+    'The use of the phrase Crooked Joe Biden suggests a strong negative sentiment and potential bias against Joe Biden, portraying him as deceitful or corrupt.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:21.895660] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:28.676534] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:22.355703] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:29.176533] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'weakness, conflict, and chaos',
-    'The phrase weakness, conflict, and chaos implies a negative assessment of Joe Bidens leadership, portraying it as ineffective and tumultuous.',
-    '53',
+    'racist',
+    'The term racist is an emotionally charged word used by Trump to accuse Fani Willis, the Fulton county district attorney in Georgia, suggesting a biased portrayal or negative sentiment towards her.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:22.810318] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:29.678703] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:23.265486] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:30.198365] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'atrocities',
-    'The word atrocities conveys a strong emotional impact, highlighting the horrific nature of the events in Israel.',
-    '53',
+    'Animal',
+    'The word Animal is an emotionally charged term used by Trump to describe Alvin Bragg, the Manhattan district attorney, conveying a highly negative sentiment and potentially biased characterization.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:23.718004] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:30.699895] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:24.176384] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:31.216141] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
-    'peace through strength',
-    'The phrase peace through strength suggests that Donald Trumps leadership approach prioritized strength and deterrence to maintain peace.',
-    '53',
+    'Degenerate Psychopath',
+    'The phrase Degenerate Psychopath is an emotionally charged term used by Trump to describe Alvin Bragg, the Manhattan district attorney, suggesting a derogatory and biased portrayal.',
+    '52',
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:24.630572] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:31.730734] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Article_ArticleBias;
     ]
-[2023-10-10 16:03:25.085444] [] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
-    VALUES (
-    'disgrace',
-    'The word disgrace expresses a strong negative judgment, characterizing the Hamas attacks as shameful or morally wrong.',
-    '53',
-    0, 
-    NOW(),
-    ''
-    );
-    ]
-[2023-10-10 16:03:25.540006] [] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
-    ]
-[2023-10-10 16:03:26.470246] [] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
-    VALUES (
-    'overwhelming force',
-    'The phrase overwhelming force suggests a strong military response by Israel, potentially implying a power imbalance.',
-    '53',
-    0, 
-    NOW(),
-    ''
-    );
-    ]
-[2023-10-10 16:03:26.930279] [] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
-    ]
-[2023-10-10 16:03:27.388335] [] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
-    VALUES (
-    'tragic events',
-    'The phrase tragic events emphasizes the sadness and sorrow associated with the attacks.',
-    '53',
-    0, 
-    NOW(),
-    ''
-    );
-    ]
-[2023-10-10 16:03:27.846722] [] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
-    ]
-[2023-10-10 16:03:28.302685] [] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
-    VALUES (
-    'weakness on the global stage',
-    'The phrase weakness on the global stage implies a negative perception of the United States international standing under Joe Bidens administration.',
-    '53',
-    0, 
-    NOW(),
-    ''
-    );
-    ]
-[2023-10-10 16:03:28.758936] [] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
-    ]
-[2023-10-10 16:03:29.214550] [] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
-    VALUES (
-    'fund these attacks',
-    'The phrase fund these attacks suggests that American taxpayer dollars were used to support the Hamas attacks.',
-    '53',
-    0, 
-    NOW(),
-    ''
-    );
-    ]
-[2023-10-10 16:03:29.667567] [] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
-    ]
-[2023-10-10 16:03:30.122990] [] [SUCCESS] [Successfully attempted query: 
-    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
-    VALUES (
-    'perceived weakness',
-    'The phrase perceived weakness indicates that Donald Trump believes the United States is viewed as weak in the international arena.',
-    '53',
-    0, 
-    NOW(),
-    ''
-    );
-    ]
-[2023-10-10 16:03:30.576096] [] [SUCCESS] [Sucessfully transacted query: 
-    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
-    ]
-[2023-10-10 16:03:31.034845] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:07:32.239127] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
     VALUES (
     5,
-    53,
+    52,
     0, 
     NOW(),
-    ''
+    'Manav Trivedi'
     );
     ]
-[2023-10-10 16:03:31.488602] [] [SUCCESS] [Sucessfully transacted query: 
+[2023-10-10 14:07:32.742002] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
     SELECT MAX(ID) AS ID FROM Politician_KeyTable;
     ]
-[2023-10-10 16:03:31.956282] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:25:56.023078] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Article
-    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
     ]
-[2023-10-10 16:03:32.415563] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:25:56.523135] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     UPDATE Article
     SET Views = 2
-    WHERE ID = 53 
+    WHERE ID = 52 
     ]
-[2023-10-10 16:11:55.265474] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000208CA4DDB10>]
-[2023-10-10 16:11:55.265474] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000208C9940210>]
-[2023-10-10 16:11:55.718087] [] [SUCCESS] [Established connection to database newscuration]
-[2023-10-10 16:15:32.844525] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 14:33:24.572494] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:33:25.091309] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 52 
+    ]
+[2023-10-10 14:37:29.032337] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:37:29.563123] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 4
+    WHERE ID = 52 
+    ]
+[2023-10-10 15:02:08.911279] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 15:02:09.414864] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 5
+    WHERE ID = 52 
+    ]
+[2023-10-10 15:31:44.498132] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
     FROM Politician
     WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
 (Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
 0=1
     ]
-[2023-10-10 16:15:33.310522] [] [SUCCESS] [Successfully attempted query: 
+[2023-10-10 15:31:44.989451] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
     SELECT A.*
     FROM Article A
     INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
     WHERE ID_Politician = 1 
     ]
+[2023-10-10 19:09:42.682370] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020A478FED50>]
+[2023-10-10 19:09:42.699317] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020A4601E650>]
+[2023-10-10 19:09:43.192427] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]

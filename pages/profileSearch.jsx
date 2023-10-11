@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
+import { useState } from 'react';
+import Menu from '@/components/Menu';
 import Button from '@/components/Button';
 import Input from '@/components/Input';
 import { useRouter } from 'next/router';
@@ -76,12 +76,12 @@ function ProfileSearch() {
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Navbar />
+      <Menu currentPage={'profile'} />
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className='flex justify-end p mt-5 mr-10 font-bold text-2xl text-[#7895B1]'>
+              <div className='flex flex-row-reverse mr-7 mr-10 font-bold text-3xl text-[#7895B1] h-7'>
                 PROFILE SEARCH
               </div>
               <div className='flex'>

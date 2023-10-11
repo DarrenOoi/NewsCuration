@@ -1,16 +1,13 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
 import { fetchResults } from '@/utils/fetchResults';
 import Card from '@/components/Card';
 import Input from '@/components/Input';
-import Button from '@/components/Button';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import tts from '@/components/pictures/tts.png';
 import textSize from '@/components/pictures/textSize.png';
-import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import List from '@/components/List';
 import { fetchRecentArticles } from '@/utils/fetchRecentArticles';
@@ -114,7 +111,7 @@ function Home() {
                   className='bg-[#7895B1] p-4 rounded-xl'
                   style={{ width: '1200px' }}
                 >
-                  <div className='flex justify-center space-x-4 mt-2'>
+                  <div className='flex justify-start space-x-4 mt-4'>
                     <Input setText={setText} placeholder='Enter article URL' />{' '}
                     <button
                       className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'
@@ -134,7 +131,7 @@ function Home() {
 
                   <div className='flex flex-row mt-5'>
                     <div
-                      className='card bg-[#2E2E2E] rounded-full p-0 flex justify-center ml-5'
+                      className='card bg-[#2E2E2E] rounded-full p-1 flex flex-row items-center'
                       style={{ width: '415px', height: '33px' }}
                     >
                       <Image
@@ -142,8 +139,13 @@ function Home() {
                         src={textSize}
                         width={20}
                         height={5}
-                        alt='Text To Speech'
+                        alt='Text Size'
                       />
+                      <progress
+                        className='ml-6 progress w-80'
+                        value={40}
+                        max='100'
+                      ></progress>
                     </div>
                     <button
                       className='btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4'
