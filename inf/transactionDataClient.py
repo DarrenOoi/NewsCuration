@@ -511,6 +511,8 @@ class transactionDataClient():
         self.cnx = None
         self.user = subprocess.run(
             ['git', 'config', 'user.name'], capture_output=True, text=True).stdout.strip()
+        if self.user is None:
+            self.user = 'Guest user (probably Darren)'
         self.cursor, self.cnx = self.establishConnection()
 
     """Builds a log message in the audit file, for safekeeping
@@ -713,44 +715,83 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="transaction client handler"
     )
-    tdc = transactionDataClient()
-    newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText', 'this would be the chatGPT response in paragraph form', 10.23, 22.40, 0)
-    tdc.insert(newArticle)
-    newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0, '\img\imghere', 'another more general summary here', 'This would be a politcian byline', 'this would be their politicial Position', 'LNP', 'AUS')
-    tdc.insert(newPolitician) #update the attributes on this, remember to update the attributes on the API also.
-    # newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
-    # tdc.insert(newPoliticianPosition)
-    newPolling = Polling(1, 'Your mom?', 'opt1', 'op12', 'op3', 'op4', 0)
-    tdc.insert(newPolling)
-    
-    # Article_ArticleBias Table
-    newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
-    tdc.insert(newArticle_ArticleBias)   
-    biasSubtext = {
-        'Devastating blaze': 'the term "devastating" indicates a tragice loss of life',
-        'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
-    }
-    newPoliticianCampaignPolicies = Politician_CampaignPolicies('Donald', 'Trump', 'Affordable Housing', 'I want to make housing affordable', 0) # have to edit this in
-    tdc.insert(newPoliticianCampaignPolicies)
-    newComment = Comments('examplewebsite.com', 'Donald Trump', 'this would be a comment', 0)
-    
-    #we can't debug because of stricter import rules (but we know it works)
-    # transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
-    # print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
-    # print(transactionHelper.retrieve_bias_keywords_by_url(tdc, newArticle.url))
-    
-    print(newPolitician)
-    # print(newPoliticianPosition)
-    print(newArticle)
-    print(newArticle_ArticleBias)
-    print(newPoliticianCampaignPolicies)
-    print(newComment)
-    
-    tdc.closeConnection()
-    
-  if args.query is not None:
-    print(f'performing sql query on table/s {args.query}')
-    tdc = transactionDataClient()
-    for i in args.query:
-      print(tdc.query(i))
-    tdc.closeConnection()
+
+    parser.add_argument(
+        "--query",
+        type=str,
+        nargs='+',
+        help="query a table, with no applied filters"
+    )
+
+    parser.add_argument(
+        "--DDLFromFile",
+        type=str,
+        nargs='+',
+        help="a list a filenames to perform custom DDL or database intialisation"
+    )
+
+    parser.add_argument(
+        "--debugDDL",
+        action="store_true",
+        help="debug an insert DDL"
+    )
+    args = parser.parse_args()
+
+    if args.DDLFromFile is not None:
+        print(f'performing custom SQL file import for all {args.DDLFromFile}')
+        tdc = transactionDataClient()
+        for sql in args.DDLFromFile:
+            tdc.generateFromSqlFile(sql)
+        tdc.closeConnection()
+
+    if args.debugDDL:
+        print(f'performing DDL for article table, DEBUGGING {args.debugDDL}')
+
+        tdc = transactionDataClient()
+
+        newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText',
+                             'this would be the chatGPT response in paragraph form', 10.23, 22.40, 0)
+        tdc.insert(newArticle)
+        newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0, '\img\imghere',
+                                   'another more general summary here', 'This would be a politcian byline', 'this would be their politicial Position', 'LNP', 'AUS')
+        # update the attributes on this, remember to update the attributes on the API also.
+        tdc.insert(newPolitician)
+        # newPoliticianPosition = Politician_Position('Prime Minister of Australia', 0)
+        # tdc.insert(newPoliticianPosition)
+        newPolling = Polling(1, 'Your mom?', 'opt1', 'op12', 'op3', 'op4', 0)
+        tdc.insert(newPolling)
+
+        # Article_ArticleBias Table
+        newArticle_ArticleBias = Article_ArticleBias(newArticle.getId(
+        ), 'Devastating blaze', 'the term "devastating" indicates a tragice loss of life', 0)
+        tdc.insert(newArticle_ArticleBias)
+        biasSubtext = {
+            'Devastating blaze': 'the term "devastating" indicates a tragice loss of life',
+            'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
+        }
+        newPoliticianCampaignPolicies = Politician_CampaignPolicies(
+            'Donald', 'Trump', 'Affordable Housing', 'I want to make housing affordable', 0)  # have to edit this in
+        tdc.insert(newPoliticianCampaignPolicies)
+        newComment = Comments('examplewebsite.com',
+                              'Donald Trump', 'this would be a comment', 0)
+
+        # we can't debug because of stricter import rules (but we know it works)
+        # transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
+        # print(transactionHelper.retrieve_bias_keywords_by_key(tdc, newArticle.getId()))
+        # print(transactionHelper.retrieve_bias_keywords_by_url(tdc, newArticle.url))
+
+        print(newPolitician)
+        # print(newPoliticianPosition)
+        print(newArticle)
+        print(newArticle_ArticleBias)
+        print(newPoliticianCampaignPolicies)
+        print(newComment)
+
+        tdc.closeConnection()
+
+    if args.query is not None:
+        print(f'performing sql query on table/s {args.query}')
+        tdc = transactionDataClient()
+        for i in args.query:
+            print(tdc.query(i))
+        tdc.closeConnection()

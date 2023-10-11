@@ -1,6 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Menu from '@/components/Menu';
 import Button from '@/components/Button';
 import Input from '@/components/Input';

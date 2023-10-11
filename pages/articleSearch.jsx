@@ -11,6 +11,7 @@ import textSize from '@/components/pictures/textSize.png';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import List from '@/components/List';
 import { fetchRecentArticles } from '@/utils/fetchRecentArticles';
+import { fetchPopularArticles } from '@/utils/fetchPopularArticles';
 import Menu from '@/components/Menu';
 import Poll from '@/components/Poll';
 
@@ -21,13 +22,15 @@ function Home() {
   const [article, setArticle] = useState(null);
   const [submitted, setSubmitted] = useState(false);
   const [recents, setRecents] = useState([]);
+  const [popular, setPopular] = useState([]);
 
   useEffect(() => {
     async function fetchArticles() {
       try {
         const res = await fetchRecentArticles();
         setRecents(res);
-        console.log(res);
+        const pop = await fetchPopularArticles(4);
+        setPopular(pop);
       } catch (error) {
         //add error handling when request fails
         console.log('error');
@@ -35,19 +38,6 @@ function Home() {
     }
     fetchArticles();
   }, []);
-
-  const array = [
-    // {
-    //   Header: 'Yo Minav Sleep Well Love',
-    //   url: 'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe',
-    // },
-    // {
-    //   Header: 'Yo Dude What Why How',
-    // },
-    // {
-    //   Header: 'OMG This Guy',
-    // },
-  ];
 
   const handleListClick = (url) => {
     setSubmitted(true);
@@ -176,7 +166,11 @@ function Home() {
                           items={recents}
                           handleClick={handleListClick}
                         />
-                        <List title={'MOST POPULAR'} items={array} />
+                        <List
+                          title={'MOST POPULAR'}
+                          items={popular}
+                          handleClick={handleListClick}
+                        />
                       </div>
                     )}
                   </div>

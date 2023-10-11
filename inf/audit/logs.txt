@@ -14707,3 +14707,2475 @@ ADD InsertedBy VARCHAR(50)
 [2023-10-10 19:09:42.682370] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020A478FED50>]
 [2023-10-10 19:09:42.699317] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020A4601E650>]
 [2023-10-10 19:09:43.192427] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:21:54.047786] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000249C52F8B90>]
+[2023-10-11 14:21:54.049435] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000249C5B0B6D0>]
+[2023-10-11 14:21:54.514689] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:22:29.570349] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:22:29.802695] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182"
+    ]
+[2023-10-11 14:22:30.597378] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-10-11 14:22:30.946409] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 14:22:31.314029] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-10-11 14:22:31.612790] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 14:22:32.009897] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:22:32.345715] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182"
+    ]
+[2023-10-11 14:22:32.762329] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:22:33.130800] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182"
+    ]
+[2023-10-11 14:22:39.259384] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:22:39.609410] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182"
+    ]
+[2023-10-11 14:22:44.534394] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:22:44.767322] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182"
+    ]
+[2023-10-11 14:22:45.002763] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182',
+    0.875,
+    0.6041666666666666,
+    0, 
+    NOW(),
+    '',
+    ' Could Donald Trump stand for US speaker? An expert explains ',
+    ' Associate Professor and Director of the Centre on US Politics, UCL Thomas Gift does not work for, consult, own shares in or receive funding from any company or organisation that would benefit from this article, and has disclosed no relevant affiliations beyond their academic appointment. University College London provides funding as a founding partner of The Conversation UK. View all partners The roiling civil war on Capitol Hill that’s led to the ousting of Kevin McCarthy as speaker of the US House of Representatives has left Republicans scrambling for a replacement. With no clear successor, the risk of further acute embarrassment to the party, and a slew of legislative priorities on the docket, desperation may already be setting in. That’s led some to float the possibility of a left-field pick for the speakership — someone who’s not even serving in Congress. That man: Donald Trump. The former president initially didn’t say no, although he has endorsed another candidate. “They have asked me if I would take it for a short period of time for the party, until they come to a conclusion,” he declared on October 5. “I’m not doing it because I want to — I will do it if necessary.” Republican Representative Troy Nehls of Texas had said he would nominate Trump for speaker, and other potential backers range from far-right firebrand Marjorie Taylor Greene of Georgia to Floridian Greg Steube. But would Trump even be able to stand? Although a non-member of the house has never served as speaker in the institution’s 234-year history, a speaker isn’t actually required to be a Congress member. The constitution only states that the “House of Representatives shall chuse [sic] their Speaker and other Officers”. Under normal circumstances, Trump would qualify for the role, so long as he could garner a simple majority in the 435-person body. Undoubtedly, if he threw his hat in the ring, Trump would probably enjoy next to unanimous support within the Republican conference. Yet there’s a wrinkle. Republican conference rules of the current 118th Congress stipulate that “[a] member of the Republican Leadership shall step aside if indicted for a felony for which a sentence of two or more years’ imprisonment may be imposed.” Read more: Democrat failure to save US speaker hands power to Republican right Trump faces 91 criminal indictments, spanning four criminal prosecutions, including US Department of Justice charges over the January 6 attack on the Capitol, the mishandling of classified documents, a federal case related to business fraud in New York City, and a state case over vote rigging in Georgia. Trump denies all the charges. Party rules would need to be modified to allow Trump to serve, which would again require a simple house majority. Doing so would be highly unusual, but not impossible, in the middle of a congressional session. By seizing the speaker’s gavel, Trump could have depicted himself as the GOP’s white knight coming to save Republicans from themselves. He’s the one leader capable of unifying the party, or at least beating it into submission. With the Iowa caucuses and New Hampshire primaries coming up, snatching the speakership now would all but ensure that Trump continued to dominate the headlines, sucking up all the oxygen in the room, leaving his rivals flummoxed, and stroking his notorious ego. However, Trump has enough on his plate and, with a 40-plus percentage point lead ahead of his party’s other candidates in the primaries, he’s already the prohibitive favourite to win the Republican nomination. He’s in the middle of a full-scale campaign. And he’s focused on raising tens of millions of dollars just to finance his legal defence. Running for speaker could have been a distraction, if not a demotion from his previous heights in the White House. “I’ll do whatever it is to help, but my total focus is on being president,” Trump recently said. If Republicans couldn’t rally behind a permanent successor, Trump might also be in the awkward spot of staying on as speaker longer than anticipated. Even on his own proposed timeline – a “30, 60, or 90-day period” – he’d still need to negotiate real pieces of legislation. The federal government will shut down in roughly 40 days without a budget or new continuing resolution. Funding for Ukraine also remains a matter of live debate. If Trump couldn’t deliver on conservative priorities, he’d look weak. Even more than with McCarthy, Democrats would be eager to exploit Trump’s vulnerabilities. They’d be in no mood to compromise, much less grant Trump any favours. Beyond Trump, Republican representatives Jim Jordan of Ohio and Steve Scalise of Louisiana are widely thought to be the main frontrunners for speaker. Jordan is a founding member and leader of the House Freedom Caucus (a cadre of hard-right Republicans) and an outspoken champion of Trump. He’s been a leading force in the attempt to impeach President Joe Biden. As current house majority leader, Scalise served as the “number two” man under McCarthy. While Scalise arguably enjoys more support among moderates, he’s almost certainly also to the right of McCarthy For his part, Trump is vocally supporting Jordan, pronouncing: “He will be a GREAT Speaker of the House, & has my Complete and Total Endorsement!” Trump as speaker had always seemed like a provocative but ultimately unlikely scenario. It would, temporarily, end the bickering and give a short-term reprieve to Republicans while they continue their not-so-private machinations and infighting. But it would just be a sticking plaster. Trump gallivanting in to rescue the Republicans wouldn’t solve the deep divisions rife within the party. And whoever the next speaker is would be subject to the same precariousness that saw McCarthy’s abrupt ejection. Not only that, but Trump – a figure who is accused of, less than two years ago, helping whip up a mob at the US Capitol – would have been at the helm of the “people body”. If even for a short time, that’s not nothing. It’s an irony that shouldn’t be lost on Democrats who, by voting with a group of hard-right rebels earlier this week to expel McCarthy, paved at least the path for Trump to get there. Executive Master of Public Administration — Course, Victoria Public Leadership Masterclass series — Melbourne, Victoria Professional Development and Online Webinars — remote access, New South Wales Why Australia is putting a First Nations Voice to Parliament to a referendum — Victoria Graduate Certificate in Clinical Informatics and Digital Health — All states for online course , Queensland Copyright © 2010–2023, The Conversation Media Group Ltd ',
+    '- The Republican party is searching for a replacement for Kevin McCarthy as speaker of the House of Representatives.
+- Some have suggested the possibility of Donald Trump becoming speaker, even though he is not currently serving in Congress.
+- The Constitution does not require the speaker to be a member of Congress, so Trump could potentially qualify for the role.
+- However, current Republican conference rules state that a member of the leadership must step aside if indicted for a felony with a potential sentence of two or more years imprisonment.
+- Trump is facing multiple criminal indictments, including charges related to the January 6 attack on the Capitol and alleged vote rigging in Georgia.
+- Party rules would need to be modified to allow Trump to serve as speaker.
+- Becoming speaker could boost Trumps profile and dominate headlines, but it could also be a distraction from his campaign and legal defense efforts.
+- There are other frontrunners for the speaker position, including Jim Jordan and Steve Scalise, who are seen as more likely candidates.
+- Trumps potential role as speaker would not address the deep divisions within the Republican party, and whoever becomes speaker would face the same precariousness as McCarthy.
+- Trumps involvement in the attack on the Capitol would make his role as speaker controversial, even for a short period of time.',
+    1
+    );
+    : 
+ error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:22:45.248027] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182',
+    0.875,
+    0.6041666666666666,
+    0, 
+    NOW(),
+    '',
+    ' Could Donald Trump stand for US speaker? An expert explains ',
+    ' Associate Professor and Director of the Centre on US Politics, UCL Thomas Gift does not work for, consult, own shares in or receive funding from any company or organisation that would benefit from this article, and has disclosed no relevant affiliations beyond their academic appointment. University College London provides funding as a founding partner of The Conversation UK. View all partners The roiling civil war on Capitol Hill that’s led to the ousting of Kevin McCarthy as speaker of the US House of Representatives has left Republicans scrambling for a replacement. With no clear successor, the risk of further acute embarrassment to the party, and a slew of legislative priorities on the docket, desperation may already be setting in. That’s led some to float the possibility of a left-field pick for the speakership — someone who’s not even serving in Congress. That man: Donald Trump. The former president initially didn’t say no, although he has endorsed another candidate. “They have asked me if I would take it for a short period of time for the party, until they come to a conclusion,” he declared on October 5. “I’m not doing it because I want to — I will do it if necessary.” Republican Representative Troy Nehls of Texas had said he would nominate Trump for speaker, and other potential backers range from far-right firebrand Marjorie Taylor Greene of Georgia to Floridian Greg Steube. But would Trump even be able to stand? Although a non-member of the house has never served as speaker in the institution’s 234-year history, a speaker isn’t actually required to be a Congress member. The constitution only states that the “House of Representatives shall chuse [sic] their Speaker and other Officers”. Under normal circumstances, Trump would qualify for the role, so long as he could garner a simple majority in the 435-person body. Undoubtedly, if he threw his hat in the ring, Trump would probably enjoy next to unanimous support within the Republican conference. Yet there’s a wrinkle. Republican conference rules of the current 118th Congress stipulate that “[a] member of the Republican Leadership shall step aside if indicted for a felony for which a sentence of two or more years’ imprisonment may be imposed.” Read more: Democrat failure to save US speaker hands power to Republican right Trump faces 91 criminal indictments, spanning four criminal prosecutions, including US Department of Justice charges over the January 6 attack on the Capitol, the mishandling of classified documents, a federal case related to business fraud in New York City, and a state case over vote rigging in Georgia. Trump denies all the charges. Party rules would need to be modified to allow Trump to serve, which would again require a simple house majority. Doing so would be highly unusual, but not impossible, in the middle of a congressional session. By seizing the speaker’s gavel, Trump could have depicted himself as the GOP’s white knight coming to save Republicans from themselves. He’s the one leader capable of unifying the party, or at least beating it into submission. With the Iowa caucuses and New Hampshire primaries coming up, snatching the speakership now would all but ensure that Trump continued to dominate the headlines, sucking up all the oxygen in the room, leaving his rivals flummoxed, and stroking his notorious ego. However, Trump has enough on his plate and, with a 40-plus percentage point lead ahead of his party’s other candidates in the primaries, he’s already the prohibitive favourite to win the Republican nomination. He’s in the middle of a full-scale campaign. And he’s focused on raising tens of millions of dollars just to finance his legal defence. Running for speaker could have been a distraction, if not a demotion from his previous heights in the White House. “I’ll do whatever it is to help, but my total focus is on being president,” Trump recently said. If Republicans couldn’t rally behind a permanent successor, Trump might also be in the awkward spot of staying on as speaker longer than anticipated. Even on his own proposed timeline – a “30, 60, or 90-day period” – he’d still need to negotiate real pieces of legislation. The federal government will shut down in roughly 40 days without a budget or new continuing resolution. Funding for Ukraine also remains a matter of live debate. If Trump couldn’t deliver on conservative priorities, he’d look weak. Even more than with McCarthy, Democrats would be eager to exploit Trump’s vulnerabilities. They’d be in no mood to compromise, much less grant Trump any favours. Beyond Trump, Republican representatives Jim Jordan of Ohio and Steve Scalise of Louisiana are widely thought to be the main frontrunners for speaker. Jordan is a founding member and leader of the House Freedom Caucus (a cadre of hard-right Republicans) and an outspoken champion of Trump. He’s been a leading force in the attempt to impeach President Joe Biden. As current house majority leader, Scalise served as the “number two” man under McCarthy. While Scalise arguably enjoys more support among moderates, he’s almost certainly also to the right of McCarthy For his part, Trump is vocally supporting Jordan, pronouncing: “He will be a GREAT Speaker of the House, & has my Complete and Total Endorsement!” Trump as speaker had always seemed like a provocative but ultimately unlikely scenario. It would, temporarily, end the bickering and give a short-term reprieve to Republicans while they continue their not-so-private machinations and infighting. But it would just be a sticking plaster. Trump gallivanting in to rescue the Republicans wouldn’t solve the deep divisions rife within the party. And whoever the next speaker is would be subject to the same precariousness that saw McCarthy’s abrupt ejection. Not only that, but Trump – a figure who is accused of, less than two years ago, helping whip up a mob at the US Capitol – would have been at the helm of the “people body”. If even for a short time, that’s not nothing. It’s an irony that shouldn’t be lost on Democrats who, by voting with a group of hard-right rebels earlier this week to expel McCarthy, paved at least the path for Trump to get there. Executive Master of Public Administration — Course, Victoria Public Leadership Masterclass series — Melbourne, Victoria Professional Development and Online Webinars — remote access, New South Wales Why Australia is putting a First Nations Voice to Parliament to a referendum — Victoria Graduate Certificate in Clinical Informatics and Digital Health — All states for online course , Queensland Copyright © 2010–2023, The Conversation Media Group Ltd ',
+    '- The Republican party is searching for a replacement for Kevin McCarthy as speaker of the House of Representatives.
+- Some have suggested the possibility of Donald Trump becoming speaker, even though he is not currently serving in Congress.
+- The Constitution does not require the speaker to be a member of Congress, so Trump could potentially qualify for the role.
+- However, current Republican conference rules state that a member of the leadership must step aside if indicted for a felony with a potential sentence of two or more years imprisonment.
+- Trump is facing multiple criminal indictments, including charges related to the January 6 attack on the Capitol and alleged vote rigging in Georgia.
+- Party rules would need to be modified to allow Trump to serve as speaker.
+- Becoming speaker could boost Trumps profile and dominate headlines, but it could also be a distraction from his campaign and legal defense efforts.
+- There are other frontrunners for the speaker position, including Jim Jordan and Steve Scalise, who are seen as more likely candidates.
+- Trumps potential role as speaker would not address the deep divisions within the Republican party, and whoever becomes speaker would face the same precariousness as McCarthy.
+- Trumps involvement in the attack on the Capitol would make his role as speaker controversial, even for a short period of time.',
+    1
+    );
+    ]
+[2023-10-11 14:22:45.508164] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article;
+    : 
+ error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:22:45.738277] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 14:22:45.738277] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 14:22:45.985225] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:22:46.211002] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182"
+    ]
+[2023-10-11 14:23:15.367817] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:23:15.602748] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182"
+    ]
+[2023-10-11 14:24:14.000798] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-10-11 14:24:14.235157] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 14:26:21.604452] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-10-11 14:26:21.844270] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 14:32:12.778411] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:32:13.039977] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://theconversation.com/could-donald-trump-stand-for-us-speaker-an-expert-explains-215182"
+    ]
+[2023-10-11 14:32:42.389791] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:32:42.623165] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 14:32:43.822159] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-10-11 14:32:44.194235] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 14:32:44.624061] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-10-11 14:32:44.962887] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 14:32:45.307109] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:32:45.706975] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 14:32:46.123783] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:32:46.474325] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 14:32:59.766690] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:33:00.130639] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 14:33:01.902398] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:33:02.124442] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 14:33:02.375114] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914',
+    0.6842105263157895,
+    0.543859649122807,
+    0, 
+    NOW(),
+    '',
+    'Fraud trial: Trump acknowledged penthouse size at 11,000 square feet, not 30,000 he later claimed',
+    'Copyright 2023 The Associated Press. All Rights Reserved. A New York judge has imposed a limited gag order with a stern warning after Donald Trump disparaged a key court staffer during his civil business fraud trial on his social media platform. (Oct. 3) (AP Video Ted Shaffrey/David Martin) NEW YORK (AP) — Donald Trump signed a document 30 years ago that gave the true size of his New York penthouse which was later listed as far larger on financial statements, according to evidence Tuesday at the former president’s civil business fraud trial. The evidence appeared in an email attachment shown as Allen Weisselberg, the former finance chief of Trump’s company, testified in New York Attorney General Letitia James’ fraud lawsuit against Trump and his Trump Organization. Trump denies any wrongdoing. The attachment was a 1994 document, signed by Trump, that pegged his Trump Tower triplex at 10,996 square feet — not the 30,000 square feet later claimed for years on financial statements that were given to banks, insurers and others to make deals and secure loans. Weisselberg said he recalled seeing the email but not the attachment, explaining that the attachments were documents he already had on file in the company’s offices. But in any event, he said, he didn’t pay much mind to the apartment’s size because its value amounted to a fraction of Trump’s wealth. “I never even thought about the apartment. It was de minimis, in my mind,” Weisselberg said, using a Latin term that means, essentially, too small to care about. “It was not something that was that important to me when looking at a $6 billion, $5 billion net worth,” said Weisselberg, whose questioning will resume after an ex-bank official testifies Wednesday. Later, Weisselberg was asked about an appraisal that came in $230 million below what Trump’s financial statements showed for his Seven Springs estate north of New York City. Weisselberg said he was aware of the appraisal but didn’t think the disparity was worth flagging to the outside accountants who prepared the statements. Nevertheless, Weisselberg acknowledged signing documents certifying that financial summaries given to banks to meet loan requirements were “true, correct, and completely and fairly” represented Trump’s financial condition. Weisselberg repeatedly said he couldn’t remember whether he discussed the financial statements with Trump while they were being finalized. The ex-CFO said he reviewed drafts “from a 30,000-foot level” (9,100-meter level) but paid special attention to something “very important” to Trump: the descriptions of his properties. “It was a little bit of a marketing piece for banks to read about our properties, how well they’re taken care of, that they’re first-class properties,” said Weisselberg, who added that Trump scrutinized the language used in such descriptions. “He might say, ‘Don’t use the word “beautiful” — use the word “magnificent,”’ or something like that,” Weisselberg testified. Alan Weisselberg, Donald Trump’s longtime finance chief, sits inside New York Supreme Court, Tuesday, Oct. 10, 2023, in New York. (AP Photo/Seth Wenig) Meanwhile, in Trump’s election interference case in Washington, prosecutors on Tuesday urged the judge to protect prospective jurors’ identities, citing the former president’s “continued use of social media as a weapon of intimidation in court proceedings.” Trump lawyer John Lauro declined to comment. In that federal criminal case, Trump has pleaded not guilty to illegally plotting to overturn his 2020 election loss to Democrat Joe Biden. In New York, Weisselberg said Tuesday he learned of the Trump Tower penthouse size discrepancy only when a Forbes magazine reporter pointed it out to him in 2016. He testified that he initially disputed the magazine’s findings but said he couldn’t recall whether he directed anyone to look into the matter. “You don’t recall if you did anything to confirm who was right?” state lawyer Louis Solomon asked. Alan Weisselberg, Donald Trump’s longtime finance chief, sits inside New York Supreme Court, Tuesday, Oct. 10, 2023, in New York. (AP Photo/Seth Wenig) Weisselberg said he did not. As Forbes zeroed in on the apartment size question in 2017, emails show, a company spokesperson told another Trump executive that, per Weisselberg, they weren’t to engage on the issue. A week later, Trump’s 2016 financial statement was released, using the incorrect square footage. Over the years, Trump Organization executives had greatly boosted their estimate of the apartment’s value for reasons ranging from the boss’s fame to comparing it to an asking price on another triplex — though that other one ultimately sold for 60% less, another former exec testified last week. When The Wall Street Journal wrote about the $135 million listing for a property near Trump’s Mar-a-Lago club in Florida in 2018, Weisselberg wrote a note telling a staffer to hang onto the article and “see what it ends up selling for.” Asked Tuesday to explain, Weisselberg testified: “Anybody can ask anything for a dollar amount. That doesn’t mean it’s going to sell.” Weisselberg, testifying as a prosecution witness, is also a defendant in the lawsuit. He took the stand after a recent jail stint for evading taxes on perks he got while working for Trump. James’ lawsuit alleges that Weisselberg engineered Trump’s financial statements to meet his demands that they show increases in his net worth and signed off on lofty valuations for assets despite appraisals to the contrary. Trump attended the first three days of the non-jury trial last week but hasn’t returned since. Weisselberg left a New York City jail six months ago after serving 100 days for dodging taxes on $1.7 million in extras that came with his Trump Organization job, including a Manhattan apartment, school tuition for his grandchildren and luxury cars for him and his wife. During sworn pretrial questioning in May, Weisselberg, 76, testified that he was having trouble sleeping, started seeing a therapist and was taking a generic form of Valium as he tried to “reacclimate myself back to society.” Trump, in a pretrial deposition in April, said his former longtime lieutenant was liked and respected, and “now, he’s gone through hell and back.” “What’s happened to him is very sad,” Trump said. In a pretrial ruling last month, Judge Arthur Engoron found that Trump, Weisselberg and other defendants committed years of fraud by exaggerating the value of Trump’s assets and net worth on his financial statements. As punishment, Engoron ordered that a court-appointed receiver take control of some Trump companies, putting the future oversight of Trump Tower and other marquee properties in doubt. An appeals court on Friday blocked enforcement of that aspect of Engoron’s ruling, at least for now. The civil trial concerns allegations of conspiracy, insurance fraud and falsifying business records. James is seeking $250 million in penalties and a ban on Trump doing business in New York. Follow Sisak at x.com/mikesisak and send confidential tips by visiting https://www.ap.org/tips Copyright 2023 The Associated Press. All Rights Reserved.',
+    '- Donald Trump signed a document 30 years ago that gave the true size of his New York penthouse, which was later listed as larger on financial statements.
+- The evidence, presented in an email attachment during the fraud trial, showed that the penthouse was actually 10,996 square feet, not 30,000 square feet as claimed on financial statements.
+- The former finance chief of Trumps company, Allen Weisselberg, testified that he didnt pay much attention to the apartments size because it was not significant compared to Trumps overall wealth.
+- Weisselberg also acknowledged discrepancies in the appraisal for Trumps Seven Springs estate, but did not think it was necessary to inform the outside accountants involved.
+- Weisselberg testified that Trump scrutinized the language used in descriptions of his properties, and would provide input on how they were described to banks.
+- In a separate case involving Trumps election interference, prosecutors requested protection for prospective jurors identities due to Trumps use of social media as a weapon of intimidation.
+- Weisselberg learned of the penthouse size discrepancy when a Forbes magazine reporter pointed it out in 2016, but could not recall if he directed anyone to investigate further.
+- Over the years, Trump Organization executives inflated the estimated value of the penthouse for various reasons.
+- Weisselberg testified that the asking price for a property near Trumps Mar-a-Lago club does not necessarily reflect its actual selling price.
+- Weisselberg, who is a defendant in the lawsuit as well, testified that he signed off on Trumps financial statements that showed increases in his net worth, despite contradictory appraisals.
+- Trump has not attended the civil trial since the first three days, while Weisselberg, who recently served jail time for tax evasion, testified as a prosecution witness.
+- The judge in the case previously ruled that Trump and other defendants committed fraud by exaggerating the value of his assets and net worth on financial statements.
+- An appeals court has temporarily blocked enforcement of the court-appointed receivers control over some Trump companies, which was ordered as a punishment in the case.
+- The civil trial involves allegations of conspiracy, insurance fraud, and falsifying business records, with New York Attorney General Letitia James seeking $250 million in penalties and a ban on Trump doing business in the state.',
+    1
+    );
+    : 
+ error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:33:02.608201] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914',
+    0.6842105263157895,
+    0.543859649122807,
+    0, 
+    NOW(),
+    '',
+    'Fraud trial: Trump acknowledged penthouse size at 11,000 square feet, not 30,000 he later claimed',
+    'Copyright 2023 The Associated Press. All Rights Reserved. A New York judge has imposed a limited gag order with a stern warning after Donald Trump disparaged a key court staffer during his civil business fraud trial on his social media platform. (Oct. 3) (AP Video Ted Shaffrey/David Martin) NEW YORK (AP) — Donald Trump signed a document 30 years ago that gave the true size of his New York penthouse which was later listed as far larger on financial statements, according to evidence Tuesday at the former president’s civil business fraud trial. The evidence appeared in an email attachment shown as Allen Weisselberg, the former finance chief of Trump’s company, testified in New York Attorney General Letitia James’ fraud lawsuit against Trump and his Trump Organization. Trump denies any wrongdoing. The attachment was a 1994 document, signed by Trump, that pegged his Trump Tower triplex at 10,996 square feet — not the 30,000 square feet later claimed for years on financial statements that were given to banks, insurers and others to make deals and secure loans. Weisselberg said he recalled seeing the email but not the attachment, explaining that the attachments were documents he already had on file in the company’s offices. But in any event, he said, he didn’t pay much mind to the apartment’s size because its value amounted to a fraction of Trump’s wealth. “I never even thought about the apartment. It was de minimis, in my mind,” Weisselberg said, using a Latin term that means, essentially, too small to care about. “It was not something that was that important to me when looking at a $6 billion, $5 billion net worth,” said Weisselberg, whose questioning will resume after an ex-bank official testifies Wednesday. Later, Weisselberg was asked about an appraisal that came in $230 million below what Trump’s financial statements showed for his Seven Springs estate north of New York City. Weisselberg said he was aware of the appraisal but didn’t think the disparity was worth flagging to the outside accountants who prepared the statements. Nevertheless, Weisselberg acknowledged signing documents certifying that financial summaries given to banks to meet loan requirements were “true, correct, and completely and fairly” represented Trump’s financial condition. Weisselberg repeatedly said he couldn’t remember whether he discussed the financial statements with Trump while they were being finalized. The ex-CFO said he reviewed drafts “from a 30,000-foot level” (9,100-meter level) but paid special attention to something “very important” to Trump: the descriptions of his properties. “It was a little bit of a marketing piece for banks to read about our properties, how well they’re taken care of, that they’re first-class properties,” said Weisselberg, who added that Trump scrutinized the language used in such descriptions. “He might say, ‘Don’t use the word “beautiful” — use the word “magnificent,”’ or something like that,” Weisselberg testified. Alan Weisselberg, Donald Trump’s longtime finance chief, sits inside New York Supreme Court, Tuesday, Oct. 10, 2023, in New York. (AP Photo/Seth Wenig) Meanwhile, in Trump’s election interference case in Washington, prosecutors on Tuesday urged the judge to protect prospective jurors’ identities, citing the former president’s “continued use of social media as a weapon of intimidation in court proceedings.” Trump lawyer John Lauro declined to comment. In that federal criminal case, Trump has pleaded not guilty to illegally plotting to overturn his 2020 election loss to Democrat Joe Biden. In New York, Weisselberg said Tuesday he learned of the Trump Tower penthouse size discrepancy only when a Forbes magazine reporter pointed it out to him in 2016. He testified that he initially disputed the magazine’s findings but said he couldn’t recall whether he directed anyone to look into the matter. “You don’t recall if you did anything to confirm who was right?” state lawyer Louis Solomon asked. Alan Weisselberg, Donald Trump’s longtime finance chief, sits inside New York Supreme Court, Tuesday, Oct. 10, 2023, in New York. (AP Photo/Seth Wenig) Weisselberg said he did not. As Forbes zeroed in on the apartment size question in 2017, emails show, a company spokesperson told another Trump executive that, per Weisselberg, they weren’t to engage on the issue. A week later, Trump’s 2016 financial statement was released, using the incorrect square footage. Over the years, Trump Organization executives had greatly boosted their estimate of the apartment’s value for reasons ranging from the boss’s fame to comparing it to an asking price on another triplex — though that other one ultimately sold for 60% less, another former exec testified last week. When The Wall Street Journal wrote about the $135 million listing for a property near Trump’s Mar-a-Lago club in Florida in 2018, Weisselberg wrote a note telling a staffer to hang onto the article and “see what it ends up selling for.” Asked Tuesday to explain, Weisselberg testified: “Anybody can ask anything for a dollar amount. That doesn’t mean it’s going to sell.” Weisselberg, testifying as a prosecution witness, is also a defendant in the lawsuit. He took the stand after a recent jail stint for evading taxes on perks he got while working for Trump. James’ lawsuit alleges that Weisselberg engineered Trump’s financial statements to meet his demands that they show increases in his net worth and signed off on lofty valuations for assets despite appraisals to the contrary. Trump attended the first three days of the non-jury trial last week but hasn’t returned since. Weisselberg left a New York City jail six months ago after serving 100 days for dodging taxes on $1.7 million in extras that came with his Trump Organization job, including a Manhattan apartment, school tuition for his grandchildren and luxury cars for him and his wife. During sworn pretrial questioning in May, Weisselberg, 76, testified that he was having trouble sleeping, started seeing a therapist and was taking a generic form of Valium as he tried to “reacclimate myself back to society.” Trump, in a pretrial deposition in April, said his former longtime lieutenant was liked and respected, and “now, he’s gone through hell and back.” “What’s happened to him is very sad,” Trump said. In a pretrial ruling last month, Judge Arthur Engoron found that Trump, Weisselberg and other defendants committed years of fraud by exaggerating the value of Trump’s assets and net worth on his financial statements. As punishment, Engoron ordered that a court-appointed receiver take control of some Trump companies, putting the future oversight of Trump Tower and other marquee properties in doubt. An appeals court on Friday blocked enforcement of that aspect of Engoron’s ruling, at least for now. The civil trial concerns allegations of conspiracy, insurance fraud and falsifying business records. James is seeking $250 million in penalties and a ban on Trump doing business in New York. Follow Sisak at x.com/mikesisak and send confidential tips by visiting https://www.ap.org/tips Copyright 2023 The Associated Press. All Rights Reserved.',
+    '- Donald Trump signed a document 30 years ago that gave the true size of his New York penthouse, which was later listed as larger on financial statements.
+- The evidence, presented in an email attachment during the fraud trial, showed that the penthouse was actually 10,996 square feet, not 30,000 square feet as claimed on financial statements.
+- The former finance chief of Trumps company, Allen Weisselberg, testified that he didnt pay much attention to the apartments size because it was not significant compared to Trumps overall wealth.
+- Weisselberg also acknowledged discrepancies in the appraisal for Trumps Seven Springs estate, but did not think it was necessary to inform the outside accountants involved.
+- Weisselberg testified that Trump scrutinized the language used in descriptions of his properties, and would provide input on how they were described to banks.
+- In a separate case involving Trumps election interference, prosecutors requested protection for prospective jurors identities due to Trumps use of social media as a weapon of intimidation.
+- Weisselberg learned of the penthouse size discrepancy when a Forbes magazine reporter pointed it out in 2016, but could not recall if he directed anyone to investigate further.
+- Over the years, Trump Organization executives inflated the estimated value of the penthouse for various reasons.
+- Weisselberg testified that the asking price for a property near Trumps Mar-a-Lago club does not necessarily reflect its actual selling price.
+- Weisselberg, who is a defendant in the lawsuit as well, testified that he signed off on Trumps financial statements that showed increases in his net worth, despite contradictory appraisals.
+- Trump has not attended the civil trial since the first three days, while Weisselberg, who recently served jail time for tax evasion, testified as a prosecution witness.
+- The judge in the case previously ruled that Trump and other defendants committed fraud by exaggerating the value of his assets and net worth on financial statements.
+- An appeals court has temporarily blocked enforcement of the court-appointed receivers control over some Trump companies, which was ordered as a punishment in the case.
+- The civil trial involves allegations of conspiracy, insurance fraud, and falsifying business records, with New York Attorney General Letitia James seeking $250 million in penalties and a ban on Trump doing business in the state.',
+    1
+    );
+    ]
+[2023-10-11 14:33:02.860438] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article;
+    : 
+ error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:33:03.092479] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 14:33:03.093481] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 14:33:03.340247] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:33:03.572964] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 14:33:19.403036] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-10-11 14:33:19.651904] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 14:37:26.637395] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:37:26.870897] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:42:22.744719] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:42:22.979034] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:42:36.634227] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:42:36.870921] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:46:23.777422] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:46:24.022299] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:47:38.665030] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:47:38.900696] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:48:49.980969] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician' doesn't exist")]
+[2023-10-11 14:48:50.215242] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 14:49:32.733553] [] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Article' doesn't exist")]
+[2023-10-11 14:49:33.263817] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:55:14.551584] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 14:55:15.019266] [] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-11 14:55:40.252565] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 14:55:40.486427] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:56:39.980878] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 14:56:40.212694] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:57:12.863653] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 14:57:20.857467] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 14:57:21.083494] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:57:23.537996] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:57:25.450607] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 14:57:26.067078] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 14:57:26.681388] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:57:27.283078] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:57:34.446349] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:57:37.895642] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:57:38.992755] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:57:43.360640] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:57:43.593646] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561',
+    0.7948717948717948,
+    0.5641025641025641,
+    0, 
+    NOW(),
+    '',
+    'Trump fraud trial: Weisselberg says Trump signed off on financial statements Top headlines: Ex-CFO cant say who OKd statements after Trump became president Ex-CFO OKd financial documents used to prevent loan default Weisselberg says Trump signed off on financial statements Ex-CFO suggested 30% brand premium for golf course valuations',
+    'The former president is facing allegations of defrauding lenders. 4th day of civil fraud trial against Trump in NYC Former President Donald Trump is on trial in New York in a $250 million lawsuit that could alter the personal fortune and real estate empire that helped propel Trump to the White House. Trump, his sons Eric and Don Jr., and Trump Organization executives are accused by New York Attorney General Letitia James of engaging in a decade-long scheme in which they used "numerous acts of fraud and misrepresentation" to inflate Trumps net worth while lowering his tax burden. The former president has denied all wrongdoing and his attorneys have argued that Trumps alleged inflated valuations were a product of his business skill. Ex-CFO Allen Weisselberg, who testified earlier Tuesday that Trump approved his financial statements before they were finalized during the years between 2011 and 2016, was unable to recall who approved financial statements after Trump was elected president in 2016. While he recalled discussing some elements of the statements with Trump Organization VP Eric Trump, he declined to say that either Eric or VP Don Jr. had final say regarding the statements. Court then adjourned for the day. Court is set to resume Wednesday morning with the testimony of Deutsche Bank risk manager Nicholas Haigh, who is testifying early due to a scheduling conflict. Weisselberg is scheduled to return to the witness stand later Wednesday. Ex-Trump CFO Allen Weisselberg testified that he certified that Trumps financial statements were "true, correct and complete" so the documents could be provided to lenders to prevent a breach of contract resulting in a loan default. "Please see the attached report required per our loan documents, for the above referenced loan," a Trump Organization employee would write to lenders like Wells Fargo, according to examples entered into evidence. The employee would include a certification, signed by Weisselberg, attesting to the accuracy of Trumps financial documents. "Did you understand that if you failed to provide this, the Trump organization would be in breach of its obligations under the loan agreement?" state attorney Louis Solomon asked Weisselberg for each email. "Yes," Weisselberg replied. Donald Trump would approve his financial statements before they were finalized between 2011 and 2016, ex-Trump CFO Allen Weisselberg testified. Weisselberg said that Trump often had feedback about the notes sections of the statements, which contained more detailed descriptions of Trumps properties. "Dont use the word beautiful. Use the word magnificent," Weisselberg offered as an example of the kind of feedback Trump would provide. Earlier Tuesday, Weisselberg testified that he did not meet with Trump or attorney Michael Cohen to review the statements. Returning to the topic after the lunch break, Weisselberg described Trumps final review of the document as a regular occurrence before he became president. "Did you ever send it to the Mazars [accountants] … as a final version before Mr. Trump signed off on it?" state attorney Louis Solomon asked. "Not that I can remember, no," Weisselberg said. Ex-Trump CFO Allen Weisselberg explained the Trump Organizations process for valuing its marquee properties as a complicated, months-long process during which the firms controller, Jeffrey McConney, would reach out to appraisers and brokers to better determine their value. "This took months to prepare. It was not a simple task," Weisselberg said, adding that he reviewed McConneys final product at a "30,000-foot level." But Weisselberg acknowledged that he often intervened in the process to push McConney in a certain direction. In one example, Weisselberg testified that he suggested McConney add a 30% brand premium for seven of Trumps golf courses -- adding tens of millions of dollars in value without disclosing the reasoning. "Was the 30% premium you directed Mr. McConney to add to the fixed assets disclosed in the statement of financial condition?" Solomon asked. "No," Weisselberg said. During a later portion of his direct examination, Weisselberg testified he sent Trump Organization employee Patrick Birney -- who took over handling Trumps financial statements from McConney -- a newspaper clipping about a nearby Palm Beach property in order to support the valuation of Trumps Mar-a-Lago Club. "Patrick -- hold for next year DJT f/s, Lets see what it ends up selling for," a handwritten note from Weisselberg on the clipping said. Weisselberg acknowledged his hesitancy to use that propertys asking price to help value Mar-a-Lago. "Anyone can ask anything for a dollar amount. Doesnt mean its going to sell," Weisselberg said.',
+    '- Former President Donald Trump is on trial in New York in a $250 million lawsuit
+- Trump, his sons Eric and Don Jr., and Trump Organization executives are accused of engaging in a decade-long scheme of fraud and misrepresentation
+- Trumps former CFO, Allen Weisselberg, testified that Trump approved his financial statements before they were finalized between 2011 and 2016
+- Weisselberg was unable to recall who approved financial statements after Trump was elected president in 2016
+- Weisselberg certified that Trumps financial statements were accurate to prevent a breach of contract resulting in a loan default
+- Trump often provided feedback on the notes sections of the statements, offering specific word choices
+- Weisselberg described the process of valuing Trump Organizations properties as complicated and involving appraisers and brokers
+- Weisselberg admitted to suggesting the addition of a 30% brand premium for Trumps golf courses without disclosing the reasoning
+- Weisselberg sent a newspaper clipping to a Trump Organization employee to support the valuation of Trumps Mar-a-Lago Club
+- Weisselberg acknowledged the uncertainty of using asking prices to determine property values.
+
+(Note: The footer is not related to the article and has been removed.)',
+    1
+    );
+    : 
+ error (1054, "Unknown column 'Views' in 'field list'")]
+[2023-10-11 14:57:43.823868] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561',
+    0.7948717948717948,
+    0.5641025641025641,
+    0, 
+    NOW(),
+    '',
+    'Trump fraud trial: Weisselberg says Trump signed off on financial statements Top headlines: Ex-CFO cant say who OKd statements after Trump became president Ex-CFO OKd financial documents used to prevent loan default Weisselberg says Trump signed off on financial statements Ex-CFO suggested 30% brand premium for golf course valuations',
+    'The former president is facing allegations of defrauding lenders. 4th day of civil fraud trial against Trump in NYC Former President Donald Trump is on trial in New York in a $250 million lawsuit that could alter the personal fortune and real estate empire that helped propel Trump to the White House. Trump, his sons Eric and Don Jr., and Trump Organization executives are accused by New York Attorney General Letitia James of engaging in a decade-long scheme in which they used "numerous acts of fraud and misrepresentation" to inflate Trumps net worth while lowering his tax burden. The former president has denied all wrongdoing and his attorneys have argued that Trumps alleged inflated valuations were a product of his business skill. Ex-CFO Allen Weisselberg, who testified earlier Tuesday that Trump approved his financial statements before they were finalized during the years between 2011 and 2016, was unable to recall who approved financial statements after Trump was elected president in 2016. While he recalled discussing some elements of the statements with Trump Organization VP Eric Trump, he declined to say that either Eric or VP Don Jr. had final say regarding the statements. Court then adjourned for the day. Court is set to resume Wednesday morning with the testimony of Deutsche Bank risk manager Nicholas Haigh, who is testifying early due to a scheduling conflict. Weisselberg is scheduled to return to the witness stand later Wednesday. Ex-Trump CFO Allen Weisselberg testified that he certified that Trumps financial statements were "true, correct and complete" so the documents could be provided to lenders to prevent a breach of contract resulting in a loan default. "Please see the attached report required per our loan documents, for the above referenced loan," a Trump Organization employee would write to lenders like Wells Fargo, according to examples entered into evidence. The employee would include a certification, signed by Weisselberg, attesting to the accuracy of Trumps financial documents. "Did you understand that if you failed to provide this, the Trump organization would be in breach of its obligations under the loan agreement?" state attorney Louis Solomon asked Weisselberg for each email. "Yes," Weisselberg replied. Donald Trump would approve his financial statements before they were finalized between 2011 and 2016, ex-Trump CFO Allen Weisselberg testified. Weisselberg said that Trump often had feedback about the notes sections of the statements, which contained more detailed descriptions of Trumps properties. "Dont use the word beautiful. Use the word magnificent," Weisselberg offered as an example of the kind of feedback Trump would provide. Earlier Tuesday, Weisselberg testified that he did not meet with Trump or attorney Michael Cohen to review the statements. Returning to the topic after the lunch break, Weisselberg described Trumps final review of the document as a regular occurrence before he became president. "Did you ever send it to the Mazars [accountants] … as a final version before Mr. Trump signed off on it?" state attorney Louis Solomon asked. "Not that I can remember, no," Weisselberg said. Ex-Trump CFO Allen Weisselberg explained the Trump Organizations process for valuing its marquee properties as a complicated, months-long process during which the firms controller, Jeffrey McConney, would reach out to appraisers and brokers to better determine their value. "This took months to prepare. It was not a simple task," Weisselberg said, adding that he reviewed McConneys final product at a "30,000-foot level." But Weisselberg acknowledged that he often intervened in the process to push McConney in a certain direction. In one example, Weisselberg testified that he suggested McConney add a 30% brand premium for seven of Trumps golf courses -- adding tens of millions of dollars in value without disclosing the reasoning. "Was the 30% premium you directed Mr. McConney to add to the fixed assets disclosed in the statement of financial condition?" Solomon asked. "No," Weisselberg said. During a later portion of his direct examination, Weisselberg testified he sent Trump Organization employee Patrick Birney -- who took over handling Trumps financial statements from McConney -- a newspaper clipping about a nearby Palm Beach property in order to support the valuation of Trumps Mar-a-Lago Club. "Patrick -- hold for next year DJT f/s, Lets see what it ends up selling for," a handwritten note from Weisselberg on the clipping said. Weisselberg acknowledged his hesitancy to use that propertys asking price to help value Mar-a-Lago. "Anyone can ask anything for a dollar amount. Doesnt mean its going to sell," Weisselberg said.',
+    '- Former President Donald Trump is on trial in New York in a $250 million lawsuit
+- Trump, his sons Eric and Don Jr., and Trump Organization executives are accused of engaging in a decade-long scheme of fraud and misrepresentation
+- Trumps former CFO, Allen Weisselberg, testified that Trump approved his financial statements before they were finalized between 2011 and 2016
+- Weisselberg was unable to recall who approved financial statements after Trump was elected president in 2016
+- Weisselberg certified that Trumps financial statements were accurate to prevent a breach of contract resulting in a loan default
+- Trump often provided feedback on the notes sections of the statements, offering specific word choices
+- Weisselberg described the process of valuing Trump Organizations properties as complicated and involving appraisers and brokers
+- Weisselberg admitted to suggesting the addition of a 30% brand premium for Trumps golf courses without disclosing the reasoning
+- Weisselberg sent a newspaper clipping to a Trump Organization employee to support the valuation of Trumps Mar-a-Lago Club
+- Weisselberg acknowledged the uncertainty of using asking prices to determine property values.
+
+(Note: The footer is not related to the article and has been removed.)',
+    1
+    );
+    ]
+[2023-10-11 14:57:44.308928] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 14:57:44.781631] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:57:46.432883] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 14:57:48.593437] [] [FAIL] [error building sql statement with error (2013, 'Lost connection to MySQL server during query')]
+[2023-10-11 14:58:43.371664] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022890556D90>]
+[2023-10-11 14:58:43.372614] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022890FF0050>]
+[2023-10-11 14:58:43.812407] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:58:50.341242] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 14:58:50.571344] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:59:00.615975] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 14:59:01.078105] [] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-11 14:59:05.654343] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 14:59:05.886471] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 14:59:11.526544] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:59:13.880971] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 14:59:14.530717] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 14:59:15.181863] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:59:15.813458] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:59:23.542423] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:59:27.760799] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:59:28.790473] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:59:33.593008] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:59:33.821926] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561',
+    0.7948717948717948,
+    0.5641025641025641,
+    0, 
+    NOW(),
+    '',
+    'Trump fraud trial: Weisselberg says Trump signed off on financial statements Top headlines: Ex-CFO cant say who OKd statements after Trump became president Ex-CFO OKd financial documents used to prevent loan default Weisselberg says Trump signed off on financial statements Ex-CFO suggested 30% brand premium for golf course valuations',
+    'The former president is facing allegations of defrauding lenders. 4th day of civil fraud trial against Trump in NYC Former President Donald Trump is on trial in New York in a $250 million lawsuit that could alter the personal fortune and real estate empire that helped propel Trump to the White House. Trump, his sons Eric and Don Jr., and Trump Organization executives are accused by New York Attorney General Letitia James of engaging in a decade-long scheme in which they used "numerous acts of fraud and misrepresentation" to inflate Trumps net worth while lowering his tax burden. The former president has denied all wrongdoing and his attorneys have argued that Trumps alleged inflated valuations were a product of his business skill. Ex-CFO Allen Weisselberg, who testified earlier Tuesday that Trump approved his financial statements before they were finalized during the years between 2011 and 2016, was unable to recall who approved financial statements after Trump was elected president in 2016. While he recalled discussing some elements of the statements with Trump Organization VP Eric Trump, he declined to say that either Eric or VP Don Jr. had final say regarding the statements. Court then adjourned for the day. Court is set to resume Wednesday morning with the testimony of Deutsche Bank risk manager Nicholas Haigh, who is testifying early due to a scheduling conflict. Weisselberg is scheduled to return to the witness stand later Wednesday. Ex-Trump CFO Allen Weisselberg testified that he certified that Trumps financial statements were "true, correct and complete" so the documents could be provided to lenders to prevent a breach of contract resulting in a loan default. "Please see the attached report required per our loan documents, for the above referenced loan," a Trump Organization employee would write to lenders like Wells Fargo, according to examples entered into evidence. The employee would include a certification, signed by Weisselberg, attesting to the accuracy of Trumps financial documents. "Did you understand that if you failed to provide this, the Trump organization would be in breach of its obligations under the loan agreement?" state attorney Louis Solomon asked Weisselberg for each email. "Yes," Weisselberg replied. Donald Trump would approve his financial statements before they were finalized between 2011 and 2016, ex-Trump CFO Allen Weisselberg testified. Weisselberg said that Trump often had feedback about the notes sections of the statements, which contained more detailed descriptions of Trumps properties. "Dont use the word beautiful. Use the word magnificent," Weisselberg offered as an example of the kind of feedback Trump would provide. Earlier Tuesday, Weisselberg testified that he did not meet with Trump or attorney Michael Cohen to review the statements. Returning to the topic after the lunch break, Weisselberg described Trumps final review of the document as a regular occurrence before he became president. "Did you ever send it to the Mazars [accountants] … as a final version before Mr. Trump signed off on it?" state attorney Louis Solomon asked. "Not that I can remember, no," Weisselberg said. Ex-Trump CFO Allen Weisselberg explained the Trump Organizations process for valuing its marquee properties as a complicated, months-long process during which the firms controller, Jeffrey McConney, would reach out to appraisers and brokers to better determine their value. "This took months to prepare. It was not a simple task," Weisselberg said, adding that he reviewed McConneys final product at a "30,000-foot level." But Weisselberg acknowledged that he often intervened in the process to push McConney in a certain direction. In one example, Weisselberg testified that he suggested McConney add a 30% brand premium for seven of Trumps golf courses -- adding tens of millions of dollars in value without disclosing the reasoning. "Was the 30% premium you directed Mr. McConney to add to the fixed assets disclosed in the statement of financial condition?" Solomon asked. "No," Weisselberg said. During a later portion of his direct examination, Weisselberg testified he sent Trump Organization employee Patrick Birney -- who took over handling Trumps financial statements from McConney -- a newspaper clipping about a nearby Palm Beach property in order to support the valuation of Trumps Mar-a-Lago Club. "Patrick -- hold for next year DJT f/s, Lets see what it ends up selling for," a handwritten note from Weisselberg on the clipping said. Weisselberg acknowledged his hesitancy to use that propertys asking price to help value Mar-a-Lago. "Anyone can ask anything for a dollar amount. Doesnt mean its going to sell," Weisselberg said.',
+    '- Former President Donald Trump is on trial in a $250 million lawsuit in New York.
+- He, along with his sons Eric and Don Jr., and Trump Organization executives, are accused of engaging in a decade-long scheme of fraud and misrepresentation to inflate Trumps net worth and lower his tax burden.
+- Ex-CFO Allen Weisselberg testified that Trump approved his financial statements before they were finalized between 2011 and 2016.
+- Weisselberg could not recall who approved the financial statements after Trump was elected president in 2016.
+- Weisselberg certified that Trumps financial statements were "true, correct and complete" to prevent a breach of contract resulting in a loan default.
+- Trump would often provide feedback on the notes sections of the statements.
+- Weisselberg described the process of valuing Trump Organizations marquee properties as complicated and involving input from appraisers and brokers.
+- Weisselberg suggested adding a 30% brand premium for seven of Trumps golf courses to increase their value without disclosing the reasoning.
+- Weisselberg sent a newspaper clipping to support the valuation of Trumps Mar-a-Lago Club, but expressed hesitancy in using the propertys asking price as a basis for valuation.',
+    1
+    );
+    : 
+ error (1054, "Unknown column 'Views' in 'field list'")]
+[2023-10-11 14:59:34.055365] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561',
+    0.7948717948717948,
+    0.5641025641025641,
+    0, 
+    NOW(),
+    '',
+    'Trump fraud trial: Weisselberg says Trump signed off on financial statements Top headlines: Ex-CFO cant say who OKd statements after Trump became president Ex-CFO OKd financial documents used to prevent loan default Weisselberg says Trump signed off on financial statements Ex-CFO suggested 30% brand premium for golf course valuations',
+    'The former president is facing allegations of defrauding lenders. 4th day of civil fraud trial against Trump in NYC Former President Donald Trump is on trial in New York in a $250 million lawsuit that could alter the personal fortune and real estate empire that helped propel Trump to the White House. Trump, his sons Eric and Don Jr., and Trump Organization executives are accused by New York Attorney General Letitia James of engaging in a decade-long scheme in which they used "numerous acts of fraud and misrepresentation" to inflate Trumps net worth while lowering his tax burden. The former president has denied all wrongdoing and his attorneys have argued that Trumps alleged inflated valuations were a product of his business skill. Ex-CFO Allen Weisselberg, who testified earlier Tuesday that Trump approved his financial statements before they were finalized during the years between 2011 and 2016, was unable to recall who approved financial statements after Trump was elected president in 2016. While he recalled discussing some elements of the statements with Trump Organization VP Eric Trump, he declined to say that either Eric or VP Don Jr. had final say regarding the statements. Court then adjourned for the day. Court is set to resume Wednesday morning with the testimony of Deutsche Bank risk manager Nicholas Haigh, who is testifying early due to a scheduling conflict. Weisselberg is scheduled to return to the witness stand later Wednesday. Ex-Trump CFO Allen Weisselberg testified that he certified that Trumps financial statements were "true, correct and complete" so the documents could be provided to lenders to prevent a breach of contract resulting in a loan default. "Please see the attached report required per our loan documents, for the above referenced loan," a Trump Organization employee would write to lenders like Wells Fargo, according to examples entered into evidence. The employee would include a certification, signed by Weisselberg, attesting to the accuracy of Trumps financial documents. "Did you understand that if you failed to provide this, the Trump organization would be in breach of its obligations under the loan agreement?" state attorney Louis Solomon asked Weisselberg for each email. "Yes," Weisselberg replied. Donald Trump would approve his financial statements before they were finalized between 2011 and 2016, ex-Trump CFO Allen Weisselberg testified. Weisselberg said that Trump often had feedback about the notes sections of the statements, which contained more detailed descriptions of Trumps properties. "Dont use the word beautiful. Use the word magnificent," Weisselberg offered as an example of the kind of feedback Trump would provide. Earlier Tuesday, Weisselberg testified that he did not meet with Trump or attorney Michael Cohen to review the statements. Returning to the topic after the lunch break, Weisselberg described Trumps final review of the document as a regular occurrence before he became president. "Did you ever send it to the Mazars [accountants] … as a final version before Mr. Trump signed off on it?" state attorney Louis Solomon asked. "Not that I can remember, no," Weisselberg said. Ex-Trump CFO Allen Weisselberg explained the Trump Organizations process for valuing its marquee properties as a complicated, months-long process during which the firms controller, Jeffrey McConney, would reach out to appraisers and brokers to better determine their value. "This took months to prepare. It was not a simple task," Weisselberg said, adding that he reviewed McConneys final product at a "30,000-foot level." But Weisselberg acknowledged that he often intervened in the process to push McConney in a certain direction. In one example, Weisselberg testified that he suggested McConney add a 30% brand premium for seven of Trumps golf courses -- adding tens of millions of dollars in value without disclosing the reasoning. "Was the 30% premium you directed Mr. McConney to add to the fixed assets disclosed in the statement of financial condition?" Solomon asked. "No," Weisselberg said. During a later portion of his direct examination, Weisselberg testified he sent Trump Organization employee Patrick Birney -- who took over handling Trumps financial statements from McConney -- a newspaper clipping about a nearby Palm Beach property in order to support the valuation of Trumps Mar-a-Lago Club. "Patrick -- hold for next year DJT f/s, Lets see what it ends up selling for," a handwritten note from Weisselberg on the clipping said. Weisselberg acknowledged his hesitancy to use that propertys asking price to help value Mar-a-Lago. "Anyone can ask anything for a dollar amount. Doesnt mean its going to sell," Weisselberg said.',
+    '- Former President Donald Trump is on trial in a $250 million lawsuit in New York.
+- He, along with his sons Eric and Don Jr., and Trump Organization executives, are accused of engaging in a decade-long scheme of fraud and misrepresentation to inflate Trumps net worth and lower his tax burden.
+- Ex-CFO Allen Weisselberg testified that Trump approved his financial statements before they were finalized between 2011 and 2016.
+- Weisselberg could not recall who approved the financial statements after Trump was elected president in 2016.
+- Weisselberg certified that Trumps financial statements were "true, correct and complete" to prevent a breach of contract resulting in a loan default.
+- Trump would often provide feedback on the notes sections of the statements.
+- Weisselberg described the process of valuing Trump Organizations marquee properties as complicated and involving input from appraisers and brokers.
+- Weisselberg suggested adding a 30% brand premium for seven of Trumps golf courses to increase their value without disclosing the reasoning.
+- Weisselberg sent a newspaper clipping to support the valuation of Trumps Mar-a-Lago Club, but expressed hesitancy in using the propertys asking price as a basis for valuation.',
+    1
+    );
+    ]
+[2023-10-11 14:59:34.525472] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 14:59:34.976732] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 14:59:35.831219] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 14:59:36.058536] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:00:01.913549] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/live-updates/trump-fraud-trial/?id=103642561"
+    ]
+[2023-10-11 15:00:10.153729] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 15:00:10.392398] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:00:21.594566] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 15:00:21.821661] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:03:10.021158] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 15:03:10.242193] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:04:17.649415] [] [FAIL] [error building sql statement with error (1054, "Unknown column 'Views' in 'order clause'")]
+[2023-10-11 15:04:17.907620] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:13:02.256494] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:13:10.465953] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-11 15:13:15.351342] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:13:43.100013] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 15:13:44.159751] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 15:13:44.945221] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 15:13:45.620527] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 15:13:46.237420] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 15:13:53.638890] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 15:13:54.087073] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 15:13:54.552993] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844',
+    0.5151515151515151,
+    0.48484848484848486,
+    0, 
+    NOW(),
+    '',
+    'Donald Trump accused of sharing nuclear submarine details with Australian billionaire Anthony Pratt',
+    ' Donald Trump accused of sharing nuclear submarine details with Australian billionaire Anthony Pratt Former US president Donald Trump reportedly discussed "potentially sensitive" details of Americas nuclear submarine program with an Australian billionaire. The American ABC news outlet reported that Mr Trump told Anthony Pratt the supposed number of nuclear warheads on US subs, and how close they could get to a Russian submarine without being detected.  The conversation is said to have taken place at Mr Trumps Mar-a-Lago club in Florida, several months after he left office. ABC — which is not affiliated with ABC in Australia — also reported that Mr Pratt allegedly then shared the information with at least 45 people, including journalists and employees, as well as 10 Australian officials and three former prime ministers.  The alleged conversation with Mr Pratt was not mentioned by federal prosecutors when they charged Mr Trump with mishandling classified documents this year. However, ABC reported that Mr Pratt had been interviewed on the matter at least twice, and that he told investigators he was not sure if the information was accurate. The New York Times said the businessman was among dozens of people identified as possible witnesses who could testify against the former president at trial. A spokesman for Mr Trump criticised what they described as "illegal leaks" that lacked "proper context and relevant information". "The Department of Justice should investigate the criminal leaking, instead of perpetrating their baseless witch-hunts while knowing that President Trump did nothing wrong, has always insisted on truth and transparency, and acted in a proper manner, according to the law," the spokesman said. A response has been sought from Mr Pratt, and the ABC is not suggesting he has done anything wrong. The office of special counsel Jack Smith, who is prosecuting Mr Trump, declined to comment. Anthony Pratt runs Pratt Industries/Visy, which its website says is the "worlds largest privately owned packaging, paper and recycling company". He was praised by Donald Trump as "the most successful man in Australia" during a visit to a Pratt Industries plant in Ohio in 2019. "He [Mr Pratt] said Im going to come here and Im going to spend $10 billion if you win the election," Mr Trump said at the time. ABC News reported that Mr Trumps comments in the April 2021 conversation came after Mr Pratt suggested Australia should start buying submarines from the US. The AUKUS deal, under which Australia will obtain nuclear-powered — but not nuclear-armed — subs was announced by Mr Trumps successor Joe Biden about five months later. But Shadow Foreign Minister Simon Birmingham said Mr Trump would not have been aware of the discussions taking place behind the scenes. "Its important we keep a clear distinction between AUKUS and these investigations by US authorities," he said. "Ultimately AUKUS was an agreement struck with the Biden administration, through discussions between Scott Morrison and Joe Biden, as well as [former UK prime minister] Boris Johnson. "They were discussions had with the utmost of secrecy applied to them, and those confidences were kept." He said these were the "most sensitive of US defence technologies and capabilities". "Therefore it is critically important that the sensitivities and secrecy associated with these capabilities be maintained and respected at all times." According to the 49-page indictment released today, Donald Trump sent “scores” of boxes to his Mar-a-Lago property in Florida after leaving the White House.  Former Australian ambassador to the US Joe Hockey played down the significance of the alleged conversation. "Australian submariners have been serving on US submarines for years," he said in a statement. "Similarly US naval personnel have been on our ships. Its a fully integrated partnership. The combat system on the US subs and Australian subs is a joint program. Similarly we share weapons technology. "If the conversation between Trump and Pratt is as reported there has been nothing said that we all did not know." We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- Donald Trump reportedly discussed details of Americas nuclear submarine program with Australian billionaire Anthony Pratt.
+- The conversation took place at Trumps Mar-a-Lago club in Florida.
+- Pratt allegedly shared the information with at least 45 people, including journalists, employees, and Australian officials.
+- The alleged conversation was not mentioned by federal prosecutors in their charges against Trump for mishandling classified documents.
+- Pratt has been interviewed on the matter and stated that he was not sure if the information was accurate.
+- The New York Times reported that Pratt could be a possible witness against Trump at trial.
+- A spokesperson for Trump criticized the "illegal leaks" and called for an investigation into the leaks.
+- Pratt runs Pratt Industries/Visy, the worlds largest privately owned packaging, paper, and recycling company.
+- Pratt was praised by Trump as "the most successful man in Australia."
+- Trumps comments about nuclear submarines came after Pratt suggested Australia should start buying subs from the US.
+- Shadow Foreign Minister Simon Birmingham emphasized the need to maintain sensitivity and secrecy regarding US defense technologies and capabilities.
+- Former Australian ambassador to the US Joe Hockey downplayed the significance of the alleged conversation, stating that Australian submariners have been serving on US submarines for years and that the US and Australia have a fully integrated partnership.
+- The article includes a disclaimer acknowledging Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands.',
+    1
+    );
+    ]
+[2023-10-11 15:13:55.021566] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 15:13:55.478815] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 15:13:55.936854] [] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '3',
+    'What is your opinion on the allegations against Donald Trump sharing nuclear submarine details?',
+    'I believe the allegations are credible and should be investigated further.',
+    'I think the allegations are baseless and politically motivated.',
+    'Im not sure about the veracity of the allegations and would like more information.',
+    'I dont have an opinion on the matter.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:56.391696] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 15:13:56.849197] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'illegal leaks',
+    'The phrase illegal leaks portrays a negative perspective on the release of information, suggesting wrongdoing or unauthorized disclosure.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:57.301694] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:13:57.760212] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'baseless witch-hunts',
+    'The term baseless witch-hunts implies a biased viewpoint, dismissing the investigations as unjustified and without merit.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:58.216113] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:13:58.673570] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'proper context and relevant information',
+    'The phrase proper context and relevant information suggests a defense or justification for the leaked information, potentially downplaying its significance or impact.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:59.135413] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:13:59.592475] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'most successful man in Australia',
+    'The statement the most successful man in Australia presents a subjective opinion, potentially exaggerating the persons achievements.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:59.824291] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error 'NoneType' object has no attribute 'read']
+[2023-10-11 15:13:59.825289] [] [FAIL] [error building sql statement with error (2013, 'Lost connection to MySQL server during query')]
+[2023-10-11 15:13:59.831280] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.835324] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:13:59.839343] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:13:59.841339] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'utmost of secrecy',
+    'The phrase utmost of secrecy implies a biased view, highlighting the importance of secrecy without considering the need for transparency or public knowledge.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.864835] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'utmost of secrecy',
+    'The phrase utmost of secrecy implies a biased view, highlighting the importance of secrecy without considering the need for transparency or public knowledge.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.867857] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'utmost of secrecy',
+    'The phrase utmost of secrecy implies a biased view, highlighting the importance of secrecy without considering the need for transparency or public knowledge.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:59.874342] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.874342] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.880917] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:13:59.882104] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:13:59.882104] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'sensitivities and secrecy',
+    'The words sensitivities and secrecy indicate a subjective perspective, emphasizing the need for secrecy without acknowledging potential concerns or implications of such secrecy.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.882104] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'sensitivities and secrecy',
+    'The words sensitivities and secrecy indicate a subjective perspective, emphasizing the need for secrecy without acknowledging potential concerns or implications of such secrecy.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.888757] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'sensitivities and secrecy',
+    'The words sensitivities and secrecy indicate a subjective perspective, emphasizing the need for secrecy without acknowledging potential concerns or implications of such secrecy.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:59.890045] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.890045] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.890045] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:13:59.890045] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:13:59.890045] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'alleged conversation',
+    'The term alleged conversation implies a level of uncertainty or doubt, potentially casting doubt on the credibility or validity of the reported information.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.896057] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'alleged conversation',
+    'The term alleged conversation implies a level of uncertainty or doubt, potentially casting doubt on the credibility or validity of the reported information.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.903389] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'alleged conversation',
+    'The term alleged conversation implies a level of uncertainty or doubt, potentially casting doubt on the credibility or validity of the reported information.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:59.906707] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.908222] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.909700] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:13:59.911619] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:13:59.912901] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'nothing said that we all did not know',
+    'The phrase nothing said that we all did not know suggests a dismissive attitude, downplaying the significance or impact of the reported conversation.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.918221] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'nothing said that we all did not know',
+    'The phrase nothing said that we all did not know suggests a dismissive attitude, downplaying the significance or impact of the reported conversation.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.924118] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'nothing said that we all did not know',
+    'The phrase nothing said that we all did not know suggests a dismissive attitude, downplaying the significance or impact of the reported conversation.',
+    '3',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:59.925421] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.926742] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.928749] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:13:59.932514] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:13:59.933186] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    3,
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.934195] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    3,
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.935948] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    3,
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:13:59.940328] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    : 
+ error (0, '')]
+[2023-10-11 15:13:59.941497] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+     
+ reason: (0, '')]
+[2023-10-11 15:13:59.943560] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-11 15:13:59.944911] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:19:44.784029] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001FA7EAE85D0>]
+[2023-10-11 15:19:44.784029] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001FA7D6E2FD0>]
+[2023-10-11 15:19:45.239459] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 15:19:53.592174] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 15:19:54.059171] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-11 15:19:54.521648] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "3"
+    ]
+[2023-10-11 15:19:54.986948] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "3"
+    ]
+[2023-10-11 15:19:56.305694] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:20:03.256061] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:20:36.888410] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-11 15:20:43.751955] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:20:47.292834] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:20:51.370266] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-11 15:21:02.200777] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:21:03.607111] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:21:22.221443] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:23.386637] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:24.666428] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:26.666459] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:32.527426] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:33.396735] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:34.274160] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:36.214506] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:51.830554] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:21:56.877038] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:57.730963] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:21:59.617187] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:22:00.450281] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/alisondurkee/2023/10/10/ex-trump-org-cfo-knew-size-of-trumps-penthouse-was-inflated-he-testifies/?sh=38cea67949f1"
+    ]
+[2023-10-11 15:22:50.261502] [] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002AB2832BF90>]
+[2023-10-11 15:22:50.262502] [] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002AB28356DD0>]
+[2023-10-11 15:22:50.722890] [] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 15:23:00.640574] [] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:23:14.495015] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 15:23:16.526323] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 15:23:17.325910] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 15:23:17.923079] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 15:23:18.541982] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 15:23:33.495284] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 15:23:33.962833] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 15:23:34.427271] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914',
+    0.6842105263157895,
+    0.543859649122807,
+    0, 
+    NOW(),
+    '',
+    'Fraud trial: Trump acknowledged penthouse size at 11,000 square feet, not 30,000 he later claimed',
+    'Copyright 2023 The Associated Press. All Rights Reserved. A New York judge has imposed a limited gag order with a stern warning after Donald Trump disparaged a key court staffer during his civil business fraud trial on his social media platform. (Oct. 3) (AP Video Ted Shaffrey/David Martin) NEW YORK (AP) — Donald Trump signed a document 30 years ago that gave the true size of his New York penthouse which was later listed as far larger on financial statements, according to evidence Tuesday at the former president’s civil business fraud trial. The evidence appeared in an email attachment shown as Allen Weisselberg, the former finance chief of Trump’s company, testified in New York Attorney General Letitia James’ fraud lawsuit against Trump and his Trump Organization. Trump denies any wrongdoing. The attachment was a 1994 document, signed by Trump, that pegged his Trump Tower triplex at 10,996 square feet — not the 30,000 square feet later claimed for years on financial statements that were given to banks, insurers and others to make deals and secure loans. Weisselberg said he recalled seeing the email but not the attachment, explaining that the attachments were documents he already had on file in the company’s offices. But in any event, he said, he didn’t pay much mind to the apartment’s size because its value amounted to a fraction of Trump’s wealth. “I never even thought about the apartment. It was de minimis, in my mind,” Weisselberg said, using a Latin term that means, essentially, too small to care about. “It was not something that was that important to me when looking at a $6 billion, $5 billion net worth,” said Weisselberg, whose questioning will resume after an ex-bank official testifies Wednesday. Later, Weisselberg was asked about an appraisal that came in $230 million below what Trump’s financial statements showed for his Seven Springs estate north of New York City. Weisselberg said he was aware of the appraisal but didn’t think the disparity was worth flagging to the outside accountants who prepared the statements. Nevertheless, Weisselberg acknowledged signing documents certifying that financial summaries given to banks to meet loan requirements were “true, correct, and completely and fairly” represented Trump’s financial condition. Weisselberg repeatedly said he couldn’t remember whether he discussed the financial statements with Trump while they were being finalized. The ex-CFO said he reviewed drafts “from a 30,000-foot level” (9,100-meter level) but paid special attention to something “very important” to Trump: the descriptions of his properties. “It was a little bit of a marketing piece for banks to read about our properties, how well they’re taken care of, that they’re first-class properties,” said Weisselberg, who added that Trump scrutinized the language used in such descriptions. “He might say, ‘Don’t use the word “beautiful” — use the word “magnificent,”’ or something like that,” Weisselberg testified. Alan Weisselberg, Donald Trump’s longtime finance chief, sits inside New York Supreme Court, Tuesday, Oct. 10, 2023, in New York. (AP Photo/Seth Wenig) Meanwhile, in Trump’s election interference case in Washington, prosecutors on Tuesday urged the judge to protect prospective jurors’ identities, citing the former president’s “continued use of social media as a weapon of intimidation in court proceedings.” Trump lawyer John Lauro declined to comment. In that federal criminal case, Trump has pleaded not guilty to illegally plotting to overturn his 2020 election loss to Democrat Joe Biden. In New York, Weisselberg said Tuesday he learned of the Trump Tower penthouse size discrepancy only when a Forbes magazine reporter pointed it out to him in 2016. He testified that he initially disputed the magazine’s findings but said he couldn’t recall whether he directed anyone to look into the matter. “You don’t recall if you did anything to confirm who was right?” state lawyer Louis Solomon asked. Alan Weisselberg, Donald Trump’s longtime finance chief, sits inside New York Supreme Court, Tuesday, Oct. 10, 2023, in New York. (AP Photo/Seth Wenig) Weisselberg said he did not. As Forbes zeroed in on the apartment size question in 2017, emails show, a company spokesperson told another Trump executive that, per Weisselberg, they weren’t to engage on the issue. A week later, Trump’s 2016 financial statement was released, using the incorrect square footage. Over the years, Trump Organization executives had greatly boosted their estimate of the apartment’s value for reasons ranging from the boss’s fame to comparing it to an asking price on another triplex — though that other one ultimately sold for 60% less, another former exec testified last week. When The Wall Street Journal wrote about the $135 million listing for a property near Trump’s Mar-a-Lago club in Florida in 2018, Weisselberg wrote a note telling a staffer to hang onto the article and “see what it ends up selling for.” Asked Tuesday to explain, Weisselberg testified: “Anybody can ask anything for a dollar amount. That doesn’t mean it’s going to sell.” Weisselberg, testifying as a prosecution witness, is also a defendant in the lawsuit. He took the stand after a recent jail stint for evading taxes on perks he got while working for Trump. James’ lawsuit alleges that Weisselberg engineered Trump’s financial statements to meet his demands that they show increases in his net worth and signed off on lofty valuations for assets despite appraisals to the contrary. Trump attended the first three days of the non-jury trial last week but hasn’t returned since. Weisselberg left a New York City jail six months ago after serving 100 days for dodging taxes on $1.7 million in extras that came with his Trump Organization job, including a Manhattan apartment, school tuition for his grandchildren and luxury cars for him and his wife. During sworn pretrial questioning in May, Weisselberg, 76, testified that he was having trouble sleeping, started seeing a therapist and was taking a generic form of Valium as he tried to “reacclimate myself back to society.” Trump, in a pretrial deposition in April, said his former longtime lieutenant was liked and respected, and “now, he’s gone through hell and back.” “What’s happened to him is very sad,” Trump said. In a pretrial ruling last month, Judge Arthur Engoron found that Trump, Weisselberg and other defendants committed years of fraud by exaggerating the value of Trump’s assets and net worth on his financial statements. As punishment, Engoron ordered that a court-appointed receiver take control of some Trump companies, putting the future oversight of Trump Tower and other marquee properties in doubt. An appeals court on Friday blocked enforcement of that aspect of Engoron’s ruling, at least for now. The civil trial concerns allegations of conspiracy, insurance fraud and falsifying business records. James is seeking $250 million in penalties and a ban on Trump doing business in New York. Follow Sisak at x.com/mikesisak and send confidential tips by visiting https://www.ap.org/tips Copyright 2023 The Associated Press. All Rights Reserved.',
+    '- A document from 30 years ago shows that Donald Trumps New York penthouse was listed as smaller in size than what was later claimed on financial statements.
+- The document, signed by Trump, stated that the penthouse was 10,996 square feet, while financial statements claimed it was 30,000 square feet.
+- Allen Weisselberg, former finance chief of Trumps company, testified that he saw the email attachment with the document but didnt pay much attention to the size of the apartment.
+- Weisselberg also acknowledged that an appraisal for Trumps Seven Springs estate came in $230 million below what was shown on financial statements, but he did not flag the disparity to the outside accountants.
+- He certified documents stating that the financial summaries accurately represented Trumps financial condition.
+- Weisselberg said that Trump was particularly concerned with the descriptions of his properties in the financial statements, and would request specific wording.
+- In Trumps election interference case, prosecutors have urged the judge to protect prospective jurors identities due to Trumps use of social media as a weapon of intimidation.
+- Forbes magazine pointed out the size discrepancy of the Trump Tower penthouse to Weisselberg in 2016, but he did not recall if he took any action to confirm the size.
+- Over the years, the Trump Organization executives increased the estimated value of the penthouse for various reasons, but another triplex sold for 60% less.
+- Weisselberg wrote a note to keep an article about a property near Trumps Mar-a-Lago club in Florida and see what it ends up selling for.
+- Weisselberg is testifying as a prosecution witness and is also a defendant in the lawsuit.
+- Judge Arthur Engoron ruled that Trump and other defendants committed years of fraud by exaggerating the value of Trumps assets and net worth, leading to the appointment of a court-appointed receiver to take control of some Trump companies. However, an appeals court has blocked the enforcement of this ruling for now.
+- The civil trial involves allegations of conspiracy, insurance fraud, and falsifying business records. New York Attorney General Letitia James is seeking $250 million in penalties and a ban on Trump doing business in New York.',
+    1
+    );
+    ]
+[2023-10-11 15:23:34.912634] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 15:23:35.376044] [] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://apnews.com/article/donald-trump-letitia-james-fraud-new-york-71df7b5f1e4d3c89937efa77e2922914"
+    ]
+[2023-10-11 15:23:35.842002] [] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '4',
+    'What is your opinion on the evidence presented in the article?',
+    'The evidence raises serious concerns about Donald Trumps honesty and integrity.',
+    'The evidence is inconclusive and does not prove any wrongdoing by Trump.',
+    'The size discrepancy of the penthouse is a minor issue and does not reflect Trumps overall wealth.',
+    'The appraisal disparity for the Seven Springs estate is a significant red flag for Trumps financial statements.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:36.309719] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 15:23:36.776064] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'disparaged',
+    'The word disparaged implies negative and derogatory remarks made by Donald Trump, suggesting a biased perspective towards the court staffer.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:37.241245] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:37.706815] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'fraud',
+    'The use of the word fraud in relation to Donald Trumps business trial implies a presumption of guilt, which could be seen as biased language.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:38.166949] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:38.633783] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'wrongdoing',
+    'The word wrongdoing is a judgmental term that assumes Trumps guilt and creates a negative perception, indicating possible bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:39.099718] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:39.567855] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'true size',
+    'The phrase true size suggests that the size of Trumps penthouse on financial statements is deceptive or false, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:40.033274] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:40.502196] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'fraud lawsuit',
+    'The term fraud lawsuit implies a preconceived notion of fraud on Trumps part, indicating a biased view of the case.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:40.967692] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.435619] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'denies any wrongdoing',
+    'The statement Trump denies any wrongdoing suggests that the denial of guilt is noteworthy, potentially implying a presumption of guilt.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.668506] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error 'NoneType' object has no attribute 'read']
+[2023-10-11 15:23:41.668506] [] [FAIL] [error building sql statement with error (2013, 'Lost connection to MySQL server during query')]
+[2023-10-11 15:23:41.673266] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.677258] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.678917] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.680425] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'size discrepancy',
+    'The phrase size discrepancy implies an intentional misrepresentation of facts by Trump, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.684493] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'size discrepancy',
+    'The phrase size discrepancy implies an intentional misrepresentation of facts by Trump, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.696172] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'size discrepancy',
+    'The phrase size discrepancy implies an intentional misrepresentation of facts by Trump, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.702337] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.704323] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.706321] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.708369] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.709601] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'financial condition',
+    'The term financial condition suggests a negative assessment of Trumps financial situation, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.710609] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'financial condition',
+    'The term financial condition suggests a negative assessment of Trumps financial situation, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.711722] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'financial condition',
+    'The term financial condition suggests a negative assessment of Trumps financial situation, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.712746] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.714196] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.715212] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.718529] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.719937] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'first-class properties',
+    'The phrase first-class properties is subjective and represents a positive bias towards Trumps properties, potentially influencing the reader.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.722072] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'first-class properties',
+    'The phrase first-class properties is subjective and represents a positive bias towards Trumps properties, potentially influencing the reader.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.723079] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'first-class properties',
+    'The phrase first-class properties is subjective and represents a positive bias towards Trumps properties, potentially influencing the reader.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.725338] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.725338] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.726492] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.728014] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.728290] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'interference case',
+    'The term interference case suggests Trumps involvement in election meddling, presuming guilt and indicating a biased perspective.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.730850] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'interference case',
+    'The term interference case suggests Trumps involvement in election meddling, presuming guilt and indicating a biased perspective.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.732917] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'interference case',
+    'The term interference case suggests Trumps involvement in election meddling, presuming guilt and indicating a biased perspective.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.735921] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.736896] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.737893] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.739349] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.740426] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'illegal plotting',
+    'The phrase illegal plotting suggests a preconceived notion of wrongdoing by Trump, indicating a biased view of the case.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.742436] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'illegal plotting',
+    'The phrase illegal plotting suggests a preconceived notion of wrongdoing by Trump, indicating a biased view of the case.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.744834] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'illegal plotting',
+    'The phrase illegal plotting suggests a preconceived notion of wrongdoing by Trump, indicating a biased view of the case.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.747505] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.749994] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.754746] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.759578] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.759578] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'state lawyer',
+    'The term state lawyer suggests a perspective favoring the prosecution, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.761058] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'state lawyer',
+    'The term state lawyer suggests a perspective favoring the prosecution, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.764413] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'state lawyer',
+    'The term state lawyer suggests a perspective favoring the prosecution, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.766468] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.766468] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.768794] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.770823] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.773800] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'apartment size question',
+    'The phrase apartment size question implies doubt and skepticism regarding the accuracy of Trumps apartment size, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.776284] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'apartment size question',
+    'The phrase apartment size question implies doubt and skepticism regarding the accuracy of Trumps apartment size, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.778292] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'apartment size question',
+    'The phrase apartment size question implies doubt and skepticism regarding the accuracy of Trumps apartment size, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.780294] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.783144] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.786745] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.787759] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.787759] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'lofty valuations',
+    'The term lofty valuations implies an intentional overvaluation of assets by Trump, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.789923] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'lofty valuations',
+    'The term lofty valuations implies an intentional overvaluation of assets by Trump, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.790992] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'lofty valuations',
+    'The term lofty valuations implies an intentional overvaluation of assets by Trump, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.793233] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.793233] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.794231] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.795670] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.795670] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'fraud allegations',
+    'The term fraud allegations suggests a presumption of guilt, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.798516] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'fraud allegations',
+    'The term fraud allegations suggests a presumption of guilt, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.803103] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'fraud allegations',
+    'The term fraud allegations suggests a presumption of guilt, potentially indicating bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.804721] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.807397] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.808410] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.809417] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.810410] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'penalties',
+    'The mention of penalties indicates a predetermined assessment of Trumps liability, suggesting a biased perspective.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.812119] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'penalties',
+    'The mention of penalties indicates a predetermined assessment of Trumps liability, suggesting a biased perspective.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.814428] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'penalties',
+    'The mention of penalties indicates a predetermined assessment of Trumps liability, suggesting a biased perspective.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.816497] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.819535] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.820541] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.821680] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.822693] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'ban on Trump doing business',
+    'The phrase ban on Trump doing business suggests a predetermined outcome, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.823768] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'ban on Trump doing business',
+    'The phrase ban on Trump doing business suggests a predetermined outcome, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.825241] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'ban on Trump doing business',
+    'The phrase ban on Trump doing business suggests a predetermined outcome, indicating potential bias.',
+    '4',
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.826500] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.827509] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.828045] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:23:41.829100] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:23:41.829100] [] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    4,
+    0, 
+    NOW(),
+    ''
+    );
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.830814] [] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    4,
+    0, 
+    NOW(),
+    ''
+    );
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.832234] [] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    4,
+    0, 
+    NOW(),
+    ''
+    );
+    ]
+[2023-10-11 15:23:41.837243] [] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    : 
+ error (0, '')]
+[2023-10-11 15:23:41.838244] [] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+     
+ reason: (0, '')]
+[2023-10-11 15:23:41.838244] [] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-11 15:23:41.839247] [] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 15:24:34.051992] [] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 15:24:36.951294] [] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 15:24:38.883714] [] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 15:26:53.831412] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000162D92715D0>]
+[2023-10-11 15:26:53.833414] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000162E8F5B610>]
+[2023-10-11 15:26:54.286319] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 15:27:09.949678] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:27:22.883161] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.washingtonpost.com/politics/2023/10/10/trump-classified-documents-motive/"
+    ]
+[2023-10-11 15:27:32.905189] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.washingtonpost.com/politics/2023/10/10/trump-classified-documents-motive/"
+    ]
+[2023-10-11 15:27:42.819135] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.washingtonpost.com/politics/2023/10/10/trump-classified-documents-motive/"
+    ]
+[2023-10-11 15:27:51.744204] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.washingtonpost.com/politics/2023/10/10/trump-classified-documents-motive/"
+    ]
+[2023-10-11 15:28:36.280812] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:28:39.309506] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:28:40.333885] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:28:41.493325] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:28:42.972721] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:29:58.764436] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:30:01.054709] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 15:30:01.689253] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 15:30:02.511624] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:30:03.178020] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:30:07.840431] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:30:18.476846] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:30:18.942023] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears',
+    0.6551724137931034,
+    0.4827586206896552,
+    0, 
+    NOW(),
+    'DarrenOoi',
+    'Donald Trump Is Worried About Having to Wear “One of Those Jumpsuits” in Prison: Report Bess Levin',
+    'To revist this article, visit My Profile, then View saved stories. To revist this article, visit My Profile, then View saved stories. By Bess Levin When Donald Trump sat down for an interview with Meet the Press that aired on Sunday, host Kristen Welker asked him, “When you go to bed at night, do you worry about going to jail?” Trump responded: “No, I don’t really. I don’t even think about it. I’m built a little differently…I don’t even think about it.” But according to a new report, the four-times indicted ex-president has very much thought about the prospect of going to prison, and in fact, has some very specific concerns about doing time.  Rolling Stone reports that over the past several months, Trump has taken to asking members of his inner circle if they think he’ll be forced to wear “one of those jumpsuits” behind bars. (Whether he is worried about having to trade his business attire and golf duds for classic prison garb in general, or if it is the idea of an orange jumpsuit in particular, which would likely clash with his complexion and give rise to untold late-night jokes, that has him uneasy, is unclear.) In addition, according to the outlet, the ex-president has wondered aloud if: - He’ll be sentenced to do time in a “club fed”-style prison, i.e., a relatively cushy place white-collar criminals have historically been sent to, or if he’ll be sent to a “bad” prison - If there is a chance he’d get lucky and only get house arrest - If the government would try to strip him of Secret Service protection - What would happen “if he were convicted and sentenced, but also reelected”? Meanwhile, as 2024 rival Will Hurd noted in August, Trump’s decision to run again is very likely based in part on the calculation that getting reelected would be his get-out-of-jail-free card. “He’s only running in order to stay out of prison,” Hurd told Bloomberg Radio. (Meanwhile, in 2022, before he’d officially announced his candidacy, a source familiar with Trump’s thinking told Rolling Stone that the ex-president had “spoken about how when you are the president of the United States, it is tough for politically motivated prosecutors to ‘get to you.’” This person added that Trump “says when [not if] he is president again, a new Republican administration will put a stop to the [Justice Department] investigation that he views as the Biden administration working to hit him with criminal charges—or even put him and his people in prison.”) Trump is currently facing a whopping 91 felony counts across four criminal cases. In June, after he was charged by the Justice Department for his handling of classified documents, Fox News legal analyst Jonathan Turley opined, “All the government has to do is stick the landing on one count, and [Trump] could have a terminal sentence. You’re talking about crimes that have a 10- or 20-year period as a maximum.”  If you would like to receive the Levin Report in your inbox daily, click here to subscribe. Donald Trump once again brags about his role in turning the clock back to 1974 This content can also be viewed on the site it originates from. By David Canfield By Bess Levin By Molly Jong-Fast Did they though? Did they really? This content can also be viewed on the site it originates from. Elsewhere! Tucker Carlson Denies Report That Ron DeSantis Got Inappropriate With His Dog, Does Not Deny Claim He Thinks DeSantis Is a “Fascist” Vanity Fair • Read More Murdoch Chronicler Michael Wolff Foresees the Fall of Fox News: “It Will Cease to Exist in Its Present Form” Vanity Fair • Read More And Just When You Thought Kevin McCarthy’s House of Horrors Couldn’t Get Scarier Vanity Fair • Read More Both politically and legally, Trump’s classified-docs defense weakens The Washington Post • Read More Senate Poised to Confirm Military Chiefs, Sidestepping Tuberville Blockade NYT • Read More Garland Rebuffs Republicans’ Efforts to Reveal Details on Hunter Biden Inquiry NYT • Read More Woman rescued from outhouse toilet after climbing in to retrieve Apple Watch, Michigan police say AP • Read More Barbra Streisand Talks Music, Pickup Lines, and the Movies She Still Wants to Make Barbra Streisand’s Fight to Get The Way We Were Right Welcome to Robert F. Kennedy Jr.’s Mad, Mad, Mad, Mad World The 25 Best Shows to Watch on Netflix Right Now A New JFK Assassination Revelation Could Upend the “Lone Gunman” Theory Meet Kyle Deschanel, the Pretend Playboy Who Seems to Have Fooled Half of Manhattan From the Archive: A Father’s Account of the Trial of His Daughter’s Killer We want to hear from you! Tell us about your podcast listening habits. By Bess Levin By Bess Levin By Vanity Fair By Bess Levin More from Vanity Fair Contact © 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. Vanity Fair may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast. Ad Choices CN Entertainment',
+    '- During an interview with Meet the Press, Donald Trump claimed that he doesnt worry about going to jail.
+- However, a new report suggests that Trump has indeed considered the possibility of going to prison and has specific concerns.
+- Trump has asked his inner circle if he will have to wear a jumpsuit in prison, whether he would be sent to a cushy "club fed" prison or a harsher one, if there is a chance of house arrest, and if the government would strip him of Secret Service protection.
+- There are also suggestions that Trumps decision to run for president again in 2024 is motivated by a desire to avoid going to prison.
+- Currently, Trump is facing 91 felony counts across four criminal cases.
+- Legal experts have noted that Trump could potentially face a lengthy prison sentence if convicted.
+- The article also includes unrelated content from other news sources at the end.',
+    1
+    );
+    ]
+[2023-10-11 15:30:19.422211] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 15:30:19.880715] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:30:20.341142] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '5',
+    'What concerns has Donald Trump expressed about going to prison?',
+    'Wearing a jumpsuit',
+    'Being sent to a club fed prison',
+    'Possibility of house arrest',
+    'Losing Secret Service protection',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:20.798756] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 15:30:21.261404] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'interview',
+    'The emotionally charged word jail in the interview question evokes the fear of legal consequences and imprisonment.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:21.716175] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:22.175597] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'worried',
+    'The word worried implies a sense of anxiety or concern about the possibility of going to prison, suggesting emotional impact.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:22.626067] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:23.091761] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'thought',
+    'The phrase very much thought indicates a deep consideration or preoccupation with the prospect of going to prison, conveying emotional significance.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:23.547696] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:24.005800] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'concerns',
+    'The word concerns suggests that Trump has specific worries or anxieties related to the idea of going to prison, signifying emotional involvement.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:24.454919] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:24.920322] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'forced to wear',
+    'The phrase forced to wear implies a loss of personal agency or control, highlighting a potential emotionally charged situation.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:25.378893] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:25.840091] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'jumpsuits',
+    'The mention of jumpsuits implies the image of prison attire, which may evoke negative emotions associated with incarceration.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:26.295172] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:26.747950] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'bad prison',
+    'The phrase bad prison suggests a harsh or dangerous prison environment, which can elicit fear or anxiety.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:27.211535] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:27.666555] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'house arrest',
+    'The mention of house arrest indicates a potential alternative to prison, which may evoke mixed emotions depending on ones perspective.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:28.129823] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:28.589612] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'strip him of Secret Service protection',
+    'The phrase strip him of Secret Service protection implies a loss of security and personal safety, which can elicit feelings of vulnerability.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:29.034654] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:29.505600] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'convicted and sentenced, but also reelected',
+    'The phrase convicted and sentenced, but also reelected raises concerns about the potential clash between legal consequences and political success, highlighting emotional tension.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:29.956389] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:30.421235] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'get-out-of-jail-free card',
+    'The phrase get-out-of-jail-free card suggests a desire to avoid punishment through political means, which can be seen as emotionally charged and biased.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:30.878665] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:31.336558] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'politically motivated prosecutors',
+    'The phrase politically motivated prosecutors implies an unfair or biased legal system, triggering emotional responses related to perceived injustice.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:31.785265] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:32.248216] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'criminal charges',
+    'The mention of criminal charges suggests the gravity of potential legal consequences, evoking strong emotions.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:32.701095] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:33.160702] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'whopping 91 felony counts',
+    'The phrase whopping 91 felony counts implies a significant number of serious criminal charges, which can elicit strong emotional reactions.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:33.611703] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:34.076667] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terminal sentence',
+    'The phrase terminal sentence indicates the possibility of a severe and lasting punishment, evoking feelings of dread or despair.',
+    '5',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:34.531948] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 15:30:34.995784] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    5,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 15:30:35.453601] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-11 15:30:57.468054] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:30:57.931648] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 5 
+    ]
+[2023-10-11 15:31:24.685605] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002E5D5EE6ED0>]
+[2023-10-11 15:31:24.686852] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002E5D4E5EB90>]
+[2023-10-11 15:31:25.139368] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 15:31:30.644222] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:31:31.111461] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 15:31:31.567760] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-11 15:31:32.026708] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 15:31:32.483589] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 15:31:32.938250] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:31:33.401798] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 5 
+    ]
+[2023-10-11 15:31:42.452195] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:31:49.052134] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:31:50.188538] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:31:51.131616] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:31:52.276675] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:34:01.525730] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:34:01.988075] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 4
+    WHERE ID = 5 
+    ]
+[2023-10-11 15:34:07.294239] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:34:20.606188] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-11 15:34:33.786157] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:34:42.046244] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:35:35.937243] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-11 15:35:40.309528] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:35:46.105287] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:40:13.918019] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:40:16.476501] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:40:16.931977] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 5
+    WHERE ID = 5 
+    ]
+[2023-10-11 15:40:47.858418] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
