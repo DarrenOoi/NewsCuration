@@ -343,6 +343,7 @@ class ArticleManager():
     def jobMonitor(self, url: str) -> True: # Or None if invalid url
         newsScraper = NewsScraper(url)
         if newsScraper.getHeader() == None:
+            print("DEBUG: jobMonitor - Article cannot be read")
             return None
         
         self.jobsLock.acquire()
@@ -629,7 +630,10 @@ class SessionManager():
 
 
     def getArticleItem(self, url: str, itemName: str):
-        return self.articleManager.getItem(url, itemName)
+        result = self.articleManager.getItem(url, itemName)
+        if result == None:
+            return "Paywall Encountered, will not display article"
+        return result
     
     def updatePoll(self, url: str, optionIndex: int)->None:
         return self.articleManager.updatePoll(url, optionIndex)
