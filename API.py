@@ -266,6 +266,38 @@ def getRecentPoliticians():
     return sm.getRecentPoliticians()
 
 ###
+# Retrieves all the politicians in the database from the input search
+# 'nameSearch'.
+# Returns:
+#---------
+# {
+#   "Result" : [{
+#    ID int,
+#    Fname : str 
+#    Lname : str 
+#    About : str 
+#    Age : int
+#    Gender : str 
+#    CountryCode : str
+#    InProduction : bool
+#    InsertedAt : DATETIME
+#    InsertedBy : str
+#    ImageLink : str
+#    Summary : str 
+#    Byline : str,
+#    Political_Position : str, 
+#    Party : str, 
+#    COUNTRY : str   } ... <NONE, ONE OR MULTIPLE>
+#    ]
+#}
+###
+@app.route('/GetPolicitianSearch', methods=['POST'])
+def getPoliticianSearchByName():
+    data = request.get_json()
+    nameQuery = data.get('nameSearch')
+    return sm.getPoliticiansBySearch(nameQuery)
+
+###
 # Returns the header of each saved url, along with the URL of each saved Article
 # Returns:
 #---------
