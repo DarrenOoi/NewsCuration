@@ -81,8 +81,10 @@ function ProfileSearch() {
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className='flex flex-row-reverse mr-7 mr-10 font-bold text-3xl text-[#7895B1] h-7'>
-                PROFILE SEARCH
+              <div className='flex flex-row-reverse mr-7'>
+                <span className='font-bold text-3xl text-[#7895B1] h-7'>
+                  PROFILE SEARCH
+                </span>
               </div>
               <div className='flex'>
                 <div className='flex items-center justify-center mr-1'>
