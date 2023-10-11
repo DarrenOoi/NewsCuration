@@ -3,7 +3,7 @@ import Pic from "./pictures/pic.png"
 
 const Comment = ({user, text}) => {
     return (
-        <div className="flex flex-row mt-7 ml-2 items-start">
+        <div className="flex flex-row mt-7 ml-1 items-start">
             <Image
                 src={Pic}
                 width={30}
