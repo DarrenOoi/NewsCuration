@@ -170,6 +170,7 @@ function Home() {
                           title={'MOST POPULAR'}
                           items={popular}
                           handleClick={handleListClick}
+                          popular={true}
                         />
                       </div>
                     )}

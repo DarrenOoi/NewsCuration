@@ -34,7 +34,7 @@ const List = ({ title, items, politician, handleClick, popular }) => {
                   <GrArticle className='align-bottom mr-4' size={25} />
                   <p
                     className='mr-4 cursor-pointer hover:bg-blue-100 rounded-l focus:outline-none'
-                    onClick={() => handleClick(popular ? item.url : item.URL)}
+                    onClick={() => handleClick(popular ? item.URL : item.url)}
                   >
                     {item.Header}
                   </p>
