@@ -122,7 +122,7 @@ function AnalysisPage() {
 
                     <div className='flex flex-row mt-4'>
                       <div
-                        className='card bg-[#2E2E2E] rounded-full p-0 flex justify-center'
+                        className='card bg-[#2E2E2E] rounded-full p-1 flex flex-row items-center'
                         style={{ width: '415px', height: '33px' }}
                       >
                         <Image
@@ -130,8 +130,9 @@ function AnalysisPage() {
                           src={textSize}
                           width={20}
                           height={5}
-                          alt='Text To Speech'
+                          alt='Text Size'
                         />
+                        <progress className="ml-6 progress w-80" value={40} max="100"></progress>
                       </div>
                       <button
                         className='btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4'

@@ -701,7 +701,7 @@ if __name__ == '__main__':
     }
     newPoliticianCampaignPolicies = Politician_CampaignPolicies('Donald', 'Trump', 'Affordable Housing', 'I want to make housing affordable', 0) # have to edit this in
     tdc.insert(newPoliticianCampaignPolicies)
-    newComment = Comments('examplewebsite.com', 'Donald Trump', 'this would be a comment' 0)
+    newComment = Comments('examplewebsite.com', 'Donald Trump', 'this would be a comment', 0)
     
     #we can't debug because of stricter import rules (but we know it works)
     # transactionHelper.insert_bias_keywords(tdc, newArticle.getId(), biasSubtext, 0)
