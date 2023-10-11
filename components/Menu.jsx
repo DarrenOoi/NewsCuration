@@ -33,7 +33,6 @@ const Menu = ({currentPage}) => {
                 <ul tabIndex={0} className="dropdown-content menu p-0 shadow bg-[#7895B1] rounded-box">
                     <li><a className="text-[#5F7A95] text-xs font-semibold">PAGE ONE</a></li>
                     <li><a className="text-[#5F7A95] text-xs font-semibold">PAGE TWO</a></li>
-                    <li><a className="text-[#5F7A95] text-xs font-semibold">PAGE THREE</a></li>
                 </ul>
             </div>
         </div>

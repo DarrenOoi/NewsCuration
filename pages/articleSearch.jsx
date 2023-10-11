@@ -74,7 +74,7 @@ function Home() {
                   className='bg-[#7895B1] p-4 rounded-xl'
                   style={{ width: '1200px' }}
                 >
-                  <div className='flex justify-start space-x-4 mt-5'>
+                  <div className='flex justify-start space-x-4 mt-4'>
                     <Input setText={setText} placeholder='Enter article URL' />{' '}
                     <button
                       className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'

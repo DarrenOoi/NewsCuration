@@ -1,5 +1,7 @@
 import PollOption from "./PollOptions";
 import Comment from "./Comment";
+import Image from 'next/image';
+import Pic from "./pictures/pic.png"
 
 const Poll = () => {
     return (
@@ -19,8 +21,15 @@ const Poll = () => {
                     <PollOption text={"This is the fourth option"} />
                 </div>
 
-                <div className="mt-7">
+                <div className="mt-10">
                     <p className="text-black text-md font-semibold">Comments</p>
+                    <div className="flex flex-row mt-3">
+                        <Image
+                            src={Pic}
+                            width={28}
+                            height={28}
+                        />
+                    </div>
                     <Comment />
                 </div>
 

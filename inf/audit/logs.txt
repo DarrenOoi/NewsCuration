@@ -14585,3 +14585,19 @@ ADD InsertedBy VARCHAR(50)
     SET Views = 5
     WHERE ID = 52 
     ]
+[2023-10-10 15:31:44.498132] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-10 15:31:44.989451] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-10 19:09:42.682370] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020A478FED50>]
+[2023-10-10 19:09:42.699317] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020A4601E650>]
+[2023-10-10 19:09:43.192427] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]

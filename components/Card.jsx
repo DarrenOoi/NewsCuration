@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Pic from "./pic.png"
-import Clipboard from "./clipboard.png"
+import Pic from "./pictures/pic.png"
+import Clipboard from "./pictures/clipboard.png"
 
 const Card = ({ title, content, highlight = false, biasWords }) => {
   let phrases = [];
