@@ -451,7 +451,7 @@ class Article_ArticleBias(table):
     VALUES (
     '{self.keyPhrase}',
     '{self.biasReason}',
-    '{self.ID_Article}',
+    {self.ID_Article},
     {1 if self.inProd else 0}, 
     NOW(),
     '{insertedBy}'
