@@ -18360,3 +18360,812 @@ CREATE TABLE Politician_CampaignPolicies(
     ORDER BY Views DESC
     LIMIT 4
     ]
+[2023-10-11 15:58:18.182892] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F1636E6490>]
+[2023-10-11 15:58:18.199655] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F16370B6D0>]
+[2023-10-11 15:58:18.655529] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 15:58:55.712750] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:58:58.714499] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:58:59.170293] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 15:58:59.625625] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-11 15:59:00.080839] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 15:59:00.535857] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 15:59:01.002947] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 15:59:01.466518] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 8
+    WHERE ID = 5 
+    ]
+[2023-10-11 15:59:09.802357] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 15:59:28.294686] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:59:29.237620] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:59:30.134280] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 15:59:31.052989] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:01:20.650276] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/pm-s-tears-at-uluru-shows-he-may-be-powerless-to-stop-no-vote-succeeding-20231011-p5ebhc.html"
+    ]
+[2023-10-11 16:01:21.664148] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/pm-s-tears-at-uluru-shows-he-may-be-powerless-to-stop-no-vote-succeeding-20231011-p5ebhc.html"
+    ]
+[2023-10-11 16:01:22.576463] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/pm-s-tears-at-uluru-shows-he-may-be-powerless-to-stop-no-vote-succeeding-20231011-p5ebhc.html"
+    ]
+[2023-10-11 16:01:25.610504] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/politics/federal/pm-s-tears-at-uluru-shows-he-may-be-powerless-to-stop-no-vote-succeeding-20231011-p5ebhc.html"
+    ]
+[2023-10-11 16:02:06.721470] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 16:02:07.820036] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 16:02:08.468875] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 16:02:09.086933] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 16:02:09.673858] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 16:02:13.465428] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 16:02:17.332938] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 16:02:18.106066] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 16:02:18.570577] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772',
+    0.3333333333333333,
+    0.25,
+    0, 
+    NOW(),
+    'DarrenOoi',
+    'Australian journalist Cheng Lei released from China, arrives in Melbourne',
+    ' Australian journalist Cheng Lei released from China, arrives in Melbourne Australian journalist Cheng Le has returned to Australia more than three years after being arrested in China. Ms Cheng had been working as a journalist for state-owned broadcaster CGTN, when she was accused of supplying state secrets overseas. She had rejected the allegations, and Prime Minister Anthony Albanese said her release was a result of legal proceedings against her in China being concluded. Mr Albanese said Ms Cheng was reunited with her family in Melbourne, and he spoke to her earlier today. "I spoke to her about her recent message, of course, that she made to the Australian people. "Shes a very strong and resilient person, though. And when I spoke with her, she was delighted to be back in Melbourne. "Government has been seeking this for a long period of time and her return will be warmly welcomed not just by her family and friends but by all Australians."  The prime minister said Ms Cheng had been met at the airport by Foreign Minister Penny Wong.  We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- Australian journalist Cheng Lei has returned to Australia after being arrested in China.
+- Cheng Lei was accused of supplying state secrets overseas but had rejected the allegations.
+- Prime Minister Anthony Albanese stated that Cheng Leis release was a result of legal proceedings in China being concluded.
+- Cheng Lei has been reunited with her family in Melbourne.
+- Prime Minister Albanese spoke with Cheng Lei and stated that she was delighted to be back in Melbourne.
+- Foreign Minister Penny Wong met Cheng Lei at the airport.
+- Cheng Leis return will be warmly welcomed by all Australians.',
+    1
+    );
+    ]
+[2023-10-11 16:02:19.035934] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 16:02:19.492644] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 16:02:19.950051] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '8',
+    'What is your opinion on the release of Australian journalist Cheng Lei?',
+    'I believe Cheng Lei was unfairly accused and her release is a positive outcome.',
+    'I think there may have been valid reasons for her arrest, but her release is a step towards resolving the situation.',
+    'I have no opinion on the matter.',
+    'I believe Cheng Lei should have remained in custody in China.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:20.407188] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 16:02:20.865132] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'released from China',
+    'The phrase released from China suggests that the journalist was being held against her will, evoking a sense of captivity and the relief associated with freedom.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:21.085375] [DarrenOoi] [FAIL] [error building sql statement with error 'NoneType' object has no attribute 'read']
+[2023-10-11 16:02:21.085375] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (2013, 'Lost connection to MySQL server during query')]
+[2023-10-11 16:02:21.100973] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.102603] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:02:21.106036] [DarrenOoi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 16:02:21.106036] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'accused',
+    'The word accused implies that the journalist has been charged with a crime, potentially contributing to a negative perception of her.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.118043] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'accused',
+    'The word accused implies that the journalist has been charged with a crime, potentially contributing to a negative perception of her.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.122399] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'accused',
+    'The word accused implies that the journalist has been charged with a crime, potentially contributing to a negative perception of her.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:21.125140] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.126806] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.128481] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:02:21.131096] [DarrenOoi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 16:02:21.131611] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'state secrets',
+    'The term state secrets implies the seriousness of the allegations against the journalist and can generate a sense of intrigue and suspicion.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.133700] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'state secrets',
+    'The term state secrets implies the seriousness of the allegations against the journalist and can generate a sense of intrigue and suspicion.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.136137] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'state secrets',
+    'The term state secrets implies the seriousness of the allegations against the journalist and can generate a sense of intrigue and suspicion.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:21.138609] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.139618] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.140622] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:02:21.140622] [DarrenOoi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 16:02:21.141617] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'strong and resilient',
+    'The phrase strong and resilient portrays the journalist in a positive light, emphasizing her strength and determination in the face of challenges.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.143878] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'strong and resilient',
+    'The phrase strong and resilient portrays the journalist in a positive light, emphasizing her strength and determination in the face of challenges.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.145481] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'strong and resilient',
+    'The phrase strong and resilient portrays the journalist in a positive light, emphasizing her strength and determination in the face of challenges.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:21.147674] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.148993] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.152451] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:02:21.155451] [DarrenOoi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 16:02:21.156807] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'delighted',
+    'The word delighted reflects the journalists joy and happiness upon returning to Melbourne, conveying a positive emotional state.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.158641] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'delighted',
+    'The word delighted reflects the journalists joy and happiness upon returning to Melbourne, conveying a positive emotional state.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.162535] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'delighted',
+    'The word delighted reflects the journalists joy and happiness upon returning to Melbourne, conveying a positive emotional state.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:21.165380] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.166389] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.168244] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:02:21.170255] [DarrenOoi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 16:02:21.171286] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'warmly welcomed',
+    'The phrase warmly welcomed indicates that the journalists return is being greeted with enthusiasm and positivity by the Australian community.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.172298] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'warmly welcomed',
+    'The phrase warmly welcomed indicates that the journalists return is being greeted with enthusiasm and positivity by the Australian community.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.174327] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'warmly welcomed',
+    'The phrase warmly welcomed indicates that the journalists return is being greeted with enthusiasm and positivity by the Australian community.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:21.175406] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.176426] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.176426] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:02:21.177479] [DarrenOoi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 16:02:21.177479] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'acknowledge',
+    'The word acknowledge highlights the recognition and respect given to the Aboriginal and Torres Strait Islander peoples, demonstrating inclusivity and cultural sensitivity.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.179680] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'acknowledge',
+    'The word acknowledge highlights the recognition and respect given to the Aboriginal and Torres Strait Islander peoples, demonstrating inclusivity and cultural sensitivity.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.181484] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'acknowledge',
+    'The word acknowledge highlights the recognition and respect given to the Aboriginal and Torres Strait Islander peoples, demonstrating inclusivity and cultural sensitivity.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:21.182498] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.183510] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.185513] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:02:21.187119] [DarrenOoi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 16:02:21.187119] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'copyright',
+    'The mention of copyright indicates that the information from various sources, such as Agence France-Presse (AFP), APTN, Reuters, AAP, CNN, and BBC, is protected and cannot be reproduced.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.188704] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'copyright',
+    'The mention of copyright indicates that the information from various sources, such as Agence France-Presse (AFP), APTN, Reuters, AAP, CNN, and BBC, is protected and cannot be reproduced.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.189711] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'copyright',
+    'The mention of copyright indicates that the information from various sources, such as Agence France-Presse (AFP), APTN, Reuters, AAP, CNN, and BBC, is protected and cannot be reproduced.',
+    '8',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 16:02:21.191710] [DarrenOoi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-11 16:02:21.192717] [DarrenOoi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-11 16:02:21.193258] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:02:21.193793] [DarrenOoi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-11 16:07:56.103664] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002A15EBF6490>]
+[2023-10-11 16:07:56.105846] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002A14D4A88D0>]
+[2023-10-11 16:07:56.559750] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 16:08:02.208538] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 16:08:02.673254] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 16:08:03.127507] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 16:08:03.585928] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 16:08:04.655938] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:08:41.574397] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 16:08:42.053818] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-11 16:08:42.509525] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "3"
+    ]
+[2023-10-11 16:08:42.967942] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "3"
+    ]
+[2023-10-11 16:08:43.424793] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-11 16:08:43.888086] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 3 
+    ]
+[2023-10-11 16:08:51.231656] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:09:29.155103] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 16:09:29.615580] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-11 16:11:00.735143] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:14:17.675226] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:14:20.503326] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 16:14:20.957170] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 16:14:21.410740] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-11 16:14:21.869551] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 16:14:22.323877] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 16:14:22.779520] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 16:14:23.240583] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 9
+    WHERE ID = 5 
+    ]
+[2023-10-11 16:14:52.607033] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:16:10.898764] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000227DFEEE1D0>]
+[2023-10-11 16:16:10.899773] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000227DE5E6F10>]
+[2023-10-11 16:16:11.350099] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 16:16:19.540817] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:16:29.018991] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:16:30.057026] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:16:31.022393] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:16:32.466713] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:16:50.692679] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:16:51.986732] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:16:53.600138] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:17:10.224557] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:17:11.138724] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:17:12.052557] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:17:13.004285] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.smh.com.au/business/companies/all-trump-all-the-time-former-president-s-legal-problems-a-bonanza-for-network-20231006-p5ea6n.html"
+    ]
+[2023-10-11 16:17:30.464915] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 16:17:30.915028] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-11 16:19:01.353037] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001872C57A490>]
+[2023-10-11 16:19:01.353037] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001871A706750>]
+[2023-10-11 16:19:01.825563] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 16:19:12.967795] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 16:19:13.427572] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-11 16:20:20.743737] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:20:26.468616] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:21:36.549273] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:22:53.372062] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:23:20.510930] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 16:23:24.867600] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
