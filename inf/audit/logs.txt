@@ -18360,3 +18360,132 @@ CREATE TABLE Politician_CampaignPolicies(
     ORDER BY Views DESC
     LIMIT 4
     ]
+[2023-10-11 16:38:50.717083] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F84D278650>]
+[2023-10-11 16:38:50.718767] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F84B949DD0>]
+[2023-10-11 16:38:51.173079] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 16:40:10.013926] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 16:40:51.472576] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D088AAFC90>]
+[2023-10-11 16:40:51.474700] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D086DB0D50>]
+[2023-10-11 16:40:51.935847] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 16:40:52.399181] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form',
+    1
+    );
+    ]
+[2023-10-11 16:40:52.861056] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 16:40:53.325843] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
+    VALUES (
+    'Donald',
+    'Trump',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-11 16:40:53.786993] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-11 16:40:54.251700] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 16:40:54.715744] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 16:40:55.179892] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    10,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 16:40:55.641392] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 16:40:56.106364] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 16:40:56.571315] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-11 16:40:56.576324] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001D088AAFC90>]
+[2023-10-11 16:40:56.577319] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001D086DB0D50>]
+[2023-10-11 16:41:02.511914] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 16:42:55.957662] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001469EDD6290>]
+[2023-10-11 16:42:55.959362] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000146A1577B10>]
+[2023-10-11 16:42:56.417156] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 16:42:56.880261] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 16:42:56.886192] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001469EDD6290>]
+[2023-10-11 16:42:56.887202] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000146A1577B10>]
+[2023-10-11 16:44:18.909451] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]

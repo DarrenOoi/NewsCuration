@@ -549,6 +549,28 @@ class PoliticianManager():
             self.recents.put(record)
         return record
     
+    '''
+    Queries the database to retrieve politicians by name 
+    Parameters:
+    -----------
+    tdc : transactionDataClient
+    name : a list of politician first and last names, e.g. ['Donald Trump', 'Theoedore Roosevelt']
+    '''
+    def getPoliticiansNameSearch(self, tdc=transactionDataClient, name=str) -> list(dict()):
+        # Add function here to assist finding all related articles
+        filter = ""
+        if len(name) == 0:
+                return []
+        nameSplit = name.split(' ')
+        record = self.checkInCache(names=nameSplit)
+        if record is None:
+            for name in nameSplit:
+                    filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
+            filter += '0=1'
+            politiciansInfo = tdc.query(POLITICIAN, filter) #This would return a list of dicts
+            
+        return {"Result" : politiciansInfo}
+    
     def getPoliticianCampaignDetails(self, tdc=transactionDataClient, name=str):
         # Add function here to assist finding all related articles
         filter = ""
@@ -651,7 +673,10 @@ class SessionManager():
             return self.politicianManager.getPoliticianByName(self.tdc, nameList)
         else:
             return self.politicianManager.getPoliticianByID(self.tdc, ID)
-        
+    
+    def getPoliticiansBySearch(self, nameList:str):
+        return self.politicianManager.getPoliticiansNameSearch(self.tdc, nameList)
+    
     def getRecentPoliticians(self):
         return self.politicianManager.getRecents()
     
