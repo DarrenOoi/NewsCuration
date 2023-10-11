@@ -152,7 +152,10 @@ function Home() {
 
                   <div className='mt-5'>
                     {result ? (
-                      <Card content={result} />
+                      <div>
+                        <Card content={result} />
+                        <Poll />
+                      </div>
                     ) : submitted ? (
                       <Card
                         content={
@@ -175,7 +178,6 @@ function Home() {
                       </div>
                     )}
                   </div>
-                  <Poll />
                 </div>
               </div>
 

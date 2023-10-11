@@ -735,6 +735,13 @@ if __name__ == '__main__':
         action="store_true",
         help="debug an insert DDL"
     )
+
+    parser.add_argument(
+        "--buildDB",
+        action="store_true",
+        help="build all the databases"
+    )
+
     args = parser.parse_args()
 
     if args.DDLFromFile is not None:
@@ -752,7 +759,7 @@ if __name__ == '__main__':
         newArticle = Article('examplewebsite.com', 'This is the header', 'This is the originalText',
                              'this would be the chatGPT response in paragraph form', 10.23, 22.40, 0)
         tdc.insert(newArticle)
-        newPolitician = Politician('John', 'Doe', 'John did some incredible things', 32, 'Male', 0, '\img\imghere',
+        newPolitician = Politician('Donald', 'Trump', 'John did some incredible things', 32, 'Male', 0, '\img\imghere',
                                    'another more general summary here', 'This would be a politcian byline', 'this would be their politicial Position', 'LNP', 'AUS')
         # update the attributes on this, remember to update the attributes on the API also.
         tdc.insert(newPolitician)
@@ -794,4 +801,15 @@ if __name__ == '__main__':
         tdc = transactionDataClient()
         for i in args.query:
             print(tdc.query(i))
+        tdc.closeConnection()
+
+    if args.buildDB:
+        print(f'performing custom SQL file import for all files under /inf:')
+        directory = "inf/sql"
+        files = [f for f in os.listdir(directory) if os.path.isfile(
+            os.path.join(directory, f))]
+        print(files)
+        tdc = transactionDataClient()
+        for file in files:
+            tdc.generateFromSqlFile(file)
         tdc.closeConnection()
