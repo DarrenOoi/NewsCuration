@@ -14306,6 +14306,619 @@ ADD InsertedBy VARCHAR(50)
     WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
 0=1
     ]
+
+[2023-10-11 14:38:59.952720] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000277BFED6010>]
+[2023-10-11 14:38:59.954728] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000277C0047D10>]
+[2023-10-11 14:39:00.516329] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:20.698595] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002526976BA10>]
+[2023-10-11 14:49:20.699593] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002526976AF90>]
+[2023-10-11 14:49:21.163491] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:33.917863] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000018AB9D8D8D0>]
+[2023-10-11 14:49:33.919890] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000018AB9EC7FD0>]
+[2023-10-11 14:49:34.876966] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:35.427725] [Daniel Ciccotosto-Camp] [SUCCESS] [-- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+]
+[2023-10-11 14:49:35.924026] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-11 14:49:36.417033] [Daniel Ciccotosto-Camp] [SUCCESS] [
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+]
+[2023-10-11 14:49:36.920242] [Daniel Ciccotosto-Camp] [SUCCESS] [
+CREATE TABLE Article (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(255),
+    UpperBias DECIMAL(5, 2),
+    LowerBias DECIMAL(5, 2),
+    Summary TEXT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);]
+[2023-10-11 14:49:37.436434] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Politician_KeyTable (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Politician INT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+]
+[2023-10-11 14:49:37.923964] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD ImageLink VARCHAR(1024),
+ADD Summary TEXT;
+
+-- this has been inserted as part of PRO-68, using the --AddSQLFromFile mode]
+[2023-10-11 14:49:38.443678] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-10-11 14:49:38.976234] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+ADD Header VARCHAR(1024),
+ADD OriginalText TEXT,
+ADD SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89]
+[2023-10-11 14:49:39.484156] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Article_ArticleBias (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    KeyPhrase VARCHAR(1000),
+    BiasReason TEXT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+
+-- this has been inserted as part of PRO-93]
+[2023-10-11 14:49:39.980723] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+DROP COLUMN Summary]
+[2023-10-11 14:49:39.981743] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000018AB9D8D8D0>]
+[2023-10-11 14:49:39.982746] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000018AB9EC7FD0>]
+[2023-10-11 14:49:53.083763] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000256C6E71510>]
+[2023-10-11 14:49:53.084779] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000256C6666290>]
+[2023-10-11 14:49:53.542911] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:53.993916] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-11 14:49:53.996878] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000256C6E71510>]
+[2023-10-11 14:49:53.997861] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000256C6666290>]
+[2023-10-11 14:49:55.238126] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000256C8D17390>]
+[2023-10-11 14:49:55.238126] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000256C8D15990>]
+[2023-10-11 14:49:55.696222] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:55.929004] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+ with error (1050, "Table 'Politician' already exists")]
+[2023-10-11 14:49:56.165024] [Daniel Ciccotosto-Camp] [SUCCESS] [-- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+]
+[2023-10-11 14:49:56.404240] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL with error (1060, "Duplicate column name 'Byline'")]
+[2023-10-11 14:49:56.645744] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-11 14:49:56.909676] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ 
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+ with error (1050, "Table 'Politician_CampaignPolicies' already exists")]
+[2023-10-11 14:49:57.139216] [Daniel Ciccotosto-Camp] [SUCCESS] [
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+]
+[2023-10-11 14:49:57.372007] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ 
+CREATE TABLE Article (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(255),
+    UpperBias DECIMAL(5, 2),
+    LowerBias DECIMAL(5, 2),
+    Summary TEXT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+); with error (1050, "Table 'Article' already exists")]
+[2023-10-11 14:49:57.602139] [Daniel Ciccotosto-Camp] [SUCCESS] [
+CREATE TABLE Article (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(255),
+    UpperBias DECIMAL(5, 2),
+    LowerBias DECIMAL(5, 2),
+    Summary TEXT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);]
+[2023-10-11 14:49:57.835789] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Politician_KeyTable (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Politician INT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+ with error (1050, "Table 'Politician_KeyTable' already exists")]
+[2023-10-11 14:49:58.067949] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Politician_KeyTable (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Politician INT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+]
+[2023-10-11 14:49:58.300803] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Politician
+ADD ImageLink VARCHAR(1024),
+ADD Summary TEXT;
+
+-- this has been inserted as part of PRO-68, using the --AddSQLFromFile mode with error (1060, "Duplicate column name 'ImageLink'")]
+[2023-10-11 14:49:58.532353] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD ImageLink VARCHAR(1024),
+ADD Summary TEXT;
+
+-- this has been inserted as part of PRO-68, using the --AddSQLFromFile mode]
+[2023-10-11 14:49:58.763926] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+); with error (1050, "Table 'Polling' already exists")]
+[2023-10-11 14:49:58.997439] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-10-11 14:49:59.232100] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Article
+ADD Header VARCHAR(1024),
+ADD OriginalText TEXT,
+ADD SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89 with error (1060, "Duplicate column name 'Header'")]
+[2023-10-11 14:49:59.469282] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+ADD Header VARCHAR(1024),
+ADD OriginalText TEXT,
+ADD SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89]
+[2023-10-11 14:49:59.702827] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Article_ArticleBias (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    KeyPhrase VARCHAR(1000),
+    BiasReason TEXT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+
+-- this has been inserted as part of PRO-93 with error (1050, "Table 'Article_ArticleBias' already exists")]
+[2023-10-11 14:49:59.935473] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Article_ArticleBias (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    KeyPhrase VARCHAR(1000),
+    BiasReason TEXT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+
+-- this has been inserted as part of PRO-93]
+[2023-10-11 14:50:00.171198] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Article
+DROP COLUMN Summary with error (1091, "Can't DROP 'Summary'; check that column/key exists")]
+[2023-10-11 14:50:00.401032] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+DROP COLUMN Summary]
+[2023-10-11 14:50:00.402961] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000256C8D17390>]
+[2023-10-11 14:50:00.404960] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000256C8D15990>]
+[2023-10-11 14:52:05.010295] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000014C9EB01510>]
+[2023-10-11 14:52:05.011290] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000014C9E376290>]
+[2023-10-11 14:52:05.462418] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:52:05.914531] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-11 14:52:05.915524] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000014C9EB01510>]
+[2023-10-11 14:52:05.916525] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000014C9E376290>]
+[2023-10-11 14:52:07.131960] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000014CA09A7390>]
+[2023-10-11 14:52:07.132961] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000014CA09A5990>]
+[2023-10-11 14:52:07.583168] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:52:07.832184] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+ with error (1050, "Table 'Politician' already exists")]
+[2023-10-11 14:52:08.061864] [Daniel Ciccotosto-Camp] [SUCCESS] [-- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+]
+[2023-10-11 14:52:08.291658] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL with error (1060, "Duplicate column name 'Byline'")]
+[2023-10-11 14:52:08.522604] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-11 14:52:08.757538] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ 
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+ with error (1050, "Table 'Politician_CampaignPolicies' already exists")]
+[2023-10-11 14:52:42.578507] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001AE362B7B90>]
+[2023-10-11 14:52:42.580518] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001AE37F776D0>]
+[2023-10-11 14:52:43.039882] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:52:43.499848] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-11 14:52:43.501442] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001AE362B7B90>]
+[2023-10-11 14:52:43.501983] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001AE37F776D0>]
+[2023-10-11 14:52:57.332473] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002191B31BA10>]
+[2023-10-11 14:52:57.334469] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002191B31AF90>]
+[2023-10-11 14:52:57.784419] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:52:58.242196] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-11 14:52:58.694252] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 14:52:59.151405] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-11 14:52:59.608663] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-11 14:53:00.063701] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+
 [2023-10-04 15:12:54.143219] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000238E0DF59D0>]
 [2023-10-04 15:12:54.151271] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000238E0A15DD0>]
 [2023-10-04 15:12:54.631637] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
@@ -14359,7 +14972,7 @@ ADD InsertedBy VARCHAR(50)
     NOW(),
     'Manav Trivedi',
     'The greater the fear Trump feels, the more sinister his threats become',
-    'Some Republicans in Congress want Trump as speaker of the House. But why? He already directs them by remote control “DEATH!” tweeted Donald Trump about Gen Mark Milley, the former chairman of the Joint Chiefs of Staff (AKA “My Generals”). “TRAITOR!” he said about former speaker of the House Kevin McCarthy (AKA “My Kevin”). “Monster” and “Deranged Lunatic” he labeled the New York state attorney general, Letitia James, who is prosecuting the case against him for his false valuations of Trump properties. “Deranged”, “Psycho” and “Crackhead” he called special prosecutor Jack Smith, who has charged him for his role in the January 6 coup attempt and his theft of classified documents. “We’ll stand up to crazy Nancy Pelosi, who ruined San Francisco – how’s her husband doing, anybody know?” he shouted at a rally, referring to Paul Pelosi, who was nearly murdered by a hammer-wielding assassin. “Crooked Joe Biden, let’s indict the motherfucker! Let’s indict him,” Trump said to a cheering crowd. “A racist … having an affair with the head of the gang or a gang member,” he claimed about Fani Willis, the Fulton county district attorney in Georgia, prosecuting him for the fake electors scheme. “Animal” and “Degenerate Psychopath” he called Alvin Bragg, the Manhattan district attorney, who has charged him with campaign bribery. “[Senator Charles] Schumer’s girlfriend … is running this case against me,” he lied about a clerk in the New York courtroom, identifying her by name. For that transgression, Manhattan supreme court justice Arthur Engoron, who Trump previously said should be “disbarred”, issued a limited gag rule forbidding him from targeting officers of the court. Needless to say, Trump’s vilification of Bragg, Willis and James, all Black, is an extension of his lifelong campaign for white supremacy, going back to his discrimination against Black housing buyers and his full-page ads in the New York newspapers in 1989 calling for the death penalty for five Black and Hispanic youths, the “Central Park Five”, who were innocent of the charges against them. But he now has a larger agenda than a race war here and there. Trump’s torrent of attacks on judges, prosecutors and witnesses is of a piece with his larger project to delegitimize and demolish the institutions of government, including now the House of Representatives through the historic first overthrow of a sitting speaker. His goal in every arena is the same: to clear the path to one-man rule. His threats, incitements and smears are more than outbursts. They are statements of intention for his next presidency. The constitution must be suspended to overturn the results of the 2020 election: “A Massive Fraud of this type and magnitude allows for the termination of all rules, regulations, and articles, even those found in the Constitution,” he has proposed. He has announced he will prosecute and imprison his political opponents: “I will appoint a real special ‘prosecutor’ to go after the most corrupt president in the history of the USA, Joe Biden, the entire Biden crime family, & all others involved with the destruction of our elections, borders, & country itself!” He has pledged to purge the federal civil service and replace its employees with Trump loyalists: “You’re fired, get out, you’re fired,” he said, repeating his signature phrase from his television show The Apprentice. “[You] have to do it. Deep state. Washington will be an entirely different place.” Facing 91 felony counts in four separate trials, not to mention his second defamation judgment in the E Jean Carroll adjudicated rape case and the court-ordered unraveling of the Trump Organization in New York for decades of financial fraud, Trump has not stopped committing offenses. He has been a fount of ceaseless threats to specific officers of the court that he well knows may incite violence against them, interspersed with other calls for extralegal violence, such as shooting shoplifters. “Shot!” he shouted to a cheering crowd. If people can’t be bought off, told off or pushed off, they must be offed. Jack Smith’s filings to the Washington DC court requesting a gag order are a running commentary on Trump’s continuing crime wave. “Like his previous public disinformation campaign regarding the 2020 presidential election,” Smith wrote, “the defendant’s recent extrajudicial statements are intended to undermine public confidence in an institution – the judicial system – and to undermine confidence in and intimidate individuals – the court, the jury pool, witnesses and prosecutors.” In his collection of Trump’s latest “prejudicial statements,” Smith highlighted that Gen Milley, who Trump stated “had committed treason and suggested that he should be executed”, is “a witness cited in the indictment”. Smith addressed the issue of witness intimidation and tampering directly: “Even assuming that certain witnesses are not intimidated by the defendant’s statements, other witnesses see and may be affected by what the defendant does to those who are called to testify in this case. And regardless of whether certain witnesses are intimidated by the defendant’s extrajudicial statements, the defendant should not be permitted to attack or bolster the credibility of any witness in a manner that could influence prospective jurors.” Adding new felony charges against Trump for his egregious efforts at witness tampering would slow down the case against him. But the special prosecutor retains the option of filing those charges later. Trump’s inflammatory language could yet lead to further indictments. Trump’s threats are not simply rhetorical explosions but illegal attempts to intimidate witnesses and prejudice the jury. But they are more than that too. For Trump, the further the dismantlement of the rule of law, the smoother the path to one-man rule. Attempting to intimidate officers of the court and to tamper with witnesses is more than his legal strategy; it’s central to his overarching political strategy. He has systemic purpose. He is seeking to sideline every institution of government other than a presidency he occupies in which he is not bound by constitutional confines. By eliminating checks and balances now, he’s preparing for dictatorial rule. In 2020, under his aegis, the Republican party passed no platform whatsoever. Now, his incitements are the planks of the Republican platform on which all Republicans must run. His threats are his promises of what is to come. He is moving beyond the politics of grievance to the menace of revenge. Making him their candidate, Republicans are pledged to his violence and illegality. If he can escape accountability for his crimes, the rule of law collapses and the path is cleared for him. That is his vision. The criminal is the political. Trump seized upon the chance to advance the collapse of the speakership as an opportunity to reduce another governmental body that might be a check on him. The fewer barriers to one-man rule, the easier his road back to power. The party’s impotence is his strength. Kevin McCarthy’s demise appeared to him as a fortunate opening to grind toward control. The House Republicans rehearse an endless revenge tragedy strewing bodies on the stage. They flail at the Democrats, who for the crucial motion to vacate removed themselves to the reserved seats in the colosseum to watch the Republicans devour their speaker. The Republicans blamed the Democrats for failing to save McCarthy from the Republicans. McCarthy contrived to cooperate in his own destruction upon accepting the speakership by agreeing that one member alone could file a motion to vacate. Brutus, undisguised, was already lurking. McCarthy had put a knife in his hand in the first scene. With McCarthy’s corpse still warm, the speaker pro tempore Patrick McHenry’s first act was to evict former speaker Nancy Pelosi from her hideaway office, a little piece of real estate within the Capitol. It turns out it was a last sniveling request to McHenry from McCarthy, a spasm preceding rigor mortis. When she was speaker, she accorded the favor of the office to Dennis Hastert as a former speaker for as long as he remained in the House (before his pedophilia conviction). At the moment McHenry made his graceless gesture, Pelosi was in California, having accompanied the body of her dear friend Senator Dianne Feinstein to prepare for her funeral. He struck out at Pelosi as though her eviction punished her alongside the Republican eviction of Kevin McCarthy. It was presumably an equivalent slam of the Democratic speaker for the slamming of the Republican one. But Pelosi had left the speakership in dignity, handed off her baton and stays as an eminence, while McCarthy was despised, trampled and cut to pieces by his own. She served as the speaker for four years; he completed eight months, not quite to term. The displacement of Republican hostility to Pelosi only highlights their auto-da-fe of McCarthy. He is their former lord of the flies, felled by the swarm of flies. McHenry’s first act, ingratiating himself to the recently departed, established the tone of his even briefer transitional tenure. McCarthy all along tried to play to the bullies, joined in with the bullies, was roughed up by the bullies, and, finally, rousted by the bullies; after he was bullied out, his figurehead successor messed the clean slate with a small act of bullying. The hunger games continue. Trump was silent on McCarthy’s defenestration, the gratitude McCarthy received for his self-abasement, down to the nicety of regularly giving Trump gifts of jars of pink and red Starbursts, the former president’s favorite candy. The sweetener did not sweeten things for the candy man. Trump was the not-so-hidden hand reaching from behind the curtain, waving on the assassins. Stroking Trump almost to the last with praise, as “stronger today than in 2016”, McCarthy walked to his destiny with a knife about to be planted in his back. Immediately after the vote to remove him, Matt Gaetz stated, “I would say that my conversations with the former president leave me with great confidence that I’m doing the right thing.” McCarthy’s reward for loyalty to Trump led him into the usual cul-de-sac of Republicans trying to contain Trump. Predictably, Trump demanded what McCarthy could not deliver. “UNLESS YOU GET EVERYTHING, SHUT IT DOWN!” Everyone who decides to be involved with Trump inevitably faces an unacceptable request. In McCarthy’s case, it was shutting down the government, which would be disastrous for the razor-thin Republican majority going into an election. “If somebody wants to remove [me] because I want to be the adult in the room, go ahead and try,” McCarthy challenged his enemies. He could not bring himself in the end obviously to damage his party’s power through a shutdown. So McCarthy faced a choice of self-destruction, either losing the speakership eventually or immediately. He took his chances. Trump has mused to a rapt Iowa crowd of followers about his own possible fate: “If I’m sitting down and that boat is going down and I’m on top of a battery and the water starts flooding in, I’m getting concerned, but then I look 10 yards to my left and there’s a shark over there, so I have a choice of electrocution and a shark, you know what I’m going to take? Electrocution.” McCarthy thought he could survive by accommodating Trump. Then he somehow believed he could navigate between the rock and the hard place. But he was still eaten by the sharks. He met the fate of all the other adults in the room. At once, like a jack-in-the-box, Sean Hannity, Fox News host, popped up to float the idea of Trump as speaker. Rupert Murdoch, Hannity’s erstwhile boss, has referred to Hannity as “a moron”, and, at least according to Murdoch chronicler Michael Wolff, Hannity was playing the jester, for a jab of ratings heroin. But he is a slavish Trump stalwart, following him like a daddy figure, perhaps explained by his recent anecdote: “By the way, when my father would hit me with a belt, I didn’t actually raise my voice. We used to be the land of the free, home of the brave. What happened? When did we become the land of the snowflake?” Hannity’s cri de coeur was more revelatory of the underlying psychology of authoritarianism than anything he has ever said. Trump doesn’t need the quotidian grief of being speaker when he can direct the inmates of the asylum by remote control, and, anyway, he’s busy in and out of court. But the fake speaker ploy presented itself as a terrific, if brief, opportunity for playacting and grifting, like the fake electors scheme without the real life truth and consequences. After Trump retreated from glowering at the defendant’s table in the Manhattan courtroom for several days, using the occasion to gin up a round of contributions, Letitia James pronounced, “The Donald Trump show is over.” But once that episode of the show ended, the special episode of Speaker Trump appeared on the schedule. When he was in the courtroom, he retweeted a drawing of himself seated next to Jesus, with the caption: “This is the most accurate court sketch of all time.” Then he tweeted a photo-shopped picture of himself in the speaker’s chair, wearing a red Maga cap and in his right hand lifting up the gavel. He had passed from crucifixion to resurrection in less time than Jesus. Hail, Trump! Representative Marjorie Taylor Greene tweeted ecstatically, “If Trump becomes Speaker of the House, the chamber will be like a Trump rally everyday!! It would be the House of MAGA!!!” But this Trump candidacy was a speaker-for-a-day con. Trump announced his endorsement of Representative Jim Jordan, founder of the rightwing Freedom Caucus, who had harassed two previous Republican speakers out of their chairs, run against McCarthy and, most importantly, was a co-conspirator in the January 6 coup attempt. For the speakership, Jordan faces Representative Steve Scalise, McCarthy’s majority leader, a get-along-go-along kind of guy, a wholly owned subsidiary of the oil industry, the candidate of K Street corporate lobbyists. Jordan had stonewalled a subpoena from the House January 6 committee to testify to his involvement. He had mobilized the “Stop the Steal” movement months before the election, was the key member of the House in White House meetings plotting how to stymie the certification of the electoral college count, texted White House chief of staff Mark Meadows on 5 January to put pressure on then vice-president Mike Pence to “call out all electoral votes that he believes are unconstitutional as no electoral votes at all”, and on the phone strategizing with Trump throughout the fateful day. That evening, after the devastation, he led 139 representatives to object to certification. If section 3 of the 14th amendment, enacted after the civil war, barring former Confederates who “shall have engaged in insurrection or rebellion” from holding federal office, applies to Trump, as two prominent conservative legal scholars have argued, then even more clearly and forcefully it applied to members of Congress, including Jim Jordan. After initially agreeing that Trump should be disqualified, Federalist Society co-founder Steven Calabresi, professor of law at Northwestern University, flipped, citing an article by Michael Mukasey, former attorney general under President George W Bush, that argued the provision did not cover the former president but only members of the Congress and other “officers of the United States”. However tendentious the argument, Mukasey – and Calabresi – had inadvertently made the case for disqualifying Jordan and the others who voted against certification on 6 January 2021 from serving in office at all. McCarthy’s fall has been another stepping stone for Trump’s return to power. Trump has announced he will go to the Capitol to intervene in the speaker contest and address the House Republican Conference. The last time he wanted to visit, to march with the January 6 mob, he was restrained by a secret service agent whom he allegedly grabbed by the throat. Trump would be the only member of the J6 prison choir to come to the Capitol since then. He had joined the jailed insurrectionists who had formed a singing group by overlaying his recital of the Pledge of Allegiance on their version of The Star Spangled Banner. Trump has promised “full pardons with an apology to many” of those convicted of rampaging through the Capitol’s corridors chanting, “Hang Mike Pence!” Now, Trump says he would return there as “a unifier”. But, first, he took time to trash his former chief of staff Gen John Kelly, who confirmed on 3 October to CNN that Trump had disparaged wounded, captured and tortured soldiers as “suckers” and “losers”. Kelly offered a description of Trump: “A person that has no idea what America stands for and has no idea what America is all about … A person who admires autocrats and murderous dictators. A person that has nothing but contempt for our democratic institutions, our constitution and the rule of law. There is nothing more that can be said. God help us.” After endorsing Jim Jordan, Trump wrote on Truth Social that Kelly was “by far the dumbest of my Military people … He was incapable of doing a good job, it was too much for him, and I couldn’t stand the guy, so I fired him like a ‘dog.’” The “wannabe dictator”, as Gen Milley calls him, is without theory or fig leaf. As the trials bear down, as Trump contemplates the shark or electrocution, he projects his The Pit and the Pendulum terror into violent threats. The greater the fear he feels, the more violent the threats. He is stalked by Thanatos. “DEATH!” Sidney Blumenthal is the author of The Permanent Campaign, published in 1980, and All the Power of the Earth: The Political Life of Abraham Lincoln, 1856-1860, the third of a projected five volumes. He is the former assistant and senior adviser to President Bill Clinton and senior adviser to Hillary Clinton',
+    'Some Republicans in Congress want Trump as speaker of the House. But why? He already directs them by remote control ï¿½DEATH!ï¿½ tweeted Donald Trump about Gen Mark Milley, the former chairman of the Joint Chiefs of Staff (AKA ï¿½My Generalsï¿½). ï¿½TRAITOR!ï¿½ he said about former speaker of the House Kevin McCarthy (AKA ï¿½My Kevinï¿½). ï¿½Monsterï¿½ and ï¿½Deranged Lunaticï¿½ he labeled the New York state attorney general, Letitia James, who is prosecuting the case against him for his false valuations of Trump properties. ï¿½Derangedï¿½, ï¿½Psychoï¿½ and ï¿½Crackheadï¿½ he called special prosecutor Jack Smith, who has charged him for his role in the January 6 coup attempt and his theft of classified documents. ï¿½Weï¿½ll stand up to crazy Nancy Pelosi, who ruined San Francisco ï¿½ howï¿½s her husband doing, anybody know?ï¿½ he shouted at a rally, referring to Paul Pelosi, who was nearly murdered by a hammer-wielding assassin. ï¿½Crooked Joe Biden, letï¿½s indict the motherfucker! Letï¿½s indict him,ï¿½ Trump said to a cheering crowd. ï¿½A racist ï¿½ having an affair with the head of the gang or a gang member,ï¿½ he claimed about Fani Willis, the Fulton county district attorney in Georgia, prosecuting him for the fake electors scheme. ï¿½Animalï¿½ and ï¿½Degenerate Psychopathï¿½ he called Alvin Bragg, the Manhattan district attorney, who has charged him with campaign bribery. ï¿½[Senator Charles] Schumerï¿½s girlfriend ï¿½ is running this case against me,ï¿½ he lied about a clerk in the New York courtroom, identifying her by name. For that transgression, Manhattan supreme court justice Arthur Engoron, who Trump previously said should be ï¿½disbarredï¿½, issued a limited gag rule forbidding him from targeting officers of the court. Needless to say, Trumpï¿½s vilification of Bragg, Willis and James, all Black, is an extension of his lifelong campaign for white supremacy, going back to his discrimination against Black housing buyers and his full-page ads in the New York newspapers in 1989 calling for the death penalty for five Black and Hispanic youths, the ï¿½Central Park Fiveï¿½, who were innocent of the charges against them. But he now has a larger agenda than a race war here and there. Trumpï¿½s torrent of attacks on judges, prosecutors and witnesses is of a piece with his larger project to delegitimize and demolish the institutions of government, including now the House of Representatives through the historic first overthrow of a sitting speaker. His goal in every arena is the same: to clear the path to one-man rule. His threats, incitements and smears are more than outbursts. They are statements of intention for his next presidency. The constitution must be suspended to overturn the results of the 2020 election: ï¿½A Massive Fraud of this type and magnitude allows for the termination of all rules, regulations, and articles, even those found in the Constitution,ï¿½ he has proposed. He has announced he will prosecute and imprison his political opponents: ï¿½I will appoint a real special ï¿½prosecutorï¿½ to go after the most corrupt president in the history of the USA, Joe Biden, the entire Biden crime family, & all others involved with the destruction of our elections, borders, & country itself!ï¿½ He has pledged to purge the federal civil service and replace its employees with Trump loyalists: ï¿½Youï¿½re fired, get out, youï¿½re fired,ï¿½ he said, repeating his signature phrase from his television show The Apprentice. ï¿½[You] have to do it. Deep state. Washington will be an entirely different place.ï¿½ Facing 91 felony counts in four separate trials, not to mention his second defamation judgment in the E Jean Carroll adjudicated rape case and the court-ordered unraveling of the Trump Organization in New York for decades of financial fraud, Trump has not stopped committing offenses. He has been a fount of ceaseless threats to specific officers of the court that he well knows may incite violence against them, interspersed with other calls for extralegal violence, such as shooting shoplifters. ï¿½Shot!ï¿½ he shouted to a cheering crowd. If people canï¿½t be bought off, told off or pushed off, they must be offed. Jack Smithï¿½s filings to the Washington DC court requesting a gag order are a running commentary on Trumpï¿½s continuing crime wave. ï¿½Like his previous public disinformation campaign regarding the 2020 presidential election,ï¿½ Smith wrote, ï¿½the defendantï¿½s recent extrajudicial statements are intended to undermine public confidence in an institution ï¿½ the judicial system ï¿½ and to undermine confidence in and intimidate individuals ï¿½ the court, the jury pool, witnesses and prosecutors.ï¿½ In his collection of Trumpï¿½s latest ï¿½prejudicial statements,ï¿½ Smith highlighted that Gen Milley, who Trump stated ï¿½had committed treason and suggested that he should be executedï¿½, is ï¿½a witness cited in the indictmentï¿½. Smith addressed the issue of witness intimidation and tampering directly: ï¿½Even assuming that certain witnesses are not intimidated by the defendantï¿½s statements, other witnesses see and may be affected by what the defendant does to those who are called to testify in this case. And regardless of whether certain witnesses are intimidated by the defendantï¿½s extrajudicial statements, the defendant should not be permitted to attack or bolster the credibility of any witness in a manner that could influence prospective jurors.ï¿½ Adding new felony charges against Trump for his egregious efforts at witness tampering would slow down the case against him. But the special prosecutor retains the option of filing those charges later. Trumpï¿½s inflammatory language could yet lead to further indictments. Trumpï¿½s threats are not simply rhetorical explosions but illegal attempts to intimidate witnesses and prejudice the jury. But they are more than that too. For Trump, the further the dismantlement of the rule of law, the smoother the path to one-man rule. Attempting to intimidate officers of the court and to tamper with witnesses is more than his legal strategy; itï¿½s central to his overarching political strategy. He has systemic purpose. He is seeking to sideline every institution of government other than a presidency he occupies in which he is not bound by constitutional confines. By eliminating checks and balances now, heï¿½s preparing for dictatorial rule. In 2020, under his aegis, the Republican party passed no platform whatsoever. Now, his incitements are the planks of the Republican platform on which all Republicans must run. His threats are his promises of what is to come. He is moving beyond the politics of grievance to the menace of revenge. Making him their candidate, Republicans are pledged to his violence and illegality. If he can escape accountability for his crimes, the rule of law collapses and the path is cleared for him. That is his vision. The criminal is the political. Trump seized upon the chance to advance the collapse of the speakership as an opportunity to reduce another governmental body that might be a check on him. The fewer barriers to one-man rule, the easier his road back to power. The partyï¿½s impotence is his strength. Kevin McCarthyï¿½s demise appeared to him as a fortunate opening to grind toward control. The House Republicans rehearse an endless revenge tragedy strewing bodies on the stage. They flail at the Democrats, who for the crucial motion to vacate removed themselves to the reserved seats in the colosseum to watch the Republicans devour their speaker. The Republicans blamed the Democrats for failing to save McCarthy from the Republicans. McCarthy contrived to cooperate in his own destruction upon accepting the speakership by agreeing that one member alone could file a motion to vacate. Brutus, undisguised, was already lurking. McCarthy had put a knife in his hand in the first scene. With McCarthyï¿½s corpse still warm, the speaker pro tempore Patrick McHenryï¿½s first act was to evict former speaker Nancy Pelosi from her hideaway office, a little piece of real estate within the Capitol. It turns out it was a last sniveling request to McHenry from McCarthy, a spasm preceding rigor mortis. When she was speaker, she accorded the favor of the office to Dennis Hastert as a former speaker for as long as he remained in the House (before his pedophilia conviction). At the moment McHenry made his graceless gesture, Pelosi was in California, having accompanied the body of her dear friend Senator Dianne Feinstein to prepare for her funeral. He struck out at Pelosi as though her eviction punished her alongside the Republican eviction of Kevin McCarthy. It was presumably an equivalent slam of the Democratic speaker for the slamming of the Republican one. But Pelosi had left the speakership in dignity, handed off her baton and stays as an eminence, while McCarthy was despised, trampled and cut to pieces by his own. She served as the speaker for four years; he completed eight months, not quite to term. The displacement of Republican hostility to Pelosi only highlights their auto-da-fe of McCarthy. He is their former lord of the flies, felled by the swarm of flies. McHenryï¿½s first act, ingratiating himself to the recently departed, established the tone of his even briefer transitional tenure. McCarthy all along tried to play to the bullies, joined in with the bullies, was roughed up by the bullies, and, finally, rousted by the bullies; after he was bullied out, his figurehead successor messed the clean slate with a small act of bullying. The hunger games continue. Trump was silent on McCarthyï¿½s defenestration, the gratitude McCarthy received for his self-abasement, down to the nicety of regularly giving Trump gifts of jars of pink and red Starbursts, the former presidentï¿½s favorite candy. The sweetener did not sweeten things for the candy man. Trump was the not-so-hidden hand reaching from behind the curtain, waving on the assassins. Stroking Trump almost to the last with praise, as ï¿½stronger today than in 2016ï¿½, McCarthy walked to his destiny with a knife about to be planted in his back. Immediately after the vote to remove him, Matt Gaetz stated, ï¿½I would say that my conversations with the former president leave me with great confidence that Iï¿½m doing the right thing.ï¿½ McCarthyï¿½s reward for loyalty to Trump led him into the usual cul-de-sac of Republicans trying to contain Trump. Predictably, Trump demanded what McCarthy could not deliver. ï¿½UNLESS YOU GET EVERYTHING, SHUT IT DOWN!ï¿½ Everyone who decides to be involved with Trump inevitably faces an unacceptable request. In McCarthyï¿½s case, it was shutting down the government, which would be disastrous for the razor-thin Republican majority going into an election. ï¿½If somebody wants to remove [me] because I want to be the adult in the room, go ahead and try,ï¿½ McCarthy challenged his enemies. He could not bring himself in the end obviously to damage his partyï¿½s power through a shutdown. So McCarthy faced a choice of self-destruction, either losing the speakership eventually or immediately. He took his chances. Trump has mused to a rapt Iowa crowd of followers about his own possible fate: ï¿½If Iï¿½m sitting down and that boat is going down and Iï¿½m on top of a battery and the water starts flooding in, Iï¿½m getting concerned, but then I look 10 yards to my left and thereï¿½s a shark over there, so I have a choice of electrocution and a shark, you know what Iï¿½m going to take? Electrocution.ï¿½ McCarthy thought he could survive by accommodating Trump. Then he somehow believed he could navigate between the rock and the hard place. But he was still eaten by the sharks. He met the fate of all the other adults in the room. At once, like a jack-in-the-box, Sean Hannity, Fox News host, popped up to float the idea of Trump as speaker. Rupert Murdoch, Hannityï¿½s erstwhile boss, has referred to Hannity as ï¿½a moronï¿½, and, at least according to Murdoch chronicler Michael Wolff, Hannity was playing the jester, for a jab of ratings heroin. But he is a slavish Trump stalwart, following him like a daddy figure, perhaps explained by his recent anecdote: ï¿½By the way, when my father would hit me with a belt, I didnï¿½t actually raise my voice. We used to be the land of the free, home of the brave. What happened? When did we become the land of the snowflake?ï¿½ Hannityï¿½s cri de coeur was more revelatory of the underlying psychology of authoritarianism than anything he has ever said. Trump doesnï¿½t need the quotidian grief of being speaker when he can direct the inmates of the asylum by remote control, and, anyway, heï¿½s busy in and out of court. But the fake speaker ploy presented itself as a terrific, if brief, opportunity for playacting and grifting, like the fake electors scheme without the real life truth and consequences. After Trump retreated from glowering at the defendantï¿½s table in the Manhattan courtroom for several days, using the occasion to gin up a round of contributions, Letitia James pronounced, ï¿½The Donald Trump show is over.ï¿½ But once that episode of the show ended, the special episode of Speaker Trump appeared on the schedule. When he was in the courtroom, he retweeted a drawing of himself seated next to Jesus, with the caption: ï¿½This is the most accurate court sketch of all time.ï¿½ Then he tweeted a photo-shopped picture of himself in the speakerï¿½s chair, wearing a red Maga cap and in his right hand lifting up the gavel. He had passed from crucifixion to resurrection in less time than Jesus. Hail, Trump! Representative Marjorie Taylor Greene tweeted ecstatically, ï¿½If Trump becomes Speaker of the House, the chamber will be like a Trump rally everyday!! It would be the House of MAGA!!!ï¿½ But this Trump candidacy was a speaker-for-a-day con. Trump announced his endorsement of Representative Jim Jordan, founder of the rightwing Freedom Caucus, who had harassed two previous Republican speakers out of their chairs, run against McCarthy and, most importantly, was a co-conspirator in the January 6 coup attempt. For the speakership, Jordan faces Representative Steve Scalise, McCarthyï¿½s majority leader, a get-along-go-along kind of guy, a wholly owned subsidiary of the oil industry, the candidate of K Street corporate lobbyists. Jordan had stonewalled a subpoena from the House January 6 committee to testify to his involvement. He had mobilized the ï¿½Stop the Stealï¿½ movement months before the election, was the key member of the House in White House meetings plotting how to stymie the certification of the electoral college count, texted White House chief of staff Mark Meadows on 5 January to put pressure on then vice-president Mike Pence to ï¿½call out all electoral votes that he believes are unconstitutional as no electoral votes at allï¿½, and on the phone strategizing with Trump throughout the fateful day. That evening, after the devastation, he led 139 representatives to object to certification. If section 3 of the 14th amendment, enacted after the civil war, barring former Confederates who ï¿½shall have engaged in insurrection or rebellionï¿½ from holding federal office, applies to Trump, as two prominent conservative legal scholars have argued, then even more clearly and forcefully it applied to members of Congress, including Jim Jordan. After initially agreeing that Trump should be disqualified, Federalist Society co-founder Steven Calabresi, professor of law at Northwestern University, flipped, citing an article by Michael Mukasey, former attorney general under President George W Bush, that argued the provision did not cover the former president but only members of the Congress and other ï¿½officers of the United Statesï¿½. However tendentious the argument, Mukasey ï¿½ and Calabresi ï¿½ had inadvertently made the case for disqualifying Jordan and the others who voted against certification on 6 January 2021 from serving in office at all. McCarthyï¿½s fall has been another stepping stone for Trumpï¿½s return to power. Trump has announced he will go to the Capitol to intervene in the speaker contest and address the House Republican Conference. The last time he wanted to visit, to march with the January 6 mob, he was restrained by a secret service agent whom he allegedly grabbed by the throat. Trump would be the only member of the J6 prison choir to come to the Capitol since then. He had joined the jailed insurrectionists who had formed a singing group by overlaying his recital of the Pledge of Allegiance on their version of The Star Spangled Banner. Trump has promised ï¿½full pardons with an apology to manyï¿½ of those convicted of rampaging through the Capitolï¿½s corridors chanting, ï¿½Hang Mike Pence!ï¿½ Now, Trump says he would return there as ï¿½a unifierï¿½. But, first, he took time to trash his former chief of staff Gen John Kelly, who confirmed on 3 October to CNN that Trump had disparaged wounded, captured and tortured soldiers as ï¿½suckersï¿½ and ï¿½losersï¿½. Kelly offered a description of Trump: ï¿½A person that has no idea what America stands for and has no idea what America is all about ï¿½ A person who admires autocrats and murderous dictators. A person that has nothing but contempt for our democratic institutions, our constitution and the rule of law. There is nothing more that can be said. God help us.ï¿½ After endorsing Jim Jordan, Trump wrote on Truth Social that Kelly was ï¿½by far the dumbest of my Military people ï¿½ He was incapable of doing a good job, it was too much for him, and I couldnï¿½t stand the guy, so I fired him like a ï¿½dog.ï¿½ï¿½ The ï¿½wannabe dictatorï¿½, as Gen Milley calls him, is without theory or fig leaf. As the trials bear down, as Trump contemplates the shark or electrocution, he projects his The Pit and the Pendulum terror into violent threats. The greater the fear he feels, the more violent the threats. He is stalked by Thanatos. ï¿½DEATH!ï¿½ Sidney Blumenthal is the author of The Permanent Campaign, published in 1980, and All the Power of the Earth: The Political Life of Abraham Lincoln, 1856-1860, the third of a projected five volumes. He is the former assistant and senior adviser to President Bill Clinton and senior adviser to Hillary Clinton',
     '- Some Republicans want Trump as speaker of the House
 - Trump has directed insults towards various individuals, including Gen Mark Milley, Kevin McCarthy, Letitia James, and others
 - Trumps attacks on judges, prosecutors, and witnesses are part of his larger project to undermine and demolish government institutions
@@ -14400,6 +15013,139 @@ ADD InsertedBy VARCHAR(50)
     '0',
     0, 
     NOW(),
+
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:53:00.518696] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 14:53:00.975912] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:53:01.435469] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-11 14:53:01.893498] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '1',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:53:02.344765] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 14:53:02.347760] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002191B31BA10>]
+[2023-10-11 14:53:02.347760] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002191B31AF90>]
+[2023-10-11 14:55:16.377792] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021E2B73BA10>]
+[2023-10-11 14:55:16.378784] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021E2B73AF90>]
+[2023-10-11 14:55:16.837304] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:55:17.300867] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-11 14:55:17.760604] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 14:55:18.225814] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
+    VALUES (
+    'Donald',
+    'Trump',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-11 14:55:18.686093] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-11 14:55:19.150385] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:55:19.612727] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 14:55:20.082158] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:55:20.543099] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-11 14:55:21.006218] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '2',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:55:21.464876] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 14:55:21.467875] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000021E2B73BA10>]
+[2023-10-11 14:55:21.469880] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000021E2B73AF90>]
+
     'Manav Trivedi'
     );
     ]
