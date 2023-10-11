@@ -23,14 +23,23 @@ const Poll = () => {
 
                 <div className="mt-10">
                     <p className="text-black text-md font-semibold">Comments</p>
-                    <div className="flex flex-row mt-3">
+                    <div className="flex mt-3 space-x-4 pb-4">
                         <Image
                             src={Pic}
                             width={28}
                             height={28}
                         />
+                        <div className="flex items-start flex-row space-x-2">
+                            <input type="text" placeholder="Add a comment" className="input input-ghost input-sm" style={{height:"28px", width:"887px"}}/>
+                            <button className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs">
+                                COMMENT
+                            </button>
+                        </div>
                     </div>
-                    <Comment />
+                    <Comment user={"FIRSTNAME LASTNAME"} text={"I am yapping about something"}/>
+                    <Comment user={"FIRSTNAME LASTNAME"} text={"I am yapping about something as well"}/>
+                    <Comment user={"FIRSTNAME LASTNAME"} text={"I am waffling about something"}/>
+                    <Comment user={"FIRSTNAME LASTNAME"} text={"I am waffling about something as well"}/>
                 </div>
 
             </div>

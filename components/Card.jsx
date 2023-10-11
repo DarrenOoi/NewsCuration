@@ -29,7 +29,7 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
             <p className="text-xs font-bold text-black">FIRSTNAME LASTNAME</p>
 
             <button className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs">
-              VIST PROFILE
+              VISIT PROFILE
             </button>
           </div>
         </div>
