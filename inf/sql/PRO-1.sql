@@ -13,16 +13,7 @@
 --     InsertedBy VARCHAR(50)
 -- );
 
-CREATE TABLE Article (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    URL VARCHAR(255),
-    UpperBias DECIMAL(5, 2),
-    LowerBias DECIMAL(5, 2),
-    Summary TEXT,
-    InProduction BOOLEAN,
-    InsertedAt DATETIME,
-    InsertedBy VARCHAR(50)
-);
+-- ORIGINALLY FROM PRO-65
 
 CREATE TABLE Politician (
     ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -45,14 +36,3 @@ CREATE TABLE Politician (
 --     InsertedBy VARCHAR(50),
 --     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
 -- );
-
-CREATE TABLE Politician_KeyTable (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Politician INT,
-    ID_Article INT,
-    InProduction BOOLEAN,
-    InsertedAt DATETIME,
-    InsertedBy VARCHAR(50),
-    FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
-    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
-);
