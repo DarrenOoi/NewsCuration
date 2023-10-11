@@ -11731,3 +11731,751 @@ ADD InsertedBy VARCHAR(50)
     WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
 0=1
     ]
+[2023-10-11 14:38:59.952720] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000277BFED6010>]
+[2023-10-11 14:38:59.954728] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000277C0047D10>]
+[2023-10-11 14:39:00.516329] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:20.698595] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002526976BA10>]
+[2023-10-11 14:49:20.699593] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002526976AF90>]
+[2023-10-11 14:49:21.163491] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:33.917863] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000018AB9D8D8D0>]
+[2023-10-11 14:49:33.919890] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000018AB9EC7FD0>]
+[2023-10-11 14:49:34.876966] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:35.427725] [Daniel Ciccotosto-Camp] [SUCCESS] [-- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+]
+[2023-10-11 14:49:35.924026] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-11 14:49:36.417033] [Daniel Ciccotosto-Camp] [SUCCESS] [
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+]
+[2023-10-11 14:49:36.920242] [Daniel Ciccotosto-Camp] [SUCCESS] [
+CREATE TABLE Article (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(255),
+    UpperBias DECIMAL(5, 2),
+    LowerBias DECIMAL(5, 2),
+    Summary TEXT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);]
+[2023-10-11 14:49:37.436434] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Politician_KeyTable (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Politician INT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+]
+[2023-10-11 14:49:37.923964] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD ImageLink VARCHAR(1024),
+ADD Summary TEXT;
+
+-- this has been inserted as part of PRO-68, using the --AddSQLFromFile mode]
+[2023-10-11 14:49:38.443678] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-10-11 14:49:38.976234] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+ADD Header VARCHAR(1024),
+ADD OriginalText TEXT,
+ADD SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89]
+[2023-10-11 14:49:39.484156] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Article_ArticleBias (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    KeyPhrase VARCHAR(1000),
+    BiasReason TEXT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+
+-- this has been inserted as part of PRO-93]
+[2023-10-11 14:49:39.980723] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+DROP COLUMN Summary]
+[2023-10-11 14:49:39.981743] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000018AB9D8D8D0>]
+[2023-10-11 14:49:39.982746] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000018AB9EC7FD0>]
+[2023-10-11 14:49:53.083763] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000256C6E71510>]
+[2023-10-11 14:49:53.084779] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000256C6666290>]
+[2023-10-11 14:49:53.542911] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:53.993916] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-11 14:49:53.996878] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000256C6E71510>]
+[2023-10-11 14:49:53.997861] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000256C6666290>]
+[2023-10-11 14:49:55.238126] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000256C8D17390>]
+[2023-10-11 14:49:55.238126] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000256C8D15990>]
+[2023-10-11 14:49:55.696222] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:49:55.929004] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+ with error (1050, "Table 'Politician' already exists")]
+[2023-10-11 14:49:56.165024] [Daniel Ciccotosto-Camp] [SUCCESS] [-- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+]
+[2023-10-11 14:49:56.404240] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL with error (1060, "Duplicate column name 'Byline'")]
+[2023-10-11 14:49:56.645744] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-11 14:49:56.909676] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ 
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+ with error (1050, "Table 'Politician_CampaignPolicies' already exists")]
+[2023-10-11 14:49:57.139216] [Daniel Ciccotosto-Camp] [SUCCESS] [
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+]
+[2023-10-11 14:49:57.372007] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ 
+CREATE TABLE Article (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(255),
+    UpperBias DECIMAL(5, 2),
+    LowerBias DECIMAL(5, 2),
+    Summary TEXT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+); with error (1050, "Table 'Article' already exists")]
+[2023-10-11 14:49:57.602139] [Daniel Ciccotosto-Camp] [SUCCESS] [
+CREATE TABLE Article (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(255),
+    UpperBias DECIMAL(5, 2),
+    LowerBias DECIMAL(5, 2),
+    Summary TEXT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);]
+[2023-10-11 14:49:57.835789] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Politician_KeyTable (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Politician INT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+ with error (1050, "Table 'Politician_KeyTable' already exists")]
+[2023-10-11 14:49:58.067949] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Politician_KeyTable (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Politician INT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Politician) REFERENCES Politician(ID),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+]
+[2023-10-11 14:49:58.300803] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Politician
+ADD ImageLink VARCHAR(1024),
+ADD Summary TEXT;
+
+-- this has been inserted as part of PRO-68, using the --AddSQLFromFile mode with error (1060, "Duplicate column name 'ImageLink'")]
+[2023-10-11 14:49:58.532353] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD ImageLink VARCHAR(1024),
+ADD Summary TEXT;
+
+-- this has been inserted as part of PRO-68, using the --AddSQLFromFile mode]
+[2023-10-11 14:49:58.763926] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+); with error (1050, "Table 'Polling' already exists")]
+[2023-10-11 14:49:58.997439] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-10-11 14:49:59.232100] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Article
+ADD Header VARCHAR(1024),
+ADD OriginalText TEXT,
+ADD SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89 with error (1060, "Duplicate column name 'Header'")]
+[2023-10-11 14:49:59.469282] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+ADD Header VARCHAR(1024),
+ADD OriginalText TEXT,
+ADD SummaryParagraph TEXT;
+
+-- this has been inserted as part of PRO-89]
+[2023-10-11 14:49:59.702827] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Article_ArticleBias (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    KeyPhrase VARCHAR(1000),
+    BiasReason TEXT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+
+-- this has been inserted as part of PRO-93 with error (1050, "Table 'Article_ArticleBias' already exists")]
+[2023-10-11 14:49:59.935473] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Article_ArticleBias (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    KeyPhrase VARCHAR(1000),
+    BiasReason TEXT,
+    ID_Article INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+
+-- this has been inserted as part of PRO-93]
+[2023-10-11 14:50:00.171198] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Article
+DROP COLUMN Summary with error (1091, "Can't DROP 'Summary'; check that column/key exists")]
+[2023-10-11 14:50:00.401032] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Article
+DROP COLUMN Summary]
+[2023-10-11 14:50:00.402961] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000256C8D17390>]
+[2023-10-11 14:50:00.404960] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000256C8D15990>]
+[2023-10-11 14:52:05.010295] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000014C9EB01510>]
+[2023-10-11 14:52:05.011290] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000014C9E376290>]
+[2023-10-11 14:52:05.462418] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:52:05.914531] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-11 14:52:05.915524] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000014C9EB01510>]
+[2023-10-11 14:52:05.916525] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000014C9E376290>]
+[2023-10-11 14:52:07.131960] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000014CA09A7390>]
+[2023-10-11 14:52:07.132961] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000014CA09A5990>]
+[2023-10-11 14:52:07.583168] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:52:07.832184] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+ with error (1050, "Table 'Politician' already exists")]
+[2023-10-11 14:52:08.061864] [Daniel Ciccotosto-Camp] [SUCCESS] [-- DROP TABLE IF EXISTS Article
+-- DROP TABLE IF EXISTS Politician
+-- DROP TABLE IF EXISTS Politician_Position
+-- DROP TABLE IF EXISTS Politician_PositionNameCodes
+-- DROP TABLE IF EXISTS Politician_NameCodes
+-- DROP TABLE IF EXISTS Politician_KeyTable
+
+-- CREATE TABLE Politician_PositionNameCodes (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     NameCode VARCHAR(255) NOT NULL UNIQUE,
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50)
+-- );
+
+CREATE TABLE Politician (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    About VARCHAR(1500),
+    Age INT,
+    Gender VARCHAR(255),
+    CountryCode VARCHAR(10),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- CREATE TABLE Politician_Position (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     PositionNameCode VARCHAR(255), 
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+--     FOREIGN KEY (PositionNameCode) REFERENCES Politician_PositionNameCodes(NameCode)
+-- );
+]
+[2023-10-11 14:52:08.291658] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL with error (1060, "Duplicate column name 'Byline'")]
+[2023-10-11 14:52:08.522604] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+-- ALTER TABLE Politician_CampaignPolicies
+
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-11 14:52:08.757538] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ 
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+ with error (1050, "Table 'Politician_CampaignPolicies' already exists")]
+[2023-10-11 14:52:42.578507] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001AE362B7B90>]
+[2023-10-11 14:52:42.580518] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001AE37F776D0>]
+[2023-10-11 14:52:43.039882] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:52:43.499848] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-11 14:52:43.501442] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001AE362B7B90>]
+[2023-10-11 14:52:43.501983] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001AE37F776D0>]
+[2023-10-11 14:52:57.332473] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002191B31BA10>]
+[2023-10-11 14:52:57.334469] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002191B31AF90>]
+[2023-10-11 14:52:57.784419] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:52:58.242196] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-11 14:52:58.694252] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 14:52:59.151405] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-11 14:52:59.608663] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-11 14:53:00.063701] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:53:00.518696] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 14:53:00.975912] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:53:01.435469] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-11 14:53:01.893498] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '1',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:53:02.344765] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 14:53:02.347760] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002191B31BA10>]
+[2023-10-11 14:53:02.347760] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002191B31AF90>]
+[2023-10-11 14:55:16.377792] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021E2B73BA10>]
+[2023-10-11 14:55:16.378784] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021E2B73AF90>]
+[2023-10-11 14:55:16.837304] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 14:55:17.300867] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-11 14:55:17.760604] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 14:55:18.225814] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
+    VALUES (
+    'Donald',
+    'Trump',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-11 14:55:18.686093] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-11 14:55:19.150385] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:55:19.612727] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 14:55:20.082158] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:55:20.543099] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-11 14:55:21.006218] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '2',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-11 14:55:21.464876] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 14:55:21.467875] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000021E2B73BA10>]
+[2023-10-11 14:55:21.469880] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000021E2B73AF90>]
