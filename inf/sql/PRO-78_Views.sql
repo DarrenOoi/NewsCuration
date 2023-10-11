@@ -1,0 +1,2 @@
+ALTER TABLE Article
+ADD Views INT; 
