@@ -207,16 +207,16 @@ class ArticleManager():
     # checks if article already exists in database
     def isArticleInDB(self, url: str) -> bool:
         results = self.transactionClient.query("Article", filter=f'URL = "{url}"')
-        print(f"DEBUG: isArticleInDB - {results}")
         if len(results) == 0:
+            print(f"DEBUG: isArticleInDB - No article found")
             return False
         if len(results) != 1:
+            print(f"DEBUG: isArticleInDB - More than one article found")
             return None
         
         # process required jobs to suplement data recieved
         articleDict = results[0]
         articleId = articleDict['ID']
-        print(f"{articleDict['Views']} DEBUG alert")
         results = self.transactionClient.query("Politician_KeyTable", filter=f'ID_Article = "{articleId}"')
         politicianIds = [result['ID_Politician'] for result in results]
 
@@ -226,7 +226,7 @@ class ArticleManager():
         politicanNames = [result['Fname'] + ' ' + result['Lname'] for result in results]
 
         if len(politicanNames) != len(politicianIds):
-            print("Error")
+            print("DEBUG: isArticleInDB - politican mentioned IDs no not match Names")
             return None
         
         biasWords = dict()
@@ -237,7 +237,7 @@ class ArticleManager():
 
         results = self.transactionClient.query("Polling", filter=f'ID_Article = "{articleId}"')
         if len(results) != 1:
-            print("Error")
+            print("DEBUG: isArticleInDB - either no poll found or too many polls found")
             return None
         poll = {"question": results[0]["Question"], "options": [results[0]["OptionFirst"],results[0]["OptionSecond"],results[0]["OptionThird"],results[0]["OptionFourth"]]}
         pollVals = [results[0]["VotesFirst"],results[0]["VotesSecond"],results[0]["VotesThird"],results[0]["VotesFourth"]]
@@ -245,10 +245,8 @@ class ArticleManager():
 
         self.cacheLock.acquire()
         self.preventCacheOverflow()
-        print(f"DEBUG: {articleDict.keys()}")
         self.cache[url] = ArticleElement(articleDict['URL'], articleDict['Header'], articleDict['OriginalText'], articleDict['SummaryParagraph'], (articleDict['LowerBias'], articleDict['UpperBias']), biasWords, politicanNames, politicianIds, poll, pollVals, articleDict['Views'])
         self.cacheLock.release()
-        print('DEBUG: DB extraction complete')
         print(self)
         return True
         
@@ -275,7 +273,7 @@ class ArticleManager():
     def insertDataFromJobToDB(self, url: str, header: str, text: str, summary: str, lowBias: float, highBias: float, biasWords: dict, politicalFigureIds: list, poll: dict):
         result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
         if len(result) != 0:
-            print("DEBUG: there already exists an article")
+            print("DEBUG: insertDataFromJobToDB - Article already exists in DB")
             return None
         
         # clean data
@@ -297,7 +295,7 @@ class ArticleManager():
 
         result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
         if len(result) != 1:
-            print("ERROR: more than one article created")
+            print("ERROR: insertDataFromJobToDB - more than one article created")
             return None
         articleDict = result[0]
         
@@ -322,7 +320,6 @@ class ArticleManager():
         tmp = False
         while tmp == False:
             tmp = self.jobs[url].isDone()
-        print("job done")
         self.jobsLock.acquire()
         self.transactionClientLock.acquire()    
         self.cacheLock.acquire()
@@ -333,6 +330,7 @@ class ArticleManager():
             self.recents.get()
         self.recents.put(self.cache[url])        
         tmp.cleanJob()
+        print("DEBUG: moveJobToCache - Job Done")
         print(self)
         del self.jobs[url]
         self.cacheLock.release()
@@ -412,7 +410,7 @@ class ArticleManager():
 
         result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
         if len(result) != 1:
-            print("Error")
+            print("DEBUG: updatePoll - more than one article found")
             self.transactionClientLock.release()
             return
         id = result[0]['ID']
@@ -427,7 +425,7 @@ class ArticleManager():
             option = "VotesFourth"
         result = self.transactionClient.query("Polling", filter=f'ID_Article = {id}')
         if len(result) != 1:
-            print("Error")
+            print("DEBUG: updatePoll - more than one poll found")
             self.transactionClientLock.release()
             return
         value = result[0][option]
@@ -444,7 +442,7 @@ class ArticleManager():
 
         result = self.transactionClient.query("Article", filter=f'URL = "{url}"')
         if len(result) != 1:
-            print("Error")
+            print("DEBUG: updateViews - more than one article found")
             self.transactionClientLock.release()
             return
         update_table(self.transactionClient, 'Article', f'Views = {result[0]["Views"] + 1}', f'ID = {result[0]["ID"]}')
