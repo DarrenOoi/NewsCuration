@@ -16,7 +16,7 @@ export const fetchPopularArticles = async (num) => {
       return responseResult.response;
     } else {
       console.error('Request failed:', response.status, response.statusText);
-      return 'Something went wrong';
+      return [];
     }
   } catch (error) {
     console.error('Error:', error);

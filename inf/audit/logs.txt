@@ -19124,3 +19124,276 @@ CREATE TABLE Politician_CampaignPolicies(
 0=1
     ]
 >>>>>>> master
+[2023-10-11 20:34:01.254511] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002226DA33F90>]
+[2023-10-11 20:34:01.254511] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002225D2DA1D0>]
+[2023-10-11 20:34:02.794963] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 20:34:08.725447] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:34:12.982773] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 20:34:14.569944] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 20:34:15.973205] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-11 20:34:17.138450] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 20:34:18.359952] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 20:34:20.138945] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 20:34:21.337439] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 11
+    WHERE ID = 5 
+    ]
+[2023-10-11 20:34:29.929609] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:34:38.212880] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 20:34:39.496933] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-11 20:34:52.081287] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:35:25.672726] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:35:29.194137] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:35:30.499800] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:35:31.580060] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:35:32.617793] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:35:35.616157] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:35:36.838895] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:35:37.891401] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1',
+    0.75,
+    0.25,
+    0, 
+    NOW(),
+    'DarrenOoi',
+    'Australians stranded in Israel to be offered repatriation flights, Anthony Albanese announces',
+    'Australians wanting to leave Israel will be offered repatriation flights. Source: AP / Mark Baker Adrienne was on the phone when Hamas attacked. Her daughter hasnt heard from her since What is the Palestinian group Hamas and why has it attacked Israel now? Israel readies ground offensive as Joe Biden condemns sheer evil of Hamas attacks Feeling overwhelmed by the current news cycle? Heres how to protect your mental health Share this with family and friends World World Middle East World Life Australia Australia World Morning (Mon–Fri) Afternoon (Mon–Fri) Weekend By subscribing, you agree to SBS’s terms of service and privacy policy including receiving email updates from SBS. SBS World News',
+    '- Australians in Israel will be offered repatriation flights
+- The decision was announced by Anthony Albanese
+- The repatriation flights are for Australians who want to leave Israel
+- The offer comes amidst the attacks by Hamas on Israel
+- The article does not provide information on what Hamas is or why they have attacked Israel
+- Israel is preparing for a ground offensive
+- Joe Biden has condemned the Hamas attacks, calling them sheer evil
+- The article provides tips on how to protect mental health from overwhelming news cycles
+- Readers can subscribe to SBS for updates on world news
+- No information is provided about Australians stranded in Israel or their experiences
+- No information is provided about Adrienne or her daughters situation
+- The article does not discuss the Israeli perspective or provide a balanced view of the conflict',
+    1
+    );
+    ]
+[2023-10-11 20:35:39.150077] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 20:35:40.191685] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:35:48.164321] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:36:50.158590] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:36:56.062478] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:37:00.765110] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:38:28.725003] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:38:52.370197] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:39:31.498262] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:42:02.126813] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:42:14.204681] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002D587D04650>]
+[2023-10-11 20:42:14.204681] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002D5F5F83610>]
+[2023-10-11 20:42:15.333461] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 20:42:27.165681] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:42:28.209119] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "11"
+    ]
+[2023-10-11 20:42:29.511767] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "11"
+    ]
+[2023-10-11 20:42:30.797569] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "11"
+    ]
+[2023-10-11 20:42:34.377805] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:42:35.989996] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:42:37.088307] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:42:38.233524] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "11"
+    ]
+[2023-10-11 20:42:39.500757] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "11"
+    ]
+[2023-10-11 20:42:40.412306] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "11"
+    ]
+[2023-10-11 20:42:41.377793] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:42:44.702746] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:42:46.354570] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:42:47.522585] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/australians-stranded-in-israel-to-be-offered-repatriation-flights-anthony-albanese-announces/kcbdz35e1"
+    ]
+[2023-10-11 20:42:48.623825] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 11 
+    ]
+[2023-10-11 20:42:49.315538] [DarrenOoi] [FAIL] [error building sql statement with error 'NoneType' object has no attribute 'read']
+[2023-10-11 20:42:49.315538] [DarrenOoi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 115 expected 8]
+[2023-10-11 20:42:56.452716] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 20:43:54.209803] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 20:44:17.615372] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 20:45:31.127665] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 20:45:44.753021] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 20:46:33.601740] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 20:47:18.050742] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]

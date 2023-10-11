@@ -27,19 +27,23 @@ function Home() {
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const res = await fetchRecentArticles();
-        setRecents(res);
-        const pop = await fetchPopularArticles(4);
-        setPopular(pop);
+        const [recents, popular] = await Promise.all([
+          fetchRecentArticles(),
+          fetchPopularArticles(4),
+        ]);
+
+        setRecents(recents);
+        setPopular(popular);
       } catch (error) {
-        //add error handling when request fails
-        console.log('error');
+        console.log('Error:', error);
       }
     }
+
     fetchArticles();
   }, []);
 
-  console.log(recents);
+  // console.log(popular);
+  // console.log(recents);
   const handleListClick = (url) => {
     setSubmitted(true);
     setText(url);
