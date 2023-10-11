@@ -13,6 +13,8 @@ import textSize from '@/components/pictures/textSize.png';
 import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 import VerticleLine from '@/components/JustTheFactsLine';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
+import Menu from '@/components/Menu';
+import Poll from '@/components/Poll';
 
 function Home() {
   const [text, setText] = useState('');
@@ -46,59 +48,21 @@ function Home() {
     router.push('/profileSearch');
   };
 
-  const ProfileLine = ({ text }) => {
-    return (
-      <div className='flex flex-row items-center justify-center h-6'>
-        <div
-          className='mr-1'
-          style={{ display: 'flex', alignItems: 'center', width: '70px' }}
-        >
-          <div style={{ flex: 1, backgroundColor: '#7895B1', height: '2px' }} />
-        </div>
-        <span className=' text-[#7895B1] text-xs font-bold'>
-          POLITCAL PROFILES
-        </span>
-        <div
-          className='ml-1'
-          style={{ display: 'flex', alignItems: 'center', width: '70px' }}
-        >
-          <div style={{ flex: 1, backgroundColor: '#7895B1', height: '2px' }} />
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div>
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Navbar />
+      <Menu currentPage={"article"}/>
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className='flex items-end justify-between'>
-                <span className=' mt-5 ml-10 font-bold text-5xl text-[#7895B1] h-11'>
+
+              <div className='flex flex-row-reverse mr-7'>
+                <span className='font-bold text-3xl text-[#7895B1] h-7'>
                   ARTICLE SEARCH
                 </span>
-                <div className='flex flex-col mr-10'>
-                  <div className='flex items-center justify-center '>
-                    <ProfileLine />
-                  </div>
-                  <button
-                    className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-lg rounded-b-none'
-                    style={{ width: '285px', height: '35px' }}
-                  >
-                    <Image src={profilePicSmall} width={18} height={18} />
-                    <text
-                      className='text-white text-sm'
-                      onClick={politcalProfile}
-                    >
-                      CLICK HERE FOR PROFILE SEARCH
-                    </text>
-                  </button>
-                </div>
               </div>
 
               <div className='flex'>
@@ -110,7 +74,7 @@ function Home() {
                   className='bg-[#7895B1] p-4 rounded-xl'
                   style={{ width: '1200px' }}
                 >
-                  <div className='flex justify-start space-x-4 mt-5'>
+                  <div className='flex justify-start space-x-4 mt-4'>
                     <Input setText={setText} placeholder='Enter article URL' />{' '}
                     <button
                       className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'
@@ -120,14 +84,14 @@ function Home() {
                         className='text-white text-sm'
                         onClick={handleSubmit}
                       >
-                        CLICK FOR THE FACTS
+                        CLICK FOR THE <span className='text-[#FFB039] font-extrabold'>FACTS</span>
                       </text>
                     </button>
                   </div>
 
                   <div className='flex flex-row mt-5'>
                     <div
-                      className='card bg-[#2E2E2E] rounded-full p-0 flex justify-center'
+                      className='card bg-[#2E2E2E] rounded-full p-1 flex flex-row items-center'
                       style={{ width: '415px', height: '33px' }}
                     >
                       <Image
@@ -135,8 +99,9 @@ function Home() {
                         src={textSize}
                         width={20}
                         height={5}
-                        alt='Text To Speech'
+                        alt='Text Size'
                       />
+                        <progress className="ml-6 progress w-80" value={40} max="100"></progress>
                     </div>
                     <button
                       className='btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4'
@@ -152,6 +117,8 @@ function Home() {
                   </div>
 
                   <div className='mt-5'>
+                    <div>
+                    </div>
                     <Card
                       content={
                         result ? (
@@ -164,6 +131,7 @@ function Home() {
                       }
                     />
                   </div>
+                  <Poll />
                 </div>
               </div>
 

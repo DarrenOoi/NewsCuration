@@ -10467,6 +10467,2580 @@ DROP COLUMN Summary]
     FROM Article
     WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
     ]
+[2023-10-04 11:23:38.584543] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000128B3B41110>]
+[2023-10-04 11:23:38.585534] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000128B3AF2A90>]
+[2023-10-04 11:23:39.044428] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 11:23:39.974728] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-04 11:23:40.012258] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000128B3B41110>]
+[2023-10-04 11:23:40.013340] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000128B3AF2A90>]
+[2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
+[2023-10-04 11:24:14.491739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
+[2023-10-04 11:24:14.950751] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 11:24:15.442174] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_PositionNameCodes
+    WHERE 1=1
+    ]
+[2023-10-04 11:24:15.444174] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
+[2023-10-04 11:24:15.445176] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
+[2023-10-04 15:29:38.409389] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D0C7002590>]
+[2023-10-04 15:29:38.410057] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D0C70636D0>]
+[2023-10-04 15:29:38.860409] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 15:29:39.325413] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 15:29:39.782321] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 15:29:40.009989] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-04 15:29:40.243052] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:40.700404] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-04 15:29:41.158071] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'Donald',
+    'Trump',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'https://i.natgeofe.com/k/5e4ea67e-2219-4de4-9240-2992faef0cb6/trump-portrait.jpg',
+    'another more general summary here'
+    );
+    ]
+[2023-10-04 15:29:41.642657] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-04 15:29:42.100957] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:42.557861] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-04 15:29:43.014196] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    5,
+    20,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:43.468799] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-04 15:29:43.932188] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '20',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:44.387605] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 15:29:44.394609] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001D0C7002590>]
+[2023-10-04 15:29:44.395604] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001D0C70636D0>]
+[2023-10-04 16:15:13.593930] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025855F8B790>]
+[2023-10-04 16:15:13.595925] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000258786D04D0>]
+[2023-10-04 16:15:14.063806] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 16:15:19.225194] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-30/canberra-voice-no-campaigners-rally-ahead-of-election/102920672"
+    ]
+[2023-10-04 16:15:19.738491] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "12"
+    ]
+[2023-10-04 16:15:20.200485] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "12"
+    ]
+[2023-10-04 16:15:58.061993] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:15:59.821048] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 16:16:00.507628] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 16:16:01.256232] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:01.991320] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:05.613351] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:05.922404] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.3333333333333333,
+    0.2,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.� Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A driver has been charged for a crash that killed two boys in Sydneys south.
+- The boys were aged nine and ten, and a nine-year-old girl was also in the car.
+- The car crashed into a tree on The Grand Parade in Monterey.
+- The boys were taken to Sydney Childrens Hospital where they later died.
+- The girl suffered minor injuries and was taken to the same hospital.
+- The driver, Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct.
+- Britos lawyer, Fahim Arya, said that his client may not be aware that the boys have died.
+- Brito, who was also injured in the crash, remains in the hospital and his bedside hearing has been adjourned.
+- Arya stated that Brito is in the early stages of recovery and under the influence of medication.
+- Police believe speed was a factor in the crash and are investigating whether street racing was involved.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 're dead, lawyer says ',\n    ' Driver charged over horror crash that killed two b' at line 9")]
+[2023-10-04 16:16:06.188785] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.3333333333333333,
+    0.2,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.� Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A driver has been charged for a crash that killed two boys in Sydneys south.
+- The boys were aged nine and ten, and a nine-year-old girl was also in the car.
+- The car crashed into a tree on The Grand Parade in Monterey.
+- The boys were taken to Sydney Childrens Hospital where they later died.
+- The girl suffered minor injuries and was taken to the same hospital.
+- The driver, Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct.
+- Britos lawyer, Fahim Arya, said that his client may not be aware that the boys have died.
+- Brito, who was also injured in the crash, remains in the hospital and his bedside hearing has been adjourned.
+- Arya stated that Brito is in the early stages of recovery and under the influence of medication.
+- Police believe speed was a factor in the crash and are investigating whether street racing was involved.'
+    );
+    ]
+[2023-10-04 16:16:06.805420] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 16:16:07.353437] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 11:23:38.584543] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000128B3B41110>]
+[2023-10-04 11:23:38.585534] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000128B3AF2A90>]
+[2023-10-04 11:23:39.044428] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 11:23:39.974728] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-04 11:23:40.012258] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000128B3B41110>]
+[2023-10-04 11:23:40.013340] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000128B3AF2A90>]
+[2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
+[2023-10-04 11:24:14.491739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
+[2023-10-04 11:24:14.950751] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 11:24:15.442174] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_PositionNameCodes
+    WHERE 1=1
+    ]
+[2023-10-04 11:24:15.444174] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
+[2023-10-04 11:24:15.445176] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
+[2023-10-04 15:29:38.409389] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D0C7002590>]
+[2023-10-04 15:29:38.410057] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D0C70636D0>]
+[2023-10-04 15:29:38.860409] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 15:29:39.325413] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 15:29:39.782321] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 15:29:40.009989] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-04 15:29:40.243052] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:40.700404] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-04 15:29:41.158071] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'Donald',
+    'Trump',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'https://i.natgeofe.com/k/5e4ea67e-2219-4de4-9240-2992faef0cb6/trump-portrait.jpg',
+    'another more general summary here'
+    );
+    ]
+[2023-10-04 15:29:41.642657] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-04 15:29:42.100957] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:42.557861] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-04 15:29:43.014196] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    5,
+    20,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:43.468799] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-04 15:29:43.932188] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '20',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 15:29:44.387605] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 15:29:44.394609] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001D0C7002590>]
+[2023-10-04 15:29:44.395604] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001D0C70636D0>]
+[2023-10-04 16:15:13.593930] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025855F8B790>]
+[2023-10-04 16:15:13.595925] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000258786D04D0>]
+[2023-10-04 16:15:14.063806] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 16:15:19.225194] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-09-30/canberra-voice-no-campaigners-rally-ahead-of-election/102920672"
+    ]
+[2023-10-04 16:15:19.738491] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "12"
+    ]
+[2023-10-04 16:15:20.200485] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "12"
+    ]
+[2023-10-04 16:15:58.061993] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:15:59.821048] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 16:16:00.507628] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 16:16:01.256232] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:01.991320] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:05.613351] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 16:16:05.922404] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.3333333333333333,
+    0.2,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.� Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A driver has been charged for a crash that killed two boys in Sydneys south.
+- The boys were aged nine and ten, and a nine-year-old girl was also in the car.
+- The car crashed into a tree on The Grand Parade in Monterey.
+- The boys were taken to Sydney Childrens Hospital where they later died.
+- The girl suffered minor injuries and was taken to the same hospital.
+- The driver, Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct.
+- Britos lawyer, Fahim Arya, said that his client may not be aware that the boys have died.
+- Brito, who was also injured in the crash, remains in the hospital and his bedside hearing has been adjourned.
+- Arya stated that Brito is in the early stages of recovery and under the influence of medication.
+- Police believe speed was a factor in the crash and are investigating whether street racing was involved.'
+    );
+    : 
+ error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 're dead, lawyer says ',\n    ' Driver charged over horror crash that killed two b' at line 9")]
+[2023-10-04 16:16:06.188785] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440',
+    0.3333333333333333,
+    0.2,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'Driver charged over horror crash that killed two boys may not be aware they're dead, lawyer says ',
+    ' Driver charged over horror crash that killed two boys may not be aware theyre dead, lawyer says The man charged over the horror crash that killed two boys in Sydneys south on Friday may not be aware they are dead, his lawyer said. The two boys, aged nine and 10, were in the car along with a nine-year-old girl when it crashed into a tree on The Grand Parade in Monterey just before 10pm. The boys were taken to Sydney Childrens Hospital at Randwick where they later died. The girl suffered minor injuries and was taken to the same hospital.� Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct. Lawyer Fahim Arya said outside Parramatta Bail Court his client spoke to the mother of the two boys on Sunday morning. "I dont know if he knows the two little ones have lost their lives," Mr Arya said. Mr Brito, who was also injured in the crash, remains in hospital and was due to face a bedside hearing on Sunday, but that was adjourned until September 7. Mr Arya said his client was recovering from surgery and under the influence of medication. "My client is in the early stages of recovery," Mr Arya said. "[The boys mother] is distraught and distressed having lost her two boys." Police believe speed was a factor in the crash and are investigating whether street racing was also involved. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- A driver has been charged for a crash that killed two boys in Sydneys south.
+- The boys were aged nine and ten, and a nine-year-old girl was also in the car.
+- The car crashed into a tree on The Grand Parade in Monterey.
+- The boys were taken to Sydney Childrens Hospital where they later died.
+- The girl suffered minor injuries and was taken to the same hospital.
+- The driver, Jimmy Martin Brito, 33, has been charged with two counts of dangerous driving causing death and one count of causing bodily harm by misconduct.
+- Britos lawyer, Fahim Arya, said that his client may not be aware that the boys have died.
+- Brito, who was also injured in the crash, remains in the hospital and his bedside hearing has been adjourned.
+- Arya stated that Brito is in the early stages of recovery and under the influence of medication.
+- Police believe speed was a factor in the crash and are investigating whether street racing was involved.'
+    );
+    ]
+[2023-10-04 16:16:06.805420] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 16:16:07.353437] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-08-27/bail-hearing-suspended-man-charged-sydney-crash-boys-died/102781440"
+    ]
+[2023-10-04 14:06:00.449010] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002ACF2EFF950>]
+[2023-10-04 14:06:00.449010] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002ACF2CE58D0>]
+[2023-10-04 14:06:00.902700] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:01.143807] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:06:01.370209] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (1, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:06:01.378390] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002ACF2EFF950>]
+[2023-10-04 14:06:01.387778] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002ACF2CE58D0>]
+[2023-10-04 14:06:39.985108] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020D39231F10>]
+[2023-10-04 14:06:39.985108] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020D39231D50>]
+[2023-10-04 14:06:40.448762] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:40.458741] [Manav Trivedi] [FAIL] [Unable to find file path: PRO-82_Polling]
+[2023-10-04 14:06:40.463208] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020D39231F10>]
+[2023-10-04 14:06:40.479308] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020D39231D50>]
+[2023-10-04 14:06:54.472621] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002169EE26390>]
+[2023-10-04 14:06:54.488168] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002169E554690>]
+[2023-10-04 14:06:54.948944] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:06:54.950054] [Manav Trivedi] [FAIL] [Unable to find file path: PRO-82_Polling]
+[2023-10-04 14:06:54.966611] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002169EE26390>]
+[2023-10-04 14:06:54.969288] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002169E554690>]
+[2023-10-04 14:07:05.663545] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000016C08A26590>]
+[2023-10-04 14:07:05.663545] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000016C0867FA10>]
+[2023-10-04 14:07:06.135512] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:07:06.388949] [Manav Trivedi] [FAIL] [Unable to execute sql 
+ CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+); with error (1050, "Table 'Polling' already exists")]
+[2023-10-04 14:07:06.641654] [Manav Trivedi] [SUCCESS] [CREATE TABLE Polling (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Question VARCHAR(1000),
+    OptionFirst VARCHAR(1000),
+    OptionSecond VARCHAR(1000),
+    OptionThird VARCHAR(1000),
+    OptionFourth VARCHAR(1000),
+    VotesFirst INT,
+    VotesSecond INT,
+    VotesThird INT,
+    VotesFourth INT,
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+    FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);]
+[2023-10-04 14:07:06.656668] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000016C08A26590>]
+[2023-10-04 14:07:06.673864] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000016C0867FA10>]
+[2023-10-04 14:10:19.444449] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F701231D50>]
+[2023-10-04 14:10:19.460015] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F7005685D0>]
+[2023-10-04 14:10:19.905336] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:10:20.146653] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:10:20.371810] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:10:20.371810] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001F701231D50>]
+[2023-10-04 14:10:20.394240] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001F7005685D0>]
+[2023-10-04 14:12:22.612515] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022350753F50>]
+[2023-10-04 14:12:22.628314] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022350752C10>]
+[2023-10-04 14:12:23.121556] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:12:23.385340] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:12:23.618911] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav');
+    WHERE 1=1
+    ]
+[2023-10-04 14:12:23.618911] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000022350753F50>]
+[2023-10-04 14:12:23.636379] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000022350752C10>]
+[2023-10-04 14:13:06.250583] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027521F31F10>]
+[2023-10-04 14:13:06.266109] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027521F31D50>]
+[2023-10-04 14:13:06.776871] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:13:07.018388] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:13:07.260816] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:13:07.276451] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000027521F31F10>]
+[2023-10-04 14:13:07.293816] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000027521F31D50>]
+[2023-10-04 14:13:37.605592] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C3DEB31D50>]
+[2023-10-04 14:13:37.605592] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C3DE2985D0>]
+[2023-10-04 14:13:38.092140] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:13:38.336763] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:13:38.577076] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:13:38.588602] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C3DEB31D50>]
+[2023-10-04 14:13:38.597804] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C3DE2985D0>]
+[2023-10-04 14:16:01.283159] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C06BA53F50>]
+[2023-10-04 14:16:01.302022] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C06BA52C10>]
+[2023-10-04 14:16:01.817243] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:16:02.067590] [Manav Trivedi] [FAIL] [error building sql statement with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThir' at line 2")]
+[2023-10-04 14:16:02.313577] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM INSERT INTO Polling (ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, InProduction, InsertedAt, InsertedBy) VALUES (9999, 'What is your question?', 'Option 1', 'Option 2', 'Option 3', 'Option 4', 0, 0, 0, 0, TRUE, NOW(), 'Manav')
+    WHERE 1=1
+    ]
+[2023-10-04 14:16:02.329133] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C06BA53F50>]
+[2023-10-04 14:16:02.344185] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C06BA52C10>]
+[2023-10-04 14:44:12.453304] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000270402D5610>]
+[2023-10-04 14:44:12.468997] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027040926790>]
+[2023-10-04 14:44:12.926048] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 14:44:13.385885] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+
+    'Manav Trivedi',
+
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+]
+[2023-10-04 20:02:10.191693] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 20:02:11.465297] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+
+[2023-10-04 14:44:13.848194] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 14:44:14.075593] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-04 20:02:11.921898] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+
+    'Manav Trivedi'
+    );
+    : 
+ error (1062, "Duplicate entry 'Prime Minister of Australia' for key 'Politician_PositionNameCodes.NameCode'")]
+[2023-10-04 14:44:14.321471] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:12.822721] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-04 20:02:13.728435] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:14.780337] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-04 14:44:15.703979] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+
+
+    'Manav Trivedi',
+
+    '\img\imghere',
+    'another more general summary here'
+    );
+]
+[2023-10-04 20:02:15.339230] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-04 20:02:16.245934] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+
+[2023-10-04 14:44:16.161304] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-04 14:44:16.627168] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:17.151267] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-04 20:02:18.740157] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    9,
+    30,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:19.663117] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-04 20:02:20.122953] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProdution, InsertedAt, InsertedBy)
+    VALUES (
+    '30',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1054, "Unknown column 'InProdution' in 'field list'")]
+[2023-10-04 20:02:20.576015] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProdution, InsertedAt, InsertedBy)
+    VALUES (
+    '30',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:21.490575] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:02:22.394649] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '30',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:23.302752] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 20:02:23.305769] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000144A60ED2D0>]
+[2023-10-04 20:02:23.305769] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000144A6870D90>]
+[2023-10-04 20:02:49.232410] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000023FDD6FF990>]
+[2023-10-04 20:02:49.233410] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000023FDFB06B90>]
+[2023-10-04 20:02:51.144928] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:02:52.018919] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 20:02:52.930716] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 20:02:53.394747] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '31',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1452, 'Cannot add or update a child row: a foreign key constraint fails (`newscuration`.`Comments`, CONSTRAINT `Comments_ibfk_1` FOREIGN KEY (`ID_Article`) REFERENCES `Politician` (`ID`))')]
+[2023-10-04 20:02:53.835681] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '31',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:54.721863] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:02:55.617363] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '31',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:02:56.484144] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 20:03:49.016740] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021307E19110>]
+[2023-10-04 20:03:49.018738] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021309CC6290>]
+[2023-10-04 20:03:49.902777] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:03:50.811971] [Daniel Ciccotosto-Camp] [SUCCESS] [-- CREATE TABLE Comments (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     ID_Article INT,
+--     Author VARCHAR(255),
+--     Comment VARCHAR(2000),
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+-- FOREIGN KEY (ID_Article) REFERENCES Politician(ID)
+-- );
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+DROP TABLE Comments]
+[2023-10-04 20:03:50.813978] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000021307E19110>]
+[2023-10-04 20:03:50.813978] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000021309CC6290>]
+[2023-10-04 20:04:05.832637] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001FD8ED69110>]
+[2023-10-04 20:04:05.833626] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001FD90C16290>]
+[2023-10-04 20:04:06.682698] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:04:07.561861] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Article INT,
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments]
+[2023-10-04 20:04:07.563857] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001FD8ED69110>]
+[2023-10-04 20:04:07.564856] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001FD90C16290>]
+[2023-10-04 20:04:18.217698] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000016F4546F990>]
+[2023-10-04 20:04:18.218650] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000016F47876B90>]
+[2023-10-04 20:04:19.086404] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:04:19.944745] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-04 20:04:20.792609] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-04 20:04:21.649745] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '32',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:04:22.490575] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:04:23.338943] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+=======
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:17.088069] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-04 14:44:17.546443] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    4,
+    17,
+    1, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:17.997387] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-04 14:44:18.460074] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:18.938784] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-04 14:44:19.390368] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+
+    '32',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:04:24.183708] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 20:22:51.917175] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B0439CF750>]
+[2023-10-04 20:22:51.918171] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B044FF8D90>]
+[2023-10-04 20:22:52.739881] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:24:37.077779] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'John Doe',
+    'Test Comment',
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:24:37.906788] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:25:44.973925] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D76FD318D0>]
+[2023-10-04 20:25:44.974925] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D74D6518D0>]
+[2023-10-04 20:25:45.811426] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:25:50.675284] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(ID_Article, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'John Doe',
+    'Test Comment',
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-04 20:25:51.513813] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:27:03.927891] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE ID_Article = 1
+    ]
+[2023-10-04 20:27:52.776901] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A9EE7A1F50>]
+[2023-10-04 20:27:52.779000] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A9EE56B810>]
+[2023-10-04 20:27:53.628433] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:27:58.446835] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE ID_Article = 1
+    ]
+[2023-10-04 20:29:03.724536] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE ID_Article = 1
+    ]
+
+    '17',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-04 14:44:19.870583] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-04 14:44:19.882644] [Manav Trivedi] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000270402D5610>]
+[2023-10-04 14:44:19.886104] [Manav Trivedi] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000027040926790>]
+
+[2023-10-07 21:01:28.649519] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F729BBF9D0>]
+[2023-10-07 21:01:28.650328] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F72B4968D0>]
+[2023-10-07 21:01:29.473354] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:01:30.402890] [Daniel Ciccotosto-Camp] [SUCCESS] [-- CREATE TABLE Comments (
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     ID_Article INT,
+--     Author VARCHAR(255),
+--     Comment VARCHAR(2000),
+--     InProduction BOOLEAN,
+--     InsertedAt DATETIME,
+--     InsertedBy VARCHAR(50),
+-- FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+-- );
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+DROP TABLE Comments]
+[2023-10-07 21:01:30.406911] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001F729BBF9D0>]
+[2023-10-07 21:01:30.407908] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001F72B4968D0>]
+[2023-10-07 21:02:07.289611] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002D73246F9D0>]
+[2023-10-07 21:02:07.290604] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002D733D468D0>]
+[2023-10-07 21:02:08.160596] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:02:08.609725] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments with error (1072, "Key column 'ID_Article' doesn't exist in table")]
+[2023-10-07 21:02:09.045645] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments]
+[2023-10-07 21:02:09.048381] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002D73246F9D0>]
+[2023-10-07 21:02:09.049139] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002D733D468D0>]
+[2023-10-07 21:05:49.253123] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000260D86E9090>]
+[2023-10-07 21:05:49.254170] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000260D8826190>]
+[2023-10-07 21:05:50.113756] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:05:50.980074] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-07 21:05:51.841235] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-07 21:05:52.273984] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:05:52.708293] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:05:53.129824] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:05:53.561947] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-07 21:05:53.563939] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:05:54.430860] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-07 21:05:55.298037] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-07 21:05:55.727003] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:05:56.148786] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:05:56.577301] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:05:57.017694] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-07 21:05:57.018694] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:05:57.877054] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    13,
+    46,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:05:58.756242] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-07 21:05:59.186511] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-07 21:05:59.627181] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:06:00.056465] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Comments;
+    : 
+ error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-07 21:06:00.493175] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-07 21:06:00.494172] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:06:01.390348] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '46',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:06:02.251774] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-07 21:06:02.255930] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000260D86E9090>]
+[2023-10-07 21:06:02.256930] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000260D8826190>]
+[2023-10-07 21:06:39.900572] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002113072F150>]
+[2023-10-07 21:06:39.901487] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000211329E6890>]
+[2023-10-07 21:06:40.760630] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:06:41.190818] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments with error (1072, "Key column 'ID_Article' doesn't exist in table")]
+[2023-10-07 21:06:41.604073] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50),
+FOREIGN KEY (ID_Article) REFERENCES Article(ID)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments]
+[2023-10-07 21:06:41.607477] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002113072F150>]
+[2023-10-07 21:06:41.610501] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000211329E6890>]
+[2023-10-07 21:06:54.987472] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000208CD9336D0>]
+[2023-10-07 21:06:54.988488] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000208CD7B6890>]
+[2023-10-07 21:06:56.536423] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:06:57.417056] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Comments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(1000),
+    Author VARCHAR(255),
+    Comment VARCHAR(2000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+);
+
+-- inserted with the following command:
+-- python .\inf\transactionDataClient.py --DDLFromFile PRO-84.sql
+
+-- DROP TABLE Comments]
+[2023-10-07 21:06:57.418975] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000208CD9336D0>]
+[2023-10-07 21:06:57.419973] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000208CD7B6890>]
+[2023-10-07 21:07:05.738930] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000193DE420D90>]
+[2023-10-07 21:07:05.739846] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000193E02A6190>]
+[2023-10-07 21:07:06.559232] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:07:07.393236] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-07 21:07:08.221172] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-07 21:07:08.629660] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:07:09.035810] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:09.451417] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:07:09.864341] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-07 21:07:09.866338] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:07:10.721316] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-07 21:07:11.549109] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-07 21:07:11.965222] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:07:12.385810] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:12.804594] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:07:13.214040] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-07 21:07:13.216229] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:07:14.049866] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    14,
+    48,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:14.881380] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-07 21:07:15.714213] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:16.540850] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-07 21:07:17.370916] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '48',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:07:18.258634] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-07 21:07:18.261634] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000193DE420D90>]
+[2023-10-07 21:07:18.261634] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000193E02A6190>]
+[2023-10-07 21:15:49.584194] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F503FB0D90>]
+[2023-10-07 21:15:49.585841] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F505E36190>]
+[2023-10-07 21:15:50.447418] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:15:51.289310] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-07 21:15:52.111530] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-07 21:15:52.517835] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:15:52.925087] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_PositionNameCodes (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:15:53.343657] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    : 
+ error (1146, "Table 'newscuration.Politician_PositionNameCodes' doesn't exist")]
+[2023-10-07 21:15:53.757130] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_PositionNameCodes;
+    ]
+[2023-10-07 21:15:53.759430] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:15:54.656163] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here'
+    );
+    ]
+[2023-10-07 21:15:55.539422] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-07 21:15:55.958011] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:15:56.364732] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:15:56.780821] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-07 21:15:57.204150] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-07 21:15:57.206757] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-07 21:15:58.027135] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    15,
+    50,
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:15:58.898552] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-07 21:15:59.723307] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'Joe Mama',
+    'I am writing a comment on this ',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:16:00.561536] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-07 21:16:01.398034] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '50',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:16:02.230691] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-07 21:16:02.233688] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001F503FB0D90>]
+[2023-10-07 21:16:02.234751] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001F505E36190>]
+[2023-10-07 21:16:31.440481] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001AB58C4B690>]
+[2023-10-07 21:16:31.442470] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001AB59753E90>]
+[2023-10-07 21:16:32.315306] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:40:58.446715] [Daniel Ciccotosto-Camp] [FAIL] [error building sql statement with error (1054, "Unknown column 'examplewebsite.com' in 'where clause'")]
+[2023-10-07 21:40:58.880872] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = examplewebsite.com
+    ]
+[2023-10-07 21:42:07.876675] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CDCE084ED0>]
+[2023-10-07 21:42:07.877669] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CDCDC4A710>]
+[2023-10-07 21:42:08.746823] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-07 21:42:17.975604] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'examplewebsite.com'
+    ]
+[2023-10-07 21:42:30.705143] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'examplewebsite.com',
+    'John Doe',
+    'Test Comment',
+    1, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-07 21:42:31.572140] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-04 20:58:23.177393] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021A81445B90>]
+[2023-10-04 20:58:23.178353] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021AFEFB6290>]
+[2023-10-04 20:58:24.064718] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 20:58:24.934672] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-04 20:58:24.938672] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000021A81445B90>]
+[2023-10-04 20:58:24.939678] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000021AFEFB6290>]
+[2023-10-04 21:04:23.341862] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022F40585B90>]
+[2023-10-04 21:04:23.342862] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022F3E126290>]
+[2023-10-04 21:04:24.204126] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 21:04:24.632707] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000)
+) with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE TABLE Politician_CampaignPolicies(\n    ID INT AUTO_INCREMENT PRIMARY KEY,' at line 7")]
+[2023-10-04 21:04:25.062274] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000)
+)]
+[2023-10-04 21:04:25.065284] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000022F40585B90>]
+[2023-10-04 21:04:25.065284] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000022F3E126290>]
+[2023-10-04 21:04:38.090551] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D425076290>]
+[2023-10-04 21:04:38.092490] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D4274D5B90>]
+[2023-10-04 21:04:38.942746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 21:04:39.835849] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD Byline VARCHAR(400),
+ADD Political_Position VARCHAR(1000), 
+ADD Party VARCHAR(1000), 
+ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )]
+[2023-10-04 21:04:39.838843] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001D425076290>]
+[2023-10-04 21:04:39.839849] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001D4274D5B90>]
+[2023-10-04 21:04:51.281836] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001BBA9855B90>]
+[2023-10-04 21:04:51.281836] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001BBA73F6290>]
+[2023-10-04 21:04:52.149003] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 21:04:53.049531] [Daniel Ciccotosto-Camp] [SUCCESS] [-- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+CREATE TABLE Politician_CampaignPolicies(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(255),
+    Lname VARCHAR(255),
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000)
+)]
+[2023-10-04 21:04:53.052052] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001BBA9855B90>]
+[2023-10-04 21:04:53.052052] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001BBA73F6290>]
+[2023-10-04 21:06:27.547478] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001830C4A5B90>]
+[2023-10-04 21:06:27.548467] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001830A046290>]
+[2023-10-04 21:06:28.415071] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 21:06:28.850190] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )
+
+DROP TABLE Politician_PositionNameCodes
+DROP TABLE Politician_Position
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DROP TABLE Politician_Position\n\n-- inserted with the following:\n--  python .\\inf' at line 16")]
+[2023-10-04 21:06:29.284270] [Daniel Ciccotosto-Camp] [SUCCESS] [-- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )
+
+DROP TABLE Politician_PositionNameCodes
+DROP TABLE Politician_Position
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-04 21:06:29.288357] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001830C4A5B90>]
+[2023-10-04 21:06:29.289342] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001830A046290>]
+[2023-10-04 21:06:39.160664] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000015728634D90>]
+[2023-10-04 21:06:39.162666] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001572AC9A110>]
+[2023-10-04 21:06:40.076958] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 21:06:40.514134] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )
+
+DROP TABLE Politician_PositionNameCodes
+-- DROP TABLE Politician_Position
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL with error (3730, "Cannot drop table 'Politician_PositionNameCodes' referenced by a foreign key constraint 'Politician_Position_ibfk_1' on table 'Politician_Position'.")]
+[2023-10-04 21:06:40.947878] [Daniel Ciccotosto-Camp] [SUCCESS] [-- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )
+
+DROP TABLE Politician_PositionNameCodes
+-- DROP TABLE Politician_Position
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-04 21:06:40.951889] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000015728634D90>]
+[2023-10-04 21:06:40.952900] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001572AC9A110>]
+[2023-10-04 21:07:04.187822] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C8FAA84D90>]
+[2023-10-04 21:07:04.188980] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C8FD08A110>]
+[2023-10-04 21:07:05.095659] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 21:07:06.005608] [Daniel Ciccotosto-Camp] [SUCCESS] [-- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )
+
+-- DROP TABLE Politician_PositionNameCodes
+DROP TABLE Politician_Position
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-04 21:07:06.007618] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C8FAA84D90>]
+[2023-10-04 21:07:06.008607] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C8FD08A110>]
+[2023-10-04 21:07:16.165491] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000029BADB34D90>]
+[2023-10-04 21:07:16.166500] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000029BB02CA110>]
+[2023-10-04 21:07:17.027545] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 21:07:17.923034] [Daniel Ciccotosto-Camp] [SUCCESS] [-- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )
+
+DROP TABLE Politician_PositionNameCodes
+-- DROP TABLE Politician_Position
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-04 21:07:17.927188] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000029BADB34D90>]
+[2023-10-04 21:07:17.928190] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000029BB02CA110>]
+[2023-10-05 07:03:03.280475] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D397C54D90>]
+[2023-10-05 07:03:03.282466] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D397E331D0>]
+[2023-10-05 07:03:03.893076] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 07:03:04.521087] [Daniel Ciccotosto-Camp] [SUCCESS] [-- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+ALTER TABLE Politician
+DROP COLUMN COUNTRY
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-05 07:03:04.525088] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001D397C54D90>]
+[2023-10-05 07:03:04.527092] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001D397E331D0>]
+[2023-10-05 07:15:39.090979] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001847FAE3A10>]
+[2023-10-05 07:15:39.092524] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001847FCBB410>]
+[2023-10-05 07:15:39.675136] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 07:15:40.317235] [Daniel Ciccotosto-Camp] [SUCCESS] [-- ALTER TABLE Politician
+-- ADD Byline VARCHAR(400),
+-- ADD Political_Position VARCHAR(1000), 
+-- ADD Party VARCHAR(1000), 
+-- ADD COUNTRY VARCHAR(10) DEFAULT 'AUS'
+
+-- CREATE TABLE Politician_CampaignPolicies(
+--     ID INT AUTO_INCREMENT PRIMARY KEY,
+--     Fname VARCHAR(255),
+--     Lname VARCHAR(255),
+--     PolicyNameTitle VARCHAR(1000),
+--     PolicyInfo VARCHAR(4000)
+-- )
+
+-- DROP TABLE Politician_Position
+-- DROP TABLE Politician_PositionNameCodes
+
+ALTER TABLE Politician_CampaignPolicies
+ADD InProduction BOOLEAN,
+ADD InsertedAt DATETIME,
+ADD InsertedBy VARCHAR(50)
+
+-- inserted with the following:
+--  python .\inf\transactionDataClient.py --DDLFromFile PRO-101.SQL]
+[2023-10-05 07:15:40.324325] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001847FAE3A10>]
+[2023-10-05 07:15:40.325325] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001847FCBB410>]
+[2023-10-05 07:28:51.051446] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002A5C8AE5990>]
+[2023-10-05 07:28:51.053395] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002A5CA8B9810>]
+[2023-10-05 07:28:51.633056] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 07:28:52.278956] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-05 07:28:52.839772] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-05 07:28:53.324633] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Politicial_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    : 
+ error (1054, "Unknown column 'Politicial_Position' in 'field list'")]
+[2023-10-05 07:28:53.635657] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Politicial_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-05 07:28:54.177231] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-05 07:28:54.533190] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-05 07:28:54.825536] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_Position(PositionNameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Prime Minister of Australia',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 07:28:55.152090] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    : 
+ error (1146, "Table 'newscuration.Politician_Position' doesn't exist")]
+[2023-10-05 07:28:55.558631] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_Position;
+    ]
+[2023-10-05 07:28:55.561638] [Daniel Ciccotosto-Camp] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-05 07:28:56.170648] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 07:28:56.845143] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-05 07:28:57.569661] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 07:28:58.195800] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-05 07:28:58.807036] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '33',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 07:28:59.549184] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-05 07:28:59.557660] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002A5C8AE5990>]
+[2023-10-05 07:28:59.559730] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002A5CA8B9810>]
+[2023-10-05 17:54:09.356743] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027D86B5BA10>]
+[2023-10-05 17:54:09.359748] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027D86E49110>]
+[2023-10-05 17:54:10.016250] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 17:54:11.028789] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-05 17:54:11.667153] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-05 17:54:11.967645] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Politicial_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    : 
+ error (1054, "Unknown column 'Politicial_Position' in 'field list'")]
+[2023-10-05 17:54:12.240324] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Politicial_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-05 17:54:13.004080] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-05 17:54:13.808783] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:54:14.512813] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-05 17:54:15.226429] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:54:15.885435] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-05 17:54:18.295482] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '34',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:54:19.334743] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-05 17:55:49.606446] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000262E9945990>]
+[2023-10-05 17:55:49.609445] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000262E9AB3090>]
+[2023-10-05 17:55:50.234381] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 17:55:51.097897] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-05 17:55:52.026768] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-05 17:55:52.327709] [Daniel Ciccotosto-Camp] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Politicial_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    : 
+ error (1054, "Unknown column 'Politicial_Position' in 'field list'")]
+[2023-10-05 17:55:52.633878] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Politicial_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-05 17:55:53.554660] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-05 17:55:54.151672] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:55:54.780634] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-05 17:55:55.356968] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:55:55.917565] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-05 17:55:56.533038] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '35',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:55:57.130134] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-05 17:55:57.137116] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000262E9945990>]
+[2023-10-05 17:55:57.139123] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000262E9AB3090>]
+[2023-10-05 17:56:39.310296] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000204446B87D0>]
+[2023-10-05 17:56:39.312262] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000204446B9110>]
+[2023-10-05 17:56:39.942061] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 17:56:40.546514] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-05 17:56:40.565504] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000204446B87D0>]
+[2023-10-05 17:56:40.567573] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000204446B9110>]
+[2023-10-05 17:59:02.262447] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F54FF05990>]
+[2023-10-05 17:59:02.264429] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F550073090>]
+[2023-10-05 17:59:03.003031] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 17:59:03.917151] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-05 17:59:04.838960] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-05 17:59:05.557264] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-05 17:59:06.127109] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-05 17:59:07.091378] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:59:07.603606] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-05 17:59:08.212526] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:59:09.127319] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-05 17:59:09.958802] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '36',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 17:59:10.675287] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-05 17:59:10.683064] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001F54FF05990>]
+[2023-10-05 17:59:10.685347] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001F550073090>]
+[2023-10-05 18:49:38.111467] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000274A86E87D0>]
+[2023-10-05 18:49:38.111467] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000274A86E9110>]
+[2023-10-05 18:49:38.951300] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 18:49:41.048910] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE 1=1
+    ]
+[2023-10-05 18:49:41.134786] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000274A86E87D0>]
+[2023-10-05 18:49:41.135079] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000274A86E9110>]
+[2023-10-05 18:52:00.790514] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021134B85990>]
+[2023-10-05 18:52:00.792282] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021134CF3090>]
+[2023-10-05 18:52:01.641119] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 18:52:02.487521] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-05 18:52:03.342977] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-05 18:52:04.188920] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-05 18:52:05.498749] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-05 18:52:06.345733] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 18:52:07.199380] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-05 18:52:08.042079] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 18:52:08.896537] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-05 18:52:09.743588] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '37',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 18:52:10.611817] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-05 18:52:10.616838] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000021134B85990>]
+[2023-10-05 18:52:10.618812] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000021134CF3090>]
+[2023-10-05 19:01:07.425212] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C58E1B8410>]
+[2023-10-05 19:01:07.426206] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C58E1D5A50>]
+[2023-10-05 19:01:08.276750] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 19:01:09.133482] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph)
+    VALUES (
+    'examplewebsite.com',
+    10.23,
+    22.4,
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    'This is the header',
+    'This is the originalText',
+    'this would be the chatGPT response in paragraph form'
+    );
+    ]
+[2023-10-05 19:01:09.996461] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-05 19:01:10.850791] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician (Fname, Lname, About, Age, Gender, InProduction, InsertedAt, InsertedBy, ImageLink, Summary, Byline, Political_Position, Party, CountryCode)
+    VALUES (
+    'John',
+    'Doe',
+    'John did some incredible things',
+    '32',
+    'Male',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp',
+    '\img\imghere',
+    'another more general summary here',
+    'This would be a politcian byline',
+    'this would be their politicial Position',
+    'LNP',
+    'AUS'
+    );
+    ]
+[2023-10-05 19:01:11.701565] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician;
+    ]
+[2023-10-05 19:01:12.562320] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '1',
+    'Your mom?',
+    'opt1',
+    'op12',
+    'op3',
+    'op4',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 19:01:13.418142] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-05 19:01:14.281175] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_CampaignPolicies(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Donald',
+    'Trump',
+    'Affordable Housing',
+    'I want to make housing affordable',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 19:01:15.138599] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_CampaignPolicies;
+    ]
+[2023-10-05 19:01:15.984582] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Devastating blaze',
+    'the term "devastating" indicates a tragice loss of life',
+    '38',
+    0, 
+    NOW(),
+    'Daniel Ciccotosto-Camp'
+    );
+    ]
+[2023-10-05 19:01:16.842334] [Daniel Ciccotosto-Camp] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-05 19:01:16.848382] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C58E1B8410>]
+[2023-10-05 19:01:16.849382] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C58E1D5A50>]
+[2023-10-05 21:33:44.095186] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000187FF5AA650>]
+[2023-10-05 21:33:44.097186] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000187FF5A85D0>]
+[2023-10-05 21:33:44.978558] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 21:34:22.674704] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-05 21:34:23.603329] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-05 22:15:06.022236] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021449174190>]
+[2023-10-05 22:15:06.023228] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021426D11A10>]
+[2023-10-05 22:15:06.904049] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:22:44.692153] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000287F3F71F10>]
+[2023-10-05 22:22:44.693531] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000028796449E10>]
+[2023-10-05 22:22:45.619792] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:24:33.639005] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002C1FF8BB210>]
+[2023-10-05 22:24:33.640007] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002C18B0D0950>]
+[2023-10-05 22:24:34.545740] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:25:33.935664] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
+[2023-10-05 22:25:34.852501] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 5 
+    ]
+[2023-10-05 22:26:17.323398] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000156FA5468D0>]
+[2023-10-05 22:26:17.324399] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000156F8D18150>]
+[2023-10-05 22:26:18.187693] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:27:23.919725] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
+[2023-10-05 22:34:40.570211] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002347FE3A150>]
+[2023-10-05 22:34:40.571209] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002347F3C7DD0>]
+[2023-10-05 22:34:41.413592] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:34:45.542895] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
+[2023-10-05 22:36:04.979231] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
+[2023-10-05 22:36:19.794887] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
+[2023-10-05 22:38:15.316437] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E93C826710>]
+[2023-10-05 22:38:15.317345] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E93C825290>]
+[2023-10-05 22:38:16.176453] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:39:12.060397] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
+[2023-10-05 22:39:52.427420] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CD498F5CD0>]
+[2023-10-05 22:39:52.428421] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CD46FD3AD0>]
+[2023-10-05 22:39:53.328003] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-05 22:39:56.154815] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+0=1
+    ]
 [2023-10-04 14:06:00.449010] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002ACF2EFF950>]
 [2023-10-04 14:06:00.449010] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002ACF2CE58D0>]
 [2023-10-04 14:06:00.902700] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
@@ -11713,6 +14287,7 @@ ADD InsertedBy VARCHAR(50)
     WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
 0=1
     ]
+
 [2023-10-05 22:38:15.316437] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E93C826710>]
 [2023-10-05 22:38:15.317345] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E93C825290>]
 [2023-10-05 22:38:16.176453] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
@@ -11731,6 +14306,7 @@ ADD InsertedBy VARCHAR(50)
     WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
 0=1
     ]
+
 [2023-10-11 14:38:59.952720] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000277BFED6010>]
 [2023-10-11 14:38:59.954728] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000277C0047D10>]
 [2023-10-11 14:39:00.516329] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
@@ -12342,12 +14918,102 @@ CREATE TABLE Politician_CampaignPolicies(
     'op12',
     'op3',
     'op4',
+
+[2023-10-04 15:12:54.143219] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000238E0DF59D0>]
+[2023-10-04 15:12:54.151271] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000238E0A15DD0>]
+[2023-10-04 15:12:54.631637] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+
+[2023-10-05 22:38:15.316437] [Daniel Cic
+[2023-10-10 14:06:49.040219] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B0B6FCF4D0>]
+[2023-10-10 14:06:49.049741] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B0B7B22510>]
+[2023-10-10 14:06:49.549353] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-10 14:07:05.813558] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:07:07.676442] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-10 14:07:08.358810] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-10 14:07:09.110692] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:07:09.844468] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:07:17.600150] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:07:19.505672] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:07:20.299390] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become',
+    0.7906976744186046,
+    0.5968992248062015,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    'The greater the fear Trump feels, the more sinister his threats become',
+    'Some Republicans in Congress want Trump as speaker of the House. But why? He already directs them by remote control �DEATH!� tweeted Donald Trump about Gen Mark Milley, the former chairman of the Joint Chiefs of Staff (AKA �My Generals�). �TRAITOR!� he said about former speaker of the House Kevin McCarthy (AKA �My Kevin�). �Monster� and �Deranged Lunatic� he labeled the New York state attorney general, Letitia James, who is prosecuting the case against him for his false valuations of Trump properties. �Deranged�, �Psycho� and �Crackhead� he called special prosecutor Jack Smith, who has charged him for his role in the January 6 coup attempt and his theft of classified documents. �We�ll stand up to crazy Nancy Pelosi, who ruined San Francisco � how�s her husband doing, anybody know?� he shouted at a rally, referring to Paul Pelosi, who was nearly murdered by a hammer-wielding assassin. �Crooked Joe Biden, let�s indict the motherfucker! Let�s indict him,� Trump said to a cheering crowd. �A racist � having an affair with the head of the gang or a gang member,� he claimed about Fani Willis, the Fulton county district attorney in Georgia, prosecuting him for the fake electors scheme. �Animal� and �Degenerate Psychopath� he called Alvin Bragg, the Manhattan district attorney, who has charged him with campaign bribery. �[Senator Charles] Schumer�s girlfriend � is running this case against me,� he lied about a clerk in the New York courtroom, identifying her by name. For that transgression, Manhattan supreme court justice Arthur Engoron, who Trump previously said should be �disbarred�, issued a limited gag rule forbidding him from targeting officers of the court. Needless to say, Trump�s vilification of Bragg, Willis and James, all Black, is an extension of his lifelong campaign for white supremacy, going back to his discrimination against Black housing buyers and his full-page ads in the New York newspapers in 1989 calling for the death penalty for five Black and Hispanic youths, the �Central Park Five�, who were innocent of the charges against them. But he now has a larger agenda than a race war here and there. Trump�s torrent of attacks on judges, prosecutors and witnesses is of a piece with his larger project to delegitimize and demolish the institutions of government, including now the House of Representatives through the historic first overthrow of a sitting speaker. His goal in every arena is the same: to clear the path to one-man rule. His threats, incitements and smears are more than outbursts. They are statements of intention for his next presidency. The constitution must be suspended to overturn the results of the 2020 election: �A Massive Fraud of this type and magnitude allows for the termination of all rules, regulations, and articles, even those found in the Constitution,� he has proposed. He has announced he will prosecute and imprison his political opponents: �I will appoint a real special �prosecutor� to go after the most corrupt president in the history of the USA, Joe Biden, the entire Biden crime family, & all others involved with the destruction of our elections, borders, & country itself!� He has pledged to purge the federal civil service and replace its employees with Trump loyalists: �You�re fired, get out, you�re fired,� he said, repeating his signature phrase from his television show The Apprentice. �[You] have to do it. Deep state. Washington will be an entirely different place.� Facing 91 felony counts in four separate trials, not to mention his second defamation judgment in the E Jean Carroll adjudicated rape case and the court-ordered unraveling of the Trump Organization in New York for decades of financial fraud, Trump has not stopped committing offenses. He has been a fount of ceaseless threats to specific officers of the court that he well knows may incite violence against them, interspersed with other calls for extralegal violence, such as shooting shoplifters. �Shot!� he shouted to a cheering crowd. If people can�t be bought off, told off or pushed off, they must be offed. Jack Smith�s filings to the Washington DC court requesting a gag order are a running commentary on Trump�s continuing crime wave. �Like his previous public disinformation campaign regarding the 2020 presidential election,� Smith wrote, �the defendant�s recent extrajudicial statements are intended to undermine public confidence in an institution � the judicial system � and to undermine confidence in and intimidate individuals � the court, the jury pool, witnesses and prosecutors.� In his collection of Trump�s latest �prejudicial statements,� Smith highlighted that Gen Milley, who Trump stated �had committed treason and suggested that he should be executed�, is �a witness cited in the indictment�. Smith addressed the issue of witness intimidation and tampering directly: �Even assuming that certain witnesses are not intimidated by the defendant�s statements, other witnesses see and may be affected by what the defendant does to those who are called to testify in this case. And regardless of whether certain witnesses are intimidated by the defendant�s extrajudicial statements, the defendant should not be permitted to attack or bolster the credibility of any witness in a manner that could influence prospective jurors.� Adding new felony charges against Trump for his egregious efforts at witness tampering would slow down the case against him. But the special prosecutor retains the option of filing those charges later. Trump�s inflammatory language could yet lead to further indictments. Trump�s threats are not simply rhetorical explosions but illegal attempts to intimidate witnesses and prejudice the jury. But they are more than that too. For Trump, the further the dismantlement of the rule of law, the smoother the path to one-man rule. Attempting to intimidate officers of the court and to tamper with witnesses is more than his legal strategy; it�s central to his overarching political strategy. He has systemic purpose. He is seeking to sideline every institution of government other than a presidency he occupies in which he is not bound by constitutional confines. By eliminating checks and balances now, he�s preparing for dictatorial rule. In 2020, under his aegis, the Republican party passed no platform whatsoever. Now, his incitements are the planks of the Republican platform on which all Republicans must run. His threats are his promises of what is to come. He is moving beyond the politics of grievance to the menace of revenge. Making him their candidate, Republicans are pledged to his violence and illegality. If he can escape accountability for his crimes, the rule of law collapses and the path is cleared for him. That is his vision. The criminal is the political. Trump seized upon the chance to advance the collapse of the speakership as an opportunity to reduce another governmental body that might be a check on him. The fewer barriers to one-man rule, the easier his road back to power. The party�s impotence is his strength. Kevin McCarthy�s demise appeared to him as a fortunate opening to grind toward control. The House Republicans rehearse an endless revenge tragedy strewing bodies on the stage. They flail at the Democrats, who for the crucial motion to vacate removed themselves to the reserved seats in the colosseum to watch the Republicans devour their speaker. The Republicans blamed the Democrats for failing to save McCarthy from the Republicans. McCarthy contrived to cooperate in his own destruction upon accepting the speakership by agreeing that one member alone could file a motion to vacate. Brutus, undisguised, was already lurking. McCarthy had put a knife in his hand in the first scene. With McCarthy�s corpse still warm, the speaker pro tempore Patrick McHenry�s first act was to evict former speaker Nancy Pelosi from her hideaway office, a little piece of real estate within the Capitol. It turns out it was a last sniveling request to McHenry from McCarthy, a spasm preceding rigor mortis. When she was speaker, she accorded the favor of the office to Dennis Hastert as a former speaker for as long as he remained in the House (before his pedophilia conviction). At the moment McHenry made his graceless gesture, Pelosi was in California, having accompanied the body of her dear friend Senator Dianne Feinstein to prepare for her funeral. He struck out at Pelosi as though her eviction punished her alongside the Republican eviction of Kevin McCarthy. It was presumably an equivalent slam of the Democratic speaker for the slamming of the Republican one. But Pelosi had left the speakership in dignity, handed off her baton and stays as an eminence, while McCarthy was despised, trampled and cut to pieces by his own. She served as the speaker for four years; he completed eight months, not quite to term. The displacement of Republican hostility to Pelosi only highlights their auto-da-fe of McCarthy. He is their former lord of the flies, felled by the swarm of flies. McHenry�s first act, ingratiating himself to the recently departed, established the tone of his even briefer transitional tenure. McCarthy all along tried to play to the bullies, joined in with the bullies, was roughed up by the bullies, and, finally, rousted by the bullies; after he was bullied out, his figurehead successor messed the clean slate with a small act of bullying. The hunger games continue. Trump was silent on McCarthy�s defenestration, the gratitude McCarthy received for his self-abasement, down to the nicety of regularly giving Trump gifts of jars of pink and red Starbursts, the former president�s favorite candy. The sweetener did not sweeten things for the candy man. Trump was the not-so-hidden hand reaching from behind the curtain, waving on the assassins. Stroking Trump almost to the last with praise, as �stronger today than in 2016�, McCarthy walked to his destiny with a knife about to be planted in his back. Immediately after the vote to remove him, Matt Gaetz stated, �I would say that my conversations with the former president leave me with great confidence that I�m doing the right thing.� McCarthy�s reward for loyalty to Trump led him into the usual cul-de-sac of Republicans trying to contain Trump. Predictably, Trump demanded what McCarthy could not deliver. �UNLESS YOU GET EVERYTHING, SHUT IT DOWN!� Everyone who decides to be involved with Trump inevitably faces an unacceptable request. In McCarthy�s case, it was shutting down the government, which would be disastrous for the razor-thin Republican majority going into an election. �If somebody wants to remove [me] because I want to be the adult in the room, go ahead and try,� McCarthy challenged his enemies. He could not bring himself in the end obviously to damage his party�s power through a shutdown. So McCarthy faced a choice of self-destruction, either losing the speakership eventually or immediately. He took his chances. Trump has mused to a rapt Iowa crowd of followers about his own possible fate: �If I�m sitting down and that boat is going down and I�m on top of a battery and the water starts flooding in, I�m getting concerned, but then I look 10 yards to my left and there�s a shark over there, so I have a choice of electrocution and a shark, you know what I�m going to take? Electrocution.� McCarthy thought he could survive by accommodating Trump. Then he somehow believed he could navigate between the rock and the hard place. But he was still eaten by the sharks. He met the fate of all the other adults in the room. At once, like a jack-in-the-box, Sean Hannity, Fox News host, popped up to float the idea of Trump as speaker. Rupert Murdoch, Hannity�s erstwhile boss, has referred to Hannity as �a moron�, and, at least according to Murdoch chronicler Michael Wolff, Hannity was playing the jester, for a jab of ratings heroin. But he is a slavish Trump stalwart, following him like a daddy figure, perhaps explained by his recent anecdote: �By the way, when my father would hit me with a belt, I didn�t actually raise my voice. We used to be the land of the free, home of the brave. What happened? When did we become the land of the snowflake?� Hannity�s cri de coeur was more revelatory of the underlying psychology of authoritarianism than anything he has ever said. Trump doesn�t need the quotidian grief of being speaker when he can direct the inmates of the asylum by remote control, and, anyway, he�s busy in and out of court. But the fake speaker ploy presented itself as a terrific, if brief, opportunity for playacting and grifting, like the fake electors scheme without the real life truth and consequences. After Trump retreated from glowering at the defendant�s table in the Manhattan courtroom for several days, using the occasion to gin up a round of contributions, Letitia James pronounced, �The Donald Trump show is over.� But once that episode of the show ended, the special episode of Speaker Trump appeared on the schedule. When he was in the courtroom, he retweeted a drawing of himself seated next to Jesus, with the caption: �This is the most accurate court sketch of all time.� Then he tweeted a photo-shopped picture of himself in the speaker�s chair, wearing a red Maga cap and in his right hand lifting up the gavel. He had passed from crucifixion to resurrection in less time than Jesus. Hail, Trump! Representative Marjorie Taylor Greene tweeted ecstatically, �If Trump becomes Speaker of the House, the chamber will be like a Trump rally everyday!! It would be the House of MAGA!!!� But this Trump candidacy was a speaker-for-a-day con. Trump announced his endorsement of Representative Jim Jordan, founder of the rightwing Freedom Caucus, who had harassed two previous Republican speakers out of their chairs, run against McCarthy and, most importantly, was a co-conspirator in the January 6 coup attempt. For the speakership, Jordan faces Representative Steve Scalise, McCarthy�s majority leader, a get-along-go-along kind of guy, a wholly owned subsidiary of the oil industry, the candidate of K Street corporate lobbyists. Jordan had stonewalled a subpoena from the House January 6 committee to testify to his involvement. He had mobilized the �Stop the Steal� movement months before the election, was the key member of the House in White House meetings plotting how to stymie the certification of the electoral college count, texted White House chief of staff Mark Meadows on 5 January to put pressure on then vice-president Mike Pence to �call out all electoral votes that he believes are unconstitutional as no electoral votes at all�, and on the phone strategizing with Trump throughout the fateful day. That evening, after the devastation, he led 139 representatives to object to certification. If section 3 of the 14th amendment, enacted after the civil war, barring former Confederates who �shall have engaged in insurrection or rebellion� from holding federal office, applies to Trump, as two prominent conservative legal scholars have argued, then even more clearly and forcefully it applied to members of Congress, including Jim Jordan. After initially agreeing that Trump should be disqualified, Federalist Society co-founder Steven Calabresi, professor of law at Northwestern University, flipped, citing an article by Michael Mukasey, former attorney general under President George W Bush, that argued the provision did not cover the former president but only members of the Congress and other �officers of the United States�. However tendentious the argument, Mukasey � and Calabresi � had inadvertently made the case for disqualifying Jordan and the others who voted against certification on 6 January 2021 from serving in office at all. McCarthy�s fall has been another stepping stone for Trump�s return to power. Trump has announced he will go to the Capitol to intervene in the speaker contest and address the House Republican Conference. The last time he wanted to visit, to march with the January 6 mob, he was restrained by a secret service agent whom he allegedly grabbed by the throat. Trump would be the only member of the J6 prison choir to come to the Capitol since then. He had joined the jailed insurrectionists who had formed a singing group by overlaying his recital of the Pledge of Allegiance on their version of The Star Spangled Banner. Trump has promised �full pardons with an apology to many� of those convicted of rampaging through the Capitol�s corridors chanting, �Hang Mike Pence!� Now, Trump says he would return there as �a unifier�. But, first, he took time to trash his former chief of staff Gen John Kelly, who confirmed on 3 October to CNN that Trump had disparaged wounded, captured and tortured soldiers as �suckers� and �losers�. Kelly offered a description of Trump: �A person that has no idea what America stands for and has no idea what America is all about � A person who admires autocrats and murderous dictators. A person that has nothing but contempt for our democratic institutions, our constitution and the rule of law. There is nothing more that can be said. God help us.� After endorsing Jim Jordan, Trump wrote on Truth Social that Kelly was �by far the dumbest of my Military people � He was incapable of doing a good job, it was too much for him, and I couldn�t stand the guy, so I fired him like a �dog.�� The �wannabe dictator�, as Gen Milley calls him, is without theory or fig leaf. As the trials bear down, as Trump contemplates the shark or electrocution, he projects his The Pit and the Pendulum terror into violent threats. The greater the fear he feels, the more violent the threats. He is stalked by Thanatos. �DEATH!� Sidney Blumenthal is the author of The Permanent Campaign, published in 1980, and All the Power of the Earth: The Political Life of Abraham Lincoln, 1856-1860, the third of a projected five volumes. He is the former assistant and senior adviser to President Bill Clinton and senior adviser to Hillary Clinton',
+    '- Some Republicans want Trump as speaker of the House
+- Trump has directed insults towards various individuals, including Gen Mark Milley, Kevin McCarthy, Letitia James, and others
+- Trumps attacks on judges, prosecutors, and witnesses are part of his larger project to undermine and demolish government institutions
+- Trumps threats and incitements are more than outbursts; they are statements of intention for his next presidency
+- Trump wants to suspend the constitution to overturn the results of the 2020 election
+- Trump has announced plans to prosecute and imprison his political opponents and to purge the federal civil service
+- Trumps language and actions are attempts to intimidate witnesses and prejudice the jury, but they also serve his political strategy to consolidate power
+- McCarthys removal as Speaker of the House was seen as an opportunity for Trump to further weaken institutions and gain control
+- Trumps candidacy as speaker was a brief opportunity for playacting and grifting
+- Jim Jordan, a co-conspirator in the January 6 coup attempt, was endorsed by Trump for the speakership
+- McCarthys fall has helped Trump in his quest to return to power
+- Trump has made threats to visit the Capitol to intervene in the speaker contest and address the House Republican Conference
+- Trump has trashed his former chief of staff Gen John Kelly after he confirmed Trumps derogatory remarks about soldiers
+- Trumps violent threats appear to increase as his fear grows',
+    1
+    );
+    ]
+[2023-10-10 14:07:20.836685] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-10 14:07:21.595791] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:07:22.112973] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '52',
+    'What is your opinion of the idea of Donald Trump becoming Speaker of the House?',
+    'I strongly support the idea of Donald Trump becoming Speaker of the House.',
+    'I somewhat support the idea of Donald Trump becoming Speaker of the House.',
+    'I somewhat oppose the idea of Donald Trump becoming Speaker of the House.',
+    'I strongly oppose the idea of Donald Trump becoming Speaker of the House.',
     '0',
     '0',
     '0',
     '0',
     0, 
     NOW(),
+
     'Daniel Ciccotosto-Camp'
     );
     ]
@@ -12479,3 +15145,205 @@ CREATE TABLE Politician_CampaignPolicies(
     ]
 [2023-10-11 14:55:21.467875] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000021E2B73BA10>]
 [2023-10-11 14:55:21.469880] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000021E2B73AF90>]
+
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:22.613409] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-10 14:07:23.115653] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'remote control',
+    'The phrase directs them by remote control implies that Trump has full control over the actions and decisions of Republicans in Congress, suggesting a biased portrayal of Trump as an authoritative figure manipulating others.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:23.617664] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:24.122932] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'DEATH!',
+    'The use of the word DEATH! in capital letters and with an exclamation mark indicates an emotionally charged statement, conveying Trumps strong negative sentiment towards Gen Mark Milley.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:24.626462] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:25.141838] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'TRAITOR!',
+    'The word TRAITOR! in capital letters suggests a highly charged and emotionally biased accusation made by Donald Trump against former Speaker of the House Kevin McCarthy, likely reflecting a strong negative sentiment.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:25.642207] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:26.143989] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Monster',
+    'The word Monster is an emotionally charged term used by Trump to describe the New York state attorney general Letitia James, indicating a strong negative sentiment and potentially biased portrayal.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:26.646674] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:27.155853] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Deranged Lunatic',
+    'The phrase Deranged Lunatic used by Trump to label the New York state attorney general Letitia James is a highly emotionally charged term, suggesting a biased and derogatory portrayal of James.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:27.662483] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:28.173360] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Crooked Joe Biden',
+    'The use of the phrase Crooked Joe Biden suggests a strong negative sentiment and potential bias against Joe Biden, portraying him as deceitful or corrupt.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:28.676534] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:29.176533] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'racist',
+    'The term racist is an emotionally charged word used by Trump to accuse Fani Willis, the Fulton county district attorney in Georgia, suggesting a biased portrayal or negative sentiment towards her.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:29.678703] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:30.198365] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Animal',
+    'The word Animal is an emotionally charged term used by Trump to describe Alvin Bragg, the Manhattan district attorney, conveying a highly negative sentiment and potentially biased characterization.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:30.699895] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:31.216141] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'Degenerate Psychopath',
+    'The phrase Degenerate Psychopath is an emotionally charged term used by Trump to describe Alvin Bragg, the Manhattan district attorney, suggesting a derogatory and biased portrayal.',
+    '52',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:31.730734] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-10 14:07:32.239127] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    5,
+    52,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-10 14:07:32.742002] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-10 14:25:56.023078] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:25:56.523135] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 52 
+    ]
+[2023-10-10 14:33:24.572494] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:33:25.091309] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 52 
+    ]
+[2023-10-10 14:37:29.032337] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 14:37:29.563123] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 4
+    WHERE ID = 52 
+    ]
+[2023-10-10 15:02:08.911279] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/commentisfree/2023/oct/09/the-greater-the-fear-trump-feels-the-more-sinister-his-threats-become"
+    ]
+[2023-10-10 15:02:09.414864] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 5
+    WHERE ID = 52 
+    ]
+[2023-10-10 15:31:44.498132] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-10 15:31:44.989451] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-10 19:09:42.682370] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020A478FED50>]
+[2023-10-10 19:09:42.699317] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020A4601E650>]
+[2023-10-10 19:09:43.192427] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
