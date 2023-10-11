@@ -39,6 +39,7 @@ function Home() {
     fetchArticles();
   }, []);
 
+  console.log(recents);
   const handleListClick = (url) => {
     setSubmitted(true);
     setText(url);

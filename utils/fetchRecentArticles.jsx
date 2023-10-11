@@ -16,6 +16,6 @@ export const fetchRecentArticles = async () => {
     }
   } catch (error) {
     console.error('Error:', error);
-    return 'Something went wrong...';
+    return [];
   }
 };

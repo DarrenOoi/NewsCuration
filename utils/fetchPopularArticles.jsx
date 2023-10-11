@@ -20,6 +20,6 @@ export const fetchPopularArticles = async (num) => {
     }
   } catch (error) {
     console.error('Error:', error);
-    return 'Something went wrong...';
+    return [];
   }
 };
