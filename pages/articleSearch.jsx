@@ -81,7 +81,7 @@ function Home() {
       fetchPoliticalFigureNames(text).then((poi) => {
         setFigureNames(poi);
       });
-      fetchPoll(url).then((poll) => {
+      fetchPoll(text).then((poll) => {
         setPoll(poll);
       });
     } else setResult(null);
@@ -175,9 +175,9 @@ function Home() {
 
                   <div className='mt-3'>
                     {result ? (
-                      <div>
+                      <div className='pb-5'>
                         <PersonOfInterest figureName={figureNames} />
-                        <Card content={result} />
+                        <Card content={result} url={text}/>
                         <Poll data={poll} url={text}/>
                       </div>
                     ) : submitted ? (
