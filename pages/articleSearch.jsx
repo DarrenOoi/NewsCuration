@@ -16,6 +16,7 @@ import Menu from '@/components/Menu';
 import Poll from '@/components/Poll';
 import PersonOfInterest from '@/components/PersonOfInterest';
 import { fetchPoliticalFigureNames } from '@/utils/fetchPoliticalFigureNames';
+import { fetchPoll } from '@/utils/fetchPoll';
 
 function Home() {
   const [text, setText] = useState('');
@@ -27,6 +28,7 @@ function Home() {
   const [popular, setPopular] = useState([]);
 
   const [figureNames, setFigureNames] = useState([]);
+  const [poll, setPoll] = useState([]);
 
   useEffect(() => {
     async function fetchArticles() {
@@ -59,8 +61,10 @@ function Home() {
       setSubmitted(false);
     });
     fetchPoliticalFigureNames(url).then((poi) => {
-      console.log('this is poi', poi);
       setFigureNames(poi);
+    });
+    fetchPoll(url).then((poll) => {
+      setPoll(poll);
     });
   };
 
@@ -75,8 +79,10 @@ function Home() {
         setSubmitted(false);
       });
       fetchPoliticalFigureNames(text).then((poi) => {
-        console.log('this is poi', poi);
         setFigureNames(poi);
+      });
+      fetchPoll(url).then((poll) => {
+        setPoll(poll);
       });
     } else setResult(null);
   };
@@ -172,7 +178,7 @@ function Home() {
                       <div>
                         <PersonOfInterest figureName={figureNames} />
                         <Card content={result} />
-                        <Poll url={text} />
+                        <Poll data={poll} />
                       </div>
                     ) : submitted ? (
                       <Card

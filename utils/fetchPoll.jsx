@@ -10,7 +10,7 @@ export const fetchPoll = async (url) => {
 
     if (response.ok) {
       const responseResult = await response.json();
-      return responseResult.Result;
+      return responseResult;
     } else {
       console.error('Request failed:', response.status, response.statusText);
       return 'Something went wrong';

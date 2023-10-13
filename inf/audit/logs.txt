@@ -22340,3 +22340,931 @@ Expected=2.  Actual=0.  Position: 1.  Data Length: 1]
     ORDER BY Views DESC
     LIMIT 4
     ]
+[2023-10-13 21:05:01.968107] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CA8C8228D0>]
+[2023-10-13 21:05:01.983589] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CAFAFE67D0>]
+[2023-10-13 21:05:02.486450] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 21:05:18.284595] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:05:19.992429] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:05:20.496435] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:05:21.009289] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 21:05:21.511411] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:05:22.008676] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:05:22.525247] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:05:23.027246] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:05:23.525331] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 21:05:24.039331] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:05:24.532945] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:05:25.044575] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:05:25.550762] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 47
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:06:13.127842] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:06:14.983262] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:06:15.496627] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 48
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:08:42.244853] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:08:44.082816] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:08:44.589348] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 49
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:13:58.214169] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:14:05.528724] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:14:18.836763] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:14:19.375285] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:14:21.325985] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:14:29.832764] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:14:32.409220] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:14:34.426900] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:15:40.809224] [Manav Trivedi] [FAIL] [error building sql statement with error index out of range]
+a buffer of at least 9 bytes for unpacking 8 bytes at offset 1 (actual buffer size is 5)]
+[2023-10-13 21:16:02.502868] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 21:16:18.917814] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 21:17:24.992028] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 21:17:25.026156] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 21:17:40.592395] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000153C8C661D0>]
+[2023-10-13 21:17:40.605350] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000153C9AAEAD0>]
+[2023-10-13 21:17:41.099130] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 21:17:45.220027] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:17:51.049419] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:17:51.549627] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:17:52.055457] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 21:17:52.557182] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:17:53.060321] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:17:53.559743] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:17:54.063015] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 50
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:17:54.567894] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:17:55.066990] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:17:55.569602] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 21:17:56.074815] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:17:56.579228] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:17:57.081320] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:17:57.580555] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:17:58.079615] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 21:17:58.589580] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:17:59.089233] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:18:43.185119] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:18:46.038026] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:18:46.548402] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 51
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:19:18.270175] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:19:20.098831] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:19:20.601281] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 52
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:19:35.392559] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:19:37.113210] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:19:37.602912] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 53
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:20:06.880450] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:23:11.498019] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:23:12.004534] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 54
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:24:34.687004] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:24:36.358452] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:24:36.875086] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 55
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:25:07.586083] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:25:10.718538] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:25:11.216202] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 56
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:25:22.494508] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:25:23.824057] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:25:24.359692] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 57
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:26:37.425025] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:27:07.399191] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:27:07.903444] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 58
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:28:02.759248] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:28:04.935840] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:28:05.439906] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 59
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:28:15.897010] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:28:17.500823] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:28:17.997289] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 60
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:28:46.618179] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:29:20.289204] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:29:20.787930] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 61
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:30:35.206953] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:30:36.722438] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 21:30:37.222980] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:37.716328] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:38.219923] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:38.723863] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 21:30:39.227489] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:39.735878] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:40.245304] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:40.779171] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 21:30:41.283082] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:41.780080] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:42.278905] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 21:30:42.783121] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 21:30:43.301574] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 13
+    WHERE ID = 8 
+    ]
+[2023-10-13 21:41:03.973921] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:42:42.460575] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:42:42.961818] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:43.478250] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 21:42:43.964323] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:44.463048] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:44.967306] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:42:45.480326] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:45.980184] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 21:42:46.482599] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:46.982802] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:47.487881] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:42:47.982713] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:48.482619] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 21:42:48.999094] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:49.499254] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 21:42:49.999314] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:42:50.517216] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 62
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:42:56.886705] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:42:58.957419] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:42:59.456231] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 63
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:43:03.957534] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:46:05.883798] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:46:06.394166] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 64
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:46:15.435548] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:46:16.653686] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:46:17.174869] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 65
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:48:43.902956] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:48:45.897595] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:48:46.398333] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 66
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:50:08.292677] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:50:40.655881] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:50:41.141715] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 67
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:50:59.825314] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:51:09.476301] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:51:09.978724] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 68
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:52:12.557533] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:52:13.739380] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:52:14.240970] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 69
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:53:18.434490] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:53:19.766022] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:53:20.270646] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 70
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:54:49.760952] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:54:52.480847] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:54:52.982836] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 71
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:55:27.213912] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:56:14.866924] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:56:15.355906] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 72
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:56:55.207592] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:57:15.099405] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:57:16.083298] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 73
+    WHERE ID = 5 
+    ]
+[2023-10-13 21:58:37.372297] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 21:58:53.431638] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 21:58:53.930760] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 74
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:00:40.334859] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:00:42.242665] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:00:42.736076] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 75
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:02:01.367054] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:02:03.404321] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:02:03.906959] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 76
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:03:25.314965] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:03:27.648509] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:03:28.378188] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 77
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:05:37.847307] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:05:39.303071] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:05:39.788875] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 78
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:06:15.269262] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:06:21.080531] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:06:21.570102] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 79
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:10:48.452331] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:10:59.006251] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:10:59.523231] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 80
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:13:34.838598] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:14:59.291926] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:14:59.792540] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 81
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:16:24.669284] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:16:26.040861] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:16:26.572794] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 82
+    WHERE ID = 5 
+    ]
+[2023-10-13 22:16:44.185981] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 22:17:54.100267] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 22:17:54.618974] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 83
+    WHERE ID = 5 
+    ]
