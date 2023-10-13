@@ -1,6 +1,6 @@
-export const fetchSavedArticles = async () => {
+export const fetchPoliticalFigureNames = async () => {
     try {
-        const response = await fetch('http://localhost:5000/GetSavedArticles', {
+        const response = await fetch('http://localhost:5000/GetPoliticalFigureNames', {
             method: 'POST',
             header: {
                 'Content-Type': 'application/json',
@@ -19,4 +19,4 @@ export const fetchSavedArticles = async () => {
       console.error('Error:', error);
       return [];
     }
-};
+}

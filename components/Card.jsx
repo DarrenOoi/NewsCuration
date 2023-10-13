@@ -1,8 +1,30 @@
 import Image from 'next/image';
 import Pic from "./pictures/pic.png"
 import Clipboard from "./pictures/clipboard.png"
+import { fetchPoliticalFigureNames } from '@/utils/fetchPoliticalFigureNames';
+import { useState, useEffect } from 'react';
 
 const Card = ({ title, content, highlight = false, biasWords }) => {
+  const [figureNames, setFigureNames] = useState([]);
+
+  useEffect(() => {
+    async function fetchFigureNames() {
+      try {
+        const [figureNames] = await Promise.all([
+          fetchPoliticalFigureNames(),
+        ]);
+        
+        console.log(figureNames)
+
+        setFigureNames(figureNames);
+      } catch (error) {
+        console.log('Error:', error);
+      }
+    }
+
+    fetchFigureNames();
+  }, []);
+
   let phrases = [];
   let keys = [];
   if (highlight && content && biasWords) {
@@ -26,7 +48,7 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
               height={18}
             />
 
-            <p className="text-xs font-bold text-black">FIRSTNAME LASTNAME</p>
+            <p className="text-xs font-bold text-black">{figureNames}</p>
 
             <button className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs">
               VISIT PROFILE
@@ -65,7 +87,7 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
           )}
         </div>
         
-        <div>
+        <div className="flex flex-row items-end">
           <button onClick={copy} className="mt-6 btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
           <Image
               src={Clipboard}
