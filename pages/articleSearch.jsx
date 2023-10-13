@@ -14,6 +14,9 @@ import { fetchRecentArticles } from '@/utils/fetchRecentArticles';
 import { fetchPopularArticles } from '@/utils/fetchPopularArticles';
 import Menu from '@/components/Menu';
 import Poll from '@/components/Poll';
+import PersonOfInterest from '@/components/PersonOfInterest';
+import { fetchPoliticalFigureNames } from '@/utils/fetchPoliticalFigureNames';
+import { fetchPoll } from '@/utils/fetchPoll';
 
 function Home() {
   const [text, setText] = useState('');
@@ -23,6 +26,9 @@ function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [recents, setRecents] = useState([]);
   const [popular, setPopular] = useState([]);
+
+  const [figureNames, setFigureNames] = useState([]);
+  const [poll, setPoll] = useState([]);
 
   useEffect(() => {
     async function fetchArticles() {
@@ -54,6 +60,12 @@ function Home() {
       setArticle(result.article);
       setSubmitted(false);
     });
+    fetchPoliticalFigureNames(url).then((poi) => {
+      setFigureNames(poi);
+    });
+    fetchPoll(url).then((poll) => {
+      setPoll(poll);
+    });
   };
 
   const handleSubmit = () => {
@@ -65,6 +77,12 @@ function Home() {
         setHeader(result.header);
         setArticle(result.article);
         setSubmitted(false);
+      });
+      fetchPoliticalFigureNames(text).then((poi) => {
+        setFigureNames(poi);
+      });
+      fetchPoll(url).then((poll) => {
+        setPoll(poll);
       });
     } else setResult(null);
   };
@@ -155,11 +173,12 @@ function Home() {
                     </button>
                   </div>
 
-                  <div className='mt-5'>
+                  <div className='mt-3'>
                     {result ? (
                       <div>
+                        <PersonOfInterest figureName={figureNames} />
                         <Card content={result} />
-                        <Poll />
+                        <Poll data={poll} url={text}/>
                       </div>
                     ) : submitted ? (
                       <Card
