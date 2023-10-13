@@ -14,7 +14,7 @@ import { fetchRecentArticles } from '@/utils/fetchRecentArticles';
 import { fetchPopularArticles } from '@/utils/fetchPopularArticles';
 import Menu from '@/components/Menu';
 import Poll from '@/components/Poll';
-import PersonOfInterest from "@/components/PersonOfInterest"
+import PersonOfInterest from '@/components/PersonOfInterest';
 import { fetchPoliticalFigureNames } from '@/utils/fetchPoliticalFigureNames';
 
 function Home() {
@@ -58,9 +58,10 @@ function Home() {
       setArticle(result.article);
       setSubmitted(false);
     });
-    fetchPoliticalFigureNames(url).then((result)=>{
-        console.log(result)
-      })
+    fetchPoliticalFigureNames(url).then((poi) => {
+      console.log('this is poi', poi);
+      setFigureNames(poi);
+    });
   };
 
   const handleSubmit = () => {
@@ -73,14 +74,13 @@ function Home() {
         setArticle(result.article);
         setSubmitted(false);
       });
-      fetchPoliticalFigureNames(text).then((result)=>{
-        console.log(result)
-      })
+      fetchPoliticalFigureNames(text).then((poi) => {
+        console.log('this is poi', poi);
+        setFigureNames(poi);
+      });
     } else setResult(null);
   };
   const router = useRouter();
-
-
 
   const handleClick = () => {
     router.push({
@@ -167,13 +167,12 @@ function Home() {
                     </button>
                   </div>
 
-                  <PersonOfInterest figureName={figureNames}/>
-
                   <div className='mt-3'>
                     {result ? (
                       <div>
+                        <PersonOfInterest figureName={figureNames} />
                         <Card content={result} />
-                        <Poll url={text}/>
+                        <Poll url={text} />
                       </div>
                     ) : submitted ? (
                       <Card
