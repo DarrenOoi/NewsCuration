@@ -10,7 +10,6 @@ const Poll = ({ url, data }) => {
     const [selectedOption, setSelectedOption] = useState(null);
     const [buttonsDisabled, setButtonsDisabled] = useState(false);
     const [showVotes, setShowVotes] = useState(false);
-    const [poll, setPoll] = useState([]);
 
     const handleOptionSelect = (index) => {
         if (!buttonsDisabled) {
@@ -25,9 +24,9 @@ const Poll = ({ url, data }) => {
         sendPollOption(url, index);
         */
     }
-  
 
   return (
+    
     <div className='flex justify-center'>
       <div
         className='mt-3 card bg-white p-6 rounded-xl'

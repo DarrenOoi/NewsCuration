@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Clipboard from "./pictures/clipboard.png"
 
-const Card = ({ title, content, highlight = false, biasWords }) => {
+const Card = ({ title, content, highlight = false, biasWords, url}) => {
 
   let phrases = [];
   let keys = [];
@@ -47,7 +47,7 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
           )}
         </div>
         
-        <div className="flex flex-row items-center mt-6">
+        <div className="flex flex-row items-center space-x-6 mt-6">
           <button onClick={copy} className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
           <Image
               src={Clipboard}
@@ -55,6 +55,9 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
               height={13}
             />
             COPY TO CLIPBOARD
+          </button>
+          <button onClick={copy} className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
+           + SAVE PAGE SEARCH
           </button>
         </div>
 
