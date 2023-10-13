@@ -19397,3 +19397,587 @@ CREATE TABLE Politician_CampaignPolicies(
 [2023-10-11 20:45:44.753021] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
 [2023-10-11 20:46:33.601740] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
 [2023-10-11 20:47:18.050742] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-11 20:52:06.897976] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002382F8D8810>]
+[2023-10-11 20:52:06.897976] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002382F8C36D0>]
+[2023-10-11 20:52:08.118986] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-11 20:52:15.196176] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:52:17.853416] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:52:26.665079] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 20:52:27.639677] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 20:52:29.118851] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-11 20:52:30.196186] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 20:52:31.121737] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-11 20:52:32.189824] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 20:52:33.321547] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 13
+    WHERE ID = 5 
+    ]
+[2023-10-11 20:52:42.524081] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:52:46.465173] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 20:52:47.863047] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 20:52:49.494480] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 20:52:50.929968] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 20:52:52.159003] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 20:52:55.645191] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 8 
+    ]
+[2023-10-11 20:53:07.559383] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:53:30.643927] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-11 20:54:21.596593] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:54:34.196539] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 20:54:36.492693] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 4
+    WHERE ID = 8 
+    ]
+[2023-10-11 20:54:46.588261] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:54:52.369157] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-11 20:54:57.692921] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:55:00.332309] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:55:01.481720] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-11 20:55:03.029557] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-11 20:55:04.184284] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6',
+    0.6666666666666666,
+    0.0,
+    0, 
+    NOW(),
+    'DarrenOoi',
+    'Battling cancer, the Father of Reconciliation makes last-ditch Voice plea',
+    'Labor senator and National Referendum Council co-chair Pat Dodson says the impact of a No vote is too awful to contemplate. Source: AAP / Lukas Coch Share this with family and friends World World Middle East World Life Australia Australia World Morning (Mon–Fri) Afternoon (Mon–Fri) Weekend By subscribing, you agree to SBS’s terms of service and privacy policy including receiving email updates from SBS. SBS World News',
+    '- Labor senator and National Referendum Council co-chair Pat Dodson expresses concern over the potential impact of a No vote
+- The article discusses Dodsons battle with cancer
+- Dodson makes a plea for people to vote in favor of reconciliation
+- Dodsons role as co-chair of the National Referendum Council is mentioned
+- The potential consequences of a No vote are emphasized',
+    1
+    );
+    ]
+[2023-10-11 20:55:05.245412] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-11 20:55:06.394833] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-11 20:55:07.734761] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '13',
+    'What is your opinion on the impact of a No vote?',
+    'It would be disastrous for the country',
+    'It would have negative consequences',
+    'It would be detrimental to progress',
+    'It would be a setback for equality',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 20:55:08.897998] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-11 20:55:09.989603] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'awful',
+    'The word awful is emotionally charged as it conveys a strong negative feeling, suggesting that the consequences of a No vote are extremely negative and difficult to bear.',
+    13,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-11 20:55:11.110065] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-11 20:55:14.443702] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:55:16.443718] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-11 20:55:17.742048] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-11 20:55:18.992237] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 13 
+    ]
+[2023-10-11 20:55:20.321874] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-11 20:55:40.400112] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:55:51.659359] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-11 20:55:52.747840] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 13 
+    ]
+[2023-10-11 20:56:13.164804] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:56:21.924210] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-11 20:56:24.125635] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-11 20:56:29.851113] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:56:39.219079] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-11 20:56:40.815371] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 14
+    WHERE ID = 5 
+    ]
+[2023-10-11 20:57:26.783982] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-11 20:57:51.047309] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 20:57:55.637710] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 20:58:20.953513] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 20:58:22.193440] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-11 20:58:24.338846] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-11 20:58:25.869609] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 5
+    WHERE ID = 8 
+    ]
+[2023-10-11 20:58:42.461434] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:36:27.375998] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000019AC2E96810>]
+[2023-10-13 15:36:27.391255] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000019AB2C5FCD0>]
+[2023-10-13 15:36:28.694659] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 15:37:07.511720] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:37:11.847236] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 15:37:13.145101] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 15:37:14.162406] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 15:37:15.302424] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 15:37:16.626793] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 15:37:17.850963] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 6
+    WHERE ID = 8 
+    ]
+[2023-10-13 15:39:56.232913] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:39:59.127796] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 15:40:00.675486] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 7
+    WHERE ID = 8 
+    ]
+[2023-10-13 15:40:50.396535] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:40:53.948742] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 15:40:55.070298] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 8
+    WHERE ID = 8 
+    ]
+[2023-10-13 15:41:28.554137] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:41:32.052799] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 15:41:33.453055] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 9
+    WHERE ID = 8 
+    ]
+[2023-10-13 15:49:49.916560] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:49:53.973126] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-13 15:49:54.904072] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 15:49:55.860329] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 15:49:56.983569] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 15:49:58.055355] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-13 15:49:59.201725] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 4
+    WHERE ID = 13 
+    ]
+[2023-10-13 15:51:13.024852] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:51:15.487669] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 15:51:16.598383] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 15:51:18.043129] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 15:51:19.165883] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 15:51:20.500375] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 15:51:21.832003] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 15:51:22.897973] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 16
+    WHERE ID = 5 
+    ]
+[2023-10-13 15:52:17.332916] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:52:20.652917] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-13 15:52:22.032149] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 5
+    WHERE ID = 13 
+    ]
+[2023-10-13 15:57:37.900585] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:57:40.104305] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:57:44.090104] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-13 15:57:45.361480] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 6
+    WHERE ID = 13 
+    ]
+[2023-10-13 15:58:13.963293] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 15:58:18.727873] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 15:58:19.826866] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 15:58:20.958129] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 15:58:22.115102] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-13 15:58:23.675599] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 15:58:24.748658] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 10
+    WHERE ID = 8 
+    ]
+[2023-10-13 16:01:56.963280] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 16:01:59.170964] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 16:02:00.345283] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 17
+    WHERE ID = 5 
+    ]
+[2023-10-13 16:02:16.886386] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
