@@ -21,11 +21,9 @@ const Poll = ({ url, data }) => {
     };
 
     const updateVotes = ({index}) => {
-        
+        /**
         sendPollOption(url, index);
-        /**.then((poll) => {
-            setPoll(poll);
-            console.log(poll); */
+        */
     }
   
 
