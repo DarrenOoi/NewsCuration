@@ -3,12 +3,14 @@ import Comment from './Comment';
 import Image from 'next/image';
 import Pic from './pictures/pic.png';
 import React, { useState } from 'react';
+import { sendPollOption } from '@/utils/sendPollOption';
 
-const Poll = ({ data }) => {
+const Poll = ({ url, data }) => {
 
     const [selectedOption, setSelectedOption] = useState(null);
     const [buttonsDisabled, setButtonsDisabled] = useState(false);
     const [showVotes, setShowVotes] = useState(false);
+    const [poll, setPoll] = useState([]);
 
     const handleOptionSelect = (index) => {
         if (!buttonsDisabled) {
@@ -20,7 +22,12 @@ const Poll = ({ data }) => {
 
     const updateVotes = ({index}) => {
         
+        sendPollOption(url, index);
+        /**.then((poll) => {
+            setPoll(poll);
+            console.log(poll); */
     }
+  
 
   return (
     <div className='flex justify-center'>
