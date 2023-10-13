@@ -59,7 +59,7 @@ function ProfileSearch() {
       setResult(null);
       router.push({
         pathname: '/profilePage',
-        query: { name: 'John Doe' },
+        query: { name: 'Donald Trump' },
       });
     } else setResult(null);
   };

@@ -9,11 +9,13 @@ import { fetchPolitician } from '@/utils/fetchPolitician';
 import { useEffect, useState } from 'react';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import Input from '@/components/Input';
+import { fetchCampaign } from '@/utils/fetchCampaign';
 
 function ProfilePage() {
   const router = useRouter();
   const { name } = router.query;
   const [politician, setPolitician] = useState(null);
+  const [campaign, setCampaign] = useState(null);
 
   useEffect(() => {
     async function fetchPoliticianData() {
@@ -21,6 +23,11 @@ function ProfilePage() {
         try {
           const res = await fetchPolitician(name);
           setPolitician(res);
+          const campaign = await fetchCampaign(name);
+          // console.log(campaign);
+          if (campaign.length > 0) {
+            setCampaign(campaign);
+          }
         } catch (error) {
           //add error handling when request fails
           console.log('error');
@@ -34,26 +41,10 @@ function ProfilePage() {
 
   const flagUrl = findFlagUrlByCountryName('United States');
   const array = politician?.Articles;
-  // const array = [
-  //   {
-  //     title: 'Sample Article 1',
-  //     date: '2023-09-13',
-  //     source: 'Sample Source 1',
-  //     score: 69,
-  //   },
-  //   {
-  //     title: 'Sample Article 2',
-  //     date: '2023-09-14',
-  //     source: 'Sample Source 2',
-  //     score: 33,
-  //   },
-  //   {
-  //     title: 'Sample Article 3',
-  //     date: '2023-09-15',
-  //     source: 'Sample Source 3',
-  //     score: 78,
-  //   },
-  // ];
+
+  const handleViewCampaign = () => {
+    router.push('/campaignPage');
+  };
 
   return (
     <div>
@@ -95,6 +86,23 @@ function ProfilePage() {
                   <div className='flex justify-center space-x-20 my-2'>
                     {politician ? (
                       <div className='rounded-3xl bg-white m-5'>
+                        {/* campaign banner  */}
+                        {campaign && (
+                          <div className='bg-[#FFEDD5] rounded-xl h-12 flex items-center'>
+                            <p className='text-xl text-[#FFB039] font-bold ml-8 mr-auto'>
+                              ● LIVE
+                            </p>
+
+                            <button
+                              className={
+                                'btn btn-ghost btn-sm text-[#FFB039] text-xs ml-auto mr-5'
+                              }
+                              onClick={handleViewCampaign}
+                            >
+                              CLICK TO VIEW CAMPAIGN DETAILS
+                            </button>
+                          </div>
+                        )}
                         <div className='hero-content lg:flex-row mx-5 my-3'>
                           <div>
                             <img

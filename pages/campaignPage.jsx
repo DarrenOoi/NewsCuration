@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 import { fetchPolitician } from '@/utils/fetchPolitician';
 import { useEffect, useState } from 'react';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
-import Input from '@/components/Input';
 
 function campaignPage() {
   const router = useRouter();
@@ -42,11 +41,108 @@ function campaignPage() {
                     <div
                       className='rounded-3xl bg-white my-5 mx-2 w-full'
                       style={{ height: '625px' }}
-                    ></div>
+                    >
+                      <div className='hero-content lg:flex-row mx-5'>
+                        <div>
+                          <img
+                            // src={politician?.ImageLink}
+                            src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
+                            className='max-w-sm rounded-lg '
+                            style={{ width: '150px', height: '175px' }}
+                          />
+                        </div>
+                        <div
+                          className='mb-24'
+                          style={{ width: '325px', height: '125px' }}
+                        >
+                          <p className='text-2xl font-bold my-2'>John Doe</p>
+                          <p className='text-xs text-gray-400	'>
+                            Ut enim ad minim veniam
+                          </p>
+                          <p className='text-l font-bold mt-2'>
+                            Campaign Promise
+                          </p>
+                          {/* orange line */}
+                          <div
+                            className='ml-auto mr-40'
+                            style={{
+                              backgroundColor: '#FFB039',
+                              height: '2px',
+                              width: '200px',
+                            }}
+                          />
+                          <p className='text-s mr-10'>
+                            {' '}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Nulla metus orci, venenatis dictum dolor a,
+                            scelerisque egestas dui.
+                          </p>
+                          {/* orange line */}
+                          <div
+                            className='ml-auto mr-40 mt-1'
+                            style={{
+                              backgroundColor: '#FFB039',
+                              height: '2px',
+                              width: '200px',
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <p className='text-l font-bold ml-10'>Key Policies</p>{' '}
+                    </div>
                     <div
                       className='rounded-3xl bg-white my-5 mx-2 w-full'
                       style={{ height: '625px' }}
-                    ></div>
+                    >
+                      {' '}
+                      <div className='hero-content lg:flex-row mx-5'>
+                        <div>
+                          <img
+                            // src={politician?.ImageLink}
+                            src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
+                            className='max-w-sm rounded-lg'
+                            style={{ width: '150px', height: '175px' }}
+                          />
+                        </div>
+                        <div
+                          className='mb-24'
+                          style={{ width: '325px', height: '125px' }}
+                        >
+                          <p className='text-2xl font-bold my-2'>John Doe</p>
+                          <p className='text-xs text-gray-400	'>
+                            Ut enim ad minim veniam
+                          </p>
+                          <p className='text-l font-bold mt-2'>
+                            Campaign Promise
+                          </p>
+                          {/* orange line */}
+                          <div
+                            className='ml-auto mr-40'
+                            style={{
+                              backgroundColor: '#FFB039',
+                              height: '2px',
+                              width: '200px',
+                            }}
+                          />
+                          <p className='text-s mr-10'>
+                            {' '}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Nulla metus orci, venenatis dictum dolor a,
+                            scelerisque egestas dui.
+                          </p>
+                          {/* orange line */}
+                          <div
+                            className='ml-auto mr-40 mt-1'
+                            style={{
+                              backgroundColor: '#FFB039',
+                              height: '2px',
+                              width: '200px',
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <p className='text-l font-bold ml-10'>Key Policies</p>{' '}
+                    </div>
                   </div>
                 </div>
               </div>
