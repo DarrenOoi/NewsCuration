@@ -38,18 +38,24 @@ const Poll = ({ url, data }) => {
         </div>
 
         <div className='mt-5 ml-5 flex flex-col space-y-3'>
-            {data.results.map((results, index) => (
-                <PollOption 
-                    key={index} 
-                    text={results.opinion} 
-                    votes={results.votes}
-                    isClicked={index === selectedOption}
-                    onClick={() => {handleOptionSelect(index);
-                                    updateVotes(index)}}
-                    disabled={buttonsDisabled}
-                    showVotes={showVotes}
-                />
-            ))}
+        {data.results ? (
+            data.results.map((result, index) => (
+              <PollOption 
+                key={index} 
+                text={result.opinion} 
+                votes={result.votes}
+                isClicked={index === selectedOption}
+                onClick={() => {
+                  handleOptionSelect(index);
+                  updateVotes(index);
+                }}
+                disabled={buttonsDisabled}
+                showVotes={showVotes}
+              />
+            ))
+          ) : (
+            <p>No results available.</p>
+          )}
         </div>
 
         <div className='mt-10'>
