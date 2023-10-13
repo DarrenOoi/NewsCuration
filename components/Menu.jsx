@@ -10,7 +10,7 @@ const Menu = ({currentPage}) => {
     useEffect(() => {
         async function fetchArticles() {
           try {
-            const [saved] = await Promise.all([
+            const saved = await Promise.all([
               fetchSavedArticles(),
             ]);
             
@@ -51,7 +51,7 @@ const Menu = ({currentPage}) => {
                     PROFILE SEARCH
                 </button>
             </div>
-            <SavedDropdown className="mt14" items={saved} />
+            <SavedDropdown items={saved} />
         </div>
     );
 };

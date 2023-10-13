@@ -1,6 +1,6 @@
-export const fetchPoliticalFigureNames = async (url) => {
+export const fetchPoll = async (url) => {
     try {
-        const response = await fetch('http://localhost:5000/getPoliticalFigureNames', {
+        const response = await fetch('http://localhost:5000/GetPoll', {
             method: 'POST',
             header: {
                 'Content-Type': 'application/json',
@@ -11,7 +11,7 @@ export const fetchPoliticalFigureNames = async (url) => {
 
     if (response.ok) {
         const responseResult = await response.json();
-        return responseResult.poi;
+        return responseResult.Result;
       } else {
         console.error('Request failed:', response.status, response.statusText);
         return 'Something went wrong';

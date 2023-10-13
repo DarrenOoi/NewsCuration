@@ -19549,3 +19549,2395 @@ CREATE TABLE Politician_CampaignPolicies(
     FROM Article
     WHERE URL = "eee"
     ]
+[2023-10-13 17:28:58.705928] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 17:29:00.539555] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-13 17:29:01.066101] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 12
+    WHERE ID = 8 
+    ]
+[2023-10-13 17:37:06.813471] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 17:38:18.465639] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 17:38:18.998751] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 20
+    WHERE ID = 5 
+    ]
+[2023-10-13 17:38:30.898540] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 17:38:32.837221] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-13 17:38:33.338258] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 17:38:33.838483] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 17:38:34.354977] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 17:38:34.888411] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-13 17:38:35.407508] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 7
+    WHERE ID = 13 
+    ]
+[2023-10-13 17:38:51.613246] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/biden-trump-comments-dangerous-israel-hamas"
+    ]
+[2023-10-13 17:39:03.237155] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 17:39:11.110373] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 17:39:11.681813] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/biden-trump-comments-dangerous-israel-hamas"
+    ]
+[2023-10-13 17:39:12.213104] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/biden-trump-comments-dangerous-israel-hamas"
+    ]
+[2023-10-13 17:39:13.212948] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.theguardian.com/us-news/2023/oct/12/biden-trump-comments-dangerous-israel-hamas',
+    0.6666666666666666,
+    0.5151515151515151,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    'Biden White House condemns Trump’s ‘dangerous’ Israel-Hamas remarks',
+    '2024 Republican frontrunner called Hezbollah militant group ‘very smart’, prompting a stern reaction from the White House Joe Biden and Donald Trump continued to clash over the Israel-Hamas war on Thursday as a White House spokesman rebuked the former US president for what he called “dangerous and unhinged” comments about the conflict. Hamas, an Iran-backed militant group based in Gaza, launched attacks on Israel on Saturday, killing more than 1,000 people and taking more than 100 hostage. Israeli air strikes have subsequently killed more than 1,000 people and significantly worsened the humanitarian situation in Gaza. A ground invasion is thought likely. Speaking in Florida on Wednesday, Trump, the Republican frontrunner to take on Biden next year, called Hezbollah – a Lebanese group also backed by Iran and supportive of Hamas – “very smart” and the Israeli defense minister, Yoav Gallant, “a jerk”. Around the world, the question of what the Israeli government knew about the attacks in advance continues to be debated and Trump weighed in on the issue and slammed the Israeli government. Benjamin Netanyahu, the Israeli prime minister, had been “hurt very badly”, Trump said, adding: “He was not prepared. He was not prepared and Israel was not prepared. And under Trump, they wouldn’t have had to be prepared. You know, Hezbollah is very smart. They’re all very smart.” Israel’s enemies, he said, were “vicious and they’re smart and boy, are they vicious”. Those comments prompted a stern reaction from the White House. “Statements like this are dangerous and unhinged,” said Andrew Bates, the deputy White House press secretary. “It’s completely lost on us why any American would ever praise an Iran-backed terrorist organisation as ‘smart’ or have any objection to the United States warning terrorists not to attack Israel.” “This is a time for all of us to stand shoulder to shoulder with Israel against unadulterated evil.” Trump also said Netanyahu “let us down” by choosing not to participate in the US drone killing of Qassem Soleimani, a top Iranian general, in Iraq in January 2020. “I’ll never forget that Bibi Netanyahu let us down,” Trump said. “That was a very terrible thing.” Tensions between Trump and Netanyahu have long been reported. In December 2021, for instance, Trump told the Axios reporter Barak Ravid he had not spoken to Netanyahu since leaving office nearly a year before. “I haven’t spoken to him since,” Trump said. According to Ravid, “the final straw for Trump was when Netanyahu congratulated President-elect Biden for his election victory while Trump was still disputing the result”. In Tel Aviv on Friday, Biden’s secretary of state, Antony Blinken, told Netanyahu: “You may be strong enough on your own to defend yourselves, but as long as America exists you will never have to. We will always be there by your side.” Trump and Republicans claim Biden bears responsibility for the Hamas attack. But the Biden White House was not alone in criticising Trump’s Wednesday remarks. Ron DeSantis, the Florida governor who is Trump’s closest – if distant – challenger in Republican polling, said: “It is absurd that anyone, much less someone running for president, would choose now to attack our friend and ally, Israel.” Steven Cheung, a spokesperson for Trump, said he “was clearly pointing out how incompetent Biden and his administration were by telegraphing to the terrorists an area that is susceptible to an attack. Smart does not equal good”. But the Israeli communications minister, Shlomo Karhi, said Trump’s comments showed he could not be relied on. It is “shameful that a man like that, a former US president, abets propaganda and disseminates things that wound the spirit of Israel’s fighters and its citizens”, Karhi told Channel 13. Reuters contributed reporting',
+    '- Joe Biden and Donald Trump have clashed over the Israel-Hamas war
+- The White House has criticized Trump for his remarks about the conflict, calling them "dangerous and unhinged"
+- Trump called Hezbollah, a Lebanese group supportive of Hamas, "very smart" and criticized the Israeli defense minister
+- The question of what the Israeli government knew about the attacks in advance is being debated
+- The White House finds Trumps comments praising an Iran-backed terrorist organization concerning and praises standing with Israel against evil
+- Trump also criticized Netanyahu for not participating in the US drone killing of an Iranian general
+- Tensions between Trump and Netanyahu have been reported and Trump has not spoken to Netanyahu since leaving office
+- Ron DeSantis, a Florida governor and Trumps challenger, criticized Trump for attacking Israel
+- The Biden administration denies responsibility for the Hamas attack and emphasizes their support for Israel
+- There are differing opinions on Trumps comments, with some criticizing him and others defending him',
+    1
+    );
+    ]
+[2023-10-13 17:39:14.231634] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-13 17:39:15.249620] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/biden-trump-comments-dangerous-israel-hamas"
+    ]
+[2023-10-13 17:39:15.749292] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '14',
+    'What is your opinion on the comments made by Donald Trump regarding Hezbollah and the Israeli government?',
+    'Donald Trumps comments were dangerous and unhinged.',
+    'Donald Trumps comments were justified and insightful.',
+    'Donald Trumps comments were inappropriate but highlight Bidens incompetence.',
+    'Donald Trumps comments were irrelevant and unimportant.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:39:16.285382] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-13 17:39:16.802526] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'dangerous and unhinged',
+    'The White House spokesman describes Trumps comments as dangerous and unhinged, suggesting that they are irrational and potentially harmful.',
+    14,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:39:17.324090] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:39:17.835506] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'very smart',
+    'Trumps description of Hezbollah as very smart is potentially biased as it portrays the militant group in a positive light, without acknowledging any negative actions or consequences associated with their activities.',
+    14,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:39:18.835606] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:39:19.368859] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'a jerk',
+    'Trumps derogatory remark about Yoav Gallant, the Israeli defense minister, may suggest a biased or disrespectful attitude towards him.',
+    14,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:39:19.909682] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:39:20.441534] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'hurt very badly',
+    'Trumps statement that Benjamin Netanyahu, the Israeli prime minister, had been hurt very badly could be seen as biased or sympathetic towards Netanyahu, without providing any context or evidence to support the claim.',
+    14,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:39:20.974492] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:39:21.493428] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'unadulterated evil',
+    'The White House refers to the actions of Israels enemies as unadulterated evil, which suggests a strong negative judgment without considering any potential complexities or alternative perspectives.',
+    14,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:39:22.022315] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:39:22.558061] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    14,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:39:23.577242] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-13 17:39:31.998846] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 17:39:41.769759] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 17:39:43.320855] [Manav Trivedi] [FAIL] [error building sql statement with error Protocol error, expecting EOF]
+[2023-10-13 17:39:43.320855] [Manav Trivedi] [FAIL] [error building sql statement with error unpack_from requires a buffer of at least 9 bytes for unpacking 8 bytes at offset 1 (actual buffer size is 5)]
+[2023-10-13 17:40:09.410231] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 17:41:38.344150] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CC91050990>]
+[2023-10-13 17:41:38.344150] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CC8FF9E110>]
+[2023-10-13 17:41:38.842811] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 17:41:56.122295] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.canberratimes.com.au/story/8385072/trump-condemned-for-shameful-remarks-on-middle-east/"
+    ]
+[2023-10-13 17:41:58.035172] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 17:41:59.181300] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 17:41:59.822635] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.canberratimes.com.au/story/8385072/trump-condemned-for-shameful-remarks-on-middle-east/"
+    ]
+[2023-10-13 17:42:00.515498] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.canberratimes.com.au/story/8385072/trump-condemned-for-shameful-remarks-on-middle-east/"
+    ]
+[2023-10-13 17:42:05.345857] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.canberratimes.com.au/story/8385072/trump-condemned-for-shameful-remarks-on-middle-east/"
+    ]
+[2023-10-13 17:42:05.867400] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.canberratimes.com.au/story/8385072/trump-condemned-for-shameful-remarks-on-middle-east/',
+    0.6521739130434783,
+    0.5217391304347826,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    'Trump condemned for shameful remarks on Middle East',
+    'Your digital subscription includes access to content from all our websites in your region. Access unlimited news content and The Canberra Times app. Premium subscribers also enjoy interactive puzzles and access to the digital version of our print edition - Todays Paper. Israel and the White House have condemned remarks by Donald Trump in which he praised the Iran-backed militant group Hezbollah and criticised Israeli Prime Minister Benjamin Netanyahu over an attack by Palestinian Hamas militants that killed more than 1300 people in Israel. Trump, a former Republican president who is the frontrunner to become the partys 2024 presidential nominee, called the Lebanese Hezbollah, a sworn enemy of Israel, "very smart" and accused Netanyahu of being "not prepared" for the Hamas attack, which also killed 22 Americans. Israeli Communications Minister Shlomo Karhi on Thursday said Trumps comments to supporters and in a television interview on Wednesday night showed he could not be relied on. It is "shameful that a man like that, a former US president, abets propaganda and disseminates things that wound the spirit of Israels fighters and its citizens," Karhi told Israels Channel 13. White House deputy press secretary Andrew Bates called Trumps comments "dangerous and unhinged". "Its completely lost on us why any American would ever praise an Iran-backed terrorist organisation as smart," Bates said. Democratic President Joe Biden has condemned the Hamas attack as "an act of sheer evil" and declared his unwavering support for Israel. "This is a time for all of us to stand shoulder to shoulder with Israel against unadulterated evil," Bates said on Thursday. "Thats what the president is doing." On Thursday evening, Trump released a statement, saying there had been "no better friend or ally of Israel" than when he was president. Several of Trumps opponents in the Republican contest also criticised the former president. "It is absurd that anyone, much less someone running for President, would choose now to attack our friend and ally, Israel, much less praise Hezbollah terrorists as very smart," Florida Governor Ron DeSantis wrote on X. Trumps former vice president Mike Pence, another 2024 rival, said in New Hampshire: "This is no time for any former president or any other American leader to be sending any message other than America stands with Israel." Asa Hutchinson, a former Arkansas governor and a Republican 2024 candidate, said on X that Trump was "out of his mind if he thinks that any candidate for President of the United States should praise the terrorists attacking one of our most important allies." Trump and Netanyahu had a close relationship during Trumps time as president, though cracks have appeared in their once ironclad rapport. Trump was annoyed when Netanyahu called to congratulate Biden on winning the 2020 presidential election, an election Trump still falsely calls fraudulent. Australian Associated Press Advertisement Sign up for our newsletter to stay up to date. We care about the protection of your data. Read our Privacy Policy. Advertisement',
+    '- Donald Trump praised the Iran-backed militant group Hezbollah.
+- Trump criticized Israeli Prime Minister Benjamin Netanyahu over an attack by Palestinian Hamas militants.
+- Israeli Communications Minister Shlomo Karhi called Trumps comments "shameful" and said he couldnt be relied on.
+- White House deputy press secretary Andrew Bates called Trumps comments "dangerous and unhinged."
+- Democratic President Joe Biden condemned the Hamas attack and expressed unwavering support for Israel.
+- Trump released a statement claiming to have been a great friend and ally of Israel.
+- Several Republican opponents of Trump criticized his praise of Hezbollah and his attack on Israel.
+- Trump and Netanyahus once-close relationship has strained.
+
+(Note: The footer at the end of the text is unrelated to the article and should not be included in the summary.)',
+    1
+    );
+    ]
+[2023-10-13 17:42:06.368126] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-13 17:42:06.882455] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.canberratimes.com.au/story/8385072/trump-condemned-for-shameful-remarks-on-middle-east/"
+    ]
+[2023-10-13 17:42:07.376728] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '15',
+    'What is your opinion on Donald Trumps remarks about Hezbollah and Benjamin Netanyahu?',
+    'I agree with Donald Trumps praise for Hezbollah and criticism of Benjamin Netanyahu.',
+    'I agree with Donald Trumps praise for Hezbollah but disagree with his criticism of Benjamin Netanyahu.',
+    'I disagree with Donald Trumps praise for Hezbollah but agree with his criticism of Benjamin Netanyahu.',
+    'I disagree with Donald Trumps praise for Hezbollah and his criticism of Benjamin Netanyahu.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:42:07.868810] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-13 17:42:08.365595] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'condemned',
+    'The word condemned suggests strong disapproval and implies a negative judgment towards Trumps remarks.',
+    15,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:42:08.861379] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:42:09.359318] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'criticised',
+    'The word criticised indicates a negative evaluation of Benjamin Netanyahus actions and implies a biased standpoint.',
+    15,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:42:09.846898] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:42:10.340326] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'attacking',
+    'The word attacking denotes a harsh and aggressive action, creating a negative portrayal of the Hamas militants.',
+    15,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:42:10.843629] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:42:11.355306] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'killed',
+    'The word killed indicates a tragic loss of life, evoking strong emotions.',
+    15,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:42:11.842197] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 17:42:12.342432] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    15,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 17:42:12.845261] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-13 17:42:13.338732] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.canberratimes.com.au/story/8385072/trump-condemned-for-shameful-remarks-on-middle-east/"
+    ]
+[2023-10-13 17:42:13.837632] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 15 
+    ]
+[2023-10-13 17:55:56.710978] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 17:55:58.812513] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 17:55:59.297027] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 17:55:59.801285] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 17:56:00.301497] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 17:56:00.795519] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 17:56:01.298794] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 17:56:01.796074] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 21
+    WHERE ID = 5 
+    ]
+[2023-10-13 17:56:05.665450] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 17:56:12.167483] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-13 17:56:12.681756] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 17:56:13.185523] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 17:56:13.667511] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-13 17:56:14.183438] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-13 17:56:14.669583] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 8
+    WHERE ID = 13 
+    ]
+[2023-10-13 17:56:16.450507] [Manav Trivedi] [FAIL] [error building sql statement with error 'NoneType' object has no attribute 'read']
+[2023-10-13 17:56:16.451108] [Manav Trivedi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 102 expected 3]
+[2023-10-13 17:56:22.603197] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 17:58:02.540627] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000220C16A4F90>]
+[2023-10-13 17:58:02.548321] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000220C17066D0>]
+[2023-10-13 17:58:03.052039] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 17:58:06.280287] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 17:58:09.160708] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 17:58:09.664873] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 17:58:10.161592] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 17:58:10.680716] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 17:58:11.194904] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 17:58:11.703453] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 17:58:12.215197] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 22
+    WHERE ID = 5 
+    ]
+[2023-10-13 17:58:26.368091] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 17:58:34.495270] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 17:58:34.998806] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 23
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:00:28.934920] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:00:32.024995] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:00:32.547988] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 24
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:11:01.067819] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:17:44.612614] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:17:46.632298] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:17:47.137945] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 25
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:18:16.622785] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:18:18.189090] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:18:18.689481] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 26
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:18:45.208500] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:28:30.582402] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:28:31.092783] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 27
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:33:27.990718] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:34:55.005538] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:37:38.299558] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:37:51.534318] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:37:55.982809] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:38:29.261402] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:39:08.108148] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002BB79A12650>]
+[2023-10-13 18:39:08.118311] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002BB79A04490>]
+[2023-10-13 18:39:08.614365] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 18:39:14.668644] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:41:06.062245] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:51:50.695930] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:51:51.209094] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 18:51:51.721889] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 18:51:52.233897] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 18:51:52.743851] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 18:51:53.249744] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:51:53.762871] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 28
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:53:33.997907] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:53:35.700448] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:53:36.212952] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 29
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:56:00.577469] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:56:16.626630] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:56:18.211358] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:56:35.607578] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:56:36.818864] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:56:37.333341] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 30
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:57:08.927719] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:57:23.323134] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:57:27.357412] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:57:33.295690] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:57:35.525204] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 18:57:36.033035] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 31
+    WHERE ID = 5 
+    ]
+[2023-10-13 18:58:55.895355] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:59:01.694899] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:59:12.231011] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:59:13.779566] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:59:21.596700] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:59:23.771933] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:59:27.788827] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 18:59:30.970990] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:00:16.212394] [Manav Trivedi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 102 expected 3]
+[2023-10-13 19:00:16.212394] [Manav Trivedi] [FAIL] [error building sql statement with error 'NoneType' object has no attribute 'read']
+[2023-10-13 19:00:16.237699] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 19:00:16.291458] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 19:00:16.597954] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 19:00:20.243180] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 19:00:40.452907] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000028AB100F990>]
+[2023-10-13 19:00:40.460491] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000028AB050EDD0>]
+[2023-10-13 19:00:40.958862] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 19:00:59.288320] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:01:01.213069] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:01:01.706812] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:01:02.200009] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 19:01:02.701409] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:01:03.201564] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:01:03.703825] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:01:04.204366] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 32
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:05:32.467483] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:07:41.023119] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:07:42.804823] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:07:43.303507] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 33
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:08:37.616109] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:08:39.654357] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:08:41.654272] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:08:42.151898] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 34
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:08:55.598949] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:08:59.363978] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:09:01.136704] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:09:01.627140] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 35
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:09:23.205730] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:09:37.251821] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:10:18.236682] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:10:41.991730] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:10:45.206205] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:10:47.614210] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:10:51.337627] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:12:13.235225] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:12:15.253558] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:12:17.142600] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:12:17.637981] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 36
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:14:38.733074] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:15:29.730801] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:15:30.235532] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 37
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:16:06.994833] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:16:10.885968] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:16:11.385623] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 38
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:16:45.670193] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:16:46.846171] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:16:52.443226] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:17:00.875508] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:17:02.293218] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:17:06.738699] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:17:08.958506] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:17:26.588191] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:17:29.858553] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:17:31.477902] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:17:31.980379] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 39
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:18:20.172420] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:18:23.814313] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:19:34.799879] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:19:35.300092] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 40
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:20:54.805797] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:20:56.511563] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:20:57.005741] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 41
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:23:39.310099] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:23:50.262606] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:23:52.878212] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:23:54.424699] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:23:54.922958] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 42
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:24:41.120201] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:24:43.101499] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 19:24:44.385206] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 19:24:45.113140] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:24:45.889187] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:24:48.239483] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:24:57.411255] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:24:57.899998] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541',
+    0.8,
+    0.5,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    'Donald Trump blames laughing stock Joe Biden for Hamas attack on Israel',
+    'Donald Trump has claimed that Hamas attacked Israel because Joe Biden is a “laughing stock”. The former US president headlined a ‘Club 47’ event near his Mar-a-Lago estate in Florida and exploited the conflict in the Middle East to highlight the incompetence of his White House successor. Trump claimed that Biden has brought “chaos, bloodshed, war, terror and death” to the world. He said: “Look what’s happening today, because the occupant of the White House is a laughing stock “All over the world, America’s enemies cannot believe how lucky they got. They got real lucky.” The controversial politician continued: “Every monster, villain, dictator and terrorist - and there are plenty of them, I know most of them, I got to know a lot of them - all over the planet they are having a field day because they know they will never have it better than they have it with crooked Joe.” Trump also declared that the conflict in Israel would not be happening if he had still been in power. He said: “I was also proud to be the best friend Israel has ever had in the White House by far. And if the election wasn’t rigged there would be nobody even thinking about going into Israel, but we’ll swamp them the next time.”',
+    '- Donald Trump claims that Hamas attacked Israel because of Joe Biden being a "laughing stock"
+- Trump criticized Bidens handling of the conflict in the Middle East
+- Trump accused Biden of bringing chaos, bloodshed, war, terror, and death to the world
+- Trump stated that Americas enemies are lucky to have Biden as the occupant of the White House
+- Trump claimed that monsters, villains, dictators, and terrorists all over the planet are benefiting from Bidens presidency
+- Trump declared that the conflict in Israel would not be happening if he were still in power
+- Trump claimed to be the best friend Israel has ever had in the White House',
+    1
+    );
+    ]
+[2023-10-13 19:24:58.407781] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-13 19:24:58.902930] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:24:59.148218] [Manav Trivedi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 1 expected 2]
+[2023-10-13 19:24:59.148218] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '17',
+    'What is your opinion on Donald Trumps claim that Hamas attacked Israel because Joe Biden is a laughing stock?',
+    'I agree with Trumps claim.',
+    'I disagree with Trumps claim.',
+    'Im unsure about Trumps claim.',
+    'I dont have an opinion on Trumps claim.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error 'NoneType' object has no attribute 'read']
+[2023-10-13 19:24:59.148218] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '17',
+    'What is your opinion on Donald Trumps claim that Hamas attacked Israel because Joe Biden is a laughing stock?',
+    'I agree with Trumps claim.',
+    'I disagree with Trumps claim.',
+    'Im unsure about Trumps claim.',
+    'I dont have an opinion on Trumps claim.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.148218] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '17',
+    'What is your opinion on Donald Trumps claim that Hamas attacked Israel because Joe Biden is a laughing stock?',
+    'I agree with Trumps claim.',
+    'I disagree with Trumps claim.',
+    'Im unsure about Trumps claim.',
+    'I dont have an opinion on Trumps claim.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.164602] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Polling;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.165877] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Polling;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.165877] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-13 19:24:59.167018] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.168094] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'claimed',
+    'The word claimed suggests that the statement made by Donald Trump may not be verified or supported by evidence.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.169091] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'claimed',
+    'The word claimed suggests that the statement made by Donald Trump may not be verified or supported by evidence.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.170088] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'claimed',
+    'The word claimed suggests that the statement made by Donald Trump may not be verified or supported by evidence.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.171553] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.174339] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.174339] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.176671] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.176671] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'exploited',
+    'The word exploited implies that Donald Trump used the conflict in the Middle East for personal gain or political advantage.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.179408] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'exploited',
+    'The word exploited implies that Donald Trump used the conflict in the Middle East for personal gain or political advantage.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.179408] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'exploited',
+    'The word exploited implies that Donald Trump used the conflict in the Middle East for personal gain or political advantage.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.181453] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.182916] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.182916] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.183936] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.184973] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'incompetence',
+    'The word incompetence suggests a negative evaluation of Joe Bidens ability to handle the situation.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.186083] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'incompetence',
+    'The word incompetence suggests a negative evaluation of Joe Bidens ability to handle the situation.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.188081] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'incompetence',
+    'The word incompetence suggests a negative evaluation of Joe Bidens ability to handle the situation.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.189779] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.189779] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.189779] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.189779] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.189779] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'chaos',
+    'The word chaos conveys a sense of disorder and instability.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.189779] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'chaos',
+    'The word chaos conveys a sense of disorder and instability.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.198177] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'chaos',
+    'The word chaos conveys a sense of disorder and instability.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.198177] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.199584] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.200724] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.201720] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.202717] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'bloodshed',
+    'The word bloodshed evokes strong emotions related to violence and loss of life.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.203714] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'bloodshed',
+    'The word bloodshed evokes strong emotions related to violence and loss of life.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.205748] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'bloodshed',
+    'The word bloodshed evokes strong emotions related to violence and loss of life.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.205748] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.205748] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.205748] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.205748] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.205748] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'war',
+    'The word war conveys a sense of conflict and hostilities.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.205748] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'war',
+    'The word war conveys a sense of conflict and hostilities.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.214848] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'war',
+    'The word war conveys a sense of conflict and hostilities.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.215884] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.216929] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.216929] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.218141] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.219200] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terror',
+    'The word terror implies fear and danger associated with acts of violence or terrorism.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.220352] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terror',
+    'The word terror implies fear and danger associated with acts of violence or terrorism.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.221826] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terror',
+    'The word terror implies fear and danger associated with acts of violence or terrorism.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.222888] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.222888] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.227213] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.227213] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.227213] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'death',
+    'The word death signifies loss of life and can evoke strong emotional responses.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.227213] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'death',
+    'The word death signifies loss of life and can evoke strong emotional responses.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.231496] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'death',
+    'The word death signifies loss of life and can evoke strong emotional responses.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.233511] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.233511] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.234958] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.236105] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.236608] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'laughing stock',
+    'The phrase laughing stock is subjective and implies that Joe Biden is being ridiculed or not taken seriously.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.239953] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'laughing stock',
+    'The phrase laughing stock is subjective and implies that Joe Biden is being ridiculed or not taken seriously.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.239953] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'laughing stock',
+    'The phrase laughing stock is subjective and implies that Joe Biden is being ridiculed or not taken seriously.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.239953] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.239953] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.249341] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.250337] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.251394] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'controversial',
+    'The word controversial indicates that Donald Trumps statements or actions are divisive and generate disagreement.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.253392] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'controversial',
+    'The word controversial indicates that Donald Trumps statements or actions are divisive and generate disagreement.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.255356] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'controversial',
+    'The word controversial indicates that Donald Trumps statements or actions are divisive and generate disagreement.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.257356] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.258351] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.259350] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.260345] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.260345] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'monster',
+    'The word monster is a strong and emotive term used to describe individuals who are perceived as extremely evil or cruel.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.262598] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'monster',
+    'The word monster is a strong and emotive term used to describe individuals who are perceived as extremely evil or cruel.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.264900] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'monster',
+    'The word monster is a strong and emotive term used to describe individuals who are perceived as extremely evil or cruel.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.266899] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.267899] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.269890] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.270886] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.271884] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'villain',
+    'The word villain conveys a negative portrayal of individuals who are seen as morally reprehensible or wicked.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.274532] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'villain',
+    'The word villain conveys a negative portrayal of individuals who are seen as morally reprehensible or wicked.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.274532] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'villain',
+    'The word villain conveys a negative portrayal of individuals who are seen as morally reprehensible or wicked.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.274532] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.274532] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.281559] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.282591] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.283580] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'dictator',
+    'The word dictator suggests an authoritarian leader with oppressive control over a country or people.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.285572] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'dictator',
+    'The word dictator suggests an authoritarian leader with oppressive control over a country or people.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.286568] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'dictator',
+    'The word dictator suggests an authoritarian leader with oppressive control over a country or people.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.288561] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.288561] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.289558] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.291602] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.291602] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terrorist',
+    'The word terrorist denotes a person who uses violence or intimidation to achieve political or ideological goals.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.291602] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terrorist',
+    'The word terrorist denotes a person who uses violence or intimidation to achieve political or ideological goals.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.291602] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terrorist',
+    'The word terrorist denotes a person who uses violence or intimidation to achieve political or ideological goals.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.299240] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.300237] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.302231] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.303628] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.303628] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'rigged',
+    'The word rigged implies that the election was manipulated or unfair.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.304921] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'rigged',
+    'The word rigged implies that the election was manipulated or unfair.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.306824] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'rigged',
+    'The word rigged implies that the election was manipulated or unfair.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.306824] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.306824] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.306824] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.306824] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.306824] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'swamp',
+    'The word swamp implies a strong and overwhelming victory or defeat.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.315984] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'swamp',
+    'The word swamp implies a strong and overwhelming victory or defeat.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.318103] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'swamp',
+    'The word swamp implies a strong and overwhelming victory or defeat.',
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.320383] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.321742] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.322739] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-13 19:24:59.322739] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:24:59.323735] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.324911] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.324911] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    17,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-13 19:24:59.324911] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    : 
+ error (0, '')]
+[2023-10-13 19:24:59.331572] [Manav Trivedi] [FAIL] [failed to commit query 
+ 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+     
+ reason: (0, '')]
+[2023-10-13 19:24:59.333583] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-13 19:24:59.334569] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-13 19:25:09.738402] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 19:25:11.827972] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 19:25:44.705345] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001BD73F1C790>]
+[2023-10-13 19:25:44.711700] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001BD73F1C950>]
+[2023-10-13 19:25:45.203764] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 19:25:51.083460] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:25:55.201011] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:25:55.706052] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:25:56.202370] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:25:56.702054] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:25:59.836105] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 19:26:00.903723] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-13 19:26:01.574610] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:26:02.254328] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:26:03.020276] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:26:03.705206] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:26:04.487509] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:26:05.189598] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:26:05.857017] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:26:06.604654] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "17"
+    ]
+[2023-10-13 19:26:07.392741] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:26:08.036909] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 17 
+    ]
+[2023-10-13 19:26:21.223703] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:26:55.534857] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:27:11.100230] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:31:00.676731] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.ndtv.com/world-news/israeli-palestinian-conflict-former-us-president-donald-trump-atrocities-in-israel-wouldnt-have-occurred-if-i-were-president-4466177"
+    ]
+[2023-10-13 19:31:01.175024] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "16"
+    ]
+[2023-10-13 19:31:01.676085] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 19:31:02.177888] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "16"
+    ]
+[2023-10-13 19:31:02.676590] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "16"
+    ]
+[2023-10-13 19:31:10.983287] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:40:52.907011] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:40:55.270678] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.perthnow.com.au/news/offbeat/donald-trump-blames-laughing-stock-joe-biden-for-hamas-attack-on-israel-c-12187541"
+    ]
+[2023-10-13 19:40:55.780604] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 17 
+    ]
+[2023-10-13 19:49:06.144047] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:49:06.645995] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:49:07.131431] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 19:49:07.634881] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:49:08.137981] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:50:09.606391] [Manav Trivedi] [FAIL] [error building sql statement with error unpack_from requires a buffer of at least 9 bytes for unpacking 8 bytes at offset 1 (actual buffer size is 5)]
+[2023-10-13 19:50:09.686534] [Manav Trivedi] [FAIL] [error building sql statement with error Result length not requested length:
+Expected=2.  Actual=0.  Position: 1.  Data Length: 1]
+[2023-10-13 19:50:18.758239] [Manav Trivedi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-13 19:50:41.095900] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027324445310>]
+[2023-10-13 19:50:41.111153] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027323A56FD0>]
+[2023-10-13 19:50:41.606999] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-13 19:51:01.397336] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:51:03.128568] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:51:03.627552] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:51:04.127371] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-13 19:51:04.628149] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:51:05.127327] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-13 19:51:05.637951] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:51:06.133827] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 43
+    WHERE ID = 5 
+    ]
+[2023-10-13 19:52:46.840859] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:52:58.443770] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-13 19:53:05.256094] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-13 19:53:05.764499] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 44
+    WHERE ID = 5 
+    ]

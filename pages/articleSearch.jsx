@@ -14,6 +14,8 @@ import { fetchRecentArticles } from '@/utils/fetchRecentArticles';
 import { fetchPopularArticles } from '@/utils/fetchPopularArticles';
 import Menu from '@/components/Menu';
 import Poll from '@/components/Poll';
+import PersonOfInterest from "@/components/PersonOfInterest"
+import { fetchPoliticalFigureNames } from '@/utils/fetchPoliticalFigureNames';
 
 function Home() {
   const [text, setText] = useState('');
@@ -23,6 +25,8 @@ function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [recents, setRecents] = useState([]);
   const [popular, setPopular] = useState([]);
+
+  const [figureNames, setFigureNames] = useState([]);
 
   useEffect(() => {
     async function fetchArticles() {
@@ -54,6 +58,9 @@ function Home() {
       setArticle(result.article);
       setSubmitted(false);
     });
+    fetchPoliticalFigureNames(url).then((result)=>{
+        console.log(result)
+      })
   };
 
   const handleSubmit = () => {
@@ -66,9 +73,14 @@ function Home() {
         setArticle(result.article);
         setSubmitted(false);
       });
+      fetchPoliticalFigureNames(text).then((result)=>{
+        console.log(result)
+      })
     } else setResult(null);
   };
   const router = useRouter();
+
+
 
   const handleClick = () => {
     router.push({
@@ -155,11 +167,13 @@ function Home() {
                     </button>
                   </div>
 
-                  <div className='mt-5'>
+                  <PersonOfInterest figureName={figureNames}/>
+
+                  <div className='mt-3'>
                     {result ? (
                       <div>
                         <Card content={result} />
-                        <Poll />
+                        <Poll url={text}/>
                       </div>
                     ) : submitted ? (
                       <Card
