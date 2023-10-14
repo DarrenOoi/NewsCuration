@@ -252,9 +252,7 @@ class ArticleManager():
         
     # checks if a job for the requested article is already processing
     def isArticleBeingProcessed(self, url: str) -> bool:
-        self.jobsLock.acquire()
         tmp = self.jobs.get(url, None)
-        self.jobsLock.release()
         if tmp == None:
             return False
         return True
@@ -360,21 +358,31 @@ class ArticleManager():
     # checks where the article requested is stored in and if required, 
     # starts the process of generating the data
     def getArticle(self, url: str) -> dict: # Or None if invalid url
+        print("DEBUG: getArticle - started")
         self.cacheLock.acquire()
         if self.isArticleInCache(url):
+            print("DEBUG: getArticle - article in cache") 
             self.cache[url].requestRate.updateRate()
             self.cacheLock.release()
             return self.cache[url]
         self.cacheLock.release()
+
         self.transactionClientLock.acquire()
         if self.isArticleInDB(url):
+            print("DEBUG: getArticle - article in db") 
             self.cache[url].requestRate.updateRate()
             self.transactionClientLock.release()
             return self.cache[url]
         self.transactionClientLock.release()
+
+        self.jobsLock.acquire()
         if self.isArticleBeingProcessed(url):
+            print("DEBUG: getArticle - Job already processing") 
+            self.jobsLock.release()
             return self.jobs[url]
+        self.jobsLock.release()
         
+        print("DEBUG: getArticle - creating job")        
         tmp = self.jobMonitor(url)
         if tmp != None:
             return self.jobs[url]

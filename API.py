@@ -422,5 +422,5 @@ def campaignDetailsByName():
     return sm.getCampaignDetails(name)
   
 if __name__ == '__main__':
-    sm = SM.SessionManager(2)
+    sm = SM.SessionManager(20)
     app.run()
