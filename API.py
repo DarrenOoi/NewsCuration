@@ -257,7 +257,8 @@ def getSavedArticle():
 #    Byline : str,
 #    Political_Position : str, 
 #    Party : str, 
-#    COUNTRY : str   } ... <NONE, ONE OR MULTIPLE>
+#    COUNTRY : str  
+#    HasCampaign: Bool   } ... <NONE, ONE OR MULTIPLE>
 #    ]
 #}
 ###
@@ -287,7 +288,8 @@ def getRecentPoliticians():
 #    Byline : str,
 #    Political_Position : str, 
 #    Party : str, 
-#    COUNTRY : str   } ... <NONE, ONE OR MULTIPLE>
+#    COUNTRY : str  
+#    HasCampaign: Bool   } ... <NONE, ONE OR MULTIPLE>
 #    ]
 #}
 ###
@@ -296,6 +298,39 @@ def getPoliticianSearchByName():
     data = request.get_json()
     nameQuery = data.get('nameSearch')
     return sm.getPoliticiansBySearch(nameQuery)
+
+
+###
+# Retrieves all the politicians in the database that have an active campaign.
+# In order to have an active campaign, they need to have Policies in the 
+# Politician_CampaignPoliciesByID table.
+# Returns:
+#---------
+# {
+#   "Result" : [{
+#    ID int,
+#    Fname : str 
+#    Lname : str 
+#    About : str 
+#    Age : int
+#    Gender : str 
+#    CountryCode : str
+#    InProduction : bool
+#    InsertedAt : DATETIME
+#    InsertedBy : str
+#    ImageLink : str
+#    Summary : str 
+#    Byline : str,
+#    Political_Position : str, 
+#    Party : str, 
+#    COUNTRY : str  
+#    HasCampaign: Bool} ... <NONE, ONE OR MULTIPLE>
+#    ]
+#}
+###
+@app.route('/GetCampaigningPoliticians', methods=['POST'])
+def getPoliticiansCampaigning():
+    return sm.getPoliticiansCampaigning()
 
 ###
 # Returns the header of each saved url, along with the URL of each saved Article
@@ -406,8 +441,7 @@ Returns
 -------
     {
     ID : int,
-    Fname : str,
-    Lname : str,
+    ID_Politician : int,
     PolicyNameTitle : str,
     PolicyInfo : str,
     InProduction BOOLEAN,
@@ -418,8 +452,8 @@ Returns
 @app.route('/getCampaignDetails', methods=['POST'])
 def campaignDetailsByName():
     data = request.get_json()
-    name = data.get('name')
-    return sm.getCampaignDetails(name)
+    id = data.get('id')
+    return sm.getCampaignDetails(id)
   
 if __name__ == '__main__':
     sm = SM.SessionManager(2)
