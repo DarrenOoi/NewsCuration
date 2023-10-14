@@ -26234,3 +26234,382 @@ a buffer of at least 9 bytes for unpacking 8 bytes at offset 1 (actual buffer si
     SET Views = 17
     WHERE ID = 8 
     ]
+[2023-10-14 12:53:33.326681] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001DBF5097FD0>]
+[2023-10-14 12:53:33.328692] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001DBF5082B50>]
+[2023-10-14 12:53:34.173699] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 12:53:34.174699] [Daniel Ciccotosto-Camp] [FAIL] [Unable to find file path: PRO-87.sql]
+[2023-10-14 12:53:34.175701] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001DBF5097FD0>]
+[2023-10-14 12:53:34.176699] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001DBF5082B50>]
+[2023-10-14 12:54:23.654208] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002636476AA10>]
+[2023-10-14 12:54:23.655209] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000263648C2B50>]
+[2023-10-14 12:54:24.488808] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 12:54:25.388606] [Daniel Ciccotosto-Camp] [SUCCESS] [CREATE TABLE Politician_CampaignPoliciesByID(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Policitian INT,
+    PolicyNameTitle VARCHAR(1000),
+    PolicyInfo VARCHAR(4000),
+    InProduction BOOLEAN,
+    InsertedAt DATETIME,
+    InsertedBy VARCHAR(50)
+)
+]
+[2023-10-14 12:54:25.392261] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002636476AA10>]
+[2023-10-14 12:54:25.392261] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000263648C2B50>]
+[2023-10-14 12:55:30.367914] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E860136290>]
+[2023-10-14 12:55:30.369934] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E861EA1110>]
+[2023-10-14 12:55:31.203802] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 12:55:32.045351] [Daniel Ciccotosto-Camp] [SUCCESS] [DELETE FROM Politician_CampaignPoliciesByID WHERE 1=1]
+[2023-10-14 12:55:32.046382] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E860136290>]
+[2023-10-14 12:55:32.047287] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E861EA1110>]
+[2023-10-14 12:55:53.641655] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C92DA6D2D0>]
+[2023-10-14 12:55:53.642640] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C9300E7C10>]
+[2023-10-14 12:55:54.477555] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 12:55:55.338129] [Daniel Ciccotosto-Camp] [SUCCESS] [
+INSERT INTO Politician_CampaignPoliciesByID (ID_Policitian, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+]
+[2023-10-14 12:55:55.341128] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C92DA6D2D0>]
+[2023-10-14 12:55:55.342131] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C9300E7C10>]
+[2023-10-14 12:56:21.232381] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001931A276290>]
+[2023-10-14 12:56:21.232381] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001931BBC1110>]
+[2023-10-14 12:56:22.065879] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 12:56:22.898570] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE 1=1
+    ]
+[2023-10-14 12:56:22.904483] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001931A276290>]
+[2023-10-14 12:56:22.905482] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001931BBC1110>]
+[2023-10-14 12:57:37.483130] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002A31400AA10>]
+[2023-10-14 12:57:37.484112] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002A314162B50>]
+[2023-10-14 12:57:38.324065] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 12:57:40.400533] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 12:57:40.472212] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002A31400AA10>]
+[2023-10-14 12:57:40.473213] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002A314162B50>]
+[2023-10-14 12:57:56.169857] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000262B4B86290>]
+[2023-10-14 12:57:56.170872] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000262B64D1110>]
+[2023-10-14 12:57:57.024154] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 12:57:57.867726] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE 1=1
+    ]
+[2023-10-14 12:57:57.870615] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000262B4B86290>]
+[2023-10-14 12:57:57.871607] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000262B64D1110>]
+[2023-10-14 13:06:20.980243] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E1EFBE8E90>]
+[2023-10-14 13:06:20.981245] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E1EFB16290>]
+[2023-10-14 13:06:21.846315] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:06:22.286039] [Daniel Ciccotosto-Camp] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Politician_CampaignPoliciesIByID' doesn't exist")]
+[2023-10-14 13:06:22.766587] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesIByID
+    WHERE 1=1
+    ]
+[2023-10-14 13:06:22.769151] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E1EFBE8E90>]
+[2023-10-14 13:06:22.769548] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E1EFB16290>]
+[2023-10-14 13:06:30.345795] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E0655C97D0>]
+[2023-10-14 13:06:30.346372] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E0655F7E50>]
+[2023-10-14 13:06:31.187454] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:06:32.027602] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE 1=1
+    ]
+[2023-10-14 13:06:32.031600] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001E0655C97D0>]
+[2023-10-14 13:06:32.031600] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001E0655F7E50>]
+[2023-10-14 13:07:46.865041] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000024BF48897D0>]
+[2023-10-14 13:07:46.867034] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000024BF48B7E50>]
+[2023-10-14 13:07:47.708729] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:07:48.975334] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE 1=1
+    ]
+[2023-10-14 13:07:49.025881] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000024BF48897D0>]
+[2023-10-14 13:07:49.026880] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000024BF48B7E50>]
+[2023-10-14 13:14:47.982249] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001985E351550>]
+[2023-10-14 13:14:47.983355] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001985E351110>]
+[2023-10-14 13:14:48.809684] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:14:49.648373] [Daniel Ciccotosto-Camp] [SUCCESS] [INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'didnt go far enough',
+    'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+    34,
+    0,
+    NOW(),
+    'Ron-Ash'
+    );]
+[2023-10-14 13:14:49.651594] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001985E351550>]
+[2023-10-14 13:14:49.651594] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001985E351110>]
+[2023-10-14 13:15:33.010862] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C8F2B21550>]
+[2023-10-14 13:15:33.011434] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C8F2B21110>]
+[2023-10-14 13:15:33.836501] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:15:34.665678] [Daniel Ciccotosto-Camp] [SUCCESS] [-- INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+--     VALUES (
+--     'didnt go far enough',
+--     'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+--     34,
+--     0,
+--     NOW(),
+--     'Ron-Ash'
+--     );
+
+SELECT * FROM Article_ArticleBias where BiasReason = 'didnt go far enough']
+[2023-10-14 13:15:34.669671] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C8F2B21550>]
+[2023-10-14 13:15:34.670671] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C8F2B21110>]
+[2023-10-14 13:16:02.336165] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B891171550>]
+[2023-10-14 13:16:02.337167] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B891171110>]
+[2023-10-14 13:16:03.184913] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:16:04.039298] [Daniel Ciccotosto-Camp] [SUCCESS] [-- INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+--     VALUES (
+--     'didnt go far enough',
+--     'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+--     34,
+--     0,
+--     NOW(),
+--     'Ron-Ash'
+--     );
+
+SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough']
+[2023-10-14 13:16:04.042287] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001B891171550>]
+[2023-10-14 13:16:04.043287] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001B891171110>]
+[2023-10-14 13:31:27.100938] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002D728B80610>]
+[2023-10-14 13:31:27.102025] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002D727196990>]
+[2023-10-14 13:31:27.934542] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:32:01.027945] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 13:32:32.144890] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-14 13:32:33.408443] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-14 13:55:57.534990] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020BD63E7F90>]
+[2023-10-14 13:55:57.535990] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020BD63BE990>]
+[2023-10-14 13:55:58.381438] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:55:58.799836] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'didnt go far enough',
+    'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+    34,
+    0,
+    NOW(),
+    'Ron-Ash'
+    );
+
+SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough' with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough'' at line 11")]
+[2023-10-14 13:55:59.219039] [Daniel Ciccotosto-Camp] [SUCCESS] [INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'didnt go far enough',
+    'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+    34,
+    0,
+    NOW(),
+    'Ron-Ash'
+    );
+
+SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough']
+[2023-10-14 13:55:59.222055] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020BD63E7F90>]
+[2023-10-14 13:55:59.222055] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020BD63BE990>]
+[2023-10-14 13:56:29.632406] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020C3E257F50>]
+[2023-10-14 13:56:29.634420] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020C3E0D1550>]
+[2023-10-14 13:56:30.464653] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:56:31.306011] [Daniel Ciccotosto-Camp] [SUCCESS] [INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'didnt go far enough',
+    'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+    34,
+    0,
+    NOW(),
+    'Ron-Ash'
+    );
+
+-- SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough']
+[2023-10-14 13:56:31.309007] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020C3E257F50>]
+[2023-10-14 13:56:31.309007] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020C3E0D1550>]
+[2023-10-14 13:56:42.840928] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A203477F90>]
+[2023-10-14 13:56:42.843858] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A20344E990>]
+[2023-10-14 13:56:43.669913] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 13:56:44.497281] [Daniel Ciccotosto-Camp] [SUCCESS] [-- INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+--     VALUES (
+--     'didnt go far enough',
+--     'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+--     34,
+--     0,
+--     NOW(),
+--     'Ron-Ash'
+--     );
+
+SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough']
+[2023-10-14 13:56:44.502276] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001A203477F90>]
+[2023-10-14 13:56:44.503283] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001A20344E990>]
+[2023-10-14 14:02:07.548107] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000019FB1A27F90>]
+[2023-10-14 14:02:07.549106] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000019FB19FE990>]
+[2023-10-14 14:02:08.400445] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:02:09.305780] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician
+ADD HasCampaign BOOLEAN DEFAULT 0]
+[2023-10-14 14:02:09.306779] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000019FB1A27F90>]
+[2023-10-14 14:02:09.308780] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000019FB19FE990>]
+[2023-10-14 14:23:22.390934] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000023799097F90>]
+[2023-10-14 14:23:22.393007] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002379906E990>]
+[2023-10-14 14:23:23.238053] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:23:25.364748] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 14:23:25.466032] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000023799097F90>]
+[2023-10-14 14:23:25.466913] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002379906E990>]
+[2023-10-14 14:27:44.305951] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000299DAC86290>]
+[2023-10-14 14:27:44.307563] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000299DD131110>]
+[2023-10-14 14:27:45.132488] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:27:45.971705] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Policitian = P.ID
+)]
+[2023-10-14 14:27:45.973044] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000299DAC86290>]
+[2023-10-14 14:27:45.974061] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000299DD131110>]
+[2023-10-14 14:27:56.879678] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001DB15147F50>]
+[2023-10-14 14:27:56.880668] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001DB14FC1550>]
+[2023-10-14 14:27:57.700039] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:27:59.798236] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 14:27:59.918270] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001DB15147F50>]
+[2023-10-14 14:27:59.919102] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001DB14FC1550>]
+[2023-10-14 14:28:31.458826] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001EDD48D7F50>]
+[2023-10-14 14:28:31.459824] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001EDD4751550>]
+[2023-10-14 14:28:32.296196] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:28:32.716094] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+--     VALUES (
+--     'didnt go far enough',
+--     'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+--     34,
+--     0,
+--     NOW(),
+--     'Ron-Ash'
+--     );
+
+-- SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough'
+
+SELECT * FROM Politcian WHERE HasCampaign = 1 with error (1146, "Table 'newscuration.Politcian' doesn't exist")]
+[2023-10-14 14:28:33.154044] [Daniel Ciccotosto-Camp] [SUCCESS] [-- INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+--     VALUES (
+--     'didnt go far enough',
+--     'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+--     34,
+--     0,
+--     NOW(),
+--     'Ron-Ash'
+--     );
+
+-- SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough'
+
+SELECT * FROM Politcian WHERE HasCampaign = 1]
+[2023-10-14 14:28:33.157708] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001EDD48D7F50>]
+[2023-10-14 14:28:33.157708] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001EDD4751550>]
+[2023-10-14 14:28:45.840094] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020E7C697F50>]
+[2023-10-14 14:28:45.841095] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020E7C511550>]
+[2023-10-14 14:28:46.682211] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:28:47.528209] [Daniel Ciccotosto-Camp] [SUCCESS] [-- INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+--     VALUES (
+--     'didnt go far enough',
+--     'The phrase didnt go far enough implies that the Senate inquirys actions were insufficient and biased towards advocating for stronger measures against Qantas.',
+--     34,
+--     0,
+--     NOW(),
+--     'Ron-Ash'
+--     );
+
+-- SELECT * FROM Article_ArticleBias where KeyPhrase = 'didnt go far enough'
+
+SELECT * FROM Politician WHERE HasCampaign = 1]
+[2023-10-14 14:28:47.532209] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020E7C697F50>]
+[2023-10-14 14:28:47.533207] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020E7C511550>]
+[2023-10-14 14:47:35.659662] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020ABC9BB6D0>]
+[2023-10-14 14:47:35.660662] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020ABAF463D0>]
+[2023-10-14 14:47:36.492732] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:49:29.367883] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D2EAE38610>]
+[2023-10-14 14:49:29.368887] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D2EAE38650>]
+[2023-10-14 14:49:30.215621] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:50:44.672546] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027A1C228890>]
+[2023-10-14 14:50:44.674486] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027A1A5106D0>]
+[2023-10-14 14:50:45.522833] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:53:42.591644] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000017CFFF9E1D0>]
+[2023-10-14 14:53:42.592000] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000017CFECB3710>]
+[2023-10-14 14:53:43.424346] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:55:04.770255] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-14 14:55:05.606513] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-14 14:57:07.350495] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000242AE772DD0>]
+[2023-10-14 14:57:07.352039] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000242AE772C50>]
+[2023-10-14 14:57:08.177096] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 14:57:12.630700] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-14 14:57:13.459591] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-14 14:57:17.113950] [Daniel Ciccotosto-Camp] [FAIL] [error building sql statement with error (1054, "Unknown column 'HasCampaign' in 'where clause'")]
+[2023-10-14 14:57:17.527572] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE HasCampaign = 1
+    ]
+[2023-10-14 15:19:08.392386] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000249BA469F50>]
+[2023-10-14 15:19:08.394387] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000249BA68F4D0>]
+[2023-10-14 15:19:09.260173] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 15:19:13.813453] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-14 15:21:07.573186] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E55D47A550>]
+[2023-10-14 15:21:07.575319] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E55D1B8550>]
+[2023-10-14 15:21:08.441740] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 15:21:11.791411] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
