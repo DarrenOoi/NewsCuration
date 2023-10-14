@@ -12,10 +12,10 @@ const PersonOfInterest = ({figureName}) => {
                     height={18}
                 />
 
-        {figureName ? (
-          <p className="uppercase text-xs font-bold text-black">{figureName}</p>
+        {figureName.length == 0 ? (
+          <p className="uppercase text-xs font-bold text-black">No political persons of interest found</p>
         ) 
-        : <p className="uppercase text-xs font-bold text-black">Person of interest unavailable</p>}
+        : <p className="uppercase text-xs font-bold text-black">{figureName}</p>}
 
       <button className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs">
         VISIT PROFILE
