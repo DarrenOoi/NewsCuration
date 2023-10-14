@@ -20,7 +20,6 @@ function ProfileSearch() {
       try {
         const res = await fetchRecentPoliticians();
         setRecents(res);
-        console.log(res);
       } catch (error) {
         //add error handling when request fails
         console.log('error');

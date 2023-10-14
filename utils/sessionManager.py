@@ -21,6 +21,7 @@ BIAS_WORDS = "biasWords"
 POLITICAL_FIGURES = "politicalFigures"
 POLITICIAN = "Politician"
 POLITICIAN_CAMPAIGN = "Politician_CampaignPolicies"
+POLITICIAN_CAMPAIGN_BY_ID = "Politician_CampaignPoliciesByID"
 POLL_PROMPT = "poll"
 POLL_VALS = "pollVals"
 VIEWS = "views"
@@ -252,9 +253,7 @@ class ArticleManager():
         
     # checks if a job for the requested article is already processing
     def isArticleBeingProcessed(self, url: str) -> bool:
-        self.jobsLock.acquire()
         tmp = self.jobs.get(url, None)
-        self.jobsLock.release()
         if tmp == None:
             return False
         return True
@@ -360,21 +359,31 @@ class ArticleManager():
     # checks where the article requested is stored in and if required, 
     # starts the process of generating the data
     def getArticle(self, url: str) -> dict: # Or None if invalid url
+        print("DEBUG: getArticle - started")
         self.cacheLock.acquire()
         if self.isArticleInCache(url):
+            print("DEBUG: getArticle - article in cache") 
             self.cache[url].requestRate.updateRate()
             self.cacheLock.release()
             return self.cache[url]
         self.cacheLock.release()
+
         self.transactionClientLock.acquire()
         if self.isArticleInDB(url):
+            print("DEBUG: getArticle - article in db") 
             self.cache[url].requestRate.updateRate()
             self.transactionClientLock.release()
             return self.cache[url]
         self.transactionClientLock.release()
+
+        self.jobsLock.acquire()
         if self.isArticleBeingProcessed(url):
+            print("DEBUG: getArticle - Job already processing") 
+            self.jobsLock.release()
             return self.jobs[url]
+        self.jobsLock.release()
         
+        print("DEBUG: getArticle - creating job")        
         tmp = self.jobMonitor(url)
         if tmp != None:
             return self.jobs[url]
@@ -562,7 +571,7 @@ class PoliticianManager():
         if len(name) == 0:
                 return []
         nameSplit = name.split(' ')
-        record = self.checkInCache(names=nameSplit)
+        record = None
         if record is None:
             for name in nameSplit:
                     filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
@@ -571,19 +580,22 @@ class PoliticianManager():
             
         return {"Result" : politiciansInfo}
     
-    def getPoliticianCampaignDetails(self, tdc=transactionDataClient, name=str):
+    '''
+    Queries the database to retrieve politicians that have active campaigns
+    Parameters:
+    -----------
+    tdc : transactionDataClient
+    '''
+    def getPoliticiansCampaigning(self, tdc=transactionDataClient):
+        result = tdc.query(POLITICIAN,
+                        'HasCampaign = 1')
+        return {'Result': result}
+    
+    def getPoliticianCampaignDetails(self, tdc=transactionDataClient, id=int):
         # Add function here to assist finding all related articles
-        filter = ""
-        if len(name) == 0:
-                return []
-        nameSplit = name.split(' ')
-        record = self.checkInCampaignCache(names=nameSplit)
+        record = self.checkInCache(ID=id)
         if record is None:
-            for name in nameSplit:
-                    filter += f"(Fname LIKE '%{name}%' OR Lname LIKE '%{name}%') OR \n"
-            filter += '0=1'
-            record = tdc.query(POLITICIAN_CAMPAIGN, filter) #This would return a list of dicts
-            
+            record = tdc.query(POLITICIAN_CAMPAIGN, f'ID = {id}')[0] #This would return a list of dicts
             # Add it to the cache
             self.campaignCache += record
         return {"Result" : record}
@@ -689,14 +701,17 @@ class SessionManager():
     def setSavedArticles(self, url:str):
         return self.articleManager.setSaved(url)
     
-    def getCampaignDetails(self, name:str):
-        return self.politicianManager.getPoliticianCampaignDetails(self.tdc, name)
+    def getCampaignDetails(self, id:int):
+        return self.politicianManager.getPoliticianCampaignDetails(self.tdc, id)
     
     def getArticleComments(self, url:int):
         return {'Result' : retrieve_article_comments(self.tdc, url)}
     
     def saveArticleComment(self, author, message, url):
         create_comment(self.tdc, author, message, url) 
+        
+    def getPoliticiansCampaigning(self):
+        return self.politicianManager.getPoliticiansCampaigning(self.tdc)
     
     def close(self):
         self.tdc.closeConnection()

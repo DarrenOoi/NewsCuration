@@ -1,6 +1,6 @@
-export const fetchCampaign = async (id) => {
+export const fetchPoliticianByID = async (id) => {
   try {
-    const response = await fetch('http://localhost:5000/getCampaignDetails', {
+    const response = await fetch('http://localhost:5000/GetPoliticianByID', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -10,7 +10,7 @@ export const fetchCampaign = async (id) => {
 
     if (response.ok) {
       const responseResult = await response.json();
-      return responseResult.Result;
+      return responseResult;
     } else {
       console.error('Request failed:', response.status, response.statusText);
       return 'Something went wrong';

@@ -4,15 +4,38 @@ import Menu from '@/components/Menu';
 import Button from '@/components/Button';
 import { findFlagUrlByCountryName } from 'country-flags-svg';
 import { useRouter } from 'next/router';
-import { fetchPolitician } from '@/utils/fetchPolitician';
+import { fetchPoliticianByID } from '@/utils/fetchPoliticianByID';
 import { useEffect, useState } from 'react';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
+import { fetchCampaign } from '@/utils/fetchCampaign';
 
 function campaignPage() {
   const router = useRouter();
-  const { name } = router.query;
+  const { id } = router.query;
+  // console.log(id);
   const handleSearch = () => {};
+  const [campaign, setCampaign] = useState(null);
   const flagUrl = findFlagUrlByCountryName('Australia');
+
+  useEffect(() => {
+    async function fetchCampaignInfo() {
+      if (id) {
+        try {
+          const [campaign] = await Promise.all([
+            fetchCampaign(id),
+            // fetchPoliticianByID(id),
+          ]);
+          setCampaign(res);
+          console.log(campaign);
+          // console.log(politician);
+        } catch (error) {
+          //add error handling when request fails
+          console.log('error');
+        }
+      }
+    }
+    fetchCampaignInfo();
+  }, [id]);
 
   return (
     <div>

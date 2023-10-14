@@ -23,10 +23,13 @@ function ProfilePage() {
         try {
           const res = await fetchPolitician(name);
           setPolitician(res);
-          const campaign = await fetchCampaign(name);
-          // console.log(campaign);
-          if (campaign.length > 0) {
-            setCampaign(campaign);
+          // const campaign = await fetchCampaign(name);
+          // // console.log(campaign);
+          // if (campaign.length > 0) {
+          //   setCampaign(campaign);
+          // }
+          if (res.HasCampaign === 1) {
+            setCampaign(true);
           }
         } catch (error) {
           //add error handling when request fails
@@ -43,7 +46,10 @@ function ProfilePage() {
   const array = politician?.Articles;
 
   const handleViewCampaign = () => {
-    router.push('/campaignPage');
+    router.push({
+      pathname: '/campaignPage',
+      query: { id: politician.ID },
+    });
   };
 
   return (
