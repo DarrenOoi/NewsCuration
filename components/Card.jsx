@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Clipboard from "./pictures/clipboard.png"
+import { sendSaveArticle } from '@/utils/sendSaveArticle';
 
 const Card = ({ title, content, highlight = false, biasWords, url}) => {
 
@@ -12,6 +13,10 @@ const Card = ({ title, content, highlight = false, biasWords, url}) => {
 
   const copy = () => {
     navigator.clipboard.writeText(content)
+  }
+
+  const save = () => {
+    sendSaveArticle(url)
   }
 
   return (
@@ -56,7 +61,7 @@ const Card = ({ title, content, highlight = false, biasWords, url}) => {
             />
             COPY TO CLIPBOARD
           </button>
-          <button onClick={copy} className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
+          <button onClick={save} className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
            + SAVE PAGE SEARCH
           </button>
         </div>

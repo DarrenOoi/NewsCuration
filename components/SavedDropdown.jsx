@@ -9,32 +9,26 @@ const SavedDropdown = ({ items, handleClick }) => {
       >
         SAVED PAGES ▼
       </label>
-      {isEmpty ? (
-        <ul
-          tabIndex={0}
-          className='dropdown-content menu p-0 shadow bg-[#7895B1] rounded-box'
-        >
-          <li>
-            <a className='text-[#5F7A95] text-xs font-semibold'>
-              NO SAVED PAGES
-            </a>
-          </li>
-        </ul>
-      ) : (
-        items.map((item, index) => (
-          <ul
-            key={index}
+      <ul
             tabIndex={0}
             className='dropdown-content menu p-0 shadow bg-[#7895B1] rounded-box'
-          >
+      >
+        {isEmpty ? (
             <li>
               <a className='text-[#5F7A95] text-xs font-semibold'>
+                NO SAVED PAGES
+              </a>
+            </li>
+        ) : (
+          items.map((item, index) => (
+            <li>
+              <a key={index} className='text-[#5F7A95] text-xs font-semibold'>
                 {item.header}
               </a>
             </li>
-          </ul>
-        ))
-      )}
+          ))
+        )}
+      </ul>
     </div>
   );
 };
