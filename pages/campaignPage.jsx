@@ -11,8 +11,7 @@ import { fetchCampaign } from '@/utils/fetchCampaign';
 
 function campaignPage() {
   const router = useRouter();
-  const { id } = router.query;
-  // console.log(id);
+  const { id, about, image } = router.query;
   const handleSearch = () => {};
   const [campaign, setCampaign] = useState(null);
   const flagUrl = findFlagUrlByCountryName('Australia');
@@ -21,13 +20,9 @@ function campaignPage() {
     async function fetchCampaignInfo() {
       if (id) {
         try {
-          const [campaign] = await Promise.all([
-            fetchCampaign(id),
-            // fetchPoliticianByID(id),
-          ]);
-          setCampaign(res);
+          const campaign = await fetchCampaign(id);
+          setCampaign(campaign);
           console.log(campaign);
-          // console.log(politician);
         } catch (error) {
           //add error handling when request fails
           console.log('error');
@@ -68,8 +63,8 @@ function campaignPage() {
                       <div className='hero-content lg:flex-row mx-5'>
                         <div>
                           <img
-                            // src={politician?.ImageLink}
-                            src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
+                            src={image}
+                            // src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
                             className='max-w-sm rounded-lg '
                             style={{ width: '150px', height: '175px' }}
                           />
@@ -82,9 +77,7 @@ function campaignPage() {
                           <p className='text-xs text-gray-400	'>
                             Ut enim ad minim veniam
                           </p>
-                          <p className='text-l font-bold mt-2'>
-                            Campaign Promise
-                          </p>
+                          <p className='text-l font-bold mt-2'>About</p>
                           {/* orange line */}
                           <div
                             className='ml-auto mr-40'
@@ -94,12 +87,7 @@ function campaignPage() {
                               width: '200px',
                             }}
                           />
-                          <p className='text-s mr-10'>
-                            {' '}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nulla metus orci, venenatis dictum dolor a,
-                            scelerisque egestas dui.
-                          </p>
+                          <p className='text-s mr-10'>{about}</p>
                           {/* orange line */}
                           <div
                             className='ml-auto mr-40 mt-1'
@@ -112,6 +100,14 @@ function campaignPage() {
                         </div>
                       </div>
                       <p className='text-l font-bold ml-10'>Key Policies</p>{' '}
+                      {campaign && (
+                        <div>
+                          <p className='text-l ml-10'>
+                            {campaign.PolicyNameTitle}
+                          </p>
+                          <p className='text-s ml-10'>{campaign.PolicyInfo}</p>
+                        </div>
+                      )}
                     </div>
                     <div
                       className='rounded-3xl bg-white my-5 mx-2 w-full'

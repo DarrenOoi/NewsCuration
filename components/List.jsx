@@ -3,6 +3,7 @@ import { GrArticle } from 'react-icons/gr';
 import { findFlagUrlByIso2Code } from 'country-flags-svg';
 
 const List = ({ title, items, politician, handleClick, popular }) => {
+  // console.log('this items', items);
   const isEmpty = items.length === 0;
   return (
     <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-2 justify-start'>

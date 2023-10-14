@@ -46802,3 +46802,390 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
 [2023-10-14 20:59:26.138480] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
 [2023-10-14 20:59:59.586487] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
 [2023-10-14 21:00:30.831994] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-14 21:02:29.609803] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001BDDBCDEF10>]
+[2023-10-14 21:02:29.609803] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001BDDCC0C450>]
+[2023-10-14 21:02:30.928377] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 21:02:34.399418] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+(Fname LIKE '%Doe%' OR Lname LIKE '%Doe%') OR 
+0=1
+    ]
+[2023-10-14 21:02:35.737893] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 1 
+    ]
+[2023-10-14 21:03:35.023403] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-14 21:03:37.732193] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-14 21:03:44.376042] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:04:51.000792] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:05:24.077286] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:05:25.613925] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = 2
+    ]
+[2023-10-14 21:05:27.395241] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-14 21:14:02.870844] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:14:16.604968] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:15:05.498982] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:15:58.705691] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:16:39.455727] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:17:29.932439] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:18:33.543246] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:19:55.920861] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-14 21:21:13.167496] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:23:12.356571] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+0=1
+    ]
+[2023-10-14 21:27:43.706544] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+0=1
+    ]
+[2023-10-14 21:28:25.363775] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+0=1
+    ]
+[2023-10-14 21:28:53.960824] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 21:29:07.613094] [DarrenOoi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 29 expected 1]
+[2023-10-14 21:29:07.613094] [DarrenOoi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 7 expected 1]
+[2023-10-14 21:29:13.352904] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-14 21:29:36.101722] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-14 21:29:48.239697] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-14 21:30:20.854112] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002BB15634610>]
+[2023-10-14 21:30:20.854697] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002BB2611E110>]
+[2023-10-14 21:30:22.184646] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 21:30:25.455024] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+0=1
+    ]
+[2023-10-14 21:30:37.340092] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+(Fname LIKE '%%' OR Lname LIKE '%%') OR 
+0=1
+    ]
+[2023-10-14 21:30:53.009903] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+(Fname LIKE '%%' OR Lname LIKE '%%') OR 
+0=1
+    ]
+[2023-10-14 21:31:55.921110] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+(Fname LIKE '%%' OR Lname LIKE '%%') OR 
+0=1
+    ]
+[2023-10-14 21:32:03.906250] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+(Fname LIKE '%%' OR Lname LIKE '%%') OR 
+0=1
+    ]
+[2023-10-14 21:33:03.469807] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+(Fname LIKE '%%' OR Lname LIKE '%%') OR 
+0=1
+    ]
+[2023-10-14 21:34:52.933450] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+(Fname LIKE '%%' OR Lname LIKE '%%') OR 
+0=1
+    ]
+[2023-10-14 21:35:54.821903] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%donald%' OR Lname LIKE '%donald%') OR 
+0=1
+    ]
+[2023-10-14 21:37:40.209256] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+(Fname LIKE '%%' OR Lname LIKE '%%') OR 
+0=1
+    ]
+[2023-10-14 21:38:16.283919] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%donald%' OR Lname LIKE '%donald%') OR 
+0=1
+    ]
+[2023-10-14 21:38:59.289019] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-14 21:39:44.503449] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-14 21:40:44.058831] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%joh%' OR Lname LIKE '%joh%') OR 
+0=1
+    ]
+[2023-10-14 21:40:59.017074] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%anthony%' OR Lname LIKE '%anthony%') OR 
+0=1
+    ]
+[2023-10-14 21:41:04.100641] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Anthony%' OR Lname LIKE '%Anthony%') OR 
+(Fname LIKE '%Albanese%' OR Lname LIKE '%Albanese%') OR 
+0=1
+    ]
+[2023-10-14 21:41:05.147880] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 7 
+    ]
+[2023-10-14 21:46:55.327828] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%donal%' OR Lname LIKE '%donal%') OR 
+0=1
+    ]
+[2023-10-14 21:47:01.809648] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-14 21:47:03.447445] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-14 21:48:51.933995] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+0=1
+    ]
+[2023-10-14 21:52:22.017613] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-14 21:53:09.873322] [DarrenOoi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 31 expected 1]
+[2023-10-14 21:53:09.873322] [DarrenOoi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 7 expected 1]
+[2023-10-14 21:54:15.927778] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-14 21:55:23.879085] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001BB8FF5AB10>]
+[2023-10-14 21:55:23.879314] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001BB8F606490>]
+[2023-10-14 21:55:24.896274] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 21:55:26.384552] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-14 21:55:37.901931] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%a%' OR Lname LIKE '%a%') OR 
+0=1
+    ]
+[2023-10-14 21:55:56.851142] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+0=1
+    ]
+[2023-10-14 21:56:28.289692] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+0=1
+    ]
+[2023-10-14 21:57:13.949261] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%John%' OR Lname LIKE '%John%') OR 
+0=1
+    ]
+[2023-10-14 21:59:53.182013] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+0=1
+    ]
+[2023-10-14 21:59:58.328802] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-14 22:00:16.743837] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%john%' OR Lname LIKE '%john%') OR 
+0=1
+    ]
+[2023-10-14 22:00:22.326627] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-14 22:00:31.828238] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%anth%' OR Lname LIKE '%anth%') OR 
+0=1
+    ]
+[2023-10-14 22:00:35.991841] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Anthony%' OR Lname LIKE '%Anthony%') OR 
+(Fname LIKE '%Albanese%' OR Lname LIKE '%Albanese%') OR 
+0=1
+    ]
+[2023-10-14 22:00:37.109505] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 7 
+    ]
+[2023-10-14 22:00:50.971264] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-14 22:00:53.850252] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-14 22:00:55.590742] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-14 22:00:59.087205] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-14 22:02:50.339304] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dan%' OR Lname LIKE '%dan%') OR 
+0=1
+    ]
+[2023-10-14 22:03:19.662519] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-14 22:03:26.702633] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%anth%' OR Lname LIKE '%anth%') OR 
+0=1
+    ]

@@ -23,11 +23,6 @@ function ProfilePage() {
         try {
           const res = await fetchPolitician(name);
           setPolitician(res);
-          // const campaign = await fetchCampaign(name);
-          // // console.log(campaign);
-          // if (campaign.length > 0) {
-          //   setCampaign(campaign);
-          // }
           if (res.HasCampaign === 1) {
             setCampaign(true);
           }
@@ -48,7 +43,11 @@ function ProfilePage() {
   const handleViewCampaign = () => {
     router.push({
       pathname: '/campaignPage',
-      query: { id: politician.ID },
+      query: {
+        id: politician.ID,
+        about: politician.About,
+        image: politician.ImageLink,
+      },
     });
   };
 
@@ -109,22 +108,22 @@ function ProfilePage() {
                             </button>
                           </div>
                         )}
-                        <div className='hero-content lg:flex-row mx-5 my-3'>
-                          <div>
+                        <div className='hero-content flex flex-row mx-5 my-3'>
+                          <div className='items-start'>
                             <img
-                              // src={politician?.ImageLink}
-                              src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
+                              src={politician?.ImageLink}
+                              // src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
                               className='max-w-sm rounded-lg mr-5'
                               style={{ width: '200px', height: '250px' }}
                             />
                           </div>
-                          <div style={{ width: '700px', height: '250px' }}>
+                          <div style={{ width: '700px' }}>
                             <p className='text-2xl font-bold mb-2'>
                               {politician?.Fname} {politician?.Lname}
                             </p>
                             {/* <p className='text-2xl font-bold my-2'>John Doe</p> */}
                             <p className='text-xs text-gray-400	'>
-                              Ut enim ad minim veniam
+                              {politician?.Byline}
                             </p>
                             <p className='text-l font-bold my-4'>About</p>
                             {politician ? (
@@ -137,14 +136,9 @@ function ProfilePage() {
                           <div>
                             <img
                               src={flagUrl}
-                              className='max-w-sm opacity-50'
+                              className='max-w-sm opacity-50 mb-12'
                               style={{ width: '100px', height: '75px' }}
                             />
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
                           </div>
                         </div>
                         {/* orange line */}
