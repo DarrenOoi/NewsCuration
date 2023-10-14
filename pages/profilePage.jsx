@@ -1,6 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import Navbar from '@/components/Navbar';
+import Menu from '@/components/Menu';
 import Button from '@/components/Button';
 import Table from '@/components/Table';
 import { findFlagUrlByCountryName } from 'country-flags-svg';
@@ -21,8 +21,8 @@ function ProfilePage() {
         try {
           const res = await fetchPolitician(name);
           setPolitician(res);
-          console.log(res);
         } catch (error) {
+          //add error handling when request fails
           console.log('error');
         }
       }
@@ -60,13 +60,15 @@ function ProfilePage() {
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Navbar />
+      <Menu currentPage={'profile'} />
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-              <div className='flex justify-end p mt-5 mr-10 font-bold text-2xl text-[#7895B1]'>
-                PROFILE SEARCH
+              <div className='flex flex-row-reverse mr-7'>
+                <span className='font-bold text-3xl text-[#7895B1] h-7'>
+                  PROFILE SEARCH
+                </span>
               </div>
               <div className='flex'>
                 <div className='flex items-center justify-center mr-1'>

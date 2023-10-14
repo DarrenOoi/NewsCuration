@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import Pic from "./pictures/pic.png"
 import Clipboard from "./pictures/clipboard.png"
+import { sendSaveArticle } from '@/utils/sendSaveArticle';
 
-const Card = ({ title, content, highlight = false, biasWords }) => {
+const Card = ({ title, content, highlight = false, biasWords, url}) => {
+
   let phrases = [];
   let keys = [];
   if (highlight && content && biasWords) {
@@ -14,26 +15,12 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
     navigator.clipboard.writeText(content)
   }
 
+  const save = () => {
+    sendSaveArticle(url)
+  }
+
   return (
     <div className='card bg-white shadow-xl flex flex-col'>
-
-      <div className="bg-[#f3f3f3] rounded-2xl p-4 flex flex-col space-y-3">
-          <div className="p ml-4 text-xs font-bold text-[#FFB039]">PERSONS OF INTEREST IN ARTICLE</div>
-          <div className="ml-6 flex flex-row space-x-3 items-center">
-            <Image
-              src={Pic}
-              width={18}
-              height={18}
-            />
-
-            <p className="text-xs font-bold text-black">FIRSTNAME LASTNAME</p>
-
-            <button className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs">
-              VISIT PROFILE
-            </button>
-          </div>
-        </div>
-
       <div className='card-body text-black'>
         <div className='p'>
           <div className='card-title flex justify-center font-bold text-4xl text-gray-600'>
@@ -65,14 +52,17 @@ const Card = ({ title, content, highlight = false, biasWords }) => {
           )}
         </div>
         
-        <div>
-          <button onClick={copy} className="mt-6 btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
+        <div className="flex flex-row items-center space-x-6 mt-6">
+          <button onClick={copy} className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
           <Image
               src={Clipboard}
               width={13}
               height={13}
             />
             COPY TO CLIPBOARD
+          </button>
+          <button onClick={save} className="btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold">
+           + SAVE PAGE SEARCH
           </button>
         </div>
 

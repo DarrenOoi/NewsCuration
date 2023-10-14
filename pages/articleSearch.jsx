@@ -1,20 +1,22 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import { useState } from 'react';
-import Navbar from '@/components/Navbar';
+import { useState, useEffect } from 'react';
 import { fetchResults } from '@/utils/fetchResults';
 import Card from '@/components/Card';
 import Input from '@/components/Input';
-import Button from '@/components/Button';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import tts from '@/components/pictures/tts.png';
 import textSize from '@/components/pictures/textSize.png';
-import profilePicSmall from '@/components/pictures/profilePicSmall.png';
-import VerticleLine from '@/components/JustTheFactsLine';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
+import List from '@/components/List';
+import { fetchRecentArticles } from '@/utils/fetchRecentArticles';
+import { fetchPopularArticles } from '@/utils/fetchPopularArticles';
 import Menu from '@/components/Menu';
 import Poll from '@/components/Poll';
+import PersonOfInterest from '@/components/PersonOfInterest';
+import { fetchPoliticalFigureNames } from '@/utils/fetchPoliticalFigureNames';
+import { fetchPoll } from '@/utils/fetchPoll';
 
 function Home() {
   const [text, setText] = useState('');
@@ -22,6 +24,49 @@ function Home() {
   const [header, setHeader] = useState(null);
   const [article, setArticle] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [recents, setRecents] = useState([]);
+  const [popular, setPopular] = useState([]);
+
+  const [figureNames, setFigureNames] = useState([]);
+  const [poll, setPoll] = useState([]);
+
+  useEffect(() => {
+    async function fetchArticles() {
+      try {
+        const [recents, popular] = await Promise.all([
+          fetchRecentArticles(),
+          fetchPopularArticles(4),
+        ]);
+
+        setRecents(recents);
+        setPopular(popular);
+      } catch (error) {
+        console.log('Error:', error);
+      }
+    }
+
+    fetchArticles();
+  }, []);
+
+  // console.log(popular);
+  // console.log(recents);
+  const handleListClick = (url) => {
+    setSubmitted(true);
+    setText(url);
+    setResult(null);
+    fetchResults(url).then((result) => {
+      setResult(result.response);
+      setHeader(result.header);
+      setArticle(result.article);
+      setSubmitted(false);
+    });
+    fetchPoliticalFigureNames(url).then((poi) => {
+      setFigureNames(poi);
+    });
+    fetchPoll(url).then((poll) => {
+      setPoll(poll);
+    });
+  };
 
   const handleSubmit = () => {
     if (text.trim() != '') {
@@ -32,6 +77,12 @@ function Home() {
         setHeader(result.header);
         setArticle(result.article);
         setSubmitted(false);
+      });
+      fetchPoliticalFigureNames(text).then((poi) => {
+        setFigureNames(poi);
+      });
+      fetchPoll(text).then((poll) => {
+        setPoll(poll);
       });
     } else setResult(null);
   };
@@ -53,12 +104,11 @@ function Home() {
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Menu currentPage={"article"}/>
+      <Menu currentPage={'article'} />
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-
               <div className='flex flex-row-reverse mr-7'>
                 <span className='font-bold text-3xl text-[#7895B1] h-7'>
                   ARTICLE SEARCH
@@ -84,7 +134,10 @@ function Home() {
                         className='text-white text-sm'
                         onClick={handleSubmit}
                       >
-                        CLICK FOR THE <span className='text-[#FFB039] font-extrabold'>FACTS</span>
+                        CLICK FOR THE{' '}
+                        <span className='text-[#FFB039] font-extrabold'>
+                          FACTS
+                        </span>
                       </text>
                     </button>
                   </div>
@@ -101,7 +154,11 @@ function Home() {
                         height={5}
                         alt='Text Size'
                       />
-                        <progress className="ml-6 progress w-80" value={40} max="100"></progress>
+                      <progress
+                        className='ml-6 progress w-80'
+                        value={40}
+                        max='100'
+                      ></progress>
                     </div>
                     <button
                       className='btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4'
@@ -116,22 +173,35 @@ function Home() {
                     </button>
                   </div>
 
-                  <div className='mt-5'>
-                    <div>
-                    </div>
-                    <Card
-                      content={
-                        result ? (
-                          result
-                        ) : submitted ? (
+                  <div className='mt-3'>
+                    {result ? (
+                      <div className='pb-5'>
+                        <PersonOfInterest figureName={figureNames} />
+                        <Card content={result} url={text}/>
+                        <Poll data={poll} url={text}/>
+                      </div>
+                    ) : submitted ? (
+                      <Card
+                        content={
                           <span className='mt-2 loading loading-spinner loading-lg text-info'></span>
-                        ) : (
-                          'Waiting for input...'
-                        )
-                      }
-                    />
+                        }
+                      />
+                    ) : (
+                      <div className='mt-6'>
+                        <List
+                          title={'RECENTS'}
+                          items={recents}
+                          handleClick={handleListClick}
+                        />
+                        <List
+                          title={'MOST POPULAR'}
+                          items={popular}
+                          handleClick={handleListClick}
+                          popular={true}
+                        />
+                      </div>
+                    )}
                   </div>
-                  <Poll />
                 </div>
               </div>
 
