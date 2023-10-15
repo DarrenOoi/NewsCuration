@@ -46742,3 +46742,517 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Politician_CampaignPolicies
     WHERE ID = 2
     ]
+[2023-10-15 23:52:56.637532] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001573A2D6990>]
+[2023-10-15 23:52:56.637532] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001573A24D9D0>]
+[2023-10-15 23:52:57.571995] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 23:53:14.484200] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:15.885254] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%ant%' OR Lname LIKE '%ant%') OR 
+0=1
+    ]
+[2023-10-15 23:53:18.598563] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:20.134348] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Anthony%' OR Lname LIKE '%Anthony%') OR 
+(Fname LIKE '%Albanese%' OR Lname LIKE '%Albanese%') OR 
+0=1
+    ]
+[2023-10-15 23:53:20.565508] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:21.448739] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 7 
+    ]
+[2023-10-15 23:53:28.278423] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:29.170497] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%don%' OR Lname LIKE '%don%') OR 
+0=1
+    ]
+[2023-10-15 23:53:31.266890] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:32.162374] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-15 23:53:32.607970] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:34.515668] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-15 23:53:39.888991] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:40.755071] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 23:53:41.533930] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:42.437357] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 23:53:43.720125] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:44.677041] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 23:53:52.528225] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:53.438348] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 23:53:55.965974] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:57.298269] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-15 23:53:57.797887] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:53:58.864217] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:53:59.330028] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:00.283591] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 23:54:00.755280] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:01.641097] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:54:02.119936] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:03.050471] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:54:03.564407] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:04.513569] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-15 23:54:04.955909] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:05.841705] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:54:06.281173] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:07.241420] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 23:54:07.726046] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:08.594519] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:54:09.040778] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:09.910759] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:54:10.347098] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:11.236588] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-15 23:54:11.701195] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:12.578253] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:54:13.090075] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:14.001070] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 23:54:14.427621] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:15.295039] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:54:15.730344] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:16.597564] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-15 23:54:17.120354] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:18.003558] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-15 23:54:18.435797] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:19.328210] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 13
+    WHERE ID = 18 
+    ]
+[2023-10-15 23:54:31.808848] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:33.288289] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 23:54:36.604488] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:37.569086] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:54:38.004018] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:38.953598] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:54:39.524538] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:40.557423] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:54:41.121723] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:43.684338] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-15 23:54:44.338862] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:45.652980] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-15 23:54:46.200783] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:47.202461] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:54:47.787977] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:48.785788] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:54:49.452091] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:50.482432] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:54:52.517913] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:53.411577] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:54:53.880048] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:54.842207] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398',
+    0.4523809523809524,
+    0.40476190476190477,
+    0, 
+    NOW(),
+    'DarrenOoi',
+    'Anthony Albanese calls for unity after Australians resoundingly vote down Indigenous Voice to Parliament referendum',
+    ' Prime Minster Anthony Albanese has vowed to forge a new way forward to close the gap in life outcomes between Indigenous and non-Indigenous Australians, after voters resoundingly rejected recognising the First Australians in the constitution with a Voice to Parliament. A majority of voters and all states voted No to changing the constitution at Saturdays referendum, which was Australias first in more than two decades. The ACT, which is only included in the popular vote, was the only jurisdiction to vote Yes.  "Tonight is not the end of the road and is certainly not the end of our efforts to bring people together," Mr Albanese said on Saturday night. "The issues we sought to address have not gone away and neither have the people of goodwill and good heart, who want to address them and address them we will." The Voice to Parliament would have been an advisory body with no power of veto but permanently enshrined in the constitution, meaning a future government of the day could not abolish it without holding another referendum.  It was first proposed after hundreds of Indigenous Australians, who took part in the Uluru Dialogues, issued the Statement from the Heart six years ago. That statement called for a constitutionally enshrined Voice along with truth telling and treaty.  Indigenous Australians Minister Linda Burney said the government would announce in the coming months renewed government commitments to close the gap between Indigenous and non-Indigenous people, which includes life expectancy, education and the rates of suicide and disease. Opposition Leader Peter Dutton and Coalition Indigenous Australians spokeswoman Jacinta Nampijinpa Price, who actively campaigned against the referendum, celebrated the result, insisting the vote should have never happened.  But senior figures in the Yes campaign offered a scathing assessment of the No campaign.  "Its very clear that reconciliation is dead," academic Marcia Langton told SBS.  She forecasted it would be at least two decades before Australians were "capable of putting their colonial hatred behind them and acknowledging that we exist", and accused No campaigners of "poisoning" Australians against the Voice. Thomas Mayo, one of the leading Yes campaigners, said he was devastated. "We have seen a disgusting No campaign. A campaign that has been dishonest, that has lied to the Australian people, and Im sure that will come out in the analysis," he said.  "History will reflect poorly on Peter Dutton, [One Nation Leader] Pauline Hanson, all that have opposed this." Some Indigenous leaders in the Yes campaign have called a week of silence across the country, to grieve and reflect on the outcome of the referendum. Australia has voted no in the referendum, but the vote hasnt been uniform across states and cities. A small number of electorates, mainly in inner cities, are projected to have voted yes. As of late Saturday night, the strongest Yes vote came from the Victorian seat of Melbourne, which Greens leader Adam Bandt represents. The strongest No vote was the Queensland electorate of Maranoa, which Nationals leader David Littleproud holds. The results offered echoes of the 1999 republic referendum, when the ACT was the only jurisdiction to vote Yes. Like 24 years ago, more affluent electorates were the most likely to vote Yes.  Mr Albanese said it was his obligation to hold the referendum, having promised it before he became prime minister.  "When you aim high, sometimes you fall short," he said. But Mr Dutton dismissed the assertion that the referendum had to be held.  "While Yes and No voters may hold differences of opinion, these differences of opinions do not diminish our love for our country or our regard for each other," he said. "This is the referendum that Australia did not need to have." Tasmanian Liberal MP Bridget Archer, a rare campaigner for Yes in the federal Coalition party room, said it would be "very difficult" for Australia to move forward.  "There has been really terrible things said that are very hard to repair the damage from," she said. "In some cases, I am not sure how you move forward with those." Liberal MP Julian Leeser, who quit the Coalition frontbench to champion a Yes vote, said he remained optimistic the "cause for reconciliation will ultimately succeed". "To every Indigenous Australian I say, this was a vote about the constitution, it was not a vote about you. It is an undeniable fact that you are our lands first peoples and I honour you this night," he said.  Independent senator Lidia Thorpe, a leading No campaigner, said she was not surprised by the referendum outcome.  She said Australia needed a treaty with First Nations people before the constitution was changed.  Senator Nampijinpa Price said the focus needed to be on helping the nations most disadvantaged. "I realise that much work needs to be done for us to be brought together as a country because it has been such a challenging and heart-wrenching time for many Australians," she said. We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn, and work. This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced. AEST = Australian Eastern Standard Time which is 10 hours ahead of GMT (Greenwich Mean Time)',
+    '- Prime Minister Anthony Albanese acknowledges the rejection of recognizing the First Australians with a Voice to Parliament in the constitution.
+- Majority of voters and all states voted No to changing the constitution at the referendum, except for the ACT.
+- Albanese emphasizes that the issues being addressed have not gone away and that efforts will continue to bring people together.
+- The Voice to Parliament would have been an advisory body with no power of veto, but permanently enshrined in the constitution.
+- The Voice to Parliament was first proposed after the Uluru Dialogues, with Indigenous Australians calling for a constitutionally enshrined Voice along with truth telling and treaty.
+- Indigenous Australians Minister Linda Burney promises renewed government commitments to close the gap between Indigenous and non-Indigenous people.
+- Opposition Leader Peter Dutton and Coalition Indigenous Australians spokeswoman Jacinta Nampijinpa Price celebrate the result and believe the vote should have never happened.
+- The No campaign is criticized by Yes campaign figures, accusing them of poisoning Australians against the Voice and running a dishonest campaign.
+- Some Indigenous leaders in the Yes campaign call for a week of silence to grieve and reflect on the outcome of the referendum.
+- The results of the referendum vary across states and cities, with more affluent electorates being more likely to vote Yes.
+- Albanese acknowledges that sometimes high aspirations fall short, but Dutton believes the referendum was unnecessary.
+- Tasmanian Liberal MP Bridget Archer expresses concern about repairing the damage caused by the campaign and moving forward.
+- Liberal MP Julian Leeser remains optimistic that reconciliation will ultimately succeed and honors Indigenous Australians as the lands first peoples.
+- Independent senator Lidia Thorpe believes Australia needs a treaty with First Nations people before changing the constitution.
+- Senator Nampijinpa Price emphasizes the need to focus on helping the nations most disadvantaged.
+- The article concludes with a disclaimer about copyright and the time zone.',
+    1
+    );
+    ]
+[2023-10-15 23:54:55.329288] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:56.281879] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-15 23:54:56.766919] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:57.664435] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:54:58.128373] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:54:59.000989] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '40',
+    'What is your opinion on the outcome of the referendum regarding recognizing the First Australians in the constitution with a Voice to Parliament?',
+    'I am disappointed with the outcome and believe that recognizing the First Australians in the constitution is essential for reconciliation.',
+    'I am glad that the referendum failed as I believe it was unnecessary and would not have made a significant impact.',
+    'I think the referendum outcome reflects the need for more dialogue and a focus on other issues affecting Indigenous Australians.',
+    'I am unsure about the outcome and would like to learn more about the implications of recognizing the First Australians in the constitution.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:54:59.448341] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:00.444214] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-15 23:55:00.874896] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:01.967527] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'vowed',
+    'The word vowed suggests a strong commitment or determination, indicating a sense of urgency and emotional charge.',
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:02.614546] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:03.562846] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-15 23:55:04.041529] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:05.128803] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'resoundingly rejected',
+    'The phrase resoundingly rejected implies a strong and clear rejection, potentially evoking emotions of disappointment or frustration.',
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:05.804017] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:06.751707] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-15 23:55:07.259203] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:08.200436] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'goodwill and good heart',
+    'The phrase goodwill and good heart suggests positive intentions and empathy, appealing to emotions of kindness and understanding.',
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:08.629444] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:09.515970] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-15 23:55:09.964697] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:10.846539] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'poisoning',
+    'The word poisoning is a strong and negative term, suggesting a deliberate and harmful influence on peoples perceptions, potentially provoking anger or resentment.',
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:11.318726] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:12.226525] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-15 23:55:12.684394] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:13.648488] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'devastated',
+    'The word devastated indicates a deep sense of sadness or loss, evoking strong emotional distress.',
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:14.448191] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:15.522208] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-15 23:55:15.965208] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:16.926830] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'terrible things said',
+    'The phrase terrible things said implies hurtful or offensive remarks, potentially igniting emotions of anger or betrayal.',
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:17.401316] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:18.280507] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-15 23:55:18.717917] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:19.593654] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'challenging and heart-wrenching',
+    'The phrase challenging and heart-wrenching suggests difficult and emotionally painful experiences, evoking feelings of distress or sadness.',
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:20.033811] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:20.926613] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-15 23:55:21.407149] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:22.356279] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    7,
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:22.840238] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:23.805328] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-15 23:55:24.274162] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:25.247535] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    31,
+    40,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-15 23:55:25.715877] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:26.688359] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-15 23:55:27.161366] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:28.128250] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-15 23:55:28.607325] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:55:29.568563] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 40 
+    ]
+[2023-10-15 23:57:20.631027] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:57:21.621050] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 23:57:39.728589] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:57:40.691007] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 23:57:41.573283] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:57:42.527054] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 23:57:43.891420] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:57:44.843337] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 23:57:54.695385] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:57:57.011689] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%an%' OR Lname LIKE '%an%') OR 
+0=1
+    ]
+[2023-10-15 23:58:40.532134] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:58:43.690594] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%an%' OR Lname LIKE '%an%') OR 
+0=1
+    ]
+[2023-10-15 23:58:46.294064] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:58:47.253584] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Michelle%' OR Lname LIKE '%Michelle%') OR 
+(Fname LIKE '%Ananda-Rajah%' OR Lname LIKE '%Ananda-Rajah%') OR 
+0=1
+    ]
+[2023-10-15 23:58:47.727514] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:58:48.656583] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 5 
+    ]
+[2023-10-15 23:58:55.651115] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-15 23:58:56.530984] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]

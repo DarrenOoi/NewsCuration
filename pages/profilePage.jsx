@@ -44,7 +44,7 @@ function ProfilePage() {
     });
   };
 
-  const flagUrl = findFlagUrlByCountryName('United States');
+  const flagUrl = findFlagUrlByCountryName('Australia');
   const array = politician?.Articles;
 
   const handleViewCampaign = () => {
