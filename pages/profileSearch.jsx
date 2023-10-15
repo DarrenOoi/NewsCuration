@@ -11,6 +11,8 @@ import { fetchRecentPoliticians } from '@/utils/fetchRecentPoliticians';
 import { searchPolitician } from '@/utils/searchPolitician';
 
 function ProfileSearch() {
+  const router = useRouter();
+  const { name } = router.query;
   const [search, setSearch] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState(null);
@@ -19,8 +21,18 @@ function ProfileSearch() {
   useEffect(() => {
     async function fetchPoliticians() {
       try {
-        const res = await fetchRecentPoliticians();
-        setRecents(res);
+        if (name) {
+          setSubmitted(true);
+          setResult(null);
+          const searchResult = await searchPolitician(name);
+          console.log(name);
+          console.log(searchResult);
+          setResult(searchResult);
+          setSubmitted(false);
+        } else {
+          const res = await fetchRecentPoliticians();
+          setRecents(res);
+        }
       } catch (error) {
         //add error handling when request fails
         console.log('error');
@@ -28,8 +40,6 @@ function ProfileSearch() {
     }
     fetchPoliticians();
   }, []);
-
-  const router = useRouter();
 
   const handleSearch = async () => {
     if (search.trim() != '') {
@@ -40,11 +50,6 @@ function ProfileSearch() {
       setResult(searchResult);
       setSubmitted(false);
       // console.log('this is result', result);
-
-      // router.push({
-      //   pathname: '/profilePage',
-      //   query: { name: 'Donald Trump' },
-      // });
     } else setResult(null);
   };
 

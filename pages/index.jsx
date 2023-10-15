@@ -7,10 +7,13 @@ import articlePic from '@/components/pictures/articlePic.png';
 import profilePic from '@/components/pictures/profilePic.png';
 import articlePicSmall from '@/components/pictures/articlePicSmall.png';
 import profilePicSmall from '@/components/pictures/profilePicSmall.png';
+import { useEffect } from 'react';
 
 function Index() {
   const router = useRouter();
-
+  useEffect(() => {
+    document.getElementById('my_modal_2').showModal();
+  });
   const ArticleSearch = () => {
     router.push('/articleSearch');
   };
@@ -72,6 +75,54 @@ function Index() {
       </Head>
       <Navbar />
       <div className='min-h-screen bg-[#5F7A95]'>
+        {/* modal to display message */}
+        <dialog id='my_modal_2' className='modal'>
+          <div className='modal-box bg-[#7895B1] w-11/12 px-20'>
+            <h3 className='font-bold text-xl text-[#FFB039] mb-4'>
+              Best practice for website usage (Privacy & Security)
+            </h3>
+            <ul className='text-white text-lg'>
+              <li className='my-2'>
+                •
+                <text className='text-[#FFB039] font-bold mx-1'>
+                  Use a private browser
+                </text>
+                (incognito) for the Just the facts website as third parties
+                could be tracking your usage to develop a political profile
+              </li>
+              <li className='my-2'>
+                •
+                <text className='text-[#FFB039] font-bold mx-1'>
+                  Do not allow cookies to be saved
+                </text>
+                from unknown websites
+              </li>
+              <li className='my-2'>
+                • This tool is
+                <text className='text-[#FFB039] font-bold mx-1'>
+                  built for educational purposes
+                </text>
+                - Acquire the IP licensing from the original news sources if you
+                are using this tool for commercial purposes.
+              </li>
+              <li className='my-2'>
+                • This website is a
+                <text className='text-[#FFB039] font-bold mx-1'>
+                  supplementary tool for self-education
+                </text>
+                - Just the facts
+                <text className='text-[#FFB039] font-bold mx-1'>
+                  does not take any responsibility for any actions
+                </text>
+                taken based on information consumed from the website.
+              </li>
+            </ul>
+          </div>
+          <form method='dialog' className='modal-backdrop'>
+            <button>close</button>
+          </form>
+        </dialog>
+
         <div className='hero'>
           <div className='hero-content p'>
             <div>

@@ -22,12 +22,11 @@ function campaignPage() {
     async function fetchCampaignInfo() {
       if (id) {
         try {
-          const campaign = await fetchCampaign(id);
-          setCampaign(campaign);
+          //try to send the two request at the same time
           const res = await fetchCampaigningPoliticians();
           setCampaigningPoliticians(res);
-          console.log(res);
-          // console.log(campaign);
+          const campaign = await fetchCampaign(id);
+          setCampaign(campaign);
         } catch (error) {
           //add error handling when request fails
           console.log('error');
@@ -96,10 +95,7 @@ function campaignPage() {
                     )}
                   </div>
                   <div className='flex flex-row'>
-                    <div
-                      className='rounded-3xl bg-white my-5 mx-2 w-full'
-                      style={{ height: '625px' }}
-                    >
+                    <div className='rounded-3xl bg-white my-5 mx-2 w-full min-h-[625px] h-[auto]'>
                       <div className='hero-content lg:flex-row mx-5'>
                         <div>
                           <img
@@ -139,21 +135,22 @@ function campaignPage() {
                           />
                         </div>
                       </div>
-                      <p className='text-l font-bold ml-10'>Key Policies</p>{' '}
-                      {campaign && (
+                      {campaign ? (
                         <div>
+                          <p className='text-l font-bold ml-10'>Key Policies</p>{' '}
                           <p className='text-l ml-10'>
                             {campaign.PolicyNameTitle}
                           </p>
                           <p className='text-s ml-10'>{campaign.PolicyInfo}</p>
                         </div>
+                      ) : (
+                        <div className='flex justify-center'>
+                          <span className='mt-2 loading loading-spinner loading-lg text-warning'></span>
+                        </div>
                       )}
                     </div>
                     {/* right side */}
-                    <div
-                      className='rounded-3xl bg-[#DBEAFE] my-5 mx-2 w-full'
-                      style={{ height: '625px' }}
-                    >
+                    <div className='rounded-3xl bg-[#DBEAFE] my-5 mx-2 w-full min-h-[625px] h-[auto]'>
                       {comparison ? (
                         <div className='hero-content lg:flex-row mx-5'>
                           <div>
@@ -201,16 +198,16 @@ function campaignPage() {
                       ) : (
                         <div className='mt-6'>
                           <List
-                            title='COMPARISONS'
+                            title='CAMPAIGNING POLITICIANS'
                             items={campaigningPoliticians}
                             campaign={true}
                             handleClick={handleClick}
                           />
                         </div>
                       )}
-                      <p className='text-l font-bold ml-10'>Key Policies</p>{' '}
                       {comparison && (
                         <div>
+                          <p className='text-l font-bold ml-10'>Key Policies</p>
                           <p className='text-l ml-10'>
                             {comparison.PolicyNameTitle}
                           </p>

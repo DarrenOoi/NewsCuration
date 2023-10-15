@@ -16,6 +16,7 @@ function ProfilePage() {
   const { name } = router.query;
   const [politician, setPolitician] = useState(null);
   const [campaign, setCampaign] = useState(null);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     async function fetchPoliticianData() {
@@ -35,7 +36,12 @@ function ProfilePage() {
     fetchPoliticianData();
   }, [name]);
 
-  const handleSearch = () => {};
+  const handleSearch = () => {
+    router.push({
+      pathname: '/profileSearch',
+      query: { name: search },
+    });
+  };
 
   const flagUrl = findFlagUrlByCountryName('United States');
   const array = politician?.Articles;
@@ -78,7 +84,7 @@ function ProfilePage() {
                 >
                   <div className='flex justify-start justify-center space-x-4 mt-2'>
                     <Input
-                      setText={handleSearch}
+                      setText={setSearch}
                       placeholder='Enter political profile name'
                     />
 
