@@ -47,6 +47,7 @@ function ProfilePage() {
         id: politician.ID,
         about: politician.About,
         image: politician.ImageLink,
+        name: politician.Fname + ' ' + politician.Lname,
       },
     });
   };

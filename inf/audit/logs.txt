@@ -47189,3 +47189,781 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     WHERE (Fname LIKE '%anth%' OR Lname LIKE '%anth%') OR 
 0=1
     ]
+[2023-10-15 16:22:10.670678] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001E72ABFF890>]
+[2023-10-15 16:22:10.670678] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001E74B606490>]
+[2023-10-15 16:22:11.539741] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 16:22:18.879775] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 16:24:25.570471] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%don%' OR Lname LIKE '%don%') OR 
+0=1
+    ]
+[2023-10-15 16:24:29.400964] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-15 16:24:30.799895] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-15 16:24:36.370589] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:25:53.924217] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:28:51.569013] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:38:42.191645] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:39:53.800124] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:40:10.081469] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:40:34.999611] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:40:56.147564] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:41:40.746118] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:41:49.466779] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:41:55.959369] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:42:10.918689] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:43:55.714673] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:50:14.469229] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:50:38.166938] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%anthony%' OR Lname LIKE '%anthony%') OR 
+0=1
+    ]
+[2023-10-15 16:52:56.596228] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:53:09.072017] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%anthony%' OR Lname LIKE '%anthony%') OR 
+0=1
+    ]
+[2023-10-15 16:53:21.959173] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%donal%' OR Lname LIKE '%donal%') OR 
+0=1
+    ]
+[2023-10-15 16:56:10.999654] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:56:20.595265] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 16:57:08.349984] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 16:57:19.208533] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:10:06.749611] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:10:17.245363] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:10:19.109072] [DarrenOoi] [FAIL] [error building sql statement with error (1054, "Unknown column 'None' in 'where clause'")]
+[2023-10-15 17:10:19.542575] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = None
+    ]
+[2023-10-15 17:11:51.289027] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:11:56.986598] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:11:58.778428] [DarrenOoi] [FAIL] [error building sql statement with error (1054, "Unknown column 'None' in 'where clause'")]
+[2023-10-15 17:11:59.208618] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = None
+    ]
+[2023-10-15 17:12:22.152198] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:12:38.169348] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:12:44.042638] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:12:46.256392] [DarrenOoi] [FAIL] [error building sql statement with error (1054, "Unknown column 'None' in 'where clause'")]
+[2023-10-15 17:12:46.698274] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = None
+    ]
+[2023-10-15 17:24:11.167196] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:24:27.128876] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:27:36.414895] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:27:43.910475] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%don%' OR Lname LIKE '%don%') OR 
+0=1
+    ]
+[2023-10-15 17:29:24.843340] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:29:32.045521] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:29:52.230372] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:29:57.349038] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:31:07.002853] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000017D45AED2D0>]
+[2023-10-15 17:31:07.003848] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000017D45AFD050>]
+[2023-10-15 17:31:07.889747] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 17:31:25.878801] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:31:28.805042] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-15 17:31:30.558948] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-15 17:31:38.372753] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:31:50.243928] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-15 17:33:41.824676] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 17:33:50.725527] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-15 17:43:05.148826] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:43:06.398128] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 17:46:34.907306] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:46:36.760101] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:46:37.774047] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 17:47:44.242215] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:47:45.589097] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 17:47:52.712600] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 17:47:57.827299] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-15 17:51:17.190724] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:51:18.548818] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 17:55:27.423719] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 17:55:28.712990] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 17:55:32.620923] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-15 18:00:37.379879] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:00:38.990927] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:00:56.462240] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:00:57.874323] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:26:00.009225] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:26:01.525759] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:26:03.472765] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-15 18:27:20.886114] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:27:22.340487] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:27:38.912882] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:27:40.849324] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:27:43.547984] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 18:32:19.079948] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:32:21.016880] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:33:18.460448] [DarrenOoi] [FAIL] [error building sql statement with error (1054, "Unknown column 'None' in 'where clause'")]
+[2023-10-15 18:33:18.978676] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = None
+    ]
+[2023-10-15 18:33:39.662755] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 18:37:58.432893] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:38:00.005115] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:38:24.671353] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:38:26.278447] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:38:29.144952] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 18:41:58.962484] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:42:00.440520] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:42:07.668311] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 18:42:12.309590] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-15 18:42:19.143938] [DarrenOoi] [FAIL] [error building sql statement with error unpack_from requires a buffer of at least 9 bytes for unpacking 8 bytes at offset 1 (actual buffer size is 5)]
+[2023-10-15 18:42:19.143938] [DarrenOoi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 1 expected 13]
+[2023-10-15 18:43:36.048656] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-15 18:43:36.415286] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-15 18:43:54.832026] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-15 18:43:55.164139] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-15 18:44:27.029532] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000017B2EAFA750>]
+[2023-10-15 18:44:27.029532] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000017B2FC06750>]
+[2023-10-15 18:44:28.348219] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 18:45:40.646038] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%donA%' OR Lname LIKE '%donA%') OR 
+0=1
+    ]
+[2023-10-15 18:45:43.627554] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-15 18:45:45.878964] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-15 18:45:51.101811] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:45:52.736513] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:46:05.527756] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 18:46:31.441094] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:46:33.082813] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:46:36.710000] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 18:47:23.428731] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:47:24.797893] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:48:11.801785] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:48:13.234873] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:49:27.471295] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:49:29.112203] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:51:53.082604] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:51:55.546158] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:52:09.145485] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:52:10.901502] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:53:36.503615] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:53:38.086023] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:54:02.211225] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:54:03.845807] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:54:20.786938] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:54:22.278193] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:54:43.988862] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:54:45.627841] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:54:58.278863] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:55:00.059171] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:55:09.787720] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:55:11.830573] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:55:36.109524] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:55:37.649322] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:55:50.842832] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 18:57:34.280711] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:57:36.116389] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:57:40.466576] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:57:42.161159] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:58:47.362337] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:58:48.723828] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:58:52.441431] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:58:54.359008] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:58:56.301380] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:58:57.422139] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:59:46.788738] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 18:59:48.626283] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 18:59:52.111598] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-15 18:59:56.925061] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-15 19:00:27.749919] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 19:03:53.163018] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 19:03:54.595003] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 19:04:36.187406] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 19:04:37.902875] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 19:04:47.951750] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 19:05:42.108905] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-15 19:05:43.689262] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 19:05:48.766092] [DarrenOoi] [FAIL] [error building sql statement with error unpack_from requires a buffer of at least 9 bytes for unpacking 8 bytes at offset 1 (actual buffer size is 5)]
+[2023-10-15 19:05:48.766092] [DarrenOoi] [FAIL] [error building sql statement with error Protocol error, expecting EOF]

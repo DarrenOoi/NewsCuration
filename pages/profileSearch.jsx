@@ -36,10 +36,10 @@ function ProfileSearch() {
       setSubmitted(true);
       setResult(null);
       const searchResult = await searchPolitician(search);
-      console.log('this is search', searchResult);
+      // console.log('this is search', searchResult);
       setResult(searchResult);
       setSubmitted(false);
-      console.log('this is result', result);
+      // console.log('this is result', result);
 
       // router.push({
       //   pathname: '/profilePage',
