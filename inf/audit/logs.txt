@@ -26613,3 +26613,16 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Politician_CampaignPolicies
     WHERE ID = 2
     ]
+[2023-10-15 21:58:03.840629] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002BA67D6FF50>]
+[2023-10-15 21:58:03.842008] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002BA4768AB50>]
+[2023-10-15 21:58:04.705425] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 21:58:11.025182] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-15 21:59:17.892440] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
