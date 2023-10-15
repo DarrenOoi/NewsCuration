@@ -23,6 +23,7 @@ function ProfilePage() {
       if (name) {
         try {
           const res = await fetchPolitician(name);
+          console.log(res);
           setPolitician(res);
           if (res.HasCampaign === 1) {
             setCampaign(true);
@@ -54,6 +55,7 @@ function ProfilePage() {
         about: politician.About,
         image: politician.ImageLink,
         name: politician.Fname + ' ' + politician.Lname,
+        title: politician.Political_Position,
       },
     });
   };
@@ -116,7 +118,7 @@ function ProfilePage() {
                           </div>
                         )}
                         <div className='hero-content flex flex-row mx-5 my-3'>
-                          <div className='items-start'>
+                          <div className='mb-auto'>
                             <img
                               src={politician?.ImageLink}
                               // src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
@@ -130,7 +132,7 @@ function ProfilePage() {
                             </p>
                             {/* <p className='text-2xl font-bold my-2'>John Doe</p> */}
                             <p className='text-xs text-gray-400	'>
-                              {politician?.Byline}
+                              {politician?.Political_Position}
                             </p>
                             <p className='text-l font-bold my-4'>About</p>
                             {politician ? (
@@ -140,7 +142,7 @@ function ProfilePage() {
                             )}
                             {/* <p className='mr-10'> Ut enim ad minim veniam</p> */}
                           </div>
-                          <div>
+                          <div className='mb-auto'>
                             <img
                               src={flagUrl}
                               className='max-w-sm opacity-50 mb-12'

@@ -41,7 +41,8 @@ const List = ({ title, items, politician, handleClick, popular, campaign }) => {
                         `${item.Fname} ${item.Lname}`,
                         item.ID,
                         item.About,
-                        item.ImageLink
+                        item.ImageLink,
+                        item.Political_Position
                       )
                     }
                   >

@@ -25,10 +25,11 @@ function ProfileSearch() {
           setSubmitted(true);
           setResult(null);
           const searchResult = await searchPolitician(name);
-          console.log(name);
           console.log(searchResult);
           setResult(searchResult);
           setSubmitted(false);
+          const res = await fetchRecentPoliticians();
+          setRecents(res);
         } else {
           const res = await fetchRecentPoliticians();
           setRecents(res);

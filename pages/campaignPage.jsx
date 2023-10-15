@@ -12,7 +12,7 @@ import List from '@/components/List';
 
 function campaignPage() {
   const router = useRouter();
-  const { id, about, image, name } = router.query;
+  const { id, about, image, name, title } = router.query;
   const [campaign, setCampaign] = useState(null);
   const [comparison, setComparison] = useState(null);
   const [campaigningPoliticians, setCampaigningPoliticians] = useState([]);
@@ -23,10 +23,10 @@ function campaignPage() {
       if (id) {
         try {
           //try to send the two request at the same time
-          const res = await fetchCampaigningPoliticians();
-          setCampaigningPoliticians(res);
           const campaign = await fetchCampaign(id);
           setCampaign(campaign);
+          const res = await fetchCampaigningPoliticians();
+          setCampaigningPoliticians(res);
         } catch (error) {
           //add error handling when request fails
           console.log('error');
@@ -36,7 +36,7 @@ function campaignPage() {
     fetchCampaignInfo();
   }, [id]);
 
-  const handleClick = async (name, ID, about, image) => {
+  const handleClick = async (name, ID, about, image, title) => {
     try {
       const res = await fetchCampaign(ID);
       console.log('this is campagin comparison', res);
@@ -46,6 +46,7 @@ function campaignPage() {
         ID: ID,
         about: about,
         image: image,
+        title: title,
       };
       setComparisonDetails(obj);
     } catch (error) {
@@ -110,9 +111,7 @@ function campaignPage() {
                           style={{ width: '325px', height: '125px' }}
                         >
                           <p className='text-2xl font-bold my-2'>{name}</p>
-                          <p className='text-xs text-gray-400	'>
-                            Ut enim ad minim veniam
-                          </p>
+                          <p className='text-xs text-gray-400	'>{title} </p>
                           <p className='text-l font-bold mt-2'>About</p>
                           {/* orange line */}
                           <div
@@ -136,12 +135,18 @@ function campaignPage() {
                         </div>
                       </div>
                       {campaign ? (
-                        <div>
-                          <p className='text-l font-bold ml-10'>Key Policies</p>{' '}
-                          <p className='text-l ml-10'>
-                            {campaign.PolicyNameTitle}
+                        <div className='mx-4'>
+                          <p className='text-xl font-bold ml-2 mb-2'>
+                            Key Policies
                           </p>
-                          <p className='text-s ml-10'>{campaign.PolicyInfo}</p>
+                          <details className='collapse collapse-arrow bg-base-200 outline outline-black'>
+                            <summary className='collapse-title text-l font-medium '>
+                              {campaign.PolicyNameTitle}
+                            </summary>
+                            <div className='collapse-content text-s '>
+                              {campaign.PolicyInfo}
+                            </div>
+                          </details>
                         </div>
                       ) : (
                         <div className='flex justify-center'>
@@ -169,7 +174,7 @@ function campaignPage() {
                               {comparisonDetails?.name}
                             </p>
                             <p className='text-xs text-gray-400	'>
-                              Ut enim ad minim veniam
+                              {comparisonDetails?.title}
                             </p>
                             <p className='text-l font-bold mt-2'>About </p>
                             {/* orange line */}
@@ -206,14 +211,18 @@ function campaignPage() {
                         </div>
                       )}
                       {comparison && (
-                        <div>
-                          <p className='text-l font-bold ml-10'>Key Policies</p>
-                          <p className='text-l ml-10'>
-                            {comparison.PolicyNameTitle}
+                        <div className='mx-4'>
+                          <p className='text-xl font-bold ml-2 mb-2'>
+                            Key Policies
                           </p>
-                          <p className='text-s ml-10'>
-                            {comparison.PolicyInfo}
-                          </p>
+                          <details className='collapse collapse-arrow bg-base-200 outline outline-black'>
+                            <summary className='collapse-title text-l font-medium '>
+                              {comparison.PolicyNameTitle}
+                            </summary>
+                            <div className='collapse-content text-s	'>
+                              {comparison.PolicyInfo}
+                            </div>
+                          </details>
                         </div>
                       )}
                     </div>
