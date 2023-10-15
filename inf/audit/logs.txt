@@ -26823,3 +26823,182 @@ a buffer of at least 9 bytes for unpacking 8 bytes at offset 1 (actual buffer si
     SET Views = 111
     WHERE ID = 5 
     ]
+[2023-10-15 15:33:33.514146] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 15:37:04.292911] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000023D90AA0C10>]
+[2023-10-15 15:37:04.301935] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000023D90AA26D0>]
+[2023-10-15 15:37:04.807396] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 15:37:06.947575] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:37:07.446871] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:37:07.962809] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 15:37:08.463841] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:37:08.964990] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:38:10.693109] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000019D03A0AC10>]
+[2023-10-15 15:38:10.696010] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000019D02546E90>]
+[2023-10-15 15:38:11.189310] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 15:38:13.451229] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:38:13.958129] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-15 15:38:14.460639] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesFourth = 1
+    WHERE ID_Article = 5 
+    ]
+[2023-10-15 15:38:40.869061] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:38:41.369313] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:38:41.903014] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 15:38:42.422653] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:38:42.920592] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:39:01.520542] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 15:39:03.103907] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:39:03.605234] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 112
+    WHERE ID = 5 
+    ]
+[2023-10-15 15:40:24.253302] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000258907D0890>]
+[2023-10-15 15:40:24.261939] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000025891220050>]
+[2023-10-15 15:40:24.751871] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 15:40:51.800410] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:40:52.300364] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-15 15:40:52.801729] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesFourth = 2
+    WHERE ID_Article = 5 
+    ]
+[2023-10-15 15:41:01.415251] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:41:01.915171] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:41:02.416821] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 15:41:02.917547] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:41:03.419758] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:41:56.235839] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027CE427AB10>]
+[2023-10-15 15:41:56.251716] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027CE2969A50>]
+[2023-10-15 15:41:56.746860] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 15:42:00.572280] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:42:01.071449] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-15 15:42:01.571877] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesFourth = 3
+    WHERE ID_Article = 5 
+    ]
+[2023-10-15 15:42:09.282025] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:42:09.783968] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:42:10.282505] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 15:42:10.784438] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:42:11.298645] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
