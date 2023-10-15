@@ -633,6 +633,7 @@ class transactionDataClient():
                 messageStatus.FAIL, f'an exception occured in the execution statement: \n {e}')
             self.closeConnection()
         try:
+            self.cnx.ping()
             self.cursor.execute(sqlIn)
         except Exception as e:  # error handling is vague, have to assume basket case here
             self.logMessage(messageStatus.FAIL,
@@ -656,6 +657,8 @@ class transactionDataClient():
     WHERE {filter if filter is not None else '1=1'}
     """
         try:
+            self.cnx.ping()
+            self.logMessage(messageStatus.SUCCESS, f'Pinging connection')
             self.cursor.execute(query)
         except Exception as e:
             self.logMessage(messageStatus.FAIL,
@@ -681,6 +684,8 @@ class transactionDataClient():
                             'Connection is closed. Query failed')
 
         try:
+            self.cnx.ping()
+            self.logMessage(messageStatus.SUCCESS, f'Pinging connection')
             self.cursor.execute(query)
         except Exception as e:
             self.logMessage(messageStatus.FAIL,
@@ -704,6 +709,8 @@ class transactionDataClient():
         DDLMethod = table.insertSQL(self.user)
 
         try:
+            self.cnx.ping()
+            self.logMessage(messageStatus.SUCCESS, f'Pinging connection')
             self.cursor.execute(DDLMethod)
         except Exception as e:
             self.logMessage(
@@ -726,6 +733,8 @@ class transactionDataClient():
     SELECT MAX(ID) AS ID FROM {table.getName()};
     """
         try:
+            self.cnx.ping()
+            self.logMessage(messageStatus.SUCCESS, f'Pinging connection')
             self.cursor.execute(query)
         except Exception as e:
             self.logMessage(
