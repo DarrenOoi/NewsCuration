@@ -20,9 +20,9 @@ const Poll = ({ url, data }) => {
     };
 
     const updateVotes = ({index}) => {
-        /**
+        
         sendPollOption(url, index);
-        */
+        
     }
 
   return (
@@ -75,20 +75,12 @@ const Poll = ({ url, data }) => {
             </div>
           </div>
           <Comment
-            user={'FIRSTNAME LASTNAME'}
-            text={'I am yapping about something'}
+            user={'User 1'}
+            text={'Hmmm this is quite interesting'}
           />
           <Comment
-            user={'FIRSTNAME LASTNAME'}
-            text={'I am yapping about something as well'}
-          />
-          <Comment
-            user={'FIRSTNAME LASTNAME'}
-            text={'I am waffling about something'}
-          />
-          <Comment
-            user={'FIRSTNAME LASTNAME'}
-            text={'I am waffling about something as well'}
+            user={'User 2'}
+            text={'Im not sure I agree with their views'}
           />
         </div>
       </div>

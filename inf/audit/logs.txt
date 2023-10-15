@@ -26234,3 +26234,592 @@ a buffer of at least 9 bytes for unpacking 8 bytes at offset 1 (actual buffer si
     SET Views = 17
     WHERE ID = 8 
     ]
+[2023-10-14 16:49:10.413866] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000027EB63B61D0>]
+[2023-10-14 16:49:10.413866] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000027EB7B12790>]
+[2023-10-14 16:49:10.902140] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 16:49:21.840215] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-14 16:49:35.981298] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/hughmcintyre/2023/10/11/donald-trumps-daughter-in-law-charts-her-first-top-10-hit-on-a-billboard-chart/"
+    ]
+[2023-10-14 16:49:36.465004] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/hughmcintyre/2023/10/11/donald-trumps-daughter-in-law-charts-her-first-top-10-hit-on-a-billboard-chart/"
+    ]
+[2023-10-14 16:49:36.969568] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/hughmcintyre/2023/10/11/donald-trumps-daughter-in-law-charts-her-first-top-10-hit-on-a-billboard-chart/"
+    ]
+[2023-10-14 16:49:37.883034] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/hughmcintyre/2023/10/11/donald-trumps-daughter-in-law-charts-her-first-top-10-hit-on-a-billboard-chart/"
+    ]
+[2023-10-14 16:49:39.117911] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/hughmcintyre/2023/10/11/donald-trumps-daughter-in-law-charts-her-first-top-10-hit-on-a-billboard-chart/"
+    ]
+[2023-10-14 16:49:41.117625] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.forbes.com/sites/hughmcintyre/2023/10/11/donald-trumps-daughter-in-law-charts-her-first-top-10-hit-on-a-billboard-chart/"
+    ]
+[2023-10-14 16:50:01.862984] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:02.340172] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:02.899082] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:04.477704] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 16:50:05.258347] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 16:50:05.741031] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:06.493669] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 16:50:07.238174] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 16:50:07.710036] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:10.307099] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:17.301565] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:17.802675] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:18.329985] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors',
+    0.46153846153846156,
+    0.38461538461538464,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    '‘Wasting court’s time’: judge in Trump classified documents case rebukes prosecutors',
+    'Frustrated US district judge Aileen Cannon shuts down conflict-of-interest hearing after lawyers make surprise request The federal judge in the criminal case about Donald Trump’s retention of classified documents rebuked prosecutors for “wasting the court’s time” on Thursday with their sudden request to partly restrict the lawyer for one of Trump’s co-defendants. US district judge Aileen Cannon abruptly postponed the hearing after getting the request to prevent the lawyer from doing cross-examination and closing arguments of a former client at trial – which came after prosecutors had first said they would not seek disqualification. “I do want to admonish the government for frankly wasting the court’s time,” Cannon said. She added she was “disappointed” that David Harbach, one of the prosecutors, had raised the request without warning, and without citing supporting cases from the southern district of Florida. The hearing was the second in a pair of proceedings scheduled so Trump’s co-defendants, Walt Nauta and Carlos De Oliveira, could be told of their lawyers’ prior representation of witnesses during the grand jury investigation who could testify against them at trial. Trump and Nauta were charged in an indictment alleging the illegal retention of national defense documents at Trump’s Mar-a-Lago resort and obstruction of justice. With De Oliveira they were charged on additional obstruction counts in a superseding indictment unsealed in July. The prosecutors in the office of special counsel Jack Smith had asked for conflict-of-interest hearings for Nauta’s lawyer Stanley Woodward and De Oliveira’s lawyer John Irving, due to the fact they might be constrained at trial because of divided loyalties to their current and former clients. The complication emerged at the hearing for Nauta, when prosecutors said they could not be sure how Woodward might cross-examine “Trump Employee 4”, identified by the Guardian as the IT director of Mar-a-Lago, Yuscil Taveras. Taveras is of special interest because Woodward initially represented him during the grand jury investigation. When prosecutors told him he was a target for charges, Taveras retained a new lawyer – not paid by Trump’s PAC – and changed his sworn testimony. The prosecutors revealed at the hearing that they now intended to call Taveras as a witness, and told the judge they believed Woodward should be precluded from engaging in cross-examination, or be allowed to call into question his credibility during closing arguments to the jury. The cross-examination concern had been previously raised in court filings. But asking to preclude Woodward from doing closing arguments was a new request in the eyes of Cannon, who pressed Harbach on why it was being raised for the first time at the hearing. Harbach later clarified that he only wanted Nauta to understand before he made the decision on whether to keep Woodward as his lawyer, it was possible Woodward’s conflicts would preclude him from doing cross-examination and closing arguments attacking Taveras’ credibility. But the judge sided with Woodward, who insisted that the fact he had represented Taveras did not mean he could not attack his credibility at trial – and that he was not comfortable about Nauta making a decision on a potential conflict of interest until his role at trial could be resolved. Woodward added that he had not come prepared to litigate that point because it had only just been raised by Harbach in court on Thursday. The judge agreed, particularly after Harbach acknowledged he did not have supporting cases from the eleventh circuit, which are binding. Sign up to First Thing Our US morning briefing breaks down the key stories of the day, telling you what’s happening and why it matters after newsletter promotion Earlier, at the first conflicts hearing, De Oliveira told the judge he wanted to keep his Trump PAC-funded lawyer, John Irving, even though Irving had previously represented three witnesses who could be called by prosecutors to testify against him at trial. “I want to continue to move forward with Mr Irving,” De Oliveira affirmed. The potential conflicts might have seemed less pressing for De Oliveira, mainly because Irving had decided beforehand that cross-examination of those witnesses would be done by his co-counsel, Donnie Murrell. The larger issue for De Oliveira appeared to be whether he grasped the full extent of what retaining a potentially conflicted lawyer could mean. De Oliveira struggled to explicate in his own words what he understood, and earlier told the judge he could read English better than he could write. De Oliveira’s language skills have been a topic of discussion inside the Trump legal team for months, according to people familiar with the matter. He told the judge that when he emigrated from Portugal at 17, he had not graduated high school, and never completed his secondary education.',
+    '- US district judge Aileen Cannon admonished prosecutors for wasting the courts time with a sudden request to restrict the lawyer for one of Trumps co-defendants during cross-examination and closing arguments.
+- Cannon was disappointed that the request was made without warning or supporting cases.
+- The conflict-of-interest hearing was postponed after the request was made.
+- The hearing was scheduled to inform Trumps co-defendants, Walt Nauta and Carlos De Oliveira, about their lawyers prior representation of witnesses during the grand jury investigation.
+- Nauta and De Oliveira were charged with the illegal retention of national defense documents and obstruction of justice.
+- Prosecutors requested conflict-of-interest hearings for Nautas lawyer Stanley Woodward and De Oliveiras lawyer John Irving due to concerns about divided loyalties.
+- Prosecutors were unsure how Woodward would cross-examine "Trump Employee 4" and wanted him to be precluded from engaging in cross-examination or questioning the witnesss credibility during closing arguments.
+- Woodward argued that his representation of the witness did not prevent him from attacking their credibility at trial.
+- The judge agreed with Woodward and sided with him in allowing him to continue as Nautas lawyer until his role at trial could be resolved.
+- De Oliveira expressed his desire to continue with his Trump PAC-funded lawyer, John Irving, despite Irvings prior representation of witnesses who could testify against him at trial.
+- De Oliveiras language skills and understanding of the implications of retaining a potentially conflicted lawyer were discussed during the hearing.',
+    1
+    );
+    ]
+[2023-10-14 16:50:18.826930] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-14 16:50:19.322759] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/us-news/2023/oct/12/judge-trump-classified-documents-rebukes-prosecutors"
+    ]
+[2023-10-14 16:50:19.808686] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '35',
+    'What is your opinion on the request made by prosecutors to restrict the lawyer for one of Trumps co-defendants?',
+    'The request was justified in order to ensure a fair trial.',
+    'The request was unnecessary and a waste of time.',
+    'The request was made in bad faith to hinder the defense.',
+    'The request was a strategic move by the prosecutors.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:50:20.299486] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-14 16:50:20.797072] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'frustrated',
+    'The word frustrated suggests that the US district judge, Aileen Cannon, was experiencing irritation or dissatisfaction with the situation, indicating an emotional state.',
+    35,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:50:21.289221] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:50:21.783063] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'rebuked',
+    'The word rebuked implies a strong expression of disapproval or criticism by the judge, suggesting an emotionally charged response to the prosecutors actions.',
+    35,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:50:22.269399] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:50:22.762351] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'wasting the courts time',
+    'The phrase wasting the courts time indicates the judges perception that the prosecutors were engaging in unnecessary or unproductive actions, showcasing frustration and emotional response.',
+    35,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:50:23.239522] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:50:23.753315] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'abruptly postponed',
+    'The phrase abruptly postponed suggests a sudden and unexpected delay in the hearing, indicating a potentially emotionally charged decision by the judge.',
+    35,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:50:24.240025] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:50:24.770813] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'disappointed',
+    'The word disappointed expresses the judges emotional state of feeling let down or dissatisfied with David Harbachs actions.',
+    35,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:50:25.257791] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:50:25.745390] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'without warning',
+    'The phrase without warning suggests a lack of prior notice or preparation, potentially implying an emotional response due to the unexpected nature of the request.',
+    35,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:50:26.230125] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:51:22.852397] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-14 16:52:37.804378] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B71541CF90>]
+[2023-10-14 16:52:37.814785] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B77EA9FD50>]
+[2023-10-14 16:52:38.359720] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-14 16:52:53.062324] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-14 16:53:03.277405] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:03.774164] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:04.291888] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:05.029438] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:05.526659] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:06.025803] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:07.242750] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 16:53:07.979547] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 16:53:08.461324] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:09.196265] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 16:53:09.932599] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-14 16:53:10.413026] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:10.895312] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:11.380948] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:11.862972] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:12.360190] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:12.848980] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:13.335900] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:13.838316] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast',
+    0.7,
+    0.4,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    ' Biden’s foreign policy agenda upended by Israel-Hamas war – podcast ',
+    'Presented by Jonathan Freedland, with Aaron David Miller, produced by Danielle Stephens and Joshan Chana, executive producer is Max Sanderson Fri 13 Oct 2023 15.00 AEDT Last modified on Fri 13 Oct 2023 19.31 AEDT In a TV speech on Tuesday Joe Biden pledged unwavering support for Israel after Hamas militants killed hundreds of civilians including US nationals on Saturday. More than 900 people in Gaza have been killed in retaliatory airstrikes by Israel, which has enforced a ‘blockade’ of the area, sealing off 2.3 million people from food, fuel and other supplies. Despite some Democrats calling for de-escalation of the situation, Biden said Israel not only had the right to defend itself, but a ‘duty’ to do so. So how else might the US be able to influence the war? As some at home use this moment to blame Biden, what can his administration do to keep his foreign policy plans on track? This week, Jonathan Freedland is joined by Aaron David Miller – who served for two decades as a state department analyst, negotiator and adviser on Middle East issues – to discuss what the US president should do next How to listen to podcasts: everything you need to know The Guardian is editorially independent. And we want to keep our journalism open and accessible to all. But we increasingly need our readers to fund our work. ',
+    '- Joe Biden pledged support for Israel after Hamas militants killed civilians, including US nationals.
+- More than 900 people in Gaza have been killed in retaliatory airstrikes by Israel.
+- Israel has enforced a "blockade" on Gaza, affecting 2.3 million people.
+- Some Democrats are calling for de-escalation of the conflict.
+- Biden said Israel has the right and duty to defend itself.
+- The podcast discusses how the US can influence the war and keep Bidens foreign policy plans on track.
+
+(Note: The last few sentences are not related to the articles content and have been omitted from the summary.)',
+    1
+    );
+    ]
+[2023-10-14 16:53:14.332774] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-14 16:53:14.816187] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.theguardian.com/politics/audio/2023/oct/13/joe-biden-foreign-policy-agenda-upended-by-israel-hamas-war-podcast"
+    ]
+[2023-10-14 16:53:15.311055] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '36',
+    'What should the US administration do to keep its foreign policy plans on track?',
+    'Increase diplomatic efforts to broker a ceasefire between Israel and Hamas',
+    'Impose economic sanctions on Israel to pressure them to de-escalate the situation',
+    'Decrease military support to Israel until they agree to negotiate with Hamas',
+    'Maintain current stance and support Israels right to defend itself',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:53:15.796959] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-14 16:53:16.297008] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'killed',
+    'The word killed indicates a tragic loss of life, evoking strong emotions.',
+    36,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:53:16.792838] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:53:17.288279] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'blockade',
+    'The term blockade suggests a deliberate action taken by Israel to restrict access to essential resources, potentially implying a negative or oppressive intent.',
+    36,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:53:17.772474] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:53:18.262436] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'retaliatory airstrikes',
+    'The phrase retaliatory airstrikes suggests a response to previous actions, implying a cycle of violence and potentially evoking strong emotions.',
+    36,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:53:18.748041] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:53:19.250954] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'blame Biden',
+    'The phrase blame Biden implies attributing responsibility or fault to President Biden for the ongoing situation, potentially indicating bias or subjective judgment.',
+    36,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:53:19.736184] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-14 16:53:20.222668] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'foreign policy plans on track',
+    'The phrase foreign policy plans on track implies a positive evaluation of President Bidens foreign policy goals, potentially indicating bias or support for his administration.',
+    36,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-14 16:53:20.724182] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-15 15:26:47.642849] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D62F30C190>]
+[2023-10-15 15:26:47.658282] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D62DFBB090>]
+[2023-10-15 15:26:48.171355] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-15 15:26:51.245175] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 15:26:54.595300] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:26:55.108833] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:26:55.613560] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 15:26:56.115691] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:26:56.615341] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:26:57.126380] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:26:57.625262] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:26:58.115423] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 15:26:58.612798] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:26:59.109907] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:26:59.605489] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:27:00.103807] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:27:00.615694] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-15 15:27:01.125675] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:27:01.615583] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-15 15:27:02.115215] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:27:02.615286] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 109
+    WHERE ID = 5 
+    ]
+[2023-10-15 15:27:59.231170] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 15:28:18.895936] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:28:19.390892] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 110
+    WHERE ID = 5 
+    ]
+[2023-10-15 15:28:40.499642] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-15 15:28:42.586660] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-15 15:28:43.090439] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 111
+    WHERE ID = 5 
+    ]
