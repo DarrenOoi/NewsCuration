@@ -4,7 +4,11 @@ const Table = ({ articles }) => {
   const router = useRouter();
 
   const visitSource = (url) => {
-    router.push(url);
+    // router.push(url);
+    router.push({
+      pathname: '/articleSearch',
+      query: { url: url },
+    });
   };
 
   return (
