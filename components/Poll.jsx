@@ -20,9 +20,7 @@ const Poll = ({ url, data }) => {
     };
 
     const updateVotes = ({index}) => {
-        
         sendPollOption(url, index);
-        
     }
 
   return (
