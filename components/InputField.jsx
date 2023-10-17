@@ -1,4 +1,6 @@
-{/* not need */}
+{
+  /* not need */
+}
 
 const InputField = ({ handleSubmit, setText }) => {
   return (
@@ -17,7 +19,8 @@ const InputField = ({ handleSubmit, setText }) => {
           type='submit'
           onClick={handleSubmit}
         >
-          CLICK FOR THE <text className="text-orange-500 font-extrabold">FACTS</text>
+          CLICK FOR THE{' '}
+          <text className='text-orange-500 font-extrabold'>FACTS</text>
         </button>
       </div>
     </div>

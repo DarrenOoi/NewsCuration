@@ -3,7 +3,6 @@ import { fetchSavedArticles } from '@/utils/fetchSavedArticles';
 import { useState, useEffect } from 'react';
 import SavedDropdown from './SavedDropdown';
 
-
 const Menu = ({ currentPage }) => {
   const [saved, setSaved] = useState([]);
   const router = useRouter();

@@ -75363,3 +75363,1161 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     LIMIT 4
     ]
 >>>>>>> master
+[2023-10-17 21:24:44.026369] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022AE2F36990>]
+[2023-10-17 21:24:44.027369] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022AE29EDE10>]
+[2023-10-17 21:24:44.897939] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-17 21:28:05.736246] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:06.736468] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:28:17.855393] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:18.776594] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-17 21:28:19.223388] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:20.178005] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:20.656209] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:21.622813] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 21:28:22.098930] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:23.057288] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "31"
+    ]
+[2023-10-17 21:28:23.574331] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:24.530073] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:25.074806] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:26.053805] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:26.514182] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:27.497872] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-17 21:28:28.017161] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:28.901916] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:29.401059] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:30.336936] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 21:28:30.818864] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:31.814056] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "31"
+    ]
+[2023-10-17 21:28:32.293466] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:33.328585] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:33.894669] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:34.895848] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:35.352940] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:36.300994] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-17 21:28:36.821648] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:37.856733] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:38.337409] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:39.297857] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 21:28:39.781567] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:40.770711] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "31"
+    ]
+[2023-10-17 21:28:41.253740] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:42.257379] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:42.738999] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:43.740601] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "40"
+    ]
+[2023-10-17 21:28:44.188235] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:45.175217] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-15/indigenous-voice-referendum-result-anthony-albanese-peter-dutton/102977398"
+    ]
+[2023-10-17 21:28:45.681541] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:28:46.694796] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 40 
+    ]
+[2023-10-17 21:29:25.096387] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:29:29.173424] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:29:29.725960] [DarrenOoi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-17 21:29:30.206539] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:29:57.211039] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:29:57.673544] [DarrenOoi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-17 21:29:58.115537] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:30:33.022370] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001BF660C6990>]
+[2023-10-17 21:30:33.023000] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001BF65D16810>]
+[2023-10-17 21:30:33.935715] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-17 21:31:06.095816] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:06.979118] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:31:12.974511] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:13.936247] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:31:14.405710] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:15.517612] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:31:16.171879] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:17.246473] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:31:17.870149] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:20.380967] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-17 21:31:21.094792] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:22.818087] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-17 21:31:23.437701] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:24.445931] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:31:25.055737] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:26.257012] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:31:26.741122] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:27.775169] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:31:28.255795] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:29.294315] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:31:29.778392] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:30.754492] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71',
+    0.25,
+    0.25,
+    0, 
+    NOW(),
+    'DarrenOoi',
+    'Anthony Albanese says Hamas has hurt both innocent Israelis and Palestinians',
+    'Anthony Albanese has said all Australians had been "profoundly shocked by the scale and wantonness" of Hamas recent assault in Israel, describing it as an "an attack on Jewish people" across the globe. Source: AAP / Mick Tsikas She once said Palestinians are airbrushed. Now she says calls for restraint are disgraceful How Hamas secretly built a mini-army to fight Israel Nazi salutes and clashes: Arrests made as protesters face off at anti-immigration rally Share this with family and friends Australia World Politics Australia Politics World Politics World Morning (Mon–Fri) Afternoon (Mon–Fri) Weekend By subscribing, you agree to SBS’s terms of service and privacy policy including receiving email updates from SBS. SBS World News',
+    '- Anthony Albanese expresses shock at the recent assault by Hamas in Israel
+- Describes the assault as an "attack on Jewish people"
+- Australians were profoundly shocked by the scale and wantonness of the assault
+- Albanese emphasizes that the assault hurts both innocent Israelis and Palestinians
+- No emotionally charged words or bias content detected in the article',
+    1
+    );
+    ]
+[2023-10-17 21:31:31.314163] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:32.679232] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-17 21:31:33.775024] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:34.733886] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:31:35.179029] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:36.254625] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '43',
+    'What is your opinion on Anthony Albaneses statement about Hamas assault in Israel?',
+    'I agree with Albanese and believe that Hamas assault was an attack on Jewish people worldwide.',
+    'I disagree with Albanese and believe that the assault was not specifically targeted at Jewish people.',
+    'I am neutral and do not have a strong opinion on Albaneses statement.',
+    'I dont know/No opinion',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-17 21:31:36.738547] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:37.773888] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-17 21:31:38.253621] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:39.213976] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'profoundly shocked',
+    'The phrase profoundly shocked indicates a strong emotional response, suggesting a deep and intense feeling of shock.',
+    43,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-17 21:31:39.693108] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:40.619194] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-17 21:31:41.133785] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:42.134306] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'wantonness',
+    'The word wantonness implies a sense of deliberate and unprovoked violence, potentially amplifying the emotional impact of the assault.',
+    43,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-17 21:31:42.691098] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:43.735671] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-17 21:31:44.211697] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:45.251701] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'attack on Jewish people',
+    'Describing the assault as an attack on Jewish people across the globe may be emotionally charged as it connects the incident to a broader community and invokes a sense of collective victimhood.',
+    43,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-17 21:31:45.814599] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:46.770526] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-17 21:31:47.294924] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:48.254471] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'disgraceful',
+    'The use of the word disgraceful to describe calls for restraint may indicate bias by expressing strong disapproval or criticism without considering alternative perspectives or factors at play.',
+    43,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-17 21:31:48.734858] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:49.659742] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-17 21:31:50.132875] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:51.161223] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'anti-immigration rally',
+    'The term anti-immigration may have a negative connotation, implying a bias against immigrants or a negative view of immigration policies.',
+    43,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-17 21:31:51.614960] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:52.535591] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-17 21:31:53.093380] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:54.124967] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    7,
+    43,
+    0, 
+    NOW(),
+    'DarrenOoi'
+    );
+    ]
+[2023-10-17 21:31:54.563848] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:55.493854] [DarrenOoi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-17 21:31:57.305148] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:31:59.893477] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-17 21:32:00.416666] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:32:02.032176] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-17 21:32:02.499708] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:32:03.892300] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-17 21:32:04.357795] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:32:06.181764] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-17 21:32:06.698246] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:32:07.695541] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:32:08.155147] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:32:09.135046] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 43 
+    ]
+[2023-10-17 21:32:09.692774] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:32:10.904519] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:32:52.254420] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:32:53.214689] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:33:12.335985] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001AFEC9C6C10>]
+[2023-10-17 21:33:12.337947] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001AFEBF5E410>]
+[2023-10-17 21:33:13.294318] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-17 21:34:22.251409] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:34:23.399740] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:34:47.898303] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:34:49.056291] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:34:49.534390] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:34:50.477884] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:34:50.973668] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:34:51.970281] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 21:34:52.521116] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:34:53.692434] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:34:54.333480] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:34:55.717414] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:34:56.243643] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:34:57.265852] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:34:57.720231] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:34:58.781321] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:34:59.267912] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:00.381732] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 21:35:00.872268] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:01.825743] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:35:02.307146] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:03.196251] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:35:03.670650] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:04.631018] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:35:05.082177] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:06.000903] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:35:06.512025] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:07.843860] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 21:35:08.394689] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:09.918591] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:35:10.413920] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:11.779970] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "43"
+    ]
+[2023-10-17 21:35:12.265324] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:13.725106] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:35:14.237257] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:35:15.723733] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 43 
+    ]
+[2023-10-17 21:37:08.903791] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:10.725464] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Anthony%' OR Lname LIKE '%Anthony%') OR 
+(Fname LIKE '%Albanese%' OR Lname LIKE '%Albanese%') OR 
+0=1
+    ]
+[2023-10-17 21:37:11.438081] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:12.764380] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 7 
+    ]
+[2023-10-17 21:37:19.738221] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:21.114099] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:37:23.872861] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:25.574903] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-17 21:37:26.191358] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:27.315309] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:27.935899] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:29.219084] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:29.868028] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:31.004439] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:31.515045] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:32.743791] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-17 21:37:33.357620] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:34.471962] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:34.918733] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:36.080092] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:36.671092] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:37.759082] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:38.376884] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:39.401902] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-17 21:37:40.115989] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:41.338167] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:41.964754] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:44.213352] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:45.328934] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:46.527459] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-17 21:37:47.333329] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:49.526882] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-17 21:37:51.582032] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:37:53.735740] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 26
+    WHERE ID = 8 
+    ]
+[2023-10-17 21:41:26.479081] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:41:27.814569] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:41:30.652486] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:41:31.854348] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-17 21:41:32.455971] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:41:33.873798] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 27
+    WHERE ID = 8 
+    ]
+[2023-10-17 21:42:42.335372] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:42:43.523804] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:42:50.991685] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:42:52.429072] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-17 21:42:53.152339] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:42:54.276234] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 28
+    WHERE ID = 8 
+    ]
+[2023-10-17 21:44:38.867354] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:44:40.356274] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:44:42.608155] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:44:44.241922] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:44:44.769711] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:44:45.849525] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 4
+    WHERE ID = 43 
+    ]
+[2023-10-17 21:45:33.503724] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:45:34.536524] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:45:40.573173] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:45:42.105888] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/anthony-albanese-says-hamas-attack-victimised-innocent-israelis-and-palestinians/38akd0b71"
+    ]
+[2023-10-17 21:45:42.822027] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:45:44.051127] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 5
+    WHERE ID = 43 
+    ]
+[2023-10-17 21:45:52.036668] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:45:53.169542] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:45:59.007745] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:46:00.343140] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-17 21:46:03.037091] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:46:04.325794] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-17 21:46:04.933989] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:46:07.234779] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-17 21:46:11.636967] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:46:12.874452] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-17 21:46:13.858330] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:46:15.135116] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-17 21:46:18.257272] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:46:19.486890] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-17 21:46:34.433225] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:46:35.967330] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-17 21:53:49.611346] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:53:51.115612] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-17 21:53:51.726507] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:53:52.832634] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:53:53.421901] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:53:54.745148] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-17 21:53:55.671182] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:53:57.411641] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:53:57.995974] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:53:59.153927] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:53:59.709805] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:00.902350] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-17 21:54:01.449580] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:02.572946] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:54:03.186352] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:04.683367] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-17 21:54:05.500770] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:06.773490] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:54:07.368101] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:08.549793] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:54:09.104678] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:10.251333] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-17 21:54:11.062198] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:12.447715] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:54:13.042942] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:14.304994] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-17 21:54:14.824064] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:16.349724] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:54:17.073965] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:18.504461] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-17 21:54:19.022414] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:20.255320] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-17 21:54:20.860451] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:22.025939] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 129
+    WHERE ID = 5 
+    ]
+[2023-10-17 21:54:27.970070] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:29.095821] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-17 21:54:29.708475] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:54:30.901854] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 130
+    WHERE ID = 5 
+    ]
+[2023-10-17 21:55:07.607469] [DarrenOoi] [FAIL] [error building sql statement with error (2013, 'Lost connection to MySQL server during query')]
+[2023-10-17 21:55:07.607469] [DarrenOoi] [FAIL] [error building sql statement with error 'NoneType' object has no attribute 'settimeout']
+[2023-10-17 21:55:18.822784] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:55:19.601286] [DarrenOoi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-17 21:55:20.191436] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:56:25.270927] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000015A5DAD4650>]
+[2023-10-17 21:56:25.270927] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000015A4C459C10>]
+[2023-10-17 21:56:27.016978] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-17 21:56:34.697815] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:56:35.896797] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%dona%' OR Lname LIKE '%dona%') OR 
+0=1
+    ]
+[2023-10-17 21:56:37.974866] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:56:39.125654] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-17 21:56:39.660708] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:56:42.062319] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-17 21:56:48.938926] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:56:48.938926] [DarrenOoi] [FAIL] [error building sql statement with error (0, '')]
+[2023-10-17 21:56:53.332558] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:56:53.853332] [DarrenOoi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-17 21:56:54.767916] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 21:57:00.909891] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:57:01.938890] [DarrenOoi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-17 21:57:02.411579] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%ant%' OR Lname LIKE '%ant%') OR 
+0=1
+    ]
+[2023-10-17 21:57:19.090585] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:57:20.061398] [DarrenOoi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-17 21:57:20.720607] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%er%' OR Lname LIKE '%er%') OR 
+0=1
+    ]
+[2023-10-17 21:57:30.087607] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000231F961E550>]
+[2023-10-17 21:57:30.095264] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000231F8DC6990>]
+[2023-10-17 21:57:31.567989] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-17 21:57:36.957406] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:57:38.534404] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%ant%' OR Lname LIKE '%ant%') OR 
+0=1
+    ]
+[2023-10-17 21:57:41.154254] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:57:43.042001] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Anthony%' OR Lname LIKE '%Anthony%') OR 
+(Fname LIKE '%Albanese%' OR Lname LIKE '%Albanese%') OR 
+0=1
+    ]
+[2023-10-17 21:57:43.690689] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:57:44.982590] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 7 
+    ]
+[2023-10-17 21:57:50.926115] [DarrenOoi] [FAIL] [error building sql statement with error (2013, 'Lost connection to MySQL server during query')]
+[2023-10-17 21:57:50.926115] [DarrenOoi] [FAIL] [error building sql statement with error 'NoneType' object has no attribute 'settimeout']
+[2023-10-17 21:58:07.512916] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020122706890>]
+[2023-10-17 21:58:07.512916] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020134806990>]
+[2023-10-17 21:58:08.705568] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-17 21:58:48.002677] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:58:48.010700] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:58:48.744975] [DarrenOoi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 113 expected 15]
+[2023-10-17 21:58:48.744975] [DarrenOoi] [FAIL] [error building sql statement with error invalid literal for int() with base 10: 'ttps://www.abc.net.au/news/2023-10-14/australian-repatriation-flight-departs-from-tel-aviv-israel-gaza/1']
+[2023-10-17 21:58:53.346039] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 21:58:53.963029] [DarrenOoi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-17 21:58:54.584726] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 22:00:39.958453] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001F811EEF890>]
+[2023-10-17 22:00:39.965968] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001F811EF85D0>]
+[2023-10-17 22:00:41.110315] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-17 22:00:47.973821] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:00:49.876062] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%ant%' OR Lname LIKE '%ant%') OR 
+0=1
+    ]
+[2023-10-17 22:00:52.338338] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:00:54.216029] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Anthony%' OR Lname LIKE '%Anthony%') OR 
+(Fname LIKE '%Albanese%' OR Lname LIKE '%Albanese%') OR 
+0=1
+    ]
+[2023-10-17 22:00:54.895276] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:00:56.227089] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 7 
+    ]
+[2023-10-17 22:01:01.933227] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:03.082598] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-14/nine-million-australians-still-to-vote-in-voice-referendum/102976642"
+    ]
+[2023-10-17 22:01:03.899535] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:05.338577] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:06.109809] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:07.280685] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 22:01:08.100627] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:09.532451] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:10.152106] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:11.215379] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:11.690836] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:12.911048] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-14/nine-million-australians-still-to-vote-in-voice-referendum/102976642"
+    ]
+[2023-10-17 22:01:13.539202] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:14.666613] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:15.197264] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:16.341164] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 22:01:17.052647] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:18.352121] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:18.907761] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:20.082702] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:20.690816] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:22.122106] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-14/nine-million-australians-still-to-vote-in-voice-referendum/102976642"
+    ]
+[2023-10-17 22:01:22.791086] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:23.980917] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:24.791231] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:26.189866] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "7"
+    ]
+[2023-10-17 22:01:26.843507] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:28.175323] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:28.786213] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:30.343124] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "28"
+    ]
+[2023-10-17 22:01:30.892283] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:32.019470] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-14/nine-million-australians-still-to-vote-in-voice-referendum/102976642"
+    ]
+[2023-10-17 22:01:33.114034] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:35.058042] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 28 
+    ]
+[2023-10-17 22:01:36.191503] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:37.394393] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 22:01:47.567259] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:01:49.268965] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 22:01:59.511208] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:02:01.089124] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-14/nine-million-australians-still-to-vote-in-voice-referendum/102976642"
+    ]
+[2023-10-17 22:02:01.965482] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:02:03.191145] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 28 
+    ]
+[2023-10-17 22:02:04.365824] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:02:05.701445] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 22:02:09.552174] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:02:10.871967] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-14/nine-million-australians-still-to-vote-in-voice-referendum/102976642"
+    ]
+[2023-10-17 22:02:11.598043] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:02:12.828447] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 4
+    WHERE ID = 28 
+    ]
+[2023-10-17 22:02:13.954022] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:02:15.076602] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-17 22:02:21.830739] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-17 22:02:23.467058] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
