@@ -9,18 +9,25 @@ import { fetchPolitician } from '@/utils/fetchPolitician';
 import { useEffect, useState } from 'react';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import Input from '@/components/Input';
+import { fetchCampaign } from '@/utils/fetchCampaign';
 
 function ProfilePage() {
   const router = useRouter();
   const { name } = router.query;
   const [politician, setPolitician] = useState(null);
+  const [campaign, setCampaign] = useState(null);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     async function fetchPoliticianData() {
       if (name) {
         try {
           const res = await fetchPolitician(name);
+          console.log(res);
           setPolitician(res);
+          if (res.HasCampaign === 1) {
+            setCampaign(true);
+          }
         } catch (error) {
           //add error handling when request fails
           console.log('error');
@@ -30,30 +37,28 @@ function ProfilePage() {
     fetchPoliticianData();
   }, [name]);
 
-  const handleSearch = () => {};
+  const handleSearch = () => {
+    router.push({
+      pathname: '/profileSearch',
+      query: { name: search },
+    });
+  };
 
-  const flagUrl = findFlagUrlByCountryName('United States');
+  const flagUrl = findFlagUrlByCountryName('Australia');
   const array = politician?.Articles;
-  // const array = [
-  //   {
-  //     title: 'Sample Article 1',
-  //     date: '2023-09-13',
-  //     source: 'Sample Source 1',
-  //     score: 69,
-  //   },
-  //   {
-  //     title: 'Sample Article 2',
-  //     date: '2023-09-14',
-  //     source: 'Sample Source 2',
-  //     score: 33,
-  //   },
-  //   {
-  //     title: 'Sample Article 3',
-  //     date: '2023-09-15',
-  //     source: 'Sample Source 3',
-  //     score: 78,
-  //   },
-  // ];
+
+  const handleViewCampaign = () => {
+    router.push({
+      pathname: '/campaignPage',
+      query: {
+        id: politician.ID,
+        about: politician.About,
+        image: politician.ImageLink,
+        name: politician.Fname + ' ' + politician.Lname,
+        title: politician.Political_Position,
+      },
+    });
+  };
 
   return (
     <div>
@@ -81,7 +86,7 @@ function ProfilePage() {
                 >
                   <div className='flex justify-start justify-center space-x-4 mt-2'>
                     <Input
-                      setText={handleSearch}
+                      setText={setSearch}
                       placeholder='Enter political profile name'
                     />
 
@@ -95,22 +100,39 @@ function ProfilePage() {
                   <div className='flex justify-center space-x-20 my-2'>
                     {politician ? (
                       <div className='rounded-3xl bg-white m-5'>
-                        <div className='hero-content lg:flex-row mx-5 my-3'>
-                          <div>
+                        {/* campaign banner  */}
+                        {campaign && (
+                          <div className='bg-[#FFEDD5] rounded-xl h-12 flex items-center'>
+                            <p className='text-xl text-[#FFB039] font-bold ml-8 mr-auto'>
+                              ● LIVE
+                            </p>
+
+                            <button
+                              className={
+                                'btn btn-ghost btn-sm text-[#FFB039] text-xs ml-auto mr-5'
+                              }
+                              onClick={handleViewCampaign}
+                            >
+                              CLICK TO VIEW CAMPAIGN DETAILS
+                            </button>
+                          </div>
+                        )}
+                        <div className='hero-content flex flex-row mx-5 my-3'>
+                          <div className='mb-auto'>
                             <img
-                              // src={politician?.ImageLink}
-                              src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
+                              src={politician?.ImageLink}
+                              // src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
                               className='max-w-sm rounded-lg mr-5'
                               style={{ width: '200px', height: '250px' }}
                             />
                           </div>
-                          <div style={{ width: '700px', height: '250px' }}>
+                          <div style={{ width: '700px' }}>
                             <p className='text-2xl font-bold mb-2'>
                               {politician?.Fname} {politician?.Lname}
                             </p>
                             {/* <p className='text-2xl font-bold my-2'>John Doe</p> */}
                             <p className='text-xs text-gray-400	'>
-                              Ut enim ad minim veniam
+                              {politician?.Political_Position}
                             </p>
                             <p className='text-l font-bold my-4'>About</p>
                             {politician ? (
@@ -120,17 +142,12 @@ function ProfilePage() {
                             )}
                             {/* <p className='mr-10'> Ut enim ad minim veniam</p> */}
                           </div>
-                          <div>
+                          <div className='mb-auto'>
                             <img
                               src={flagUrl}
-                              className='max-w-sm opacity-50'
+                              className='max-w-sm opacity-50 mb-12'
                               style={{ width: '100px', height: '75px' }}
                             />
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
                           </div>
                         </div>
                         {/* orange line */}

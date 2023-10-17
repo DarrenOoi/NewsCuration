@@ -266,6 +266,41 @@ class Politician_CampaignPolicies(table):
             return f'{self.name}[{self.id}, {self.fname}, {self.lname}, {self.policyTitle}, {self.policyInfo}, {self.inProd}]'
 
 
+class Politician_CampaignPoliciesByID(table):
+
+    def __init__(self, ID_Politician, policyTitle=str, policyInfo=str, inProd=bool):
+        super().__init__()
+        self.ID_Politician = ID_Politician
+        self.policyTitle = policyTitle
+        self.policyInfo = policyInfo
+        self.inProd = inProd
+        self.name = Politician_CampaignPoliciesByID.__name__
+
+    '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+
+    def insertSQL(self, insertedBy) -> str:
+        query = f"""
+    INSERT INTO {self.name}(Fname, Lname, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.ID_Politician}',
+    '{self.policyTitle}',
+    '{self.policyInfo}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+        return query
+
+    def __str__(self):
+        if self.id is None:
+            return f'{self.name} Record has not been inserted into DB - ID is NONE'
+        else:
+            return f'{self.name}[{self.id}, {self.ID_Politician}, {self.policyTitle}, {self.policyInfo}, {self.inProd}]'
+
+
 '''
 ID 
 PositionNameCode VARCHAR(255),
@@ -584,9 +619,9 @@ class transactionDataClient():
   NOTE: looks in the /sql directory (give the file name only)
   """
 
-    def generateFromSqlFile(self, sqlFileName=str):
+    def generateFromSqlFile(self, sqlFileName=str, import_loc=str):
         try:
-            with open(f'inf/sql/{sqlFileName}', 'r') as sql:
+            with open(f'inf/{import_loc}/{sqlFileName}', 'r') as sql:
                 sqlIn = sql.read()
         except FileNotFoundError:
             self.logMessage(messageStatus.FAIL,
@@ -598,12 +633,14 @@ class transactionDataClient():
                 messageStatus.FAIL, f'an exception occured in the execution statement: \n {e}')
             self.closeConnection()
         try:
+            self.cnx.ping()
             self.cursor.execute(sqlIn)
         except Exception as e:  # error handling is vague, have to assume basket case here
             self.logMessage(messageStatus.FAIL,
                             f'Unable to execute sql \n {sqlIn} with error {e}')
         self.cnx.commit()
         self.logMessage(messageStatus.SUCCESS, f"{sqlIn}")
+        return self.retrieveCursorOutput()
 
     '''
   Queries a given table, and applies a filter if given
@@ -620,6 +657,8 @@ class transactionDataClient():
     WHERE {filter if filter is not None else '1=1'}
     """
         try:
+            self.cnx.ping()
+            self.logMessage(messageStatus.SUCCESS, f'Pinging connection')
             self.cursor.execute(query)
         except Exception as e:
             self.logMessage(messageStatus.FAIL,
@@ -645,6 +684,8 @@ class transactionDataClient():
                             'Connection is closed. Query failed')
 
         try:
+            self.cnx.ping()
+            self.logMessage(messageStatus.SUCCESS, f'Pinging connection')
             self.cursor.execute(query)
         except Exception as e:
             self.logMessage(messageStatus.FAIL,
@@ -668,6 +709,8 @@ class transactionDataClient():
         DDLMethod = table.insertSQL(self.user)
 
         try:
+            self.cnx.ping()
+            self.logMessage(messageStatus.SUCCESS, f'Pinging connection')
             self.cursor.execute(DDLMethod)
         except Exception as e:
             self.logMessage(
@@ -690,6 +733,8 @@ class transactionDataClient():
     SELECT MAX(ID) AS ID FROM {table.getName()};
     """
         try:
+            self.cnx.ping()
+            self.logMessage(messageStatus.SUCCESS, f'Pinging connection')
             self.cursor.execute(query)
         except Exception as e:
             self.logMessage(
@@ -741,6 +786,13 @@ if __name__ == '__main__':
         action="store_true",
         help="build all the databases"
     )
+    
+    parser.add_argument(
+        "--customImport",
+        type=str,
+        nargs='+',
+        help="perform a custom query from the import-custom directory"
+    )
 
     args = parser.parse_args()
 
@@ -748,7 +800,7 @@ if __name__ == '__main__':
         print(f'performing custom SQL file import for all {args.DDLFromFile}')
         tdc = transactionDataClient()
         for sql in args.DDLFromFile:
-            tdc.generateFromSqlFile(sql)
+            tdc.generateFromSqlFile(sql, 'sql')
         tdc.closeConnection()
 
     if args.debugDDL:
@@ -802,14 +854,21 @@ if __name__ == '__main__':
         for i in args.query:
             print(tdc.query(i))
         tdc.closeConnection()
-
+        
+    if args.customImport is not None:
+        print(f'performing custom SQL query for file/s {args.customImport} under /query:')
+        tdc = transactionDataClient()
+        for sql in args.customImport:
+            print(tdc.generateFromSqlFile(sql, 'query'))
+        tdc.closeConnection()
+        
     if args.buildDB:
-        print(f'performing custom SQL file import for all files under /inf:')
+        print(f'performing custom SQL file import for all files under /inf/sql:')
         directory = "inf/sql"
         files = [f for f in os.listdir(directory) if os.path.isfile(
             os.path.join(directory, f))]
         print(files)
         tdc = transactionDataClient()
         for file in files:
-            tdc.generateFromSqlFile(file)
+            tdc.generateFromSqlFile(file, 'sql')
         tdc.closeConnection()

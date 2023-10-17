@@ -1,14 +1,15 @@
 const Button = ({ handleClick, text, boldText }) => {
   return (
-    <div className=''>
+    <div>
       <button
-        className='btn btn-active btn-neutral text-white font-bold rounded-full'
+        className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'
+        style={{ height: '45px' }}
         type='submit'
         onClick={handleClick}
       >
         {text}
         {boldText ? (
-          <text className='text-amber-400 font-extrabold'>{boldText}</text>
+          <span className='text-[#FFB039] font-extrabold'>{boldText}</span>
         ) : null}
       </button>
     </div>
