@@ -6,25 +6,23 @@ import React, { useState } from 'react';
 import { sendPollOption } from '@/utils/sendPollOption';
 
 const Poll = ({ url, data }) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [buttonsDisabled, setButtonsDisabled] = useState(false);
+  const [showVotes, setShowVotes] = useState(false);
 
-    const [selectedOption, setSelectedOption] = useState(null);
-    const [buttonsDisabled, setButtonsDisabled] = useState(false);
-    const [showVotes, setShowVotes] = useState(false);
-
-    const handleOptionSelect = (index) => {
-        if (!buttonsDisabled) {
-        setSelectedOption(index);
-        setButtonsDisabled(true);
-        setShowVotes(true);
-        }
-    };
-
-    const updateVotes = ({index}) => {
-        sendPollOption(url, index);
+  const handleOptionSelect = (index) => {
+    if (!buttonsDisabled) {
+      setSelectedOption(index);
+      setButtonsDisabled(true);
+      setShowVotes(true);
     }
+  };
+
+  const updateVotes = ({ index }) => {
+    sendPollOption(url, index);
+  };
 
   return (
-    
     <div className='flex justify-center'>
       <div
         className='mt-3 card bg-white p-6 rounded-xl'
@@ -36,11 +34,11 @@ const Poll = ({ url, data }) => {
         </div>
 
         <div className='mt-5 ml-5 flex flex-col space-y-3'>
-        {data.results ? (
+          {data.results ? (
             data.results.map((result, index) => (
-              <PollOption 
-                key={index} 
-                text={result.opinion} 
+              <PollOption
+                key={index}
+                text={result.opinion}
                 votes={result.votes}
                 isClicked={index === selectedOption}
                 onClick={() => {
@@ -72,10 +70,7 @@ const Poll = ({ url, data }) => {
               </button>
             </div>
           </div>
-          <Comment
-            user={'User 1'}
-            text={'Hmmm this is quite interesting'}
-          />
+          <Comment user={'User 1'} text={'Hmmm this is quite interesting'} />
           <Comment
             user={'User 2'}
             text={'Im not sure I agree with their views'}

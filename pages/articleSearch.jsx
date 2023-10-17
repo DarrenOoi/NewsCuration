@@ -177,8 +177,8 @@ function Home() {
                     {result ? (
                       <div className='pb-5'>
                         <PersonOfInterest figureName={figureNames} />
-                        <Card content={result} url={text}/>
-                        <Poll data={poll} url={text}/>
+                        <Card content={result} url={text} />
+                        <Poll data={poll} url={text} />
                       </div>
                     ) : submitted ? (
                       <Card
