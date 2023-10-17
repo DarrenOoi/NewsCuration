@@ -2,15 +2,30 @@ import Image from 'next/image';
 import Clipboard from './pictures/clipboard.png';
 import { sendSaveArticle } from '@/utils/sendSaveArticle';
 
+/**
+ * Card is a the componenet that displays the main body of the article search and analysis page
+ *
+ * @component
+ * @param {string} title - The title of the article
+ * @param {string} content - The contents of the article
+ * @param {boolean} highlight - Indicates if highlighting is enabled.
+ * @param {Object} biasWords - A dictionary of bias words for highlighting.
+ * @param {string} url - The URL of the article.
+ * @returns {JSX.Element} A React JSX element representing the card.
+ */
 const Card = ({ title, content, highlight = false, biasWords, url }) => {
   let phrases = [];
   let keys = [];
   let dotPoints = null;
+
+  // Split content into phrases for highlighting
   if (highlight && content && biasWords) {
     keys = Object.keys(biasWords);
     phrases = content.split(new RegExp(`(${keys.join('|')})`, 'gi'));
   }
   console.log(content);
+
+   // Function to copy content to clipboard
   const copy = () => {
     navigator.clipboard.writeText(content);
   };
@@ -20,6 +35,7 @@ const Card = ({ title, content, highlight = false, biasWords, url }) => {
     console.log(dotPoints);
   }
 
+  // Function to save the article
   const save = () => {
     sendSaveArticle(url);
   };

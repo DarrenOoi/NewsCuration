@@ -5,20 +5,37 @@ import Pic from './pictures/pic.png';
 import React, { useState } from 'react';
 import { sendPollOption } from '@/utils/sendPollOption';
 
+/**
+ * Poll is a component that displays a poll with options and comments relating to a specific article.
+ *
+ * @component
+ * @param {string} url - The URL of the associated article
+ * @param {object} data - Poll data, including the question and results.
+ * @returns {JSX.Element} A React JSX element representing the poll.
+ */
 const Poll = ({ url, data }) => {
 
     const [selectedOption, setSelectedOption] = useState(null);
     const [buttonsDisabled, setButtonsDisabled] = useState(false);
     const [showVotes, setShowVotes] = useState(false);
 
+     /**
+     * Handles the selection of a poll option.
+     * @param {number} index - The index of the selected poll option.
+     */
     const handleOptionSelect = (index) => {
         if (!buttonsDisabled) {
         setSelectedOption(index);
+        // Disables the buttons and shows the votes of all the options when an option is selected
         setButtonsDisabled(true);
         setShowVotes(true);
         }
     };
 
+    /**
+     * Updates poll votes
+     * @param {number} index - The index of the selected poll option.
+     */
     const updateVotes = ({index}) => {
         sendPollOption(url, index);
     }

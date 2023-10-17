@@ -1,3 +1,11 @@
+/**
+ * SavedDropdown is the component that displays a dropdown menu for saved pages.
+ *
+ * @component
+ * @param {Array} items - An array of saved pages.
+ * @param {Function} handleClick - A function to handle the click event.
+ * @returns {JSX.Element} A React JSX element representing the saved pages dropdown.
+ */
 const SavedDropdown = ({ items, handleClick }) => {
   const isEmpty = items.length === 0;
 

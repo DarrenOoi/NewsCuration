@@ -1,6 +1,13 @@
 import Image from 'next/image';
 import Pic from "./pictures/pic.png"
 
+/**
+ * PersonOfInterest is the component that displays information about persons of interest in an article.
+ *
+ * @component
+ * @param {string} figureName - The name of the person of interest in the article.
+ * @returns {JSX.Element} A React JSX element for the name of the person of interest in the article.
+ */
 const PersonOfInterest = ({figureName}) => {
     return (
     <div className="bg-[#f3f3f3] rounded-2xl p-4 flex flex-col space-y-3 mt-5 mb-3">

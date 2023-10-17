@@ -1,5 +1,12 @@
-{/* not need */}
 
+/**
+ * InputField is the component that provides a input field for entering article URLs.
+ *
+ * @component
+ * @param {function} handleSubmit - A function to be called when the form is submitted.
+ * @param {function} setText - A function to handle text input changes.
+ * @returns {JSX.Element} A React JSX element representing the input field and submit button.
+ */
 const InputField = ({ handleSubmit, setText }) => {
   return (
     <div className='form-control mr-10 '>
@@ -9,7 +16,7 @@ const InputField = ({ handleSubmit, setText }) => {
           placeholder='Enter article URL'
           onChange={(event) => setText(event.target.value)}
           className='input input-bordered bg-white text-black'
-          style={{ width: '800px' }} // Adjust the width as needed
+          style={{ width: '800px' }}
         />
 
         <button

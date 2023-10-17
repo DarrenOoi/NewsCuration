@@ -1,8 +1,20 @@
 import { useRouter } from 'next/router';
 
+/**
+ * Table is the component that displays a table of articles with titles, dates, sources, and bias scores.
+ *
+ * @component
+ * @param {Array} articles - An array of article objects to display in the table.
+ * @returns {JSX.Element} A React JSX element representing the table of articles.
+ */
 const Table = ({ articles }) => {
   const router = useRouter();
 
+  
+  /**
+   * Handles clicking on a source URL to navigate to the article.
+   * @param {string} url - The URL of the article source.
+   */
   const visitSource = (url) => {
     router.push(url);
   };
