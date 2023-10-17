@@ -18,15 +18,15 @@ const SavedDropdown = ({ items, handleClick }) => {
         SAVED PAGES ▼
       </label>
       <ul
-            tabIndex={0}
-            className='dropdown-content menu p-0 shadow bg-[#7895B1] rounded-box'
+        tabIndex={0}
+        className='dropdown-content menu p-0 shadow bg-[#7895B1] rounded-box'
       >
         {isEmpty ? (
-            <li>
-              <a className='text-[#5F7A95] text-xs font-semibold'>
-                NO SAVED PAGES
-              </a>
-            </li>
+          <li>
+            <a className='text-[#5F7A95] text-xs font-semibold'>
+              NO SAVED PAGES
+            </a>
+          </li>
         ) : (
           items.map((item, index) => (
             <li>

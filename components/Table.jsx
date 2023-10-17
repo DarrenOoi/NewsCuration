@@ -16,7 +16,11 @@ const Table = ({ articles }) => {
    * @param {string} url - The URL of the article source.
    */
   const visitSource = (url) => {
-    router.push(url);
+    // router.push(url);
+    router.push({
+      pathname: '/articleSearch',
+      query: { url: url },
+    });
   };
 
   return (
