@@ -1,22 +1,22 @@
-export const sendArticleComment = async (comment, author, url) => {
+export const searchPolitician = async (name) => {
   try {
-    const response = await fetch('http://localhost:5000//SaveArticleComment', {
+    const response = await fetch('http://localhost:5000/GetPolicitianSearch', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ comment: comment, author: author, url: url }),
+      body: JSON.stringify({ nameSearch: name }),
     });
 
     if (response.ok) {
       const responseResult = await response.json();
-      return responseResult;
+      return responseResult.Result;
     } else {
       console.error('Request failed:', response.status, response.statusText);
       return 'Something went wrong';
     }
   } catch (error) {
     console.error('Error:', error);
-    return [];
+    return 'Something went wrong...';
   }
 };

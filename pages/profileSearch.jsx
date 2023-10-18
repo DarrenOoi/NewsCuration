@@ -8,19 +8,32 @@ import { useRouter } from 'next/router';
 import JustTheFactsLine from '@/components/JustTheFactsLine';
 import List from '@/components/List';
 import { fetchRecentPoliticians } from '@/utils/fetchRecentPoliticians';
+import { searchPolitician } from '@/utils/searchPolitician';
 
 function ProfileSearch() {
+  const router = useRouter();
+  const { name } = router.query;
   const [search, setSearch] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [result, setResult] = useState('');
-  const [recents, setRecents] = useState('');
+  const [result, setResult] = useState(null);
+  const [recents, setRecents] = useState([]);
 
   useEffect(() => {
     async function fetchPoliticians() {
       try {
-        const res = await fetchRecentPoliticians();
-        setRecents(res);
-        console.log(res);
+        if (name) {
+          setSubmitted(true);
+          setResult(null);
+          const searchResult = await searchPolitician(name);
+          console.log(searchResult);
+          setResult(searchResult);
+          setSubmitted(false);
+          const res = await fetchRecentPoliticians();
+          setRecents(res);
+        } else {
+          const res = await fetchRecentPoliticians();
+          setRecents(res);
+        }
       } catch (error) {
         //add error handling when request fails
         console.log('error');
@@ -29,38 +42,15 @@ function ProfileSearch() {
     fetchPoliticians();
   }, []);
 
-  const router = useRouter();
-  const array = [
-    {
-      name: 'Minav Tribedi',
-      countryCode: 'AU',
-    },
-    {
-      name: 'Yash Shwarma',
-      countryCode: 'AU',
-    },
-    {
-      name: 'Sean Mariokart',
-      countryCode: 'AU',
-    },
-    {
-      name: 'Ron Atsley',
-      countryCode: 'AU',
-    },
-    {
-      name: 'Daniel Darren',
-      countryCode: 'AU',
-    },
-  ];
-
-  const handleSearch = () => {
+  const handleSearch = async () => {
     if (search.trim() != '') {
       setSubmitted(true);
       setResult(null);
-      router.push({
-        pathname: '/profilePage',
-        query: { name: 'John Doe' },
-      });
+      const searchResult = await searchPolitician(search);
+      // console.log('this is search', searchResult);
+      setResult(searchResult);
+      setSubmitted(false);
+      // console.log('this is result', result);
     } else setResult(null);
   };
 
@@ -108,17 +98,18 @@ function ProfileSearch() {
                   </div>
 
                   {/* recents and most popular only shows when no search is submitted  */}
-                  {submitted ? (
-                    // <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-8 justify-start'>
-                    //   <p>submitted</p>
-                    // </div>
+                  {result ? (
                     <div className='mt-6'>
                       <List
-                        title={'RESULTS'}
-                        items={recents}
+                        title='RESULTS'
+                        items={result}
                         politician={true}
                         handleClick={handleClick}
                       />
+                    </div>
+                  ) : submitted ? (
+                    <div className='flex justify-center'>
+                      <span className='mt-2 loading loading-spinner loading-lg text-warning'></span>
                     </div>
                   ) : (
                     <div className='mt-6'>

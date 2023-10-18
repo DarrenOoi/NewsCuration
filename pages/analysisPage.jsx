@@ -75,12 +75,11 @@ function AnalysisPage() {
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Menu currentPage={"article"}/>
+      <Menu currentPage={'article'} />
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
             <div>
-            
               <div className='flex flex-row-reverse mr-7'>
                 <span className='font-bold text-3xl text-[#7895B1] h-7'>
                   ARTICLE SEARCH
@@ -97,7 +96,7 @@ function AnalysisPage() {
                   style={{ width: '1200px' }}
                 >
                   <div>
-                    <div className="flex flex-row justify-between">
+                    <div className='flex flex-row justify-between'>
                       <button
                         className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full'
                         style={{ width: '225px', height: '45px' }}
@@ -132,7 +131,11 @@ function AnalysisPage() {
                           height={5}
                           alt='Text Size'
                         />
-                        <progress className="ml-6 progress w-80" value={40} max="100"></progress>
+                        <progress
+                          className='ml-6 progress w-80'
+                          value={40}
+                          max='100'
+                        ></progress>
                       </div>
                       <button
                         className='btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4'

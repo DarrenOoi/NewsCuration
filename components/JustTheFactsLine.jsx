@@ -1,3 +1,8 @@
+/**
+ * JustTheFactsLine is a reusable visual design componenet 
+ * 
+ * @returns {JSX.Element} A React JSX element for a visual line
+ */
 const JustTheFactsLine = () => {
   return (
     <div className='flex flex-col items-center justify-center w-6'>

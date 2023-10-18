@@ -48,4 +48,12 @@ pip install mysql-connector-python
 pip install GoogleNews
 
 pip install spacey
+
+pip install flask
+
+pip install openai
+
+pip install flask-cors
+
+
 python -m spacy download en_core_web_sm
