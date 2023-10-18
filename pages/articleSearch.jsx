@@ -121,6 +121,12 @@ function Home() {
     } else setResult(null);
   };
 
+  const handlePoll = () => {
+    fetchPoll(text).then((poll) => {
+      setPoll(poll);
+    });
+  }
+
   const handleClick = () => {
     router.push({
       pathname: '/analysisPage',
@@ -209,7 +215,7 @@ function Home() {
                       <div className='pb-5'>
                         <PersonOfInterest figureName={figureNames} />
                         <Card content={result} url={text} />
-                        <Poll data={poll} url={text} />
+                        <Poll data={poll} url={text} voteUpdate={handlePoll} />
                       </div>
                     ) : submitted ? (
                       <Card

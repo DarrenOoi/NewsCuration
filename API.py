@@ -438,7 +438,6 @@ def updatePoll():
     data = request.get_json()
     url = data.get('url')
     optionIndex = data.get('optionIndex')
-    print("DEBUG: API UPDATEPOLL!!!!! - ", url, optionIndex)
     sm.updatePoll(url, optionIndex)
     return {"response": "updated"}
 
