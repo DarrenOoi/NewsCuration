@@ -77891,3 +77891,329 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Comments
     WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
     ]
+[2023-10-18 13:06:29.651833] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:06:30.115931] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:06:40.143401] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:06:40.712857] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:06:41.027216] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:06:41.556468] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 140
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:06:42.442300] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:06:42.762208] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 13:06:42.992751] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:08:36.839018] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:08:37.438496] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:08:40.099868] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:08:40.730414] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-18 13:08:41.034987] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:08:41.650880] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 32
+    WHERE ID = 8 
+    ]
+[2023-10-18 13:08:42.554871] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:08:42.886815] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 13:08:43.152638] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772'
+    ]
+[2023-10-18 13:08:47.561105] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:08:48.022487] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:08:49.639548] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:08:50.175927] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:08:50.460829] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:08:50.968138] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 141
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:08:51.583801] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:08:51.859452] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 13:08:52.101480] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:09:20.830981] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:09:21.303514] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-18 13:09:21.890189] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:09:22.349655] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-18 13:09:28.746923] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:09:29.295723] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-18 13:10:02.523788] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:10:03.166892] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:10:08.589989] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:10:09.121330] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:10:09.407083] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:10:09.874044] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 142
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:10:10.741642] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:10:11.031098] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 13:10:11.353029] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:11:24.182319] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D9FAE1E8D0>]
+[2023-10-18 13:11:24.190546] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D9FA3B9750>]
+[2023-10-18 13:11:24.702006] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 13:11:31.398978] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:11:31.860489] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:11:58.457054] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:11:59.074696] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:11:59.308597] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:11:59.901361] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:00.211825] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:00.741204] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 13:12:00.975583] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:01.467785] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:01.742716] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:02.259325] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:02.568953] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:03.025745] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:12:03.285836] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:03.811047] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:04.049062] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:04.610471] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 13:12:04.842548] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:05.430803] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:05.710795] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:06.350725] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:06.663225] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:07.274765] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:12:07.577647] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:08.195158] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:08.433082] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:09.015080] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 13:12:09.330835] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:09.815655] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:10.146109] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:10.654778] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:12:10.969031] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:11.575293] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:12:11.889888] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:12.497976] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 143
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:12:13.109744] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:12:13.383866] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 13:12:13.630948] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:13:13.630485] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:13:14.652776] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:13:16.071695] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:13:16.600344] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:13:16.910167] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:13:17.375577] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 144
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:13:17.961269] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:13:18.190909] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 13:13:18.444140] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:14:40.780713] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:14:41.391267] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-18 13:14:41.623627] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:14:43.206418] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-18 13:14:53.779366] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:14:54.325390] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-18 13:14:54.902092] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:14:55.418098] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-18 13:14:57.330202] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:14:57.802076] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-18 13:15:22.133543] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:15:22.676944] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:15:59.108582] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:15:59.649581] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:15:59.879189] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:16:00.438272] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 145
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:16:01.266543] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:16:01.589859] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 13:16:01.820065] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
