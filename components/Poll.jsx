@@ -15,7 +15,7 @@ import { sendArticleComment } from '@/utils/sendArticleComment';
  * @param {object} data - Poll data, including the question and results.
  * @returns {JSX.Element} A React JSX element representing the poll.
  */
-const Poll = ({ url, data }) => {
+const Poll = ({ url, data, voteUpdate}) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const [showVotes, setShowVotes] = useState(false);
@@ -35,24 +35,21 @@ const Poll = ({ url, data }) => {
     fetchComments();
   }, []);
 
+  console.log("this is comments", comments)
+
   /**
      * Handles the selection of a poll option.
      * @param {number} index - The index of the selected poll option.
      */
-  const handleOptionSelect = (index) => {
+  async function handleOptionSelect (index) {
+    console.log("this is the index", index)
     if (!buttonsDisabled) {
+      await sendPollOption(url, index);
       setSelectedOption(index);
       setButtonsDisabled(true);
       setShowVotes(true);
+      voteUpdate();
     }
-  };
-
-  /**
-     * Updates poll votes
-     * @param {number} index - The index of the selected poll option.
-     */
-  const updateVotes = ({ index }) => {
-    sendPollOption(url, index);
   };
 
   return (
@@ -76,7 +73,6 @@ const Poll = ({ url, data }) => {
                 isClicked={index === selectedOption}
                 onClick={() => {
                   handleOptionSelect(index);
-                  updateVotes(index);
                 }}
                 disabled={buttonsDisabled}
                 showVotes={showVotes}
@@ -103,12 +99,13 @@ const Poll = ({ url, data }) => {
               </button>
             </div>
           </div>
+          
           {comments ? (
             comments.map((comment, index) => (
-            <Comment key={index} user={comment.author} text={comment.comment} />
+            <Comment key={index} data={comment}/>
           ))
           ) : (
-            <p className='p text-xs font-normal text-black'>No comments available</p>
+            <p className='p text-xs font-normal text-black'>No comments posted</p>
           )}
         </div>
       </div>

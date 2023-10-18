@@ -6,6 +6,9 @@ import argparse
 import os
 import subprocess
 
+from threading import *
+
+
 ENDPOINT = 'newscuration-2.c97gf2vuuvlf.us-east-1.rds.amazonaws.com'
 USER = 'admin'
 PWD = 'password'
@@ -550,6 +553,8 @@ class transactionDataClient():
             self.user = 'Guest user (probably Darren)'
         self.cursor, self.cnx = self.establishConnection()
 
+        self.lock = Lock()
+
     """Builds a log message in the audit file, for safekeeping
   """
 
@@ -647,6 +652,7 @@ class transactionDataClient():
   '''
 
     def query(self, table, filter=None):
+        self.lock.acquire()
         if self.cursor is None:
             self.logMessage(messageStatus.WARN,
                             'Connection is closed. Query failed')
@@ -672,13 +678,16 @@ class transactionDataClient():
         self.logMessage(messageStatus.SUCCESS,
                         f"Successfully attempted query: {query}")
 
-        return self.retrieveCursorOutput()
+        tmp = self.retrieveCursorOutput()
+        self.lock.release()
+        return tmp
 
     '''
   Queries a given table, and applies a filter if given
   '''
 
     def query_special(self, query=str):
+        self.lock.acquire()
         if self.cursor is None:
             self.logMessage(messageStatus.WARN,
                             'Connection is closed. Query failed')
@@ -696,12 +705,15 @@ class transactionDataClient():
         except Exception as e:
             self.logMessage(messageStatus.FAIL,
                             f'failed to commit query \n {sql} \n reason: {e}')
-        self.logMessage(messageStatus.SUCCESS,
-                        f"Successfully attempted query: {query}")
+        # self.logMessage(messageStatus.SUCCESS,
+        #                 f"Successfully attempted query: {query}")
 
-        return self.retrieveCursorOutput()
+        tmp = self.retrieveCursorOutput()
+        self.lock.release()
+        return tmp
 
     def insert(self, table=type(table)):
+        self.lock.acquire()
         if self.cursor is None:
             self.logMessage(messageStatus.WARN,
                             'Connection is closed. Query failed')
@@ -727,6 +739,7 @@ class transactionDataClient():
         # next, find the id of the newly inserted tuple and update the object
         id = self.get_id(table)
         table.setId(id)
+        self.lock.release()
 
     def get_id(self, table=type(table)):
         query = f"""

@@ -121,6 +121,12 @@ function Home() {
     } else setResult(null);
   };
 
+  const handlePoll = () => {
+    fetchPoll(text).then((poll) => {
+      setPoll(poll);
+    });
+  }
+
   const handleClick = () => {
     router.push({
       pathname: '/analysisPage',
@@ -133,7 +139,7 @@ function Home() {
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Menu currentPage={'article'} />
+      <Menu currentPage={'article'} handleClick={handleListClick}/>
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
@@ -209,7 +215,7 @@ function Home() {
                       <div className='pb-5'>
                         <PersonOfInterest figureName={figureNames} />
                         <Card content={result} url={text} />
-                        <Poll data={poll} url={text} />
+                        <Poll data={poll} url={text} voteUpdate={handlePoll} />
                       </div>
                     ) : submitted ? (
                       <Card
