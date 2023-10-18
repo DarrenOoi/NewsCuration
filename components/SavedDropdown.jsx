@@ -12,6 +12,10 @@ const SavedDropdown = ({ items, handleClick}) => {
   const isEmpty = items.length === 0;
   const router = useRouter()
 
+  /**
+   * Function to visit an article when a saved page is clicked.
+   * @param {string} url - The URL of the article to visit.
+   */
   const visitArticle = (url) => {
     router.push({
       pathname: '/articleSearch',

@@ -11,13 +11,17 @@ import { useRouter } from 'next/router';
  */
 
 const PersonOfInterest = ({ figureName }) => {
+
   const router = useRouter();
+
+  // Function to handle clicking on a person of interest
   const handleClick = (name) => {
     router.push({
       pathname: '/profilePage',
       query: { name: name },
     });
   };
+
   console.log(figureName)
   return (
     <div className='bg-[#f3f3f3] rounded-2xl p-4 flex flex-col space-y-3 mt-5 mb-3'>

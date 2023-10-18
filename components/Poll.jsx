@@ -11,8 +11,9 @@ import { sendArticleComment } from '@/utils/sendArticleComment';
  * Poll is a component that displays a poll with options and comments relating to a specific article.
  *
  * @component
- * @param {string} url - The URL of the associated article
+ * @param {string} url - The URL of the associated article.
  * @param {object} data - Poll data, including the question and results.
+ * @param {function} voteUpdate - Callback function to update votes.
  * @returns {JSX.Element} A React JSX element representing the poll.
  */
 const Poll = ({ url, data, voteUpdate}) => {
@@ -51,6 +52,9 @@ const Poll = ({ url, data, voteUpdate}) => {
     }
   };
 
+  /**
+     * Handles posting a comment.
+     */
   async function postArticleComment() {
     await sendArticleComment("Anonymous", input, url);
     setInput("Add a comment");
