@@ -22,11 +22,13 @@ function campaignPage() {
     async function fetchCampaignInfo() {
       if (id) {
         try {
-          //try to send the two request at the same time
-          const campaign = await fetchCampaign(id);
+          const [campaign, res] = await Promise.all([
+            fetchCampaign(id),
+            fetchCampaigningPoliticians(),
+          ]);
+          const filteredRes = res.filter((obj) => obj.ID !== id);
           setCampaign(campaign);
-          const res = await fetchCampaigningPoliticians();
-          setCampaigningPoliticians(res);
+          setCampaigningPoliticians(filteredRes);
         } catch (error) {
           //add error handling when request fails
           console.log('error');
@@ -39,7 +41,7 @@ function campaignPage() {
   const handleClick = async (name, ID, about, image, title) => {
     try {
       const res = await fetchCampaign(ID);
-      console.log('this is campagin comparison', res);
+      // console.log('this is campagin comparison', res);
       setComparison(res);
       const obj = {
         name: name,
@@ -54,6 +56,21 @@ function campaignPage() {
       console.log('error');
     }
   };
+
+  function getFirstTwoSentences(inputString) {
+    // Define a regular expression to match sentence-ending punctuation.
+    // This regex will match '.', '!', or '?' followed by a space, the end of the string,
+    // or a sentence that doesn't end with a space (e.g., at the end of the string).
+    const sentenceEndPattern = /([.!?])(?:\s|$|(?!.*\s\1))/;
+
+    // Split the input string into an array of sentences using the sentence-ending pattern.
+    const sentences = inputString.split(sentenceEndPattern);
+
+    // Get the first two sentences, or all available if there are fewer than two.
+    const firstTwoSentences = sentences.slice(0, 3).join('');
+
+    return firstTwoSentences;
+  }
 
   return (
     <div>
@@ -98,18 +115,15 @@ function campaignPage() {
                   <div className='flex flex-row'>
                     <div className='rounded-3xl bg-white my-5 mx-2 w-full min-h-[625px] h-[auto]'>
                       <div className='hero-content lg:flex-row mx-5'>
-                        <div>
+                        <div className='mb-auto mt-4'>
                           <img
                             src={image}
                             // src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
-                            className='max-w-sm rounded-lg '
+                            className='max-w-sm rounded-lg'
                             style={{ width: '150px', height: '175px' }}
                           />
                         </div>
-                        <div
-                          className='mb-24'
-                          style={{ width: '325px', height: '125px' }}
-                        >
+                        <div className='mb-2' style={{ width: '325px' }}>
                           <p className='text-2xl font-bold my-2'>{name}</p>
                           <p className='text-xs text-gray-400	'>{title} </p>
                           <p className='text-l font-bold mt-2'>About</p>
@@ -122,7 +136,9 @@ function campaignPage() {
                               width: '200px',
                             }}
                           />
-                          <p className='text-s mr-10'>{about}</p>
+                          <p className='text-s mr-10'>
+                            {about && getFirstTwoSentences(about)}
+                          </p>
                           {/* orange line */}
                           <div
                             className='ml-auto mr-40 mt-1'
@@ -162,7 +178,7 @@ function campaignPage() {
                     <div className='rounded-3xl bg-[#DBEAFE] my-5 mx-2 w-full min-h-[625px] h-[auto]'>
                       {comparison ? (
                         <div className='hero-content lg:flex-row mx-5'>
-                          <div>
+                          <div className='mb-auto mt-4'>
                             <img
                               src={comparisonDetails?.image}
                               // src='https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg'
@@ -170,10 +186,7 @@ function campaignPage() {
                               style={{ width: '150px', height: '175px' }}
                             />
                           </div>
-                          <div
-                            className='mb-24'
-                            style={{ width: '325px', height: '125px' }}
-                          >
+                          <div className='mb-2' style={{ width: '325px' }}>
                             <p className='text-2xl font-bold my-2'>
                               {comparisonDetails?.name}
                             </p>
@@ -191,7 +204,8 @@ function campaignPage() {
                               }}
                             />
                             <p className='text-s mr-10'>
-                              {comparisonDetails?.about}
+                              {comparisonDetails &&
+                                getFirstTwoSentences(comparisonDetails.about)}
                             </p>
                             {/* orange line */}
                             <div
@@ -216,7 +230,7 @@ function campaignPage() {
                       )}
                       {comparison && (
                         <div>
-                          <p className='text-xl font-bold ml-2 mb-2'>
+                          <p className='text-xl font-bold ml-4 mb-2'>
                             Key Policies
                           </p>
                           {comparison.map((item, index) => (

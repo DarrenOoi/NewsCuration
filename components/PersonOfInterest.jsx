@@ -34,13 +34,7 @@ const PersonOfInterest = ({ figureName }) => {
           <div className='ml-6 flex flex-row space-x-3 items-center'>
             {figureName.map((name, index) => (
               <div key={index} className='flex flex-row space-x-3 items-center'>
-<<<<<<< HEAD
                 <p className='uppercase text-xs font-bold text-black'>{name}</p>
-=======
-                <p className='uppercase text-xs font-bold text-black'>
-                  {name}
-                </p>
->>>>>>> master
                 <button
                   className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'
                   onClick={() => handleClick(name)}

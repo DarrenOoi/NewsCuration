@@ -23,7 +23,6 @@ function ProfilePage() {
       if (name) {
         try {
           const res = await fetchPolitician(name);
-          console.log(res);
           setPolitician(res);
           if (res.HasCampaign === 1) {
             setCampaign(true);

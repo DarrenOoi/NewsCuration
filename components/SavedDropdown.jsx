@@ -8,8 +8,6 @@
  */
 const SavedDropdown = ({ items, handleClick }) => {
   const isEmpty = items.length === 0;
-
-  console.log("this is items", items)
   return (
     <div className='dropdown mt-14'>
       <label
@@ -31,9 +29,12 @@ const SavedDropdown = ({ items, handleClick }) => {
         ) : (
           items[0].map((item, index) => (
             <li>
-              <a key={index} className='text-[#5F7A95] text-xs font-semibold' onClick={() => handleClick(item.url)}>
+              <a
+                key={index}
+                className='text-[#5F7A95] text-xs font-semibold'
+                onClick={() => handleClick(item.url)}
+              >
                 {item.header}
-                
               </a>
             </li>
           ))
