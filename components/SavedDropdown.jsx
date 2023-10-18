@@ -1,3 +1,11 @@
+/**
+ * SavedDropdown is the component that displays a dropdown menu for saved pages.
+ *
+ * @component
+ * @param {Array} items - An array of saved pages.
+ * @param {Function} handleClick - A function to handle the click event.
+ * @returns {JSX.Element} A React JSX element representing the saved pages dropdown.
+ */
 const SavedDropdown = ({ items, handleClick }) => {
   const isEmpty = items.length === 0;
 
@@ -10,15 +18,15 @@ const SavedDropdown = ({ items, handleClick }) => {
         SAVED PAGES ▼
       </label>
       <ul
-            tabIndex={0}
-            className='dropdown-content menu p-0 shadow bg-[#7895B1] rounded-box'
+        tabIndex={0}
+        className='dropdown-content menu p-0 shadow bg-[#7895B1] rounded-box'
       >
         {isEmpty ? (
-            <li>
-              <a className='text-[#5F7A95] text-xs font-semibold'>
-                NO SAVED PAGES
-              </a>
-            </li>
+          <li>
+            <a className='text-[#5F7A95] text-xs font-semibold'>
+              NO SAVED PAGES
+            </a>
+          </li>
         ) : (
           items.map((item, index) => (
             <li>

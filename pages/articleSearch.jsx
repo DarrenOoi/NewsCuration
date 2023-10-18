@@ -26,20 +26,54 @@ function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [recents, setRecents] = useState([]);
   const [popular, setPopular] = useState([]);
-
   const [figureNames, setFigureNames] = useState([]);
   const [poll, setPoll] = useState([]);
+
+  const router = useRouter();
+  const { url } = router.query;
 
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const [recents, popular] = await Promise.all([
-          fetchRecentArticles(),
-          fetchPopularArticles(4),
-        ]);
+        if (url) {
+          setSubmitted(true);
+          setText(url);
+          setResult(null);
 
-        setRecents(recents);
-        setPopular(popular);
+          // Use Promise.all to wait for multiple fetch calls
+          const [result, poi, poll] = await Promise.all([
+            fetchResults(url),
+            fetchPoliticalFigureNames(url),
+            fetchPoll(url),
+          ]);
+
+          // Process the results
+          setResult(result.response);
+          setHeader(result.header);
+          setArticle(result.article);
+          setFigureNames(poi);
+          setPoll(poll);
+
+          // Wait for other requests to complete
+          const [recents, popular] = await Promise.all([
+            fetchRecentArticles(),
+            fetchPopularArticles(4),
+          ]);
+
+          setRecents(recents);
+          setPopular(popular);
+
+          // At this point, all requests have completed.
+          setSubmitted(false);
+        } else {
+          const [recents, popular] = await Promise.all([
+            fetchRecentArticles(),
+            fetchPopularArticles(4),
+          ]);
+
+          setRecents(recents);
+          setPopular(popular);
+        }
       } catch (error) {
         console.log('Error:', error);
       }
@@ -86,17 +120,12 @@ function Home() {
       });
     } else setResult(null);
   };
-  const router = useRouter();
 
   const handleClick = () => {
     router.push({
       pathname: '/analysisPage',
       query: { header: header, text: article, url: text },
     });
-  };
-
-  const politcalProfile = () => {
-    router.push('/profileSearch');
   };
 
   return (
@@ -142,43 +171,45 @@ function Home() {
                     </button>
                   </div>
 
-                  <div className='flex flex-row mt-5'>
-                    <div
-                      className='card bg-[#2E2E2E] rounded-full p-1 flex flex-row items-center'
-                      style={{ width: '415px', height: '33px' }}
-                    >
-                      <Image
-                        className='ml-3'
-                        src={textSize}
-                        width={20}
-                        height={5}
-                        alt='Text Size'
-                      />
-                      <progress
-                        className='ml-6 progress w-80'
-                        value={40}
-                        max='100'
-                      ></progress>
+                  {result && (
+                    <div className='flex flex-row mt-5'>
+                      <div
+                        className='card bg-[#2E2E2E] rounded-full p-1 flex flex-row items-center'
+                        style={{ width: '415px', height: '33px' }}
+                      >
+                        <Image
+                          className='ml-3'
+                          src={textSize}
+                          width={20}
+                          height={5}
+                          alt='Text Size'
+                        />
+                        <progress
+                          className='ml-6 progress w-80'
+                          value={40}
+                          max='100'
+                        ></progress>
+                      </div>
+                      <button
+                        className='btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4'
+                        style={{ width: '50px', height: '33px' }}
+                      >
+                        <Image
+                          src={tts}
+                          width={20}
+                          height={5}
+                          alt='Text To Speech'
+                        />
+                      </button>
                     </div>
-                    <button
-                      className='btn btn-sm  btn-neutral bg-[#2E2E2E] rounded-full p-0 ml-4'
-                      style={{ width: '50px', height: '33px' }}
-                    >
-                      <Image
-                        src={tts}
-                        width={20}
-                        height={5}
-                        alt='Text To Speech'
-                      />
-                    </button>
-                  </div>
+                  )}
 
                   <div className='mt-3'>
                     {result ? (
                       <div className='pb-5'>
                         <PersonOfInterest figureName={figureNames} />
-                        <Card content={result} url={text}/>
-                        <Poll data={poll} url={text}/>
+                        <Card content={result} url={text} />
+                        <Poll data={poll} url={text} />
                       </div>
                     ) : submitted ? (
                       <Card
