@@ -35,11 +35,11 @@ const PersonOfInterest = ({ figureName }) => {
             {figureName.map((name, index) => (
               <div key={index} className='flex flex-row space-x-3 items-center'>
                 <p className='uppercase text-xs font-bold text-black'>
-                  {figureName}
+                  {name}
                 </p>
                 <button
                   className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'
-                  onClick={() => handleClick(figureName)}
+                  onClick={() => handleClick(name)}
                 >
                   VISIT PROFILE
                 </button>

@@ -459,11 +459,11 @@ class ArticleManager():
             return
         id = result[0]['ID']
         option = ""
-        if optionIndex == 1:
+        if optionIndex == 0:
             option = "VotesFirst"
-        elif optionIndex == 2:
+        elif optionIndex == 1:
             option = "VotesSecond"
-        elif optionIndex == 3:
+        elif optionIndex == 2:
             option = "VotesThird"
         else:
             option = "VotesFourth"
