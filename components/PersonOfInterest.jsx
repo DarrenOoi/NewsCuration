@@ -33,7 +33,7 @@ const PersonOfInterest = ({ figureName }) => {
         ) : (
           <div className='ml-6 flex flex-row space-x-3 items-center'>
             {figureName.map((name, index) => (
-              <div className='flex flex-row space-x-3 items-center'>
+              <div key={index} className='flex flex-row space-x-3 items-center'>
                 <p className='uppercase text-xs font-bold text-black'>
                   {figureName}
                 </p>

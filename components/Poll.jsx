@@ -103,11 +103,13 @@ const Poll = ({ url, data }) => {
               </button>
             </div>
           </div>
-          <Comment user={'User 1'} text={'Hmmm this is quite interesting'} />
-          <Comment
-            user={'User 2'}
-            text={'Im not sure I agree with their views'}
-          />
+          {comments ? (
+            comments.map((comment, index) => (
+            <Comment key={index} user={comment.author} text={comment.comment} />
+          ))
+          ) : (
+            <p className='p text-xs font-normal text-black'>No comments available</p>
+          )}
         </div>
       </div>
     </div>

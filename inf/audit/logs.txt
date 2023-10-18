@@ -77466,3 +77466,428 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Comments
     WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
     ]
+[2023-10-18 12:47:42.515378] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:42.976221] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 12:47:44.903102] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:45.381073] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-18 12:47:45.627895] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:46.128144] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:46.414494] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:46.928840] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:47.231550] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:47.840813] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:48.149344] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:48.665577] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-18 12:47:48.906179] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:49.407820] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:49.652193] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:50.123525] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:50.365924] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:50.916565] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:51.150508] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:51.733540] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-18 12:47:51.974084] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:52.560532] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:52.857184] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:53.368548] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:53.600086] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:54.050753] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "8"
+    ]
+[2023-10-18 12:47:54.300828] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:54.803499] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772"
+    ]
+[2023-10-18 12:47:55.104004] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:55.670719] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 31
+    WHERE ID = 8 
+    ]
+[2023-10-18 12:47:56.341225] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:47:56.652180] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:47:56.887614] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.abc.net.au/news/2023-10-11/australian-journalist-cheng-lei-released-china-arrives-melbourne/102964772'
+    ]
+[2023-10-18 12:48:02.809135] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:03.301022] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 12:48:10.370206] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:10.880984] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-18 12:48:11.120157] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:11.714316] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:12.115392] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:12.822336] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 12:48:13.071032] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:13.581714] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:13.860597] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:14.367144] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:14.610163] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:15.182901] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-18 12:48:15.417777] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:16.000214] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:16.315609] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:16.902425] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 12:48:17.235648] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:17.752011] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:18.058783] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:18.616983] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:18.875808] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:19.402760] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-18 12:48:19.703211] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:20.301930] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:20.626646] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:21.224670] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 12:48:21.542948] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:22.138304] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:22.461623] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:23.136910] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 12:48:23.373295] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:23.989866] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-18 12:48:24.304895] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:24.911271] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 18
+    WHERE ID = 18 
+    ]
+[2023-10-18 12:48:25.520391] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:25.835949] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:48:26.143102] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe'
+    ]
+[2023-10-18 12:48:36.164359] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:36.787602] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 12:48:38.632743] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:39.223405] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 12:48:39.559497] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:40.091115] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:40.483256] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:40.993598] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:41.283572] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:41.835801] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:42.120108] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:42.728881] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 12:48:42.959785] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:43.544002] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:43.863883] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:44.373286] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:44.678243] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:45.296942] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:45.530395] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:45.997877] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 12:48:46.228484] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:46.745255] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:46.981588] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:47.540129] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:47.779427] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:48.360003] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 12:48:48.598926] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:49.064193] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 12:48:49.396289] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:49.899239] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 15
+    WHERE ID = 13 
+    ]
+[2023-10-18 12:48:50.499460] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:48:50.812515] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:48:51.126309] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6'
+    ]
+[2023-10-18 12:49:03.313043] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:49:03.847422] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 12:51:52.377354] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:51:52.889066] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 12:51:53.156026] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:51:53.756098] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 138
+    WHERE ID = 5 
+    ]
+[2023-10-18 12:51:54.420723] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:51:54.697655] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:51:54.950063] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 12:52:27.399714] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:52:27.918087] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 12:53:34.995614] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:53:35.523113] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 12:53:35.790711] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:53:36.317344] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 139
+    WHERE ID = 5 
+    ]
+[2023-10-18 12:53:36.924111] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:53:37.175210] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:53:37.446866] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 12:53:51.267631] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:53:51.535721] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:53:51.786502] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 12:54:00.892196] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:54:01.122318] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:54:01.394870] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 12:54:13.587425] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:54:13.896714] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:54:14.209393] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 12:55:50.425028] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:55:50.675190] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears',
+    'None',
+    'None',
+    1, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    : 
+ error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:55:50.977136] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears',
+    'None',
+    'None',
+    1, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 12:55:51.292301] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:55:51.527536] [Manav Trivedi] [FAIL] [error parsing SQL statement 
+    SELECT MAX(ID) AS ID FROM Comments;
+    : 
+ error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:55:51.794392] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-18 12:55:51.812581] [Manav Trivedi] [FAIL] [failed to properly insert record. Check table name exists and/or is correct.]
+[2023-10-18 12:56:09.945953] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 12:56:10.233845] [Manav Trivedi] [FAIL] [error building sql statement with error (1146, "Table 'newscuration.Comments' doesn't exist")]
+[2023-10-18 12:56:10.517473] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
