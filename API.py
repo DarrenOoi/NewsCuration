@@ -439,7 +439,7 @@ def getMostViewedArticles():
 Returns the Campaign details of each politician by their name as input
 Returns
 -------
-    {
+    Result: [{
     ID : int,
     ID_Politician : int,
     PolicyNameTitle : str,
@@ -447,7 +447,7 @@ Returns
     InProduction BOOLEAN,
     InsertedAt DATETIME,
     InsertedBy : str
-    }
+    }... ZERO, ONE OR MANY]
 '''
 @app.route('/getCampaignDetails', methods=['POST'])
 def campaignDetailsByName():

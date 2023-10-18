@@ -587,18 +587,26 @@ class PoliticianManager():
     tdc : transactionDataClient
     '''
     def getPoliticiansCampaigning(self, tdc=transactionDataClient):
-        result = tdc.query(POLITICIAN,
-                        'HasCampaign = 1')
+        result = tdc.query(POLITICIAN, 'HasCampaign = 1')
         return {'Result': result}
     
     def getPoliticianCampaignDetails(self, tdc=transactionDataClient, id=int):
         # Add function here to assist finding all related articles
-        record = self.checkInCache(ID=id)
-        if record is None:
-            record = tdc.query(POLITICIAN_CAMPAIGN, f'ID = {id}')[0] #This would return a list of dicts
+        campaignRecords = self.checkCampaignsInCache(ID=id)
+        if len(campaignRecords) == 0:
+            campaignRecords = tdc.query(POLITICIAN_CAMPAIGN_BY_ID,
+                                        f'ID_Politician = {id}')
             # Add it to the cache
-            self.campaignCache += record
-        return {"Result" : record}
+            self.campaignCache += campaignRecords
+        return {"Result": campaignRecords}
+    
+    def checkCampaignsInCache(self, ID):
+        out = []
+        for campaignPolicy in self.campaignCache:
+            if campaignPolicy['ID_Politician'] == ID:
+                print(campaignPolicy)
+                out.append(campaignPolicy)
+        return out
     
     #Check whether a record is in the cache, by its name
     def checkInCache(self, names=None, ID=None):
@@ -609,8 +617,8 @@ class PoliticianManager():
                         return record
         elif ID is not None:
             for record in self.cache:
-                    if ID == record['ID']:
-                        return record
+                if ID == record['ID']:
+                    return record
         return None
     
     #Check whether campaign details are in the cache, by its name

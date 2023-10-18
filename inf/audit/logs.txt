@@ -26626,3 +26626,105 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Politician
     WHERE HasCampaign = 1
     ]
+[2023-10-18 11:34:00.354346] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002034EBA9F10>]
+[2023-10-18 11:34:00.354346] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002037127A690>]
+[2023-10-18 11:34:00.804773] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:35:25.441620] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:35:25.756448] [Daniel Ciccotosto-Camp] [FAIL] [error building sql statement with error (1054, "Unknown column 'ID_Politician' in 'where clause'")]
+[2023-10-18 11:35:26.057609] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
+[2023-10-18 11:36:50.542783] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001DC2D4FD2D0>]
+[2023-10-18 11:36:50.542783] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001DC2D526290>]
+[2023-10-18 11:36:51.158562] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:36:51.469308] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:36:51.935358] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE 1=1
+    ]
+[2023-10-18 11:36:51.943684] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001DC2D4FD2D0>]
+[2023-10-18 11:36:51.943684] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001DC2D526290>]
+[2023-10-18 11:39:32.764458] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001DEA8C90290>]
+[2023-10-18 11:39:32.772768] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001DEAA9FE8D0>]
+[2023-10-18 11:39:33.357136] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:39:34.217660] [Daniel Ciccotosto-Camp] [SUCCESS] [ALTER TABLE Politician_CampaignPoliciesByID RENAME COLUMN ID_Policitian TO ID_Politician]
+[2023-10-18 11:39:34.217660] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001DEA8C90290>]
+[2023-10-18 11:39:34.226433] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001DEAA9FE8D0>]
+[2023-10-18 11:40:56.301163] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000227FF401F10>]
+[2023-10-18 11:40:56.308698] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000227A41B2390>]
+[2023-10-18 11:40:56.835237] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:41:01.419908] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:41:01.889499] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
+[2023-10-18 11:41:14.820819] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:41:15.448902] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
+[2023-10-18 11:41:49.648213] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002354881BC10>]
+[2023-10-18 11:41:49.657915] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002354881AED0>]
+[2023-10-18 11:41:50.324725] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:43:45.163599] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000186AF1BA690>]
+[2023-10-18 11:43:45.163599] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000186FEAB1FD0>]
+[2023-10-18 11:43:45.781678] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:44:43.427315] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001926AD72590>]
+[2023-10-18 11:44:43.427315] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001926AFA3C10>]
+[2023-10-18 11:44:43.963677] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:44:46.289268] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:44:46.910460] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
+[2023-10-18 11:47:25.633140] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C538309F50>]
+[2023-10-18 11:47:25.634864] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C538318610>]
+[2023-10-18 11:47:26.164493] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:47:34.703030] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:47:35.179345] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
+[2023-10-18 11:48:28.666307] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000012B7FBB4F10>]
+[2023-10-18 11:48:28.673455] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000012B015BA410>]
+[2023-10-18 11:48:29.141227] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:48:39.892550] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:48:40.374665] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
+[2023-10-18 11:49:07.377864] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002C7EB751E10>]
+[2023-10-18 11:49:07.377864] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002C78DE5B110>]
+[2023-10-18 11:49:07.928511] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:49:11.079760] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:49:11.536230] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
+[2023-10-18 11:50:11.721854] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000197FC3FE110>]
+[2023-10-18 11:50:11.721854] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000197FAA3C850>]
+[2023-10-18 11:50:12.255970] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:50:56.379724] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:50:56.980833] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
+[2023-10-18 11:51:36.183167] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CCE93BCD90>]
+[2023-10-18 11:51:36.183167] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CCE7BF02D0>]
+[2023-10-18 11:51:36.641169] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 11:51:42.446619] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 11:51:43.062542] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE ID_Politician = 2
+    ]
