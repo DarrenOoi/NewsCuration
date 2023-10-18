@@ -8,10 +8,11 @@ import SavedDropdown from './SavedDropdown';
  * It includes buttons for article and profile search, as well as a saved articles dropdown.
  *
  * @component
- * @param {string} currentPage - The currently active page 
+ * @param {string} currentPage - The current active page.
+ * @param {function} handleClick - Function to handle clicks in the saved pages menu.
  * @returns {JSX.Element} A React JSX element representing the menu.
  */
-const Menu = ({ currentPage, handleClick }) => {
+const Menu = ({ currentPage, handleClick}) => {
 
    // State to store saved articles
   const [saved, setSaved] = useState([]);
@@ -32,6 +33,7 @@ const Menu = ({ currentPage, handleClick }) => {
 
     fetchArticles();
   }, []);
+
 
   /**
    * Function to navigate to the article search page.
@@ -74,7 +76,7 @@ const Menu = ({ currentPage, handleClick }) => {
           PROFILE SEARCH
         </button>
       </div>
-      <SavedDropdown items={saved} handleClick={handleClick}/>
+      <SavedDropdown items={saved} handleClick={handleClick} />
     </div>
   );
 };

@@ -5,11 +5,10 @@ import Pic from './pictures/pic.png';
  * Comment represents a user's comment with a username and text.
  *
  * @component
- * @param {string} user - The username of the commenter.
- * @param {string} text - The text content of the comment.
+ * @param {Object} data - Object containing all the information about a comment
  * @returns {JSX.Element} A React JSX element representing a comment.
  */
-const Comment = ({ user, data }) => {
+const Comment = ({ data }) => {
   return (
     <div className='flex flex-row mt-7 ml-1 items-start'>
       <Image src={Pic} width={30} height={30} />
