@@ -53,7 +53,7 @@ const Poll = ({ url, data, voteUpdate}) => {
 
   async function postArticleComment() {
     await sendArticleComment("Anonymous", input, url);
-    setInput("");
+    setInput("Add a comment");
   }
 
   return (
@@ -110,7 +110,7 @@ const Poll = ({ url, data, voteUpdate}) => {
             <Comment key={index} data={comment}/>
           ))
           ) : (
-            <p className='p text-xs font-normal text-black'>Comments unavailable</p>
+            <p className='mt-7 ml-1 p text-xs font-normal text-black'>No comments available.</p>
           )}
         </div>
       </div>

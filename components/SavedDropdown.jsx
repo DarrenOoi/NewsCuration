@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
  * @param {Function} handleClick - A function to handle the click event.
  * @returns {JSX.Element} A React JSX element representing the saved pages dropdown.
  */
-const SavedDropdown = ({ items }) => {
+const SavedDropdown = ({ items, handleClick}) => {
   const isEmpty = items.length === 0;
   const router = useRouter()
 
@@ -20,7 +20,7 @@ const SavedDropdown = ({ items }) => {
   };
 
   return (
-    <div className='dropdown mt-14'>
+    <div className='dropdown mt-14' style={{width:"400px"}}>
       <label
         tabIndex={0}
         className='btn btn-ghost btn-sm m-1 text-[#7895B1] text-lg font-bold'
@@ -41,7 +41,7 @@ const SavedDropdown = ({ items }) => {
           items[0].map((item, index) => (
             <li>
               <a key={index} className='text-[#5F7A95] text-xs font-semibold' onClick={() => visitArticle(item.url)}>
-                {item.header}
+              ● {item.header}
                 
               </a>
             </li>

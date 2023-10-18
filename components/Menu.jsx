@@ -11,7 +11,7 @@ import SavedDropdown from './SavedDropdown';
  * @param {string} currentPage - The currently active page 
  * @returns {JSX.Element} A React JSX element representing the menu.
  */
-const Menu = ({ currentPage, handleClick }) => {
+const Menu = ({ currentPage, handleClick}) => {
 
    // State to store saved articles
   const [saved, setSaved] = useState([]);

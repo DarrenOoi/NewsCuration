@@ -82,8 +82,6 @@ function Home() {
     fetchArticles();
   }, []);
 
-  // console.log(popular);
-  // console.log(recents);
   const handleListClick = (url) => {
     setSubmitted(true);
     setText(url);
