@@ -75322,6 +75322,7 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Politician
     WHERE HasCampaign = 1
     ]
+<<<<<<< HEAD
 [2023-10-15 23:57:43.891420] [DarrenOoi] [SUCCESS] [Pinging connection]
 [2023-10-15 23:57:44.843337] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
     SELECT * 
@@ -81127,3 +81128,5 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Comments
     WHERE URL = 'https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844'
     ]
+=======
+>>>>>>> master

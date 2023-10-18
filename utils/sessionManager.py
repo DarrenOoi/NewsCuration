@@ -290,7 +290,7 @@ class ArticleManager():
     def preventCacheOverflow(self) -> None:
         if len(self.cache.values()) < self.cacheLimit:
             return
-        tmp_list = sorted(self.cache.values(), key=lambda x: x.requestRate)
+        tmp_list = sorted(self.cache.values(), key=lambda x: x.requestRate, reverse=True)
         upper = len(tmp_list)-self.cacheLimit
         for value in tmp_list[0:upper+1]:
             del self.cache[value.get("url")]
@@ -523,17 +523,11 @@ class ArticleManager():
         return out
 
     def getRecents(self):
-        out = {"Result": []}
-        tempQueue = queue.Queue(3)
-        while self.recents.empty() is False:
-            article = self.recents.get()
-            out["Result"].append({
-                "url": article.url,
-                "Header": self.getItem(article.url, HEADER)
-            })
-            tempQueue.put(article)
-        self.recents = tempQueue
-        return out
+        self.cacheLock.acquire()
+        tmp_list = sorted(self.cache.values(), key=lambda x: x.requestRate.lastRequestTime, reverse=True)
+        tmp = {"Result": [{"url": val.url, "Header": val.header} for val in tmp_list[:3]]}
+        self.cacheLock.release()
+        return tmp
 
 # # COMMON FUNCTIONALITY:
 #
@@ -634,21 +628,30 @@ class PoliticianManager():
     '''
 
     def getPoliticiansCampaigning(self, tdc=transactionDataClient):
+        result = tdc.query(POLITICIAN, 'HasCampaign = 1')
         result = tdc.query(POLITICIAN,
                            'HasCampaign = 1')
         return {'Result': result}
 
     def getPoliticianCampaignDetails(self, tdc=transactionDataClient, id=int):
         # Add function here to assist finding all related articles
-        record = self.checkInCache(ID=id)
-        if record is None:
-            record = tdc.query(POLITICIAN_CAMPAIGN, f'ID = {id}')[
-                0]  # This would return a list of dicts
+        campaignRecords = self.checkCampaignsInCache(ID=id)
+        if len(campaignRecords) == 0:
+            campaignRecords = tdc.query(POLITICIAN_CAMPAIGN_BY_ID,
+                                        f'ID_Politician = {id}')
             # Add it to the cache
-            self.campaignCache += record
-        return {"Result": record}
-
-    # Check whether a record is in the cache, by its name
+            self.campaignCache += campaignRecords
+        return {"Result": campaignRecords}
+    
+    def checkCampaignsInCache(self, ID):
+        out = []
+        for campaignPolicy in self.campaignCache:
+            if campaignPolicy['ID_Politician'] == ID:
+                print(campaignPolicy)
+                out.append(campaignPolicy)
+        return out
+    
+    #Check whether a record is in the cache, by its name
     def checkInCache(self, names=None, ID=None):
         if names is not None:
             for name in names:

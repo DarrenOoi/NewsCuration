@@ -467,7 +467,7 @@ def getMostViewedArticles():
 Returns the Campaign details of each politician by their id as input
 Returns
 -------
-    {
+    Result: [{
     ID : int,
     ID_Politician : int,
     PolicyNameTitle : str,
@@ -475,7 +475,7 @@ Returns
     InProduction BOOLEAN,
     InsertedAt DATETIME,
     InsertedBy : str
-    }
+    }... ZERO, ONE OR MANY]
 '''
 
 

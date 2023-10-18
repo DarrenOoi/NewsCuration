@@ -2,7 +2,7 @@
 
 CREATE TABLE Politician_CampaignPoliciesByID(
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Policitian INT,
+    ID_Politician INT,
     PolicyNameTitle VARCHAR(1000),
     PolicyInfo VARCHAR(4000),
     InProduction BOOLEAN,
