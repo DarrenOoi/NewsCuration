@@ -1,4 +1,3 @@
-
 /**
  * Input is a component designed to be reused
  *

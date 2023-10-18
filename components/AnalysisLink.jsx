@@ -1,7 +1,7 @@
 /**
- * AnalysisLink component is a specific button that redirects the user to the analysis page from the 
+ * AnalysisLink component is a specific button that redirects the user to the analysis page from the
  * article search page
- * 
+ *
  * @component
  */
 const AnalysisLink = () => {

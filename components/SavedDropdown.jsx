@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
  * @param {Function} handleClick - A function to handle the click event.
  * @returns {JSX.Element} A React JSX element representing the saved pages dropdown.
  */
-const SavedDropdown = ({ items, handleClick }) => {
+const SavedDropdown = ({ items, handleClick, currentPage }) => {
   const isEmpty = items.length === 0;
   const router = useRouter();
 
@@ -17,10 +17,14 @@ const SavedDropdown = ({ items, handleClick }) => {
    * @param {string} url - The URL of the article to visit.
    */
   const visitArticle = (url) => {
-    router.push({
-      pathname: '/articleSearch',
-      query: { url: url },
-    });
+    if (currentPage === 'article') {
+      handleClick(url);
+    } else {
+      router.push({
+        pathname: '/articleSearch',
+        query: { url: url },
+      });
+    }
   };
 
   return (

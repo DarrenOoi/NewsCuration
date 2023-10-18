@@ -36,25 +36,7 @@ function Home() {
     async function fetchArticles() {
       try {
         if (url) {
-          setSubmitted(true);
-          setText(url);
-          setResult(null);
-
-          // Use Promise.all to wait for multiple fetch calls
-          const [result, poi, poll] = await Promise.all([
-            fetchResults(url),
-            fetchPoliticalFigureNames(url),
-            fetchPoll(url),
-          ]);
-
-          // Process the results
-          setResult(result.response);
-          setHeader(result.header);
-          setArticle(result.article);
-          setFigureNames(poi);
-          setPoll(poll);
-
-          // Wait for other requests to complete
+          await handleListClick(url);
           const [recents, popular] = await Promise.all([
             fetchRecentArticles(),
             fetchPopularArticles(4),
@@ -62,9 +44,6 @@ function Home() {
 
           setRecents(recents);
           setPopular(popular);
-
-          // At this point, all requests have completed.
-          setSubmitted(false);
         } else {
           const [recents, popular] = await Promise.all([
             fetchRecentArticles(),
@@ -123,7 +102,7 @@ function Home() {
     fetchPoll(text).then((poll) => {
       setPoll(poll);
     });
-  }
+  };
 
   const handleClick = () => {
     router.push({
@@ -137,7 +116,7 @@ function Home() {
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Menu currentPage={'article'} handleClick={handleListClick}/>
+      <Menu currentPage={'article'} handleClick={handleListClick} />
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
@@ -162,11 +141,9 @@ function Home() {
                     <button
                       className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'
                       style={{ width: '225px', height: '45px' }}
+                      onClick={handleSubmit}
                     >
-                      <text
-                        className='text-white text-sm'
-                        onClick={handleSubmit}
-                      >
+                      <text className='text-white text-sm'>
                         CLICK FOR THE{' '}
                         <span className='text-[#FFB039] font-extrabold'>
                           FACTS
@@ -246,11 +223,9 @@ function Home() {
                     <button
                       className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full'
                       style={{ width: '225px', height: '45px' }}
+                      onClick={handleClick}
                     >
-                      <text
-                        className='text-white text-base'
-                        onClick={handleClick}
-                      >
+                      <text className='text-white text-base'>
                         CLICK FOR THE
                         <span className='text-[#FFB039] font-extrabold'>
                           {' '}
