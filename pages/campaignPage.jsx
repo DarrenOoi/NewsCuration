@@ -135,18 +135,22 @@ function campaignPage() {
                         </div>
                       </div>
                       {campaign ? (
-                        <div className='mx-4'>
+                        <div className='mx-4 mb-2'>
                           <p className='text-xl font-bold ml-2 mb-2'>
                             Key Policies
                           </p>
-                          <details className='collapse collapse-arrow bg-base-200 outline outline-black'>
-                            <summary className='collapse-title text-l font-medium '>
-                              {campaign.PolicyNameTitle}
-                            </summary>
-                            <div className='collapse-content text-s '>
-                              {campaign.PolicyInfo}
+                          {campaign.map((item, index) => (
+                            <div className='mx-4 mb-2' key={index}>
+                              <details className='collapse collapse-arrow bg-base-200 outline outline-black'>
+                                <summary className='collapse-title text-l font-medium '>
+                                  {item.PolicyNameTitle}
+                                </summary>
+                                <div className='collapse-content text-s'>
+                                  {item.PolicyInfo}
+                                </div>
+                              </details>
                             </div>
-                          </details>
+                          ))}
                         </div>
                       ) : (
                         <div className='flex justify-center'>
@@ -211,18 +215,22 @@ function campaignPage() {
                         </div>
                       )}
                       {comparison && (
-                        <div className='mx-4'>
+                        <div>
                           <p className='text-xl font-bold ml-2 mb-2'>
                             Key Policies
                           </p>
-                          <details className='collapse collapse-arrow bg-base-200 outline outline-black'>
-                            <summary className='collapse-title text-l font-medium '>
-                              {comparison.PolicyNameTitle}
-                            </summary>
-                            <div className='collapse-content text-s	'>
-                              {comparison.PolicyInfo}
+                          {comparison.map((item, index) => (
+                            <div className='mx-4 mb-2' key={index}>
+                              <details className='collapse collapse-arrow bg-base-200 outline outline-black'>
+                                <summary className='collapse-title text-l font-medium '>
+                                  {item.PolicyNameTitle}
+                                </summary>
+                                <div className='collapse-content text-s'>
+                                  {item.PolicyInfo}
+                                </div>
+                              </details>
                             </div>
-                          </details>
+                          ))}
                         </div>
                       )}
                     </div>
