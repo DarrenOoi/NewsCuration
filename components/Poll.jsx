@@ -68,8 +68,8 @@ const Poll = ({ url, data, voteUpdate}) => {
             data.results.map((result, index) => (
               <PollOption
                 key={index}
-                text={index}
-                votes={result.opinion}
+                text={result.opinion}
+                votes={result.votes}
                 isClicked={index === selectedOption}
                 onClick={() => {
                   handleOptionSelect(index);
