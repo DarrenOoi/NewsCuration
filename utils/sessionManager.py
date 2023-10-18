@@ -290,7 +290,7 @@ class ArticleManager():
     def preventCacheOverflow(self) -> None:
         if len(self.cache.values()) < self.cacheLimit:
             return
-        tmp_list = sorted(self.cache.values(), key=lambda x: x.requestRate)
+        tmp_list = sorted(self.cache.values(), key=lambda x: x.requestRate, reverse=True)
         upper = len(tmp_list)-self.cacheLimit
         for value in tmp_list[0:upper+1]:
             del self.cache[value.get("url")]
@@ -523,17 +523,11 @@ class ArticleManager():
         return out
 
     def getRecents(self):
-        out = {"Result": []}
-        tempQueue = queue.Queue(3)
-        while self.recents.empty() is False:
-            article = self.recents.get()
-            out["Result"].append({
-                "url": article.url,
-                "Header": self.getItem(article.url, HEADER)
-            })
-            tempQueue.put(article)
-        self.recents = tempQueue
-        return out
+        self.cacheLock.acquire()
+        tmp_list = sorted(self.cache.values(), key=lambda x: x.requestRate.lastRequestTime, reverse=True)
+        tmp = {"Result": [{"url": val.url, "Header": val.header} for val in tmp_list[:3]]}
+        self.cacheLock.release()
+        return tmp
 
 # # COMMON FUNCTIONALITY:
 #
