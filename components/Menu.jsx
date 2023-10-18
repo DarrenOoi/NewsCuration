@@ -15,6 +15,7 @@ const Menu = ({ currentPage, handleClick }) => {
 
    // State to store saved articles
   const [saved, setSaved] = useState([]);
+  const [updated, setUpdated] = useState(false);
 
   // Router for navigation
   const router = useRouter();
@@ -31,7 +32,11 @@ const Menu = ({ currentPage, handleClick }) => {
     }
 
     fetchArticles();
-  }, []);
+  }, [updated]);
+
+  const handleSave = () => {
+    setUpdated(!updated)
+  }
 
   /**
    * Function to navigate to the article search page.
@@ -74,7 +79,7 @@ const Menu = ({ currentPage, handleClick }) => {
           PROFILE SEARCH
         </button>
       </div>
-      <SavedDropdown items={saved} handleClick={handleClick}/>
+      <SavedDropdown items={saved} handleClick={handleClick} />
     </div>
   );
 };

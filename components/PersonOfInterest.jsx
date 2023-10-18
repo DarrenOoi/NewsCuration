@@ -18,6 +18,7 @@ const PersonOfInterest = ({ figureName }) => {
       query: { name: name },
     });
   };
+  console.log(figureName)
   return (
     <div className='bg-[#f3f3f3] rounded-2xl p-4 flex flex-col space-y-3 mt-5 mb-3'>
       <div className='p ml-4 text-xs font-bold text-[#FFB039]'>

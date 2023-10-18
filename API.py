@@ -381,9 +381,10 @@ def getRecentArticles():
 @app.route('/SaveArticleComment', methods=['POST'])
 def setArticleComment():
     data = request.get_json()
-    comment = data.get('Comment')
-    author = data.get('Author')
+    comment = data.get('comment')
+    author = data.get('author')
     url = data.get('url')
+    print("DEBUG: SaveArticleComment - ", url, author, comment)
     sm.saveArticleComment(author, comment, url)
     return {"RESULT": "SUCCESS"}
 

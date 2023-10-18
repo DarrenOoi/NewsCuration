@@ -13,6 +13,9 @@ export const fetchPoliticalFigureNames = async (url) => {
 
     if (response.ok) {
       const responseResult = await response.json();
+      if (typeof responseResult.poi == "string") {
+        return [];
+      }
       return responseResult.poi;
     } else {
       console.error('Request failed:', response.status, response.statusText);

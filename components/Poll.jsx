@@ -20,6 +20,7 @@ const Poll = ({ url, data, voteUpdate}) => {
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const [showVotes, setShowVotes] = useState(false);
   const [comments, setComments] = useState([]);
+  const [input, setInput] = useState("");
 
   // Fetch comments
   useEffect(() => {
@@ -35,8 +36,6 @@ const Poll = ({ url, data, voteUpdate}) => {
     fetchComments();
   }, []);
 
-  console.log("this is comments", comments)
-
   /**
      * Handles the selection of a poll option.
      * @param {number} index - The index of the selected poll option.
@@ -51,6 +50,11 @@ const Poll = ({ url, data, voteUpdate}) => {
       voteUpdate();
     }
   };
+
+  async function postArticleComment() {
+    await sendArticleComment("Anonymous", input, url);
+    setInput("");
+  }
 
   return (
     <div className='flex justify-center'>
@@ -92,20 +96,21 @@ const Poll = ({ url, data, voteUpdate}) => {
                 type='text'
                 placeholder='Add a comment'
                 className='input input-ghost input-sm'
+                onChange={(event) => setInput(event.target.value)}
                 style={{ height: '28px', width: '887px' }}
               />
-              <button className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'>
+              <button onClick={()=>postArticleComment()} className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'>
                 COMMENT
               </button>
             </div>
           </div>
           
-          {comments ? (
-            comments.map((comment, index) => (
+          {comments[0] ? (
+            comments[0].map((comment, index) => (
             <Comment key={index} data={comment}/>
           ))
           ) : (
-            <p className='p text-xs font-normal text-black'>No comments posted</p>
+            <p className='p text-xs font-normal text-black'>Comments unavailable</p>
           )}
         </div>
       </div>

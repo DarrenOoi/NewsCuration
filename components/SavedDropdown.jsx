@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 /**
  * SavedDropdown is the component that displays a dropdown menu for saved pages.
  *
@@ -6,10 +8,17 @@
  * @param {Function} handleClick - A function to handle the click event.
  * @returns {JSX.Element} A React JSX element representing the saved pages dropdown.
  */
-const SavedDropdown = ({ items, handleClick }) => {
+const SavedDropdown = ({ items }) => {
   const isEmpty = items.length === 0;
+  const router = useRouter()
 
-  console.log("this is items", items)
+  const visitArticle = (url) => {
+    router.push({
+      pathname: '/articleSearch',
+      query: { url: url },
+    });
+  };
+
   return (
     <div className='dropdown mt-14'>
       <label
@@ -31,7 +40,7 @@ const SavedDropdown = ({ items, handleClick }) => {
         ) : (
           items[0].map((item, index) => (
             <li>
-              <a key={index} className='text-[#5F7A95] text-xs font-semibold' onClick={() => handleClick(item.url)}>
+              <a key={index} className='text-[#5F7A95] text-xs font-semibold' onClick={() => visitArticle(item.url)}>
                 {item.header}
                 
               </a>
