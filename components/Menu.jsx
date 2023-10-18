@@ -3,17 +3,27 @@ import { fetchSavedArticles } from '@/utils/fetchSavedArticles';
 import { useState, useEffect } from 'react';
 import SavedDropdown from './SavedDropdown';
 
+/**
+ * Menu is the componenet for the application's navigation menu.
+ * It includes buttons for article and profile search, as well as a saved articles dropdown.
+ *
+ * @component
+ * @param {string} currentPage - The currently active page 
+ * @returns {JSX.Element} A React JSX element representing the menu.
+ */
 const Menu = ({ currentPage }) => {
+
+   // State to store saved articles
   const [saved, setSaved] = useState([]);
+
+  // Router for navigation
   const router = useRouter();
 
+  // Fetch saved articles 
   useEffect(() => {
     async function fetchArticles() {
       try {
         const saved = await Promise.all([fetchSavedArticles()]);
-
-        // console.log(saved)
-
         setSaved(saved);
       } catch (error) {
         console.log('Error:', error);
@@ -23,10 +33,18 @@ const Menu = ({ currentPage }) => {
     fetchArticles();
   }, []);
 
+  console.log(saved)
+
+  /**
+   * Function to navigate to the article search page.
+   */
   const articleClick = () => {
     router.push('/articleSearch');
   };
 
+  /**
+   * Function to navigate to the profile search page.
+   */
   const profileClick = () => {
     router.push('/profileSearch');
   };

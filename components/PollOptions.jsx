@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 
+/**
+ * PollOption is a component representing an option in a poll
+ *
+ * @component
+ * @param {string} text - Text for a poll option
+ * @param {number} votes - The number of votes for this option.
+ * @param {boolean} isClicked - Indicates if the option is selected.
+ * @param {Function} onClick - A function to handle the option click.
+ * @param {boolean} showVotes - Indicates whether to display the vote count.
+ * @returns {JSX.Element} A React JSX element representing the poll option.
+ */
 const PollOption = ({ text, votes, isClicked, onClick, showVotes }) => {
   return (
     <div className='flex flex-row space-x-4 items-center'>

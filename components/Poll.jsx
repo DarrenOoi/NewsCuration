@@ -2,14 +2,43 @@ import PollOption from './PollOptions';
 import Comment from './Comment';
 import Image from 'next/image';
 import Pic from './pictures/pic.png';
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { sendPollOption } from '@/utils/sendPollOption';
+import { fetchArticleComments } from '@/utils/fetchArticleComments';
+import { sendArticleComment } from '@/utils/sendArticleComment';
 
+/**
+ * Poll is a component that displays a poll with options and comments relating to a specific article.
+ *
+ * @component
+ * @param {string} url - The URL of the associated article
+ * @param {object} data - Poll data, including the question and results.
+ * @returns {JSX.Element} A React JSX element representing the poll.
+ */
 const Poll = ({ url, data }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const [showVotes, setShowVotes] = useState(false);
+  const [comments, setComments] = useState([]);
 
+  // Fetch comments
+  useEffect(() => {
+    async function fetchComments() {
+      try {
+        const comments = await Promise.all([fetchArticleComments(url)]);
+        setComments(comments);
+      } catch (error) {
+        console.log('Error:', error);
+      }
+    }
+
+    fetchComments();
+  }, []);
+
+  /**
+     * Handles the selection of a poll option.
+     * @param {number} index - The index of the selected poll option.
+     */
   const handleOptionSelect = (index) => {
     if (!buttonsDisabled) {
       setSelectedOption(index);
@@ -18,6 +47,10 @@ const Poll = ({ url, data }) => {
     }
   };
 
+  /**
+     * Updates poll votes
+     * @param {number} index - The index of the selected poll option.
+     */
   const updateVotes = ({ index }) => {
     sendPollOption(url, index);
   };
@@ -70,11 +103,13 @@ const Poll = ({ url, data }) => {
               </button>
             </div>
           </div>
-          <Comment user={'User 1'} text={'Hmmm this is quite interesting'} />
-          <Comment
-            user={'User 2'}
-            text={'Im not sure I agree with their views'}
-          />
+          {comments ? (
+            comments.map((comment, index) => (
+            <Comment key={index} user={comment.author} text={comment.comment} />
+          ))
+          ) : (
+            <p className='p text-xs font-normal text-black'>No comments available</p>
+          )}
         </div>
       </div>
     </div>

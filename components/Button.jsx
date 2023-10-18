@@ -1,3 +1,12 @@
+/**
+ * Button is a component designed to be reused
+ *
+ * @component
+ * @param {function} handleClick - The function to be called when the button is clicked
+ * @param {string} text - The text displayed on the button
+ * @param {string} boldText - (Optional) The bold text displayed on the button
+ * @returns {JSX.Element} A React JSX element representing a reusable button
+ */
 const Button = ({ handleClick, text, boldText }) => {
   return (
     <div>
