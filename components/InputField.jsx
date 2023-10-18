@@ -1,4 +1,3 @@
-
 /**
  * InputField is the component that provides a input field for entering article URLs.
  *

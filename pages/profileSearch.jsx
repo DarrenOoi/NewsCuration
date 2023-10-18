@@ -15,7 +15,7 @@ function ProfileSearch() {
   const { name } = router.query;
   const [search, setSearch] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState([]);
   const [recents, setRecents] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function ProfileSearch() {
       try {
         if (name) {
           setSubmitted(true);
-          setResult(null);
+          setResult([]);
           const searchResult = await searchPolitician(name);
           console.log(searchResult);
           setResult(searchResult);
@@ -45,13 +45,13 @@ function ProfileSearch() {
   const handleSearch = async () => {
     if (search.trim() != '') {
       setSubmitted(true);
-      setResult(null);
+      setResult([]);
       const searchResult = await searchPolitician(search);
       // console.log('this is search', searchResult);
       setResult(searchResult);
       setSubmitted(false);
       // console.log('this is result', result);
-    } else setResult(null);
+    } else setResult([]);
   };
 
   const handleClick = (name) => {
@@ -98,7 +98,7 @@ function ProfileSearch() {
                   </div>
 
                   {/* recents and most popular only shows when no search is submitted  */}
-                  {result ? (
+                  {result.length !== 0 ? (
                     <div className='mt-6'>
                       <List
                         title='RESULTS'

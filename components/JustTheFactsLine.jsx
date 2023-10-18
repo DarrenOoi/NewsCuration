@@ -1,6 +1,6 @@
 /**
- * JustTheFactsLine is a reusable visual design componenet 
- * 
+ * JustTheFactsLine is a reusable visual design componenet
+ *
  * @returns {JSX.Element} A React JSX element for a visual line
  */
 const JustTheFactsLine = () => {
