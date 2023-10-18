@@ -77891,3 +77891,37 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Comments
     WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
     ]
+[2023-10-18 13:36:15.226329] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000026CD27E6810>]
+[2023-10-18 13:36:15.227436] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000026CD2A5B610>]
+[2023-10-18 13:36:15.677528] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 13:37:24.508132] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:37:25.194200] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%anthony%' OR Lname LIKE '%anthony%') OR 
+0=1
+    ]
+[2023-10-18 13:37:28.570088] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:37:29.256029] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Anthony%' OR Lname LIKE '%Anthony%') OR 
+(Fname LIKE '%Albanese%' OR Lname LIKE '%Albanese%') OR 
+0=1
+    ]
+[2023-10-18 13:37:29.474051] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:37:29.940540] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 7 
+    ]
+[2023-10-18 13:57:28.517983] [DarrenOoi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001BB69E0C410>]
+[2023-10-18 13:57:28.517983] [DarrenOoi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001BB693F6410>]
+[2023-10-18 13:57:28.963081] [DarrenOoi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 13:57:36.622170] [DarrenOoi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:57:37.074866] [DarrenOoi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
