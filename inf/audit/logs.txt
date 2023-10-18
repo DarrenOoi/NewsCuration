@@ -75322,3 +75322,568 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Politician
     WHERE HasCampaign = 1
     ]
+[2023-10-18 14:47:49.998380] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002D0E6F3D2D0>]
+[2023-10-18 14:47:49.999392] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002D0E6F66290>]
+[2023-10-18 14:47:50.459632] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:47:51.193178] [Daniel Ciccotosto-Camp] [SUCCESS] [-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport delete_campaignpoliciesByID.sql
+
+DELETE FROM Politician_CampaignPoliciesByID WHERE 1=1
+]
+[2023-10-18 14:47:51.194599] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002D0E6F3D2D0>]
+[2023-10-18 14:47:51.195607] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002D0E6F66290>]
+[2023-10-18 14:48:08.856332] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002811048D2D0>]
+[2023-10-18 14:48:08.858287] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000281104B6290>]
+[2023-10-18 14:48:09.676840] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:48:10.127867] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+
+INSERT INTO Politician_CampaignPoliciesByID (ID_Policitian, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+ with error (1054, "Unknown column 'ID_Policitian' in 'field list'")]
+[2023-10-18 14:48:10.355991] [Daniel Ciccotosto-Camp] [SUCCESS] [-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+
+INSERT INTO Politician_CampaignPoliciesByID (ID_Policitian, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+]
+[2023-10-18 14:48:10.358543] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002811048D2D0>]
+[2023-10-18 14:48:10.359586] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000281104B6290>]
+[2023-10-18 14:49:14.046733] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000025300FED2D0>]
+[2023-10-18 14:49:14.047733] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000025301016290>]
+[2023-10-18 14:49:14.497933] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:49:15.205956] [Daniel Ciccotosto-Camp] [SUCCESS] [-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+
+INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+]
+[2023-10-18 14:49:15.209956] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000025300FED2D0>]
+[2023-10-18 14:49:15.209956] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000025301016290>]
+[2023-10-18 14:49:31.056119] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002E1AEA5D2D0>]
+[2023-10-18 14:49:31.058028] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002E1AEA86290>]
+[2023-10-18 14:49:31.878643] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:49:33.176267] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ --performed as part of --DDLFromFile import
+
+UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Policitian = P.ID
+) with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--performed as part of --DDLFromFile import\n\nUPDATE Politician P\nSET HasCampaign' at line 1")]
+[2023-10-18 14:49:34.870046] [Daniel Ciccotosto-Camp] [SUCCESS] [--performed as part of --DDLFromFile import
+
+UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Policitian = P.ID
+)]
+[2023-10-18 14:49:34.872048] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002E1AEA5D2D0>]
+[2023-10-18 14:49:34.873069] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002E1AEA86290>]
+[2023-10-18 14:49:46.390703] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001FD189BD2D0>]
+[2023-10-18 14:49:46.392692] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001FD189E6290>]
+[2023-10-18 14:49:46.848133] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:49:47.325771] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ --performed as part of --DDLFromFile import
+
+UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Politician = P.ID
+) with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--performed as part of --DDLFromFile import\n\nUPDATE Politician P\nSET HasCampaign' at line 1")]
+[2023-10-18 14:49:47.555789] [Daniel Ciccotosto-Camp] [SUCCESS] [--performed as part of --DDLFromFile import
+
+UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Politician = P.ID
+)]
+[2023-10-18 14:49:47.559198] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001FD189BD2D0>]
+[2023-10-18 14:49:47.559198] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001FD189E6290>]
+[2023-10-18 14:50:57.182897] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000279CC20D2D0>]
+[2023-10-18 14:50:57.184904] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000279CC236290>]
+[2023-10-18 14:50:58.006756] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:50:58.622066] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ --performed as part of --customImport import
+UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Politician = P.ID
+) with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--performed as part of --customImport import\nUPDATE Politician P\nSET HasCampaign' at line 1")]
+[2023-10-18 14:50:58.983581] [Daniel Ciccotosto-Camp] [SUCCESS] [--performed as part of --customImport import
+UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Politician = P.ID
+)]
+[2023-10-18 14:50:58.986393] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000279CC20D2D0>]
+[2023-10-18 14:50:58.987473] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000279CC236290>]
+[2023-10-18 14:51:06.565185] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002302DAED2D0>]
+[2023-10-18 14:51:06.567185] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002302DB16290>]
+[2023-10-18 14:51:07.363343] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:51:09.527119] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ --performed as part of customImport import
+UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Politician = P.ID
+) with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--performed as part of customImport import\nUPDATE Politician P\nSET HasCampaign =' at line 1")]
+[2023-10-18 14:51:09.802312] [Daniel Ciccotosto-Camp] [SUCCESS] [--performed as part of customImport import
+UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Politician = P.ID
+)]
+[2023-10-18 14:51:09.805300] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002302DAED2D0>]
+[2023-10-18 14:51:09.805300] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002302DB16290>]
+[2023-10-18 14:51:31.122033] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CE176DD2D0>]
+[2023-10-18 14:51:31.123782] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CE17706290>]
+[2023-10-18 14:51:31.643628] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:51:32.416714] [Daniel Ciccotosto-Camp] [SUCCESS] [-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+
+INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+]
+[2023-10-18 14:51:32.420863] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001CE176DD2D0>]
+[2023-10-18 14:51:32.421862] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001CE17706290>]
+[2023-10-18 15:00:33.491289] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000217A6CED2D0>]
+[2023-10-18 15:00:33.492512] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000217A6D16290>]
+[2023-10-18 15:00:33.945501] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:00:34.171600] [Daniel Ciccotosto-Camp] [SUCCESS] [Pinging connection]
+[2023-10-18 15:00:35.082136] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPoliciesByID
+    WHERE 1=1
+    ]
+[2023-10-18 15:00:35.221546] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000217A6CED2D0>]
+[2023-10-18 15:00:35.221546] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000217A6D16290>]
+[2023-10-18 15:02:16.795567] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022E1AAE13D0>]
+[2023-10-18 15:02:16.798588] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022E1A961110>]
+[2023-10-18 15:02:17.259556] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:02:17.770062] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ SELECT * FROM Polictian WHERE HasCampaign = 1 with error (1146, "Table 'newscuration.Polictian' doesn't exist")]
+[2023-10-18 15:02:18.000172] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT * FROM Polictian WHERE HasCampaign = 1]
+[2023-10-18 15:02:18.002495] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000022E1AAE13D0>]
+[2023-10-18 15:02:18.004571] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000022E1A961110>]
+[2023-10-18 15:02:26.927564] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C94D5113D0>]
+[2023-10-18 15:02:26.928557] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C94D391110>]
+[2023-10-18 15:02:27.380004] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:02:28.059465] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT * FROM Politician WHERE HasCampaign = 1]
+[2023-10-18 15:02:28.061463] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C94D5113D0>]
+[2023-10-18 15:02:28.062463] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C94D391110>]
+[2023-10-18 15:02:59.920376] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000018C8F6313D0>]
+[2023-10-18 15:02:59.922392] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000018C8F4B1110>]
+[2023-10-18 15:03:00.383510] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:03:01.738681] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT * FROM Politician WHERE HasCampaign = 0]
+[2023-10-18 15:03:01.870969] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000018C8F6313D0>]
+[2023-10-18 15:03:01.871969] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000018C8F4B1110>]
+[2023-10-18 15:04:05.524089] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001C2849ED2D0>]
+[2023-10-18 15:04:05.526217] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001C284A16290>]
+[2023-10-18 15:04:05.977989] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:04:06.429349] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+
+--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+ with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, P' at line 3")]
+[2023-10-18 15:04:06.667010] [Daniel Ciccotosto-Camp] [SUCCESS] [-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+
+--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+]
+[2023-10-18 15:04:06.670267] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001C2849ED2D0>]
+[2023-10-18 15:04:06.670267] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001C284A16290>]
+[2023-10-18 15:04:24.009628] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000020E4A99D2D0>]
+[2023-10-18 15:04:24.011146] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000020E4A9C6290>]
+[2023-10-18 15:04:24.469617] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:04:24.960141] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+ with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, P' at line 2")]
+[2023-10-18 15:04:25.192720] [Daniel Ciccotosto-Camp] [SUCCESS] [-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+(SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname)
+]
+[2023-10-18 15:04:25.194732] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000020E4A99D2D0>]
+[2023-10-18 15:04:25.195716] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000020E4A9C6290>]
+[2023-10-18 15:04:36.590320] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002A25A69D2D0>]
+[2023-10-18 15:04:36.592313] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002A25A6C6290>]
+[2023-10-18 15:04:37.048802] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:04:37.516030] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ -- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname
+ with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, P' at line 2")]
+[2023-10-18 15:04:37.745405] [Daniel Ciccotosto-Camp] [SUCCESS] [-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)
+SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname
+]
+[2023-10-18 15:04:37.745405] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002A25A69D2D0>]
+[2023-10-18 15:04:37.745405] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002A25A6C6290>]
+[2023-10-18 15:05:19.988695] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B588C4D2D0>]
+[2023-10-18 15:05:19.989714] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B588C76290>]
+[2023-10-18 15:05:20.451688] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:05:20.909117] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname
+
+-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy) with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo' at line 7")]
+[2023-10-18 15:05:21.144918] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname
+
+-- This query was run with the following terminal command: python .\inf\transactionDataClient.py --customImport politician_campaign_policies.sql
+--INSERT INTO Politician_CampaignPoliciesByID (ID_Politician, PolicyNameTitle, PolicyInfo, InProduction, InsertedAt, InsertedBy)]
+[2023-10-18 15:05:21.146934] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001B588C4D2D0>]
+[2023-10-18 15:05:21.146934] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001B588C76290>]
+[2023-10-18 15:05:52.074313] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B3823FD2D0>]
+[2023-10-18 15:05:52.075222] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B382426290>]
+[2023-10-18 15:05:52.526179] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:05:53.439828] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT P.ID, PCP.PolicyNameTitle, PCP.PolicyInfo, PCP.InProduction, PCP.InsertedAt, PCP.InsertedBy 
+FROM Politician_CampaignPolicies PCP, Politician P
+WHERE PCP.Fname = P.Fname 
+AND PCP.Lname = P.Lname
+]
+[2023-10-18 15:05:53.494435] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001B3823FD2D0>]
+[2023-10-18 15:05:53.494435] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001B382426290>]
+[2023-10-18 15:09:03.943680] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001AC752A1C10>]
+[2023-10-18 15:09:03.945128] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001AC77010210>]
+[2023-10-18 15:09:04.405934] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:09:04.866573] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Politician = P.ID
+--performed as part of customImport import
+ with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as part of customImport import' at line 4")]
+[2023-10-18 15:09:05.097707] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP
+    WHERE PCP.ID_Politician = P.ID
+--performed as part of customImport import
+]
+[2023-10-18 15:09:05.101139] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001AC752A1C10>]
+[2023-10-18 15:09:05.102052] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001AC77010210>]
+[2023-10-18 15:09:33.468000] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000023BD100D2D0>]
+[2023-10-18 15:09:33.469007] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000023BD1036290>]
+[2023-10-18 15:09:33.934286] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:09:34.394580] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ SELECT * FROM 
+Politician_CampaignPoliciesByID PCP
+WHERE PCP.ID_Politician = P.ID
+ with error (1054, "Unknown column 'P.ID' in 'where clause'")]
+[2023-10-18 15:09:34.624443] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT * FROM 
+Politician_CampaignPoliciesByID PCP
+WHERE PCP.ID_Politician = P.ID
+]
+[2023-10-18 15:09:34.626581] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000023BD100D2D0>]
+[2023-10-18 15:09:34.626581] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000023BD1036290>]
+[2023-10-18 15:10:13.503771] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022EB82BD2D0>]
+[2023-10-18 15:10:13.504964] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022EB82E6290>]
+[2023-10-18 15:10:13.968386] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:10:16.313772] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT * FROM 
+Politician_CampaignPoliciesByID PCP,
+Politician P
+WHERE PCP.ID_Politician = P.ID
+]
+[2023-10-18 15:10:17.933361] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000022EB82BD2D0>]
+[2023-10-18 15:10:17.934361] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000022EB82E6290>]
+[2023-10-18 15:16:52.501012] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000254993C1C10>]
+[2023-10-18 15:16:52.503006] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002549B170210>]
+[2023-10-18 15:16:52.953432] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:16:53.487681] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+--performed as part of customImport import
+ with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as part of customImport import' at line 8")]
+[2023-10-18 15:16:53.723958] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+--performed as part of customImport import
+]
+[2023-10-18 15:16:53.728956] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000254993C1C10>]
+[2023-10-18 15:16:53.729948] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002549B170210>]
+[2023-10-18 15:17:11.628499] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001B227D5D2D0>]
+[2023-10-18 15:17:11.629496] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001B227D86290>]
+[2023-10-18 15:17:12.090251] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:17:12.548828] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+ with error (1093, "You can't specify target table 'P' for update in FROM clause")]
+[2023-10-18 15:17:12.782782] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician P
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+]
+[2023-10-18 15:17:12.786763] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001B227D5D2D0>]
+[2023-10-18 15:17:12.787747] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001B227D86290>]
+[2023-10-18 15:17:33.848771] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000233D24ED2D0>]
+[2023-10-18 15:17:33.851487] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000233D2516290>]
+[2023-10-18 15:17:34.303737] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:17:34.754027] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ UPDATE Politician
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+ with error (1093, "You can't specify target table 'Politician' for update in FROM clause")]
+[2023-10-18 15:17:34.983945] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician
+SET HasCampaign = 1 WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+]
+[2023-10-18 15:17:34.987558] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000233D24ED2D0>]
+[2023-10-18 15:17:34.988536] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000233D2516290>]
+[2023-10-18 15:18:16.640931] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000002298E6DD2D0>]
+[2023-10-18 15:18:16.641931] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000002298E706290>]
+[2023-10-18 15:18:17.100191] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:18:18.488626] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT * FROM 
+Politician P
+WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+]
+[2023-10-18 15:18:18.621102] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000002298E6DD2D0>]
+[2023-10-18 15:18:18.621102] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000002298E706290>]
+[2023-10-18 15:35:57.640163] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A2DA9DD2D0>]
+[2023-10-18 15:35:57.643056] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A2DAA06290>]
+[2023-10-18 15:35:58.102380] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:35:58.564635] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ UPDATE Politician
+SET HasCampaign = 1
+WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+ with error (1093, "You can't specify target table 'Politician' for update in FROM clause")]
+[2023-10-18 15:35:58.800092] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician
+SET HasCampaign = 1
+WHERE EXISTS (
+    SELECT * FROM 
+    Politician_CampaignPoliciesByID PCP,
+    Politician P2
+    WHERE PCP.ID_Politician = P2.ID
+)
+]
+[2023-10-18 15:35:58.802320] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001A2DA9DD2D0>]
+[2023-10-18 15:35:58.803307] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001A2DAA06290>]
+[2023-10-18 15:37:02.810717] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001FF0DADD2D0>]
+[2023-10-18 15:37:02.811556] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001FF0DB06290>]
+[2023-10-18 15:37:03.308124] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:37:03.997762] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (
+    SELECT PCP.ID_Politician 
+    FROM Politician_CampaignPoliciesByID PCP
+    JOIN Politician P2 ON PCP.ID_Politician = P2.ID
+)
+ with error (1093, "You can't specify target table 'Politician' for update in FROM clause")]
+[2023-10-18 15:37:04.482682] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (
+    SELECT PCP.ID_Politician 
+    FROM Politician_CampaignPoliciesByID PCP
+    JOIN Politician P2 ON PCP.ID_Politician = P2.ID
+)
+]
+[2023-10-18 15:37:04.487689] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001FF0DADD2D0>]
+[2023-10-18 15:37:04.488677] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001FF0DB06290>]
+[2023-10-18 15:37:42.758865] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001DFAB16D2D0>]
+[2023-10-18 15:37:42.760877] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001DFAB196290>]
+[2023-10-18 15:37:43.216229] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:37:43.672070] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (
+    SELECT PCP.ID_Politician 
+    FROM Politician_CampaignPoliciesByID PCP
+    INNER JOIN Politician P2 ON PCP.ID_Politician = P2.ID
+)
+ with error (1093, "You can't specify target table 'Politician' for update in FROM clause")]
+[2023-10-18 15:37:43.902240] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (
+    SELECT PCP.ID_Politician 
+    FROM Politician_CampaignPoliciesByID PCP
+    INNER JOIN Politician P2 ON PCP.ID_Politician = P2.ID
+)
+]
+[2023-10-18 15:37:43.908297] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001DFAB16D2D0>]
+[2023-10-18 15:37:43.908297] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001DFAB196290>]
+[2023-10-18 15:38:20.357790] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001CE08C0D2D0>]
+[2023-10-18 15:38:20.359787] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001CE08C36290>]
+[2023-10-18 15:38:20.817636] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:38:21.275817] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (
+    SELECT PCP.ID_Politician 
+    FROM Politician_CampaignPoliciesByID PCP
+    INNER JOIN Politician P2 ON PCP.ID_Politician = P2.ID
+)
+
+CREATE TEMPORARY TABLE TempTable AS
+SELECT PCP.ID_Politician 
+FROM Politician_CampaignPoliciesByID PCP
+JOIN Politician P2 ON PCP.ID_Politician = P2.ID;
+
+UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (SELECT ID_Politician FROM TempTable);
+
+DROP TEMPORARY TABLE IF EXISTS TempTable; with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE TEMPORARY TABLE TempTable AS\nSELECT PCP.ID_Politician \nFROM Politician_Ca' at line 9")]
+[2023-10-18 15:38:21.516968] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (
+    SELECT PCP.ID_Politician 
+    FROM Politician_CampaignPoliciesByID PCP
+    INNER JOIN Politician P2 ON PCP.ID_Politician = P2.ID
+)
+
+CREATE TEMPORARY TABLE TempTable AS
+SELECT PCP.ID_Politician 
+FROM Politician_CampaignPoliciesByID PCP
+JOIN Politician P2 ON PCP.ID_Politician = P2.ID;
+
+UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (SELECT ID_Politician FROM TempTable);
+
+DROP TEMPORARY TABLE IF EXISTS TempTable;]
+[2023-10-18 15:38:21.521967] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001CE08C0D2D0>]
+[2023-10-18 15:38:21.521967] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001CE08C36290>]
+[2023-10-18 15:38:35.991763] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000028F44CDD2D0>]
+[2023-10-18 15:38:35.992755] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000028F44D06290>]
+[2023-10-18 15:38:36.459450] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:38:36.922313] [Daniel Ciccotosto-Camp] [FAIL] [Unable to execute sql 
+ UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (
+    SELECT PCP.ID_Politician 
+    FROM Politician_CampaignPoliciesByID PCP
+    INNER JOIN Politician P2 ON PCP.ID_Politician = P2.ID
+)
+CREATE TEMPORARY TABLE TempTable AS
+SELECT PCP.ID_Politician 
+FROM Politician_CampaignPoliciesByID PCP
+JOIN Politician P2 ON PCP.ID_Politician = P2.ID;
+
+UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (SELECT ID_Politician FROM TempTable);
+
+DROP TEMPORARY TABLE IF EXISTS TempTable; with error (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE TEMPORARY TABLE TempTable AS\nSELECT PCP.ID_Politician \nFROM Politician_Ca' at line 8")]
+[2023-10-18 15:38:37.155834] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (
+    SELECT PCP.ID_Politician 
+    FROM Politician_CampaignPoliciesByID PCP
+    INNER JOIN Politician P2 ON PCP.ID_Politician = P2.ID
+)
+CREATE TEMPORARY TABLE TempTable AS
+SELECT PCP.ID_Politician 
+FROM Politician_CampaignPoliciesByID PCP
+JOIN Politician P2 ON PCP.ID_Politician = P2.ID;
+
+UPDATE Politician
+SET HasCampaign = 1
+WHERE ID IN (SELECT ID_Politician FROM TempTable);
+
+DROP TEMPORARY TABLE IF EXISTS TempTable;]
+[2023-10-18 15:38:37.160190] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000028F44CDD2D0>]
+[2023-10-18 15:38:37.161185] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000028F44D06290>]
+[2023-10-18 15:39:26.271001] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000200E629D2D0>]
+[2023-10-18 15:39:26.272930] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000200E62C6290>]
+[2023-10-18 15:39:26.747763] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:39:27.456775] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician
+JOIN Politician_CampaignPoliciesByID PCP ON Politician.ID = PCP.ID_Politician
+SET Politician.HasCampaign = 1;]
+[2023-10-18 15:39:27.458920] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x00000200E629D2D0>]
+[2023-10-18 15:39:27.459955] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x00000200E62C6290>]
+[2023-10-18 15:40:15.902150] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001FABCB8D2D0>]
+[2023-10-18 15:40:15.903633] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001FABCBB6290>]
+[2023-10-18 15:40:16.361859] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:40:17.057801] [Daniel Ciccotosto-Camp] [SUCCESS] [UPDATE Politician
+JOIN Politician_CampaignPoliciesByID PCP ON Politician.ID = PCP.ID_Politician
+SET Politician.HasCampaign = 1;]
+[2023-10-18 15:40:17.059739] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001FABCB8D2D0>]
+[2023-10-18 15:40:17.060728] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001FABCBB6290>]
+[2023-10-18 15:40:31.091579] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000022188B813D0>]
+[2023-10-18 15:40:31.093599] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000022188A01110>]
+[2023-10-18 15:40:31.551319] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:40:32.949043] [Daniel Ciccotosto-Camp] [SUCCESS] [SELECT * FROM Politician WHERE HasCampaign = 1
+]
+[2023-10-18 15:40:33.091571] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x0000022188B813D0>]
+[2023-10-18 15:40:33.092572] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x0000022188A01110>]
