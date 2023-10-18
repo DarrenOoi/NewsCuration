@@ -2,8 +2,10 @@ import PollOption from './PollOptions';
 import Comment from './Comment';
 import Image from 'next/image';
 import Pic from './pictures/pic.png';
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { sendPollOption } from '@/utils/sendPollOption';
+import { fetchArticleComments } from '@/utils/fetchArticleComments';
+import { sendArticleComment } from '@/utils/sendArticleComment';
 
 /**
  * Poll is a component that displays a poll with options and comments relating to a specific article.
@@ -17,41 +19,38 @@ const Poll = ({ url, data }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const [showVotes, setShowVotes] = useState(false);
+  const [comments, setComments] = useState([]);
 
-<<<<<<< HEAD
-    const [selectedOption, setSelectedOption] = useState(null);
-    const [buttonsDisabled, setButtonsDisabled] = useState(false);
-    const [showVotes, setShowVotes] = useState(false);
+  // Fetch comments
+  useEffect(() => {
+    async function fetchComments() {
+      try {
+        const comments = await Promise.all([fetchArticleComments(url)]);
+        setComments(comments);
+      } catch (error) {
+        console.log('Error:', error);
+      }
+    }
 
-     /**
+    fetchComments();
+  }, []);
+
+  /**
      * Handles the selection of a poll option.
      * @param {number} index - The index of the selected poll option.
      */
-    const handleOptionSelect = (index) => {
-        if (!buttonsDisabled) {
-        setSelectedOption(index);
-        // Disables the buttons and shows the votes of all the options when an option is selected
-        setButtonsDisabled(true);
-        setShowVotes(true);
-        }
-    };
-
-    /**
-     * Updates poll votes
-     * @param {number} index - The index of the selected poll option.
-     */
-    const updateVotes = ({index}) => {
-        sendPollOption(url, index);
-=======
   const handleOptionSelect = (index) => {
     if (!buttonsDisabled) {
       setSelectedOption(index);
       setButtonsDisabled(true);
       setShowVotes(true);
->>>>>>> master
     }
   };
 
+  /**
+     * Updates poll votes
+     * @param {number} index - The index of the selected poll option.
+     */
   const updateVotes = ({ index }) => {
     sendPollOption(url, index);
   };

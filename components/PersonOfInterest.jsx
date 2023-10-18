@@ -32,15 +32,19 @@ const PersonOfInterest = ({ figureName }) => {
           </p>
         ) : (
           <div className='ml-6 flex flex-row space-x-3 items-center'>
-            <p className='uppercase text-xs font-bold text-black'>
-              {figureName}
-            </p>
-            <button
-              className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'
-              onClick={() => handleClick(figureName)}
-            >
-              VISIT PROFILE
-            </button>
+            {figureName.map((name, index) => (
+              <div className='flex flex-row space-x-3 items-center'>
+                <p className='uppercase text-xs font-bold text-black'>
+                  {figureName}
+                </p>
+                <button
+                  className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'
+                  onClick={() => handleClick(figureName)}
+                >
+                  VISIT PROFILE
+                </button>
+              </div>
+            ))}
           </div>
         )}
       </div>

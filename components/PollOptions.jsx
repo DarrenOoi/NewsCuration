@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
 /**
  * PollOption is a component representing an option in a poll
  *

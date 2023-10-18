@@ -33,6 +33,8 @@ const Menu = ({ currentPage }) => {
     fetchArticles();
   }, []);
 
+  console.log(saved)
+
   /**
    * Function to navigate to the article search page.
    */
