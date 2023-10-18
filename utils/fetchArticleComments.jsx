@@ -10,7 +10,7 @@ export const fetchArticleComments = async (url) => {
 
     if (response.ok) {
       const responseResult = await response.json();
-      return responseResult;
+      return responseResult.Result;
     } else {
       console.error('Request failed:', response.status, response.statusText);
       return 'Something went wrong';

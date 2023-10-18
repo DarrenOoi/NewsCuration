@@ -1,11 +1,11 @@
-export const sendArticleComment = async (comment, author, url) => {
+export const sendArticleComment = async (author, comment, url) => {
   try {
-    const response = await fetch('http://localhost:5000//SaveArticleComment', {
+    const response = await fetch('http://localhost:5000/SaveArticleComment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ comment: comment, author: author, url: url }),
+      body: JSON.stringify({ author: author, comment: comment, url: url }),
     });
 
     if (response.ok) {

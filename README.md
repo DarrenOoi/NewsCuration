@@ -18,10 +18,12 @@ You can start editing the page by modifying `app/pages/index.js`. The page auto-
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Install Dependencies
+## npm Dependencies
 
-Daisy UI - npm i -D daisyui@latest
-country-flags-svg - npm install country-flags-svg
+```bash
+npm i -D daisyui@latest
+npm install country-flags-svg
+```
 
 ## Learn More
 
@@ -32,15 +34,12 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Infrastructure
+Infrastructure is on AWS RDS System. Please make sure you have envrionment variables for AWS installed correctly. Talk to Daniel to received your unique username and password to access the NewCuration_2 RDS instance.
+  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Infrstructure
-
-**Import these libraries:**
+### **Import these dependencies**
+```
 pip install pymysql
 
 pip install mysql-connector-python
@@ -55,5 +54,5 @@ pip install openai
 
 pip install flask-cors
 
-
 python -m spacy download en_core_web_sm
+```
