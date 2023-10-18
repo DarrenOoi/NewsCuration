@@ -11,7 +11,7 @@ import SavedDropdown from './SavedDropdown';
  * @param {string} currentPage - The currently active page 
  * @returns {JSX.Element} A React JSX element representing the menu.
  */
-const Menu = ({ currentPage }) => {
+const Menu = ({ currentPage, handleClick }) => {
 
    // State to store saved articles
   const [saved, setSaved] = useState([]);
@@ -33,7 +33,7 @@ const Menu = ({ currentPage }) => {
     fetchArticles();
   }, []);
 
-  console.log(saved)
+  console.log("this is saves", saved)
 
   /**
    * Function to navigate to the article search page.
@@ -76,7 +76,7 @@ const Menu = ({ currentPage }) => {
           PROFILE SEARCH
         </button>
       </div>
-      <SavedDropdown items={saved} />
+      <SavedDropdown items={saved} handleClick={handleClick}/>
     </div>
   );
 };

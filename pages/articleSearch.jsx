@@ -133,7 +133,7 @@ function Home() {
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Menu currentPage={'article'} />
+      <Menu currentPage={'article'} handleClick={handleListClick}/>
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>

@@ -35,6 +35,8 @@ const Poll = ({ url, data }) => {
     fetchComments();
   }, []);
 
+  console.log("this is comments", comments)
+
   /**
      * Handles the selection of a poll option.
      * @param {number} index - The index of the selected poll option.
@@ -103,12 +105,13 @@ const Poll = ({ url, data }) => {
               </button>
             </div>
           </div>
+          
           {comments ? (
             comments.map((comment, index) => (
-            <Comment key={index} user={comment.author} text={comment.comment} />
+            <Comment key={index} data={comment}/>
           ))
           ) : (
-            <p className='p text-xs font-normal text-black'>No comments available</p>
+            <p className='p text-xs font-normal text-black'>No comments posted</p>
           )}
         </div>
       </div>

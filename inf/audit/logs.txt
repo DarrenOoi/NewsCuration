@@ -78217,3 +78217,2913 @@ SELECT * FROM Politician WHERE HasCampaign = 1]
     FROM Comments
     WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
     ]
+[2023-10-18 13:28:26.748432] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:28:27.351026] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears',
+    'None',
+    'None',
+    1, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 13:28:27.676855] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:28:28.134952] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-18 13:28:40.271373] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:28:40.872852] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:31:53.699287] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:31:54.211345] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Comments(URL, Author, Comment, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears',
+    'Anonymous',
+    'This is enlightening',
+    1, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 13:31:54.530929] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:31:55.035626] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Comments;
+    ]
+[2023-10-18 13:32:05.991248] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:32:06.509906] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:32:53.795862] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:32:54.248603] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:32:56.487103] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:32:57.010800] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:33:24.252390] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000214C9268D50>]
+[2023-10-18 13:33:24.258396] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000214C9C453D0>]
+[2023-10-18 13:33:24.746069] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 13:33:41.491251] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:42.043580] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:33:43.987669] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:44.509488] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:33:44.744050] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:45.259322] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:45.525046] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:46.140486] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 13:33:46.376023] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:46.956912] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:47.275510] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:47.783367] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:48.064426] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:48.598628] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:33:48.910264] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:49.511499] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:49.826513] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:50.330640] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 13:33:50.646327] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:51.159767] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:51.397772] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:51.896760] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:52.165112] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:52.823476] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:33:53.110776] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:53.662355] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:53.897132] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:54.431575] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 13:33:54.665734] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:55.186572] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:55.465389] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:56.031921] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 13:33:56.281980] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:56.798071] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:33:57.033438] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:57.542756] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 146
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:33:58.110385] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:33:58.633030] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:34:04.207512] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:34:04.777921] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:34:16.393579] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:34:16.864042] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:34:17.176114] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:34:17.688581] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 147
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:34:18.288946] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:34:18.829661] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:35:04.682836] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:35:05.289787] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:35:06.422729] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:35:07.029844] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 13:35:07.352777] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:35:07.825166] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 148
+    WHERE ID = 5 
+    ]
+[2023-10-18 13:35:08.660127] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:35:09.227126] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 13:35:42.967188] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:35:43.447310] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE (Fname LIKE '%Donald%' OR Lname LIKE '%Donald%') OR 
+(Fname LIKE '%Trump%' OR Lname LIKE '%Trump%') OR 
+0=1
+    ]
+[2023-10-18 13:35:43.698875] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:35:44.698389] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT A.*
+    FROM Article A
+    INNER JOIN Politician_KeyTable PK ON PK.ID_Article = A.ID
+    WHERE ID_Politician = 2 
+    ]
+[2023-10-18 13:36:00.799428] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:36:01.411534] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 2
+    ]
+[2023-10-18 13:36:02.018119] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:36:02.490571] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE HasCampaign = 1
+    ]
+[2023-10-18 13:36:10.517316] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:36:11.028530] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 3
+    ]
+[2023-10-18 13:36:16.441634] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:36:16.998479] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-18 13:36:18.824131] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:36:19.060622] [Manav Trivedi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-18 13:36:19.292382] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_CampaignPolicies
+    WHERE ID = 4
+    ]
+[2023-10-18 13:39:55.195195] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:39:55.433128] [Manav Trivedi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-18 13:39:55.714115] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:54:28.457181] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:54:28.696857] [Manav Trivedi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-18 13:54:28.935399] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:54:39.325701] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000024E80F4E450>]
+[2023-10-18 13:54:39.351082] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000024E80DCC350>]
+[2023-10-18 13:54:39.952133] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 13:55:12.316469] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:12.803086] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 13:55:17.453863] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:18.206672] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 13:55:18.442280] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:19.090409] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:19.473058] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:20.098083] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:20.338918] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:20.913135] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:21.212973] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:21.792126] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 13:55:22.027612] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:22.613492] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:22.849939] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:23.331311] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:23.670760] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:24.281697] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:24.544296] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:25.094412] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 13:55:25.411193] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:26.027581] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:26.307444] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:26.846935] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:27.078263] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:27.588642] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 13:55:27.863787] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:28.450436] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 13:55:28.783390] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:29.502568] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 18
+    WHERE ID = 13 
+    ]
+[2023-10-18 13:55:30.439572] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:31.026155] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6'
+    ]
+[2023-10-18 13:55:35.445928] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 13:55:35.897522] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6'
+    ]
+[2023-10-18 14:02:08.684176] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000142E701C490>]
+[2023-10-18 14:02:08.694735] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000142E5A5E750>]
+[2023-10-18 14:02:09.159772] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:02:12.137899] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:12.760614] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:02:21.153987] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:21.781093] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:02:22.038561] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:22.587376] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:22.821325] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:23.405877] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:02:23.639347] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:24.237155] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:24.470958] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:24.954447] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:25.261348] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:25.721518] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:02:25.972014] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:26.590160] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:26.897625] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:27.405091] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:02:27.644349] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:28.126182] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:28.507412] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:29.043259] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:29.360758] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:29.809620] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:02:30.074887] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:30.598399] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:30.830410] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:31.330337] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:02:31.609347] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:32.072771] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:32.309275] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:32.836647] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:02:33.143811] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:33.760836] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:02:34.062979] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:34.598068] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 151
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:02:35.286302] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:02:35.900471] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:03:32.688488] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:03:33.272789] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:05:53.946182] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:05:54.464804] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:05:54.775658] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:05:55.282008] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 152
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:05:55.930328] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:05:56.432852] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:06:17.088861] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:06:17.618876] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:10:19.899920] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:10:20.423530] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:12:10.576195] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:12:11.289867] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:15:51.778901] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:15:52.298203] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:15:54.408225] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:15:54.983513] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:15:55.217132] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:15:55.761118] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 153
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:15:56.634515] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:15:57.194030] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:16:16.979642] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:16:17.438644] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:16:24.938830] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:16:25.511013] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:16:45.938034] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:16:46.542597] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:16:57.299609] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:16:57.849290] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:17:22.808926] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:17:23.317007] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:17:23.640154] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:17:24.174282] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 154
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:17:24.765893] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:17:25.320585] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:17:54.030497] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:17:54.580504] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:18:09.415200] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:18:09.872866] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:18:12.066246] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:18:12.608673] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:18:14.315382] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:18:14.924064] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:18:16.977260] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:18:17.585759] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:18:17.850928] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:18:18.419941] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 156
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:18:19.016929] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:18:19.521469] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:21:03.377071] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:21:03.837458] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:24:28.803070] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:24:29.540529] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:24:29.789001] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:24:30.464947] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 157
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:24:31.165672] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:24:31.777486] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:25:33.336335] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:25:33.946016] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:27:31.256222] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:27:31.803190] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:27:35.092137] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:27:35.639698] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:31:35.570094] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:31:36.061810] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:31:36.303476] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:31:36.783246] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 158
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:31:37.381207] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:31:37.852759] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:31:42.678944] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:31:43.162998] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:31:43.412442] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:31:43.911223] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 159
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:31:44.734929] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:31:45.186936] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:33:47.543252] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001D076E78E10>]
+[2023-10-18 14:33:47.543252] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001D0764DF3D0>]
+[2023-10-18 14:33:48.013091] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:33:52.714792] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:33:53.183698] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:33:54.615047] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:33:55.082380] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:33:55.315771] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:33:55.781273] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:33:56.030764] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:33:56.498596] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:33:56.736618] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:33:57.201308] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:33:57.449658] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:33:57.916018] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:33:58.149023] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:33:58.616289] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:33:58.848800] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:33:59.320638] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:33:59.550129] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:00.022075] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:34:00.262310] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:00.717976] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:34:00.952754] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:01.403234] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:34:01.636972] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:02.103571] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:34:02.336965] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:02.803751] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:34:03.036738] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:03.486999] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:34:03.722833] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:04.188425] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:34:04.430328] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:04.888925] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:34:05.124255] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:05.589498] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:34:05.822680] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:06.291188] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 160
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:34:06.890237] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:34:07.360771] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:35:49.887788] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:35:50.353397] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:36:15.699753] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000018A9E1E61D0>]
+[2023-10-18 14:36:15.706766] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000018A9F224DD0>]
+[2023-10-18 14:36:16.165160] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:36:21.240637] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:21.740115] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:36:23.678123] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:24.162502] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:36:24.394798] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:24.863327] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:25.096634] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:25.565383] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:36:25.812890] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:26.263874] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:26.513388] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:26.979358] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:27.199179] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:27.666834] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:36:27.899545] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:28.349787] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:28.567779] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:29.033413] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:36:29.264173] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:29.716814] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:29.950559] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:30.410053] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:30.634853] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:31.084930] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:36:31.318815] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:31.784347] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:32.013590] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:32.466396] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:36:32.693226] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:33.150393] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:33.377880] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:33.820659] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:36:34.053390] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:34.502477] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:36:34.736342] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:35.202800] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 161
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:36:36.039985] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:36.495045] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:36:41.581131] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:36:42.037060] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-18 14:37:08.303639] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:08.765769] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:37:10.560266] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:11.027027] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-18 14:37:11.260877] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:11.716852] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:11.948165] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:12.411852] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:37:12.644613] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:13.095371] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:13.328438] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:13.793602] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:14.020160] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:14.464945] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-18 14:37:14.696381] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:15.148212] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:15.383716] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:15.823022] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:37:16.053356] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:16.503190] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:16.726561] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:17.195075] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:17.422601] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:17.874876] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-18 14:37:18.105828] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:18.561091] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:18.777442] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:19.236558] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:37:19.460622] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:19.911435] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:20.151716] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:20.602617] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "18"
+    ]
+[2023-10-18 14:37:20.829274] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:21.299639] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe"
+    ]
+[2023-10-18 14:37:21.520414] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:21.983016] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 19
+    WHERE ID = 18 
+    ]
+[2023-10-18 14:37:22.644085] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:23.123640] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.skynews.com.au/opinion/chris-kenny/donald-trump-debating-meghan-markle-would-revive-her-flatlining-career/video/f6f265b6eef36342284b84f02bf59abe'
+    ]
+[2023-10-18 14:37:26.820911] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:27.272660] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6"
+    ]
+[2023-10-18 14:37:27.500750] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:27.957601] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6"
+    ]
+[2023-10-18 14:37:28.250560] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:29.232392] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6"
+    ]
+[2023-10-18 14:37:29.628484] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:30.777426] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-18 14:37:31.009885] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:31.477204] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-18 14:37:31.697606] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:32.155235] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6"
+    ]
+[2023-10-18 14:37:32.377744] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:32.844517] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-18 14:37:33.067694] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:33.529269] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-18 14:37:33.757216] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:34.206182] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6"
+    ]
+[2023-10-18 14:37:34.436361] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:34.881463] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6"
+    ]
+[2023-10-18 14:37:35.107507] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:35.566272] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6"
+    ]
+[2023-10-18 14:37:35.799463] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:36.248933] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6',
+    1.0,
+    0.3333333333333333,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    'Donald Trump decries gag order outside New York court room as civil fraud trial continues',
+    'Property News: What life is like inside an award-winning Australian house with no walls. © 2023 Nine Entertainment Co.',
+    '- Donald Trump expresses disagreement with gag order outside New York court room during ongoing civil fraud trial.',
+    1
+    );
+    ]
+[2023-10-18 14:37:36.480331] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:36.925105] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-18 14:37:37.155935] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:37.610311] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.9news.com.au/world/donald-trump-decries-gag-order-ahead-of-civil-business-fraud-trial-new-york-supreme-court/19566036-306d-49f1-9d21-7af3ec6b4ca6"
+    ]
+[2023-10-18 14:37:37.825960] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:38.296161] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '45',
+    'What do you think of the concept of a house with no walls?',
+    'Its an innovative and futuristic design.',
+    'It would lack privacy and security.',
+    'I would feel exposed and uncomfortable.',
+    'I prefer traditional houses with walls.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:37:38.538417] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:38.984880] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-18 14:37:39.216992] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:39.664736] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'title',
+    'Property News: What life is like inside an award-winning Australian house with no walls',
+    45,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:37:39.897749] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:40.351124] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:37:40.569848] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:41.051545] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'copyright',
+    '© 2023 Nine Entertainment Co.',
+    45,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:37:41.287612] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:37:41.746862] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:38:58.997708] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000029A11026710>]
+[2023-10-18 14:38:58.997708] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000029A11024190>]
+[2023-10-18 14:38:59.467371] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:39:00.831272] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:01.352477] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:39:04.446988] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:04.917520] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 14:39:05.150428] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:05.613204] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:05.855210] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:06.315976] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:06.550071] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:07.047634] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:07.283623] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:07.752469] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 14:39:07.984024] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:08.452917] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:08.684103] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:09.135878] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:09.368374] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:09.834125] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:10.068197] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:11.020667] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 14:39:11.262616] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:11.722414] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:11.952883] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:12.402001] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:12.642900] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:13.102218] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "13"
+    ]
+[2023-10-18 14:39:13.335570] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:13.786832] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6"
+    ]
+[2023-10-18 14:39:14.022279] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:14.507188] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 19
+    WHERE ID = 13 
+    ]
+[2023-10-18 14:39:15.077403] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:15.545207] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.sbs.com.au/news/article/battling-cancer-the-father-of-reconciliation-makes-last-ditch-voice-plea/443adexc6'
+    ]
+[2023-10-18 14:39:18.761615] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:19.260027] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-18 14:39:52.478054] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:39:52.976294] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:40:35.568316] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:36.034235] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:40:36.271157] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:36.737463] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:40:36.985273] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:37.600766] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:40:38.103082] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:39.256876] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-18 14:40:39.489411] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:40.412972] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-18 14:40:40.638126] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:41.108093] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:40:41.338819] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:41.805534] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-18 14:40:42.039045] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:42.505712] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE 1=1
+    ]
+[2023-10-18 14:40:42.740143] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:43.206540] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:40:43.442070] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:43.890343] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:40:55.251811] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:55.714642] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:40:56.520968] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:40:56.985522] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456'
+    ]
+[2023-10-18 14:41:00.317401] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:00.771519] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-18 14:41:09.927637] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:10.399676] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:41:10.635712] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:11.336492] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article (URL, upperBias, lowerBias, InProduction, InsertedAt, InsertedBy, Header, OriginalText, SummaryParagraph, Views)
+    VALUES (
+    'https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456',
+    0.5777777777777777,
+    0.4888888888888889,
+    0, 
+    NOW(),
+    'Manav Trivedi',
+    'Trump allegedly discussed US nuclear subs with foreign national after leaving White House: Sources',
+    'Trump allegedly discussed the information with an Australian billionaire. Months after leaving the White House, former President Donald Trump allegedly discussed potentially sensitive information about U.S. nuclear submarines with a member of his Mar-a-Lago Club -- an Australian billionaire who then allegedly shared the information with scores of others, including more than a dozen foreign officials, several of his own employees, and a handful of journalists, according to sources familiar with the matter. The potential disclosure was reported to special counsel Jack Smiths team as they investigated Trumps alleged hoarding of classified documents at Mar-a-Lago, the sources told ABC News. The information could shed further light on Trumps handling of sensitive government secrets. Prosecutors and FBI agents have at least twice this year interviewed the Mar-a-Lago member, Anthony Pratt, who runs U.S.-based Pratt Industries, one of the worlds largest packaging companies. In those interviews, Pratt described how -- looking to make conversation with Trump during a meeting at Mar-a-Lago in April 2021 -- he brought up the American submarine fleet, which the two had discussed before, the sources told ABC News. According to Pratts account, as described by the sources, Pratt told Trump he believed Australia should start buying its submarines from the United States, to which an excited Trump -- "leaning" toward Pratt as if to be discreet -- then told Pratt two pieces of information about U.S. submarines: the supposed exact number of nuclear warheads they routinely carry, and exactly how close they supposedly can get to a Russian submarine without being detected. In emails and conversations after meeting with Trump, Pratt described Trumps remarks to at least 45 others, including six journalists, 11 of his companys employees, 10 Australian officials, and three former Australian prime ministers, the sources told ABC News. While Pratt told investigators he couldn’t tell if what Trump said about U.S. submarines was real or just bluster, investigators nevertheless asked Pratt not to repeat the numbers that Trump allegedly told him, suggesting the information could be too sensitive to relay further, ABC News was told. Its unclear if the information was accurate, but the episode was investigated by Smiths team. Sources said another witness, one of Trumps former employees at Mar-a-Lago, told investigators that, within minutes of Pratts meeting with Trump, he heard Pratt relaying to someone else some of what Trump had just said. According to the sources, the former Mar-a-Lago employee also told investigators he was "bothered" and "shocked" to hear that the former president had provided such seemingly sensitive information to a non-U.S. citizen. Pratt told investigators Trump didnt show him any government documents during their April 2021 meeting, nor at any other time they crossed paths at Mar-a-Lago, sources said. According to the sources, Pratt insisted to investigators that he told others about his meeting with Trump to show them how he was advocating for Australia with the United States. Some of the Australian officials that sources said he told were, as reflected in news reports at the time, involved in then-ongoing negotiations with the Biden administration over a deal for Australia to purchase a number of nuclear-powered attack submarines from the United States. The deal was ultimately secured earlier this year, with Australia agreeing to purchase at least three Virginia-class nuclear-powered submarines, though President Joe Biden has said that none of the submarines sold to Australia will be armed with nuclear weapons. Special counsel Smith did not include any information about Trumps alleged April 2021 conversation with Pratt in his June indictment against Trump, which charged the former president with 40 counts of unlawful retention of national defense information and obstruction-related offenses. Last year, while needling the Biden administration for what he said was a weak response to Russias war on Ukraine, Trump said that if he were still president, he would make sure Russia understood that the United States is "a greater nuclear power" with "the greatest submarines in the world." "[They are] the most powerful machines ever built, and nobody knows where they are," Trump said on the Fox Business network. Shortly after Trump became president in 2017, Pratt joined Mar-a-Lago as a member and publicly pledged to invest another $2 billion in American manufacturing jobs. Over the next few years, Pratt visited Mar-a-Lago about 10 times, interacting with Trump on several occasions, once even having dinner with Trump and a U.S. senator at another Trump-owned property nearby, Pratt told investigators, according to sources. Pratt also visited the White House in 2018, when Trump was meeting with Australias then-prime minister, according to online records. In 2019, speaking at the opening of a Pratt Industries plant in Wapakoneta, Ohio, Trump called Pratt a "friend" and praised him for funding the plant. "Were here to celebrate a great opening and a great gentleman," Trump said. "Anthony is one of the most successful men in the world -- perhaps Australias most successful man." Standing beside Trump, Pratt then said he "would not have invested in this plant if it wasnt for President Trumps election, [which] has given us an incredible faith in investing in America." But in recent months, according to sources, Pratt told investigators that he now supports the current U.S. government, describing himself as someone who tends to just "side with the king." Representatives for Pratt did not respond to messages seeking comment from ABC News. A Trump spokesperson said that what ABC News was told -- through what the spokesperson called "leaks" -- lacks "proper context and relevant information." "President Trump did nothing wrong, has always insisted on truth and transparency, and acted in a proper manner, according to the law," the spokesperson said. 24/7 coverage of breaking news and live events',
+    'Major points of the article:
+
+- Former President Donald Trump allegedly discussed potentially sensitive information about U.S. nuclear submarines with an Australian billionaire after leaving the White House.
+- The billionaire, Anthony Pratt, reportedly shared this information with scores of others, including foreign officials, employees, and journalists.
+- The potential disclosure was reported to special counsel Jack Smiths team as they investigated Trumps alleged hoarding of classified documents at Mar-a-Lago.
+- Prosecutors and FBI agents have interviewed Pratt, who runs Pratt Industries, about the conversation with Trump.
+- Pratt described how he brought up the American submarine fleet during a meeting with Trump at Mar-a-Lago in April 2021.
+- According to Pratts account, Trump allegedly told him the supposed exact number of nuclear warheads carried by U.S. submarines and how close they can get to a Russian submarine undetected.
+- Pratt allegedly shared this information with at least 45 others, including journalists, employees, and Australian officials.
+- It is unclear if the information provided by Trump was accurate, but investigators asked Pratt not to repeat the numbers.
+- A former employee at Mar-a-Lago corroborated Pratts account and expressed concern about Trump sharing sensitive information with a non-U.S. citizen.
+- Pratt insisted that he shared the information with others to advocate for Australia in its negotiations with the Biden administration over purchasing nuclear-powered attack submarines.
+- The deal for Australia to purchase at least three Virginia-class nuclear-powered submarines was ultimately secured, but President Biden stated that none of the submarines would be armed with nuclear weapons.
+- Trumps alleged April 2021 conversation with Pratt was not included in the June indictment against him.
+- Pratt joined Mar-a-Lago as a member in 2017 and interacted with Trump on multiple occasions.
+- Pratt publicly pledged to invest $2 billion in American manufacturing jobs and praised Trump for his election during the opening of a Pratt Industries plant in Ohio.
+- In recent months, Pratt has expressed support for the current U.S. government.
+- Representatives for Pratt did not respond to requests for comment, and a Trump spokesperson denied any wrongdoing by the former president.',
+    1
+    );
+    ]
+[2023-10-18 14:41:11.579090] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:12.045022] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article;
+    ]
+[2023-10-18 14:41:12.266601] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:12.735624] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:41:12.979404] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:13.452984] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+  INSERT INTO Polling(ID_Article, Question, OptionFirst, OptionSecond, OptionThird, OptionFourth, VotesFirst, VotesSecond, VotesThird, VotesFourth, inProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '46',
+    'What is your opinion on the alleged disclosure of sensitive information by Donald Trump?',
+    'Trumps alleged disclosure of information is concerning and should be investigated further.',
+    'Trump had the right to discuss sensitive information with a member of his club.',
+    'The alleged disclosure of information is blown out of proportion and not a cause for concern.',
+    'I dont have an opinion on the alleged disclosure of information by Donald Trump.',
+    '0',
+    '0',
+    '0',
+    '0',
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:13.686405] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:14.139034] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Polling;
+    ]
+[2023-10-18 14:41:14.375132] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:14.838435] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'allegedly discussed',
+    'The word allegedly suggests that there is a lack of concrete evidence or proof regarding the discussion, potentially implying doubt or uncertainty.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:15.072491] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:15.536279] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:15.767249] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:16.233767] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'potentially sensitive information',
+    'The phrase potentially sensitive information implies that the information discussed may have been confidential or classified, creating a sense of importance and potential risk.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:16.463168] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:16.924637] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:17.155135] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:17.618975] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'scores of others',
+    'The phrase scores of others indicates a large number of people, potentially exaggerating the scope or significance of the situation.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:17.851751] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:18.307040] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:18.541396] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:19.003322] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'including more than a dozen foreign officials',
+    'The inclusion of more than a dozen foreign officials suggests potential international implications, adding to the significance and potential gravity of the situation.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:19.236821] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:19.688928] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:19.927142] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:20.390076] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'sources familiar with the matter',
+    'The use of sources familiar with the matter alludes to anonymous individuals who possess inside knowledge or information, potentially creating an aura of secrecy or exclusivity.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:20.622185] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:21.083578] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:21.318483] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:21.787868] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'shed further light',
+    'The phrase shed further light indicates the potential for revealing additional information or insights, creating a sense of anticipation or curiosity.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:22.019526] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:22.478345] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:22.710215] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:23.170142] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'hoarding of classified documents',
+    'The term hoarding implies an accumulation or secretive possession of classified documents, potentially suggesting misconduct or improper handling.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:23.393244] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:23.850243] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:24.080712] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:24.546855] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'interviewed',
+    'The word interviewed suggests a formal process of questioning or investigation, implying an official inquiry into the matter.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:24.790785] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:25.245097] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:25.474377] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:25.940338] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'described how',
+    'The phrase described how suggests that the account provided by the individual is subjective and based on their own interpretation or recollection.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:26.176183] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:26.639844] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:26.870598] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:27.327341] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'looking to make conversation',
+    'The phrase looking to make conversation implies a casual or informal interaction, potentially undermining the seriousness or intentionality of the discussion.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:27.559335] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:28.028417] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:28.255687] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:28.729920] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'according to Pratts account',
+    'The phrase according to Pratts account implies that the information provided is based on one individuals perspective, potentially introducing bias or subjectivity.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:28.960398] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:29.431805] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:29.670283] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:30.140349] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'seemingly sensitive information',
+    'The term seemingly sensitive information suggests that the information discussed may have been delicate or confidential, adding to the potential gravity of the situation.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:30.368486] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:30.835110] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:31.077555] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:31.539554] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'heard Pratt relaying',
+    'The phrase heard Pratt relaying implies that the witness overheard the passing of information, potentially indicating a level of informality or lack of discretion.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:31.763739] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:32.232666] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:32.464300] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:32.933158] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'former president had provided',
+    'The phrase former president had provided implies an active role on the part of the former president in disclosing sensitive information, potentially suggesting misconduct or questionable behavior.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:33.165205] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:33.624534] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:33.851257] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:34.319075] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'sources said',
+    'The phrase sources said indicates the reliance on unnamed individuals as the basis for the information presented, potentially introducing a level of uncertainty or lack of verifiability.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:34.552002] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:35.000753] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:35.240400] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:35.703963] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'known if the information',
+    'The phrase known if the information suggests a lack of certainty or confirmation regarding the accuracy or truthfulness of the information discussed.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:35.931792] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:36.381569] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:36.625643] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:37.084831] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'investigated by Smiths team',
+    'The phrase investigated by Smiths team implies an official inquiry or examination into the matter, potentially suggesting legal implications.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:37.319961] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:37.775866] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:38.009212] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:38.463654] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'not include any information',
+    'The phrase not include any information suggests that the absence of specific details or mention in the indictment may have implications or raise questions.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:38.703612] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:39.162390] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:39.392654] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:39.855421] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '40 counts of unlawful retention',
+    'The phrase 40 counts of unlawful retention implies a significant number of alleged offenses, potentially indicating a pattern or serious wrongdoing.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:40.088886] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:40.535037] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:40.777896] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:41.240206] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'weak response',
+    'The term weak response suggests a lack of assertiveness or strength on the part of the Biden administration, potentially introducing a negative connotation.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:41.472794] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:41.932645] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:42.167485] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:42.712773] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'greatest submarines in the world',
+    'The phrase greatest submarines in the world implies a superlative claim about the submarines, potentially indicating a subjective or biased perspective.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:42.948020] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:43.399185] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:43.638248] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:44.101613] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'praised him for funding',
+    'The phrase praised him for funding suggests recognition or admiration for the individuals financial support, potentially indicating a positive bias.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:44.333727] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:44.791844] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:45.022916] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:45.485728] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Article_ArticleBias(KeyPhrase, BiasReason, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    'just side with the king',
+    'The phrase just side with the king suggests a biased or unquestioning loyalty, potentially indicating a lack of critical thinking or independence.',
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:45.718381] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:46.185115] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Article_ArticleBias;
+    ]
+[2023-10-18 14:41:46.402360] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:46.875316] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    INSERT INTO Politician_KeyTable(ID_Politician, ID_Article, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    2,
+    46,
+    0, 
+    NOW(),
+    'Manav Trivedi'
+    );
+    ]
+[2023-10-18 14:41:47.111073] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:41:47.569647] [Manav Trivedi] [SUCCESS] [Sucessfully transacted query: 
+    SELECT MAX(ID) AS ID FROM Politician_KeyTable;
+    ]
+[2023-10-18 14:42:29.372070] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:42:29.833794] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:43:48.022615] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000021E41FD0C90>]
+[2023-10-18 14:43:48.031379] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000021E42C1C050>]
+[2023-10-18 14:43:48.493150] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:43:54.176014] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:43:54.645025] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:44:18.180761] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:18.658773] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:44:18.887054] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:19.363957] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:19.604615] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:20.077628] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:44:20.315514] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:20.784611] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:21.018522] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:21.506195] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:21.733868] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:22.206443] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:44:22.436377] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:22.883990] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:23.117857] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:23.592498] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:44:23.823898] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:24.284530] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:24.512214] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:24.964911] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:25.200904] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:25.671519] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:44:25.907390] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:26.363432] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:26.599402] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:27.061012] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:44:27.296842] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:27.761808] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:27.993977] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:28.449270] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "46"
+    ]
+[2023-10-18 14:44:28.676171] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:29.136362] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456"
+    ]
+[2023-10-18 14:44:29.365970] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:29.835932] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 2
+    WHERE ID = 46 
+    ]
+[2023-10-18 14:44:30.705208] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:31.178947] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456'
+    ]
+[2023-10-18 14:44:40.111895] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:44:40.578772] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "None"
+    ]
+[2023-10-18 14:45:19.104377] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:45:19.567793] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456'
+    ]
+[2023-10-18 14:45:53.393692] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:45:53.844037] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456'
+    ]
+[2023-10-18 14:46:26.289599] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:46:26.757919] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://abcnews.go.com/US/after-white-house-trump-allegedly-discussed-potentially-sensitive/story?id=103760456'
+    ]
+[2023-10-18 14:48:10.104202] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:10.174411] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:10.335943] [Manav Trivedi] [FAIL] [error building sql statement with error 'NoneType' object has no attribute 'read']
+[2023-10-18 14:48:10.335943] [Manav Trivedi] [FAIL] [error building sql statement with error Packet sequence number wrong - got 102 expected 3]
+[2023-10-18 14:48:13.350132] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:13.580263] [Manav Trivedi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-18 14:48:13.809478] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:48:32.358249] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000242E68BB6D0>]
+[2023-10-18 14:48:32.369736] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000242E68BA6D0>]
+[2023-10-18 14:48:32.828252] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:48:45.755071] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:46.202648] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:48:48.423961] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:48.874495] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:48:49.100646] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:49.567382] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:49.804913] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:50.265376] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:48:50.500056] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:50.951144] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:51.185124] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:51.657815] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:51.885362] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:52.332332] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:48:52.569736] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:53.026213] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:53.251740] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:53.708208] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:48:53.928429] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:54.388569] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:54.608761] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:55.069973] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:55.290967] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:55.746934] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:48:55.967430] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:56.437069] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:56.664442] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:57.112877] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:48:57.342359] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:57.796605] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:58.012632] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:58.461793] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:48:58.697533] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:59.159060] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:48:59.387046] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:48:59.842974] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 162
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:49:00.693639] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:49:01.155741] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:49:13.068622] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:49:13.520742] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:49:16.611685] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:49:17.078235] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:50:06.825840] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:50:07.290426] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:50:30.214204] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:50:30.666598] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:50:35.580731] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:50:36.058923] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:50:55.870703] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001A7BFAFA290>]
+[2023-10-18 14:50:55.879636] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001A7BDE367D0>]
+[2023-10-18 14:50:56.334522] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:50:59.837434] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:00.294123] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:51:01.726179] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:02.185778] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:51:02.418886] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:02.885885] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:03.118394] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:03.577490] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:51:03.804822] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:04.270053] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:04.508360] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:04.966953] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:05.196052] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:05.652306] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:51:05.880971] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:06.337880] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:06.573058] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:07.027539] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:51:07.254775] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:07.705669] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:07.938260] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:08.403158] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:08.633504] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:09.087811] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:51:09.315478] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:09.769104] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:09.996872] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:10.439610] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:51:10.676665] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:11.124965] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:11.357879] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:11.808431] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:51:12.042505] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:12.493636] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:51:12.723557] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:13.179291] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 164
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:51:13.747488] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:14.208193] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:51:18.740994] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:19.194640] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:51:19.436192] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:19.892407] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-18 14:51:20.127495] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:20.586173] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesFirst = 3
+    WHERE ID_Article = 5 
+    ]
+[2023-10-18 14:51:35.859784] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:36.314800] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:51:41.143396] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:41.608435] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:51:41.844034] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:42.308134] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 165
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:51:42.878870] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:43.345163] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:51:46.782064] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:47.241677] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:51:47.475589] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:47.927641] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-18 14:51:48.162594] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:51:48.612071] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesFirst = 4
+    WHERE ID_Article = 5 
+    ]
+[2023-10-18 14:52:50.029526] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:52:50.490210] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:52:52.712066] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:52:53.195196] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:52:54.868483] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:52:55.333349] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:52:55.569738] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:52:56.052231] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 166
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:52:56.622350] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:52:57.070031] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:53:01.393190] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:01.865929] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:53:02.115664] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:02.576687] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-18 14:53:02.807060] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:03.262167] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesSecond = 1
+    WHERE ID_Article = 5 
+    ]
+[2023-10-18 14:53:21.066122] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:21.525796] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:53:23.191679] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:23.656590] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:53:23.889622] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:24.357020] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 167
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:53:24.919136] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:25.374734] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:53:29.143742] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:29.605603] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:53:29.834253] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:30.292799] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-18 14:53:30.523830] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:30.988498] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesSecond = 2
+    WHERE ID_Article = 5 
+    ]
+[2023-10-18 14:53:37.123846] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:37.579051] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:53:40.183081] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:40.647751] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:53:42.334222] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:42.815214] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:53:43.048026] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:43.518136] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 168
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:53:44.096166] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:53:44.555607] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:53:59.755414] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:00.255732] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:54:00.489567] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:00.958201] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-18 14:54:01.196636] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:01.654342] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesFourth = 14
+    WHERE ID_Article = 5 
+    ]
+[2023-10-18 14:54:05.150309] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:05.610682] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:54:06.757913] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:07.226600] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:54:07.461074] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:07.922989] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 169
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:54:08.741613] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:09.215233] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:54:12.666391] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:13.131854] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:54:13.368828] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:13.834600] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-18 14:54:14.059206] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:14.546096] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesFourth = 15
+    WHERE ID_Article = 5 
+    ]
+[2023-10-18 14:54:20.558150] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:54:21.015178] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:56:31.121799] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:56:31.574881] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:56:31.960838] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:56:32.420513] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:56:37.373744] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:56:37.849685] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:58:54.687325] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:58:55.140765] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:58:56.696284] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:58:57.155059] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:59:15.610382] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x00000125B8D2D410>]
+[2023-10-18 14:59:15.624850] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x00000125B7BE61D0>]
+[2023-10-18 14:59:16.082469] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 14:59:27.800407] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:28.269468] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:59:29.519405] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:29.983267] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:59:30.231630] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:30.715414] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:30.948696] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:31.414765] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:59:31.650332] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:32.116640] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:32.352971] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:32.814412] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:33.035967] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:33.511881] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:59:33.735547] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:34.203894] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:34.436248] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:34.896351] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:59:35.137461] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:35.590993] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:35.823933] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:36.288219] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:36.521288] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:36.987263] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:59:37.219052] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:37.671578] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:37.904949] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:38.372261] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician
+    WHERE ID = "2"
+    ]
+[2023-10-18 14:59:38.616392] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:39.078601] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:39.307702] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:39.764991] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "5"
+    ]
+[2023-10-18 14:59:40.007277] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:40.471993] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:59:40.704198] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:41.156543] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 170
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:59:42.000699] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:42.473315] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:59:45.308580] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:45.779885] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:59:46.007117] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:46.491808] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-18 14:59:46.729363] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:47.198132] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesSecond = 3
+    WHERE ID_Article = 5 
+    ]
+[2023-10-18 14:59:48.133158] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:48.616548] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 14:59:50.476609] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:50.954725] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:59:51.191343] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:51.654054] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 171
+    WHERE ID = 5 
+    ]
+[2023-10-18 14:59:52.251817] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:52.712939] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 14:59:53.434230] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:53.916435] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears"
+    ]
+[2023-10-18 14:59:54.147508] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:54.659443] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = 5
+    ]
+[2023-10-18 14:59:54.899469] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 14:59:55.367337] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Polling
+    SET VotesSecond = 4
+    WHERE ID_Article = 5 
+    ]
+[2023-10-18 15:00:07.699281] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:00:08.197240] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.vanityfair.com/news/2023/09/donald-trump-prison-fears'
+    ]
+[2023-10-18 15:01:34.880605] [Manav Trivedi] [FAIL] [error building sql statement with error (2013, 'Lost connection to MySQL server during query')]
+[2023-10-18 15:01:35.110469] [Manav Trivedi] [FAIL] [error building sql statement with error (2013, 'Lost connection to MySQL server during query')]
+[2023-10-18 15:01:35.110469] [Manav Trivedi] [FAIL] [error building sql statement with error 'NoneType' object has no attribute 'settimeout']
+[2023-10-18 15:01:38.165906] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:01:38.411728] [Manav Trivedi] [FAIL] [error building sql statement with error (1046, 'No database selected')]
+[2023-10-18 15:01:38.639877] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 15:01:49.484801] [Manav Trivedi] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x0000014383A3DA10>]
+[2023-10-18 15:01:49.484801] [Manav Trivedi] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x0000014382F6ECD0>]
+[2023-10-18 15:01:49.976520] [Manav Trivedi] [SUCCESS] [Established connection to database newscuration]
+[2023-10-18 15:02:10.264995] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:10.738068] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT Header, URL
+    FROM Article
+    ORDER BY Views DESC
+    LIMIT 4
+    ]
+[2023-10-18 15:02:12.531178] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:12.996003] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-18 15:02:13.230581] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:13.700498] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:13.946161] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:14.398775] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:14.649457] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:15.117778] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:15.384019] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:15.882204] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-18 15:02:16.100596] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:16.591723] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:16.832030] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:17.284102] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:17.520570] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:18.002543] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:18.234426] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:18.735436] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-18 15:02:18.968874] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:19.460019] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Politician_KeyTable
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:19.712765] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:20.185398] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article_ArticleBias
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:20.422779] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:20.903113] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Polling
+    WHERE ID_Article = "3"
+    ]
+[2023-10-18 15:02:21.170354] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:21.636630] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Article
+    WHERE URL = "https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844"
+    ]
+[2023-10-18 15:02:21.869971] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:22.333210] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    UPDATE Article
+    SET Views = 3
+    WHERE ID = 3 
+    ]
+[2023-10-18 15:02:23.161806] [Manav Trivedi] [SUCCESS] [Pinging connection]
+[2023-10-18 15:02:23.630383] [Manav Trivedi] [SUCCESS] [Successfully attempted query: 
+    SELECT * 
+    FROM Comments
+    WHERE URL = 'https://www.abc.net.au/news/2023-10-06/donald-trump-allegedly-discussed-nuclear-subs-with-anthony-pratt/102943844'
+    ]
