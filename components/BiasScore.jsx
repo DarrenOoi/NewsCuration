@@ -1,6 +1,10 @@
-{
-  /* score will be passed into this component, assuming its gonna get calculated somewhere else*/
-}
+/**
+ * BiasScore component displays the bias score for the article
+ * 
+ * @component
+ * @param {number} score - The bias score value. If not available, a loading spinner is displayed.
+ * @returns {JSX.Element} A React JSX element displaying the bias score.
+ */
 const BiasScore = ({ score }) => {
   return (
     <div>

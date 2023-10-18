@@ -2,31 +2,60 @@ import PollOption from './PollOptions';
 import Comment from './Comment';
 import Image from 'next/image';
 import Pic from './pictures/pic.png';
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { sendPollOption } from '@/utils/sendPollOption';
+import { fetchArticleComments } from '@/utils/fetchArticleComments';
+import { sendArticleComment } from '@/utils/sendArticleComment';
 
+/**
+ * Poll is a component that displays a poll with options and comments relating to a specific article.
+ *
+ * @component
+ * @param {string} url - The URL of the associated article
+ * @param {object} data - Poll data, including the question and results.
+ * @returns {JSX.Element} A React JSX element representing the poll.
+ */
 const Poll = ({ url, data }) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [buttonsDisabled, setButtonsDisabled] = useState(false);
+  const [showVotes, setShowVotes] = useState(false);
+  const [comments, setComments] = useState([]);
 
-    const [selectedOption, setSelectedOption] = useState(null);
-    const [buttonsDisabled, setButtonsDisabled] = useState(false);
-    const [showVotes, setShowVotes] = useState(false);
-
-    const handleOptionSelect = (index) => {
-        if (!buttonsDisabled) {
-        setSelectedOption(index);
-        setButtonsDisabled(true);
-        setShowVotes(true);
-        }
-    };
-
-    const updateVotes = ({index}) => {
-        /**
-        sendPollOption(url, index);
-        */
+  // Fetch comments
+  useEffect(() => {
+    async function fetchComments() {
+      try {
+        const comments = await Promise.all([fetchArticleComments(url)]);
+        setComments(comments);
+      } catch (error) {
+        console.log('Error:', error);
+      }
     }
 
+    fetchComments();
+  }, []);
+
+  /**
+     * Handles the selection of a poll option.
+     * @param {number} index - The index of the selected poll option.
+     */
+  const handleOptionSelect = (index) => {
+    if (!buttonsDisabled) {
+      setSelectedOption(index);
+      setButtonsDisabled(true);
+      setShowVotes(true);
+    }
+  };
+
+  /**
+     * Updates poll votes
+     * @param {number} index - The index of the selected poll option.
+     */
+  const updateVotes = ({ index }) => {
+    sendPollOption(url, index);
+  };
+
   return (
-    
     <div className='flex justify-center'>
       <div
         className='mt-3 card bg-white p-6 rounded-xl'
@@ -38,11 +67,11 @@ const Poll = ({ url, data }) => {
         </div>
 
         <div className='mt-5 ml-5 flex flex-col space-y-3'>
-        {data.results ? (
+          {data.results ? (
             data.results.map((result, index) => (
-              <PollOption 
-                key={index} 
-                text={result.opinion} 
+              <PollOption
+                key={index}
+                text={result.opinion}
                 votes={result.votes}
                 isClicked={index === selectedOption}
                 onClick={() => {
@@ -74,22 +103,13 @@ const Poll = ({ url, data }) => {
               </button>
             </div>
           </div>
-          <Comment
-            user={'FIRSTNAME LASTNAME'}
-            text={'I am yapping about something'}
-          />
-          <Comment
-            user={'FIRSTNAME LASTNAME'}
-            text={'I am yapping about something as well'}
-          />
-          <Comment
-            user={'FIRSTNAME LASTNAME'}
-            text={'I am waffling about something'}
-          />
-          <Comment
-            user={'FIRSTNAME LASTNAME'}
-            text={'I am waffling about something as well'}
-          />
+          {comments ? (
+            comments.map((comment, index) => (
+            <Comment key={index} user={comment.author} text={comment.comment} />
+          ))
+          ) : (
+            <p className='p text-xs font-normal text-black'>No comments available</p>
+          )}
         </div>
       </div>
     </div>
