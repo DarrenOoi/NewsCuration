@@ -1,65 +1,75 @@
 from .transactionDataClient import *
 
 
-
-def retrieve_bias_keywords_by_url(tdc:transactionDataClient, url=str):
-    '''
+def retrieve_bias_keywords_by_url(tdc: transactionDataClient, url=str):
+    """
     Retrieve all the bias subtext (the word, and its respective bias reasoning), relating to an Article URL
 
     Returns:
     -------
         list(dict()): list of dictionaries from the Article_ArticleBias table, filtered by the Article URL.
         Each dictionary is a separate record in the database
-        
+
         Returns None if the URL cannot be found, or there are no records relating to the URL.
 
-    '''
-    related_article = tdc.query('Article', f"URL = '{url}' ORDER BY ID DESC")
-    
+    """
+    related_article = tdc.query("Article", f"URL = '{url}' ORDER BY ID DESC")
+
     if len(related_article) == 0 or related_article is None:
         return None
     # URL should be unqiue, but this isn't enforced.
     if len(related_article) > 1:
-        tdc.logMessage(messageStatus.WARN, 'There is more than one Article URL in the database. The first tuple in query is selected.')
-    
-    biasSubText = tdc.query('Article_ArticleBias', f'ID_Article = {related_article[0]["ID"]}')
+        tdc.logMessage(
+            messageStatus.WARN,
+            "There is more than one Article URL in the database. The first tuple in query is selected.",
+        )
+
+    biasSubText = tdc.query(
+        "Article_ArticleBias", f'ID_Article = {related_article[0]["ID"]}'
+    )
     if len(biasSubText) == 0 or biasSubText is None:
-        tdc.logMessage(messageStatus.WARN, f'There are not Bias subtext records for the related ArticleID ({related_article[0]["ID"]})')
-        return None 
-    
+        tdc.logMessage(
+            messageStatus.WARN,
+            f'There are not Bias subtext records for the related ArticleID ({related_article[0]["ID"]})',
+        )
+        return None
+
     return biasSubText
 
 
 def retrieve_bias_keywords_by_key(tdc=transactionDataClient, ID=int):
-    '''
+    """
     Retrieve all the bias subtext (the word, and its respective bias reasoning), relating to an Article ID
 
     Returns:
     -------
         list(dict): list of dictionaries from the Article_ArticleBias table, filtered by the Article ID.
         Each dictionary is a separate record in the database.
-        
+
         Returns None if the ID cannot be found, or there are no records relating to the ID
 
-    '''
-    biasSubText = tdc.query('Article_ArticleBias', f'ID_Article = {ID}')
+    """
+    biasSubText = tdc.query("Article_ArticleBias", f"ID_Article = {ID}")
     if len(biasSubText) == 0 or biasSubText is None:
-        tdc.logMessage(messageStatus.WARN, f'There are not Bias subtext records for the related ArticleID ({ID})')
-        return None 
+        tdc.logMessage(
+            messageStatus.WARN,
+            f"There are not Bias subtext records for the related ArticleID ({ID})",
+        )
+        return None
     return biasSubText
 
 
 def insert_bias_keywords(tdc=transactionDataClient, ID=int, keywords=dict()) -> None:
-    '''
+    """
     Inserts all the bias subtext into the related Article_ArticleBias
-    '''
+    """
     pass
 
 
 def find_related_articles(tdc=transactionDataClient, ID_politician=int):
-    '''
+    """
     Find all articles related to a Politician. Requires the ID of the Politician.
-    '''
+    """
     query = f"""
     SELECT A.*
     FROM Article A
@@ -67,10 +77,12 @@ def find_related_articles(tdc=transactionDataClient, ID_politician=int):
     WHERE ID_Politician = {ID_politician} 
     """
     return tdc.query_special(query)
-    
 
-def insert_bias_keywords(tdc=transactionDataClient, ID=int, biasSubtext=dict, inProduction=bool) -> None:
-    '''
+
+def insert_bias_keywords(
+    tdc=transactionDataClient, ID=int, biasSubtext=dict, inProduction=bool
+) -> None:
+    """
     Inserts all the bias subtext into the related Article_ArticleBias.
     Expects the input to be a key-value pair with the biased phrase as the key, and the reasoning of the biased phrase as
     its respective value. E.g.
@@ -80,44 +92,47 @@ def insert_bias_keywords(tdc=transactionDataClient, ID=int, biasSubtext=dict, in
             'Terror Attack': 'The term "terror" is frightening and is used to emote panic'
         }
 
-    '''
+    """
     for phrase, reason in biasSubtext.items():
         subTextClass = Article_ArticleBias(ID, phrase, reason, inProduction)
         tdc.insert(subTextClass)
 
 
-def retrieve_article_comments(tdc:transactionDataClient, url:int) -> list:
-    '''
+def retrieve_article_comments(tdc: transactionDataClient, url: int) -> list:
+    """
     retrieves all comments relating to an article ID
-    '''
-    return tdc.query('Comments', f"URL = '{url}'")
+    """
+    return tdc.query("Comments", f"URL = '{url}'")
 
 
-def create_comment(tdc:transactionDataClient, author:str, message:str, url:str):
-    '''
+def create_comment(tdc: transactionDataClient, author: str, message: str, url: str):
+    """
     Persist a comment to the database.
-    '''
+    """
     comment = Comments(url, author, message, 1)
     tdc.insert(comment)
 
 
 def increment_vote(tdc=transactionDataClient, ID=int, option=int):
-    '''
+    """
     Increments the vote
-    '''
-    records = tdc.query('Polling', f'ID_Article = {ID}')
+    """
+    records = tdc.query("Polling", f"ID_Article = {ID}")
     record = records[0]
 
-    if (option == 1):
+    if option == 1:
         record.votesFirst += 1
-    elif (option == 2):
+    elif option == 2:
         record.votesSecond += 1
-    elif (option == 3):
+    elif option == 3:
         record.votesThird += 1
-    elif (option == 4):
+    elif option == 4:
         record.votesFourth += 1
-    else:            
-        tdc.logMessage(messageStatus.WARN, f'This is not a valid vote option for related ArticleID ({ID})')
+    else:
+        tdc.logMessage(
+            messageStatus.WARN,
+            f"This is not a valid vote option for related ArticleID ({ID})",
+        )
 
 
 def update_table(tdc=transactionDataClient, table="Article", set="", where=""):
@@ -127,6 +142,7 @@ def update_table(tdc=transactionDataClient, table="Article", set="", where=""):
     WHERE {where} 
     """
     return tdc.query_special(query)
+
 
 def get_most_viewed_articles(tdc=transactionDataClient, number=1):
     query = f"""

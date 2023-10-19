@@ -3,13 +3,14 @@ from utils.prompts.webScraper import *
 from utils.biasCalculator import *
 import base64
 
-'''
+"""
 WARNING: DECREPED
 THESE METHODs ARE NOW OUT OF SCOPE FOR THE PURPOSES OF THIS ASSIGNMENT
-'''
+"""
+
 
 def similarArticles(articleTitle):
-    googleNews = GoogleNews(lang='en')
+    googleNews = GoogleNews(lang="en")
     googleNews.get_news(articleTitle)
 
     similarArticles = []
@@ -21,7 +22,9 @@ def similarArticles(articleTitle):
             if ns.getArticle() != None:
                 b, n, p = biasScoreGeneratorFromText(ns.getArticle())
                 b, b_dash = biasRange(p, n, b, 0.8)
-                similarArticles.append((actual_url, max([b/n,b_dash/n]), min([b/n,b_dash/n])))
+                similarArticles.append(
+                    (actual_url, max([b / n, b_dash / n]), min([b / n, b_dash / n]))
+                )
                 # print(actual_url, b/n, b_dash/n)
             else:
                 # print(f"article {actual_url} inaccessible")
@@ -31,6 +34,7 @@ def similarArticles(articleTitle):
             continue
 
     return sorted(similarArticles, key=lambda element: (element[1], element[2]))
+
 
 # need to be tested to improve extraction of url from news.google encoding
 def convertGoogleNewsUrlToAccessible(url):
