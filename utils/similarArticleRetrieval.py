@@ -1,11 +1,16 @@
 from GoogleNews import GoogleNews
 from utils.prompts.webScraper import *
 from utils.biasCalculator import *
-
 import base64
 
+"""
+WARNING: DECREPED
+THESE METHODs ARE NOW OUT OF SCOPE FOR THE PURPOSES OF THIS ASSIGNMENT
+"""
+
+
 def similarArticles(articleTitle):
-    googleNews = GoogleNews(lang='en')
+    googleNews = GoogleNews(lang="en")
     googleNews.get_news(articleTitle)
 
     similarArticles = []
@@ -17,7 +22,9 @@ def similarArticles(articleTitle):
             if ns.getArticle() != None:
                 b, n, p = biasScoreGeneratorFromText(ns.getArticle())
                 b, b_dash = biasRange(p, n, b, 0.8)
-                similarArticles.append((actual_url, max([b/n,b_dash/n]), min([b/n,b_dash/n])))
+                similarArticles.append(
+                    (actual_url, max([b / n, b_dash / n]), min([b / n, b_dash / n]))
+                )
                 # print(actual_url, b/n, b_dash/n)
             else:
                 # print(f"article {actual_url} inaccessible")
@@ -28,6 +35,7 @@ def similarArticles(articleTitle):
 
     return sorted(similarArticles, key=lambda element: (element[1], element[2]))
 
+
 # need to be tested to improve extraction of url from news.google encoding
 def convertGoogleNewsUrlToAccessible(url):
     url_in_process_A = str(base64.urlsafe_b64decode(url))
@@ -36,10 +44,3 @@ def convertGoogleNewsUrlToAccessible(url):
     url_in_process_D = url_in_process_C.split("\\x")[0]
     actual_url = url_in_process_D.split("/!")[0]
     return actual_url
-
-
-# sortedSimilarArticles = similarArticles("The dangerous precedent set by Trump’s indictment in Georgia")
-# print([{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles])
-
-# jason form
-# [{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles]
