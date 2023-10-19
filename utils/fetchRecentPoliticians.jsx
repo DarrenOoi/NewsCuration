@@ -1,3 +1,9 @@
+/**
+ * Fetch a list of recent politicians from the database
+ *
+ * @returns {Array<Object>} An array of recent politicians if found
+ * @throws {Array} If the request fails or an error occurs, it returns an empty array.
+ */
 export const fetchRecentPoliticians = async () => {
   try {
     const response = await fetch('http://localhost:5000/GetRecentPoliticians', {

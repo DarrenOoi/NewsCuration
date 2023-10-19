@@ -1,3 +1,10 @@
+/**
+ * Fetch the names of political figures mentioned in an article from the database
+ *
+ * @param {string} url - The URL of the article to analyze.
+ * @returns {Array<String>} An array of political figure names mentioned in the article.
+ * @throws {Array} If the request fails, an error occurs, or the server response is not as expected, it returns an empty array.
+ */
 export const fetchPoliticalFigureNames = async (url) => {
   try {
     const response = await fetch(

@@ -1,3 +1,9 @@
+/**
+ * Send a request to save an article to the database
+ *
+ * @param {string} url - The URL of the article to be saved.
+ * @returns {Object|string} An object containing the result of the article save request if the request is successful, or a string with an error message if the request fails or an error occurs.
+ */
 export const sendSaveArticle = async (url) => {
   try {
     const response = await fetch('http://localhost:5000/SaveArticle', {

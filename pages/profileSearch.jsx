@@ -10,14 +10,20 @@ import List from '@/components/List';
 import { fetchRecentPoliticians } from '@/utils/fetchRecentPoliticians';
 import { searchPolitician } from '@/utils/searchPolitician';
 
+// ProfileSearch component
 function ProfileSearch() {
+
+  // Router instance
   const router = useRouter();
   const { name } = router.query;
+
+  // State variables
   const [search, setSearch] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState([]);
   const [recents, setRecents] = useState([]);
 
+  // // Fetch recent politicians and search results when the component loads
   useEffect(() => {
     async function fetchPoliticians() {
       try {
@@ -42,6 +48,7 @@ function ProfileSearch() {
     fetchPoliticians();
   }, []);
 
+  // Handle the search button click
   const handleSearch = async () => {
     if (search.trim() != '') {
       setSubmitted(true);
@@ -54,6 +61,7 @@ function ProfileSearch() {
     } else setResult([]);
   };
 
+   // Handle the click event on a politician
   const handleClick = (name) => {
     router.push({
       pathname: '/profilePage',
@@ -61,6 +69,7 @@ function ProfileSearch() {
     });
   };
 
+  // Return the JSX for ProfileSearch
   return (
     <div>
       <Head>

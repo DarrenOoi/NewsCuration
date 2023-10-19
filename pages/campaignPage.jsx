@@ -10,14 +10,20 @@ import { searchPolitician } from '@/utils/searchPolitician';
 import { fetchCampaigningPoliticians } from '@/utils/fetchCampaigningPoliticians';
 import List from '@/components/List';
 
+// CampaignPage component
 function campaignPage() {
+
+  // Router instance
   const router = useRouter();
   const { id, about, image, name, title } = router.query;
+
+  // State variables
   const [campaign, setCampaign] = useState(null);
   const [comparison, setComparison] = useState(null);
   const [campaigningPoliticians, setCampaigningPoliticians] = useState([]);
   const [comparisonDetails, setComparisonDetails] = useState({});
 
+  // Fetch campaign information and list of campaigning politicians when component is loaded
   useEffect(() => {
     async function fetchCampaignInfo() {
       if (id) {
@@ -38,6 +44,7 @@ function campaignPage() {
     fetchCampaignInfo();
   }, [id]);
 
+   // Handle click event to compare politicians
   const handleClick = async (name, ID, about, image, title) => {
     try {
       const res = await fetchCampaign(ID);
@@ -57,6 +64,7 @@ function campaignPage() {
     }
   };
 
+   // Extract the first two sentences from a string
   function getFirstTwoSentences(inputString) {
     // Define a regular expression to match sentence-ending punctuation.
     // This regex will match '.', '!', or '?' followed by a space, the end of the string,
@@ -72,6 +80,7 @@ function campaignPage() {
     return firstTwoSentences;
   }
 
+  // Return the JSX for CampaignPage
   return (
     <div>
       <Head>
