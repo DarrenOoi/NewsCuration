@@ -1,3 +1,10 @@
+/**
+ * Fetch biased keywords for a given article URL from the database.
+ *
+ * @param {string} url - The URL of the article to fetch biased keywords for.
+ * @returns {Array<string>} An array of biased keywords.
+ * @throws {string} If the request fails or an error occurs, it returns an error message.
+ */
 export const fetchBiasWords = async (url) => {
   try {
     const response = await fetch(

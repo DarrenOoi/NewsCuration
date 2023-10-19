@@ -9,19 +9,28 @@ import articlePicSmall from '@/components/pictures/articlePicSmall.png';
 import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 import { useEffect } from 'react';
 
+// Index component (home screen)
 function Index() {
+
+  // Router instance
   const router = useRouter();
+
+  // Show the privacy and security modal dialog when component loads
   useEffect(() => {
     document.getElementById('my_modal_2').showModal();
   });
+
+  // Redirect to the ArticleSearch page
   const ArticleSearch = () => {
     router.push('/articleSearch');
   };
 
+  // Redirect to the ProfileSearch page
   const ProfileSearch = () => {
     router.push('/profileSearch');
   };
 
+  // Component for drawing the article line
   const ArticleLine = ({ text }) => {
     return (
       <div className='flex flex-col items-center justify-center w-6'>
@@ -45,6 +54,7 @@ function Index() {
     );
   };
 
+  // Component for drawing the profile line
   const ProfileLine = ({ text }) => {
     return (
       <div className='flex flex-col items-center justify-center w-6'>
@@ -68,6 +78,7 @@ function Index() {
     );
   };
 
+  // Return the JSX for Index
   return (
     <div>
       <Head>

@@ -18,7 +18,10 @@ import PersonOfInterest from '@/components/PersonOfInterest';
 import { fetchPoliticalFigureNames } from '@/utils/fetchPoliticalFigureNames';
 import { fetchPoll } from '@/utils/fetchPoll';
 
+// ArticleSearch component
 function Home() {
+  
+  // State variables
   const [text, setText] = useState('');
   const [result, setResult] = useState(null);
   const [header, setHeader] = useState(null);
@@ -29,9 +32,11 @@ function Home() {
   const [figureNames, setFigureNames] = useState([]);
   const [poll, setPoll] = useState([]);
 
+  // Router instance
   const router = useRouter();
   const { url } = router.query;
 
+  // Fetch recent and popular articles when component is loaded
   useEffect(() => {
     async function fetchArticles() {
       try {
@@ -61,6 +66,7 @@ function Home() {
     fetchArticles();
   }, []);
 
+  // Handle click of an article from the list (for exmaple the recents list)
   const handleListClick = (url) => {
     setSubmitted(true);
     setText(url);
@@ -79,6 +85,7 @@ function Home() {
     });
   };
 
+  // Handle submission of the form
   const handleSubmit = () => {
     if (text.trim() != '') {
       setSubmitted(true);
@@ -98,12 +105,14 @@ function Home() {
     } else setResult(null);
   };
 
+  // Handle updates to the poll
   const handlePoll = () => {
     fetchPoll(text).then((poll) => {
       setPoll(poll);
     });
   };
 
+  // Handle "click for the why" button
   const handleClick = () => {
     router.push({
       pathname: '/analysisPage',
@@ -111,6 +120,7 @@ function Home() {
     });
   };
 
+  // Return the JSX for ArticleSearch
   return (
     <div>
       <Head>

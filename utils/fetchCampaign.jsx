@@ -1,3 +1,10 @@
+/**
+ * Fetch campaign details for a given campaign ID from the database
+ *
+ * @param {number} id - The unique campaign ID to fetch details for.
+ * @returns {Object} An object containing campaign details
+ * @throws {string} If the request fails or an error occurs, it returns an error message.
+ */
 export const fetchCampaign = async (id) => {
   try {
     const response = await fetch('http://localhost:5000/getCampaignDetails', {
