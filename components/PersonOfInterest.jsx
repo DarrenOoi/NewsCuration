@@ -12,12 +12,15 @@ import { useRouter } from 'next/router';
 
 const PersonOfInterest = ({ figureName }) => {
   const router = useRouter();
+
+  // Function to handle clicking on a person of interest
   const handleClick = (name) => {
     router.push({
       pathname: '/profilePage',
       query: { name: name },
     });
   };
+
   return (
     <div className='bg-[#f3f3f3] rounded-2xl p-4 flex flex-col space-y-3 mt-5 mb-3'>
       <div className='p ml-4 text-xs font-bold text-[#FFB039]'>
@@ -34,9 +37,7 @@ const PersonOfInterest = ({ figureName }) => {
           <div className='ml-6 flex flex-row space-x-3 items-center'>
             {figureName.map((name, index) => (
               <div key={index} className='flex flex-row space-x-3 items-center'>
-                <p className='uppercase text-xs font-bold text-black'>
-                  {name}
-                </p>
+                <p className='uppercase text-xs font-bold text-black'>{name}</p>
                 <button
                   className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'
                   onClick={() => handleClick(name)}

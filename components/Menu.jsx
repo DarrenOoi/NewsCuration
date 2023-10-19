@@ -8,18 +8,18 @@ import SavedDropdown from './SavedDropdown';
  * It includes buttons for article and profile search, as well as a saved articles dropdown.
  *
  * @component
- * @param {string} currentPage - The currently active page 
+ * @param {string} currentPage - The current active page.
+ * @param {function} handleClick - Function to handle clicks in the saved pages menu.
  * @returns {JSX.Element} A React JSX element representing the menu.
  */
 const Menu = ({ currentPage, handleClick }) => {
-
-   // State to store saved articles
+  // State to store saved articles
   const [saved, setSaved] = useState([]);
 
   // Router for navigation
   const router = useRouter();
 
-  // Fetch saved articles 
+  // Fetch saved articles
   useEffect(() => {
     async function fetchArticles() {
       try {
@@ -74,7 +74,11 @@ const Menu = ({ currentPage, handleClick }) => {
           PROFILE SEARCH
         </button>
       </div>
-      <SavedDropdown items={saved} handleClick={handleClick}/>
+      <SavedDropdown
+        items={saved}
+        handleClick={handleClick}
+        currentPage={currentPage}
+      />
     </div>
   );
 };

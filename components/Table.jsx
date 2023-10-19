@@ -10,7 +10,6 @@ import { useRouter } from 'next/router';
 const Table = ({ articles }) => {
   const router = useRouter();
 
-  
   /**
    * Handles clicking on a source URL to navigate to the article.
    * @param {string} url - The URL of the article source.

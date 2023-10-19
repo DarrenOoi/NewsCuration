@@ -1,8 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Navbar from '@/components/Navbar';
-import Button from '@/components/Button';
 import Card from '@/components/Card';
 import BiasScore from '@/components/BiasScore';
 import { useEffect, useState } from 'react';
@@ -11,20 +9,26 @@ import { fetchBiasWords } from '@/utils/fetchBiasWords';
 import Image from 'next/image';
 import tts from '@/components/pictures/tts.png';
 import textSize from '@/components/pictures/textSize.png';
-import profilePicSmall from '@/components/pictures/profilePicSmall.png';
 import Menu from '@/components/Menu';
 
+// AnalysisPage component
 function AnalysisPage() {
+
+  // Initialize router and retrieve data from query
   const router = useRouter();
   const { header, text, url } = router.query;
   const [score, setScore] = useState(null);
   const [biasWords, setBiasWords] = useState(null);
 
+  // Handles clicking the "Back to Facts" button
   const handleClick = () => {
     router.push('/articleSearch');
   };
+
+  // Content highlighting boolean
   const highlight = true;
 
+  // Fetch score and bias words when the component is loaded
   useEffect(() => {
     async function fetchData() {
       if (text) {
@@ -43,10 +47,7 @@ function AnalysisPage() {
     fetchData();
   }, [text]);
 
-  const politcalProfile = () => {
-    router.push('/profileSearch');
-  };
-
+  // Visual line on the side 
   const TheBiasLine = ({ text }) => {
     return (
       <div className='flex flex-col items-center justify-center w-6'>
@@ -70,6 +71,7 @@ function AnalysisPage() {
     );
   };
 
+  // Return the JSX for AnalysisPage 
   return (
     <div>
       <Head>
@@ -169,23 +171,6 @@ function AnalysisPage() {
               </div>
 
               <BiasScore className='ml-' score={score} />
-
-              {/* <div>
-                <div className='stats shadow rounded-b-none ml-4 mt-10'>
-                  <div className='stat bg-gray-800'>
-                    <div className='stat-title text-center font-bold text-white'>
-                      SUMMARY OF ARTICLE BIAS
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              {/* 
-              <div
-                  className='card bg-white rounded-xl p-7'
-                  style={{ width: '1200px'}}
-                >
-                <text className="text-black"> IDK IF WE STILL DOING THIS </text>
-            </div> */}
             </div>
           </div>
         </div>
@@ -193,40 +178,5 @@ function AnalysisPage() {
     </div>
   );
 }
-
-// export async function getServerSideProps({ query }) {
-//   const { header, text } = query;
-
-//   if (!text) {
-//     return {
-//       notFound: true,
-//     };
-//   }
-
-//   try {
-//     const score = await fetchScore(text);
-//     const biasWords = await fetchBiasWords(text);
-
-//     return {
-//       props: {
-//         header,
-//         text,
-//         score: score * 100 + '%',
-//         biasWords,
-//       },
-//       console,
-//     };
-//   } catch (error) {
-//     console.error(error);
-//     return {
-//       props: {
-//         header,
-//         text,
-//         score: null,
-//         biasWords: null,
-//       },
-//     };
-//   }
-// }
 
 export default AnalysisPage;

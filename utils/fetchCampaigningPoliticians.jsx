@@ -1,3 +1,9 @@
+/**
+ * Fetch a list of politicians who are currently campaigning from the database
+ *
+ * @returns {Array<Object>} An array of politician objects representing those who are currently campaigning.
+ * @throws {Array} If the request fails or an error occurs, it returns an empty array.
+ */
 export const fetchCampaigningPoliticians = async () => {
   try {
     const response = await fetch(

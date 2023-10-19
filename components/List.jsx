@@ -19,7 +19,7 @@ const List = ({ title, items, politician, handleClick, popular, campaign }) => {
 
   // Check if the list is empty
   const isEmpty = items.length === 0;
-  
+
   return (
     <div className='hero-content lg:flex-row bg-white rounded-3xl mx-5 mt-2 justify-start'>
       <div>

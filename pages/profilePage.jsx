@@ -11,19 +11,24 @@ import JustTheFactsLine from '@/components/JustTheFactsLine';
 import Input from '@/components/Input';
 import { fetchCampaign } from '@/utils/fetchCampaign';
 
+// ProfilePage componenet
 function ProfilePage() {
+
+  // Router instance
   const router = useRouter();
   const { name } = router.query;
+
+  // State variables
   const [politician, setPolitician] = useState(null);
   const [campaign, setCampaign] = useState(null);
   const [search, setSearch] = useState('');
 
+  // Fetch politician data when the 'name' parameter changes
   useEffect(() => {
     async function fetchPoliticianData() {
       if (name) {
         try {
           const res = await fetchPolitician(name);
-          console.log(res);
           setPolitician(res);
           if (res.HasCampaign === 1) {
             setCampaign(true);
@@ -37,6 +42,7 @@ function ProfilePage() {
     fetchPoliticianData();
   }, [name]);
 
+  // Handle the search button click
   const handleSearch = () => {
     router.push({
       pathname: '/profileSearch',
@@ -44,9 +50,12 @@ function ProfilePage() {
     });
   };
 
+  // Flag for politician
   const flagUrl = findFlagUrlByCountryName('Australia');
+  // Extract the articles array from politician data
   const array = politician?.Articles;
 
+  // Handle the 'View Campaign' button click
   const handleViewCampaign = () => {
     router.push({
       pathname: '/campaignPage',
@@ -60,6 +69,7 @@ function ProfilePage() {
     });
   };
 
+  // Return the JSX for ProfilePage
   return (
     <div>
       <Head>

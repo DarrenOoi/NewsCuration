@@ -11,15 +11,17 @@ import { sendArticleComment } from '@/utils/sendArticleComment';
  * Poll is a component that displays a poll with options and comments relating to a specific article.
  *
  * @component
- * @param {string} url - The URL of the associated article
+ * @param {string} url - The URL of the associated article.
  * @param {object} data - Poll data, including the question and results.
+ * @param {function} voteUpdate - Callback function to update votes.
  * @returns {JSX.Element} A React JSX element representing the poll.
  */
-const Poll = ({ url, data, voteUpdate}) => {
+const Poll = ({ url, data, voteUpdate }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const [showVotes, setShowVotes] = useState(false);
   const [comments, setComments] = useState([]);
+  const [input, setInput] = useState('');
 
   // Fetch comments
   useEffect(() => {
@@ -35,14 +37,12 @@ const Poll = ({ url, data, voteUpdate}) => {
     fetchComments();
   }, []);
 
-  console.log("this is comments", comments)
-
   /**
-     * Handles the selection of a poll option.
-     * @param {number} index - The index of the selected poll option.
-     */
-  async function handleOptionSelect (index) {
-    console.log("this is the index", index)
+   * Handles the selection of a poll option.
+   * @param {number} index - The index of the selected poll option.
+   */
+  async function handleOptionSelect(index) {
+    console.log('this is the index', index);
     if (!buttonsDisabled) {
       await sendPollOption(url, index);
       setSelectedOption(index);
@@ -50,7 +50,15 @@ const Poll = ({ url, data, voteUpdate}) => {
       setShowVotes(true);
       voteUpdate();
     }
-  };
+  }
+
+  /**
+   * Handles posting a comment.
+   */
+  async function postArticleComment() {
+    await sendArticleComment('Anonymous', input, url);
+    setInput('Add a comment');
+  }
 
   return (
     <div className='flex justify-center'>
@@ -92,20 +100,26 @@ const Poll = ({ url, data, voteUpdate}) => {
                 type='text'
                 placeholder='Add a comment'
                 className='input input-ghost input-sm'
+                onChange={(event) => setInput(event.target.value)}
                 style={{ height: '28px', width: '887px' }}
               />
-              <button className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'>
+              <button
+                onClick={() => postArticleComment()}
+                className='btn btn-xs btn-neutral bg-[#2E2E2E] rounded-full text-white font-semibold text-xs'
+              >
                 COMMENT
               </button>
             </div>
           </div>
-          
-          {comments ? (
-            comments.map((comment, index) => (
-            <Comment key={index} data={comment}/>
-          ))
+
+          {comments[0] ? (
+            comments[0].map((comment, index) => (
+              <Comment key={index} data={comment} />
+            ))
           ) : (
-            <p className='p text-xs font-normal text-black'>No comments posted</p>
+            <p className='mt-7 ml-1 p text-xs font-normal text-black'>
+              No comments available.
+            </p>
           )}
         </div>
       </div>

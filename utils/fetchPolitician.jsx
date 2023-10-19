@@ -1,3 +1,10 @@
+/**
+ * Fetch information about a politician based on their name from the database
+ *
+ * @param {string} name - The name of the politician to search for.
+ * @returns {Object} An object containing information about the politician if found
+ * @throws {string} If the request fails or an error occurs, it returns an error message.
+ */
 export const fetchPolitician = async (name) => {
   try {
     const response = await fetch('http://localhost:5000/GetPolitician', {

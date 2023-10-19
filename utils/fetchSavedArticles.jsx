@@ -1,3 +1,8 @@
+/**
+ * Fetch saved articles from the database
+ *
+ * @returns {Array} An array of saved articles if the request is successful, or an empty array if the request fails or an error occurs.
+ */
 export const fetchSavedArticles = async () => {
   try {
     const response = await fetch('http://localhost:5000/GetSavedArticles', {

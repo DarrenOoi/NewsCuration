@@ -1,6 +1,6 @@
 /**
  * BiasScore component displays the bias score for the article
- * 
+ *
  * @component
  * @param {number} score - The bias score value. If not available, a loading spinner is displayed.
  * @returns {JSX.Element} A React JSX element displaying the bias score.

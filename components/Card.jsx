@@ -23,16 +23,13 @@ const Card = ({ title, content, highlight = false, biasWords, url }) => {
     keys = Object.keys(biasWords);
     phrases = content.split(new RegExp(`(${keys.join('|')})`, 'gi'));
   }
-  console.log(content);
-
-   // Function to copy content to clipboard
+  // Function to copy content to clipboard
   const copy = () => {
     navigator.clipboard.writeText(content);
   };
 
   if (typeof content === 'string') {
     dotPoints = content.split('\n');
-    console.log(dotPoints);
   }
 
   // Function to save the article

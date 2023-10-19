@@ -18,7 +18,10 @@ import PersonOfInterest from '@/components/PersonOfInterest';
 import { fetchPoliticalFigureNames } from '@/utils/fetchPoliticalFigureNames';
 import { fetchPoll } from '@/utils/fetchPoll';
 
+// ArticleSearch component
 function Home() {
+  
+  // State variables
   const [text, setText] = useState('');
   const [result, setResult] = useState(null);
   const [header, setHeader] = useState(null);
@@ -29,32 +32,16 @@ function Home() {
   const [figureNames, setFigureNames] = useState([]);
   const [poll, setPoll] = useState([]);
 
+  // Router instance
   const router = useRouter();
   const { url } = router.query;
 
+  // Fetch recent and popular articles when component is loaded
   useEffect(() => {
     async function fetchArticles() {
       try {
         if (url) {
-          setSubmitted(true);
-          setText(url);
-          setResult(null);
-
-          // Use Promise.all to wait for multiple fetch calls
-          const [result, poi, poll] = await Promise.all([
-            fetchResults(url),
-            fetchPoliticalFigureNames(url),
-            fetchPoll(url),
-          ]);
-
-          // Process the results
-          setResult(result.response);
-          setHeader(result.header);
-          setArticle(result.article);
-          setFigureNames(poi);
-          setPoll(poll);
-
-          // Wait for other requests to complete
+          await handleListClick(url);
           const [recents, popular] = await Promise.all([
             fetchRecentArticles(),
             fetchPopularArticles(4),
@@ -62,9 +49,6 @@ function Home() {
 
           setRecents(recents);
           setPopular(popular);
-
-          // At this point, all requests have completed.
-          setSubmitted(false);
         } else {
           const [recents, popular] = await Promise.all([
             fetchRecentArticles(),
@@ -82,8 +66,7 @@ function Home() {
     fetchArticles();
   }, []);
 
-  // console.log(popular);
-  // console.log(recents);
+  // Handle click of an article from the list (for exmaple the recents list)
   const handleListClick = (url) => {
     setSubmitted(true);
     setText(url);
@@ -102,6 +85,7 @@ function Home() {
     });
   };
 
+  // Handle submission of the form
   const handleSubmit = () => {
     if (text.trim() != '') {
       setSubmitted(true);
@@ -121,12 +105,14 @@ function Home() {
     } else setResult(null);
   };
 
+  // Handle updates to the poll
   const handlePoll = () => {
     fetchPoll(text).then((poll) => {
       setPoll(poll);
     });
-  }
+  };
 
+  // Handle "click for the why" button
   const handleClick = () => {
     router.push({
       pathname: '/analysisPage',
@@ -134,12 +120,13 @@ function Home() {
     });
   };
 
+  // Return the JSX for ArticleSearch
   return (
     <div>
       <Head>
         <title>Just The Facts</title>
       </Head>
-      <Menu currentPage={'article'} handleClick={handleListClick}/>
+      <Menu currentPage={'article'} handleClick={handleListClick} />
       <div className='min-h-screen bg-[#5F7A95]'>
         <div className='hero'>
           <div className='hero-content p'>
@@ -164,11 +151,9 @@ function Home() {
                     <button
                       className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full mr-5'
                       style={{ width: '225px', height: '45px' }}
+                      onClick={handleSubmit}
                     >
-                      <text
-                        className='text-white text-sm'
-                        onClick={handleSubmit}
-                      >
+                      <text className='text-white text-sm'>
                         CLICK FOR THE{' '}
                         <span className='text-[#FFB039] font-extrabold'>
                           FACTS
@@ -248,11 +233,9 @@ function Home() {
                     <button
                       className='btn btn-sm bg-[#2E2E2E] btn-neutral rounded-full'
                       style={{ width: '225px', height: '45px' }}
+                      onClick={handleClick}
                     >
-                      <text
-                        className='text-white text-base'
-                        onClick={handleClick}
-                      >
+                      <text className='text-white text-base'>
                         CLICK FOR THE
                         <span className='text-[#FFB039] font-extrabold'>
                           {' '}

@@ -1,14 +1,17 @@
+/**
+ * Fetch article information based on the provided URL.
+ *
+ * @param {string} text - The URL of the article to fetch information for.
+ * @returns {Object} An object containing article information if found, or an error message if the request fails or an error occurs.
+ */
 export const fetchResults = async (text) => {
   try {
-    //test api endpoint
-    // const response = await fetch('/api/getResults', {
     const response = await fetch('http://localhost:5000/ArticleInfo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ url: text }),
-      // body: JSON.stringify({ text }),
     });
 
     if (response.ok) {

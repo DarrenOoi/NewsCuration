@@ -25,8 +25,7 @@ POLITICIAN_CAMPAIGN_BY_ID = "Politician_CampaignPoliciesByID"
 POLL_PROMPT = "poll"
 POLL_VALS = "pollVals"
 VIEWS = "views"
-
-
+PAYWALL_ENCOUNTERED = "Paywall Encountered, will not display article"
 
 class RequestRate():
     '''
@@ -720,7 +719,7 @@ class SessionManager():
     def getArticleItem(self, url: str, itemName: str):
         result = self.articleManager.getItem(url, itemName)
         if result == None:
-            return "Paywall Encountered, will not display article"
+            return PAYWALL_ENCOUNTERED
         return result
 
     def updatePoll(self, url: str, optionIndex: int) -> None:
