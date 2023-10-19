@@ -7,6 +7,10 @@ import argparse
 import json
 
 class PageValidator:
+    '''
+    Determines whether the inputted website is valid, i.e. not stuck behind
+    a paywall or otherwise inaccessable.
+    '''
     def __init__(self, pageToScrape) -> None:
         self.pageToScrape = pageToScrape
 
@@ -36,7 +40,10 @@ class PageValidator:
         return False
 
 class NewsScraper:
-
+    '''
+    Performs the main newscraper operations. This includes retreiving the main 
+    content, the header and other related materials    
+    '''
     def __init__(self, url):
         self.soup = None
         self.url = url
@@ -79,22 +86,24 @@ class NewsScraper:
         cleanArticle = re.sub(" +", " ", whiteSpaceFilledArticle)
         return cleanArticle
     
-    """
-    This method generates a structured prompt with a header and main body of text,
-    utilising NewsScraper methods defined in this class.
     
-    Returns None if issues are encountered with the prompt, else the complete prompt is returned.
-    """
     def generateStructuredPrompt(self):
+        """
+        This method generates a structured prompt with a header and main body of text,
+        utilising NewsScraper methods defined in this class.
+        
+        Returns None if issues are encountered with the prompt, else the complete prompt is returned.
+        """
         if self.soup is None:
             return None
         
         return self.getHeader(), self.getArticle() 
 
-"""
-Pipe the web-scraped article as input into chatGPT
-"""
+
 def pipeScrapedArticleToGPT(url): 
+    """
+    Pipe the web-scraped article as input into chatGPT
+    """
     header, article = NewsScraper(url).generateStructuredPrompt() 
     p = prompt.generate_summary_prompt("HEADING: " + header + "\n" + "TEXT: " + article)
     return prompt.generate_response(p), header, article
@@ -109,12 +118,13 @@ def pipeForPoll(newsScraper):
     p = prompt.generate_poll_prompt("HEADING: " + header + "\n" + "TEXT: " + article)
     return prompt.generate_response(p)
 
-'''
-generate a JSON output of all the biased subtext in the media article.
-Since the chatGPT output doesn't give a perfect account of the locations (indexes) of the biased text, 
-we will have to do that and validate it ourselves.
-'''
+
 def biasSubtext(article=str):
+    '''
+    generate a JSON output of all the biased subtext in the media article.
+    Since the chatGPT output doesn't give a perfect account of the locations (indexes) of the biased text, 
+    we will have to do that and validate it ourselves.
+    '''
     if not isinstance(article, str):
         raise TypeError
     biasPrompt = prompt.generate_bias_prompt(article)
@@ -126,35 +136,37 @@ def biasSubtext(article=str):
         return 'An error occurred'
 
 
-'''
-Due to persistent issues with openai reponses finding the biased phrase index
 
-Parameters
-----------
-    AIIn: json 
-        The json file should maintain the following structure
-        {
-            'lorem ipsum':'dolor sit amet',
-            'something':'else'
-        }
-    article: str
-        the original and full article as input to chatGPT
-        
-    Returns
-    -------
-        json -> with the following file structure
-        {16: {'lorem ipsum': "dolor sit amet."},
-         44: {'lorem ipsum': "dolor sit amet."},
-         }
-DEPRECATED: no longer used but kept for reference
-'''
 def generateBiasJson(AIIn=json, article=str):
+    '''
+    Due to persistent issues with openai reponses finding the biased phrase index
+
+    Parameters
+    ----------
+        AIIn: json 
+            The json file should maintain the following structure
+            {
+                'lorem ipsum':'dolor sit amet',
+                'something':'else'
+            }
+        article: str
+            the original and full article as input to chatGPT
+            
+        Returns
+        -------
+            json -> with the following file structure
+            {16: {'lorem ipsum': "dolor sit amet."},
+            44: {'lorem ipsum': "dolor sit amet."},
+            }
+    DEPRECATED: no longer used but kept for reference
+    '''
     in_dict = dict(json.loads(AIIn))
     idx_dict = {}
     for k,v in in_dict.items():
         idx = article.index(k)
         idx_dict[idx] = {str(k): v}
     return json.dumps(idx_dict)
+
 
 if __name__ == '__main__':
     
@@ -173,5 +185,3 @@ if __name__ == '__main__':
         out = ''
         article = NewsScraper(URL).generateStructuredPrompt()
         print(biasSubtext(article[0]))
-
-   

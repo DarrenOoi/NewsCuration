@@ -1,8 +1,12 @@
 from GoogleNews import GoogleNews
 from utils.prompts.webScraper import *
 from utils.biasCalculator import *
-
 import base64
+
+'''
+WARNING: DECREPED
+THESE METHODs ARE NOW OUT OF SCOPE FOR THE PURPOSES OF THIS ASSIGNMENT
+'''
 
 def similarArticles(articleTitle):
     googleNews = GoogleNews(lang='en')
@@ -36,10 +40,3 @@ def convertGoogleNewsUrlToAccessible(url):
     url_in_process_D = url_in_process_C.split("\\x")[0]
     actual_url = url_in_process_D.split("/!")[0]
     return actual_url
-
-
-# sortedSimilarArticles = similarArticles("The dangerous precedent set by Trump’s indictment in Georgia")
-# print([{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles])
-
-# jason form
-# [{"url" : article[0], "upper_bias" : round(article[1], 2) , "lower_bias" : round(article[2], 2)} for article in sortedSimilarArticles]

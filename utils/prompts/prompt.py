@@ -3,7 +3,6 @@ import openai
 import json
 
 """
-
 author: DanielCiccC
 """
 openai.api_key = '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'
@@ -98,20 +97,24 @@ def generate_bias_prompt(content):
     prompt[-1]['content'] = content
     return prompt
 
+
 def generate_summary_prompt(content):
     prompt = SUMMARY_PROMPT
     prompt[-1]['content'] = content
     return prompt
+
 
 def generate_poll_prompt(content):
     prompt = POLL_PROMPT
     prompt[-1]['content'] = content
     return prompt
 
+
 def generate_poll_prompt_dict(content):
     prompt = generate_poll_prompt(content)
     string = generate_response(prompt)
     return string
+
 
 def generate_response(prompt):
   response = openai.ChatCompletion.create(

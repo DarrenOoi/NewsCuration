@@ -6,14 +6,15 @@ import math
 import os
 
 def biasScoreGeneratorFromScraper(scraper):
-
+    '''
+    Load the pre-trained SVM and predict the level of bias
+    '''
     loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
     loaded_svcBias = pickle.load(open(os.getcwd() + '\\exploration\\svcBias.sav', 'rb'))
 
     sentences = scraper.getArticle().split('.')
     X_BOW = loaded_vectorizer.transform(sentences)
     y_bias = loaded_svcBias.predict(X_BOW)
-    # y_opinion = loaded_svcOpinion.predict(X_BOW)
 
     y = 0
     for i in y_bias:
@@ -24,14 +25,13 @@ def biasScoreGeneratorFromScraper(scraper):
     return y, len(y_bias), 0.72
 
 def biasScoreGeneratorFromText(text):
-
-    # loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
-    # loaded_svcBias = pickle.load(open(os.getcwd() + '\\exploration\\svcBias.sav', 'rb'))
+    '''
+    Similar function as above, but predict based on text input
+    '''
 
     sentences = text.split('.')
     X_BOW = loaded_vectorizer.transform(sentences)
     y_bias = loaded_svcBias.predict(X_BOW)
-    # y_opinion = loaded_svcOpinion.predict(X_BOW)
 
     y = 0
     for i in y_bias:
@@ -42,6 +42,9 @@ def biasScoreGeneratorFromText(text):
     return y, len(y_bias), 0.72
 
 def biasRange(p, n, b, percentage):
+    '''
+    Calculate the bias confidence interval
+    '''
     sum = 0
     w = n
     while sum < percentage:
@@ -60,44 +63,6 @@ def getBiasRangeFromText(text):
     b, n, p = biasScoreGeneratorFromText(text)
     b, b_dash = biasRange(p, n, b, 0.9)
     return  b/n, b_dash/n
-
-# app = Flask(__name__)
-# CORS(app)  # This allows all origins; you can configure it for your specific needs
-
-# @app.route('/BiasFromText', methods=['POST'])
-# def BiasFromText():
-#     data = request.get_json()
-#     input = data.get('articleText')
-#     b, n, p = biasScoreGeneratorFromText(input)
-#     return {"response": b/n}
-
-# @app.route('/BiasRangeFromText', methods=['POST'])
-# def BiasRangeFromText():
-#     data = request.get_json()
-#     input = data.get('articleText')
-#     b, n, p = biasScoreGeneratorFromText(input)
-#     percentage = 0.9
-#     b, b_dash = biasRange(p, n, b, percentage)
-#     return {"b": b/n, "b'": b_dash/n}
-
-# @app.route('/BiasFromUrl', methods=['POST'])
-# def BiasFromUrl():
-#     data = request.get_json()
-#     input = data.get('input')
-#     b, n, p = biasScoreGeneratorFromScraper(NewsScraper(input))
-#     return {"response": b/n}
-
-# @app.route('/BiasRangeFromUrl', methods=['POST'])
-# def BiasRangeFromUrl():
-#     data = request.get_json()
-#     input = data.get('input')
-#     b, n, p = biasScoreGeneratorFromScraper(NewsScraper(input))
-#     percentage = 0.9
-#     b, b_dash = biasRange(p, n, b, percentage)
-#     return {"b": b/n, "b'": b_dash/n}
-
-# if __name__ == '__main__':
-#     app.run()
 
 # have to be global otherwise wait until all other threads run
 loaded_vectorizer = pickle.load(open(os.getcwd() + '\\exploration\\vectorizer.sav', 'rb'))
