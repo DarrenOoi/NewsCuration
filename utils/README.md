@@ -2,6 +2,10 @@
 The utils directory maintains the sessionManager (Client Manager Layer) with additional ML prompts and sub-functions.
 The ``SessionManager`` must be initialised at the beginning of each session (in ``API.py``).
 
+The following implementation diagram outlines the multi-threading capabilities of the articleManager class, and the automatically spawning of subtasks
+
+![Alt text](assets/articleManager_implementation_diagram.png)
+
 
 initialise article manager
 ```

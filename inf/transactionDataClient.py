@@ -821,6 +821,12 @@ if __name__ == "__main__":
         nargs="+",
         help="perform a custom query from the import-custom directory",
     )
+    
+    parser.add_argument(
+        "--DELETEALL",
+        action="store_true",
+        help="delete all records from the database",
+    )
 
     args = parser.parse_args()
 
@@ -927,3 +933,24 @@ if __name__ == "__main__":
         for file in files:
             tdc.generateFromSqlFile(file, "sql")
         tdc.closeConnection()
+
+    if args.DELETEALL:
+        print('deleting all records')
+        text = input("are you sure you want to delete all records (y/n)")
+        
+        tables = [
+            'Politician_KeyTable',
+            'Politician',
+            'Polling',
+            'Comments',
+            'Politician_CampaignPoliciesByID',
+            'Article',
+            'Article_ArticleBias',
+            'Politician_CampaignPolicies']
+        if text == 'y': 
+            tdc = transactionDataClient()
+            for tablename in tables:
+                tdc.query_special(F"DELETE FROM {tablename} WHERE 1=1")
+                tdc.logMessage(messageStatus.SUCCESS, f"Successfully removed table {tablename}")
+            print("COMPLETED")
+        
